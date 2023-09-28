@@ -1,0 +1,4027 @@
+#AREA   {PROTO} Felinor's area in progress~
+
+#VERSION 4
+
+#AUTHOR Felinor~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#9000
+frightened worker~
+Frightened Worker~
+A Frightened Worker is cowering here.
+~
+~
+0
+268435459
+S
+1 8 8 0
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#9000
+Armory~
+Small, metal posts have been punctured into the walls at neck level to most
+marines. They seem to have once held armored vests and helmets for the
+large security force of this facility, but have been unused for sometime.
+The armory continues to the south and west, with no other possible routes.
+~
+~
+1073807368
+0
+0 1
+D2
+~
+~
+0
+-1 9005
+D3
+~
+~
+0
+-1 9001
+S
+#9001
+Armory~
+Empty shelves cover the the ground and open chests have been looted of
+their equipment.  A steel door is fashioned tightly against the northern
+wall, allowing marines to enter and leave this room securely.  One large
+light sways back and forth as it gently casts its light down upon the
+shelves.
+~
+~
+1344339976
+0
+0 1
+D1
+~
+~
+0
+-1 9000
+D2
+~
+~
+0
+-1 9004
+D3
+~
+~
+0
+-1 9002
+S
+#9002
+Armory~
+Lockers along the west and north walls have been torn open and all their
+contents taken.  Most of which could be used to fight a small scale war,
+but that would only be if they were filled to begin with.  A small panic
+light flashes as the main lights of this room are in the center to the
+east.
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 9001
+D2
+~
+~
+0
+-1 9003
+S
+#9003
+Armory~
+White and brown boards cover the walls of this corner. With terminals
+beneath them this serves as the map room of the facility. Or at least for
+patrolling purposes.  Dim lighting makes most of the maps unreadable, but
+a few of the consoles are still running camera angles.
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 9002
+D1
+~
+~
+0
+-1 9004
+S
+#9004
+Armory~
+One large light casts the gloom away from this room, while smaller ones are
+set up for various reasons. Ranging from seeing out of the door to the
+south and to be able to properly repair weapons. A small &Wscratching&w on
+the wall shows something of importance. 
+~
+~
+1075904520
+0
+0 1
+D0
+~
+~
+0
+-1 9001
+D1
+~
+~
+0
+-1 9005
+D2
+~
+~
+0
+-1 9006
+D3
+~
+~
+0
+-1 9003
+E
+small scratch scratching~
+'&W53269&w' has been scratched in just above the keypad, allowing anyone
+who's allowed in to get out and back in again. 
+~
+S
+#9005
+Armory~
+A set of chairs have been turned into a circle to face each other over a
+small table. Old beer stains and small score boards also litter this bit
+of the Armory.  Bright lights can be seen off to the west, while the
+northern part of this compound is still in darkness.
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 9000
+D3
+~
+~
+0
+-1 9004
+S
+#9006
+Steel Corridor~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+door north~
+0
+-1 9004
+D1
+~
+~
+0
+-1 9031
+D3
+~
+~
+0
+-1 9007
+S
+#9007
+Steel Corridor~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 9006
+D3
+~
+~
+0
+-1 9008
+S
+#9008
+Steel Corridor~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 9007
+D3
+~
+~
+0
+-1 9009
+S
+#9009
+Steel Corridor~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 9008
+D3
+~
+~
+0
+-1 9010
+S
+#9010
+Steel Corridor~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 9009
+D2
+~
+~
+0
+-1 9061
+D3
+~
+~
+0
+-1 9011
+S
+#9011
+Steel Corridor~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9010
+D9
+~
+~
+0
+-1 9012
+S
+#9012
+Steel Corridor~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 9013
+D6
+~
+~
+0
+-1 9011
+S
+#9013
+Steel Corridor~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9012
+D2
+~
+~
+0
+-1 9014
+D4
+~
+~
+0
+-1 9158
+S
+#9014
+Steel Corridor~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9013
+D8
+~
+~
+0
+-1 9015
+S
+#9015
+Steel Corridor~
+~
+~
+1073807360
+0
+0 1
+D7
+~
+~
+0
+-1 9014
+D8
+~
+~
+0
+-1 9016
+S
+#9016
+Steel Corridor~
+The steel and synthetic walls slowly give way to stone towards the west,
+but the sterilized look of this hall continues to the east.  An emergency
+light has lit up this room, but not by much. A few of the vents have been
+torn inwards here as well. Tiny droplets of blood staining the ground
+beneath them.
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 9025
+D3
+~
+~
+0
+-1 9017
+D7
+~
+~
+0
+-1 9015
+S
+#9017
+Steel Corridor~
+This corridor has been efficiently cut out of stone. While pipes, wires and
+a poor ceiling-tile system has been rigged to the ceiling, it still barely
+gives off a welcoming feeling. The stone ends shortly to the west at a
+door and it also seems to lessen to the east as the ground slowly
+inclines.
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 9016
+D3
+~
+~
+0
+-1 9018
+S
+#9018
+Barricaded Door~
+A steel door is set firmly into the wall to the west. Though the keypad
+beside it now lays in shambles on the ground and sparks fly out of the
+space it used to occupy, the door is closed tight. Flicking dimly, a
+monitor flashes the message "&RAlarm System Engaged&x", though it probably
+was broken in the storm.
+~
+~
+1073807369
+0
+0 1
+D1
+~
+~
+0
+-1 9017
+D3
+~
+~
+0
+-1 9019
+S
+#9019
+Dustless Marine Barracks~
+There is not a single thing in sight within this room. Everything having
+been cleared out to allow marines to prep before heading on various chores
+within the alien sector.  An obvious camera is above the door with a
+speaker below it incase the Doctor, who runs this facility, requires to
+give any last minute directions.
+~
+~
+1073807369
+0
+0 1
+D0
+~
+~
+0
+-1 9020
+D1
+~
+~
+0
+-1 9018
+D2
+~
+~
+0
+-1 9024
+D3
+~
+~
+0
+-1 9022
+S
+#9020
+Dustless Marine Barracks~
+Two massive tables have taken over this room. Each given at least 10 score
+chairs or more a piece, this room gives more than enough room for a small
+platoon to all sup at the same time.  A small rations stock has been long
+since emptied and left that way in the corner of this place.   With bunks
+to the west and a prep area to the south, this room seems a bit cramped.
+~
+~
+1073807369
+0
+0 1
+D2
+~
+~
+0
+-1 9019
+D3
+~
+~
+0
+-1 9021
+S
+#9021
+Dustless Marine Barracks~
+Bunks line up neatly together facing eastwardly in a traditional manner.
+The locked chests at the foot showing weither a marine currently uses the
+bunk, or if they've been sent off somewhere. There is only a few plugged
+in lights, flickering with the amount of power running through them.
+~
+~
+1073807369
+0
+0 1
+D1
+~
+~
+0
+-1 9020
+D2
+~
+~
+0
+-1 9022
+S
+#9022
+Dustless Marine Barracks~
+A solid door is fixed in the wall too tightly for even twenty-five alien
+queens to tear out successfully and that would be only if you could get
+them in the same room for that purpose only. From behind it, men can be
+heard whispering faintly and an occasional group exits into the barracks
+here. The lights only partly work, running on battery power causing them
+to fail now and then. 
+~
+~
+1342242825
+0
+0 1
+D0
+~
+~
+0
+-1 9021
+D1
+~
+~
+0
+-1 9019
+D2
+~
+~
+0
+-1 9023
+S
+#9023
+Dustless Marine Barracks~
+Bunks and stone have been tossed around like mad here, having been ripped
+from the wall along with a metal grate. Acid and bullet scores scatter the
+room, but in the end it looks to have driven back the aliens that breached
+this room. The vent is large enough for a full sized man to enter, but it
+would take a tight fit for enough equipment to dig in with. The barracks
+does, however, continue to the north and east.
+~
+~
+1073807369
+0
+0 1
+D0
+~
+~
+0
+-1 9022
+D1
+~
+~
+1
+-1 9024
+D5
+~
+~
+0
+-1 9176
+S
+#9024
+Dustless Marine Barracks~
+With a little more seclusion from the rest of the barracks, a table has
+been setup for the officers. With a little monitor and console, plus small
+maps of the facility, the officers can plan whatever they wish from this
+corner. Though the only thing stopping a private from barging in is a
+flimsy, stand-up wall.
+~
+~
+1073807369
+0
+0 1
+D0
+~
+~
+0
+-1 9019
+D3
+~
+~
+1
+-1 9023
+S
+#9025
+Steel Corridor~
+Debris have been showered into this room forcefully from the southeast.
+Scattered among the ruins of the wall are the shattered remains of the
+lights and tiles that once were fixed on the ceiling.  There corridor
+continues to the east and west, but the torn hole in the wall should be
+able to fit a few people through it at a time.
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 9026
+D3
+~
+~
+0
+-1 9016
+D8
+~
+~
+0
+-1 9054
+S
+#9026
+Steel Corridor~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 9058
+D1
+~
+~
+0
+-1 9027
+D3
+~
+~
+0
+-1 9025
+S
+#9027
+Steel Corridor~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9028
+D3
+~
+~
+0
+-1 9026
+S
+#9028
+Steel Corridor~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 9029
+D2
+~
+~
+0
+-1 9056
+D3
+~
+~
+0
+-1 9027
+S
+#9029
+Steel Corridor~
+The corridor is unlit, the long lights on the ceiling dim and a few sparks
+can be seen towards the eastern piece of the hall. Steel grating covers
+various sides holes in the stone floor, each being big enough to snap a
+man's ankle if the metal wasn't secured. Liquids of all sorts slowly flow
+in from the east as well, most likly from a broken pipe or pipes.
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 9030
+D3
+~
+~
+0
+-1 9028
+S
+#9030
+Caved-In Corridor~
+For some reason or another this section of the corridor has collapsed in on
+itself, creating a rather crude dead end. Torn lights hang down and spark,
+along with broken pipes that slowly spew their contents onto the ground.
+The only way away from this mess is to the west.
+~
+~
+1208025096
+0
+0 1
+D3
+~
+~
+0
+-1 9029
+S
+#9031
+Steel Corridor~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9032
+D3
+~
+~
+0
+-1 9006
+S
+#9032
+Steel Corridor~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9033
+D2
+~
+~
+0
+-1 9147
+D3
+~
+~
+0
+-1 9031
+S
+#9033
+Steel Corridor~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9034
+D3
+~
+~
+0
+-1 9032
+S
+#9034
+Steel Corridor~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9035
+D3
+~
+~
+0
+-1 9033
+S
+#9035
+Steel Corridor~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9036
+D3
+~
+~
+0
+-1 9034
+S
+#9036
+Steel Corridor~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 9035
+D8
+~
+~
+0
+-1 9037
+S
+#9037
+Steel Corridor~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9038
+D7
+~
+~
+0
+-1 9036
+S
+#9038
+Steel Corridor~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9037
+D2
+~
+~
+0
+-1 9039
+S
+#9039
+Steel Corridor~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9038
+D1
+~
+~
+0
+-1 9131
+D2
+~
+~
+0
+-1 9040
+S
+#9040
+Steel Corridor~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9039
+D9
+~
+~
+0
+-1 9041
+S
+#9041
+Steel Corridor~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 9042
+D6
+~
+~
+0
+-1 9040
+D9
+~
+~
+0
+-1 9043
+S
+#9042
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9041
+S
+#9043
+Breached Corridor~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9044
+D6
+~
+~
+0
+-1 9041
+S
+#9044
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9043
+D1
+~
+~
+0
+-1 9045
+D3
+~
+~
+0
+-1 9046
+S
+#9045
+Egg Chamber~
+The walls have been cut away with pick axes and most likely by prisoners
+long ago. A black substance has been corded and weaved all over this room.
+Further into the alcove eggs can be seen in the dozens, each one slowly
+growing an alien face hugger. A few limp bodies have been attatched to the
+walls as well. Some torn inside out, others still waiting such a fate.
+~
+~
+1610678280
+0
+0 1
+D3
+~
+~
+0
+-1 9044
+S
+#9046
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9044
+D3
+~
+~
+0
+-1 9047
+S
+#9047
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9046
+D2
+~
+~
+0
+-1 9057
+D3
+~
+~
+0
+-1 9048
+S
+#9048
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9047
+D3
+~
+~
+0
+-1 9049
+S
+#9049
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+134217729
+56844 9056
+D1
+~
+~
+0
+-1 9048
+D2
+~
+~
+0
+-1 9075
+D3
+~
+~
+0
+-1 9050
+S
+#9050
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9055
+D1
+~
+~
+0
+-1 9049
+D3
+~
+~
+0
+-1 9051
+S
+#9051
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9054
+D1
+~
+~
+0
+-1 9050
+D3
+~
+~
+0
+-1 9052
+S
+#9052
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9051
+D2
+~
+~
+0
+-1 9053
+S
+#9053
+Deadly End~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9052
+S
+#9054
+Breached Wall~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9051
+D7
+~
+~
+0
+-1 9025
+S
+#9055
+Pasted Walls~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9050
+S
+#9056
+Breached Air Lock~
+The air lock's main door has been forced apart and little power runs
+through it. Hardly enough to even keep the blinking "&RWarning&w' light
+going.  With a little wiring, the doors leading into the Alien Sector
+could most likely be shut for good. Or at least til an EVA team can
+arrive. 
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 9028
+D2
+~
+~
+134217729
+56844 9049
+S
+#9057
+Gruesome Morgue~
+Parts of human bodies are everywhere. Torn to pieces or left in chunks of
+meaty piles on the floor.  Recently killed and gathered corpses hang
+limply under a black net that restrains them to the walls and roof.  Small
+rodents and chestbursts writhe about the area, waiting for their time to
+grow and further the Queen's cause. 
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 9047
+S
+#9058
+Small Corridor~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 9059
+D1
+~
+~
+0
+-1 9072
+D2
+~
+~
+0
+-1 9026
+S
+#9059
+Small Corridor~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 9060
+D2
+~
+~
+0
+-1 9058
+D3
+~
+~
+0
+-1 9071
+S
+#9060
+Small Corridor~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 9061
+D1
+~
+~
+0
+-1 9063
+D2
+~
+~
+0
+-1 9059
+D3
+~
+~
+0
+-1 9062
+S
+#9061
+Small Corridor~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 9010
+D2
+~
+~
+0
+-1 9060
+D5
+~
+~
+0
+-1 9198
+S
+#9062
+Cluttered Room~
+A small bed is crammed in a corner of the room. Amongst the small, earthly
+possesions are a small desk covered with old magazines and hard-cover
+books.  A small bathroom opens across from the bed and contains only a
+small toilet and sink. Dirty clothing litters the ground as well, making
+this seem like a vactioner's worst nightmare or a frantic search for a
+lost ring.
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 9060
+S
+#9063
+Side Hall~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 9064
+D3
+~
+~
+0
+-1 9060
+S
+#9064
+Side Hall~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 9065
+D1
+~
+~
+0
+-1 9066
+D3
+~
+~
+0
+-1 9063
+S
+#9065
+Dank Remains~
+A vent has been torn out of the wall and it currently is imbedded in the
+wall beside the door.  The bed, table and cabinet which once were neatly
+set up have been torn down and cast aside in pieces.  Blood has soaked
+into almost every available piece of cloth and carpet around. Dying the
+whole room a deep maroon color of death.
+~
+~
+1073807368
+0
+0 1
+D2
+~
+~
+0
+-1 9064
+S
+#9066
+Side Hall~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 9067
+D1
+~
+~
+0
+-1 9068
+D3
+~
+~
+0
+-1 9064
+S
+#9067
+Small Bedroom~
+This room looks to be just one large crash site for drunks. No bathroom, no
+kitchen, just a bed and a console system.  The queen sized bed dominates
+the room and a small trash can lies closest to the most slept upon side it
+seems. Only the open door to the south leads out of this room.
+~
+~
+1073807368
+0
+0 1
+D2
+~
+~
+0
+-1 9066
+S
+#9068
+Side Hall~
+~
+~
+1073807368
+0
+0 1
+D2
+~
+~
+0
+-1 9069
+D3
+~
+~
+0
+-1 9066
+S
+#9069
+Private Suite~
+A king-sized bed dominates the floor of this suite. Small alcoves hold
+desks, books and shelving units for storing papers.  Currently a briefcase
+labeled "Z.C.T." rests on one of the tables scattered about the room.  An
+ensuite is to the east, while a keypad door is to the north, beside a
+fridge.
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 9068
+D1
+~
+~
+0
+-1 9070
+S
+#9070
+Private Ensuite~
+This ensuite has every possible human need attended to. A fair sized room
+with a plush toilet seat.  A double size, bath and shower. Not to mention
+a large mirror before two sinks.  A pile of towels currently reside in one
+corner of the ensuite, as if used for some sort of barrier.
+~
+~
+1073807368
+0
+0 1
+D3
+~
+~
+0
+-1 9069
+S
+#9071
+Classy Suite~
+This room is like a lounge for the pampered man. A bed rests on a raised
+part of the floor and a small bar contains drinks of various kinds. A few
+monitors and keyboards allow for whomever stays here to work here as well.
+And a nicely tiled floor leads into a well-sized kitchen. Only a single
+door leads out of this room.
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 9059
+S
+#9072
+Dim Corridor~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 9073
+D3
+~
+~
+0
+-1 9058
+S
+#9073
+Dim Corridor~
+~
+~
+1073807368
+0
+0 1
+D3
+~
+~
+0
+-1 9072
+D5
+~
+~
+0
+-1 9074
+S
+#9074
+Steel Stairs~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 9153
+D4
+~
+~
+0
+-1 9073
+S
+#9075
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9049
+D1
+~
+~
+0
+-1 9079
+D2
+~
+~
+0
+-1 9083
+D3
+~
+~
+0
+-1 9076
+S
+#9076
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9077
+D1
+~
+~
+0
+-1 9075
+S
+#9077
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9076
+D3
+~
+~
+0
+-1 9078
+S
+#9078
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9077
+S
+#9079
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9080
+D3
+~
+~
+0
+-1 9075
+S
+#9080
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9081
+D2
+~
+~
+0
+-1 9082
+D3
+~
+~
+0
+-1 9079
+S
+#9081
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 9080
+S
+#9082
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9080
+S
+#9083
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9075
+D1
+~
+~
+0
+-1 9084
+D2
+~
+~
+0
+-1 9092
+D9
+~
+~
+0
+-1 9085
+S
+#9084
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 9083
+S
+#9085
+Dingy Hall~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 9086
+D6
+~
+~
+0
+-1 9083
+S
+#9086
+Dingy Hall~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9087
+D1
+~
+~
+0
+-1 9085
+S
+#9087
+Dingy Hall~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9086
+D5
+~
+~
+0
+-1 9088
+S
+#9088
+Cramped Passage~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9089
+D4
+~
+~
+0
+-1 9087
+S
+#9089
+Cramped Passage~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9088
+D3
+~
+~
+0
+-1 9090
+S
+#9090
+Cramped Passage~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9091
+D1
+~
+~
+0
+-1 9089
+S
+#9091
+Queen's Chamber~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9090
+S
+#9092
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9083
+D1
+~
+~
+0
+-1 9093
+D2
+~
+~
+0
+-1 9098
+S
+#9093
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9094
+D2
+~
+~
+0
+-1 9096
+D3
+~
+~
+0
+-1 9092
+S
+#9094
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9095
+D3
+~
+~
+0
+-1 9093
+S
+#9095
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 9094
+S
+#9096
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9093
+D1
+~
+~
+0
+-1 9097
+S
+#9097
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 9096
+S
+#9098
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9092
+D2
+~
+~
+0
+-1 9099
+S
+#9099
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9098
+D1
+~
+~
+0
+-1 9103
+D2
+~
+~
+0
+-1 9100
+D3
+~
+~
+0
+-1 9101
+S
+#9100
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9099
+D1
+~
+~
+0
+-1 9108
+S
+#9101
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9099
+D2
+~
+~
+0
+-1 9102
+S
+#9102
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9101
+S
+#9103
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9104
+D3
+~
+~
+0
+-1 9099
+S
+#9104
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9106
+D3
+~
+~
+0
+-1 9103
+D6
+~
+~
+0
+-1 9105
+S
+#9105
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D9
+~
+~
+0
+-1 9104
+S
+#9106
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 9104
+D8
+~
+~
+0
+-1 9107
+S
+#9107
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9115
+D7
+~
+~
+0
+-1 9106
+S
+#9108
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9109
+D3
+~
+~
+0
+-1 9100
+S
+#9109
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9110
+D3
+~
+~
+0
+-1 9108
+S
+#9110
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9109
+D1
+~
+~
+0
+-1 9111
+S
+#9111
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9113
+D2
+~
+~
+0
+-1 9112
+D3
+~
+~
+0
+-1 9110
+S
+#9112
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9111
+S
+#9113
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9114
+D3
+~
+~
+0
+-1 9111
+S
+#9114
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9115
+D3
+~
+~
+0
+-1 9113
+S
+#9115
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9107
+D1
+~
+~
+0
+-1 9116
+D3
+~
+~
+0
+-1 9114
+S
+#9116
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9117
+D3
+~
+~
+0
+-1 9115
+S
+#9117
+Within the Alien Sector~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 9116
+D4
+~
+~
+0
+-1 9118
+S
+#9118
+Empty Corridor~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9119
+D5
+~
+~
+0
+-1 9117
+S
+#9119
+Empty Corridor~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9118
+D1
+~
+~
+0
+-1 9120
+S
+#9120
+Empty Corridor~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9121
+D3
+~
+~
+0
+-1 9119
+S
+#9121
+Empty Corridor~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9120
+D4
+~
+~
+0
+-1 9122
+S
+#9122
+Unused Hangers~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9123
+D1
+~
+~
+0
+-1 9129
+D2
+~
+~
+0
+-1 9127
+D3
+~
+~
+0
+-1 9125
+D5
+~
+~
+0
+-1 9121
+S
+#9123
+Unused Hangers~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9130
+D2
+~
+~
+0
+-1 9122
+D3
+~
+~
+0
+-1 9124
+S
+#9124
+Unused Hangers~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9123
+D2
+~
+~
+0
+-1 9125
+S
+#9125
+Unused Hangers~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9124
+D1
+~
+~
+0
+-1 9122
+D2
+~
+~
+0
+-1 9126
+S
+#9126
+Unused Hangers~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9125
+D1
+~
+~
+0
+-1 9127
+S
+#9127
+Unused Hangers~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9122
+D1
+~
+~
+0
+-1 9128
+D3
+~
+~
+0
+-1 9126
+S
+#9128
+Unused Hangers~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9129
+D3
+~
+~
+0
+-1 9127
+S
+#9129
+Unused Hangers~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9130
+D2
+~
+~
+0
+-1 9128
+D3
+~
+~
+0
+-1 9122
+S
+#9130
+Unused Hangers~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9129
+D3
+~
+~
+0
+-1 9123
+S
+#9131
+Lab Entrance~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9132
+D3
+~
+~
+0
+-1 9039
+S
+#9132
+Lab Reception~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9141
+D3
+~
+~
+0
+-1 9131
+D6
+~
+~
+0
+-1 9133
+D8
+~
+~
+0
+-1 9137
+S
+#9133
+Office Foyer~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9134
+D9
+~
+~
+0
+-1 9132
+S
+#9134
+Private Office~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9135
+D2
+~
+~
+0
+-1 9133
+S
+#9135
+Private Office~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9136
+D3
+~
+~
+0
+-1 9134
+S
+#9136
+Private Office~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 9135
+S
+#9137
+Tube Chamber~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9138
+D2
+~
+~
+0
+-1 9139
+D7
+~
+~
+0
+-1 9132
+S
+#9138
+Viewing Chamber~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+33554432
+-1 9140
+D3
+~
+~
+0
+-1 9137
+S
+#9139
+Automatic Belts~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9137
+D1
+~
+~
+0
+-1 9140
+S
+#9140
+Small Cavern~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+33554432
+-1 9138
+D3
+~
+~
+0
+-1 9139
+S
+#9141
+Within a Lab~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9142
+D3
+~
+~
+0
+-1 9132
+S
+#9142
+Within a Lab~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9143
+D3
+~
+~
+0
+-1 9141
+S
+#9143
+Within a Lab~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9144
+D2
+~
+~
+0
+-1 9142
+D5
+~
+~
+0
+-1 9189
+S
+#9144
+Within a Lab~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9145
+D3
+~
+~
+0
+-1 9143
+S
+#9145
+Within a Lab~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9146
+D3
+~
+~
+0
+-1 9144
+S
+#9146
+Within a Lab~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9145
+S
+#9147
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9032
+D1
+~
+~
+0
+-1 9148
+S
+#9148
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9149
+D3
+~
+~
+0
+-1 9147
+S
+#9149
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9148
+D2
+~
+~
+0
+-1 9152
+D3
+~
+~
+0
+-1 9150
+S
+#9150
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9149
+D2
+~
+~
+0
+-1 9151
+S
+#9151
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9150
+D1
+~
+~
+0
+-1 9152
+S
+#9152
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9149
+D3
+~
+~
+0
+-1 9151
+S
+#9153
+At the Bar~
+This hall is short in length and in every other dimension. A one-way mirror
+has been busted out into the hall off the north side of the wall,  which
+was probably used to screen patrons so no one could sneak drugs or a
+possible weapon into the area. A steel rung ladder is also to the west,
+allowing persons to return to their station after relaxing in the bar to
+the east.
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+33554432
+-1 9157
+D1
+~
+~
+0
+-1 9154
+D3
+~
+~
+0
+-1 9074
+S
+#9154
+At the Bar~
+Rickety tables stand rather badly here. Setup into small, cushioned booths
+all about the bar. A small, slightly raised portion of the floor allows
+for the bad singing of drunk workers to carry over this whole section.
+Shards have glass have been tossed in from the west and crunch under foot
+all around the stools of the bar.
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 9155
+D3
+~
+~
+0
+-1 9153
+S
+#9155
+At the Bar~
+Tables have been torn down all around the lounge area of this bar room.
+Most of the seats still stand, though a few have been speckled with red
+blots of blood or over turned by fleeing people. The bar itself has been
+left rather untouched, only sticky salvia coating some of it towards the
+north. All in all, the bar seems to be in good shape compared  to what it
+could be like. It continues to the north and south.
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 9156
+D2
+~
+~
+0
+-1 9154
+S
+#9156
+At the Bar~
+The bar is covered in sticky saliva of the aliens. Along with some blood
+splatters on the mirror behind the counter, it gives a very unpleasent
+look.  A vent has been torn in on the east wall and has created a hole big
+enough for a man to slide in. There is also a door to the west that leads
+into a storeroom.
+~
+~
+1073807368
+0
+0 1
+D2
+~
+~
+0
+-1 9155
+D3
+~
+~
+3
+-1 9157
+D5
+~
+~
+0
+-1 9174
+S
+#9157
+In the Backroom~
+Boxes and shelves cover the ground of this store room well. Every inch of
+this room is being used to some effect and it is all being used well.
+Effectively stocked and managed, this could easily stock the bar with
+drinks for years. With a one way mirror facing south of here, one also has
+a great view of all the patrons walking into the bar.
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+3
+-1 9156
+D2
+~
+~
+33554432
+-1 9153
+S
+#9158
+Space Docks~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9159
+D3
+~
+~
+0
+-1 9163
+D5
+~
+~
+0
+-1 9013
+S
+#9159
+Space Docks~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9158
+D2
+~
+~
+0
+-1 9160
+D3
+~
+~
+0
+-1 9162
+S
+#9160
+Space Docks~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9159
+D3
+~
+~
+0
+-1 9161
+S
+#9161
+Space Docks~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9162
+D1
+~
+~
+0
+-1 9160
+D3
+~
+~
+0
+-1 9168
+S
+#9162
+Space Docks~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9163
+D1
+~
+~
+0
+-1 9159
+D2
+~
+~
+0
+-1 9161
+D3
+~
+~
+0
+-1 9167
+S
+#9163
+Space Docks~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9164
+D1
+~
+~
+0
+-1 9158
+D2
+~
+~
+0
+-1 9162
+D3
+~
+~
+0
+-1 9166
+S
+#9164
+Under the Control Room~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9163
+D3
+~
+~
+0
+-1 9165
+D4
+~
+~
+0
+-1 9169
+S
+#9165
+Space Docks~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9171
+D1
+~
+~
+0
+-1 9164
+D2
+~
+~
+0
+-1 9166
+S
+#9166
+Space Docks~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9165
+D1
+~
+~
+0
+-1 9163
+D2
+~
+~
+0
+-1 9167
+D5
+~
+~
+0
+-1 9172
+S
+#9167
+Space Docks~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9166
+D1
+~
+~
+0
+-1 9162
+D2
+~
+~
+0
+-1 9168
+S
+#9168
+Space Docks~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9167
+D1
+~
+~
+0
+-1 9161
+S
+#9169
+Secure Door~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 9170
+D5
+~
+~
+0
+-1 9164
+S
+#9170
+Space Control~
+Controls and monitors beep and whirl with motion almost all the time. Even
+with only battery power on, most of these are fully operational. A large
+switch demands attention, being backlighted with &Rred lights&w, but a
+small label on it states it requires a &Wgenerator&w to be used.
+~
+~
+1073807368
+0
+0 1
+D3
+~
+~
+0
+-1 9169
+S
+#9171
+Inside an Air-Lock~
+~
+~
+1073807368&8
+0
+0 1
+D2
+~
+~
+0
+-1 9165
+S
+#9172
+Tunnel System~
+~
+~
+1073807368
+0
+0 1
+D4
+~
+~
+0
+-1 9166
+D8
+~
+~
+0
+-1 9173
+S
+#9173
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9174
+D2
+~
+~
+0
+-1 9175
+D7
+~
+~
+0
+-1 9172
+S
+#9174
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 9173
+D4
+~
+~
+0
+-1 9156
+S
+#9175
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9173
+D1
+~
+~
+0
+-1 9180
+D2
+~
+~
+0
+-1 9177
+D3
+~
+~
+0
+-1 9176
+S
+#9176
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9175
+D4
+~
+~
+0
+-1 9023
+S
+#9177
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9175
+D8
+~
+~
+0
+-1 9178
+S
+#9178
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9179
+D7
+~
+~
+0
+-1 9177
+S
+#9179
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 9178
+S
+#9180
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9181
+D3
+~
+~
+0
+-1 9175
+S
+#9181
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9182
+D2
+~
+~
+0
+-1 9183
+D3
+~
+~
+0
+-1 9180
+S
+#9182
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 9181
+D5
+~
+~
+0
+-1 9184
+S
+#9183
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9181
+S
+#9184
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9185
+D4
+~
+~
+0
+-1 9182
+S
+#9185
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9186
+D3
+~
+~
+0
+-1 9184
+S
+#9186
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9187
+D2
+~
+~
+0
+-1 9185
+S
+#9187
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9189
+D1
+~
+~
+0
+-1 9188
+D3
+~
+~
+0
+-1 9186
+S
+#9188
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 9187
+D4
+~
+~
+0
+-1 9193
+D5
+~
+~
+0
+-1 9190
+S
+#9189
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9187
+D4
+~
+~
+0
+-1 9143
+S
+#9190
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9191
+D4
+~
+~
+0
+-1 9188
+S
+#9191
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9192
+D3
+~
+~
+0
+-1 9190
+S
+#9192
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9191
+S
+#9193
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 9194
+D5
+~
+~
+0
+-1 9188
+S
+#9194
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 9193
+D9
+~
+~
+0
+-1 9195
+S
+#9195
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D5
+~
+~
+0
+-1 9196
+D6
+~
+~
+0
+-1 9194
+S
+#9196
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 9197
+D4
+~
+~
+0
+-1 9195
+S
+#9197
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 9196
+D7
+~
+~
+0
+-1 9198
+S
+#9198
+Tunnel System~
+~
+~
+1073807360
+0
+0 1
+D4
+~
+~
+0
+-1 9061
+D8
+~
+~
+0
+-1 9197
+S
+#0
+
+
+#RESETS
+M 1 9000 1 9062
+M 1 9000 2 9067
+M 1 9000 3 9157
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+S
+
+
+#$

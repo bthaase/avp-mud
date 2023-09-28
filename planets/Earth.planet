@@ -1,0 +1,21 @@
+#PLANET
+Name         Earth~
+Filename     Earth.planet~
+BaseValue    0
+BaseEnergy   0
+TaxRate      0
+Flags        0
+Funds        0
+PopSupport   0.000000
+Population   6000000
+Morale       0.000000
+rOrbital     0
+rCrime       0
+rGarrison    0
+rTourisim    0
+X            0
+Y            0
+Z            0
+End
+
+#END

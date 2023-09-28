@@ -1,0 +1,5843 @@
+#AREA   Marine Research Center Alpha 12~
+
+#VERSION 4
+
+#AUTHOR Tarkanus~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#1972
+Marine~
+A Marine~
+An insane Marine, is standing here talking to himself.
+~
+&wThis &RU&WS&BC&RM&WC&w MP looks like a regular GI, tall and strong. He is
+wearing city camo BDUs, shiny black combat boots, a M10 helmet, and M3
+body armor. On the right arm of his BDU shirt, there is an MP band to show
+that he is military police. He is wielding a M41A pulse rifle like he will
+use it, and you can count on it!
+~
+0
+11
+Z
+50 8 8 1
+20 15 15 10 20 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#1973
+Insane Marine Sniper~
+Pyscho Sniper~
+An insane marine sniper is here talking to himself.
+~
+~
+0
+11
+S
+1 8 8 0
+#1974
+Marine Pyscho Shrink~
+Pyscho Shrink~
+A Pyscho Shrink is standing here, screaming loudly.
+~
+~
+0
+9
+S
+1 8 8 0
+> rand_prog 20~
+say MY HEAD!!! IT...... HURTS!?!?! THEY DID SOMETHING TO... MAE
+HEAD!
+EMOTE BANGS his head against the wall several times
+YELL THE VOICES IN MY HEAD!!!!!!!!!!!!!!!!!!!
+~
+|
+#1975
+Alien Queen Captured~
+Alien Queen~
+The captured alien queen sits here.
+~
+~
+0
+16777219
+Z
+1 8 8 0
+10 10 10 10 10 10
+1 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> all_greet_prog 100~
+follow $n
+~
+> death_prog 100~
+mpat 2161 mpsay QueenTrip
+~
+|
+#2172
+mainframe controller~
+Mainframe Controller~
+The Mainframe Controller system sits here.
+~
+~
+0
+262145
+S
+1 8 8 0
+> speech_prog offline~
+if variable(blownmainframe) == 0
+mpat 2144 unlock east 11990
+mpat 2144 open east
+mpset blownmainframe 1
+mprat 2049 2172 mpecho &w&R(ALERT) THE SPECIMEN CHAMBER IS OPEN!
+mpsleep 12
+mprat 2049 2172 &w&R(ALERT) POWER FAILING. GRIDS ARE GOING DOWN.
+mpsleep 20
+mprat 2049 2080 mprmflag -1 0 dark
+mprat 2049 2080 mpecho &w&CThe lights overhead fizzle and die.
+mprat 2049 2172 mpecho &w&R(WARNING) Power Grid #1 is lost!
+mpsleep 80
+mprat 2081 2100 mprmflag -1 0 dark
+mprat 2081 2100 mpecho &w&CThe lights overhead fizzle and die.
+mprat 2049 2172 mpecho &w&R(WARNING) Power Grid #2 is lost!
+mpsleep 80
+mprat 2101 2130 mprmflag -1 0 dark
+mprat 2101 2130 mpecho &w&CThe lights overhead fizzle and die.
+mprat 2049 2172 mpecho &w&R(WARNING) Power Grid #3 is lost!
+mpsleep 80
+mprat 2131 2172 mprmflag -1 0 dark
+mprat 2131 2172 mpecho &CThe lights overhead fizzle and die. 
+mprat 2049 2172 mpecho &w&R(WARNING) Power Grid #4 is lost!
+mpsleep 15
+mprat 1972 2172 mpecho &w&R(Notice) All Systems are offline. 
+endif 
+~
+> speech_prog online~
+if variable(blownmainframe) == 1
+mpset MFOnline 1
+mpat 2144 close east
+mpat 2144 lock east 11990
+mprat 2049 2172 mpecho &R[WARNING] - The Specimen Chamber is secured.
+mpsleep 20
+mprat 2049 2172 mpecho &Y(Notice) Backup Generator has been activated. 
+mpsleep 8
+mprat 2049 2172 mpecho &Y(Notice) Power Grids are coming back online. 
+mpsleep 20
+mprat 2049 2080 mprmflag -1 1 dark
+mprat 2049 2080 mpecho &YThe overhead lights flare back to life! 
+mprat 2049 2172 mpecho &G(Notice) Power Grid #1 is now online! 
+mpsleep 80
+mprat 2081 2100 mprmflag -1 1 dark
+mprat 2081 2100 mpecho &YThe overhead lights flare back to life! 
+mprat 2049 2172 mpecho &G(Notice) Power Grid #2 is now online! 
+mpsleep 80
+mprat 2101 2130 mprmflag -1 1 dark
+mprat 2101 2130 mpecho &YThe overhead lights flare back to life! 
+mprat 2049 2172 mpecho &G(Notice) Power Grid #3 is now online! 
+mpsleep 80
+mprat 2132 2172 mprmflag -1 1 dark
+mprat 2101 2180 mpecho &YThe overhead lights flare back to life! 
+mprat 2049 2172 mpecho &G(Notice) Power Grid #4 is now online! 
+mpsleep 20
+mprat 1972 2172 mpecho &G(Notice) All Primary Systems are now online. 
+mpset blownmainframe 0
+mpat 2078 mpoload 1974
+mpset MFOnline 0
+endif
+~
+> speech_prog p arm~
+if variable(NukeOn) == 0
+mpset NukeOn 1
+mpmonitor &w&GMarines have managed to arm the nuclear weapon!
+mpsleep 8
+mpmonitor &R60 Seconds till the nuclear weapon sets off the core. 
+mpsleep 40
+say 50 seconds.
+mpsleep 40 
+say 40 seconds.
+mpsleep 40
+say 30 seconds.
+mpsleep 40
+say 20 seconds.
+mpsleep 40
+say 10 seconds.
+mpsleep 40
+mprat 1972 2172 mpe &w&RAutodestruct Sequence Complete - Have a Nice Day.
+mpsleep 8
+mprat 1972 2172 mpe &w&RA massive explosion tears through your body! 
+mpblast 1972 2172 
+mpsleep 8
+mpmonitor &CThe nuke has detonated the Core! The Marines have won! 
+mpsleep 4
+mpteamgain marine 5000
+mpsleep 8
+mpcycle
+say Cycle Complete. 
+endif
+~
+> speech_prog p reactor airlock cycle~
+if variable(RARun1) == 0
+mpset RARun1 1
+mprat 2122 2124 mpe &w&C(Alert) Airlock is cycling. 
+mpsleep 8
+mpat 2123 mpe &CA loud hissing sound fills the chamber. 
+mpoload 1980
+mpat 2123 close e 
+mpat 2123 close s 
+mpat 2123 lock e 
+mpat 2123 lock s 
+mpsleep 16
+mpat 2123 mpe &CThe hissing gradually comes to a stop. 
+mpsleep 8
+if variable(RAState1) == 0
+mpat 2123 unlock s 
+mpat 2123 open s 
+mpat 2123 mpecho &w&R(Alert) Reactor Core is now open. 
+mpset RAState1 1
+else
+mpat 2123 unlock e 
+mpat 2123 open e 
+mpat 2123 mpecho &w&G(Alert) Control Room is now open. 
+mpset RAState1 0 
+endif
+mpat 2122 mpecho &w&C(Alert) Airlock cycle has completed. 
+eat key
+mpset RARun1 0
+endif
+~
+> speech_prog Console1 Console2 Console3~
+say Another console down.
+if variable(RDCon1) == 1
+if variable(RDCon2) == 1
+if variable(RDCon3) == 1
+mpsleep 8
+mpmonitor &CMarines have unlocked the Reactor Control Room! 
+mpoload 1984
+mpat 2121 mpecho &w&CThe northern door buzzes and slides open. 
+mpat 2121 unlock n
+mpat 2121 open n
+mpat 1 drop key
+mpat 1 mppurge objs
+mpset RDoor 1
+endif
+endif
+endif
+~
+> speech_prog AliensWin~
+if variable(AliensWin) == 0
+mpset AliensWin 1
+mpmonitor &GThe Alien Queen has escaped! The Aliens have won! 
+mpsleep 8
+mpteamgain alien 5000
+mpsleep 8 
+mpcycle
+endif
+~
+> speech_prog QueenDeath 100~
+if variable(AlienDead) == 0
+mpset AlienDead 1 
+mpmonitor &RThe Alien Queen has been killed! The Predators have won! 
+mpsleep 4
+mpteamgain predator 5000
+mpsleep 8
+mpcycle
+endif
+~
+|
+#2173
+miniframe controller~
+Miniframe Controller~
+The Miniframe Controller system sits here.
+~
+~
+0
+262145
+S
+1 8 8 0
+> speech_prog QueenTrip 100~
+say QueenDeath
+~
+|
+#0
+
+
+#OBJECTS
+#1972
+Mainframe Console~
+a Mainframe Console~
+A Mainframe Console is here, infront of the window~
+~
+25
+70254595
+0
+5 2 10 25 25 1
+25 0 0
+> useon_prog 100~
+if variable(doorbypass) == 0
+mea $n You call up the administration controls on the console.
+mer $n $n carefully access the security console.
+mpset doorbypass 1
+mpecho &G[Notice]: Security System has been bypassed.
+mpat 2079 unlock east 20394
+mpat 2079 open east
+else
+mea $n You call up the administration controls on the console.
+mer $n $n carefully access the security console.
+mpset doorbypass 0
+mpecho &R[Warning]: Security System has been reactivated.
+mpat 2079 close east
+mpat 2079 lock east 20394 
+endif
+~
+> useoff_prog 100~
+if variable(doorbypass) == 0
+mea $n You call up the administration controls on the console.
+mer $n $n carefully access the security console.
+mpset doorbypass 1
+mpecho &G[Notice]: Security System has been bypassed.
+mpat 2079 unlock east 20394
+mpat 2079 open east
+else
+mea $n You call up the administration controls on the console.
+mer $n $n carefully access the security console.
+mpset doorbypass 0
+mpecho &R[Warning]: Security System has been reactivated.
+mpat 2079 close east
+mpat 2079 lock east 20394 
+endif
+~
+|
+#1973
+outer security console~
+An Outer Security Console~
+An Outer Security Door console is sitting by the northern wall. (USE CONSOLE)~
+~
+25
+68157440
+0
+1 2 10 25 25 1
+25 0 0
+> useon_prog 100~
+if variable(doorbypass1) == 0
+mea $n &GYou call up the administration controls on the console.
+mpsleep 5
+mer $n &G$n carefully access the security console.
+mpset doorbypass1 1
+mpecho &G[Notice]: Security System has been bypassed.
+mpat 2139 unlock west 88274
+mpat 2139 open west
+else
+mea $n &GYou call up the administration controls on the console.
+mpsleep 5
+mer $n &G$n carefully access the security console.
+mpset doorbypass1 0
+mpecho &R[Warning]: Security System has been reactivated.
+mpat 2139 close west
+mpat 2139 lock west 88274 
+endif
+~
+> useoff_prog 100~
+if variable(doorbypass1) == 0
+mea $n &GYou call up the administration controls on the console.
+mpsleep 5
+mer $n &G$n carefully access the security console.
+mpset doorbypass1 1
+mpecho &G[Notice]: Security System has been bypassed.
+mpat 2139 unlock west 88274
+mpat 2139 open west
+else
+mea $n &GYou call up the administration controls on the console.
+mpsleep 5
+mer $n &G$n carefully access the security console.
+mpset doorbypass1 0
+mpecho &R[Warning]: Security System has been reactivated.
+mpat 2139 close west
+mpat 2139 lock west 88274 
+endif
+~
+|
+#1974
+Mainframe Computer~
+a Mainframe Computer~
+The Computer Mainframe~
+~
+25
+3
+0
+2 0 10 5 5 3
+1 0 0
+> useon_prog 100~
+mpat 2161 say offline
+~
+|
+#1975
+Backup Generator Switch~
+a Backup Generator Switch~
+Switch to the Backup Generator~
+~
+4
+70254594
+0
+1 2 5 5 5 1
+5 0 0
+> useon_prog 100~
+if variable(MFOnline) == 1
+mpechoat $n The power is already coming back online. 
+mpechoaround $n $n throws the switch, but nothing happens. 
+else
+if variable(blownmainframe) == 1
+mpechoat $n You throw the switch to restore power. 
+mpechoaround $n $n throws the switch, and you hear a humming. 
+mpat 2161 say online 
+else
+mpechoat $n You throw the switch, but nothing happens. 
+mpechoaround $n $n throws the switch, but nothing happens. 
+endif
+endif
+~
+> useoff_prog 100~
+if variable(MFOnline) == 1
+mpechoat $n The power is already coming back online. 
+mpechoaround $n $n throws the switch, but nothing happens. 
+else
+if variable(blownmainframe) == 1
+mpechoat $n You throw the switch to restore power. 
+mpechoaround $n $n throws the switch, and you hear a humming. 
+mpat 2161 say online 
+else
+mpechoat $n You throw the switch, but nothing happens. 
+mpechoaround $n $n throws the switch, but nothing happens. 
+endif
+endif
+~
+|
+#1976
+Camera Switch~
+Camera Switch~
+A small Camera Switch is on the wall~
+~
+25
+70254594
+0
+1 2 5 5 5 1
+1 0 0
+> useon_prog 100~
+mpecho $n Activates the Comera Switch, and quickly vanishes!
+mpechoaround $n You activate the Camera Switch, and fall into a hole!
+mpforce $n camera
+~
+> useoff_prog 100~
+mpecho $n Activates the Comera Switch, and quickly vanishes!
+mpechoaround $n You activate the Camera Switch, and fall into a hole!
+mpforce $n camera
+~
+|
+#1977
+tactical nuclear weapon nuke~
+Tactical Nuke~
+A backpack sized tactical nuclear weapon rests here.~
+~
+4
+69210114
+0
+0 0 0 0 0 0
+50 0 0
+> useon_prog 100~
+if variable(NukeOn) == 1
+mea $n &CThe nuclear weapon is already armed. Run stupid. 
+mer $n $n fiddles with the nuke, but can't do anything. 
+else
+mea $n &CYou begin carefully arming the nuclear weapon. 
+mea $n &w&YThe process will take 10 seconds. Stay still.
+mer $n $n begins to arm the nuclear weapon.
+mpfreeze $n
+mpsleep 40
+mpunfreeze $n
+mpat 2161 say arm
+endif
+~
+> useoff_prog 100~
+if variable(NukeOn) == 1
+mea $n &CThe nuclear weapon is already armed. Run stupid. 
+mer $n $n fiddles with the nuke, but can't do anything. 
+else
+mea $n &CYou begin carefully arming the nuclear weapon. 
+mea $n &w&YThe process will take 10 seconds. Stay still.
+mer $n $n begins to arm the nuclear weapon.
+mpfreeze $n
+mpsleep 40
+mpunfreeze $n
+mpat 2161 say arm
+endif
+~
+|
+#1978
+Reactore Core Airlock Pressure Switch~
+Pressure Switch~
+The Reactore Core Pressure Switch, is mounted on the wall.~
+~
+4
+68157440
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+mea $n You push the switch for the airlock. 
+mer $n $n activates the airlock switch. 
+mpat 2161 say reactor airlock cycle 
+~
+> useoff_prog 100~
+mea $n You push the switch for the airlock. 
+mer $n $n activates the airlock switch. 
+mpat 2161 say reactor airlock cycle 
+~
+|
+#1980
+airlock key~
+a airlock key~
+A airlock key is here.~
+~
+9
+0
+1
+0 0 0 0 0 0
+1 0 0
+#1981
+Airlock Control Console 1~
+Airlock Control 1~
+The Reactor Room Access Console is mounted here. (USE CONSOLE)~
+~
+4
+68161537
+0
+0 0 0 0 0 0
+5 0 0
+> useon_prog 100~
+if variable(RDCon1) == 0 
+mea $n You activate the console and unlock the core. 
+mer $n $n activates the console and goes to work. 
+mpecho &w&C(Alert) Unlocking Control Room Doors. 
+mpset RDCon1 1
+mpat 2161 say Console1
+else
+mea $n This console has already been triggered. 
+mer $n $n can't seem to figure out the console. 
+endif
+~
+> useoff_prog 100~
+if variable(RDCon1) == 0 
+mea $n You activate the console and unlock the core. 
+mer $n $n activates the console and goes to work. 
+mpecho &w&C(Alert) Unlocking Control Room Doors. 
+mpset RDCon1 1
+mpat 2161 say Console1
+else
+mea $n This console has already been triggered. 
+mer $n $n can't seem to figure out the console. 
+endif
+~
+|
+#1982
+Airlock Control Console 2~
+Airlock Control 2~
+The Reactor Room Access Console is mounted here. (USE CONSOLE)~
+~
+4
+70258689
+0
+0 0 0 0 0 0
+5 0 0
+> useon_prog 100~
+if variable(RDCon2) == 0 
+mea $n You activate the console and unlock the core. 
+mer $n $n activates the console and goes to work. 
+mpecho &w&C(Alert) Unlocking Control Room Doors. 
+mpset RDCon2 1
+mpat 2161 say Console2
+else
+mea $n This console has already been triggered. 
+mer $n $n can't seem to figure out the console. 
+endif
+~
+> useoff_prog 100~
+if variable(RDCon2) == 0 
+mea $n You activate the console and unlock the core. 
+mer $n $n activates the console and goes to work. 
+mpecho &w&C(Alert) Unlocking Control Room Doors. 
+mpset RDCon2 1
+mpat 2161 say Console2
+else
+mea $n This console has already been triggered. 
+mer $n $n can't seem to figure out the console. 
+endif
+~
+|
+#1983
+Airlock Control Console 3~
+Airlock Control 3~
+The Reactor Room Access Console is mounted here. (USE CONSOLE)~
+~
+4
+70258689
+0
+0 0 0 0 0 0
+5 0 0
+> useon_prog 100~
+if variable(RDCon3) == 0 
+mea $n You activate the console and unlock the core. 
+mer $n $n activates the console and goes to work. 
+mpecho &w&C(Alert) Unlocking Control Room Doors. 
+mpset RDCon3 1
+mpat 2161 say Console3
+else
+mea $n This console has already been triggered. 
+mer $n $n can't seem to figure out the console. 
+endif
+~
+> useoff_prog 100~
+if variable(RDCon3) == 0 
+mea $n You activate the console and unlock the core. 
+mer $n $n activates the console and goes to work. 
+mpecho &w&C(Alert) Unlocking Control Room Doors. 
+mpset RDCon3 1
+mpat 2161 say Console3
+else
+mea $n This console has already been triggered. 
+mer $n $n can't seem to figure out the console. 
+endif
+~
+|
+#1984
+Airlockcontrolroom key~
+a Airlockcontrolroom key~
+A Airlockcontrolroom key is here.~
+~
+5
+0
+1
+0 0 0 0 0 0
+1 0 0
+#1985
+armored carapace~
+Armored Carapace~
+Ooooh Shit.~
+~
+3
+256
+9
+1000 1000 0 1 0 0
+1 0 0
+A
+13 100
+A
+14 100
+A
+15 100
+A
+12 100
+A
+11 100
+#0
+
+
+#ROOMS
+#1972
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+134217728
+0
+0 1
+D1
+~
+~
+0
+-1 1983
+D2
+~
+~
+0
+-1 1973
+D5
+~
+~
+0
+-1 2014
+S
+#1973
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1972
+D1
+~
+~
+0
+-1 1982
+D2
+~
+~
+0
+-1 1974
+> entry_prog 35~
+mpecho &wa loud -CLICK- is heard. 
+mpecho &wYou look down to find your standing on a LANDMINE!
+mpdamage $n 45 
+mpasound &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+mpasound &z$n can be heard SCREAMING in agony!!!
+mpecho &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+~
+|
+S
+#1974
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1973
+D1
+~
+~
+0
+-1 1981
+D2
+~
+~
+0
+-1 1975
+S
+#1975
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1974
+D1
+~
+~
+0
+-1 1980
+D2
+~
+~
+0
+-1 1976
+> entry_prog 35~
+mpecho &wa loud -CLICK- is heard. 
+mpecho &wYou look down to find your standing on a LANDMINE!
+mpdamage $n 45 
+mpasound &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+mpasound &z$n can be heard SCREAMING in agony!!!
+mpecho &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+~
+|
+S
+#1976
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1975
+D1
+~
+~
+0
+-1 1979
+D2
+~
+~
+0
+-1 1977
+S
+#1977
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1976
+D1
+~
+~
+0
+-1 1978
+D5
+~
+~
+0
+-1 2035
+S
+#1978
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1979
+D1
+~
+~
+0
+-1 1989
+D3
+~
+~
+0
+-1 1977
+> entry_prog 35~
+mpecho &wa loud -CLICK- is heard. 
+mpecho &wYou look down to find your standing on a LANDMINE!
+mpdamage $n 45 
+mpasound &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+mpasound &z$n can be heard SCREAMING in agony!!!
+mpecho &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+~
+|
+S
+#1979
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1980
+D1
+~
+~
+0
+-1 1988
+D2
+~
+~
+0
+-1 1978
+D3
+~
+~
+0
+-1 1976
+> entry_prog 35~
+mpecho &wa loud -CLICK- is heard. 
+mpecho &wYou look down to find your standing on a LANDMINE!
+mpdamage $n 45 
+mpasound &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+mpasound &z$n can be heard SCREAMING in agony!!!
+mpecho &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+~
+|
+S
+#1980
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1981
+D1
+~
+~
+301989888
+-1 1987
+D2
+~
+~
+0
+-1 1979
+D3
+~
+~
+0
+-1 1975
+S
+#1981
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1982
+D1
+~
+~
+301989888
+-1 1986
+D2
+~
+~
+0
+-1 1980
+D3
+~
+~
+0
+-1 1974
+> entry_prog 35~
+mpecho &wa loud -CLICK- is heard. 
+mpecho &wYou look down to find your standing on a LANDMINE!
+mpdamage $n 45 
+mpasound &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+mpasound &z$n can be heard SCREAMING in agony!!!
+mpecho &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+~
+|
+S
+#1982
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1983
+D1
+~
+~
+0
+-1 1985
+D2
+~
+~
+0
+-1 1981
+D3
+~
+~
+0
+-1 1973
+S
+#1983
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 1984
+D2
+~
+~
+0
+-1 1982
+D3
+~
+~
+0
+-1 1972
+S
+#1984
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 1995
+D2
+~
+~
+0
+-1 1985
+D3
+~
+~
+0
+-1 1983
+> entry_prog 35~
+mpecho &wa loud -CLICK- is heard. 
+mpecho &wYou look down to find your standing on a LANDMINE! 
+mpdamage $n 45 
+mpasound &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+mpasound &z$n can be heard SCREAMING in agony!!!
+mpecho &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+~
+|
+S
+#1985
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1984
+D1
+~
+~
+0
+-1 1994
+D2
+~
+~
+301989888
+-1 1986
+D3
+~
+~
+0
+-1 1982
+D5
+~
+hole~
+524288
+-1 2013
+> entry_prog 35~
+mpecho &wa loud -CLICK- is heard. 
+mpecho &wYou look down to find your standing on a LANDMINE!
+mpdamage $n 45 
+mpasound &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+mpasound &z$n can be heard SCREAMING in agony!!!
+mpecho &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+~
+|
+S
+#1986
+&OA Small Bunker~
+This room is a certain stronghold within the area.  It would be wise to
+maintain here and snipe at oncoming enemies.  There is a small metal sheet
+on the floor, wonder what its for?
+~
+~
+8
+0
+0 1
+D0
+~
+down~
+301989888
+-1 1985
+D1
+~
+~
+0
+-1 1993
+D2
+~
+~
+0
+-1 1987
+D3
+~
+~
+301989888
+-1 1981
+D5
+~
+~
+2051
+-1 2008
+S
+#1987
+&OA Small Bunker~
+This room is a certain strongpoint for the area.  It would be wise to camp
+here and use it as a vantage point to slaughter any oncoming enemies. 
+Screams of agony can be hear from all directions.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 1986
+D1
+~
+~
+0
+-1 1992
+D2
+~
+~
+301989888
+-1 1988
+D3
+~
+~
+301989888
+-1 1980
+S
+#1988
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+301989888
+-1 1987
+D1
+~
+~
+0
+-1 1991
+D2
+~
+~
+0
+-1 1989
+D3
+~
+~
+0
+-1 1979
+S
+#1989
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1988
+D1
+~
+~
+0
+-1 1990
+D3
+~
+~
+0
+-1 1978
+S
+#1990
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1991
+D1
+~
+~
+0
+-1 2001
+D3
+~
+~
+0
+-1 1989
+> entry_prog 35~
+mpecho &wa loud -CLICK- is heard. 
+mpecho &wYou look down to find your standing on a LANDMINE!
+mpdamage $n 45 
+mpasound &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+mpasound &z$n can be heard SCREAMING in agony!!!
+mpecho &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+~
+|
+S
+#1991
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+4194311
+-1 1992
+D1
+~
+~
+0
+-1 2000
+D2
+~
+~
+0
+-1 1990
+D3
+~
+~
+0
+-1 1988
+S
+#1992
+&OA Small Bunker~
+This room is a certain strongpoint for the area.  It would be wise to camp
+here and use it as a vantage point to slaughter any oncoming enemies. 
+Screams of agony can be hear from all directions.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 1993
+D1
+~
+~
+301989888
+-1 1999
+D2
+~
+~
+4194311
+-1 1991
+D3
+~
+~
+0
+-1 1987
+S
+#1993
+&OA Small Bunker~
+This room is a certain strongpoint for the area.  It would be wise to camp
+here and use it as a vantage point to slaughter any oncoming enemies. 
+Screams of agony can be hear from all directions.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+301989888
+-1 1994
+D1
+~
+~
+301989888
+-1 1998
+D2
+~
+~
+0
+-1 1992
+D3
+~
+~
+0
+-1 1986
+S
+#1994
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1995
+D1
+~
+~
+0
+-1 1997
+D2
+~
+~
+301989888
+-1 1993
+D3
+~
+~
+0
+-1 1985
+S
+#1995
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 1996
+D2
+~
+~
+0
+-1 1994
+D3
+~
+~
+0
+-1 1984
+S
+#1996
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 2007
+D2
+~
+~
+0
+-1 1997
+D3
+~
+~
+0
+-1 1995
+> entry_prog 35~
+mpecho &wa loud -CLICK- is heard. 
+mpecho &wYou look down to find your standing on a LANDMINE!
+mpdamage $n 45 
+mpasound &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+mpasound &z$n can be heard SCREAMING in agony!!!
+mpecho &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+~
+|
+S
+#1997
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1996
+D1
+~
+~
+0
+-1 2006
+D2
+~
+~
+0
+-1 1998
+D3
+~
+~
+0
+-1 1994
+> entry_prog 35~
+mpecho &wa loud -CLICK- is heard. 
+mpecho &wYou look down to find your standing on a LANDMINE!
+mpdamage $n 45 
+mpasound &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+mpasound &z$n can be heard SCREAMING in agony!!!
+mpecho &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+~
+|
+S
+#1998
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1997
+D1
+~
+~
+0
+-1 2005
+D2
+~
+~
+0
+-1 1999
+D3
+~
+~
+301989888
+-1 1993
+> entry_prog 35~
+mpecho &wa loud -CLICK- is heard. 
+mpecho &wYou look down to find your standing on a LANDMINE!
+mpdamage $n 45 
+mpasound &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+mpasound &z$n can be heard SCREAMING in agony!!!
+mpecho &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+~
+|
+S
+#1999
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1998
+D1
+~
+~
+0
+-1 2004
+D2
+~
+~
+0
+-1 2000
+D3
+~
+~
+301989888
+-1 1992
+S
+#2000
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 1999
+D1
+~
+~
+0
+-1 2003
+D2
+~
+~
+0
+-1 2001
+D3
+~
+~
+0
+-1 1991
+> entry_prog 35~
+mpecho &wa loud -CLICK- is heard. 
+mpecho &wYou look down to find your standing on a LANDMINE!
+mpdamage $n 45 
+mpasound &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+mpasound &z$n can be heard SCREAMING in agony!!!
+mpecho &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+~
+|
+S
+#2001
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 2000
+D1
+~
+~
+0
+-1 2002
+D3
+~
+~
+0
+-1 1990
+S
+#2002
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 2003
+D3
+~
+~
+0
+-1 2001
+D5
+~
+~
+0
+-1 2040
+> entry_prog 35~
+mpecho &wa loud -CLICK- is heard. 
+mpecho &wYou look down to find your standing on a LANDMINE!
+mpdamage $n 45 
+mpasound &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+mpasound &z$n can be heard SCREAMING in agony!!!
+mpecho &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+~
+|
+S
+#2003
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 2004
+D2
+~
+~
+0
+-1 2002
+D3
+~
+~
+0
+-1 2000
+S
+#2004
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 2005
+D2
+~
+~
+0
+-1 2003
+D3
+~
+~
+0
+-1 1999
+> entry_prog 35~
+mpecho &wa loud -CLICK- is heard. 
+mpecho &wYou look down to find your standing on a LANDMINE!
+mpdamage $n 45 
+mpasound &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+mpasound &z$n can be heard SCREAMING in agony!!!
+mpecho &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+~
+|
+S
+#2005
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 2006
+D2
+~
+~
+0
+-1 2004
+D3
+~
+~
+0
+-1 1998
+S
+#2006
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 2007
+D2
+~
+~
+0
+-1 2005
+D3
+~
+~
+0
+-1 1997
+S
+#2007
+&zA Dark, Muddy Clearing~
+A heavy rain falls all around.  The ground is muddy, and very slippery. 
+Mixed with the mud, is a deep crimson color... the color of blood.  It
+would appear as if a great battle has occured here very recently. Sounds
+of gunfire can be heard in all directions... It would not be wise to stay
+in this area for to long.
+~
+~
+0
+0
+0 1
+D2
+~
+~
+0
+-1 2006
+D3
+~
+~
+0
+-1 1996
+D5
+~
+~
+0
+-1 2025
+> entry_prog 35~
+mpecho &wa loud -CLICK- is heard. 
+mpecho &wYou look down to find your standing on a LANDMINE!
+mpdamage $n 45 
+mpasound &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+mpasound &z$n can be heard SCREAMING in agony!!!
+mpecho &RBOOOOOOOOOOOOOOOOOOOOOM!&w
+~
+|
+S
+#2008
+&zDark Tunnel~
+This is a long dark tunnel, wonder where it leads to?
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 2009
+D4
+~
+~
+3
+-1 1986
+S
+#2009
+&zDark Tunnel~
+This is a long dark tunnel, wonder where it leads to?
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 2010
+D3
+~
+~
+0
+-1 2008
+S
+#2010
+&zDark Tunnel~
+This is a long dark tunnel, wonder where it leads to?
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 2011
+D3
+~
+~
+0
+-1 2009
+S
+#2011
+&zDark Tunnel~
+This is a long dark tunnel, wonder where it leads to?
+~
+~
+0
+0
+0 1
+D2
+~
+~
+0
+-1 2010
+D3
+~
+~
+0
+-1 2012
+S
+#2012
+&zDark Tunnel~
+This is a long dark tunnel, wonder where it leads to?
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 2011
+D3
+~
+~
+0
+-1 2013
+S
+#2013
+&zDark Tunnel~
+This is a long dark tunnel, wonder where it leads to?
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 2012
+D4
+~
+~
+0
+-1 1985
+S
+#2014
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D2
+~
+~
+0
+-1 2015
+D4
+~
+~
+0&2
+-1 1972
+S
+#2015
+&zLong Dark Trench~
+&zThis dark trench is filled with a stale, old smell.  The walls are wet
+from water, as well as the floor.  Whispers echo off the cold barren
+walls. A small vent &YSHAFT&z can be seen on the floor... it looks big
+enough for anyone to crawl through.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2014
+D2
+~
+~
+0
+-1 2016
+D5
+~
+Shaft~
+526336
+-1 2100
+S
+#2016
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2015
+D2
+~
+~
+0
+-1 2017
+S
+#2017
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2016
+D1
+~
+~
+0
+-1 2018
+S
+#2018
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 2019
+D3
+~
+~
+0
+-1 2017
+S
+#2019
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2020
+D2
+~
+~
+0
+-1 2032
+D3
+~
+~
+0
+-1 2018
+S
+#2020
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2021
+D2
+~
+~
+0
+-1 2019
+S
+#2021
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2022
+D2
+~
+~
+0
+-1 2020
+S
+#2022
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 2023
+D2
+~
+~
+0
+-1 2021
+S
+#2023
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 2024
+D3
+~
+~
+0
+-1 2022
+S
+#2024
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 2025
+D3
+~
+~
+0
+-1 2023
+S
+#2025
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D2
+~
+~
+0
+-1 2026
+D3
+~
+~
+0
+-1 2024
+D4
+~
+~
+0
+-1 2007
+S
+#2026
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2025
+D2
+~
+~
+0
+-1 2027
+S
+#2027
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2026
+D3
+~
+~
+0
+-1 2028
+S
+#2028
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 2027
+D2
+~
+~
+0
+-1 2029
+S
+#2029
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2028
+D2
+~
+~
+0
+-1 2030
+S
+#2030
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2029
+D2
+~
+~
+0
+-1 2039
+D3
+~
+~
+0
+-1 2031
+S
+#2031
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 2030
+D3
+~
+~
+0
+-1 2032
+S
+#2032
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2019
+D1
+~
+~
+0
+-1 2031
+D2
+~
+~
+0
+-1 2037
+D3
+~
+~
+0
+-1 2033
+S
+#2033
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 2032
+D3
+~
+~
+0
+-1 2034
+S
+#2034
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 2033
+D2
+~
+~
+0
+-1 2035
+S
+#2035
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2034
+D1
+~
+~
+0
+-1 2036
+D4
+~
+~
+0
+-1 1977
+S
+#2036
+&zLong Dark Trench~
+&zThis dark trench is filled with a stale, old smell.  The walls are wet
+from water, as well as the floor.  Whispers echo off the cold barren
+walls. A small vent &YSHAFT&z can be seen on the floor... it looks big
+enough for anyone to crawl through.
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 2037
+D3
+~
+~
+0
+-1 2035
+D5
+~
+Shaft~
+526336
+-1 2157
+S
+#2037
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2032
+D1
+~
+~
+0
+-1 2038
+D3
+~
+~
+0
+-1 2036
+S
+#2038
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 2039
+D3
+~
+~
+0
+-1 2037
+S
+#2039
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2030
+D1
+~
+~
+0
+-1 2040
+D3
+~
+~
+0
+-1 2038
+S
+#2040
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+536870920
+0
+0 1
+D2
+~
+~
+0
+-1 2041
+D3
+~
+~
+0
+-1 2039
+D4
+~
+~
+0
+-1 2002
+S
+#2041
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2040
+D2
+~
+~
+0
+-1 2042
+S
+#2042
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2041
+D2
+~
+~
+0
+-1 2043
+S
+#2043
+&zLong Dark Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2042
+D1
+~
+~
+0
+-1 2044
+S
+#2044
+&zEnd of the Trench~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 2045
+D3
+~
+~
+0
+-1 2043
+S
+#2045
+&zEntrance to the Underground Bunker~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 2046
+D3
+~
+~
+0
+-1 2044
+S
+#2046
+&zEntrance to the Underground Bunker~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 2047
+D3
+~
+~
+0
+-1 2045
+S
+#2047
+&zEntrance to the Underground Bunker~
+This dark trench is filled with a stale, old smell.  The walls are wet from
+water, as well as the floor.  Whispers echo off the cold barren walls.
+Sounds of death, and agony bounce off the walls, peircing your ears.
+~
+~
+8
+0
+0 1
+D2
+~
+~
+0
+-1 2048
+D3
+~
+~
+0
+-1 2046
+S
+#2048
+&zBunker Lift~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 2047
+D5
+~
+~
+0
+-1 2049
+S
+#2049
+&zSub-Level One Lift~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748745
+0
+0 1
+D0
+~
+~
+0
+-1 2050
+D4
+~
+~
+0&2
+-1 2048
+D5
+~
+~
+0
+-1 2101
+S
+#2050
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554441
+0
+0 1
+D0
+~
+~
+0
+-1 2051
+D2
+~
+~
+0
+-1 2049
+S
+#2051
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748745
+0
+0 1
+D0
+~
+~
+0
+-1 2052
+D2
+~
+~
+0
+-1 2050
+S
+#2052
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554441
+0
+0 1
+D0
+~
+~
+0
+-1 2053
+D2
+~
+~
+0
+-1 2051
+S
+#2053
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748745
+0
+0 1
+D0
+~
+~
+0
+-1 2054
+D2
+~
+~
+0
+-1 2052
+S
+#2054
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554441
+0
+0 1
+D2
+~
+~
+0
+-1 2053
+D3
+~
+~
+0
+-1 2055
+S
+#2055
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748745
+0
+0 1
+D1
+~
+~
+0
+-1 2054
+D3
+~
+~
+0
+-1 2056
+S
+#2056
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554441
+0
+0 1
+D1
+~
+~
+0
+-1 2055
+D2
+~
+~
+0
+-1 2057
+S
+#2057
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748745
+0
+0 1
+D0
+~
+~
+0
+-1 2056
+D2
+~
+~
+0
+-1 2058
+S
+#2058
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554441
+0
+0 1
+D0
+~
+~
+0
+-1 2057
+D3
+~
+~
+0
+-1 2059
+S
+#2059
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748745
+0
+0 1
+D1
+~
+~
+0
+-1 2058
+D3
+~
+~
+0
+-1 2060
+S
+#2060
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554441
+0
+0 1
+D1
+~
+~
+0
+-1 2059
+D3
+~
+~
+0
+-1 2061
+S
+#2061
+&zSub-Level One Hallway Intersection~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748745
+0
+0 1
+D1
+~
+~
+0
+-1 2060
+D2
+~
+~
+0
+-1 2081
+D3
+~
+~
+0
+-1 2062
+S
+#2062
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554441
+0
+0 1
+D1
+~
+~
+0
+-1 2061
+D3
+~
+~
+0
+-1 2063
+S
+#2063
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748745
+0
+0 1
+D0
+~
+~
+0
+-1 2064
+D1
+~
+~
+0
+-1 2062
+S
+#2064
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554441
+0
+0 1
+D0
+~
+~
+0
+-1 2065
+D2
+~
+~
+0
+-1 2063
+S
+#2065
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748745
+0
+0 1
+D0
+~
+~
+0
+-1 2066
+D2
+~
+~
+0
+-1 2064
+S
+#2066
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554441
+0
+0 1
+D0
+~
+~
+0
+-1 2069
+D2
+~
+~
+0
+-1 2065
+D3
+~
+~
+0
+-1 2067
+S
+#2067
+&zEntrance to Armory Closet~
+This room is used for stashing weapons and armor. Eventhough it seems empty
+right now, it has been alot fuller at less risk times. 
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554441
+0
+0 1
+D1
+~
+~
+0
+-1 2066
+D3
+~
+~
+134217731
+39138 2068
+S
+#2068
+&zSub-Level One Armory Closet~
+This room is used for stashing weapons and armor. Eventhough it seems empty
+right now, it has been alot fuller at less risk times. 
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748745
+0
+0 1
+D1
+~
+~
+134217731
+39138 2067
+S
+#2069
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748745
+0
+0 1
+D1
+~
+~
+0
+-1 2070
+D2
+~
+~
+0
+-1 2066
+S
+#2070
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554441
+0
+0 1
+D1
+~
+~
+0
+-1 2071
+D3
+~
+~
+0
+-1 2069
+S
+#2071
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554441
+0
+0 1
+D1
+~
+~
+0
+-1 2072
+D2
+~
+~
+0
+-1 2080
+D3
+~
+~
+0
+-1 2070
+S
+#2072
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554441
+0
+0 1
+D1
+~
+~
+0
+-1 2073
+D3
+~
+~
+0
+-1 2071
+S
+#2073
+&zSub-Level One Hallway Intersection~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748745
+0
+0 1
+D0
+~
+~
+0
+-1 2074
+D2
+~
+~
+0
+-1 2076
+D3
+~
+~
+0
+-1 2072
+S
+#2074
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554441
+0
+0 1
+D0
+~
+~
+0
+-1 2075
+D2
+~
+~
+0
+-1 2073
+S
+#2075
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748745
+0
+0 1
+D2
+~
+~
+0
+-1 2074
+D3
+~
+~
+0
+-1 2094
+S
+#2076
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways. 
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554441
+0
+0 1
+D0
+~
+~
+0
+-1 2073
+D2
+~
+~
+0
+-1 2077
+S
+#2077
+&zSub-Level One Hallway Leading to the Mainframe~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748745
+0
+0 1
+D0
+~
+~
+0
+-1 2076
+D3
+~
+~
+0
+-1 2078
+S
+#2078
+&zSub-Level One Hallway Leading to the Mainframe~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554441
+0
+0 1
+D1
+~
+~
+0
+-1 2077
+D3
+~
+~
+134217735
+20394 2079
+S
+#2079
+&zMainframe Room~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748745
+0
+0 1
+D0
+~
+~
+301989888
+-1 2080
+D1
+~
+~
+134217735
+20394 2078
+S
+#2080
+&zMainframe Control Room~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748745
+0
+0 1
+D0
+~
+~
+0
+-1 2071
+D2
+~
+~
+301989888
+-1 2079
+S
+#2081
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 2061
+D2
+~
+~
+0
+-1 2082
+S
+#2082
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 2081
+D2
+~
+~
+3
+-1 2083
+S
+#2083
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways. 
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D0
+~
+~
+3
+-1 2082
+D1
+~
+~
+0
+-1 2084
+D3
+~
+~
+0
+-1 2089
+S
+#2084
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 2085
+D3
+~
+~
+0
+-1 2083
+S
+#2085
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2086
+D3
+~
+~
+0
+-1 2084
+S
+#2086
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways. 
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 2087
+D3
+~
+~
+0
+-1 2085
+S
+#2087
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways. 
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2088
+D2
+~
+~
+0
+-1 2086
+S
+#2088
+&zMens Barracks~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+301989896
+0
+0 1
+D3
+~
+~
+0
+-1 2087
+S
+#2089
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways. 
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 2083
+D3
+~
+~
+0
+-1 2090
+S
+#2090
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways. 
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2089
+D3
+~
+~
+0
+-1 2091
+S
+#2091
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways. 
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 2092
+D1
+~
+~
+0
+-1 2090
+S
+#2092
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways. 
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D2
+~
+~
+0
+-1 2091
+D3
+~
+~
+0
+-1 2093
+S
+#2093
+&zWomen's Barracks~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+301989896
+0
+0 1
+D1
+~
+~
+0
+-1 2092
+S
+#2094
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2075
+D3
+~
+~
+0
+-1 2095
+S
+#2095
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 2094
+D3
+~
+~
+0
+-1 2096
+S
+#2096
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2095
+D3
+~
+~
+0
+-1 2097
+S
+#2097
+&zSub-Level One Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2096
+D3
+~
+~
+0
+-1 2098
+S
+#2098
+&zLeading to a Vent Shaft~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 2097
+D3
+~
+~
+0
+-1 2099
+S
+#2099
+&zLeading to a Vent Shaft~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2098
+D2
+~
+~
+5
+69243 2100
+S
+#2100
+&zDuct leading to the Vent Shaft~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+134217733
+69234 2099
+D4
+~
+~
+0&2
+-1 2015
+S
+#2101
+&zSub-Level Two Lift~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 2102
+D4
+~
+~
+0
+-1 2049
+S
+#2102
+&zSub-Level Two Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 2103
+D2
+~
+~
+0
+-1 2101
+S
+#2103
+&zSub-Level Two Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 2104
+D2
+~
+~
+0
+-1 2102
+S
+#2104
+&zSub-Level Two Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 2105
+D2
+~
+~
+0
+-1 2103
+S
+#2105
+&zSub-Level Two Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways. 
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D2
+~
+~
+0
+-1 2104
+D3
+~
+~
+0
+-1 2106
+S
+#2106
+&zSub-Level Two Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways. 
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2105
+D3
+~
+~
+0
+-1 2107
+S
+#2107
+&zSub-Level Two Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 2106
+D2
+~
+~
+0&2
+-1 2108
+D3
+~
+~
+0
+-1 2109
+S
+#2108
+&zSub-Level Two Vent Duct Acess~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 2107
+D4
+~
+~
+0
+-1 2151
+S
+#2109
+&zSub-Level Two Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways. 
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2107
+D3
+~
+~
+0
+-1 2110
+D9
+~
+~
+0
+-1 2125
+S
+#2110
+&zEntrance to Reactor Zone~
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 2111
+D1
+~
+~
+0
+-1 2109
+S
+#2111
+&zReactor Control Zone~
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 2112
+D2
+~
+~
+0
+-1 2110
+S
+#2112
+&zReactor Control Zone~
+~
+~
+33554440
+0
+0 1
+D2
+~
+~
+0
+-1 2111
+D3
+~
+~
+0
+-1 2113
+S
+#2113
+&zReactor Control Zone~
+~
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 2112
+D3
+~
+~
+0
+-1 2114
+S
+#2114
+&zReactor Control Zone~
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2113
+D3
+~
+~
+0
+-1 2115
+S
+#2115
+&zReactor Control Zone~
+~
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 2114
+D2
+~
+~
+0
+-1 2116
+S
+#2116
+&zReactor Control Zone~
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 2115
+D2
+~
+~
+0
+-1 2117
+S
+#2117
+&zReactor Control Zone~
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 2116
+D2
+~
+~
+0
+-1 2118
+S
+#2118
+&zReactor Control Zone~
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 2117
+D1
+~
+~
+0
+-1 2119
+S
+#2119
+&zReactor Control Zone~
+~
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 2120
+D3
+~
+~
+0
+-1 2118
+S
+#2120
+&zReactor Control Zone~
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+1984 2121
+D3
+~
+~
+0
+-1 2119
+S
+#2121
+Entrance to the Reactor Control Room~
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+41943079&1
+1984 2122
+D2
+~
+~
+0
+-1 2120
+D3
+~
+~
+301989888
+-1 2124
+> entry_prog 100~
+if variable(RDoor) == 0
+mpecho &w&R(Notice) Reactor Control room is under lockdown conditions. 
+endif
+~
+|
+S
+#2122
+&zReactor Core Control Room~
+This room controls the Reactor Core.  If you wander into the core without
+having a buddy here, you are pretty much fucked.  Either way, Be careful!
+~
+~
+33554440
+0
+0 1
+D2
+~
+~
+41943079&1
+1984 2121
+D3
+~
+~
+8388647&3
+-1 2123
+D9
+~
+~
+369098752&2
+-1 2124
+S
+#2123
+&BREACTOR CORE AIRLOCK~
+This room connectes the two rooms.  It is pressure locked, and sealed
+magnetically.  It would appear that there is no sure way of unlocking it,
+except by the console. 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+8388647&3
+1980 2122
+D2
+~
+~
+8388647&3
+1980 2124
+S
+#2124
+&zREACTOR CORE~
+This room is the heart of the area.  The slightest spark could set the
+entire area into nuclear meltdown.  It would be a horrible thing to kill
+every living thing within a few mile radius, no?
+~
+~
+50331656
+0
+0 1
+D0
+~
+~
+8388647&3
+-1 2123
+D1
+~
+~
+301989888
+-1 2121
+D6
+~
+~
+369098752
+-1 2122
+S
+#2125
+&zEntrance to Specimen Containment~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D2
+~
+~
+0
+-1 2126
+D6
+~
+~
+0
+-1 2109
+S
+#2126
+&zSecurity Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 2125
+D3
+~
+~
+0
+-1 2127
+S
+#2127
+&zSecurity Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2126
+D3
+~
+~
+0
+-1 2128
+S
+#2128
+&zSecurity Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 2127
+D3
+~
+~
+0
+-1 2129
+S
+#2129
+&zSecurity Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2128
+D3
+~
+~
+0
+-1 2130
+S
+#2130
+&zSecurity Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 2129
+D2
+~
+~
+0
+-1 2131
+S
+#2131
+&zSecurity Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554441
+0
+0 1
+D0
+~
+~
+0
+-1 2130
+D2
+~
+~
+0
+-1 2132
+S
+#2132
+&zSecurity Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 2131
+D1
+~
+~
+0
+-1 2133
+D3
+~
+~
+0
+-1 2145
+S
+#2133
+&zSecurity Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2134
+D3
+~
+~
+0
+-1 2132
+S
+#2134
+&zSecurity Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 2135
+D3
+~
+~
+0
+-1 2133
+S
+#2135
+&zSecurity Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2136
+D3
+~
+~
+0
+-1 2134
+S
+#2136
+&zSecurity Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 2137
+D3
+~
+~
+0
+-1 2135
+S
+#2137
+&zSecurity Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2138
+D3
+~
+~
+0
+-1 2136
+S
+#2138
+&zSecurity Hallway~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways. 
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 2139
+D3
+~
+~
+0
+-1 2137
+S
+#2139
+&zSpecimen Containment Area~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D2
+~
+~
+0
+-1 2138
+D3
+~
+~
+134217735&1
+88274 2140
+S
+#2140
+&zSpecimen Containment Area~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+134217735&1
+88274 2139
+D3
+~
+~
+0
+-1 2141
+S
+#2141
+&zSpecimen Containment Area~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 2140
+D3
+~
+~
+0
+-1 2142
+S
+#2142
+&zSpecimen Containment Area~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2141
+D3
+~
+~
+0
+-1 2143
+S
+#2143
+&zSpecimen Containment Area~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2142
+D3
+~
+~
+134217735&3
+11990 2144
+> entry_prog 100~
+mpecho &zA loud hissing sound is heard from the western room.
+if mobinroom(1975) == 1
+mpat 2161 say AliensWin
+endif
+~
+|
+S
+#2144
+&zSpecimen Containment Room~
+This room is dark, and covered in slime.  The Alien Queen screeches
+occaionally, at such a pitch that it hurts your ears.   Screams echo about
+the area, giving caution to the few brave who wander the halls.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+8388616
+0
+0 1
+D1
+~
+~
+134217735&1
+11990 2143
+> all_greet_prog 100~
+~
+|
+S
+#2145
+&zSecurity Booth~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 2146
+D1
+~
+~
+0
+-1 2132
+S
+#2146
+&zSecurity Booth~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 2147
+D2
+~
+~
+0
+-1 2145
+S
+#2147
+&zSecurity Booth~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 2148
+D2
+~
+~
+0
+-1 2146
+D5
+~
+Camera~
+526336
+-1 2160
+S
+#2148
+&zSecurity Booth~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 2149
+D2
+~
+~
+0
+-1 2147
+S
+#2149
+&zSecurity Booth~
+These hallways are barren, with the execeptions of occational blood
+splatters on the walls.  Something terrible must have happined here. The
+walls are a faded soft blue color. Much like you would find in a
+correctional facility. Screams and cries for help can be heard echoing
+throughout the hallways.
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D1
+~
+~
+134217735
+60666 2150
+D2
+~
+~
+0
+-1 2148
+S
+#2150
+&zESCAPE TUNNEL~
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D3
+~
+~
+134217735
+60666 2149
+D4
+~
+~
+0
+-1 2158
+S
+#2151
+Vent Shaft~
+~
+~
+33554440
+0
+0 1
+D3
+~
+~
+0
+-1 2152
+D5
+~
+~
+0
+-1 2108
+S
+#2152
+Vent Shaft~
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2151
+D3
+~
+~
+0
+-1 2153
+S
+#2153
+Vent Shaft~
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2152
+D3
+~
+~
+0
+-1 2154
+S
+#2154
+Vent Shaft~
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 2153
+D3
+~
+~
+0
+-1 2155
+S
+#2155
+Vent Shaft~
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 2156
+D1
+~
+~
+0
+-1 2154
+S
+#2156
+Vent Shaft~
+~
+~
+33554440
+0
+0 1
+D2
+~
+~
+0
+-1 2155
+D4
+~
+~
+0&2
+-1 2157
+S
+#2157
+Vent Shaft~
+~
+~
+33554440
+0
+0 1
+D4
+~
+~
+0
+-1 2036
+D5
+~
+~
+0
+-1 2156
+S
+#2158
+&zESCAPE TUNNEL~
+~
+&g Nothing is as it once was.  The walls are now covered in a slimy goo
+substance, and the floor is coated with muck.  It would not be wise to
+stay here for to long. Clicking sounds are heard echoing about the area.
+Drops of something drip from the ceiling.
+~
+33554440
+0
+0 1
+D4
+~
+~
+0
+-1 2159
+D5
+~
+~
+0
+-1 2150
+S
+#2159
+&zESCAPE TUNNEL~
+~
+~
+33554440
+0
+0 1
+D4
+~
+~
+0
+-1 1978
+D5
+~
+~
+0
+-1 2158
+> entry_prog 100~
+mpforce $n up
+~
+|
+S
+#2160
+Camera Room~
+~
+~
+67108872
+0
+0 1
+D0
+~
+~
+301989888
+-1 2080
+D1
+~
+~
+301989888
+-1 2144
+D2
+~
+~
+301989888
+-1 1986
+D3
+~
+~
+301989888
+-1 2150
+D4
+~
+~
+0
+-1 2147
+> entry_prog 100~
+mpsleep 50
+mpforce $n up
+~
+|
+S
+#2161
+.: Program Control Room - Do Not Touch :.~
+~
+~
+1073741824
+0
+0 1
+D5
+~
+~
+301989888
+-1 2079
+S
+#2162
+Floating in a void~
+~
+~
+1073741824
+0
+0 1
+S
+#0
+
+
+#RESETS
+D 0 2008 4 1
+D 0 1991 0 2
+D 0 1992 2 2
+D 0 2150 3 2
+D 0 2068 1 1
+D 0 2067 3 1
+D 0 2140 1 2
+O 1 1973 1 2149
+D 0 2149 1 2
+O 1 1975 1 2146
+M 1 1972 1 2045
+E 1 150 1 17
+G 1 150 1
+E 1 673 1 16
+G 1 674 1
+G 1 150 1
+G 1 674 1
+M 1 1973 1 1986
+E 1 150 1 17
+G 1 150 1
+G 1 692 1
+E 1 691 1 16
+G 1 150 1
+G 1 692 1
+D 0 1986 5 1
+M 1 1974 1 2139
+M 1 1972 3 2139
+E 1 673 1 16
+G 1 674 1
+G 1 674 1
+M 1 1972 3 2139
+G 1 674 1
+E 1 673 1 16
+G 1 674 1
+D 0 2139 3 2
+M 1 1972 5 2138
+E 1 673 1 16
+G 1 674 1
+G 1 674 1
+M 1 1972 7 2125
+E 1 673 1 16
+G 1 674 1
+G 1 674 1
+M 1 1972 8 2109
+E 1 673 1 16
+G 1 674 1
+G 1 674 1
+M 1 1972 9 2104
+E 1 673 1 16
+G 1 674 1
+G 1 674 1
+M 1 1972 10 2054
+E 1 673 1 16
+G 1 674 1
+G 1 674 1
+M 1 1972 11 2058
+E 1 673 1 16
+G 1 674 1
+G 1 674 1
+M 1 1972 13 2082
+E 1 673 1 16
+G 1 674 1
+G 1 674 1
+M 1 1972 13 2082
+G 1 674 1
+E 1 673 1 16
+G 1 674 1
+D 0 2082 2 1
+M 1 1972 16 2096
+E 1 673 1 16
+G 1 674 1
+G 1 674 1
+M 1 1972 17 2098
+E 1 673 1 16
+G 1 674 1
+G 1 674 1
+M 1 1972 18 2077
+E 1 673 1 16
+G 1 674 1
+G 1 674 1
+O 1 1976 1 2147
+D 0 2143 3 2
+O 1 1972 1 2080
+O 1 1982 1 2080
+O 1 1981 1 2083
+D 0 2083 0 1
+O 1 1983 1 2148
+M 1 1972 19 2137
+E 1 673 1 16
+G 1 674 1
+O 1 3590 1 2137
+O 1 3590 1 2135
+M 1 1972 19 2132
+E 1 673 1 16
+G 1 674 1
+O 1 3590 1 2132
+O 1 3590 1 2129
+O 1 3590 1 2126
+O 1 3590 1 2110
+O 1 3590 1 2112
+O 1 3590 1 2116
+O 1 3590 1 2120
+O 1 3590 1 2106
+O 1 3590 1 2103
+O 1 3590 1 2051
+O 1 3590 1 2056
+O 1 3590 1 2081
+O 1 3590 1 2084
+M 1 1972 19 2063
+E 1 673 1 16
+G 1 674 1
+O 1 3590 1 2063
+O 1 3590 1 2069
+O 1 3590 1 2073
+M 1 1972 19 2075
+E 1 673 1 16
+G 1 674 1
+O 1 3590 1 2075
+O 1 3590 1 2097
+M 1 1972 19 2078
+E 1 673 1 16
+G 1 674 1
+O 1 3590 1 2078
+D 0 2078 3 2
+O 1 1977 1 2124
+D 0 2124 0 2
+D 0 2123 1 2
+D 0 2123 2 2
+M 1 1975 1 2144
+E 1 1985 1 5
+D 0 2144 1 2
+M 1 2172 1 2161
+E 1 53 1 5
+G 1 53 1
+M 1 2173 1 2161
+E 1 53 1 5
+O 1 1974 1 2079
+D 0 2079 1 2
+D 0 2121 0 2
+O 1 1978 1 2122
+D 0 2122 2 2
+D 0 2122 3 2
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+M  1972 spec_enemy_scan
+M  1972 spec_enemy_grenade
+M  1973 spec_enemy_scan
+M  1973 spec_enemy_grenade
+S
+
+
+#$

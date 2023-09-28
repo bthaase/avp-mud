@@ -1,0 +1,38 @@
+#! /bin/csh -f
+
+set port = 7000
+if ( "$1" != "" ) set port="$1"
+
+cd ../area
+
+nohup
+nice
+limit stack 1024k
+limit coredumpsize unlimited
+if ( -e shutdown.txt ) rm -f shutdown.txt
+
+while ( 1 )
+    set index = 1000
+    while ( 1 )
+	set logfile = ../log/$index.log
+	if ( ! -e $logfile ) break
+	@ index++
+    end
+
+    date > $logfile
+    date > ../area/boot.txt
+
+    # Run AVP
+
+    ../src/avp $port >&! $logfile
+
+    if ( -e shutdown.txt ) then
+	rm -f shutdown.txt
+	
+    endif
+    sleep 15
+
+end
+
+
+end

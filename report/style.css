@@ -1,0 +1,144 @@
+P  {}
+
+H1  {}
+
+H2  {}
+
+H3  {}
+
+A  {}
+
+A:Visited  {}
+
+A:Active  {}
+
+A:Hover  {}
+
+BODY  {
+	background-color : D0D0D0;
+}
+
+.HEADER  {
+	font-size : large;
+	font-family : sans-serif;
+	font-weight : bold;
+	margin : 0;
+	padding : 0;
+	border-width : 0;
+}
+
+.SUMMARY  {
+	font-size : small;
+	font-family : sans-serif;
+	font-weight : normal;
+	background-color : CCFFCC;
+	margin : 0;
+	padding : 4;
+	border-width : 1;
+	border-color : #00FF00;
+	border-style : solid;
+}
+
+.INFORMATION  {
+	font-size : x-small;
+	font-family : sans-serif;
+	font-weight : normal;
+	background-color : #AAAAFF;
+	margin : 0;
+	padding : 4;
+	border-width : 1;
+	border-color : #0000FF;
+	border-style : solid;
+}
+
+.ITEMS  {
+	font-size : x-small;
+	font-family : sans-serif;
+	font-weight : normal;
+	background-color : #AAAAFF;
+	margin : 0;
+	padding : 4;
+	border-width : 1;
+	border-color : #0000FF;
+	border-style : solid;
+}
+
+.TITLE  {
+	font-size : medium;
+	font-family : sans-serif;
+	font-weight : bold;
+	color : 000033;
+}
+
+.FOOTER  {
+	font-size : x-small;
+	font-family : sans-serif;
+}
+
+.WINNER  {
+	font-size : small;
+	font-family : sans-serif;
+	font-weight : normal;
+	color : #CC0000;
+}
+
+.MURDER  {
+	font-size : x-small;
+	font-family : sans-serif;
+	font-weight : normal;
+	background-color : FFAAAA;
+	margin : 0;
+	padding : 4;
+	border-width : 1;
+	border-color : FF0000;
+	border-style : solid;
+}
+
+.PLAYERS  {
+	font-size : x-small;
+	font-family : sans-serif;
+	font-weight : normal;
+	background-color : FFAAAA;
+	margin : 0;
+	padding : 4;
+	border-width : 1;
+	border-color : FF0000;
+	border-style : solid;
+}
+
+.SPECIAL  {
+	font-size : x-small;
+	font-family : sans-serif;
+	font-weight : normal;
+	background-color : FFAAAA;
+	margin : 0;
+	padding : 4;
+	border-width : 1;
+	border-color : FF0000;
+	border-style : solid;
+}
+
+.WEAPONS  {
+	font-size : x-small;
+	font-family : sans-serif;
+	font-weight : normal;
+	background-color : FFAAAA;
+	margin : 0;
+	padding : 4;
+	border-width : 1;
+	border-color : FF0000;
+	border-style : solid;
+}
+
+.CAPTION  {
+	font-size : x-small;
+	font-family : sans-serif;
+	padding : 0;
+	border-width : 0;
+	font-weight : bold;
+	margin-bottom : 0;
+	margin-top : 8;
+	margin-right : 0;
+	margin-left : 0;
+}
+

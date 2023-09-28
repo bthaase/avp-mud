@@ -1,0 +1,4464 @@
+#AREA   {PROTO} Ghost's area in progress~
+
+#VERSION 4
+
+#AUTHOR Ghost~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#6002
+Marine Guard Alarm~
+A Marine~
+A Marine is standing here, guarding the Desolation.
+~
+~
+0
+67108865
+Z
+1 8 8 0
+20 10 10 10 20 20
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> all_greet_prog 100~
+if race($n) == Marine
+if rand(50)
+nod $n
+else
+sigh
+endif
+endif
+if race($n) == Alien
+radio We got an alien on the lower levels, boys. I need some backup. 
+,yells something over his radio.
+mpsleep 2
+mpkill $n
+endif
+if race($n) == Predator
+radio Oh.. Oh my god... Theres... Theres SOMETHING DOWN HERE!
+cower
+endif
+~
+|
+#6003
+Marine Guard Patrol1~
+A Marine~
+A heavily armed Marine is patrolling the Desolation's deck.
+~
+~
+0
+67108867
+Z
+1 8 8 0
+25 10 10 10 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> rand_prog 100~
+attach infrared rifle
+if variable(Patrol1) == 0
+if variable(P1Dir) == 0
+north
+if inroom($i) == 6023
+mpset P1Dir 1
+endif
+else
+south
+if inroom($i) == 6019
+mpset P1Dir 0
+endif
+endif
+endif
+~
+> death_prog 100~
+mpat 6151 mpsay Patrol1 is dead!
+~
+|
+#6004
+Marine Guard Patrol2~
+A Marine~
+A heavily armed Marine is patrolling the Desolation's deck.
+~
+~
+0
+67108867
+Z
+1 8 8 0
+25 10 10 10 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> rand_prog 100~
+if variable(Patrol2) == 0
+if variable(P2Dir) == 0
+south
+if inroom($i) == 6009
+mpset P2Dir 1
+endif
+else
+north
+if inroom($i) == 6005
+mpset P2Dir 0
+endif
+endif
+endif
+~
+> death_prog 100~
+mpat 6151 mpsay Patrol2 is dead!
+~
+|
+#6005
+Marine Dropship Pilot~
+The Dropship Pilot~
+A Marine Dropship Pilot is standing here, checking things out.
+~
+~
+0
+67108867
+S
+1 8 8 1
+> rand_prog 100~
+if variable(PilotRun) == 0 
+if inroom($i) == 6036 
+mpat 6151 say Pilot Moving
+unlock s 19539
+mpsleep 2
+open s
+mpsleep 2
+south
+mpsleep 4
+close n
+lock n 19539
+close n
+lock n 19539
+else
+mpat 6151 say Pilot Moving
+unlock n 19539
+mpsleep 2
+open n
+mpsleep 2
+north
+mpsleep 4
+close s
+lock s 19539
+close s
+lock s 19539
+endif
+endif
+~
+> all_greet_prog 100~
+if race($n) == Marine
+nod $n
+else
+mpkill $n
+endif
+~
+|
+#6006
+Marine Guard~
+A Marine~
+A Marine is standing here, guarding the Predator Ship.
+~
+~
+0
+67108867
+Z
+1 8 8 0
+20 10 10 10 10 25
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#6007
+Marine Guard~
+A Marine~
+A Marine is standing here, guarding the Desolation.
+~
+~
+0
+67108867
+Z
+1 8 8 0
+25 10 10 10 10 25
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#6008
+Marine Guard~
+A Marine~
+A Marine is standing here, guarding the Desolation.
+~
+~
+0
+67108865
+Z
+1 8 8 0
+25 10 10 10 10 25
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#6150
+desolation relay controller~
+Relay Controller~
+The Desolation Relay Controller is standing here.
+~
+~
+0
+67108865
+S
+1 8 8 0
+> speech_prog p Patrol1 is dead!~
+say Patrol1Dead
+~
+> speech_prog p Patrol2 is dead!~
+say Patrol2Dead
+~
+|
+#6151
+desolation echo controller mother~
+'Mother'~
+The Desolation Echo Controller 'Mother' is standing here.
+~
+~
+0
+67108865
+S
+1 8 8 2
+> speech_prog Pump1Done~
+mpat 6066 radio Good work, Pump number one has been shutdown.
+mpset Pump1 1
+~
+> speech_prog Pump1Dead~
+mpat 6066 radio Good work, Pump number one has been destroyed. 
+mpset Pump1 2
+~
+> speech_prog Pump2Done~
+mpat 6066 radio Good work, Pump number two has been shutdown.
+mpset Pump2 1
+~
+> speech_prog Pump2Dead~
+mpat 6066 radio Good work, Pump number two has been damaged.
+mpset Pump2 2
+~
+> speech_prog p Pump Reset~
+if variable(Pump1) == 1
+mpset Pump1 0
+endif
+if variable(Pump2) == 1
+mpset Pump2 0
+endif
+if variable(Pump3) == 1
+mpset Pump3 0
+endif
+if variable(Pump4) == 1
+mpset Pump4 0
+endif
+if variable(Pump5) == 1
+mpset Pump5 0
+endif
+if variable(Pump6) == 1
+mpset Pump6 0
+endif
+if variable(Pump7) == 1
+mpset Pump7 0
+endif
+if variable(Pump8) == 1
+mpset Pump8 0
+endif
+if variable(Pump9) == 1
+mpset Pump9 0
+endif
+say Done! All pumps reset.
+~
+> speech_prog p Reset Echo~
+say Consider it done, Boss.
+mpsleep 8
+if rand(50)
+mpat 6066 radio Dont look now, boys - But all the pumps have been reset.
+else
+mpat 6066 radio Hate to tell you this, but all the pumps have just reset.
+endif
+~
+> speech_prog p Patrol1Dead~
+say Consider it done, Boss. 
+mpsleep 8
+mpset Patrol1 0
+say Patrol1 Reset!
+~
+> speech_prog p Patrol2Dead~
+say Consider it done, Boss. 
+mpsleep 8
+mpset Patrol2 0
+say Patrol2 Reset!
+~
+> speech_prog p Pilot Moving~
+mpset PilotRun 1
+say Consider it done, Boss.
+mpsleep 20
+mpset PilotRun 0
+say Pilot unlocked.
+~
+> speech_prog p Reset the Reset~
+say Consider it done, Boss!
+mpsleep 40 
+mpset ResetSet 0 
+say Reset Switch has been reset, boss. 
+~
+> speech_prog p Reset Hit, Set It~
+say Consider it done, Boss.
+mpset ResetBusy 1
+mprat 6002 6201 mpecho &R(Alert) Emergency Pump Reset is being activated. 
+mpsleep 12
+mpat 6102 mpecho &w&C(Notice) Emergency Reset is Ready. (USE RESET NOW)
+mpset ResetBusy 0
+mpset ResetSet 1
+mpsleep 40
+~
+> speech_prog p Reset Hit, Is Set~
+say Consider it done, Boss.
+mpset ResetBusy 1
+mpset ResetSet 0
+mprat 6002 6201 mpecho &R(Alert) Emergency Pump Reset has been triggered.
+mpforce relay say Pump Reset 
+mpsleep 2
+mpforce relay say Reset Echo 
+mpsleep 4
+mpset ResetBusy 0
+~
+> speech_prog p Reset Hit, Is Busy~
+mpat 6102 mpecho &w&C(Notice) Emergency Pump Reset is preparing. 
+~
+> speech_prog p Reset Hit, Is Marine~
+mpat 6102 mpecho &w&Y(Notice) Emergency Reset has been aborted. 
+mpset ResetSet 0
+~
+> speech_prog Pump3Done~
+mpat 6066 radio Good work, Pump number three has been shutdown.
+mpset Pump3 1
+~
+> speech_prog Pump3Dead~
+mpat 6066 radio Good work, Pump number three has been destroyed.
+mpset Pump3 2
+~
+> speech_prog Pump4Done~
+mpat 6066 radio Good work, Pump number four has been shutdown.
+mpset Pump4 1
+~
+> speech_prog Pump4Dead~
+mpat 6066 radio Good work, Pump number four has been destroyed.
+mpset Pump4 2
+~
+> speech_prog Pump5Done~
+mpat 6066 radio Good work, Pump number five has been shutdown.
+mpset Pump5 1
+~
+> speech_prog Pump6Done~
+mpat 6066 radio Good work, Pump number six has been shutdown.
+mpset Pump6 1
+~
+> speech_prog Pump6Dead~
+mpat 6066 radio Good work, Pump number six has been destroyed.
+mpset Pump6 2
+~
+> speech_prog Pump7Done~
+mpat 6066 radio Good work, Pump number seven has been shutdown.
+mpset Pump7 1
+~
+> speech_prog Pump7Dead~
+mpat 6066 radio Good work, Pump number seven has been destroyed.
+mpset Pump7 2
+~
+> speech_prog Pump8Done~
+mpat 6066 radio Good work, Pump number eight has been shutdown.
+mpset Pump8 1
+~
+> speech_prog Pump8Dead~
+mpat 6066 radio Good work, Pump number eight has been destroyed.
+mpset Pump8 2
+~
+> speech_prog Pump9Done~
+mpat 6066 radio Good work, Pump number nine has been shutdown.
+mpset Pump9 1
+~
+> speech_prog Pump9Dead~
+mpat 6066 radio Good work, Pump number nine has been destroyed.
+mpset Pump9 2
+~
+|
+#6201
+desolation controller flood~
+Desolation Flood Controller~
+The Desolation Flood Controller is standing here.
+~
+~
+0
+67108865
+S
+1 8 8 0
+> speech_prog Valid!~
+mpsleep 4
+say Starting Desolation Flood Sequence.
+mpsleep 4
+say Sit tight >_< 
+mpmon &w&CMarines have shutdown all the pumps! The Desolation is flooding!
+mpsleep 4
+mpmon &w&RLower Deck will be completely flooded in 60 seconds. 
+mpsleep 80
+say Flood1-1
+mpsleep 80
+say Flood1-2
+mpsleep 80
+say Flood1-3
+mpmon &w&RDeck Three will be completely flooded in 60 seconds. 
+mpsleep 80
+say Flood 2-1
+mpsleep 80
+say Flood 2-2
+mpsleep 80
+say Flood 2-3
+mpmon &w&RDeck Two will be completely flooded in 60 seconds. 
+mpsleep 80
+say Flood 3-1
+mpsleep 80
+say Flood 3-2
+mpsleep 80
+say Flood 3-3
+mpmon &w&RDeck One will be completely flooded in 60 seconds. 
+mpsleep 80
+say Flood 4-1
+mpsleep 80
+say Flood 4-2
+mpsleep 80
+say Flood 4-3
+mpmon &w&GThe Desolation has sunk. The Marines have saved the day! 
+mpsleep 4
+mpteamgain 0 5000
+mpsleep 4
+mpcycle
+~
+|
+#0
+
+
+#OBJECTS
+#6002
+pump barge bilge one~
+A flood pump~
+An automatic flood control pump is mounted to the wall.~
+~
+4
+2102274
+0
+0 0 0 0 0 0
+1 0 0
+> damage_prog 100~
+if variable(Pump1) == 0
+mpecho &w&C(Alert) Flood control pump one is damaged. 
+mpset Pump1 1
+mpat 6151 say Pump1Dead
+endif
+~
+> useon_prog 100~
+if variable(Pump1) == 0
+mpecho &w&C(Alert) Flood control pump one is shutdown. 
+mpset Pump1 1
+mpat 6151 say Pump1Done
+endif
+~
+> useoff_prog 100~
+if variable(Pump1) == 0
+mpecho &w&C(Alert) Flood control pump one is shutdown. 
+mpset Pump1 1
+mpat 6151 say Pump1Done
+endif
+~
+|
+#6003
+pump barge bilge two~
+A flood pump~
+An automatic flood control pump is mounted to the wall.~
+~
+4
+1052674
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(Pump2) == 0
+mpecho &w&C(Alert) Flood control pump two is shutdown. 
+mpset Pump2 1
+mpat 6151 say Pump2Done
+endif
+~
+> useoff_prog 100~
+if variable(Pump2) == 0
+mpecho &w&C(Alert) Flood control pump two is shutdown. 
+mpset Pump2 1
+mpat 6151 say Pump2Done
+endif
+~
+> damage_prog 100~
+if variable(Pump2) == 0
+mpecho &w&C(Alert) Flood control pump two is damaged. 
+mpset Pump2 1
+mpat 6151 say Pump2Dead
+endif
+~
+|
+#6004
+pump barge bilge three~
+A flood pump~
+An automatic flood control pump is mounted to the wall.~
+~
+4
+1052674
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(Pump3) == 0
+mpecho &w&C(Alert) Flood control pump three is shutdown. 
+mpset Pump3 1
+mpat 6151 say Pump3Done
+endif
+~
+> useoff_prog 100~
+if variable(Pump3) == 0
+mpecho &w&C(Alert) Flood control pump three is shutdown. 
+mpset Pump3 1
+mpat 6151 say Pump3Done
+endif
+~
+> damage_prog 100~
+if variable(Pump3) == 0
+mpecho &w&C(Alert) Flood control pump three is damaged. 
+mpset Pump3 1
+mpat 6151 say Pump3Dead
+endif
+~
+|
+#6005
+pump barge bilge four~
+A flood pump~
+An automatic flood control pump is mounted to the wall.~
+~
+4
+1052674
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(Pump4) == 0
+mpecho &w&C(Alert) Flood control pump four is shutdown. 
+mpset Pump4 1
+mpat 6151 say Pump4Done
+endif
+~
+> useoff_prog 100~
+if variable(Pump4) == 0
+mpecho &w&C(Alert) Flood control pump four is shutdown. 
+mpset Pump4 1
+mpat 6151 say Pump4Done
+endif
+~
+> damage_prog 100~
+if variable(Pump4) == 0
+mpecho &w&C(Alert) Flood control pump four is damaged. 
+mpset Pump4 1
+mpat 6151 say Pump4Dead
+endif
+~
+|
+#6006
+pump barge bilge five~
+A flood pump~
+An automatic flood control pump is mounted to the wall.~
+~
+4
+1052674
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(Pump5) == 0
+mpecho &w&C(Alert) Flood control pump five is shutdown. 
+mpset Pump5 1
+mpat 6151 say Pump5Done
+endif
+~
+> useoff_prog 100~
+if variable(Pump5) == 0
+mpecho &w&C(Alert) Flood control pump five is shutdown. 
+mpset Pump5 1
+mpat 6151 say Pump5Done
+endif
+~
+> damage_prog 100~
+if variable(Pump5) == 0
+mpecho &w&C(Alert) Flood control pump five is damaged. 
+mpset Pump5 1
+mpat 6151 say Pump5Dead
+endif
+~
+|
+#6007
+pump barge bilge six~
+A flood pump~
+An automatic flood control pump is mounted to the wall.~
+~
+4
+1052674
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(Pump6) == 0
+mpecho &w&C(Alert) Flood control pump six is shutdown. 
+mpset Pump6 1
+mpat 6151 say Pump6Done
+endif
+~
+> useoff_prog 100~
+if variable(Pump6) == 0
+mpecho &w&C(Alert) Flood control pump six is shutdown. 
+mpset Pump6 1
+mpat 6151 say Pump6Done
+endif
+~
+> damage_prog 100~
+if variable(Pump6) == 0
+mpecho &w&C(Alert) Flood control pump six is damaged. 
+mpset Pump6 1
+mpat 6151 say Pump6Dead
+endif
+~
+|
+#6008
+pump barge bilge seven~
+A flood pump~
+An automatic flood control pump is mounted to the wall.~
+~
+4
+1052674
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(Pump7) == 0
+mpecho &w&C(Alert) Flood control pump seven is shutdown. 
+mpset Pump7 1
+mpat 6151 say Pump7Done
+endif
+~
+> damage_prog 100~
+if variable(Pump7) == 0
+mpecho &w&C(Alert) Flood control pump seven is damaged. 
+mpset Pump7 1
+mpat 6151 say Pump7Dead
+endif
+~
+> useoff_prog 100~
+if variable(Pump7) == 0
+mpecho &w&C(Alert) Flood control pump seven is shutdown. 
+mpset Pump7 1
+mpat 6151 say Pump7Done
+endif
+~
+|
+#6009
+pump barge bilge eight~
+A flood pump~
+An automatic flood control pump is mounted to the wall.~
+~
+4
+1052674
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(Pump8) == 0
+mpecho &w&C(Alert) Flood control pump eight is shutdown. 
+mpset Pump8 1
+mpat 6151 say Pump8Done
+endif
+~
+> useoff_prog 100~
+if variable(Pump8) == 0
+mpecho &w&C(Alert) Flood control pump eight is shutdown. 
+mpset Pump8 1
+mpat 6151 say Pump8Done
+endif
+~
+> damage_prog 100~
+if variable(Pump8) == 0
+mpecho &w&C(Alert) Flood control pump eight is damaged. 
+mpset Pump8 1
+mpat 6151 say Pump8Dead
+endif
+~
+|
+#6010
+pump barge bilge nine~
+A flood pump~
+An automatic flood control pump is mounted to the wall.~
+~
+4
+1052674
+0
+0 0 0 0 0 0
+1 0 0
+> damage_prog 100~
+if variable(Pump9) == 0
+mpecho &w&C(Alert) Flood control pump nine is damaged. 
+mpset Pump9 1
+mpat 6151 say Pump9Dead
+endif
+~
+> useon_prog 100~
+if variable(Pump9) == 0
+mpecho &w&C(Alert) Flood control pump nine is shutdown. 
+mpset Pump9 1
+mpat 6151 say Pump9Done
+endif
+~
+> useoff_prog 100~
+if variable(Pump9) == 0
+mpecho &w&C(Alert) Flood control pump nine is shutdown. 
+mpset Pump9 1
+mpat 6151 say Pump9Done
+endif
+~
+|
+#6015
+light post~
+Light Post~
+A Tall, Steel Light Post keeps the deck lit up.~
+~
+4
+67108865
+0
+0 0 0 0 0 0
+1 0 0
+#6016
+footlocker foot locker green~
+A green footlocker~
+A large, green footlocker rests up against the compartment wall.~
+~
+6
+67108864
+0
+2000 7 0 100 2000 0
+100 0 0
+#6017
+emergency pump reset~
+Emergency Pump Reset~
+The Emergency Pump Reset control sits here. (USE RESET)~
+~
+4
+68157440
+0
+0 0 0 0 0 0
+100 0 0
+> useon_prog 100~
+if variable(ResetBusy) == 1
+mpat 6151 say Reset Hit, Is Busy
+else
+if variable(ResetSet) == 0
+mpat 6151 say Reset Hit, Set It
+else
+if race($n) == Marine
+mpat 6151 say Reset Hit, Is Marine
+else
+mpat 6151 say Reset Hit, Is Set
+endif
+endif
+endif
+~
+> useoff_prog 100~
+if variable(ResetBusy) == 1
+mpat 6151 say Reset Hit, Is Busy
+else
+if variable(ResetSet) == 0
+mpat 6151 say Reset Hit, Set It
+else
+if race($n) == Marine
+mpat 6151 say Reset Hit, Is Marine
+else
+mpat 6151 say Reset Hit, Is Set
+endif
+endif
+endif
+~
+|
+#6018
+massive stack crates metal~
+Massive Stack of Crates~
+A massive stack of metal crates sits here, dominating the room.~
+~
+25
+0
+0
+10 2 5 300 300 0
+100 0 0
+#6019
+ammunition ammo box~
+Ammunition Box~
+A Predator Ammunition Box is sitting in the corner.~
+~
+37
+67117056
+0
+1 3 2 2 0 0
+20 0 0
+#6020
+ammunition ammo box~
+Ammunition Box~
+A Marine Ammunition Box is sitting in the corner here.~
+~
+37
+67112960
+0
+1 3 2 2 0 0
+20 0 0
+#6021
+disel turbine shaft~
+Disel Turbine~
+A massive disel turbine shaft dominates the room, running loudly.~
+~
+36
+67108866
+0
+2 2 0 0 0 0
+1000 0 0
+#6022
+torn vent~
+Torn Vent~
+A vent has been torn wide open, leaving a gaping hole in the wall.~
+~
+5
+67109888
+0
+30 30 50 1 500 0
+1 0 0
+#6023
+engine key~
+Engine Room Key~
+:: Desolation Engine Room Key ::~
+~
+9
+256
+1
+0 0 0 0 0 0
+1 0 0
+#6024
+pump key~
+Bilge Room Key~
+:: Desolation Bilge Room Key ::~
+~
+9
+1280
+1
+0 0 0 0 0 0
+1 0 0
+#6025
+tazer lightweight~
+Lightweight Tazer~
+Some idiot dropped a lightweight tazer here.~
+~
+2
+4231168
+8193
+1 50 70 1 1 3
+3 500 50
+#0
+
+
+#ROOMS
+#6002
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 6003
+D9
+~
+~
+0
+-1 6023
+S
+#6003
+&zDeck of the Desolation &O:: &YAccess Hatch~
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 6004
+D2
+~
+~
+0
+-1 6032
+D3
+~
+~
+0
+-1 6002
+D5
+~
+~
+3&1
+-1 6057
+S
+#6004
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+0
+0
+0 1
+D3
+~
+~
+0
+-1 6003
+D8
+~
+~
+0
+-1 6005
+S
+#6005
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+2097152
+0
+0 1
+D2
+~
+~
+0
+-1 6006
+D7
+~
+~
+0
+-1 6004
+S
+#6006
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 6005
+D2
+~
+~
+0
+-1 6007
+S
+#6007
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+2097152
+0
+0 1
+D0
+~
+~
+0
+-1 6006
+D2
+~
+~
+0
+-1 6008
+D3
+~
+~
+0
+-1 6030
+S
+#6008
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 6007
+D2
+~
+~
+0
+-1 6009
+S
+#6009
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+2097152
+0
+0 1
+D0
+~
+~
+0
+-1 6008
+D9
+~
+~
+0
+-1 6010
+S
+#6010
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+0
+0
+0 1
+D3
+~
+~
+0
+-1 6025
+D6
+~
+~
+0
+-1 6009
+D8
+~
+~
+0
+-1 6011
+S
+#6011
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+0
+0
+0 1
+D2
+~
+~
+0
+-1 6012
+D7
+~
+~
+0
+-1 6010
+S
+#6012
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 6011
+D3
+~
+~
+0
+-1 6013
+S
+#6013
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 6012
+D3
+~
+~
+0
+-1 6014
+S
+#6014
+&zDeck of the Desolation &g:: &GPredator Ship~
+Blah Blah Blah
+ 
+&w&R[Type ENTER to enter the Predator Ship]
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 6024
+D1
+~
+~
+0
+-1 6013
+D3
+~
+~
+0
+-1 6015
+D10
+~
+~
+537528320
+-1 6033
+S
+#6015
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 6014
+D3
+~
+~
+0
+-1 6016
+S
+#6016
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 6017
+D1
+~
+~
+0
+-1 6015
+S
+#6017
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+0
+0
+0 1
+D2
+~
+~
+0
+-1 6016
+D6
+~
+~
+0
+-1 6018
+S
+#6018
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 6025
+D7
+~
+~
+0
+-1 6019
+D9
+~
+~
+0
+-1 6017
+S
+#6019
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+2097152
+0
+0 1
+D0
+~
+~
+0
+-1 6020
+D8
+~
+~
+0
+-1 6018
+S
+#6020
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 6021
+D2
+~
+~
+0
+-1 6019
+S
+#6021
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+2097152
+0
+0 1
+D0
+~
+~
+0
+-1 6022
+D1
+~
+~
+0
+-1 6029
+D2
+~
+~
+0
+-1 6020
+S
+#6022
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 6023
+D2
+~
+~
+0
+-1 6021
+S
+#6023
+&zDeck of the Desolation &w:: &WOuter Railing~
+~
+~
+2097152
+0
+0 1
+D2
+~
+~
+0
+-1 6022
+D6
+~
+~
+0
+-1 6002
+S
+#6024
+&BOver the Desolation's Railing~
+~
+~
+4096
+0
+0 1
+D0
+~
+~
+0
+-1 6025
+D2
+~
+~
+0
+-1 6014
+D5
+~
+~
+0
+-1 6038
+S
+#6025
+&zDeck of the Desolation &y:: &YAccess Hatch~
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 6026
+D1
+~
+~
+0
+-1 6010
+D2
+~
+~
+0
+-1 6024
+D3
+~
+~
+0
+-1 6018
+D5
+~
+~
+3&1
+-1 6039
+S
+#6026
+&zDeck of the Desolation &w:: &WSteel Bridge~
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 6027
+D2
+~
+~
+0
+-1 6025
+S
+#6027
+&zDeck of the Desolation &w:: &WSteel Bridge~
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 6028
+D2
+~
+~
+0
+-1 6026
+S
+#6028
+&w&RHelicopter Pad :: Marine Deployment Zone~
+Blah Blah Blah
+ 
+&w&R[Type ENTER to enter the Marine Dropship]
+~
+~
+285212672
+0
+0 1
+D0
+~
+~
+0
+-1 6031
+D1
+~
+~
+0
+-1 6030
+D2
+~
+~
+0
+-1 6027
+D3
+~
+~
+0
+-1 6029
+D10
+~
+~
+537528320
+-1 6034
+S
+#6029
+&zDeck of the Desolation &w:: &WSteel Bridge~
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 6028
+D3
+~
+~
+0
+-1 6021
+S
+#6030
+&zDeck of the Desolation &w:: &WSteel Bridge~
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 6007
+D3
+~
+~
+0
+-1 6028
+S
+#6031
+&zDeck of the Desolation &w:: &WSteel Bridge~
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 6032
+D2
+~
+~
+0
+-1 6028
+S
+#6032
+&zDeck of the Desolation &w:: &WSteel Bridge~
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 6003
+D2
+~
+~
+0
+-1 6031
+S
+#6033
+&GInside the Predator Ship~
+Blah Blah Blah
+ 
+&w&R[Type LEAVE to leave the Predator Ship]
+~
+~
+1107361800
+0
+0 1
+D10
+~
+~
+537659392
+-1 6014
+> entry_prog 100~
+if race($n) == Predator
+if ispc($n)
+mptrans $n 4102
+mpsleep 4
+mpat 0.$n mpgain $n 500
+mpsleep 4
+mpmonitor &w&G$n has managed to escape with the Predator Ship! Fools!
+endif
+endif
+~
+|
+S
+#6034
+&zInside the Marine Dropship &r:: &RBoarding Ramp~
+Blah Blah Blah
+ 
+&w&R[Type LEAVE to exit the Marine Dropship]
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6035
+D10
+~
+~
+537659392
+-1 6028
+S
+#6035
+&zInside the Marine Dropship &r:: &REngineering Compartment~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+142606375&1
+19539 6036
+D1
+~
+~
+0
+-1 6037
+D2
+~
+~
+0
+-1 6034
+S
+#6036
+&zInside the Marine Dropship &r:: &RForward Compartment~
+~
+~
+8&8
+0
+0 1
+D2
+~
+~
+142606375&1
+19539 6035
+S
+#6037
+&zInside the Marine Dropship &r:: &RStorage Compartment~
+~
+~
+8
+0
+0 1
+D3
+~
+~
+0
+-1 6035
+> entry_prog 100~
+if race($n) == Alien
+if ispc($n)
+mptrans $n 4417
+mpsleep 4
+mpat 0.$n mpgain $n 750
+mpsleep 4
+mpmonitor &w&G$n has escaped onboard the Marine Dropship! Slackers! 
+endif
+endif
+~
+|
+S
+#6038
+&BFallen into the Ocean~
+~
+~
+65536
+0
+0 1
+D4
+~
+~
+0
+-1 6024
+> entry_prog 100~
+mpdamage $n 1000
+~
+|
+S
+#6039
+&zFirst Floor of the Desolation &O:: &YAccess Ladder~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6070
+D1
+~
+~
+0
+-1 6043
+D3
+~
+~
+0
+-1 6044
+D4
+~
+~
+3&3
+-1 6025
+D5
+~
+~
+3&1
+-1 6040
+S
+#6040
+&zSecond Floor of the Desolation &O:: &YAccess Ladder~
+~
+~
+65544
+0
+0 1
+D1
+~
+~
+0
+-1 6071
+D2
+~
+~
+301989888
+-1 6073
+D3
+~
+~
+0
+-1 6075
+D4
+~
+~
+3&1
+-1 6039
+D5
+~
+~
+3&1
+-1 6041
+S
+#6041
+&zThird Floor of the Desolation &O:: &YAccess Ladder~
+~
+~
+65544
+0
+0 1
+D1
+~
+~
+0
+-1 6107
+D3
+~
+~
+0
+-1 6103
+D4
+~
+~
+3&1
+-1 6040
+D5
+~
+~
+3&1
+-1 6042
+S
+#6042
+&zFourth Floor of the Desolation &O:: &YAccess Ladder~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6137
+D1
+~
+~
+0
+-1 6135
+D2
+~
+~
+0
+-1 6133
+D3
+~
+~
+0
+-1 6131
+D4
+~
+~
+3&1
+-1 6041
+S
+#6043
+&zFirst Floor of the Desolation &w:: &WOutside of Storage~
+~
+~
+65536
+0
+0 1
+D2
+~
+~
+134217735
+11345 6047
+D3
+~
+~
+0
+-1 6039
+D6
+~
+~
+0
+-1 6063
+S
+#6044
+&zFirst Floor of the Desolation &w:: &WOutside of Storage~
+~
+~
+65544
+0
+0 1
+D1
+~
+~
+0
+-1 6039
+D2
+~
+~
+134217735
+11345 6045
+D7
+~
+~
+0
+-1 6048
+S
+#6045
+&zFirst Floor of the Desolation &w:: &WStorage Lockers~
+~
+~
+65536
+0
+0 1
+D0
+~
+~
+134217735
+11345 6044
+D1
+~
+~
+0
+-1 6046
+S
+#6046
+&zFirst Floor of the Desolation &w:: &WStorage Lockers~
+~
+~
+65536
+0
+0 1
+D1
+~
+~
+0
+-1 6047
+D3
+~
+~
+0
+-1 6045
+S
+#6047
+&zFirst Floor of the Desolation &w:: &WStorage Lockers~
+~
+~
+65536
+0
+0 1
+D0
+~
+~
+134217735
+11345 6043
+D3
+~
+~
+0
+-1 6046
+S
+#6048
+&zFirst Floor of the Desolation &w:: &WLong Corridor~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6049
+D8
+~
+~
+0
+-1 6044
+S
+#6049
+&zFirst Floor of the Desolation &w:: &WOutside the Bulkhead~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+41943079&1
+-1 6050
+D2
+~
+~
+0
+-1 6048
+S
+#6050
+&zFirst Floor of the Desolation &w:: &WInside the Bulkhead~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+41943079&1
+-1 6051
+D1
+~
+~
+0
+-1 6065
+D2
+~
+~
+41943079&1
+-1 6049
+S
+#6051
+&zFirst Floor of the Desolation &w:: &WOutside the Bulkhead~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6052
+D2
+~
+~
+41943079&1
+-1 6050
+S
+#6052
+&zFirst Floor of the Desolation &w:: &WLong Corridor~
+~
+~
+65544
+0
+0 1
+D2
+~
+~
+0
+-1 6051
+D6
+~
+~
+0
+-1 6053
+S
+#6053
+&zFirst Floor of the Desolation &w:: &WOutside the Bridge~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+134217735&1
+99931 6054
+D1
+~
+~
+0
+-1 6057
+D9
+~
+~
+0
+-1 6052
+S
+#6054
+&zFirst Floor of the Desolation &w:: &WOn the Bridge~
+~
+~
+65544
+0
+0 1
+D1
+~
+~
+0
+-1 6055
+D2
+~
+~
+134217735&1
+99931 6053
+S
+#6055
+&zFirst Floor of the Desolation &w:: &WOn the Bridge~
+~
+~
+65544
+0
+0 1
+D1
+~
+~
+0
+-1 6056
+D3
+~
+~
+0
+-1 6054
+S
+#6056
+&zFirst Floor of the Desolation &w:: &WOn the Bridge~
+~
+~
+65544
+0
+0 1
+D2
+~
+~
+301989888
+-1 6058
+D3
+~
+~
+0
+-1 6055
+S
+#6057
+&zFirst Floor of the Desolation &O:: &YAccess Ladder~
+~
+~
+65544
+0
+0 1
+D1
+~
+~
+0
+-1 6058
+D2
+~
+~
+0
+-1 6068
+D3
+~
+~
+0
+-1 6053
+D4
+~
+~
+3&3
+-1 6003
+D5
+~
+~
+3&1
+-1 6087
+S
+#6058
+&zFirst Floor of the Desolation &w:: &WOutside the Bridge~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+301989888
+-1 6056
+D3
+~
+~
+0
+-1 6057
+D8
+~
+~
+0
+-1 6059
+S
+#6059
+&zFirst Floor of the Desolation &w:: &WLong Corridor~
+~
+~
+65544
+0
+0 1
+D2
+~
+~
+0
+-1 6060
+D7
+~
+~
+0
+-1 6058
+S
+#6060
+&zFirst Floor of the Desolation &w:: &WOutside the Bulkhead~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6059
+D2
+~
+~
+41943079&1
+-1 6061
+S
+#6061
+&zFirst Floor of the Desolation &w:: &WInside the Bulkhead~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+41943079&1
+-1 6060
+D2
+~
+~
+41943079&1
+-1 6062
+D3
+~
+~
+0
+-1 6064
+S
+#6062
+&zFirst Floor of the Desolation &w:: &WOutside the Bulkhead~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+41943079&1
+-1 6061
+D2
+~
+~
+0
+-1 6063
+S
+#6063
+&zFirst Floor of the Desolation &w:: &WLong Corridor~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6062
+D9
+~
+~
+0
+-1 6043
+S
+#6064
+&zFirst Floor of the Desolation &w:: &WInside the Bulkhead~
+~
+~
+65544
+0
+0 1
+D1
+~
+~
+0
+-1 6061
+D3
+~
+~
+0
+-1 6066
+S
+#6065
+&zFirst Floor of the Desolation &w:: &WInside the Bulkhead~
+~
+~
+65536
+0
+0 1
+D1
+~
+~
+0
+-1 6066
+D3
+~
+~
+0
+-1 6050
+S
+#6066
+&zFirst Floor of the Desolation &w:: &WInside the Bulkhead~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+41943079&1
+-1 6067
+D1
+~
+~
+0
+-1 6064
+D2
+~
+~
+41943079&1
+-1 6069
+D3
+~
+~
+0
+-1 6065
+S
+#6067
+&zFirst Floor of the Desolation &w:: &WOutside the Bulkhead~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6068
+D2
+~
+~
+41943079&1
+-1 6066
+S
+#6068
+&zFirst Floor of the Desolation &w:: &WLong Corridor~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6057
+D2
+~
+~
+0
+-1 6067
+S
+#6069
+&zFirst Floor of the Desolation &w:: &WOutside the Bulkhead~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+41943079&1
+-1 6066
+D2
+~
+~
+0
+-1 6070
+S
+#6070
+&zFirst Floor of the Desolation &w:: &WLong Corridor~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6069
+D2
+~
+~
+0
+-1 6039
+S
+#6071
+&zSecond Floor of the Desolation &w:: &WOutside the Engine Room ~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6076
+D2
+~
+~
+100663303
+6023 6072
+D3
+~
+~
+0
+-1 6040
+S
+#6072
+&zSecond Floor of the Desolation &w:: &WThe Engine Room~
+The Engine Compartment is a cramped room, filled with gear shafts and
+electrical wiring. A massive disel turbine dominates one whole wall,
+roaring with power. A pair of dim bulbs provide light for the room, barely
+barely enough to navigate without getting yourself killed. Various
+indicator panels blink happily away, displaying unknown information.
+~
+&w&gThe only disinguishable feature about this compartment is the remains
+of the massive disel turbine, still cranking away under all those layers
+of alien resin. Nearly all of the lights and panels have been smashed or
+covered up, with the exception of the emergancy lights - Now shining away,
+keeping the engine compartment lit up for repair crews.. or marines. 
+~
+2162696
+0
+0 1
+D0
+~
+~
+100663303
+6023 6071
+D3
+~
+~
+0
+-1 6073
+S
+#6073
+&zSecond Floor of the Desolation &w:: &WThe Engine Room~
+The Engine Compartment is a cramped room, filled with gear shafts and
+electrical wiring. A massive disel turbine dominates one whole wall,
+roaring with power. A pair of dim bulbs provide light for the room, barely
+barely enough to navigate without getting yourself killed. Various
+indicator panels blink happily away, displaying unknown information.
+~
+&w&gThe only disinguishable feature about this compartment is the remains
+of the massive disel turbine, still cranking away under all those layers
+of alien resin. Nearly all of the lights and panels have been smashed or
+covered up, with the exception of the emergancy lights - Now shining away,
+keeping the engine compartment lit up for repair crews.. or marines. 
+~
+2162696
+0
+0 1
+D0
+~
+~
+301989888
+-1 6040
+D1
+~
+~
+0
+-1 6072
+D2
+~
+~
+0
+-1 6102
+D3
+~
+~
+0
+-1 6074
+S
+#6074
+&zSecond Floor of the Desolation &w:: &WThe Engine Room~
+The Engine Compartment is a cramped room, filled with gear shafts and
+electrical wiring. A massive disel turbine dominates one whole wall,
+roaring with power. A pair of dim bulbs provide light for the room, barely
+barely enough to navigate without getting yourself killed. Various
+indicator panels blink happily away, displaying unknown information.
+~
+&w&gThe only disinguishable feature about this compartment is the remains
+of the massive disel turbine, still cranking away under all those layers
+of alien resin. Nearly all of the lights and panels have been smashed or
+covered up, with the exception of the emergancy lights - Now shining away,
+keeping the engine compartment lit up for repair crews.. or marines. 
+~
+2162696
+0
+0 1
+D0
+~
+~
+100663303
+6023 6075
+D1
+~
+~
+0
+-1 6073
+S
+#6075
+&zSecond Floor of the Desolation &w:: &WOutside the Engine Room ~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6093
+D1
+~
+~
+0
+-1 6040
+D2
+~
+~
+100663303
+6023 6074
+S
+#6076
+&zSecond Floor of the Desolation &w:: &WLong Corridor~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6077
+D1
+~
+~
+33554435&1
+-1 6085
+D2
+~
+~
+0
+-1 6071
+S
+#6077
+&zSecond Floor of the Desolation &w:: &WOutside the Bulkhead~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+41943079&1
+-1 6078
+D2
+~
+~
+0
+-1 6076
+S
+#6078
+&zSecond Floor of the Desolation &w:: &WInside the Bulkhead~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+41943079&1
+-1 6079
+D2
+~
+~
+41943079&1
+-1 6077
+S
+#6079
+&zSecond Floor of the Desolation &w:: &WOutside the Bulkhead~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6080
+D2
+~
+~
+41943079&1
+-1 6078
+S
+#6080
+&zSecond Floor of the Desolation &w:: &WLong Corridor~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6086
+D1
+~
+~
+33554435&1
+-1 6081
+D2
+~
+~
+0
+-1 6079
+S
+#6081
+&zSecond Floor of the Desolation &b:: &BTanker Pump Access~
+~
+~
+65544
+0
+0 1
+D2
+~
+~
+0
+-1 6082
+D3
+~
+~
+33554435&1
+-1 6080
+S
+#6082
+&zSecond Floor of the Desolation &b:: &BTanker Pump Access~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6081
+D2
+~
+~
+0
+-1 6083
+S
+#6083
+&zSecond Floor of the Desolation &b:: &BTanker Pump Access~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6082
+D2
+~
+~
+0
+-1 6084
+S
+#6084
+&zSecond Floor of the Desolation &b:: &BTanker Pump Access~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6083
+D2
+~
+~
+0
+-1 6085
+S
+#6085
+&zSecond Floor of the Desolation &b:: &BTanker Pump Access~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6084
+D3
+~
+~
+33554435&1
+-1 6076
+S
+#6086
+&zSecond Floor of the Desolation &g:: &GOutside the Pump Control~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+100663303&1
+6024 6101
+D2
+~
+~
+0
+-1 6080
+D3
+~
+~
+0
+-1 6087
+S
+#6087
+&zSecond Floor of the Desolation &O:: &YAccess Ladder~
+~
+~
+65544
+0
+0 1
+D1
+~
+~
+0
+-1 6086
+D3
+~
+~
+0
+-1 6088
+D4
+~
+~
+3&1
+-1 6057
+D5
+~
+~
+3&1
+-1 6114
+S
+#6088
+&zSecond Floor of the Desolation &g:: &GOutside the Pump Control~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+100663303&1
+6024 6099
+D1
+~
+~
+0
+-1 6087
+D2
+~
+~
+0
+-1 6089
+S
+#6089
+&zSecond Floor of the Desolation &w:: &WLong Corridor~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6088
+D2
+~
+~
+0
+-1 6090
+D3
+~
+~
+33554435&1
+-1 6098
+S
+#6090
+&zSecond Floor of the Desolation &w:: &WOutside the Bulkhead~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6089
+D2
+~
+~
+41943079&1
+-1 6091
+S
+#6091
+&zSecond Floor of the Desolation &w:: &WInside the Bulkhead~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+41943079&1
+-1 6090
+D2
+~
+~
+41943079&1
+-1 6092
+S
+#6092
+&zSecond Floor of the Desolation &w:: &WOutside the Bulkhead~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+41943079&1
+-1 6091
+D2
+~
+~
+0
+-1 6093
+S
+#6093
+&zSecond Floor of the Desolation &w:: &WLong Corridor~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6092
+D2
+~
+~
+0
+-1 6075
+D3
+~
+~
+33554435&1
+-1 6094
+S
+#6094
+&zSecond Floor of the Desolation &b:: &BTanker Pump Access~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6095
+D1
+~
+~
+33554435&1
+-1 6093
+S
+#6095
+&zSecond Floor of the Desolation &b:: &BTanker Pump Access~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6096
+D2
+~
+~
+0
+-1 6094
+S
+#6096
+&zSecond Floor of the Desolation &b:: &BTanker Pump Access~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6097
+D2
+~
+~
+0
+-1 6095
+S
+#6097
+&zSecond Floor of the Desolation &b:: &BTanker Pump Access~
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 6098
+D2
+~
+~
+0
+-1 6096
+S
+#6098
+&zSecond Floor of the Desolation &b:: &BTanker Pump Access~
+~
+~
+65544
+0
+0 1
+D1
+~
+~
+33554435&1
+-1 6089
+D2
+~
+~
+0
+-1 6097
+S
+#6099
+&zSecond Floor of the Desolation &g:: &GBarge Pump Controls~
+~
+~
+65544
+0
+0 1
+D1
+~
+~
+0
+-1 6100
+D2
+~
+~
+100663303&1
+6024 6088
+S
+#6100
+&zSecond Floor of the Desolation &g:: &GBarge Pump Controls~
+~
+~
+65544
+0
+0 1
+D1
+~
+~
+0
+-1 6101
+D3
+~
+~
+0
+-1 6099
+S
+#6101
+&zSecond Floor of the Desolation &g:: &GBarge Pump Controls~
+~
+~
+65544
+0
+0 1
+D2
+~
+~
+100663303&1
+6024 6086
+D3
+~
+~
+0
+-1 6100
+S
+#6102
+&zSecond Floor of the Desolation &w:: &WThe Engine Room~
+The Engine Compartment is a cramped room, filled with gear shafts and
+electrical wiring. A massive disel turbine dominates one whole wall,
+roaring with power. A pair of dim bulbs provide light for the room, barely
+barely enough to navigate without getting yourself killed. Various
+indicator panels blink happily away, displaying unknown information.
+~
+&w&gThe only disinguishable feature about this compartment is the remains
+of the massive disel turbine, still cranking away under all those layers
+of alien resin. Nearly all of the lights and panels have been smashed or
+covered up, with the exception of the emergancy lights - Now shining away,
+keeping the engine compartment lit up for repair crews.. or marines. 
+~
+2162696&16
+0
+0 1
+D0
+~
+~
+0
+-1 6073
+S
+#6103
+&zThird Floor of the Desolation &w:: &zLong Corridor~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 6108
+D1
+~
+~
+0
+-1 6041
+D2
+~
+~
+67108871&1
+-1 6104
+S
+#6104
+&zThird Floor of the Desolation &b:: &BElectrical Compartment~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+67108871&1
+-1 6103
+D1
+~
+~
+0
+-1 6105
+S
+#6105
+&zThird Floor of the Desolation &b:: &BElectrical Compartment~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 6106
+D3
+~
+~
+0
+-1 6104
+S
+#6106
+&zThird Floor of the Desolation &b:: &BElectrical Compartment~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+67108871&1
+-1 6107
+D3
+~
+~
+0
+-1 6105
+S
+#6107
+&zThird Floor of the Desolation &w:: &zOutside the Electrical Compartment~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 6120
+D2
+~
+locked can_look armored window~
+67108871&1
+-1 6106
+D3
+~
+~
+0
+-1 6041
+S
+#6108
+&zThird Floor of the Desolation &w:: &zLong Corridor~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 6109
+D2
+~
+~
+0
+-1 6103
+D3
+~
+~
+0
+-1 6126
+S
+#6109
+Outside the Bulkhead~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 6110
+D2
+~
+~
+0
+-1 6108
+S
+#6110
+Bulkhead~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 6111
+D2
+~
+~
+0
+-1 6109
+S
+#6111
+Outside the Bulkhead~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 6112
+D2
+~
+~
+0
+-1 6110
+S
+#6112
+&zThird Floor of the Desolation &w:: &zLong Corridor~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 6113
+D2
+~
+~
+0
+-1 6111
+D3
+~
+~
+0
+-1 6130
+S
+#6113
+Long Corridor~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 6114
+D2
+~
+~
+0
+-1 6112
+S
+#6114
+&zThird Floor of the Desolation &O:: &YAccess Ladder~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 6115
+D3
+~
+~
+0
+-1 6113
+D4
+~
+~
+3&1
+-1 6087
+D5
+~
+~
+3&1
+-1 6157
+S
+#6115
+Long Corridor~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 6116
+D3
+~
+~
+0
+-1 6114
+S
+#6116
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 6115
+D1
+~
+~
+0
+-1 6121
+D2
+~
+~
+0
+-1 6117
+S
+#6117
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 6116
+D2
+~
+~
+0
+-1 6118
+S
+#6118
+Bulkhead~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 6117
+D2
+~
+~
+0
+-1 6119
+S
+#6119
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 6118
+D2
+~
+~
+0
+-1 6120
+S
+#6120
+&zThird Floor of the Desolation &w:: &zLong Corridor~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 6119
+D1
+~
+~
+0
+-1 6125
+D2
+~
+~
+0
+-1 6107
+S
+#6121
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 6122
+D3
+~
+~
+0
+-1 6116
+S
+#6122
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 6121
+D2
+~
+~
+0
+-1 6123
+S
+#6123
+Pump Here >~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 6122
+D2
+~
+~
+0
+-1 6124
+S
+#6124
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 6123
+D2
+~
+~
+0
+-1 6125
+S
+#6125
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 6124
+D3
+~
+~
+0
+-1 6120
+S
+#6126
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 6127
+D1
+~
+~
+0
+-1 6108
+S
+#6127
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 6128
+D2
+~
+~
+0
+-1 6126
+S
+#6128
+Pump Here >~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 6129
+D2
+~
+~
+0
+-1 6127
+S
+#6129
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 6130
+D2
+~
+~
+0
+-1 6128
+S
+#6130
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 6112
+D2
+~
+~
+0
+-1 6129
+S
+#6131
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1073807372
+0
+0 1
+D0
+~
+~
+0
+-1 6138
+D1
+~
+~
+0
+-1 6042
+D2
+~
+~
+0
+-1 6132
+S
+#6132
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 6131
+D1
+~
+~
+0
+-1 6133
+S
+#6133
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1208025096
+0
+0 1
+D0
+~
+~
+0
+-1 6042
+D1
+~
+~
+0
+-1 6134
+D3
+~
+~
+0
+-1 6132
+S
+#6134
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 6135
+D3
+~
+~
+0
+-1 6133
+S
+#6135
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 6136
+D2
+~
+~
+0
+-1 6134
+D3
+~
+~
+0
+-1 6042
+S
+#6136
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+134217735&1
+74523 6140
+D2
+~
+~
+0
+-1 6135
+D3
+~
+~
+0
+-1 6137
+S
+#6137
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 6136
+D2
+~
+~
+0
+-1 6042
+D3
+~
+~
+0
+-1 6138
+S
+#6138
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1073807372
+0
+0 1
+D0
+~
+~
+134217735&1
+74523 6139
+D1
+~
+~
+0
+-1 6137
+D2
+~
+~
+0
+-1 6131
+S
+#6139
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 6142
+D1
+~
+~
+0
+-1 6141
+D2
+~
+~
+134217735&1
+74523 6138
+S
+#6140
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 6146
+D2
+~
+~
+134217735&1
+74523 6136
+D3
+~
+~
+0
+-1 6141
+S
+#6141
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1073807372
+0
+0 1
+D0
+~
+~
+0
+-1 6147
+D1
+~
+~
+0
+-1 6140
+D3
+~
+~
+0
+-1 6139
+S
+#6142
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1073807372
+0
+0 1
+D0
+~
+~
+0
+-1 6143
+D1
+~
+~
+0
+-1 6147
+D2
+~
+~
+0
+-1 6139
+S
+#6143
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+134217735&1
+74523 6148
+D1
+~
+~
+0
+-1 6144
+D2
+~
+~
+0
+-1 6142
+S
+#6144
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 6145
+D2
+~
+~
+0
+-1 6147
+D3
+~
+~
+0
+-1 6143
+S
+#6145
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+134217735&1
+74523 6149
+D2
+~
+~
+0
+-1 6146
+D3
+~
+~
+0
+-1 6144
+S
+#6146
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 6145
+D2
+~
+~
+0
+-1 6140
+D3
+~
+~
+0
+-1 6147
+S
+#6147
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 6144
+D1
+~
+~
+0
+-1 6146
+D2
+~
+~
+0
+-1 6141
+D3
+~
+~
+0
+-1 6142
+S
+#6148
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1115750408
+0
+0 1
+D0
+~
+~
+0
+-1 6152
+D1
+~
+~
+0
+-1 6150
+D2
+~
+~
+134217735&1
+74523 6143
+S
+#6149
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1115750408
+0
+0 1
+D0
+~
+~
+0
+-1 6156
+D2
+~
+locked~
+134217735&1
+74523 6145
+D3
+~
+~
+0
+-1 6150
+S
+#6150
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1115750408
+0
+0 1
+D0
+~
+~
+0
+-1 6157
+D1
+~
+~
+0
+-1 6149
+D3
+~
+~
+0
+-1 6148
+S
+#6151
+:: Desolation :: Program Control Room~
+~
+~
+1073807372
+0
+0 1
+S
+#6152
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1115750408
+0
+0 1
+D0
+~
+~
+0
+-1 6153
+D1
+~
+~
+0
+-1 6157
+D2
+~
+~
+0
+-1 6148
+S
+#6153
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1115750408
+0
+0 1
+D1
+~
+~
+0
+-1 6154
+D2
+~
+~
+0
+-1 6152
+S
+#6154
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1652621320
+0
+0 1
+D1
+~
+~
+0
+-1 6155
+D2
+~
+~
+0
+-1 6157
+D3
+~
+~
+0
+-1 6153
+S
+#6155
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1115750408
+0
+0 1
+D2
+~
+~
+0
+-1 6156
+D3
+~
+~
+0
+-1 6154
+S
+#6156
+&zFourth Floor of the Desolation &W:: &zStorage Rooms~
+~
+~
+1115750408
+0
+0 1
+D0
+~
+~
+0
+-1 6155
+D2
+~
+~
+0
+-1 6149
+D3
+~
+~
+0
+-1 6157
+S
+#6157
+&zFourth Floor of the Desolation &O:: &YAccess Ladder~
+~
+~
+1115750408
+0
+0 1
+D0
+~
+~
+0
+-1 6154
+D1
+~
+~
+0
+-1 6156
+D2
+~
+~
+0
+-1 6150
+D3
+~
+~
+0
+-1 6152
+D4
+~
+~
+3&1
+-1 6114
+S
+#6158
+:: Desolation :: Flood Control Program~
+~
+~
+1075904524
+0
+0 1
+> speech_prog p Validate~
+if variable(Pump1) != 0
+if variable(Pump2) != 0
+if variable(Pump3) != 0
+if variable(Pump4) != 0
+if variable(Pump5) != 0
+if variable(Pump6) != 0
+if variable(Pump7) != 0
+if variable(Pump8) != 0
+if variable(Pump9) != 0
+say Valid!
+endif
+endif
+endif
+endif
+endif
+endif
+endif
+endif
+endif
+~
+> speech_prog p Lights on!~
+say Got it, Boss.
+mprat 6039 6151 mprmflag -1 1 dark 
+mprat 6039 6151 mpecho &YThe overhead lights flare to life. 
+mprat 6152 6157 mprmflag -1 1 dark 
+mprat 6152 6157 mpecho &YThe overhead lights flare to life. 
+~
+> speech_prog p Lights off!~
+say Got it, Boss.
+mprat 6039 6151 mprmflag -1 0 dark 
+mprat 6039 6151 mpecho &zThe room suddenly goes dark. 
+mprat 6152 6157 mprmflag -1 0 dark 
+mprat 6152 6157 mpecho &zThe room suddenly goes dark. 
+~
+|
+S
+#0
+
+
+#RESETS
+D 0 6003 5 1
+D 0 6025 5 1
+D 0 6039 4 1
+D 0 6039 5 1
+D 0 6040 4 1
+D 0 6040 5 1
+D 0 6041 4 1
+D 0 6041 5 1
+D 0 6042 4 1
+D 0 6043 2 2
+D 0 6044 2 2
+D 0 6045 0 2
+D 0 6047 0 2
+D 0 6049 0 2
+D 0 6050 0 2
+D 0 6050 2 2
+D 0 6051 2 2
+D 0 6053 0 2
+D 0 6054 2 2
+D 0 6057 4 1
+D 0 6057 5 1
+D 0 6060 2 2
+D 0 6061 0 2
+D 0 6061 2 2
+D 0 6062 0 2
+D 0 6066 0 2
+D 0 6066 2 2
+O 1 6002 1 6067
+D 0 6067 2 2
+O 1 6003 1 6069
+D 0 6069 0 2
+D 0 6071 2 2
+D 0 6072 0 2
+D 0 6074 0 2
+D 0 6075 2 2
+D 0 6076 1 1
+D 0 6078 0 2
+D 0 6078 2 2
+D 0 6079 2 2
+D 0 6080 1 1
+D 0 6081 3 1
+D 0 6085 3 1
+D 0 6086 0 2
+D 0 6088 0 2
+D 0 6089 3 1
+D 0 6091 0 2
+D 0 6091 2 2
+D 0 6092 0 2
+D 0 6093 3 1
+D 0 6094 1 1
+D 0 6098 1 1
+D 0 6099 2 2
+D 0 6101 2 2
+M 1 6003 1 6019
+E 1 680 1 16
+E 1 667 1 5
+E 1 666 1 6
+E 1 696 1 11
+E 1 671 1 0
+G 1 150 1
+G 1 681 1
+G 1 714 1
+G 1 150 1
+G 1 681 1
+G 1 150 1
+G 1 681 1
+O 1 6015 1 6019
+O 1 6015 1 6023
+O 1 6015 1 6021
+O 1 6015 1 6009
+O 1 6015 1 6007
+M 1 6004 1 6005
+E 1 667 1 5
+E 1 666 1 6
+G 1 682 1
+E 1 680 1 16
+E 1 696 1 11
+G 1 681 1
+G 1 681 1
+G 1 150 1
+G 1 150 1
+E 1 671 1 0
+G 1 681 1
+G 1 150 1
+O 1 6015 1 6005
+M 1 6151 1 6151
+E 1 53 1 5
+G 1 682 1
+M 1 6150 1 6151
+E 1 53 1 5
+M 1 6005 1 6036
+E 1 668 1 8
+E 1 667 1 5
+E 1 666 1 6
+E 1 684 1 16
+G 1 686 1
+G 1 686 1
+G 1 686 1
+O 1 6016 1 6036
+P 0 290 1 0
+P 1 291 1 0
+P 2 80 1 0
+P 3 81 1 0
+P 4 201 1 0
+P 5 703 1 0
+P 6 702 1 0
+P 7 291 1 0
+P 8 80 1 0
+P 9 81 1 0
+P 10 201 1 0
+P 11 703 1 0
+P 12 291 1 0
+P 13 81 1 0
+P 14 703 1 0
+P 15 703 1 0
+D 0 6036 2 2
+M 1 6007 2 6017
+E 1 667 1 5
+E 1 666 1 6
+E 1 80 1 16
+E 1 671 1 0
+E 1 696 1 11
+G 1 81 1
+E 1 150 1 17
+G 1 81 1
+G 1 81 1
+G 1 150 1
+G 1 150 1
+M 1 6006 2 6015
+E 1 667 1 5
+E 1 666 1 6
+E 1 80 1 16
+E 1 671 1 0
+E 1 696 1 11
+G 1 81 1
+E 1 150 1 17
+G 1 150 1
+G 1 81 1
+G 1 150 1
+G 1 81 1
+M 1 6006 2 6013
+E 1 667 1 5
+E 1 666 1 6
+E 1 80 1 16
+E 1 671 1 0
+E 1 696 1 11
+G 1 81 1
+G 1 150 1
+G 1 81 1
+G 1 150 1
+G 1 81 1
+G 1 150 1
+M 1 6007 2 6011
+E 1 667 1 5
+E 1 666 1 6
+E 1 80 1 16
+E 1 671 1 0
+E 1 696 1 11
+G 1 81 1
+E 1 150 1 17
+G 1 150 1
+G 1 81 1
+G 1 150 1
+G 1 81 1
+M 1 6008 1 6027
+E 1 666 1 6
+E 1 671 1 0
+E 1 696 1 11
+E 1 667 1 5
+E 1 680 1 16
+G 1 681 1
+G 1 150 1
+G 1 681 1
+G 1 150 1
+G 1 681 1
+M 1 6008 2 6031
+E 1 667 1 5
+E 1 666 1 6
+E 1 671 1 0
+E 1 696 1 11
+G 1 150 1
+E 1 680 1 16
+G 1 681 1
+G 1 150 1
+G 1 681 1
+G 1 681 1
+D 0 6104 0 2
+D 0 6106 0 2
+D 0 6157 4 1
+D 0 6114 4 1
+D 0 6114 5 1
+D 0 6087 4 1
+D 0 6087 5 1
+O 1 6018 1 6153
+O 1 6018 1 6154
+O 1 6018 1 6144
+O 1 6018 1 6141
+O 1 6018 1 6146
+O 1 6018 1 6142
+O 1 6018 1 6132
+O 1 6018 1 6134
+O 1 6018 1 6133
+O 1 6018 1 6136
+D 0 6136 0 2
+O 1 6018 1 6138
+D 0 6138 0 2
+O 1 6018 1 6148
+D 0 6148 2 2
+O 1 6018 1 6149
+D 0 6149 2 2
+M 1 50 18 6152
+M 1 50 18 6156
+M 1 50 19 6145
+D 0 6145 0 2
+M 1 50 20 6143
+D 0 6143 0 2
+M 1 50 21 6139
+D 0 6139 2 2
+M 1 50 22 6140
+D 0 6140 2 2
+M 1 50 9 6147
+M 1 50 9 6147
+O 1 6010 1 6147
+O 1 6004 1 6077
+D 0 6077 0 2
+O 1 6005 1 6090
+D 0 6090 2 2
+O 1 6006 1 6128
+O 1 6007 1 6123
+O 1 6008 1 6137
+O 1 6009 1 6150
+O 1 6019 1 6131
+O 1 6019 1 6135
+O 1 6020 1 6127
+O 1 6020 1 6129
+O 1 6017 1 6102
+O 1 6021 1 6102
+O 1 6018 1 6155
+O 1 6022 1 6155
+M 1 6201 1 6158
+E 1 53 1 5
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+M  6003 spec_enemy_scan
+M  6003 spec_enemy_grenade
+M  6004 spec_enemy_scan
+M  6004 spec_enemy_grenade
+M  6006 spec_enemy_scan
+M  6006 spec_enemy_grenade
+M  6007 spec_enemy_scan
+M  6007 spec_enemy_grenade
+M  6008 spec_enemy_scan
+M  6008 spec_enemy_grenade
+S
+
+
+#$

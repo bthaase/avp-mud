@@ -1,0 +1,616 @@
+#AREA   {PROTO} Zyrius's area in progress~
+
+#VERSION 4
+
+#AUTHOR Zyrius~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#4766
+&W&RThe Captain&w'&Rs Chair&W&w~
+Surrounded by electronics, the Captain's Chair is mounted here.   Random
+bits of information flicker across the monitors and screens, mixed in a
+haze of static.   Garbled voices echo from an unseen radio behind the
+blood-stained chair, adding to the paranoid atmosphere aboard this vessel.
+Dull emergency lighting pours in from overhead, dimly illuminating the
+narrow bridge corridor.
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 4769
+D3
+~
+~
+0
+-1 4767
+S
+#4767
+&W&RThe Pilot&w'&Rs Chair&W&w~
+A few complicated consoles are mounted in front of the Pilot's chair,
+blinking wildly with alarms and warnings.   The corridor curves sharply
+behind the piloting console, dimly lit by the poor overhead emergency
+lighting.
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 4766
+D8
+~
+~
+0
+-1 4768
+S
+#4768
+&W&RA Corridor Leading To The Bridge&W&w~
+This narrow corridor is lined with cables and piping, making it a cramped
+passage despite the convenient catwalk.   The lighting seems to dim as
+progress is made towards the bridge.  This metallic tunnel seems to carry
+an ominous aura about it.
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 4770
+D6
+~
+~
+0
+-1 4769
+D7
+~
+~
+0
+-1 4767
+S
+#4769
+&W&RThe Co&w-&RPilot&w'&Rs Chair&W&w~
+Navigation equipment dominates most of this area, arranged in a circle
+around a single small chair.   Many navigational errors and warnings seem
+to flood the active viewscreens, dimly illuminating the already darkened
+corridor with a flashing red haze.   The corridor curves sharply here,
+heading back towards the ship's interior.
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 4766
+D9
+~
+~
+0
+-1 4768
+S
+#4770
+&W&RA Corridor Leading To The Bridge&W&w~
+This narrow corridor is lined with cables and piping, making it a cramped
+passage despite the convenient catwalk.   The lighting seems to dim as
+progress is made towards the bridge.  This metallic tunnel seems to carry
+an ominous aura about it.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 4768
+D2
+~
+~
+0
+-1 4771
+S
+#4771
+&W&RA Peculiar Triangular Intersection&W&R~
+Three paths meet here, forming a smooth triangular intersection.  The
+lighting here seems of better quality.   Conduit and piping bend and arc
+to snake through the intersection unnoticed to pedestrians.  The catwalk
+is inclinded slightly towards the north.  A nearby sign reads
+&W"&RBridge&W"&w
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 4770
+D8
+~
+~
+0
+-1 4782
+D9
+~
+~
+0
+-1 4772
+S
+#4772
+&W&RA Narrow Angular Corridor&W&R~
+~
+~
+1073807360
+0
+0 1
+D6
+~
+~
+0
+-1 4771
+D9
+~
+~
+0
+-1 4773
+S
+#4773
+&W&RA Narrow Angular Corridor&W&R~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 4774
+D6
+~
+~
+0
+-1 4772
+S
+#4774
+&W&RA Narrow Angular Corridor&W&R~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 4773
+D2
+~
+~
+0
+-1 4775
+S
+#4775
+&W&RA Narrow Angular Corridor&W&R~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 4774
+D6
+~
+~
+0
+-1 4776
+S
+#4776
+&W&RA Narrow Angular Corridor&W&R~
+~
+~
+1073807360
+0
+0 1
+D6
+~
+~
+0
+-1 4777
+D9
+~
+~
+0
+-1 4775
+S
+#4777
+&W&RA Narrow Angular Corridor&W&R~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 4783
+D2
+~
+~
+0
+-1 4784
+D8
+~
+~
+0
+-1 4778
+D9
+~
+~
+0
+-1 4776
+S
+#4778
+&W&RA Narrow Angular Corridor&W&R~
+~
+~
+1073807360
+0
+0 1
+D7
+~
+~
+0
+-1 4777
+D8
+~
+~
+0
+-1 4779
+S
+#4779
+&W&RA Narrow Angular Corridor&W&R~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 4780
+D7
+~
+~
+0
+-1 4778
+S
+#4780
+&W&RA Narrow Angular Corridor&W&R~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 4781
+D2
+~
+~
+0
+-1 4779
+S
+#4781
+&W&RA Narrow Angular Corridor&W&R~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 4780
+D7
+~
+~
+0
+-1 4782
+S
+#4782
+&W&RA Narrow Angular Corridor&W&R~
+~
+~
+1073807360
+0
+0 1
+D7
+~
+~
+0
+-1 4771
+D8
+~
+~
+0
+-1 4781
+S
+#4783
+Elevator~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 4777
+S
+#4784
+&W&RA Peculiar Triangular Intersection&W&R~
+Three paths meet here, forming a smooth triangular intersection.  The
+lighting here seems of better quality.   Conduit and piping bend and arc
+to snake through the intersection unnoticed to pedestrians.  The catwalk
+is inclinded slightly towards the north.  A nearby sign reads
+&W"&RSecurity&W"&w
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 4777
+D8
+~
+~
+0
+-1 4787
+D9
+~
+~
+0
+-1 4785
+S
+#4785
+&W&RA Narrow Angular Corridor&W&R~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 4786
+D6
+~
+~
+0
+-1 4784
+S
+#4786
+&W&RA Narrow Angular Corridor&W&R~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 4787
+D2
+~
+~
+0
+-1 4788
+D3
+~
+~
+0
+-1 4785
+S
+#4787
+&W&RA Narrow Angular Corridor&W&R~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 4786
+D7
+~
+~
+0
+-1 4784
+S
+#4788
+&W&RA Multi&w-&RDirectional Intersection&W&R~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 4786
+D2
+~
+~
+0
+-1 4789
+D8
+~
+~
+0
+-1 4792
+D9
+~
+~
+0
+-1 4790
+S
+#4789
+&W&RA Tattered Recreation Room&W&R~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 4788
+D1
+~
+~
+0
+-1 4792
+D2
+~
+~
+0
+-1 4791
+D3
+~
+~
+0
+-1 4790
+S
+#4790
+&W&RA Narrow Angular Corridor&W&R~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 4789
+D6
+~
+~
+0
+-1 4788
+D8
+~
+~
+0
+-1 4791
+S
+#4791
+&W&RThe Entrance To The Security Force Barracks&W&R~
+marine spawn
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 4789
+D6
+~
+~
+0
+-1 4792
+D7
+~
+~
+0
+-1 4790
+S
+#4792
+&W&RA Narrow Angular Corridor&W&R~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 4789
+D7
+~
+~
+0
+-1 4788
+D9
+~
+~
+0
+-1 4791
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+S
+
+
+#$

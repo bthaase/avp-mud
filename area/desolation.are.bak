@@ -1,0 +1,3068 @@
+#AREA   USS Desolation~
+
+#VERSION 4
+
+#AUTHOR Tarkanus~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#3587
+Captain Krushev Vladamar~
+Captain Krushev Vladamar~
+The Captain is here, overseeing operations.
+~
+~
+0
+11
+Z
+1 8 8 0
+15 10 10 10 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpecho The Captain drops what he was holding!!
+mpoload 3587
+drop teddy
+mpoload 3588
+drop bottle
+~
+|
+#3588
+Russian Marine~
+a Russian Marine~
+A Russian Marine is here, guarding the area
+~
+~
+0
+11
+Z
+1 8 8 0
+15 10 10 10 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#3589
+Little Girl~
+a Little Girl~
+A Little Girl is here crying
+~
+~
+0
+268435459
+S
+1 8 8 0
+> greet_prog 100~
+cry
+say Can you please bring me my Teddy?!
+~
+> act_prog 'gives you'~
+if ovnuminv(3587) >=1
+say Thank you so much!!!
+giggle
+mpgain $n 1 500
+mpat 6 drop teddy
+else
+say This aint my teddy!! meanie!!
+endif
+~
+|
+#3590
+Drunken Sailor~
+Drunken Sailor~
+A Drunken Sailor, is here, bichting about lack of vodka.
+~
+~
+0
+268435459
+S
+1 8 8 0
+> greet_prog 100~
+say HAYYY DERE!! I NAE MAE SO MO VOOOOOOOOOOODKA
+grumble
+say Get mai SoMe God DaMnIt
+~
+> act_prog 'gives you'~
+if ovnuminv(3588) >=1
+say MORRRRRRRE Vaka FER MAIE!!! DAnKiE MAAAAAAAAAAAAAAAAAAAYTIE
+cackle
+mpgain $n 1 500
+mpat 6 drop bottle
+else
+say This aint no goddamn vodka
+emote smacks $n across the face
+endif
+~
+|
+#0
+
+
+#OBJECTS
+#3587
+Teddy bear~
+Teddy Bear~
+A Teddy Bear was abondoned here.~
+~
+5
+32
+16385
+0 0 0 0 0 0
+1 0 0
+#3588
+Bottle of Vodka~
+Bottle of Vodka~
+A Bottle of Vodka, was left here~
+~
+5
+32
+1
+0 0 0 0 0 0
+1 0 0
+#3589
+Small Switch~
+a Small Switch~
+A Small Switch is here.~
+~
+5
+3145728
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 1000000000000~
+mpecho &RFLYING PARTS FROM THE ENGINE ROOM HIT YOU!!!
+mpforce $n emote screams in terror!
+mpforce $n ooc Tarkanus fucked me over!!
+mpdamage $n 500
+~
+> useoff_prog 100000000000~
+mpecho &RFLYING PARTS FROM THE ENGINE ROOM HIT YOU!!!
+mpforce $n emote screams in terror!
+mpforce $n ooc Tarkanus fucked me over!!
+mpdamage $n 500
+~
+|
+#3590
+Gas pipes~
+Gas Pipes~
+Gas Pipes jut out of the walls.~
+~
+25
+0
+0
+5 2 1 75 75 1
+10 0 0
+#3591
+Computer~
+Computer~
+A Computer is here, sitting in the middle of the room beeping.~
+~
+25
+2
+0
+5 2 2 150 150 1
+6 0 0
+#3592
+power breaker box~
+Power Breaker~
+A Power Breaker is mounted on the southern wall~
+~
+4
+1048578
+0
+0 0 0 0 0 0
+1 0 0
+> useoff_prog 100~
+mpechoat $n You throw the break to the OFF position. 
+mpechoaround $n $n throws the breaker to the OFF position. 
+mprat 3587 3608 mprmflag -1 0 dark
+mprat 3587 3608 mpecho The room suddenly goes dark.
+mpat 3681 mprmflag -1 0 dark
+mpat 3681 mpecho The room suddenly goes dark.
+mpat 3605 mpecho EMERGANCY LIGHTS ACTIVATED!! 
+mpat 3605 mprmflag -1 1 dark
+~
+> useon_prog 100~
+mpechoat $n You throw the break to the ON position. 
+mpechoaround $n $n throws the breaker to the ON position. 
+mprat 3587 3608 mprmflag -1 1 dark
+mprat 3587 3608 mpecho &YThe overhead lights flare to life.
+mpat 3681 mprmflag -1 1 dark
+mpat 3681 mpecho &YThe overhead lights flare to life
+~
+|
+#3593
+power breaker box~
+Power Breaker~
+A Power Breaker is mounted on the eastern wall.~
+~
+4
+1048578
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+mpechoat $n You throw the break to the ON position. 
+mpechoaround $n $n throws the breaker to the ON position. 
+mprat 3638 3659 mprmflag -1 1 dark
+mprat 3638 3659 mpecho &YThe overhead lights flare to life. 
+mpat 3680 mprmflag -1 1 dark
+mpat 3680 mpecho &YThe overhead lights flare to life. 
+mpat 3679 mprmflag -1 1 dark
+mpat 3679 mpecho &YThe overhead lights flare to life. 
+~
+> useoff_prog 100~
+mpechoat $n You throw the break to the OFF position.
+mpechoaround $n $n throws the breaker to the OFF position.
+mprat 3638 3659 mprmflag -1 0 dark
+mprat 3638 3659 mpecho &zThe room suddenly goes dark.
+mpat 3680 mprmflag -1 0 dark
+mpat 3680 mpecho &zThe room suddenly goes dark.
+mpat 3679 mprmflag -1 0 dark
+mpat 3679 mpecho &zThe room suddenly goes dark.
+mpat 3638 mpecho &REMERGANCY LIGHTS ACTIVATED!
+mpat 3638 mprmflag -1 1 dark
+~
+|
+#3594
+power breaker box~
+Power Breaker~
+A Large Power Breaker is mounted on the northern wall. ~
+~
+4
+1048578
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+mpechoat $n You throw the break to the ON position. 
+mpechoaround $n $n throws the breaker to the ON position. 
+mprat 3660 3678 mprmflag -1 1 dark
+mprat 3660 3678 mpecho &YThe overhead lights flare to life. 
+~
+> useoff_prog 100~
+mpechoat $n You throw the break to the OFF position.
+mpechoaround $n $n throws the breaker to the OFF position.
+mprat 3660 3678 mprmflag -1 0 dark
+mprat 3660 3678 mpecho &zThe room suddenly goes dark.
+mpat 3660 mpecho &REMERGANCY LIGHTS ACTIVATED!
+mpat 3660 mprmflag -1 1 dark
+~
+|
+#0
+
+
+#ROOMS
+#3587
+&zEnd of a Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+50331656
+1
+0 1
+D0
+~
+~
+0
+-1 3606
+D1
+~
+~
+0
+-1 3588
+D2
+~
+~
+0
+-1 3607
+S
+#3588
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+4194307
+-1 3681
+D1
+~
+~
+0
+-1 3589
+D3
+~
+~
+0
+-1 3587
+S
+#3589
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D1
+~
+~
+0
+-1 3590
+D3
+~
+~
+0
+-1 3588
+S
+#3590
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3601
+D2
+~
+~
+0
+-1 3591
+D3
+~
+~
+0
+-1 3589
+S
+#3591
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3590
+D2
+~
+~
+0
+-1 3592
+S
+#3592
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3591
+D3
+~
+~
+0
+-1 3593
+S
+#3593
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D1
+~
+~
+0
+-1 3592
+D2
+~
+~
+0
+-1 3596
+D3
+~
+~
+0
+-1 3594
+S
+#3594
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D1
+~
+~
+0
+-1 3593
+D3
+~
+~
+0
+-1 3595
+S
+#3595
+&zEnd of a Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3607
+D1
+~
+~
+0
+-1 3594
+D2
+~
+~
+0
+-1 3608
+S
+#3596
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3593
+D2
+~
+~
+0
+-1 3597
+S
+#3597
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3596
+D3
+~
+~
+0
+-1 3598
+D4
+~
+~
+0
+-1 3619
+S
+#3598
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D1
+~
+~
+0
+-1 3597
+D3
+~
+~
+0
+-1 3599
+S
+#3599
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D1
+~
+~
+0
+-1 3598
+D3
+~
+~
+0
+-1 3600
+S
+#3600
+&zEnd of a Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3608
+D1
+~
+~
+0
+-1 3599
+S
+#3601
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3602
+D2
+~
+~
+0
+-1 3590
+S
+#3602
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D1
+~
+~
+0
+-1 3682
+D2
+~
+~
+0
+-1 3601
+D3
+~
+~
+0
+-1 3603
+S
+#3603
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D1
+~
+~
+0
+-1 3602
+D3
+~
+~
+0
+-1 3604
+S
+#3604
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D1
+~
+~
+0
+-1 3603
+D3
+~
+~
+0
+-1 3605
+S
+#3605
+&zEnd of a Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440&1
+1
+0 1
+D1
+~
+~
+0
+-1 3604
+D2
+~
+~
+0
+-1 3606
+D4
+~
+Ship~
+0
+-1 3609
+D5
+~
+~
+0
+-1 3638
+S
+#3606
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3605
+D2
+~
+~
+0
+-1 3587
+S
+#3607
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3587
+D2
+~
+~
+0
+-1 3595
+S
+#3608
+&zLong Dark Corridor~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3595
+D2
+~
+~
+0
+-1 3600
+S
+#3609
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 3635
+D1
+~
+~
+0
+-1 3610
+D2
+~
+~
+0
+-1 3628
+D3
+~
+~
+0
+-1 3635
+D5
+~
+~
+0
+-1 3605
+D8
+~
+~
+0
+-1 3629
+S
+#3610
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 3635
+D1
+~
+~
+0
+-1 3611
+D3
+~
+~
+0
+-1 3609
+S
+#3611
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 3635
+D1
+~
+~
+0
+-1 3612
+D3
+~
+~
+0
+-1 3610
+S
+#3612
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 3635
+D1
+~
+~
+0
+-1 3613
+D3
+~
+~
+0
+-1 3611
+S
+#3613
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 3635
+D1
+~
+~
+0
+-1 3635
+D2
+~
+ship~
+0
+-1 3614
+D3
+~
+~
+0
+-1 3612
+S
+#3614
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 3613
+D1
+~
+~
+0
+-1 3635
+D2
+~
+~
+0
+-1 3615
+S
+#3615
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 3614
+D1
+~
+~
+0
+-1 3635
+D2
+~
+~
+0
+-1 3616
+S
+#3616
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 3615
+D1
+~
+~
+0
+-1 3635
+D2
+~
+~
+0
+-1 3617
+S
+#3617
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 3616
+D1
+~
+~
+0
+-1 3635
+D2
+~
+~
+0
+-1 3618
+S
+#3618
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432&8
+0
+0 1
+D0
+~
+~
+0
+-1 3617
+D1
+~
+~
+0
+-1 3635
+D2
+~
+~
+0
+-1 3619
+S
+#3619
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 3618
+D1
+~
+~
+0
+-1 3635
+D2
+~
+~
+0
+-1 3635
+D3
+~
+~
+0
+-1 3620
+D5
+~
+~
+0
+-1 3597
+D7
+~
+~
+0
+-1 3633
+S
+#3620
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 3619
+D2
+~
+~
+0
+-1 3635
+D3
+~
+~
+0
+-1 3621
+S
+#3621
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 3620
+D2
+~
+~
+0
+-1 3635
+D3
+~
+~
+0
+-1 3622
+S
+#3622
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 3621
+D2
+~
+~
+0
+-1 3635
+D3
+~
+~
+0
+-1 3623
+S
+#3623
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 3624
+D1
+~
+~
+0
+-1 3622
+D2
+~
+~
+0
+-1 3635
+D3
+~
+~
+0
+-1 3635
+S
+#3624
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 3625
+D2
+~
+~
+0
+-1 3623
+D3
+~
+~
+0
+-1 3635
+S
+#3625
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 3626
+D2
+~
+~
+0
+-1 3624
+D3
+~
+~
+0
+-1 3635
+S
+#3626
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 3627
+D2
+~
+~
+0
+-1 3625
+D3
+~
+~
+0
+-1 3635
+S
+#3627
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 3628
+D2
+~
+~
+0
+-1 3626
+D3
+~
+~
+0
+-1 3635
+S
+#3628
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 3609
+D2
+~
+~
+0
+-1 3627
+D3
+~
+~
+0
+-1 3635
+S
+#3629
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D7
+~
+~
+0
+-1 3609
+D8
+~
+~
+0
+-1 3630
+S
+#3630
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D7
+~
+~
+0
+-1 3629
+D8
+~
+~
+0
+-1 3631
+S
+#3631
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D2
+~
+~
+0
+-1 3634
+D7
+~
+~
+0
+-1 3630
+D8
+~
+~
+0
+-1 3632
+S
+#3632
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D3
+~
+~
+0
+-1 3634
+D7
+~
+~
+0
+-1 3631
+D8
+~
+~
+0
+-1 3633
+S
+#3633
+&zDeck of a Ship~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+33554432
+0
+0 1
+D7
+~
+~
+0
+-1 3632
+D8
+~
+~
+0
+-1 3619
+S
+#3634
+&zHeli Pad~
+&zHere on the deck of the ship, little activity is seen. This ship model is
+missing guard rails, so it is very easy to fall into the ocean. Drowning
+is a very painful way to die, as well as a long painful process. A cool
+breeze blows from the west.
+~
+~
+301989888&8
+0
+0 1
+D0
+~
+~
+0
+-1 3631
+D1
+~
+~
+0
+-1 3632
+S
+#3635
+&WFalling into the ocean~
+~
+~
+4096
+0
+0 1
+D1
+~
+~
+0
+-1 3609
+D5
+~
+~
+0
+-1 3636
+> entry_prog 100~
+mpforce $n emote SCREAMS in terror as they fall towards the water
+~
+|
+S
+#3636
+&WFalling into the ocean~
+~
+~
+4096
+0
+0 1
+D4
+~
+~
+0
+-1 3635
+D5
+~
+~
+0
+-1 3637
+> entry_prog 100~
+mpforce $n emote SCREAMS in terror as they fall towards the water
+~
+|
+S
+#3637
+&BDrowning in the Ocean~
+&BThe ocean is full of life living creatures. The Water is cold and dark.
+Drowning is such a sad and painful way to die.
+~
+~
+0
+0
+0 1
+D4
+~
+~
+0
+-1 3636
+> entry_prog 100~
+mpforce $n emote SCREAMS as they hit the icy cold water!
+mpecho A large SPLASH is heard as you hit the water!
+mpdamage $n 1000
+~
+|
+S
+#3638
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+-2113929208
+1
+0 1
+D1
+~
+~
+0
+-1 3639
+D2
+~
+~
+0
+-1 3655
+D4
+~
+~
+0
+-1 3605
+D5
+~
+~
+0
+-1 3660
+S
+#3639
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D1
+~
+~
+0
+-1 3640
+D3
+~
+~
+0
+-1 3638
+S
+#3640
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D1
+~
+~
+0
+-1 3641
+D2
+~
+~
+0
+-1 3656
+D3
+~
+~
+0
+-1 3639
+S
+#3641
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D1
+~
+~
+0
+-1 3642
+D3
+~
+~
+0
+-1 3640
+S
+#3642
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+167772168
+1
+0 1
+D2
+~
+~
+0
+-1 3643
+D3
+~
+~
+0
+-1 3641
+S
+#3643
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3642
+D2
+~
+~
+0
+-1 3644
+S
+#3644
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+-2113929208
+1
+0 1
+D0
+~
+~
+0
+-1 3643
+D2
+~
+~
+0
+-1 3645
+S
+#3645
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3644
+D2
+~
+~
+0
+-1 3646
+S
+#3646
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3645
+D2
+~
+~
+0
+-1 3647
+D3
+~
+~
+4194307
+-1 3680
+S
+#3647
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3646
+D3
+~
+~
+0
+-1 3648
+S
+#3648
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D1
+~
+~
+0
+-1 3647
+D3
+~
+~
+0
+-1 3649
+S
+#3649
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3659
+D1
+~
+~
+0
+-1 3648
+D3
+~
+~
+0
+-1 3650
+S
+#3650
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D1
+~
+~
+0
+-1 3649
+D3
+~
+~
+0
+-1 3651
+S
+#3651
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3652
+D1
+~
+~
+0
+-1 3650
+S
+#3652
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3653
+D2
+~
+~
+0
+-1 3651
+S
+#3653
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3654
+D2
+~
+~
+0
+-1 3652
+S
+#3654
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3655
+D1
+~
+~
+4194307
+-1 3679
+D2
+~
+~
+0
+-1 3653
+S
+#3655
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3638
+D2
+~
+~
+0
+-1 3654
+S
+#3656
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3640
+D2
+~
+~
+0
+-1 3657
+S
+#3657
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3656
+D2
+~
+~
+0
+-1 3658
+S
+#3658
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3657
+D2
+~
+~
+0
+-1 3659
+S
+#3659
+&zLower Levels of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3658
+D2
+~
+~
+0
+-1 3649
+S
+#3660
+&zBottom Level of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+4194312
+1
+0 1
+D1
+~
+~
+0
+-1 3661
+D2
+~
+~
+0
+-1 3675
+D4
+~
+~
+0
+-1 3638
+S
+#3661
+&zBottom Level of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554441
+1
+0 1
+D1
+~
+~
+0
+-1 3662
+D3
+~
+~
+0
+-1 3660
+S
+#3662
+&zBottom Level of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554441
+1
+0 1
+D1
+~
+~
+0
+-1 3663
+D3
+~
+~
+0
+-1 3661
+S
+#3663
+&zBottom Level of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554441
+1
+0 1
+D2
+~
+~
+0
+-1 3664
+D3
+~
+~
+0
+-1 3662
+S
+#3664
+&zBottom Level of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554441
+1
+0 1
+D0
+~
+~
+0
+-1 3663
+D2
+~
+~
+0
+-1 3665
+S
+#3665
+&zBottom Level of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554441
+1
+0 1
+D0
+~
+~
+0
+-1 3664
+D2
+~
+~
+0
+-1 3666
+S
+#3666
+&zBottom Level of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554441
+1
+0 1
+D0
+~
+~
+0
+-1 3665
+D2
+~
+~
+0
+-1 3667
+S
+#3667
+&zBottom Level of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554441
+1
+0 1
+D0
+~
+~
+0
+-1 3666
+D2
+~
+~
+0
+-1 3668
+S
+#3668
+&zBottom Level of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554441
+1
+0 1
+D0
+~
+~
+0
+-1 3667
+D2
+~
+~
+0
+-1 3677
+D3
+~
+~
+0
+-1 3669
+S
+#3669
+&zBottom Level of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554441
+1
+0 1
+D1
+~
+~
+0
+-1 3668
+D3
+~
+~
+0
+-1 3670
+S
+#3670
+&zBottom Level of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554441
+1
+0 1
+D1
+~
+~
+0
+-1 3669
+D3
+~
+~
+0
+-1 3671
+S
+#3671
+&zBottom Level of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554441
+1
+0 1
+D0
+~
+~
+0
+-1 3672
+D1
+~
+~
+0
+-1 3670
+D2
+~
+~
+0
+-1 3676
+S
+#3672
+&zBottom Level of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554441
+1
+0 1
+D0
+~
+~
+0
+-1 3673
+D2
+~
+~
+0
+-1 3671
+S
+#3673
+&zBottom Level of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554441
+1
+0 1
+D0
+~
+~
+0
+-1 3674
+D1
+~
+~
+4194307
+-1 3678
+D2
+~
+~
+0
+-1 3672
+S
+#3674
+&zBottom Level of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554441
+1
+0 1
+D0
+~
+~
+0
+-1 3675
+D2
+~
+~
+0
+-1 3673
+S
+#3675
+&zBottom Level of a Ship~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554441
+1
+0 1
+D0
+~
+~
+0
+-1 3660
+D2
+~
+~
+0
+-1 3674
+S
+#3676
+&zEngine Control Room~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+574619657
+1
+0 1
+D0
+~
+~
+0
+-1 3671
+D1
+~
+~
+33554432
+-1 3677
+S
+#3677
+&zEngine room~
+This room is the engine room of the ship. To the west is the control room.
+Many of the gears in here could crush any living thing instantly. It would
+be advisable not to stay in here for to long. There is a large possiblity
+that a swich to the west could be pressed to crush any and everything in
+here. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+9
+1
+0 1
+D0
+~
+~
+0
+-1 3668
+D3
+~
+~
+33554432
+-1 3676
+S
+#3678
+&zCargo Room~
+This room is used to store weapons, Jewlery, drugs, and any other cargo
+imaginable. However, the current cargo is hostages. Every cargo room in
+the ship has hostages. A few cry, a few prey, and a few stalk around with
+weapons they smuggled past the guards. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+37748745
+1
+0 1
+D3
+~
+~
+4194307
+-1 3673
+S
+#3679
+&zCargo Room~
+This room is used to store weapons, Jewlery, drugs, and any other cargo
+imaginable. However, the current cargo is hostages. Every cargo room in
+the ship has hostages. A few cry, a few prey, and a few stalk around with
+weapons they smuggled past the guards. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D3
+~
+~
+4194307
+-1 3654
+S
+#3680
+&zCargo Room~
+This room is used to store weapons, Jewlery, drugs, and any other cargo
+imaginable. However, the current cargo is hostages. Every cargo room in
+the ship has hostages. A few cry, a few prey, and a few stalk around with
+weapons they smuggled past the guards. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+-2113929208
+1
+0 1
+D1
+~
+~
+4194307
+-1 3646
+S
+#3681
+&zCargo Room~
+This room is used to store weapons, Jewlery, drugs, and any other cargo
+imaginable. However, the current cargo is hostages. Every cargo room in
+the ship has hostages. A few cry, a few prey, and a few stalk around with
+weapons they smuggled past the guards. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440&1
+1
+0 1
+D2
+~
+~
+4194307
+-1 3588
+S
+#3682
+&zEntrance to the Bridge~
+The corridors of this ship wind down like a small trail in an ant farm.
+Mostly straight as an arrow, but a few side rooms. Many whispers and
+shouts can be heard bouncing off the walls. Also heard can be a little
+girl crying.. Its to faint to tell if she is on this level. The word
+&YDESOLATION &zis spraypainted on the wall.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440&1
+1
+0 1
+D1
+~
+~
+0
+-1 3683
+D3
+~
+~
+0
+-1 3602
+S
+#3683
+&zBridge~
+The bridge is littered with guards, and a few hostages. The captain of the
+ship, is to the far south. The hostages, are being held in the eastermost
+room of the bridge.  One would be advised to stay away from here, unless
+they are well armed and can easily handle the guards. Here also holds the
+Light Controls for the bottom level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D1
+~
+~
+0
+-1 3684
+D2
+~
+~
+0
+-1 3685
+D3
+~
+~
+0
+-1 3682
+> entry_prog 100~
+if variable(BridgeAlarm) == 0 
+mprat 3587 3686 mpecho &w&R[WARNING] All units - Bridge has been breached!
+mpset BridgeAlarm 1
+mpsleep 10
+mpset BridgeAlarm 0
+endif
+~
+> speech_prog reset~
+mpecho &w&RBeep!
+mpset BridgeAlarm 0
+~
+|
+S
+#3684
+&zBridge~
+The bridge is littered with guards, and a few hostages. The captain of the
+ship, is to the far south. The hostages, are being held in the eastermost
+room of the bridge.  One would be advised to stay away from here, unless
+they are well armed and can easily handle the guards.
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440&1
+1
+0 1
+D3
+~
+~
+0
+-1 3683
+S
+#3685
+&zBridge~
+The bridge is littered with guards, and a few hostages. The captain of the
+ship, is to the far south. The hostages, are being held in the eastermost
+room of the bridge.  One would be advised to stay away from here, unless
+they are well armed and can easily handle the guards. Here also holds the
+Light Controls for the middle level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+33554440
+1
+0 1
+D0
+~
+~
+0
+-1 3683
+D2
+~
+~
+0
+-1 3686
+S
+#3686
+&zBridge~
+The bridge is littered with guards, and a few hostages. The captain of the
+ship, is to the far south. The hostages, are being held in the eastermost
+room of the bridge.  One would be advised to stay away from here, unless
+they are well armed and can easily handle the guards. Here also holds the
+Light Controls for the below deck level. 
+~
+&gUnlike its former self, the walls are covered in slime, and many eggs lay
+around. The room is pulsating with a foul stench. It makes anyone wonder
+how this place was once habited by anything other than aliens. Screams can
+be heard echoing throughout the ship.
+~
+-2113929208
+1
+0 1
+D0
+~
+~
+0
+-1 3685
+S
+#0
+
+
+#RESETS
+D 0 3646 3 1
+M 1 3588 4 3682
+E 1 1723 1 16
+E 1 1722 1 5
+G 1 1724 1
+G 1 1724 1
+M 1 3588 4 3682
+E 1 1723 1 16
+E 1 1722 1 5
+G 1 1724 1
+G 1 1724 1
+M 1 3588 4 3682
+E 1 1723 1 16
+E 1 1722 1 5
+G 1 1724 1
+G 1 1724 1
+G 1 1724 1
+M 1 3590 1 3678
+D 0 3678 3 1
+M 1 3589 1 3680
+D 0 3680 1 1
+D 0 3673 1 1
+O 1 3590 1 3662
+O 1 3590 1 3639
+O 1 3590 1 3653
+M 1 3588 4 3588
+E 1 1723 1 16
+E 1 1722 1 5
+G 1 1724 1
+G 1 1724 1
+D 0 3588 0 1
+O 1 3590 1 3587
+O 1 3590 1 3666
+O 1 3590 1 3672
+O 1 3590 1 3674
+O 1 3590 1 3661
+O 1 3590 1 3640
+O 1 3590 1 3644
+O 1 3590 1 3647
+O 1 3590 1 3658
+O 1 3590 1 3652
+O 1 3590 1 3654
+D 0 3654 1 1
+O 1 3590 1 3605
+O 1 3590 1 3601
+O 1 3590 1 3589
+O 1 3590 1 3595
+O 1 3590 1 3599
+M 1 1723 6 3679
+D 0 3679 3 1
+M 1 1723 6 3681
+M 1 1723 6 3681
+M 1 1723 6 3681
+D 0 3681 2 1
+M 1 1723 6 3684
+E 1 665 1 16
+M 1 1723 6 3684
+E 1 665 1 16
+O 1 3593 1 3685
+M 1 3587 1 3686
+E 1 673 1 16
+G 1 674 1
+E 1 1722 1 5
+G 1 674 1
+G 1 674 1
+O 1 3591 1 3686
+O 1 3592 1 3686
+O 1 3591 1 3683
+O 1 3594 1 3683
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+M  3587 spec_enemy_scan
+M  3588 spec_enemy_scan
+S
+
+
+#$

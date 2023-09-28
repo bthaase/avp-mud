@@ -1,0 +1,1145 @@
+#AREA   {PROTO} Telestrial's area in progress~
+
+#VERSION 4
+
+#AUTHOR Telestrial~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#3800
+&YThe Weapon Corp. Janitor~
+The Weapon Corp. Janitor~
+The Weapon Corp. Janitor is here, sweaping up a mess.
+~
+~
+0
+5
+Z
+1 8 8 0
+15 15 15 15 15 15
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#3801
+The Weapon Corp. Secretary~
+The Weapon Corp. Secretary~
+The Weapon Corp. Secretary is here, doing paperwork
+~
+~
+0
+3
+S
+1 8 8 2
+#0
+
+
+#OBJECTS
+#3800
+Janitor's Key~
+a Janitor's Key~
+A Janitor's Key is here.~
+~
+9
+0
+1
+0 0 0 0 0 0
+1 0 0
+#3801
+Broom~
+a Broom~
+A Broom is here.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#3800
+Weapon Corp.~
+The Weapon Corporation entrance is covered with sleek white marble. With 
+double sliding doors, the building looks more like a bussiness corporation
+rather then a Weapon Corporation. A Weapon Corp. logo is right above the
+double sliding doors. The building sits several stories up . Inside you
+see flickers of light.
+~
+First Impressions are important. Like during a bussiness interview. As you
+stand in the front entrance, you think that maybe you should leave. Your
+mind fills with all the things that could happen as you stare at the goo
+eeking down the wall. Greenish webs cover everything, making the entrance
+almost impassible. It collects on everything it touches .
+~
+65544
+0
+0 0 0 0 1000
+D0
+~
+~
+0
+-1 3801
+S
+#3801
+Weapon Corp. Hallway~
+You can tell the hall is well lighted. And at the end you see an opening
+into a large room. On the walls there are posters for the latest models of
+weapons from Weapon Corp. Ads for the Weapon Corp Type-1 automatic blaster
+and the Weapon Corp. Type-3 hand blaster are just a few of the many weapons
+displayed on the various posters.
+~
+The hallway has been taken over! Goo eeks down everything. It flows down
+the walls. It collects on the floor. It sticks to your feet. You think
+that maybe you should turn back and leave as fast as you can. Greenish
+webs cover everything. It makes the room almost impassible .
+~
+65544
+0
+0 0
+D0
+~
+~
+0
+-1 3802
+D2
+~
+~
+0
+-1 3800
+S
+#3802
+The Weapon Corp. Lobby~
+You enter a the Weapon Corp. Lobby. There is furniture scattered along the
+floor. To the left and right you see doors that say STAIRS above them. A
+secratary sits in the back corner working on some papers. The room is
+silent as are all bussiness-like buildings.
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by.
+~
+65544
+0
+0 0
+D0
+~
+~
+0
+-1 3805
+D1
+~
+~
+0
+-1 3803
+D2
+~
+~
+0
+-1 3801
+D3
+~
+~
+0
+-1 3804
+S
+#3803
+Weapon Corp. Side Lobby~
+You enter a smaller room than the Main Lobby. To your side is a door with
+STAIRS printed above it. The room is silent like all the others with a
+smaller set of furniture.  Above, you hear the s loud rumble. It sounds
+like many machines, working in unison.
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by.
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3819
+D3
+~
+~
+0
+-1 3802
+S
+#3804
+Weapon Corp. Side Lobby~
+You enter a smaller room than the Main Lobby. To your side is a door with
+STAIRS printed above it. The room is silent like all the others with a
+smaller set of furniture.  Above, you hear the s loud rumble. It sounds
+like many machines, working in unison.
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by. 
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3802
+D3
+~
+~
+0
+-1 3818
+S
+#3805
+Weapon Corp. Back Lobby~
+This is a Lobby for Weapon Corp. Ahead, you see a desk with a secretary
+sitting at it. The lights are very bright here. To one side of you there
+is a door the has PARKING GARAGE printing in big letters over it.  Above
+you hear a low rumble of many machines, all working in unison.   The low
+drone is tedious.  
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by. 
+~
+65544
+0
+0 0
+D0
+~
+~
+0
+-1 3806
+D2
+~
+~
+0
+-1 3802
+S
+#3806
+End of the Parking Garage~
+This is the end of the parking garage. Ahead of you there is a door that
+has WEAPON CORP. BACK LOBBY written in big letters above it.  The floor is
+made with cement and looks pretty normal. Every move you make echos in the
+Parking Garage loudly. 
+~
+Goo eeks down the walls, collecting on the floor, and sitcks to your
+clothes. Greenish webs also cover everything. You can barely see a door,
+but as you look closely you notice one. Above the door you see in large
+letters WEAPON CORP. BACK LOBBY.
+~
+65544
+0
+0 0
+D0
+~
+~
+0
+-1 3809
+D1
+~
+~
+0
+-1 3807
+D2
+~
+~
+0
+-1 3805
+D3
+~
+~
+0
+-1 3808
+S
+#3807
+Parking Space~
+Your standing in a parking space made for a car. The cement is smooth and
+scuffed from many years of use. The floor is dirty as well. Cement beams
+box the space in, so that cars will not bang into each other. A barrier
+stands at the end, to make it even more safe.
+~
+Goo eeks down the walls and collects on the ground, making you shiver.
+There are greenish webs all over what use to be a guard barrier and the
+guard beams. The goo is extremely sticky and you think you might need to
+take a shower after this experience.
+~
+65544
+0
+0 0
+D3
+~
+~
+0
+-1 3806
+S
+#3808
+Parking Space~
+Your standing in a parking space made for a car. The cement is smooth and
+scuffed from many years of use. The floor is dirty as well. Cement beams
+box the space in, so that cars will not bang into each other. A barrier
+stands at the end, to make it even more safe.
+~
+Goo eeks down the walls and collects on the ground, making you shiver.
+There are greenish webs all over what use to be a guard barrier and the
+guard beams. The goo is extremely sticky and you think you might need to
+take a shower after this experience.
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3806
+S
+#3809
+Inside the Parking Garage~
+You're inside a parking garage. There are parking spaces to all direction
+of you. The cement is plain, cool, and smooth. It's scuffed and has water
+marks flowing down the sides of this road. Every move you make echoes
+loudly bounces of the wall, making the sound seem to go on forever
+~
+Goo eeks down the beams that surround you. It collects on the ground and
+sticks all over you. Greenish webs flow all over you making in almost
+impassible The Only thought that races through your mind is 'How the hell
+did this happen' and 'I'm gonna need to take a bath after this.'
+~
+65544
+0
+0 0
+D0
+~
+~
+0
+-1 3812
+D1
+~
+~
+0
+-1 3810
+D2
+~
+~
+0
+-1 3806
+D3
+~
+~
+0
+-1 3811
+S
+#3810
+Parking Space~
+Your standing in a parking space made for a car. The cement is smooth and
+scuffed from many years of use. The floor is dirty as well. Cement beams
+box the space in, so that cars will not bang into each other. A barrier
+stands at the end, to make it even more safe. 
+~
+Goo eeks down the walls and collects on the ground, making you shiver.
+There are greenish webs all over what use to be a guard barrier and the
+guard beams. The goo is extremely sticky and you think you might need to
+take a shower after this experience. 
+~
+65544
+0
+0 0
+D3
+~
+~
+0
+-1 3809
+S
+#3811
+Parking Place~
+Your standing in a parking space made for a car. The cement is smooth and
+scuffed from many years of use. The floor is dirty as well. Cement beams
+box the space in, so that cars will not bang into each other. A barrier
+stands at the end, to make it even more safe. 
+~
+Goo eeks down the walls and collects on the ground, making you shiver.
+There are greenish webs all over what use to be a guard barrier and the
+guard beams. The goo is extremely sticky and you think you might need to
+take a shower after this experience. 
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3809
+S
+#3812
+Inside the Parking Garage~
+You're inside a parking garage. There are parking spaces to all direction
+of you. The cement is plain, cool, and smooth. It's scuffed and has water
+marks flowing down the sides of this road. Every move you make echoes
+loudly bounces of the wall, making the sound seem to go on forever.
+~
+Goo eeks down the beams that surround you. It collects on the ground and
+sticks all over you. Greenish webs flow all over you making in almost
+impassible The Only thought that races through your mind is 'How the hell
+did this happen' and 'I'm gonna need to take a bath after this.'
+~
+65544
+0
+0 0
+D0
+~
+~
+0
+-1 3815
+D1
+~
+~
+0
+-1 3813
+D2
+~
+~
+0
+-1 3809
+D3
+~
+~
+0
+-1 3814
+S
+#3813
+Parking Space~
+Your standing in a parking space made for a car. The cement is smooth and
+scuffed from many years of use. The floor is dirty as well. Cement beams
+box the space in, so that cars will not bang into each other. A barrier
+stands at the end, to make it even more safe. 
+~
+Goo eeks down the walls and collects on the ground, making you shiver.
+There are greenish webs all over what use to be a guard barrier and the
+guard beams. The goo is extremely sticky and you think you might need to
+take a shower after this experience. 
+~
+65544
+0
+0 0
+D3
+~
+~
+0
+-1 3812
+S
+#3814
+Parking Space~
+Your standing in a parking space made for a car. The cement is smooth and
+scuffed from many years of use. The floor is dirty as well. Cement beams
+box the space in, so that cars will not bang into each other. A barrier
+stands at the end, to make it even more safe. 
+~
+Goo eeks down the walls and collects on the ground, making you shiver.
+There are greenish webs all over what use to be a guard barrier and the
+guard beams. The goo is extremely sticky and you think you might need to
+take a shower after this experience. 
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3812
+S
+#3815
+A Curve in the Road~
+This is a curve in the road. At one end of the curve is what looks like an
+exit. On the other end is some parking spaces and at the end of those
+there seems to be a door.   In the middle of the curve there is a door
+with JANITOR'S CLOSET: EMPLOYES ONLY.
+~
+Goo eeks down the walls. It collects on the floor. It sticks to everything
+it touches. You shiver helplessly as you feel a sort of coldness come over
+you. Greenish webs cover everything around you. It makes this area almost
+impassible. You can barely make it out, but you see a door.
+~
+65544
+0
+0 0
+D0
+~
+~
+7
+3800 3816
+D2
+~
+~
+0
+-1 3812
+D3
+~
+~
+0
+-1 3817
+S
+#3816
+Janitor's Closet~
+You enter a small room, it's just a closet. Not meant for people. Just for
+brooms and other Custodian-like equipment. It's very dusty and the only
+interesting thing that you see here is some electrical items. You hear a
+pulsing noise and shiver as you imagine all the things it could be.
+~
+~
+65544
+0
+0 0
+D2
+~
+~
+7
+3800 3815
+S
+#3817
+Entrance to the Weapon Corp. Parking Garage~
+This is the beginning of the Parking Garage. Inside you hear echos of
+vehicles. The Parking Garage is lighted. It looks like a friendly place.
+You think 'Maybe I should go back out though' You imagine all the things
+that could happen while you are in there. You think of all the creatures
+that may lurk in there.
+~
+First impressions are important. Like when you go for a bussiness
+interview. Well, as goo eeks down the walls and collects on the floor,
+your first impression of Weapon Corp. is a bad one Greenish webs cover
+everything making this path almost impassible
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3815
+S
+#3818
+Stairs~
+Your standing on slick metal stairs. The whole atmosphere is very plain.
+Your eyes dart here and there, making sure no one can attack you. You
+almost slip on the metal but you hold on to the rail keep you balance.
+different places. There seems to be three flights of stairs each leading
+to a different door. Each door has a different sign on it.
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by. 
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3804
+D4
+~
+~
+0
+-1 3829
+S
+#3819
+Stairs~
+Your standing on slick metal stairs. The whole atmosphere is very plain.
+Your eyes dart here and there, making sure no one can attack you. You
+almost slip on the metal but you hold on to the rail keep you balance.
+different places. There seems to be three flights of stairs each leading
+to a different door. Each door has a different sign on it.
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by. 
+~
+65544
+0
+0 0
+D3
+~
+~
+0
+-1 3803
+D4
+~
+~
+0
+-1 3820
+S
+#3820
+Stairs~
+Your standing on slick metal stairs. The whole atmosphere is very plain.
+Your eyes dart here and there, making sure no one can attack you. You
+almost slip on the metal but you hold on to the rail keep you balance.
+different places. There seems to be three flights of stairs each leading
+to a different door. Each door has a different sign on it.
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by. 
+~
+65544
+0
+0 0
+D4
+~
+~
+0
+-1 3821
+D5
+~
+~
+0
+-1 3819
+S
+#3821
+Stairs~
+Your standing on slick metal stairs. The whole atmosphere is very plain.
+Your eyes dart here and there, making sure no one can attack you. You
+almost slip on the metal but you hold on to the rail keep you balance.
+different places. There seems to be three flights of stairs each leading
+to a different door. Each door has a different sign on it.
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by. 
+~
+65544
+0
+0 0
+D3
+~
+~
+0
+-1 3822
+D4
+~
+~
+0
+-1 3832
+D5
+~
+~
+0
+-1 3820
+S
+#3822
+A Hallway~
+You stand in a hallway. The walls are filled with posters of new weapons.
+They have pictures have Marines killing Aliens and Predators. And
+Predators killing Marines and Alien. And Posters with Aliens killed
+Marines and Predators, The carpet is smooth and gray. It feels warm and
+fuzzy under your feet. 
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by. 
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3821
+D3
+~
+~
+0
+-1 3823
+S
+#3823
+A Hallway~
+You stand in a hallway. The walls are filled with posters of new weapons.
+They have pictures have Marines killing Aliens and Predators. And
+Predators killing Marines and Alien. And Posters with Aliens killed
+Marines and Predators, The carpet is smooth and gray. It feels warm and
+fuzzy under your feet. 
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by. 
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3822
+D3
+~
+~
+0
+-1 3824
+S
+#3824
+Weapon Corp. Marine Shop~
+This is the Marine's shop. There is a counter and a man sitting behind it.
+Behind the man there are advertisements for different weapons and eq. The
+room is reinforced with steel on the doors to keep unwanted aliens and
+predators out . The man has a nametag that says 'Bob' on it.
+~
+Goo covers the counter and the walls. It oozes down to the floor and
+somehow ends up on the ceiling again just to ooz back down the walls. What
+was once a metal door as somehow dissolved into a thin sheet of nothing.
+You could probably just walk straight through it.
+~
+65544
+0
+0 0
+D0
+~
+~
+0
+-1 3827
+D1
+~
+~
+0
+-1 3823
+D3
+~
+~
+0
+-1 3825
+S
+#3825
+A Hallway~
+You stand in a hallway. The walls are filled with posters of new weapons.
+They have pictures have Marines killing Aliens and Predators. And
+Predators killing Marines and Alien. And Posters with Aliens killed
+Marines and Predators, The carpet is smooth and gray. It feels warm and
+fuzzy under your feet. 
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by. 
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3824
+D3
+~
+~
+0
+-1 3826
+S
+#3826
+A Hallway~
+You stand in a hallway. The walls are filled with posters of new weapons.
+They have pictures have Marines killing Aliens and Predators. And
+Predators killing Marines and Alien. And Posters with Aliens killed
+Marines and Predators, The carpet is smooth and gray. It feels warm and
+fuzzy under your feet. 
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by. 
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3825
+D3
+~
+~
+0
+-1 3828
+S
+#3827
+Weapon Corp. Marine Lounge~
+This is a room for the Marines. It has all types of anti-Alien and
+anti-Predator posters and signs. There is furniture and a T.V. set up here
+and a bar with a electronic bartender. The smell of alcohol lays heavily
+on the air and almost makes you drunk just standing there.
+~
+This was once a lounge for Marines, but for some reason the Aliens thought
+that the Marines should just go to hell. Goo eeks down the walls. It
+collects on the floor and covers what was once furniture. It sticks to
+everything it touches and breaks it down into more goo.
+~
+65544
+0
+0 0
+D2
+~
+~
+0
+-1 3824
+S
+#3828
+Stairs~
+Your standing on slick metal stairs. The whole atmosphere is very plain.
+Your eyes dart here and there, making sure no one can attack you. You
+almost slip on the metal but you hold on to the rail keep you balance.
+different places. There seems to be three flights of stairs each leading
+to a different door. Each door has a different sign on it. 
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by. 
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3826
+D4
+~
+~
+0
+-1 3830
+D5
+~
+~
+0
+-1 3829
+S
+#3829
+Stairs~
+Your standing on slick metal stairs. The whole atmosphere is very plain.
+Your eyes dart here and there, making sure no one can attack you. You
+almost slip on the metal but you hold on to the rail keep you balance.
+different places. There seems to be three flights of stairs each leading
+to a different door. Each door has a different sign on it. 
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by. 
+~
+65544
+0
+0 0
+D4
+~
+~
+0
+-1 3828
+D5
+~
+~
+0
+-1 3818
+S
+#3830
+Stairs~
+Your standing on slick metal stairs. The whole atmosphere is very plain.
+Your eyes dart here and there, making sure no one can attack you. You
+almost slip on the metal but you hold on to the rail keep you balance.
+different places. There seems to be three flights of stairs each leading
+to a different door. Each door has a different sign on it. 
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by.
+~
+65544
+0
+0 0
+D4
+~
+~
+0
+-1 3831
+D5
+~
+~
+0
+-1 3828
+S
+#3831
+Stairs~
+Your standing on slick metal stairs. The whole atmosphere is very plain.
+Your eyes dart here and there, making sure no one can attack you. You
+almost slip on the metal but you hold on to the rail keep you balance.
+different places. There seems to be three flights of stairs each leading
+to a different door. Each door has a different sign on it. 
+~
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3839
+D5
+~
+~
+0
+-1 3830
+S
+#3832
+Stairs~
+Your standing on slick metal stairs. The whole atmosphere is very plain.
+Your eyes dart here and there, making sure no one can attack you. You
+almost slip on the metal but you hold on to the rail keep you balance.
+different places. There seems to be three flights of stairs each leading
+to a different door. Each door has a different sign on it.
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by.
+~
+65544
+0
+0 0
+D4
+~
+~
+0
+-1 3833
+D5
+~
+~
+0
+-1 3821
+S
+#3833
+Stairs~
+Your standing on slick metal stairs. The whole atmosphere is very plain.
+Your eyes dart here and there, making sure no one can attack you. You
+almost slip on the metal but you hold on to the rail keep you balance.
+different places. There seems to be three flights of stairs each leading
+to a different door. Each door has a different sign on it. 
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by.
+~
+65544
+0
+0 0
+D3
+~
+~
+0
+-1 3834
+D5
+~
+~
+0
+-1 3832
+S
+#3834
+Hallway~
+You stand in a hallway. The walls are filled with posters of new weapons.
+They have pictures have Marines killing Aliens and Predators. And
+Predators killing Marines and Alien. And Posters with Aliens killed
+Marines and Predators, The carpet is smooth and gray. It feels warm and
+fuzzy under your feet. 
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by.
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3833
+D3
+~
+~
+0
+-1 3835
+S
+#3835
+Hallway~
+You stand in a hallway. The walls are filled with posters of new weapons.
+They have pictures have Marines killing Aliens and Predators. And
+Predators killing Marines and Alien. And Posters with Aliens killed
+Marines and Predators, The carpet is smooth and gray. It feels warm and
+fuzzy under your feet. 
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by.
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3834
+D3
+~
+~
+0
+-1 3836
+S
+#3836
+Weapon Corp. Predator Shop~
+Your standing in a pit. Spikes come through the walls. There are insects
+and bugs all over the walls. There are three metal doors. To keep Aliens
+and Marines away. Each door leads to a different place. Two lead to the
+hallway and one goes to yet another .
+~
+This is a wierd site. Goo flows down the walls. It covers the walls and
+spikes sticking out of the walls. Insects scatters to and fro, trying not
+to be decomposed by the evil goo. What were once metal doors seem to be
+nothing less than sheets of metal, so thin that walking into it will break
+them.
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3835
+D3
+~
+~
+0
+-1 3838
+S
+#3838
+Hallway~
+You stand in a hallway. The walls are filled with posters of new weapons.
+They have pictures have Marines killing Aliens and Predators. And
+Predators killing Marines and Alien. And Posters with Aliens killed
+Marines and Predators, The carpet is smooth and gray. It feels warm and
+fuzzy under your feet. 
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by.
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3836
+D3
+~
+~
+0
+-1 3839
+S
+#3839
+Hallway~
+You stand in a hallway. The walls are filled with posters of new weapons.
+They have pictures have Marines killing Aliens and Predators. And
+Predators killing Marines and Alien. And Posters with Aliens killed
+Marines and Predators, The carpet is smooth and gray. It feels warm and
+fuzzy under your feet.  
+~
+Gook eeks down the walls. It collects on the floor and somehow goes back up
+to the ceiling just to ooze back down again. It sticks to your feet and
+makes them feel all warm and fuzzy . You almost hurl as you stare at the
+greenish webs that cross criss-cross, making the room almost impassible.
+You feel that if you really tried you could probably get by.
+~
+65544
+0
+0 0
+D1
+~
+~
+0
+-1 3838
+D3
+~
+~
+0
+-1 3831
+S
+#0
+
+
+#RESETS
+M 1 3800 1 3808
+G 1 3800 1
+M 1 3801 1 3802
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+S
+
+
+#$

@@ -1,0 +1,3904 @@
+#AREA   {PROTO} Harlequin's area in progress~
+
+#VERSION 4
+
+#AUTHOR Harlequin~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#7101
+Low Mob~
+a newly created Low Mob~
+Some god abandoned a newly created Low Mob here.
+~
+~
+0
+67108865
+S
+1 8 8 0
+#7102
+Apone~
+Colenel Apone~
+Colenel Apone is standing here, Ushering his squad into the APC.
+~
+~
+0
+32771
+S
+1 8 8 0
+> all_greet_prog 100~
+salute $n
+mpsleep 4
+if variable(Hudson) == 0
+mpecho &cColenel Apone points to the east.
+say Hop in the APC, Marine.
+else
+say Sit tight, Marine. Next APC is en route.
+endif
+~
+> act_prog p leaves east.~
+block e
+mpsleep 4
+say Sorry, theres no more room on that APC.
+mpsleep 6
+say Next APC will be along in a minute.
+msleep 6
+shrug
+~
+|
+#7103
+Hudson~
+Private Hudson~
+Private Hudson is standing here boasting about something.
+~
+~
+0
+67108865
+S
+1 8 8 0
+> all_greet_prog 100~
+mpset Hudson 1
+mpecho &w&CThe doors close behind you and the engines hum to life. 
+mpsleep 6
+say I'd si'down if i were you.
+mpsleep 6
+mpforce $n sit
+mpsleep 6
+mpechoat $n hudson pulls the bar down over you.
+mpsleep 8
+mpcehoat $n Hudson peers at you quizzically.
+mpsleep 8
+say Hey...Whassa Matter? This ain't ya first drop is it?
+mpsleep 4
+grin
+mpsleep 8
+say Heh, Check it out! We got independently firing partical phalanxes
+mpsleep 10
+say We got tactical smart missiles, phase plasma pulse rifles
+mpsleep 10
+say We got sonic, electronic ball breakers, we got nukes, we got knives
+mpsleep 10
+say Hell, we even got sharp sticks...Take your pick.
+mpsleep 12
+mpecho Hudson looks around at the other marines.
+mpsleep 4
+smirk
+say Don't worry me and my ultimate team of baddass' will protect
+mpsleep 20
+mpecho Radio:[Gorman]: We're coming up on the target.
+mpsleep 20
+mpecho Radio:[Gorman]: Ok marines, lock and load, it's show time.
+mpsleep 8
+mpecho The side doors slide open and the engines stop.
+mpsleep 6
+Say Let's go, you wanna live forever?!
+mpsleep 7
+mpecho The rest of the marines grab their gear and Exit
+mpsleep 8
+mpforce $n stand
+mpsleep 4
+mpechoat $n You pull the rail up, stand and exit the APC.
+mpsleep 6
+mptrans $n 7104
+mpsleep 6
+radio Ok top, we're clear for another unit to be dropped in!
+mpset Hudson 0
+mpat 7102 mpforce Apone block
+mpat 7102 mpforce Apone say Okay. Next APC is ready. 
+~
+|
+#7104
+Corporal Hicks~
+Corporal Hicks~
+Corporal Hicks stands here, confident as ever.
+~
+~
+0
+1
+S
+1 8 8 0
+#7106
+Private Vasquez~
+Private Vasquez~
+Private Vasquez stands here, alert and ready.
+~
+~
+0
+1
+S
+1 8 8 0
+#7107
+Private Frosty~
+Private Frosty~
+Private Frosty scans the area for enemies.
+~
+~
+0
+3
+S
+1 8 8 0
+#7108
+Private Hudson~
+Private Hudson~
+Private Hudson stands here, trying to look Badass.
+~
+~
+0
+1
+S
+1 8 8 0
+#7109
+Colonel Apone~
+Colonel Apone~
+Colonel Apone is here, smoking one of his cigars.
+~
+~
+0
+1
+S
+1 8 8 0
+#7110
+Private Drake~
+Private Drake~
+Private Drake is here, fiddling with his smartgun.
+~
+~
+0
+1
+S
+1 8 8 0
+#7111
+Private Ferro~
+Private Ferro~
+Private Ferro is here, retrieving medical samples.
+~
+~
+0
+1
+S
+1 8 8 0
+#7112
+Bishop~
+Bishop the Synthetic~
+Bishop the Synthetic stands here, poised as usual.
+~
+~
+0
+1
+S
+1 8 8 0
+#7113
+A Samurai Lord~
+A Samurai Lord~
+A Samurai Lord stands here before stick, ready to take his life...
+~
+~
+0
+67108865
+Z
+1 8 8 0
+25 10 10 10 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> speech_prog 'In life, we honour death.'~
+em takes his place before Stick....
+mpsleep 6
+em raises the naginata high into the air....
+mpsleep 6
+em plungers the naginata deep into Stick's neck...
+mpsleep 6
+mpslay stick
+~
+|
+#7114
+Fat Controller~
+The Fat Controller~
+The Fat Controller sits here..being...fat
+~
+~
+0
+67371009
+S
+1 8 8 0
+> speech_prog Door1Open~
+if variable(Door1) == 0
+say Door1 :: Running OpenDoor.
+mpset Door1 1
+mpat 7108 mpecho &w&G[Notice]: Security System has been bypassed. 
+mpsleep 8
+mpat 7108 mpecho &w&G[Notice]: Doors are opening.
+mpat 7109 mpecho &w&G[Notice]: Doors are opening.
+mpsleep 4 
+mpoload 7103
+mpat 7108 unlock n
+mpat 7108 open n 
+mpat 1 drop key
+mpat 1 mppurge objects
+endif
+~
+|
+#7401
+High Mob~
+a newly created High Mob~
+Some god abandoned a newly created High Mob here.
+~
+~
+0
+67108865
+S
+1 8 8 0
+#0
+
+
+#OBJECTS
+#7101
+Low Obj~
+a Low Obj~
+A Low Obj is here.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+1 0 0
+#7102
+Keypad Bypass Console~
+Key~
+A Keypad, that looks as if it can be bypassed is attached to the northen door.~
+~
+4
+2102272
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(Door1) == 1
+mea $n The door has already been bypassed.
+else
+mea $n You call up the administration controls on the console. 
+mer $n $n carefully accesses the security console. 
+mpecho &Y(Notice) $n is bypassing the door, this will take a moment.
+mpfreeze $n
+mpsleep 12
+mpunfreeze $n
+mpat 7110 say Door1Open
+endif
+~
+> useoff_prog 100~
+if variable(Door1) == 1
+mea $n The door has already been bypassed.
+else
+mea $n You call up the administration controls on the console. 
+mer $n $n carefully accesses the security console. 
+mpecho &Y(Notice) $n is bypassing the door, this will take a moment.
+mpfreeze $n
+mpsleep 12
+mpunfreeze $n
+mpat 7110 say Door1Open
+endif
+~
+|
+#7103
+Do not touch this key EVER....ever...EVER~
+a Do not touch this key EVER....ever...EVER~
+A Do not touch this key EVER....ever...EVER is here.~
+~
+5
+1024
+16385
+0 0 0 0 0 0
+1 0 0
+#7401
+Hugh Obj~
+a Hugh Obj~
+A Hugh Obj is here.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#7101
+Low Room~
+~
+~
+1073807364
+0
+0 1
+S
+#7102
+First Street~
+~
+~
+1075904516
+0
+0 1
+D0
+~
+~
+0
+-1 7128
+D1
+~
+~
+0
+-1 7103
+S
+#7103
+First Street~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 7104
+D3
+~
+~
+0
+-1 7102
+S
+#7104
+First Street~
+~
+~
+1075904516
+0
+0 1
+D1
+~
+~
+0
+-1 7105
+D3
+~
+~
+0
+-1 7103
+S
+#7105
+Intersection~
+~
+~
+1075904516
+0
+0 1
+D0
+~
+~
+0
+-1 7136
+D1
+~
+~
+0
+-1 7106
+D3
+~
+~
+0
+-1 7104
+S
+#7106
+First Street~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7107
+D3
+~
+~
+0
+-1 7105
+S
+#7107
+First Street~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7108
+D3
+~
+~
+0
+-1 7106
+S
+#7108
+First Street~
+~
+~
+1075904512
+0
+0 1
+D0
+~
+~
+0
+1111 7109
+D1
+~
+~
+1
+666 7251
+D3
+~
+~
+0
+-1 7107
+S
+#7109
+Second Street~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7111
+D2
+~
+~
+0
+7103 7108
+S
+#7110
+&YController Room... - Do Not Touch~
+&rI swear if you even try and touch this fucking controller, there will be
+a whole world of beat down on your ass...there is no way to explain the
+amount of pain your ass will suffer as a result of you touching this fat
+controller in any way shape or form..
+~
+~
+1073807364
+0
+0 1
+S
+#7111
+Second Street~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7112
+D2
+~
+~
+0
+-1 7109
+S
+#7112
+Intersection~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7113
+D2
+~
+~
+0
+-1 7111
+D3
+~
+~
+0
+-1 7134
+S
+#7113
+Second Street~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7114
+D2
+~
+~
+0
+-1 7112
+S
+#7114
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7115
+D2
+~
+~
+0
+-1 7113
+S
+#7115
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7116
+D2
+~
+~
+0
+-1 7114
+S
+#7116
+Floating in a void~
+~
+~
+1073807372
+0
+0 1
+D2
+~
+~
+0
+-1 7115
+D3
+~
+~
+0
+-1 7117
+S
+#7117
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7263
+D1
+~
+~
+0
+-1 7116
+D3
+~
+~
+0
+-1 7118
+S
+#7118
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7117
+D3
+~
+~
+0
+-1 7119
+S
+#7119
+Intersection~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7118
+D2
+~
+~
+0
+-1 7138
+D3
+~
+~
+0
+-1 7120
+S
+#7120
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7119
+D3
+~
+~
+0
+-1 7121
+S
+#7121
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7120
+D3
+~
+~
+0
+-1 7122
+S
+#7122
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7121
+D2
+~
+~
+0
+-1 7123
+S
+#7123
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7122
+D2
+~
+~
+0
+-1 7124
+S
+#7124
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7123
+D2
+~
+~
+0
+-1 7125
+S
+#7125
+Intersection~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7124
+D1
+~
+~
+0
+-1 7129
+D2
+~
+~
+0
+-1 7126
+S
+#7126
+Floating in a Void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7125
+D2
+~
+~
+0
+-1 7127
+S
+#7127
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7126
+D2
+~
+~
+0
+-1 7128
+D3
+~
+~
+33554432
+-1 7258
+S
+#7128
+Fourth Street~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7127
+D2
+~
+~
+0
+-1 7102
+S
+#7129
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7130
+D3
+~
+~
+0
+-1 7125
+S
+#7130
+West Centre Road~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7186
+D1
+~
+~
+0
+-1 7131
+D3
+~
+~
+0
+-1 7129
+S
+#7131
+North Centre~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7137
+D2
+~
+~
+0
+-1 7132
+D3
+~
+~
+0
+-1 7130
+S
+#7132
+South Centre~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7131
+D1
+~
+~
+0
+-1 7133
+D2
+~
+~
+0
+-1 7135
+S
+#7133
+East Centre Road~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7134
+D2
+~
+~
+0
+-1 7228
+D3
+~
+~
+0
+-1 7132
+S
+#7134
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7112
+D3
+~
+~
+0
+-1 7133
+S
+#7135
+South Centre Road~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7132
+D2
+~
+~
+0
+-1 7136
+D3
+~
+~
+0
+-1 7192
+S
+#7136
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7135
+D2
+~
+~
+0
+-1 7105
+S
+#7137
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7138
+D1
+~
+~
+0
+-1 7181
+D2
+~
+~
+0
+-1 7131
+S
+#7138
+North Centre Road~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7119
+D2
+~
+~
+0
+-1 7137
+S
+#7139
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7143
+D1
+~
+~
+0
+-1 7144
+D2
+~
+~
+0
+-1 7142
+S
+#7140
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7143
+D4
+~
+~
+0
+-1 7147
+S
+#7141
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7185
+D1
+~
+~
+0
+-1 7142
+S
+#7142
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7139
+D1
+~
+~
+0
+-1 7146
+D3
+~
+~
+0
+-1 7141
+S
+#7143
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7145
+D2
+~
+~
+0
+-1 7139
+D3
+~
+~
+0
+-1 7140
+S
+#7144
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7145
+D2
+~
+~
+0
+-1 7146
+D3
+~
+~
+0
+-1 7139
+S
+#7145
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7144
+D3
+~
+~
+0
+-1 7143
+S
+#7146
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7144
+D3
+~
+~
+0
+-1 7142
+S
+#7147
+ne building roof~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7149
+D2
+~
+~
+0
+-1 7148
+D3
+~
+~
+33554432
+-1 7272
+D5
+~
+~
+0
+-1 7140
+S
+#7148
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7147
+D1
+~
+~
+0
+-1 7150
+D2
+~
+~
+0
+-1 7152
+D3
+~
+~
+0
+-1 7270
+S
+#7149
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7154
+D2
+~
+~
+0
+-1 7150
+D3
+~
+~
+0
+-1 7147
+S
+#7150
+Building NE Roof~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7149
+D1
+~
+~
+0
+-1 7153
+D2
+~
+~
+0
+-1 7151
+D3
+~
+~
+0
+-1 7148
+S
+#7151
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7150
+D1
+~
+~
+0
+-1 7155
+D2
+~
+~
+0
+-1 7269
+D3
+~
+~
+0
+-1 7152
+S
+#7152
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7148
+D1
+~
+~
+0
+-1 7151
+D2
+~
+~
+33554432
+-1 7276
+D3
+~
+~
+33554432
+-1 7273
+S
+#7153
+Building NE roof~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7154
+D2
+~
+~
+0
+-1 7155
+D3
+~
+~
+0
+-1 7150
+S
+#7154
+Building NE roof~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7153
+D3
+~
+~
+0
+-1 7149
+S
+#7155
+Building NE roof~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7153
+D2
+~
+~
+33554432
+-1 7277
+D3
+~
+~
+0
+-1 7151
+S
+#7156
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7159
+D2
+~
+~
+0
+-1 7191
+D3
+~
+~
+0
+-1 7157
+S
+#7157
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7158
+D1
+~
+~
+0
+-1 7156
+D3
+~
+~
+0
+-1 7160
+S
+#7158
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7159
+D2
+~
+~
+0
+-1 7157
+D3
+~
+~
+0
+-1 7161
+S
+#7159
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D2
+~
+~
+0
+-1 7156
+D3
+~
+~
+0
+-1 7158
+S
+#7160
+Bleh~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7161
+D1
+~
+~
+0
+-1 7157
+D2
+~
+~
+0
+-1 7163
+S
+#7161
+Bleh~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7158
+D2
+~
+~
+0
+-1 7160
+S
+#7162
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#7163
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7160
+D4
+~
+~
+0
+-1 7164
+S
+#7164
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7166
+D1
+~
+~
+0
+-1 7165
+D5
+~
+~
+0
+-1 7163
+S
+#7165
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7167
+D3
+~
+~
+0
+-1 7164
+S
+#7166
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7168
+D1
+~
+~
+0
+-1 7167
+D3
+~
+~
+0
+-1 7171
+S
+#7167
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7169
+D2
+~
+~
+0
+-1 7165
+D3
+~
+~
+0
+-1 7166
+S
+#7168
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7169
+D2
+~
+~
+0
+-1 7166
+D3
+~
+~
+0
+-1 7172
+S
+#7169
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D2
+~
+~
+0
+-1 7167
+D3
+~
+~
+0
+-1 7168
+S
+#7170
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#7171
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7172
+D1
+~
+~
+0
+-1 7166
+D2
+~
+~
+0
+-1 7173
+S
+#7172
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7168
+D2
+~
+~
+0
+-1 7171
+S
+#7173
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7171
+D4
+~
+~
+0
+-1 7174
+S
+#7174
+building 2 roof~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7176
+D1
+~
+~
+0
+-1 7175
+D2
+~
+~
+33554432
+-1 7274
+D5
+~
+~
+0
+-1 7173
+S
+#7175
+building 2 roof~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7177
+D1
+~
+~
+0
+-1 7180
+D2
+~
+~
+0
+-1 7271
+D3
+~
+~
+0
+-1 7174
+S
+#7176
+building 2 roof~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7203
+D1
+~
+~
+0
+-1 7177
+D2
+~
+~
+0
+-1 7174
+S
+#7177
+building 2 roof~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7201
+D1
+~
+~
+0
+-1 7200
+D2
+~
+~
+0
+-1 7175
+D3
+~
+~
+0
+-1 7176
+S
+#7178
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7179
+S
+#7179
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#7180
+building 2 roof~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7200
+D1
+~
+~
+33554432
+-1 7273
+D2
+~
+~
+33554432
+-1 7275
+D3
+~
+~
+0
+-1 7175
+S
+#7181
+First room~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7182
+D3
+~
+~
+0
+-1 7137
+S
+#7182
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7183
+D3
+~
+~
+0
+-1 7181
+S
+#7183
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7182
+D3
+~
+~
+0
+-1 7184
+S
+#7184
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7183
+D4
+~
+~
+0
+-1 7185
+S
+#7185
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7141
+D5
+~
+~
+0
+-1 7184
+S
+#7186
+building 2~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7187
+D2
+~
+~
+0
+-1 7130
+S
+#7187
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7186
+D3
+~
+~
+0
+-1 7188
+S
+#7188
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7187
+D2
+~
+~
+0
+-1 7189
+S
+#7189
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7188
+D4
+~
+~
+0
+-1 7190
+S
+#7190
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7191
+D5
+~
+~
+0
+-1 7189
+S
+#7191
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7156
+D3
+~
+~
+0
+-1 7190
+S
+#7192
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7135
+D3
+~
+~
+0
+-1 7193
+S
+#7193
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7192
+D2
+~
+~
+0
+-1 7194
+S
+#7194
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7193
+D1
+~
+~
+0
+-1 7195
+S
+#7195
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 7194
+D4
+~
+~
+0
+-1 7196
+S
+#7196
+sw building middle~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7199
+D5
+~
+~
+0
+-1 7195
+S
+#7197
+sw building middle~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 7198
+S
+#7198
+sw building middle~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7204
+D1
+~
+~
+0
+-1 7197
+D3
+~
+~
+0
+-1 7209
+S
+#7199
+sw building middle~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7196
+D3
+~
+~
+0
+-1 7205
+S
+#7200
+building 2 roof~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7202
+D1
+~
+~
+0
+-1 7270
+D2
+~
+~
+0
+-1 7180
+D3
+~
+~
+0
+-1 7177
+S
+#7201
+building 2 roof~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7202
+D2
+~
+~
+0
+-1 7177
+D3
+~
+~
+0
+-1 7203
+S
+#7202
+building 2 roof~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+33554432
+-1 7272
+D2
+~
+~
+0
+-1 7200
+D3
+~
+~
+0
+-1 7201
+S
+#7203
+building 2 roof~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7201
+D2
+~
+~
+0
+-1 7176
+S
+#7204
+sw building middle~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7205
+D1
+~
+~
+0
+-1 7221
+D2
+~
+~
+0
+-1 7198
+D3
+~
+~
+0
+-1 7208
+S
+#7205
+sw building middle~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7199
+D2
+~
+~
+0
+-1 7204
+D3
+~
+~
+0
+-1 7207
+S
+#7206
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#7207
+sw building middle~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7205
+D2
+~
+~
+0
+-1 7209
+S
+#7208
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7207
+D1
+~
+~
+0
+-1 7204
+D2
+~
+~
+0
+-1 7209
+S
+#7209
+sw building middle~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7208
+D1
+~
+~
+0
+-1 7198
+D4
+~
+~
+0
+-1 7210
+S
+#7210
+sw building roof~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7212
+D1
+~
+~
+0
+-1 7211
+D5
+~
+~
+0
+-1 7209
+S
+#7211
+sw building roof~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7213
+D1
+~
+~
+0
+-1 7217
+D3
+~
+~
+0
+-1 7210
+S
+#7212
+sw building roof~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7214
+D1
+~
+~
+0
+-1 7213
+D2
+~
+~
+0
+-1 7210
+S
+#7213
+sw building roof~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7215
+D1
+~
+~
+0
+-1 7216
+D2
+~
+~
+0
+-1 7211
+D3
+~
+~
+0
+-1 7212
+S
+#7214
+sw building roof~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+33554432
+-1 7274
+D1
+~
+~
+0
+-1 7215
+D2
+~
+~
+0
+-1 7212
+S
+#7215
+sw building roof~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7271
+D1
+~
+~
+0
+-1 7218
+D2
+~
+~
+0
+-1 7213
+D3
+~
+~
+0
+-1 7214
+S
+#7216
+sw building roof~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7218
+D1
+~
+~
+0
+-1 7268
+D2
+~
+~
+0
+-1 7217
+D3
+~
+~
+0
+-1 7213
+S
+#7217
+sw building roof~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7216
+D1
+~
+~
+33554432
+-1 7279
+D3
+~
+~
+0
+-1 7211
+S
+#7218
+sw building roof~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+33554432
+-1 7275
+D1
+~
+~
+33554432
+-1 7278
+D2
+~
+~
+0
+-1 7216
+D3
+~
+~
+0
+-1 7215
+S
+#7219
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#7220
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#7221
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7222
+D3
+~
+~
+0
+-1 7204
+S
+#7222
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7221
+D1
+~
+~
+0
+-1 7223
+S
+#7223
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 7222
+S
+#7224
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#7225
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#7226
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#7227
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#7228
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7133
+D2
+~
+~
+0
+-1 7229
+S
+#7229
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7228
+D1
+~
+~
+0
+-1 7230
+S
+#7230
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7231
+D3
+~
+~
+0
+-1 7229
+S
+#7231
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7230
+D4
+~
+~
+0
+-1 7232
+S
+#7232
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7236
+D5
+~
+~
+0
+-1 7231
+S
+#7233
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7237
+D2
+~
+~
+0
+-1 7239
+D3
+~
+~
+0
+-1 7235
+S
+#7234
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7235
+D4
+~
+~
+0
+-1 7241
+S
+#7235
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7234
+D1
+~
+~
+0
+-1 7233
+D2
+~
+~
+0
+-1 7240
+S
+#7236
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7237
+D3
+~
+~
+0
+-1 7232
+S
+#7237
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7236
+D2
+~
+~
+0
+-1 7238
+D3
+~
+~
+0
+-1 7233
+S
+#7238
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7237
+D3
+~
+~
+0
+-1 7239
+S
+#7239
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7233
+D1
+~
+~
+0
+-1 7238
+D3
+~
+~
+0
+-1 7240
+S
+#7240
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7235
+D1
+~
+~
+0
+-1 7239
+S
+#7241
+se building roof~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+33554432
+-1 7276
+D1
+~
+~
+0
+-1 7242
+D2
+~
+~
+0
+-1 7246
+D3
+~
+~
+33554432
+-1 7278
+D5
+~
+~
+0
+-1 7234
+S
+#7242
+se building roof~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7269
+D1
+~
+~
+0
+-1 7243
+D2
+~
+~
+0
+-1 7244
+D3
+~
+~
+0
+-1 7241
+S
+#7243
+se building roof~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+33554432
+-1 7277
+D2
+~
+~
+0
+-1 7245
+D3
+~
+~
+0
+-1 7242
+S
+#7244
+se building roof~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7242
+D1
+~
+~
+0
+-1 7245
+D2
+~
+~
+0
+-1 7248
+D3
+~
+~
+0
+-1 7246
+S
+#7245
+se building roof~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7243
+D2
+~
+~
+0
+-1 7249
+D3
+~
+~
+0
+-1 7244
+S
+#7246
+se building roof~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7241
+D1
+~
+~
+0
+-1 7244
+D2
+~
+~
+0
+-1 7247
+D3
+~
+~
+0
+-1 7268
+S
+#7247
+se building roof~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7246
+D1
+~
+~
+0
+-1 7248
+D3
+~
+~
+33554432
+-1 7279
+S
+#7248
+se building roof~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7244
+D1
+~
+~
+0
+-1 7249
+D3
+~
+~
+0
+-1 7247
+S
+#7249
+se building roof~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7245
+D3
+~
+~
+0
+-1 7248
+S
+#7250
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#7251
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7252
+D3
+~
+~
+1
+666 7108
+S
+#7252
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7251
+D3
+~
+~
+0
+-1 7253
+S
+#7253
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+33554432
+-1 7108
+D1
+~
+~
+0
+-1 7252
+D4
+~
+~
+0
+-1 7254
+S
+#7254
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+33554432
+-1 7108
+D1
+~
+~
+0
+-1 7255
+D5
+~
+~
+0
+-1 7253
+S
+#7255
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7256
+D3
+~
+~
+0
+-1 7254
+S
+#7256
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7257
+D2
+~
+~
+0
+-1 7255
+D3
+~
+~
+33554432
+-1 7108
+S
+#7257
+Marine Deploy~
+~
+~
+1342242816
+0
+0 1
+D3
+~
+~
+0
+-1 7256
+S
+#7258
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7259
+D1
+~
+~
+33554432
+-1 7127
+S
+#7259
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7258
+D3
+~
+~
+0
+-1 7260
+S
+#7260
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7259
+D5
+~
+~
+0
+-1 7261
+S
+#7261
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7262
+D4
+~
+~
+0
+-1 7260
+S
+#7262
+Alien deploy~
+~
+~
+1610678272
+0
+0 1
+D3
+~
+~
+0
+-1 7261
+S
+#7263
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7117
+D3
+~
+~
+0
+-1 7264
+S
+#7264
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7265
+D1
+~
+~
+0
+-1 7263
+S
+#7265
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7266
+D2
+~
+~
+0
+-1 7264
+S
+#7266
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 7265
+D4
+~
+~
+0
+-1 7267
+S
+#7267
+Pred deploy~
+~
+~
+1208025088
+0
+0 1
+D5
+~
+~
+0
+-1 7266
+S
+#7268
+South Bridge~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+33554432
+-1 7135
+D1
+~
+~
+0
+-1 7246
+D2
+~
+~
+33554432
+-1 7105
+D3
+~
+~
+0
+-1 7216
+S
+#7269
+East Bridge~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7151
+D2
+~
+~
+0
+-1 7242
+S
+#7270
+North Bridge~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+33554432
+-1 7119
+D1
+~
+~
+0
+-1 7148
+D2
+~
+~
+33554432
+-1 7137
+D3
+~
+~
+0
+-1 7200
+S
+#7271
+West Bridge~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7175
+D2
+~
+~
+0
+-1 7215
+S
+#7272
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7147
+D3
+~
+~
+0
+-1 7202
+S
+#7273
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7152
+D3
+~
+~
+0
+-1 7180
+S
+#7274
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7174
+D2
+~
+~
+0
+-1 7214
+S
+#7275
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7180
+D2
+~
+~
+0
+-1 7218
+S
+#7276
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7152
+D2
+~
+~
+0
+-1 7241
+S
+#7277
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D0
+~
+~
+0
+-1 7155
+D2
+~
+~
+0
+-1 7243
+S
+#7278
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7241
+D3
+~
+~
+0
+-1 7218
+S
+#7279
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 7247
+D3
+~
+~
+0
+-1 7217
+S
+#7280
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#7401
+High Room~
+~
+~
+1073807364
+0
+0 1
+S
+#0
+
+
+#RESETS
+M 1 7114 1 7110
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+S
+
+
+#$

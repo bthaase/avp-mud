@@ -1,0 +1,5147 @@
+#AREA   Dropship Crash 'Mount Dread'~
+
+#VERSION 4
+
+#AUTHOR Utacha~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#7604
+Alien Queen~
+an Alien Queen~
+An Alien Queen is here.
+~
+The alien is huge. Its lower body fills most of the room.  Several smaller
+arms extend from its torso and its huge head stretches back behind it. Its
+black slimy skin glistens in the dim light.
+~
+0
+3
+Z
+1 8 8 0
+20 15 23 24 10 15
+1 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpteamgain 2 5000
+~
+|
+#7605
+Alien Praetorian~
+an Alien Praetorian~
+An Alien Praetorian is here.
+~
+The aliens slimy black skin glissen in the dim light. Its eyeless head
+swings side to side searching. Its black body is always prone for a fight.
+~
+0
+3
+Z
+1 8 8 0
+25 12 15 13 10 10
+1 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#7606
+Alien Drone~
+an Alien Drone~
+An Alien Drone is here.
+~
+The black creature's skin glissens in the dim light. It moves about intent
+on its task, avoiding the light and open areas. Its lean body moves
+quickly, its tail swinging behind it.
+~
+0
+1
+Z
+1 8 8 0
+18 10 14 10 10 15
+1 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#7607
+Marine Sniper~
+a Marine Sniper~
+A Marine Sniper is here.
+~
+The marines light frame is clothed in heavy camoflage. His weapon level, he
+scans the area for targets. He appears almost like a part of the scenery,
+like a slowly waving bush. 
+~
+0
+3
+Z
+1 8 8 1
+10 10 10 19 16 25
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> greet_prog 100~
+if race($n) == alien
+remove sniper
+wield pistol
+endif
+~
+> rand_prog 35~
+rem pistol
+wield sniper
+~
+|
+#7608
+Marine Rifleman~
+a Marine Rifleman~
+A Marine Rifleman is here.
+~
+The marines lean frame is covered in light camoflaged armor.
+His gun at the ready, he scans the area for danger.
+~
+0
+1
+Z
+1 8 8 1
+10 10 10 10 19 21
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> act_prog 'The marine laughs maniacally!'~
+say Oh Crap!
+~
+|
+#7610
+man scientist~
+a Scientist~
+A man stands here in a labcoat.
+~
+The scientists face is striken with worry. His body is hidden behind his
+labcoat.
+~
+0
+268435459
+Z
+1 8 8 1
+10 10 10 23 11 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#7611
+Lieutenant Hardgrove~
+Lieutenant Hardgrove~
+A lieutenant stands here.
+~
+The Lieutanant wears the uniform of a USCM Lieutanant. His face is covered
+in sweat as he tries to keep his men alive.
+~
+0
+268435459
+Z
+1 8 8 1
+14 10 10 24 17 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> greet_prog 100~
+if race($n) == marine
+mpecho &Cthe lieutant looks up at $n
+mpecho "The xenomorphs overwelmed us," the
+mpecho lieutenant says through gritted teeth.
+mpecho "The new stun weapons were hardly effective."
+mpecho "The captain fell in the first onslaught."
+endif
+mpsleep 4
+mpecho &G<Objective> Escort the soldiers to the extraction zone.
+~
+|
+#7612
+Infected scientist~
+Dr. Redson~
+A lone scientist is here
+~
+The scientist's face is filled with worry. His labcoat sways as he walks.
+~
+0
+268435459
+Z
+1 8 8 0
+10 10 10 18 9 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> rand_prog 10~
+mpset infected 0
+cough
+~
+> all_greet_prog 100~
+if race($n) == marine
+if variable(infected) == 0
+mpset $i 1
+say Your here!
+hug $n
+mpsleep 4
+say This is wonderful, I fled for my life...
+mpsleep 8
+frown
+say Some aliens chased me and then...
+say Then i dont remember anything till i awoke later. 
+mpsleep 12
+shrug
+say Anyhow, I finally escaped the hellish beasts.
+say But you must hurry and rescue to others!
+say Their in the crater to the west!
+mpsleep 80
+cough
+mpsleep 6
+say Urrrrrgh. I dont feel so well, guys.
+sit
+mpsleep 16
+,starts hacking, and coughs up blood. 
+mpsleep 8
+,gasps for air, clutching at his chest.
+mpsleep 8
+yell OH MY GOD. THE PAIN. IT FUCKING HURTS!
+,screams as a chestburster bursts forth!
+mpmload 7614
+mpforce chestburster hiss
+mpforce chestburster hide
+mptrans self 7800
+say Hi!
+endif
+endif
+~
+|
+#7613
+Marine Soldier~
+a USCM Soldier~
+A soldier is here.
+~
+The soldier wears the uniform of the USCM. His lean frame is covered in
+light armor. His face is covered in sweat. His gun ready he sweeps the
+area for danger.
+~
+0
+268435459
+Z
+1 8 8 1
+14 10 10 10 13 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#7614
+Alien Chestburster~
+an alien chestburster~
+An alien chestburster is here.
+~
+The tiny aliens bload soaked body twitches nervously as it darts through
+the shadows.
+~
+0
+1
+Z
+1 8 8 0
+1 1 1 3 1 5
+1 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> rand_prog 15~
+mpmload 7606
+mptrans self 7800
+say Hi!
+~
+|
+#0
+
+
+#OBJECTS
+#7604
+Queen carapace~
+Large Armored Carapace~
+Ooooh Shit.~
+~
+3
+256
+9
+1000 1000 0 1 0 0
+1 0 0
+A
+13 100
+A
+14 100
+A
+15 100
+A
+12 100
+A
+11 100
+#7605
+Praetorian carapace~
+Dark Armored Carapace~
+Ooooh Shit.~
+~
+3
+256
+9
+500 500 0 1 0 0
+1 0 0
+A
+13 80
+A
+14 35
+A
+15 100
+A
+11 75
+A
+12 50
+#7606
+Large Stalagmite~
+a Large Stalagmite~
+A Large Stalagmite is here.~
+~
+25
+0
+0
+6 3 10 489 489 0
+1000 0 0
+#7607
+Damaged Dropship~
+a Damaged Dropship~
+A Damaged Dropship has crashed here. (Use Dropship)~
+~
+4
+68157440
+0
+0 0 0 0 0 0
+1000 0 0
+> useoff_prog 100~
+if variable(found) == 0
+mpmload 7610
+mpmload 7610
+mpmload 7610
+mpmload 7610
+mpmload 7610
+mpmload 7610
+mpmload 7610
+mpmload 7610
+mpset found 1
+mpecho &w&C$n enters the wreckage. 
+mpecho &w&CA few moments later $e exits the wreckage followed by several
+mpecho &w&Cscared but obviously quite relieved scientists. 
+mpsleep 4
+mpecho &wOne of the scientists approaches you. 
+mpecho &CA Scientist says, 'Thank you, Captain Micheal's left a while ago.'
+mpecho &w&CA Scientist says, 'Dr. Redson also left, he was frightened. I 
+mpecho &w&Cdon't think he followed the Captain.' 
+mpsleep 8
+mpecho &w&GObjective: Escort the Scientists to the Rescue Zone. 
+endif
+~
+|
+#7608
+Large Rock~
+a Large Rock~
+A Large Rock is here.~
+~
+25
+0
+0
+5 3 25 365 365 0
+354 0 0
+#7609
+Medium sized Stalagmite~
+a medium sized stalagmite.~
+A Medium sized stalagmite is here.~
+~
+25
+0
+0
+6 3 8 413 413 0
+1000 0 0
+#7610
+Small Boulder~
+a Small Boulder~
+A Small Boulder is here.~
+~
+25
+0
+0
+16 3 15 600 600 0
+1450 0 0
+#0
+
+
+#ROOMS
+#7604
+Queen's Chamber~
+This cavern is covered in dried and burnt resin.  The large cavern is rocky
+and black. Two tunnels run to the north and southwest. The Cavern appears
+to have been artificially constructed.
+~
+&G This cavern is covered in slimey substances. The large cavern is smooth
+and a greenish tint. Two tunnels run to the north and southwest. The
+tunnel looks to have been artificially constructed. The walls and ceiling
+drip with slime. 
+~
+537001985
+0
+0 1
+D0
+~
+~
+0
+-1 7605
+D9
+~
+~
+0
+-1 7671
+S
+#7605
+Queen's Northern Tunnel~
+The tunnel is rocky.  much of the wall appears smooth as if constructed
+unnaturally. Much of the tunnel is covered in dried resin .   The tunnel
+widens to the south. To the north it splits off east and west. The western
+path's floor seems to drop away.
+~
+&G The tunnel is covered in a slimy film. The walls and floors seem covered
+in a greenish material. Slime drips from parts of the ceiling. The tunnel
+widens to the south. To the north it splits off east and west. The western
+floor seems to drop away.
+~
+8519681
+0
+0 1
+D2
+~
+~
+0
+-1 7604
+D6
+~
+~
+0
+-1 7656
+D7
+~
+~
+0
+-1 7606
+S
+#7606
+Queen's Northwestern Tunnel~
+The tunnel takes a sharp dive down.  There is absolutly nothing to stand
+on.  The walls are spotted with black patches of dried resin.
+~
+&G The tunnel takes a sharp dive down.  There is absolutly nothing to stand
+on.  The walls are covered in a greenish substance.  
+~
+8523777
+0
+0 1
+D5
+~
+~
+0
+-1 7607
+D8
+~
+~
+0
+-1 7605
+S
+#7607
+Tunnel C~
+The tunnel's rocky floor extends to the north and south. Dried resin dots
+the walls and ceiling. A large hole in the ceiling seems to turn to the
+southeast.   A large rock lies against the wall. A soft pile of dirt lies
+under the hole. A large stone rests up against the west wall.
+~
+&G The tunnel's floor extends to the north and south. The walls and ceiling
+are covered in greenish material. A large hole in the ceiling seems to
+turn to the southeast.  A large pool of slimy substance stands below the
+hole.  A few rope like slimy substances hang from the hole. 
+~
+9568257
+0
+0 1
+D0
+~
+~
+0
+-1 7608
+D2
+~
+~
+0
+-1 7615
+D4
+~
+~
+0
+-1 7606
+S
+#7608
+Tunnel C~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D2
+~
+~
+0
+-1 7607
+D7
+~
+~
+0
+-1 7609
+S
+#7609
+Tunnel D Northeastern Segmen~
+The tunnel floor is covered in rocks and black greenish fragments. The
+walls are made of a brownish rock. The dirt floor turns to join another
+tunnel to the southeast and continues in this tunnel to the southwest. A
+large stone rests against the north wall.
+~
+&G The tunnel is covered black greenish material. The dark floor turns to
+join another tunnel to the southeast and continues in this tunnel to the
+southwest.  Slime drips from the walls. A large column of slimy material
+stands here.
+~
+8519681
+0
+0 1
+D8
+~
+~
+0
+-1 7608
+D9
+~
+~
+0
+-1 7610
+S
+#7610
+Tunnel D~
+The tunnel curves to the north west.  Its brown rocky walls are spotted
+with patches of black greenish material. The dirt floor continues to the
+west in an almost straight path. A stone rests up against the south wall.
+A stalagmite stands in the center of the room Another stone rests up
+against the base of the stalagmite.
+~
+&g The tunnel is covered black greenish material. The dark floor turns to
+continue in this tunnel to the northwest.  Slime drips from the walls. 
+The Tunnel continues to the west in a vaguely straight path. A column of
+the hard substance stands in the center of the room. The slimy substance
+hangs down from the ceiling.
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7611
+D6
+~
+~
+0
+-1 7609
+S
+#7611
+Tunnel D~
+The brown rocky tunnel contines to the east and west.  The floor is spotted
+with dark material. The floor is covered in smooth stones A large stone
+rests against the north wall. A small set of stalagtites covers the
+ceiling. The walls are smooth to the touch. Several smaller stones suround
+the larger stone.
+~
+&G A greenish black material covers the tunnel.  The slimy material hangs
+from the ceiling in clumps. The tunnel contines to the east and west. A
+large pile of the material stands against the norhtern wall. Several
+clumps of the hard material hangs down from the ceiling.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7610
+D3
+~
+~
+0
+-1 7612
+S
+#7612
+Tunnel D~
+The tunnel continues to the southwest and east.  The path to the east
+appears almost straight. The dirt floor is dotted with rocks and fragments
+of black material. A large crack creaps along the north wall. A large
+stone rests against the southern wall. The wall is smooth to the touch.
+~
+&G The tunnel is covered black greenish material. The dark floor turns to
+continue in this tunnel to the southwest.  Slime drips from the walls. The
+Tunnel continues to the east in a vaguely straight path. Several clumps of
+the slimy substance are situated on the wall like handholds, but they are
+situated going east instead of up. A large amount of the substance pools
+against the southern wall.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7611
+D9
+~
+~
+0
+-1 7613
+S
+#7613
+Tunnel D Southwestern Segment~
+The tunnel's brown rock walls are dotted with clumps of black flaky
+material.  The dirt floor continues to the northeast and west. A large
+stone rests against the north wall. A smaller group of stones rests
+against the southern wall.
+~
+&G The tunnel is covered black greenish material. The dark floor turns to
+continue in this tunnel to the northeast.  Slime drips from the walls. The
+Tunnel continues to the west. A large clump of the slimy material rests
+against the northern and southern wall. The material hangs from the
+ceiling like stalagtites.
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7614
+D6
+~
+~
+0
+-1 7612
+S
+#7614
+Tunnel D Ramp~
+The rocky brown tunnel slopes up here.  The dirt floor continues to the
+east.  Black flaky material dots the tunnels floor. The stones here are
+mostly unbroken A large stone stands at the base of the ramp. Stalagtites
+litter the ceiling. There are many small stalagmites here. The wall feels
+smooth to the touch.
+~
+&G The walls are covered in a thick greenish black material.  The path
+continues east and slopes up to the west.  The Floors are covered in the
+slimy material. The floor is uneven with the slimy material. A large
+amount of it collects at the base of the ramp. The filth hangs from the
+ceiling, dripping with slime.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7613
+D4
+~
+~
+0
+-1 7712
+S
+#7615
+Tunnel C~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7607
+D9
+~
+~
+0
+-1 7616
+S
+#7616
+Tunnel C Intersection~
+The brown walls are pocketed with tunnels.  The only ones that extend more
+then a meter or so spread to the four secondary points of the compass. The
+dirt walls are dotted with flaky dark material.
+~
+&G The walls of the intersection are covered in a thick black substance.
+The Floor is covered in the substance, and the walls drip with it. The
+intersection holds only four tunnels each going an opposite direction or
+perpendicular to the others.
+~
+8519681
+0
+0 1
+D6
+~
+~
+0
+-1 7615
+D7
+~
+~
+0
+-1 7621
+D8
+~
+~
+0
+-1 7617
+D9
+~
+~
+0
+-1 7624
+S
+#7617
+Tunnel C~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D2
+~
+~
+0
+-1 7618
+D7
+~
+~
+0
+-1 7616
+S
+#7618
+Tunnel C~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor. A stench fills the air.
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7617
+D9
+~
+~
+0
+-1 7619
+S
+#7619
+Tunnel C~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D2
+~
+~
+0
+-1 7620
+D6
+~
+~
+0
+-1 7618
+S
+#7620
+Tunnel C End~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls. The tunnel joins a cavern to the south.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor. The tunnel joins a cavern to the south.
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7619
+D2
+~
+~
+0
+-1 7638
+S
+#7621
+Deep Cavern~
+The Brown rocky walls are spread close to ten meters apart here.  The
+ceiling is a little higher here as well. the  dirt floor is dotted in
+stalagmites and the ceiling is covered in stalagtites. The cavern
+continues to the west.  A path breaks off to the southeast.
+~
+&G The Walls are covered in a greenish black material. The Ceiling drips
+with it and the floors stalagmites are covered in it. The walls seem to
+extend to 10 meters here.  The cavern continues to the west. A path breaks
+of to the southeast.
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7622
+D8
+~
+~
+0
+-1 7616
+S
+#7622
+Deep Cavern~
+The Brown rocky walls are spread close to ten meters apart here.  The
+ceiling is a little higher here as well. the  dirt floor is dotted in
+stalagmites and the ceiling is covered in stalagtites. The Cavern
+continues east and west here.
+~
+&G  The Walls are covered in a greenish black material. The Ceiling drips
+with it and the floors stalagmites are covered in it. The walls seem to
+extend to 10 meters here.  The cavern continues to the east and west.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7621
+D3
+~
+~
+0
+-1 7623
+S
+#7623
+Deep Cavern End~
+The Brown rocky walls are spread close to ten meters apart here.  The
+ceiling is a little higher here as well. the  dirt floor is dotted in
+stalagmites and the ceiling is covered in stalagtites. The Cavern comes to
+an end here. A several large sized stalagmites stand in the middle of the
+room.
+~
+&G The Walls are covered in a greenish black material. The Ceiling drips
+with it and the floors stalagmites are covered in it. The walls seem to
+extend to 10 meters here.  The cavern seems to end here. A several large
+sized stalagmites stand in the middle of the room. 
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7622
+S
+#7624
+A Dark Cavern~
+The rocky walls are spread to almost 10 meters. Stalagmites pepper the
+floor and stalagtites hang from the ceiling. The cavern continues to the
+west.  A path breaks of to the northeast.
+~
+&G The Walls are covered in a greenish black material. The Ceiling drips
+with it and the floors stalagmites are covered in it. The walls seem to
+extend to 10 meters here.  The cavern continues to the west. A path breaks
+of to the northeast.
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7625
+D6
+~
+~
+0
+-1 7616
+S
+#7625
+A Dark Cavern End~
+The rocky walls are spread to almost 10 meters. Stalagmites pepper the
+floor and stalagtites hang from the ceiling. The cavern ends here but
+continues to the east.  A small opening too small to get through without
+trouble is situated in the southwestern wall.
+~
+&G The Walls are covered in a greenish black material. The Ceiling drips
+with it and the floors stalagmites are covered in it. The walls seem to
+extend to 10 meters here.  The cavern ends here but continues to the east.
+ A small openning too small to get through without trouble is situated in
+the southwestern wall.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7624
+D9
+~
+~
+33554432
+-1 7626
+S
+#7626
+Small Tunnel~
+The walls and ceiling are cramped.  the floor is covered in sharp stones.
+The tunnel opens up to the northeast and continues to the north and south.
+~
+&G The cramped tunnel is covered in a slick greenish material.  The slick
+floor continues to the north and south.  The tunnel opens up to the
+northeast. 
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7627
+D2
+~
+~
+0
+-1 7631
+D6
+~
+~
+33554432
+-1 7625
+S
+#7627
+Small Tunnel~
+The cramped tunnel's ceiling holds a hole large enough for a someone to
+climb into.  The rocky walls are close together . the dirt floor is
+litered with sharp rocks. 
+~
+&G The low lying ceiling opens into a tunnel going up.  The walls are slick
+with a dark substance. the cramped tunnel continues to the south. The
+floor is covered in black material and a stench rises from it.
+~
+8519681
+0
+0 1
+D2
+~
+~
+0
+-1 7626
+D4
+~
+~
+0
+-1 7628
+S
+#7628
+Small Tunnel~
+The small cramped tunnel leads up and down. The walls are made of a brown
+rock. There are plenty of footholds in the rock.
+~
+&G the Walls are covered in a slick black green substance.  Footholds seem
+too grow out of the substance as if placed there. A stench eminates from
+the walls.  
+~
+8519681
+0
+0 1
+D4
+~
+~
+0
+-1 7629
+D5
+~
+~
+0
+-1 7627
+D9
+~
+~
+33554432
+-1 7689
+S
+#7629
+An Entrance to a Small Tunnel~
+The Small Tunnel opens up to the northwest.  The walls are of a brown rock.
+The tunnel continues down into the caverns below. A foul stench comes from
+below. 
+~
+&G The Walls are covered in a greenish black substance. the tunnel
+continues down into the caverns. The tunnel opens up to the northwest. A
+foul smell mixes with the scent of grass and wind here.
+~
+8519681
+0
+0 1
+D5
+~
+~
+0
+-1 7628
+D7
+~
+~
+33554432
+-1 7630
+S
+#7630
+Patch of Dirt~
+The area is almost a crevice. The dirt floor is interupted a little by
+patches of grass. The mountain's walls are smooth to the touch. Rocks lean
+against the walls. A unnavigable hole in the southeastern wall. Large
+stones guard the entrance to the hole. Wind is almost nonexistant here. A
+shrub grows near the north wall.
+~
+bug
+~
+0
+0
+0 1
+D3
+~
+~
+0
+-1 7738
+D8
+~
+~
+33554432
+-1 7629
+S
+#7631
+A Small Tunnel~
+The Tunnel is cramped.  The brown rocky tunnel opens up to the southeast. 
+The rocky floor continues to the north.
+~
+&G The cramped tunnel is covered in a slick substance.  The floor is
+covered in the black material and a repulsive smell rises from it. The
+wall opens up to the southeast.  The tunnel continues to the north.
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7626
+D8
+~
+~
+33554432
+-1 7632
+S
+#7632
+Tunnel E~
+The rocky tunnel snakes its way south. A hole in the northwestern wall
+allows little to pass. Rocks litter the ground. stalagtites hang from the
+ceiling.  The tunnel continues to the northeast . 
+~
+&G The tunnel snakes its way south. A hole in the northwestern wall allows
+little to pass. rocks litter the ground. stalagtites hang from the ceiling
+covered in a dark green material. the material covers the floor ceiling
+and walls. The tunnel continues to the northeast.
+~
+8519681
+0
+0 1
+D6
+~
+~
+0
+-1 7633
+D7
+~
+~
+33554432
+-1 7631
+D8
+~
+~
+0
+-1 7634
+S
+#7633
+Tunnel E~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls. There is a large pile of soft dirt below the hole.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor. A heavy stench fills the air. A pool of slimy liquid stands under
+the hole.
+~
+9568257
+0
+0 1
+D4
+~
+~
+0
+-1 7676
+D9
+~
+~
+0
+-1 7632
+S
+#7634
+Tunnel E Intersection~
+The Tunnel is taller and wider here. The rocky floor splits into three
+directions, east northwest and southwest. Stalagtites hang from the
+ceiling. 
+~
+&G The walls are covered in a greenish material. the tunnel is filled with
+it making the area cramped. The floor and ceiling drip and pool with it.
+The tunnel splits off in three directions though its hard to tell where
+they go.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7638
+D7
+~
+~
+0
+-1 7632
+D9
+~
+~
+0
+-1 7635
+S
+#7635
+Tunnel E~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7636
+D6
+~
+~
+0
+-1 7634
+S
+#7636
+Tunnel E Ramp~
+The dirt covered floor rises to the west. The walls are a rocky brown. Dust
+fills the air. Rocks litter the ground . A large rock stands off to the
+side. A large stalagmite stands in the center. A smaller stalagmite stands
+near the ramp. 
+~
+&G The slick covered path rises to the west. Black material hangs from the
+ceiling. The tunnel is covered in the green filth. A heavy stench fills
+the foul air. A large slime covered stalagmite stands in the center. A
+smaller filth covered stalagmite stands near the ramp. A large black rock
+stands off to the side.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7635
+D4
+~
+~
+0
+-1 7637
+S
+#7637
+Tunnel E Entrance~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls. The ground slopes down here.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor. The ground slopes down here.
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7670
+D5
+~
+~
+0
+-1 7636
+S
+#7638
+Cavern Entrance~
+The rocky path continues to the west and southeast . The walls are a brown
+hue. the air is filled with dust.  The tunnel opens into a cavern, filled
+with stalagmites and stalagtites. Another tunnel joins to the north as
+well. 
+~
+&G The cavern is covered in a thick greenish black substance.  It hangs
+from the ceilings and clings to the walls. The stalagmites are covered in
+it and it hangs from the stalagtites. The cavern continues to the
+southeast and joins a tunnel to the west. Another tunnel joins to the
+north as well.
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7620
+D3
+~
+~
+0
+-1 7634
+D8
+~
+~
+0
+-1 7639
+S
+#7639
+Cavern~
+The Cavern is fairly large though still does not exceed 10m in width.
+Stalagtites and stalagmites pepper the area. Rocks and dirt make up the
+floor. A hole in the northeastern wall seems almost to have been dug or
+cut out. The cavern continues to the south and northwest.
+~
+&G The Cavern is fairly large though still does not exceed 10m in width.
+Stalagtites and stalagmites pepper the area covered in a slick material.
+The floor is covered in the same material. A hole in the northeastern wall
+can be barely madeout. The cavern continues to the south and northwest.
+~
+8519681
+0
+0 1
+D2
+~
+~
+0
+-1 7640
+D6
+~
+~
+33554432
+-1 7641
+D7
+~
+~
+0
+-1 7638
+S
+#7640
+Cavern End~
+The Cavern is wide, ending in a wall of stone to the south. The cavern
+floor is covered in stones and pepered with stalagmites. The ceiling is
+dotted with stalagtites . A large stalagmite stands in the center. A large
+rock stands off to the side. 
+~
+&G  The cavern is wide, ending in a wall of black material. The cavern
+floor is covered in the slimy substance. Greenish black material covered
+stalagmites and stalagtites pepper the cavern. The cavern continues to the
+north. A large black rock stands off to the side. A large slimy stalagmite
+stands in the center.
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7639
+S
+#7641
+Entrance to Tunnel F~
+The tunnel slopes up to the northwest. On the southwest slope is a hole
+barely below navigable. The tunnel is covered in dirt and brown rock. A
+large rock rests against the northern wall. Several pebbles rest near the
+entrance to the hole. A small stalagmite stands to the west.
+~
+&G The tunnel slopes up to the northwest. On the southwest slope is a hole
+barely below navigable. The tunnel is covered in a slick black material. A
+thick column of black material standds to the north . A large pile of
+slimy material to the west. Several rope like strands hang from the
+ceiling.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7643
+D4
+~
+~
+0
+-1 7642
+D9
+~
+~
+33554432
+-1 7639
+S
+#7642
+Tunnel A Eastern Exit~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls. The floor slopes down here.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor. The floor slopes down here.
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7666
+D5
+~
+~
+0
+-1 7641
+S
+#7643
+Tunnel F~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7641
+D6
+~
+~
+0
+-1 7644
+S
+#7644
+Tunnel F Intersection~
+The tunnel is fairly vast here. the tunnel walls are made of a brown rock.
+The floor is covered in dirt and rocks. The Tunnel splits off to the
+northeast heading up. A cavern opens up to the northwest. The tunnel
+continues to the southwest and southeast.
+~
+&G The tunnel is fairly vast here. the tunnel walls are covered in a dark
+greenish material. The floor is covered the same slimy substance. The
+Tunnel splits off to the northeast heading up. A cavern opens up to the
+northwest. The tunnel continues to the southwest and southeast.
+~
+8519681
+0
+0 1
+D6
+~
+~
+0
+-1 7645
+D7
+~
+~
+0
+-1 7647
+D8
+~
+~
+0
+-1 7649
+D9
+~
+~
+0
+-1 7643
+S
+#7645
+Tunnel F Ramp~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls. The ground slopes up here.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor. The ground slopes up here.
+~
+8519681
+0
+0 1
+D4
+~
+~
+0
+-1 7646
+D9
+~
+~
+0
+-1 7644
+S
+#7646
+Northeastern Tunnel F Entrance~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7664
+D5
+~
+~
+0
+-1 7645
+S
+#7647
+A Small Cavern~
+The Cavern is barely 5m in width.  Its ceiling is a decent height. 
+Stalgtites hang from the ceiling out of reach. Stalagmites litter the
+ground. The dirt floor is dotted with rocks. The cavern continues to the
+west. the cavern joins a tunnel to the southeast.
+~
+&G The Cavern is farely small.  Its black ceiling hangs low.  A slimy
+material covers everything.  Stalagmites dot the cavern floor underneath a
+blanket of black. The cavern continues to the west. The cavern joins a
+tunnel to the southeast.
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7648
+D8
+~
+~
+0
+-1 7644
+S
+#7648
+A Small Cavern~
+The cavern ends to the west against a rocky wall. The cavern, though small
+in size supports several stalagtites and stalagmites. The floor is covered
+in dirt and rocks. The cavern continues to the east . A large stalagmite
+stands in the center of the room, a stalatite reaching down toward it.
+~
+&G the Cavern ends here against a wall of slimy black material. The Ceiling
+drapes low with the black substance. The floor is covered in the dark
+substance. The cavern continues to the east. A large slime coverd
+stalagmite stands in the center of the room, a black stalatite reaching
+down toward it.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7647
+S
+#7649
+Tunnel F~
+The tunnel is covered in brown stones. They collect along the ground. The
+brown walls are smooth to the touch. Large stones stand on either side of
+the path. The stale air is filled with the scent of dirt. Stalagmites and
+stalagtites dot the tunnel.
+~
+&G The tunnel is covered in a greenish black substance.  The substance
+appears slimy but strong. The substance hangs from the ceiling like ropes
+or tendrils. It piles in columns along the floor reaching to the ceiling.
+The walls are dotted with the material, as if placed there as handholds.
+The air reeks of the substance's foul smell.
+~
+8519681
+0
+0 1
+D6
+~
+~
+0
+-1 7651
+D7
+~
+~
+0
+-1 7644
+D8
+~
+~
+0
+-1 7650
+S
+#7650
+A Shallow Cavern~
+The cavern isnt very deep at all.  Its brown rocky walls only go for about
+8m. There are hardly any stalagmites or stalagtites. The cavern joins a
+tunnel to the northwest. A large rock rests against the east wall. A few
+rocks lie against the larger rock.
+~
+&G The cavern isnt very deep at all.  Its black slick walls only go for
+about 8m. The dark floor appears wavy.  The cavern joins a tunnel to the
+nrorthwest.   A large column of hard black material stands near the east
+wall. A spire of the material hangs securely from the ceiling.
+~
+8519681
+0
+0 1
+D7
+~
+~
+0
+-1 7649
+S
+#7651
+Tunnel F~
+The tunnel is covered in brown stones. They collect along the ground. The
+brown walls are smooth to the touch. Large stones stand on either side of
+the path. The stale air is filled with the scent of dirt. Stalagmites and
+stalagtites dot the tunnel.
+~
+&G The tunnel is covered in a greenish black substance.  The substance
+appears slimy but strong. The substance hangs from the ceiling like ropes
+or tendrils. It piles in columns along the floor reaching to the ceiling.
+The walls are dotted with the material, as if placed there as handholds.
+The air reeks of the substance's foul smell.
+~
+8519681
+0
+0 1
+D6
+~
+~
+0
+-1 7652
+D9
+~
+~
+0
+-1 7649
+S
+#7652
+Tunnel F~
+The tunnel is covered in brown stones. They collect along the ground. The
+brown walls are smooth to the touch. Large stones stand on either side of
+the path. The stale air is filled with the scent of dirt. Stalagmites and
+stalagtites dot the tunnel.
+~
+&G The tunnel is covered in a greenish black substance.  The substance
+appears slimy but strong. The substance hangs from the ceiling like ropes
+or tendrils. It piles in columns along the floor reaching to the ceiling.
+The walls are dotted with the material, as if placed there as handholds.
+The air reeks of the substance's foul smell.
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7653
+D9
+~
+~
+0
+-1 7651
+S
+#7653
+Tunnel F~
+The stone tunnel continues to the south and northwest. the dirt floor is
+littered with rocks.  Large stones lean against the walls. Stalagtites
+hang down low as stalagmites come up to meet there cone like forms. The
+walls here are smooth to the touch. 
+~
+&G The Black slime covered tunnel continues to the south and northwest. 
+The Black substance drips like goo from the ceiling and litters the
+ground.  The air is filled with it's stench. Pilars of filth hang from the
+ceiling and reach to the roof. Walls of the material stand like open gates
+on either side. 
+~
+8519681
+0
+0 1
+D2
+~
+~
+0
+-1 7652
+D7
+~
+~
+0
+-1 7654
+S
+#7654
+Tunnel F~
+The stone tunnel continues to the west and southeast. the dirt floor is
+littered with rocks.  A large stone stands near the middle of the tunnel.
+Several smaller rocks stand near the edges of the tunnel.  The stale air
+is full of dust.  The ceiling is covered in small stalagtites 
+~
+&G The Black slime covered tunnel continues to the southeast and west.  The
+Black substance drips like goo from the ceiling and litters the ground. 
+The air is filled with it's stench. A large slime covered stone stands
+near the center of the room. Slimy tendril like material hangs menacingly
+from the ceiling. 
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7655
+D8
+~
+~
+0
+-1 7653
+S
+#7655
+End of Tunnel F~
+The tunnel comes to an abrupt end here.  Its dirt covered floor stops
+against it's stone walls.  Stones litter the ground.  Several large sharp
+rocks stand below the gaping hole in the rock ceiling.
+~
+&G The Black slime covered tunnel comes to an abrupt end here.  The Black
+substance drips like goo from the ceiling. The smooth floor is littered
+with the substance.   Several large slimy sharp rocks stand below the
+gaping hole in the black ceiling.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7654
+D4
+~
+~
+0
+-1 7665
+S
+#7656
+Northern Entrance to Tunnel G~
+The dirt floor slopes down here. The stone littered floor continues to the
+southwest. The brown walls are speckled with patches of dried black
+material. 
+~
+&G The Walls are covered in a slimy greenish material. The black floor
+slopes down here. The green material covered floor continues to the
+southwest. Blackish material litters the ground
+~
+8519681
+0
+0 1
+D5
+~
+~
+0
+-1 7657
+D9
+~
+~
+0
+-1 7605
+S
+#7657
+Northern Tunnel G Exit~
+The stone covered ground slopes up here.  The stone walls are pitted with
+the beginnings of new tunnels.  the tunnel continues to the northeast.
+Near the ramp stands a large stone. Several smaller smooth stones suround
+it. Small Stalagtites hang from the ceiling. A large stalagmite stands
+near the  south with a broken stalagtite hanging securely above it.
+~
+&G The slime covered ground slopes up here.  The Black material covered
+walls close in and seem to hide unseen dangers.  The tunnel continues to
+the northeast .  A large slime covered stone stands near the ramp. 
+Columns of black material suround it's base.  A large column of the
+greenish black material stands to the south becoming incredibly thin
+toward the upper middle.
+~
+8519681
+0
+0 1
+D4
+~
+~
+0
+-1 7656
+D6
+~
+~
+0
+-1 7658
+S
+#7658
+Tunnel G~
+The stone walls are pitted with the beginnings of new tunnels.  the tunnel
+continues to the southwest and southeast.  Stones litter the ground.  A
+large stone rests against the north wall. Smaller smooth stones lie at its
+base. Debris from the new tunnels fills the passage.  A small pile of the
+smooth stones collect to the east. 
+~
+&G The slime covered ground is dotted with piles of slimy green material. 
+The Black material covered walls close in and seem to hide unseen dangers.
+ The tunnel continues to the southeast and southwest. A large wall of
+material comes from the north wall, appearing like a huge stone covered in
+tar.  Several strands of rope like slime covered material hangs from the
+ceiling. A small pile of the slime stands to the east.
+~
+8519681
+0
+0 1
+D8
+~
+~
+0
+-1 7659
+D9
+~
+~
+0
+-1 7657
+S
+#7659
+Tunnel G~
+The stone walls are pitted with the beginnings of new tunnels.  Stones
+litter the ground.  Large  rocks litter the area surrounded in turn by
+smaller rocks and them by  pebbles of different sizes.  Small stalagmites
+and stalagtites dot the ceiling and floors.
+~
+&G  The slime covered ground is dotted with piles of slimy green material.
+The Black material covered walls close in and seem to hide unseen dangers.
+ Strands of slimy material hangs from the ceiling.  Filth fills every
+corner and stench rises from the floors and walls.
+~
+8519681
+0
+0 1
+D2
+~
+~
+0
+-1 7660
+D7
+~
+~
+0
+-1 7658
+S
+#7660
+Tunnel G~
+The stone walls are pitted with the beginnings of new tunnels.  Stones
+litter the ground.  Large  rocks litter the area surrounded in turn by
+smaller rocks and them by  pebbles of different sizes.  Small stalagmites
+and stalagtites dot the ceiling and floors.
+~
+&G  The slime covered ground is dotted with piles of slimy green material.
+The Black material covered walls close in and seem to hide unseen dangers.
+ Strands of slimy material hangs from the ceiling.  Filth fills every
+corner and stench rises from the floors and walls.
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7659
+D9
+~
+~
+0
+-1 7661
+S
+#7661
+Tunnel G~
+The stone walls are pitted with the beginnings of new tunnels.  Stones
+litter the ground.  Large  rocks litter the area surrounded in turn by
+smaller rocks and them by  pebbles of different sizes.  Small stalagmites
+and stalagtites dot the ceiling and floors.
+~
+&G  The slime covered ground is dotted with piles of slimy green material.
+The Black material covered walls close in and seem to hide unseen dangers.
+ Strands of slimy material hangs from the ceiling.  Filth fills every
+corner and stench rises from the floors and walls.
+~
+8519681
+0
+0 1
+D2
+~
+~
+0
+-1 7662
+D6
+~
+~
+0
+-1 7660
+S
+#7662
+Tunnel G~
+The stone walls are pitted with the beginnings of new tunnels.  Stones
+litter the ground.  Large  rocks litter the area surrounded in turn by
+smaller rocks and them by  pebbles of different sizes.  Small stalagmites
+and stalagtites dot the ceiling and floors. The ground slopes up here.
+~
+&G  The slime covered ground is dotted with piles of slimy green material.
+The Black material covered walls close in and seem to hide unseen dangers.
+ Strands of slimy material hangs from the ceiling.  Filth fills every
+corner and stench rises from the floors and walls. The ground slopes up
+here. Several clumps of material dots the ramp up like handholds.
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7661
+D4
+~
+~
+0
+-1 7663
+S
+#7663
+Entrance to Tunnel G~
+The stone walls are pitted with the beginnings of new tunnels.  Stones
+litter the ground.  Large  rocks litter the area surrounded in turn by
+smaller rocks and them by  pebbles of different sizes.  Small stalagmites
+and stalagtites dot the ceiling and floors. The ground slopes down here.
+~
+&G  The slime covered ground is dotted with piles of slimy green material.
+The Black material covered walls close in and seem to hide unseen dangers.
+ Strands of slimy material hangs from the ceiling.  Filth fills every
+corner and stench rises from the floors and walls. The ground slopes down 
+ here. Several clumps of material dots the ramp down like handholds.
+~
+8519681
+0
+0 1
+D5
+~
+~
+0
+-1 7662
+D8
+~
+~
+0
+-1 7664
+S
+#7664
+Small Intersection~
+The Walls here are curved and split into several directions.  The wall to
+the north is all but gone, giving way to a tunnel below. Two tunnels slope
+down from here, one to the south the other to the north. The dirt floor is
+littered with rocks.
+~
+&G The Walls here are curved and split into several directions.  The wall
+to the north is all but gone, giving way to a tunnel below. Two tunnels
+slope down from here, one to the south the other to the north. The walls
+and floor are covered in a thick slimy greenish black substance.
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7665
+D2
+~
+~
+0
+-1 7646
+D7
+~
+~
+0
+-1 7663
+S
+#7665
+A Drop~
+Their is no floor here at all.  it appears that this used to be where a
+wall divided the southern intersection and the tunnel below. 
+~
+&G wall divided the southern intersection and the tunnel below. Slime
+covered black material hangs over everything. 
+~
+8523777
+0
+0 1
+D2
+~
+~
+0
+-1 7664
+D5
+~
+~
+0
+-1 7655
+S
+#7666
+Tunnel A~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7642
+D6
+~
+~
+0
+-1 7674
+D9
+~
+~
+0
+-1 7667
+S
+#7667
+Tunnel A~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D6
+~
+~
+0
+-1 7666
+D7
+~
+~
+0
+-1 7669
+D8
+~
+~
+0
+-1 7668
+S
+#7668
+A Short Tunnel~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls. The tunnel here barely goes a few meters.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor. The tunnel here barely goes a few meters.
+~
+8519681
+0
+0 1
+D7
+~
+~
+0
+-1 7667
+S
+#7669
+Tunnel A~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7670
+D8
+~
+~
+0
+-1 7667
+S
+#7670
+Tunnel A~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7669
+D2
+~
+~
+0
+-1 7637
+D7
+~
+~
+0
+-1 7677
+S
+#7671
+Queens Southern Tunnel~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D2
+~
+~
+0
+-1 7672
+D6
+~
+~
+0
+-1 7604
+S
+#7672
+Queens Southern Tunnel~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls. A hole in the southeast wall appears just below
+navigable. 
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor. A hole in the southeast wall appears just below navigable.
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7671
+D8
+~
+~
+33554432
+-1 7673
+D9
+~
+~
+0
+-1 7675
+S
+#7673
+Tunnel A Cavern~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls. The cavern has a fairly large width.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor. The cavern has a fairly large width.
+~
+8519681
+0
+0 1
+D7
+~
+~
+33554432
+-1 7672
+D9
+~
+~
+0
+-1 7674
+S
+#7674
+Tunnel A Cavern~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls. The cavern has a fairly large width.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor. The cavern has a fairly large width.
+~
+8519681
+0
+0 1
+D6
+~
+~
+0
+-1 7673
+D9
+~
+~
+0
+-1 7666
+S
+#7675
+Northern Tunnel A~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7676
+D6
+~
+~
+0
+-1 7672
+S
+#7676
+Northern Tunnel A Drop~
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls. The floor is almost non existant here. Several stones
+come close to falling into the hole.
+~
+&G Veils of dark materiel hang from the ceiling. Spires of slimy material
+dot the edges of the path. Rope like material hangs from the ceiling
+spreading out to the walls and floors. Clumps of the material dot the
+walls. The floor is almost non existant here.
+~
+8523777
+0
+0 1
+D1
+~
+~
+0
+-1 7675
+D3
+~
+~
+0
+-1 7688
+D5
+~
+~
+0
+-1 7633
+S
+#7677
+Tunnel A~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7678
+D6
+~
+~
+0
+-1 7687
+D8
+~
+~
+0
+-1 7670
+S
+#7678
+Tunnel A~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7677
+D9
+~
+~
+0
+-1 7679
+S
+#7679
+Tunnel A~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7680
+D6
+~
+~
+0
+-1 7678
+S
+#7680
+Tunnel A~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7679
+D3
+~
+~
+0
+-1 7690
+D9
+~
+~
+0
+-1 7681
+S
+#7681
+Tunnel A~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D6
+~
+~
+0
+-1 7680
+D7
+~
+~
+0
+-1 7682
+S
+#7682
+Tunnel A~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7690
+D3
+~
+~
+0
+-1 7683
+D8
+~
+~
+0
+-1 7681
+S
+#7683
+Tunnel A~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7682
+D9
+~
+~
+0
+-1 7684
+S
+#7684
+Tunnel A~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D6
+~
+~
+0
+-1 7683
+D7
+~
+~
+0
+-1 7685
+S
+#7685
+Tunnel A~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7686
+D8
+~
+~
+0
+-1 7684
+S
+#7686
+Entrance to the Caverns~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls. Light poors in from the western opening.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor. Light poors in from the western opening.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7685
+D3
+~
+~
+0
+-1 7714
+S
+#7687
+Northern Tunnel A~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7688
+D7
+~
+~
+0
+-1 7689
+D9
+~
+~
+0
+-1 7677
+S
+#7688
+Northern Tunnel A~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7676
+D3
+~
+~
+0
+-1 7687
+S
+#7689
+Northern Tunnel A End~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls. A hole in the northeast wall appears just below
+navigable.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor. A hole in the northeast wall appears just below navigable.
+~
+8519681
+0
+0 1
+D6
+~
+~
+33554432
+-1 7628
+D8
+~
+~
+0
+-1 7687
+S
+#7690
+Tunnel A Drop~
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls. The floor is almost non existant here. Several stones
+come close to falling into the hole.
+~
+&G Veils of dark materiel hang from the ceiling. Spires of slimy material
+dot the edges of the path. Rope like material hangs from the ceiling
+spreading out to the walls and floors. Clumps of the material dot the
+walls. The floor is almost non existant here.
+~
+8523777
+0
+0 1
+D1
+~
+~
+0
+-1 7680
+D3
+~
+~
+0
+-1 7682
+D5
+~
+~
+0
+-1 7691
+S
+#7691
+Lower Tunnel B~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls. A large gaping hole is carved into the ceiling here.
+Several sharp stalagmites stand below the hole.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor. A large gaping hole is carved into the ceiling here. Several sharp
+slimy stalagmites stand below the hole.
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7692
+D4
+~
+~
+0
+-1 7690
+D6
+~
+~
+0
+-1 7693
+S
+#7692
+Lower Tunnel B~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7691
+S
+#7693
+Lower Tunnel B~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls. The ground rises up here.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor. The dark floor rises up here. 
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7694
+D4
+~
+~
+0
+-1 7698
+D9
+~
+~
+0
+-1 7691
+S
+#7694
+Lower Tunnel B~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7695
+D2
+~
+~
+0
+-1 7693
+S
+#7695
+Lower Tunnel B~
+The Tunnel here is littered with large jagged rocks. The dirt path
+continues south and northeast. A large gaping hole is in the ceiling
+situated above many of the jagged rocks. A smoother set of stones leans
+against the west wall. A stalagtite has been broken near the lip of the
+hole.
+~
+&G Several large jagged rocks are only partly covered in the filth. Their
+jagged points are situated beneath the large gaping hole in the ceiling. A
+large amount of the slimy material hangs down from the ceiling near the
+hole. The greenish material hangs against the east wall hiding unseen
+danger.
+~
+8519681
+0
+0 1
+D2
+~
+~
+0
+-1 7694
+D4
+~
+~
+0
+-1 7709
+D6
+~
+~
+0
+-1 7696
+S
+#7696
+Lower Tunnel B~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7697
+D9
+~
+~
+0
+-1 7695
+S
+#7697
+Lower Tunnel B~
+The brown tunnel's dirt floor is covered in smooth stones. Several
+stalagtites spot the ceiling. A few stalagmites stand near the walls. The
+walls are smooth to the touch but appear almost rough. There are a few
+cracks in the walls.
+~
+&G The Greenish black tunnel's dark floor is covered in slimy material. 
+Veils of dark materiel hang from the ceiling. Spires of slimy material dot
+the edges of the path. Rope like material hangs from the ceiling spreading
+out to the walls and floors. Clumps of the material dot the walls and
+floor.
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7696
+S
+#7698
+Entrance to Lower Tunnel B~
+The dirt floor slopes down here. rocks litter the ground. The tunnel
+continues to the west.  The rocks here are smooth and unbroken. Two small
+cracks line the east wall traveling from the lower level to the ceiling. A
+large rock stands at the top of the ramp. A lone stalagtite hangs from the
+ceiling.
+~
+&G The Slime covered floor slopes down here. The Black material covered
+tunnel continues west.  The material clumps into handholds down  the ramp.
+The material steepens the ramp to a sharper slope. The greenish material
+drapes down from the ceiling obscureing what might lie beneath. The walls
+are coverd in the material and slime drips from a lone stalagtite.
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7699
+D5
+~
+~
+0
+-1 7693
+S
+#7699
+Tunnel B~
+The rocky tunnel continues to the east and northwest. dust floats in the
+air.  The stones are smooth and unbroken. The stalagtites hang down low
+here. The larger stones are located closer to the edges of the paths. A
+small crack interupts the northern wall. A large stone rests against the
+south wall.
+~
+&G The greenish slime covered tunnel continues to the east and northwest. 
+A stench fills the tunnel. The material hangs from the ceiling and covers
+the walls.  The black material is piled on the floors.  The folds of the
+material seem to hide untold dangers. The material seems to be strong
+though slick.
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7698
+D7
+~
+~
+0
+-1 7700
+S
+#7700
+Tunnel B~
+The rocky tunnel continues to the north and southeast. dust floats in the
+air.  The rocks are smooth and unbroken. Stalagmites line the tunnels and
+stalagtites hang from the ceiling. A very tiny amount of light filters in
+from the north. There area a few cracks on the northern side of the
+tunnel.
+~
+&G The greenish black material covered tunnel continues to the north and
+southeast.  A heavy stench fills the air. Dark material hangs from the
+ceiling.  The same material covers the floor, piling in towers of filth.
+The black substance reflects a small amount of light from the north. The
+stalagmites are made even taller by the black material.
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7701
+D8
+~
+~
+0
+-1 7699
+S
+#7701
+Tunnel B~
+The rock littered tunnel continues to the northwest and south. Dust fills
+the air here.  pale light enters in from the northwest. There are a few
+cracks in walls and ceiling. A few large rocks litter the tunnel. The
+walls are a brownish hue. Many of the rocks here apear freshly broken.
+~
+&GThe Slimy material covered tunnel continues to the northwest and south. 
+A stench fills the air.  Thick black material hangs from the ceiling and
+collects on the ground. A small amount of light filters in from the
+northwest. The black material appears to hide unknown dangers. The walls
+are covered in greenish material.
+~
+8519681
+0
+0 1
+D2
+~
+~
+0
+-1 7700
+D7
+~
+~
+0
+-1 7702
+S
+#7702
+Entrance to Tunnel B~
+The rocky path splits off into three directions here. To the nrotheast and
+southeast the path continues into a tunnel. To the southwest it appears as
+if the ceilings and walls have been destroyed leaving the area bare to the
+elements. Light filters in from the northeast.
+~
+&G The Greenish black path splits off into three directions here. To the
+northeast and southeast the path continues into a tunnel.  To the
+southwest it appears as if the ceilings and walls have been destroyed
+leaving the area bare to the elements. The Tunnel is covered in a greenish
+black material. Light filters in from the northeast.
+~
+8519681
+0
+0 1
+D6
+~
+~
+0
+-1 7706
+D8
+~
+~
+0
+-1 7701
+D9
+~
+~
+0
+-1 7703
+S
+#7703
+Bottom of slope~
+The ground here is dirt littered with rocks. The wreckage to the west seems
+to have damaged the tunnels to the northeast and southeast. The eastern
+slope is sloped just enough that you cant climb it. Rocks litter the
+entrances to the tunnels. Stones of varoius sizes lay on the slopes of the
+crater. The sky can be seen clearly out of the crater.
+~
+This Shouldnt Be Hived Report This
+~
+1048576
+0
+0 1
+D3
+~
+~
+0
+-1 7704
+D4
+~
+~
+0
+-1 7713
+D6
+~
+~
+0
+-1 7702
+D8
+~
+~
+0
+-1 7705
+S
+#7704
+At the wreckage~
+A dropship has crashed here.  rocks and boulders suround the wreckage. A
+path leads off to the east. The sky can bee seen clearly out of the newly
+formed crater.  The walls surrounding the wreckage appear to steap to
+climb. Light reflects clearly off of the dropship. The wreckage appears to
+be that of an old converted Cheyene dropship.
+~
+IF THIS IS HIVED REPORT AS BUG
+Report this As a Bug
+~
+16777216
+0
+0 1
+D1
+~
+~
+0
+-1 7703
+S
+#7705
+Broken Tunnel~
+The Tunnel appears broken and short. The walls are cracked and pitted. The
+dirt floor is covered in rocks and boulders. A wreckage can be seen to the
+northwest. The ceiling of the tunnel appears to be close to caving in. The
+back wall appears to be the result of a recent cave in.
+~
+&G The tunnel appears broken and short.  The walls toward the exterior are
+cracked and broken.  The slimy material covered floor is dotted with wall
+fragments covered in dried brittle material. The ceiling appears to be
+ready to cave in if not for the rope like tendrils fo the black substance.
+The back wall seems to be the result of a recent cave in, some of the
+fallen rocks display their brown undersides. Black material hangs from the
+damaged ceiling.
+~
+8519681
+0
+0 1
+D7
+~
+~
+0
+-1 7703
+S
+#7706
+Northern Tunnel B~
+The rocky ground continues to the east and southwest.  Dust fills the air. 
+The rock littered tunnel continues to the east and southwest. Dust fills 
+the air here.  pale light enters in from the southwest. There are a few 
+cracks in walls and ceiling. A few large rocks litter the tunnel. The  
+walls are a brownish hue. Many of the rocks here apear freshly broken.
+~
+&G The Slimy material covered tunnel continues to the southwest and east. A
+stench fills the air.  Thick black material hangs from the ceiling and
+collects on the ground. A small amount of light filters in from the
+southwest. The black material appears to hide unknown dangers. The walls
+are covered in greenish material. 
+~
+8519681
+0
+0 1
+D1
+~
+~
+0
+-1 7707
+D9
+~
+~
+0
+-1 7702
+S
+#7707
+Northern Tunnel B~
+The tunnel continues to the west and southeast. The floor is littered with
+smooth stones. A large rock stands against the northern wall. The brown
+walls are smooth to the touch. Several stalagtites hang from the ceiling.
+A few small stalagmites stand near the south wall.
+~
+&G The greenish black material covered ground continues to the southeast
+and west.  A thick stench fills the air.  A large pile of the greenish
+material stands to the south. A thick clump hangs from the northern half
+of the ceiling, conceiling any danger behind it. The floor is dotted with
+clumps of the hard material. 
+~
+8519681
+0
+0 1
+D3
+~
+~
+0
+-1 7706
+D8
+~
+~
+0
+-1 7708
+S
+#7708
+Northern Tunnel B~
+The rocky ground continues to the northeast and northwest.  Dust fills the
+air.  The southern wall seems to have caved in leaving a gaping hole. The
+hole's edges are cracked and pitted. A large rock stands near the hole. A
+large stalagmite stands to the north.
+~
+&G The greenish black material covered ground continues to the northeast
+and southwest.  A thick stench fills the air.  The southern wall seems to
+have an openning leading almost straight down. The hole's edges are lined
+with the dark material. A slime covered stalagmite stands to the north.
+~
+8519681
+0
+0 1
+D2
+~
+~
+0
+-1 7709
+D6
+~
+~
+0
+-1 7710
+D7
+~
+~
+0
+-1 7707
+S
+#7709
+Northern Tunnel B Drop~
+This appears to have been once a wall, but now the rocky surface of the
+wall is gone leaving only a hole going straight down.  A large stone rests
+near the edge of the ground threatening to fall in. Several smaller stones
+rest near the north. Dust fills the air.
+~
+&G This appears to have been once a wall, but now the slime covered surface
+of the wall is gone leaving only a hole going straight down.  A large
+spire of black material stands near the lip of the hole. Many strands of
+the dark material hangs from the ceiling.
+~
+8523777
+0
+0 1
+D0
+~
+~
+0
+-1 7708
+D5
+~
+~
+0
+-1 7695
+S
+#7710
+Northern Tunnel B~
+The rocky ground continues to the northeast and southwest.  Dust fills the
+air. A large stone lays against the east wal. A broken stalagtite hangs
+amongst a few other stalagtites. Several small stalagmites are peppered
+throughout the tunnel.
+~
+&G The greenish black material covered ground continues to the northeast
+and southwest.  A thick stench fills the air. A small clump of material is
+piled against the east wall. A large amount of the material hangs from the
+ceiling and reaches the ground. Several clumps collect against the walls.
+A veil of the material spreads out from the column of the filth hiding
+unseen danger.
+~
+8519681
+0
+0 1
+D6
+~
+~
+0
+-1 7711
+D9
+~
+~
+0
+-1 7708
+S
+#7711
+Northern Tunnel B~
+The rocky ground continues to the north and southwest.  Dust fills the air.
+A large stalagmite stands in the middle of the tunnel a stalagtite hangs
+above it. A stone rests up against its base. Several large stones rest
+upagainst the eastern wall. The brown walls are smooth to the touch.
+~
+&G The greenish black material covered ground continues to the north and
+southwest.  A thick stench fills the air. The material stands like a pilar
+in the center of the room . The material branches off of the column
+spreading out to the walls. slime drips from the branches and ceiling.
+~
+8519681
+0
+0 1
+D0
+~
+~
+0
+-1 7712
+D9
+~
+~
+0
+-1 7710
+S
+#7712
+Entrance To Tunnel D~
+The rock covered dirt floor slopes down here. The Rocky walls are a brown
+color. Another tunnel continues to the south. Several large stones litter
+the path down. A stalagmite stands at the top of the ramp. There are
+several stones collecting at its base. The stones here are smooth and
+unbroken. 
+~
+&G The black greenish material covered floor slopes down here. The walls
+and ceiling are covered in the substance. Another tunnel continues snakily
+to the south.  Several large piles of the slimy material follow the path
+downward. Rope like strands of the filth spread from wall to wall. A huge
+column of material stands at the top of the ramp. 
+~
+8519681
+0
+0 1
+D2
+~
+~
+0
+-1 7711
+D5
+~
+~
+0
+-1 7614
+S
+#7713
+Slope into the Crater~
+The sky is clearly visible here. The slope here is incredibly treacheous.
+The rocks and stones cover the slopes. A wreckage can be seen to the west.
+A grassy path to the east is interupted by mountains and large boulders. 
+Dust fills the air around the sloping ground. The sound of falling rocks
+can often be heard.
+~
+Bug!
+~
+4096
+0
+0 1
+D1
+~
+~
+0
+-1 7733
+D5
+~
+~
+0
+-1 7703
+S
+#7714
+Dirt Path~
+The dirt path is fringed with green grass. The wind stirs up the dirt and
+smell of grass. A cave can be seen to the east. A large boulder stands to
+the northwest. A few rocks are scatterd along the path.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7723
+D1
+~
+~
+0
+-1 7686
+D3
+~
+~
+0
+-1 7715
+S
+#7715
+Grass Path~
+The path is covered in grass. A huge boulder stands to the east.  behind it
+the cliff's face can be seen. To the west is a steep cliff.  A few rocks
+stand near the cliff. The wind is filled with the scent of grass.
+~
+bug
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7714
+D7
+~
+~
+0
+-1 7716
+S
+#7716
+Grass Path~
+The path is covered in grass. A huge boulder stands to the east.  behind it
+the cliff's face can be seen. To the west is a steep cliff.  A few rocks
+stand near the cliff. The wind is filled with the scent of grass.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7717
+D8
+~
+~
+0
+-1 7715
+S
+#7717
+Grass Path~
+The path is covered in grass. A huge boulder stands to the east.  behind it
+the cliff's face can be seen. To the west is a steep cliff.  A few rocks
+stand near the cliff. The wind is filled with the scent of grass.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7718
+D2
+~
+~
+0
+-1 7716
+S
+#7718
+Grass Path~
+The path is covered in grass. A huge boulder stands to the south.  To the
+east the cliff's face can be seen. To the west is a steep cliff. A few
+rocks stand near the cliff. The wind is filled with the scent of grass.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7719
+D2
+~
+~
+0
+-1 7717
+D7
+~
+~
+0
+-1 7721
+D8
+~
+~
+0
+-1 7722
+S
+#7719
+Grass Path~
+The path is covered in grass. A huge boulder stands to the south.  To the
+east the cliff's face can be seen. To the west is a steep cliff. A few
+rocks stand near the cliff. The wind is filled with the scent of grass.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7720
+D2
+~
+~
+0
+-1 7718
+D3
+~
+~
+0
+-1 7721
+S
+#7720
+Grassy Slope~
+The path is covered in grass. A huge boulder stands to the south.  To the
+east the cliff's face can be seen. To the west is a steep cliff. A few
+rocks stand near the cliff. The wind is filled with the scent of grass.
+The path slopes up here.
+~
+bug
+~
+0
+0
+0 1
+D2
+~
+~
+0
+-1 7719
+D4
+~
+~
+0
+-1 7724
+D9
+~
+~
+0
+-1 7721
+S
+#7721
+Dirt Clearing~
+The clearing is fringed with green grass. The sky can be clearly seen. The
+mountain side can be seen to the east. A green grass filled path is to the
+east. Wind sweeps the dirt and grass smell into the air. A few shrubs can
+be seen against the cliff. A bush stands near the edge of the cliff to the
+west.
+~
+BUG
+~
+134217728
+0
+0 1
+D1
+~
+~
+0
+-1 7719
+D6
+~
+~
+0
+-1 7720
+D8
+~
+~
+0
+-1 7718
+S
+#7722
+Dirt Path~
+The dirt path is fringed with green grass. The wind stirs up the dirt and
+smell of grass. A cave can be seen to the east. A large boulder stands to
+the west. A few rocks are scattered along the wethered path.  The
+mountain's brown rocky cliff face stands to the east.
+~
+bug
+~
+0
+0
+0 1
+D7
+~
+~
+0
+-1 7718
+D8
+~
+~
+0
+-1 7723
+S
+#7723
+Dirt Path~
+The dirt path is fringed with green grass. The wind stirs up the dirt and
+smell of grass. A cave can be seen to the east. A large boulder stands to
+the west. A few rocks are scattered along the wethered path.  The
+mountain's brown rocky cliff face stands to the east.
+~
+bug
+~
+0
+0
+0 1
+D2
+~
+~
+0
+-1 7714
+D7
+~
+~
+0
+-1 7722
+S
+#7724
+Grassy Ramp~
+The Grassy path slopes down here. The sky can be clearly seen from this
+point. The eastern cliff face feels smooth. A cliff can be seen to the
+west. The path continues around the mountain to the north. The green grass
+is interupted only by a few smooth stones.
+~
+bug
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7725
+D5
+~
+~
+0
+-1 7720
+S
+#7725
+Grassy Path~
+The path is coverd in green grass. A few smooth stones litter the path. The
+mountainside appears rocky and covered in numerous stones. The cliff
+appears to be almost a shear drop. The wind spreads scent of fresh grass.
+Shrubs dot the path. A little vegetation can be seen on the moutain.
+~
+bug
+~
+0
+0
+0 1
+D2
+~
+~
+0
+-1 7724
+D6
+~
+~
+0
+-1 7726
+S
+#7726
+Grassy Path~
+The path is coverd in green grass. A few smooth stones litter the path. The
+mountainside appears rocky and covered in numerous stones. The cliff
+appears to be almost a shear drop. The wind spreads scent of fresh grass.
+Shrubs dot the path. A little vegetation can be seen on the moutain.
+~
+bug
+~
+0
+0
+0 1
+D6
+~
+~
+0
+-1 7727
+D9
+~
+~
+0
+-1 7725
+S
+#7727
+Grassy Path~
+The path is coverd in green grass. A few smooth stones litter the path. The
+mountainside appears rocky and covered in numerous stones. The cliff
+appears to be almost a shear drop. The wind spreads scent of fresh grass.
+Shrubs dot the path. A little vegetation can be seen on the moutain.
+~
+bug
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7728
+D9
+~
+~
+0
+-1 7726
+S
+#7728
+Grassy Path~
+The path is coverd in green grass. A few smooth stones litter the path. The
+mountainside appears rocky and covered in numerous stones. The cliff
+appears to be almost a shear drop. The wind spreads scent of fresh grass.
+Shrubs dot the path. A little vegetation can be seen on the moutain.
+~
+bug
+~
+0
+0
+0 1
+D3
+~
+~
+0
+-1 7727
+D8
+~
+~
+0
+-1 7729
+S
+#7729
+Grassy Path~
+The path is coverd in green grass. A few smooth stones litter the path. The
+mountainside appears rocky and covered in numerous stones. The cliff
+appears to be almost a shear drop. The wind spreads scent of fresh grass.
+Shrubs dot the path. A little vegetation can be seen on the moutain.
+~
+bug
+~
+0
+0
+0 1
+D6
+~
+~
+0
+-1 7739
+D7
+~
+~
+0
+-1 7728
+D8
+~
+~
+0
+-1 7730
+S
+#7730
+Grassy Path~
+The path is covered in green grass. Boulders rocks and mountains surround
+the path. The rocks feel smooth and strong. Little wind reaches these
+paths. The sky can be clearly seen above. The short grass is interupted
+only by an occassional shrub.
+~
+bug
+bug
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7761
+D2
+~
+~
+0
+-1 7731
+D7
+~
+~
+0
+-1 7729
+S
+#7731
+Grassy Path~
+The path is covered in green grass. Boulders rocks and mountains surround
+the path. The rocks feel smooth and strong. Little wind reaches these
+paths. The sky can be clearly seen above. The short grass is interupted
+only by an occassional shrub.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7730
+D8
+~
+~
+0
+-1 7732
+S
+#7732
+Grassy Path~
+The path is covered in green grass. Boulders rocks and mountains surround
+the path. The rocks feel smooth and strong. Little wind reaches these
+paths. The sky can be clearly seen above. The short grass is interupted
+only by an occassional shrub.
+~
+bug
+~
+0
+0
+0 1
+D2
+~
+~
+0
+-1 7733
+D7
+~
+~
+0
+-1 7731
+S
+#7733
+Grassy Path~
+The path is covered in green grass. Boulders rocks and mountains surround
+the path. The rocks feel smooth and strong. Little wind reaches these
+paths. The sky can be clearly seen above. The short grass is interupted
+only by an occassional shrub.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7732
+D1
+~
+~
+0
+-1 7734
+D3
+~
+~
+0
+-1 7713
+S
+#7734
+Grassy Path~
+The path is covered in green grass. Boulders rocks and mountains surround
+the path. The rocks feel smooth and strong. Little wind reaches these
+paths. The sky can be clearly seen above. The short grass is interupted
+only by an occassional shrub.
+~
+bug
+~
+0
+0
+0 1
+D3
+~
+~
+0
+-1 7733
+D6
+~
+~
+0
+-1 7735
+S
+#7735
+Grassy Path~
+The path is covered in green grass. Boulders rocks and mountains surround
+the path. The rocks feel smooth and strong. Little wind reaches these
+paths. The sky can be clearly seen above. The short grass is interupted
+only by an occassional shrub.
+~
+bug
+~
+0
+0
+0 1
+D6
+~
+~
+0
+-1 7736
+D9
+~
+~
+0
+-1 7734
+S
+#7736
+Grassy Path~
+The path is covered in green grass. Boulders rocks and mountains surround
+the path. The rocks feel smooth and strong. Little wind reaches these
+paths. The sky can be clearly seen above. The short grass is interupted
+only by an occassional shrub.
+~
+bug
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7737
+D7
+~
+~
+0
+-1 7763
+D9
+~
+~
+0
+-1 7735
+S
+#7737
+Grassy Plains B~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. Several paths twist and
+turn around the boulders.  The wind sweeps the plains stiring up dirt and
+scents of the green grass.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7753
+D1
+~
+~
+0
+-1 7738
+D2
+~
+~
+0
+-1 7760
+D3
+~
+~
+0
+-1 7736
+D6
+~
+~
+0
+-1 7758
+D8
+~
+~
+0
+-1 7759
+S
+#7738
+Grassy Plains B~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. Several paths twist and
+turn around the boulders.  The wind sweeps the plains stiring up dirt and
+scents of the green grass.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7758
+D1
+~
+~
+0
+-1 7630
+D2
+~
+~
+0
+-1 7759
+D3
+~
+~
+0
+-1 7737
+D7
+~
+~
+0
+-1 7753
+D9
+~
+~
+0
+-1 7760
+S
+#7739
+Grassy Path~
+The path is coverd in green grass. A few smooth stones litter the path. The
+mountainside appears rocky and covered in numerous stones. The cliff
+appears to be almost a shear drop. The wind spreads scent of fresh grass.
+Shrubs dot the path. A little vegetation can be seen on the moutain.
+~
+bug
+bug
+~
+0
+0
+0 1
+D8
+~
+~
+0
+-1 7740
+D9
+~
+~
+0
+-1 7729
+S
+#7740
+Grassy Plains C~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. The cliffs to the north
+are a sheer drop. Several paths twist and turn around the boulders.
+~
+bug
+bug
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7741
+D2
+~
+~
+0
+-1 7761
+D7
+~
+~
+0
+-1 7739
+D8
+~
+~
+0
+-1 7762
+S
+#7741
+Grassy Plains C~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. The cliffs to the north
+are a sheer drop. Several paths twist and turn around the boulders.
+~
+bug
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7742
+D1
+~
+~
+0
+-1 7743
+D2
+~
+~
+0
+-1 7762
+D3
+~
+~
+0
+-1 7740
+D8
+~
+~
+0
+-1 7763
+D9
+~
+~
+0
+-1 7761
+S
+#7742
+Grassy Crevice~
+The crevice is surrounded by high rocky walls.  The sky can be seen above.
+Grass covers most of the crevice. The area is sheltered from most of the
+wind. Several smooth stones lean upagainst the walls. The brown walls are
+smooth to the touch.
+~
+bug
+~
+0
+0
+0 1
+D2
+~
+~
+0
+-1 7741
+S
+#7743
+Grassy Plains C~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. The cliffs to the north
+are a sheer drop. Several paths twist and turn around the boulders.
+~
+bug
+bug
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7744
+D2
+~
+~
+0
+-1 7763
+D3
+~
+~
+0
+-1 7741
+D9
+~
+~
+0
+-1 7762
+S
+#7744
+Grassy Path~
+The path is coverd in green grass. A few smooth stones litter the path. The
+mountainside appears rocky and covered in numerous stones and vegetation.
+The cliff appears to be almost a shear drop. The wind spreads scent of
+fresh grass. Shrubs dot the path. A little vegetation can be seen on the
+moutain.
+~
+bug
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7745
+D3
+~
+~
+0
+-1 7743
+S
+#7745
+Grassy Path~
+The path is coverd in green grass. A few smooth stones litter the path. The
+mountainside appears rocky and covered in numerous stones and vegetation.
+The cliff appears to be almost a shear drop. The wind spreads scent of
+fresh grass. Shrubs dot the path. A little vegetation can be seen on the
+moutain.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7746
+D2
+~
+~
+0
+-1 7753
+D3
+~
+~
+0
+-1 7744
+S
+#7746
+Grassy Path~
+The path is coverd in green grass. A few smooth stones litter the path. The
+mountainside appears rocky and covered in numerous stones and vegetation.
+The cliff appears to be almost a shear drop. The wind spreads scent of
+fresh grass. Shrubs dot the path. A little vegetation can be seen on the
+moutain.
+~
+bug
+~
+0
+0
+0 1
+D2
+~
+~
+0
+-1 7745
+D6
+~
+~
+0
+-1 7747
+S
+#7747
+Grassy Path~
+The path is coverd in green grass. A few smooth stones litter the path. The
+mountainside appears rocky and covered in numerous stones and vegetation.
+The cliff appears to be almost a shear drop. The wind spreads scent of
+fresh grass. Shrubs dot the path. A little vegetation can be seen on the
+moutain.
+~
+bug
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7748
+D9
+~
+~
+0
+-1 7746
+S
+#7748
+Grassy Path~
+The path is coverd in green grass. A few smooth stones litter the path. The
+mountainside appears rocky and covered in numerous stones and vegetation.
+The cliff appears to be almost a shear drop. The wind spreads scent of
+fresh grass. Shrubs dot the path. A little vegetation can be seen on the
+moutain.
+~
+bug
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7749
+D3
+~
+~
+0
+-1 7747
+S
+#7749
+Grassy Plains A~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. The cliffs to the north
+are a sheer drop. Several paths twist and turn around the boulders.
+~
+bug
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7750
+D2
+~
+~
+0
+-1 7754
+D3
+~
+~
+0
+-1 7748
+D8
+~
+~
+0
+-1 7752
+S
+#7750
+Grassy Plains A~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. The cliffs to the north
+are a sheer drop. Several paths twist and turn around the boulders.
+~
+bug
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7751
+D2
+~
+~
+0
+-1 7752
+D3
+~
+~
+0
+-1 7749
+D9
+~
+~
+0
+-1 7754
+S
+#7751
+Grassy Clearing~
+The clearing is covered in green grass. The mountains to the south can be
+clearly seen. vegetation. On the mountains there appears to be sparse
+vegetation. A few rocks litter the clearing but all are relatively small.
+The wind sweeps the clearing bringing numerous scents.
+~
+bug
+~
+268435456&8
+0
+0 1
+D3
+~
+~
+0
+-1 7750
+D9
+~
+~
+0
+-1 7752
+S
+#7752
+Grassy Plains A~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. The cliffs to the north
+are a sheer drop. Several paths twist and turn around the boulders.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7750
+D2
+~
+~
+0
+-1 7756
+D3
+~
+~
+0
+-1 7754
+D6
+~
+~
+0
+-1 7751
+D7
+~
+~
+0
+-1 7749
+D9
+~
+~
+0
+-1 7755
+S
+#7753
+Grassy Plains B~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. Several paths twist and
+turn around the boulders.  The wind sweeps the plains stiring up dirt and
+scents of the green grass.
+~
+bug
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7745
+D1
+~
+~
+0
+-1 7758
+D2
+~
+~
+0
+-1 7737
+D8
+~
+~
+0
+-1 7738
+S
+#7754
+Grassy Plains A~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. The cliffs to the north
+are a sheer drop. Several paths twist and turn around the boulders.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7749
+D1
+~
+~
+0
+-1 7752
+D2
+~
+~
+0
+-1 7755
+D6
+~
+~
+0
+-1 7750
+D8
+~
+~
+0
+-1 7756
+S
+#7755
+Grassy Plains A~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. The cliffs to the north
+are a sheer drop. Several paths twist and turn around the boulders.
+~
+bug
+bug
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7754
+D1
+~
+~
+0
+-1 7756
+D3
+~
+~
+0
+-1 7757
+D6
+~
+~
+0
+-1 7752
+S
+#7756
+Grassy Plains A~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. The cliffs to the north
+are a sheer drop. Several paths twist and turn around the boulders.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7752
+D3
+~
+~
+0
+-1 7755
+D7
+~
+~
+0
+-1 7754
+S
+#7757
+Grassy Path~
+The path is covered in green grass. Boulders rocks and mountains surround
+the path. The rocks feel smooth and strong. Little wind reaches these
+paths. The sky can be clearly seen above. The short grass is interupted
+only by an occassional shrub.
+~
+bug
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7755
+D9
+~
+~
+0
+-1 7758
+S
+#7758
+Grassy Plains B~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. Several paths twist and
+turn around the boulders.  The wind sweeps the plains stiring up dirt and
+scents of the green grass.
+~
+bug
+~
+0
+0
+0 1
+D2
+~
+~
+0
+-1 7738
+D3
+~
+~
+0
+-1 7753
+D6
+~
+~
+0
+-1 7757
+D9
+~
+~
+0
+-1 7737
+S
+#7759
+Grassy Plains B~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. Several paths twist and
+turn around the boulders.  The wind sweeps the plains stiring up dirt and
+scents of the green grass.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7738
+D3
+~
+~
+0
+-1 7760
+D7
+~
+~
+0
+-1 7737
+S
+#7760
+Grassy Plains B~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. Several paths twist and
+turn around the boulders.  The wind sweeps the plains stiring up dirt and
+scents of the green grass.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7737
+D1
+~
+~
+0
+-1 7759
+D6
+~
+~
+0
+-1 7738
+S
+#7761
+Grassy Plains C~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. The cliffs to the north
+are a sheer drop. Several paths twist and turn around the boulders.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7740
+D1
+~
+~
+0
+-1 7762
+D3
+~
+~
+0
+-1 7730
+D6
+~
+~
+0
+-1 7741
+S
+#7762
+Grassy Plains C~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. The cliffs to the north
+are a sheer drop. Several paths twist and turn around the boulders.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7741
+D1
+~
+~
+0
+-1 7763
+D3
+~
+~
+0
+-1 7761
+D6
+~
+~
+0
+-1 7743
+D7
+~
+~
+0
+-1 7740
+S
+#7763
+Grassy Plains C~
+The Expansive plains is interupted by large boulders and smaller rocks and
+stones.  The plain is covered in green grass. The mountain can be seen
+here, its rocky slopes interupted by vegetation. The cliffs to the north
+are a sheer drop. Several paths twist and turn around the boulders.
+~
+bug
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7743
+D3
+~
+~
+0
+-1 7762
+D7
+~
+~
+0
+-1 7741
+D8
+~
+~
+0
+-1 7736
+S
+#7800
+Prog Blender Room~
+~
+~
+1073741824
+0
+0 1
+> speech_prog Hi!~
+if ispc($n)
+say Get the hell out of here.
+else
+mppurge $n
+endif
+~
+|
+S
+#0
+
+
+#RESETS
+O 1 7607 1 7704
+M 1 7604 1 7604
+E 1 7604 1 5
+M 1 7606 2 7604
+M 1 7606 2 7604
+M 1 7605 1 7604
+E 1 7605 1 5
+O 1 7609 1 7674
+O 1 7606 1 7674
+O 1 7606 1 7687
+O 1 7609 1 7638
+O 1 7609 1 7636
+O 1 7608 1 7636
+O 1 7606 1 7636
+O 1 7609 1 7670
+O 1 7608 1 7686
+O 1 7609 1 7684
+O 1 7608 1 7716
+O 1 7608 1 7725
+O 1 7608 1 7731
+O 1 7608 1 7736
+O 1 7610 1 7759
+O 1 7610 1 7743
+O 1 7608 1 7743
+O 1 7608 1 7761
+O 1 7608 1 7702
+O 1 7608 1 7703
+O 1 7610 1 7703
+O 1 7609 1 7707
+O 1 7608 1 7710
+O 1 7606 1 7612
+O 1 7606 1 7610
+M 1 7605 2 7671
+E 1 7605 1 5
+M 1 7606 4 7672
+M 1 7606 4 7672
+O 1 7608 1 7672
+M 1 7605 3 7605
+E 1 7605 1 5
+M 1 7606 6 7605
+M 1 7606 6 7605
+O 1 7606 1 7605
+M 1 7606 7 7656
+M 1 7605 4 7657
+E 1 7605 1 5
+O 1 7606 1 7657
+O 1 7608 1 7657
+O 1 7608 1 7658
+O 1 7606 1 7658
+O 1 7606 1 7658
+M 1 7606 9 7661
+M 1 7606 9 7661
+M 1 7606 10 7660
+M 1 7606 11 7663
+M 1 7606 12 7647
+M 1 7606 14 7648
+M 1 7606 14 7648
+O 1 7606 1 7648
+M 1 7606 15 7650
+O 1 7609 1 7650
+M 1 7606 16 7651
+M 1 7606 18 7652
+M 1 7606 18 7652
+M 1 7606 19 7654
+O 1 7608 1 7654
+M 1 7606 24 7640
+M 1 7606 24 7640
+M 1 7606 24 7640
+O 1 7608 1 7640
+O 1 7606 1 7640
+M 1 7606 24 7639
+M 1 7606 25 7631
+M 1 7606 27 7626
+M 1 7606 27 7626
+M 1 7606 28 7627
+M 1 7606 31 7628
+M 1 7606 31 7628
+M 1 7606 31 7628
+M 1 7606 34 7635
+M 1 7606 34 7635
+M 1 7606 34 7635
+M 1 7606 37 7666
+O 1 7608 1 7666
+M 1 7606 41 7673
+M 1 7606 41 7673
+M 1 7606 41 7673
+M 1 7606 41 7673
+O 1 7609 1 7673
+M 1 7606 43 7669
+M 1 7606 43 7669
+M 1 7606 43 7689
+M 1 7606 43 7689
+O 1 7608 1 7689
+M 1 7606 45 7688
+M 1 7606 45 7688
+M 1 7606 46 7678
+M 1 7606 47 7680
+O 1 7608 1 7680
+M 1 7606 49 7681
+M 1 7606 49 7681
+O 1 7606 1 7681
+M 1 7606 50 7683
+M 1 7606 51 7691
+M 1 7606 52 7694
+M 1 7606 53 7696
+M 1 7606 55 7692
+M 1 7606 55 7692
+O 1 7606 1 7692
+M 1 7606 56 7697
+M 1 7606 57 7708
+O 1 7606 1 7708
+M 1 7606 58 7711
+M 1 7606 60 7613
+M 1 7606 60 7613
+O 1 7609 1 7613
+O 1 7606 1 7613
+M 1 7606 61 7611
+O 1 7609 1 7611
+M 1 7606 62 7609
+O 1 7608 1 7609
+M 1 7606 63 7608
+M 1 7606 66 7622
+M 1 7606 66 7622
+M 1 7606 66 7622
+M 1 7606 69 7625
+M 1 7606 69 7625
+M 1 7606 69 7625
+O 1 7609 1 7625
+O 1 7606 1 7625
+M 1 7606 70 7618
+O 1 7608 1 7618
+M 1 7606 72 7620
+M 1 7606 72 7620
+M 1 7612 1 7753
+O 1 7608 1 7753
+M 1 7608 4 7757
+E 1 86 1 5
+E 1 80 1 16
+G 1 81 1
+M 1 7608 4 7757
+E 1 86 1 5
+E 1 80 1 16
+G 1 81 1
+M 1 7608 7 7755
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+E 1 86 1 5
+M 1 7608 7 7755
+G 1 81 1
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+E 1 86 1 5
+M 1 7607 2 7752
+E 1 691 1 16
+G 1 678 1
+G 1 679 1
+E 1 86 1 5
+G 1 679 1
+G 1 692 1
+M 1 7608 9 7752
+E 1 86 1 5
+E 1 80 1 16
+G 1 81 1
+M 1 7608 9 7752
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+E 1 86 1 5
+M 1 7608 9 7752
+E 1 86 1 5
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+M 1 7608 9 7752
+E 1 86 1 5
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+O 1 7610 1 7752
+M 1 7608 13 7749
+E 1 80 1 16
+G 1 81 1
+M 1 7608 13 7749
+E 1 86 1 5
+G 1 81 1
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+M 1 7608 13 7749
+E 1 86 1 5
+G 1 81 1
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+O 1 7608 1 7749
+M 1 7611 1 7668
+E 1 201 1 13
+G 1 81 1
+G 1 81 1
+E 1 80 1 16
+M 1 7613 5 7668
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+M 1 7613 5 7668
+G 1 81 1
+G 1 80 1
+G 1 81 1
+G 1 81 1
+G 1 81 1
+G 1 81 1
+M 1 7613 5 7668
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+M 1 7613 5 7668
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+G 1 81 1
+G 1 81 1
+M 1 7613 5 7668
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+O 1 81 1 7668
+O 1 81 1 7668
+O 1 81 1 7668
+M 1 7607 2 7751
+E 1 691 1 16
+G 1 692 1
+G 1 679 1
+G 1 679 1
+G 1 678 1
+E 1 86 1 5
+G 1 692 1
+M 1 7608 13 7751
+E 1 86 1 5
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+M 1 7608 13 7751
+E 1 86 1 5
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+M 1 7608 13 7751
+E 1 86 1 5
+G 1 81 1
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+M 1 7608 13 7751
+E 1 86 1 5
+G 1 81 1
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+M  7605 spec_enemy_scan
+M  7607 spec_enemy_scan
+M  7608 spec_enemy_scan
+M  7611 spec_enemy_scan
+M  7613 spec_enemy_scan
+S
+
+
+#$

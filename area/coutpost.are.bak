@@ -1,0 +1,3586 @@
+#AREA   USCM Communication Outpost~
+
+#VERSION 4
+
+#AUTHOR Ghost~
+
+#AMBIENCE 1
+#RANGES
+0 0 0 100
+$
+
+#MOBILES
+#7000
+marine guard~
+A Marine~
+A Hulking Marine stands here, securing the compound.
+~
+~
+0
+3
+Z
+50 8 8 1
+20 15 15 10 20 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#7001
+marine head ops operations human john watson~
+John Watson~
+John Watson, Head of Operations stands here.
+~
+~
+0
+3
+S
+1 8 8 0
+> all_greet_prog 100~
+if variable(JWSecure) == 0
+mpset JWSecure 1
+say Good to see you men. This place is a mess!
+endif
+~
+> rand_prog 15~
+if variable(JWSecure) == 0
+if variable(JWRadio) == 0
+radio The Operations Center could use some attention, marines. 
+mpset JWRadio 1
+mpsleep 480
+mpset JWRadio 0
+endif
+endif
+~
+|
+#7003
+alien drone~
+An alien drone~
+An alien drone stands here, drooling.
+~
+~
+0
+1
+Z
+10 8 8 0
+10 10 10 10 10 10
+1 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#7004
+marine guard paranoid~
+A Marine~
+A Paranoid Marine is crouching behind a table here.
+~
+~
+0
+3
+Z
+50 8 8 1
+20 15 15 10 20 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> rand_prog 10~
+cover table
+~
+|
+#7005
+marine private jake marshal~
+Private Marshal~
+Private Jake Marshal stands here, guarding the base.
+~
+~
+0
+3
+S
+1 8 8 0
+> act_prog p from the south.~
+if variable(Jake) == 0
+radio They've breached the wall! We need backup down here!
+mpset Jake 1
+endif
+~
+|
+#7006
+subspace tim bates~
+Tim Bates~
+Tim Bates, Subspace Control is here, running the show. 
+~
+~
+4194304
+3
+S
+1 8 8 0
+> act_prog p gives you A Floppy Disk.~
+if variable(DropRun) == 0
+mpset DropRun 1
+mpmonitor &CAll Players - Dropship will touch down in five minutes.
+mpsleep 120
+say Four minutes.
+mpsleep 120
+say Three minutes. 
+mpsleep 120
+say Two minutes and thiry seconds.
+mpsleep 120
+radio Dropship is on its way, boys. You got about two minutes. 
+mpsleep 15
+radio Whatever you do, keep that Landing Beacon online. 
+mpsleep 120
+say One minute, thirty.
+mpsleep 60
+say One minute, fifteen.
+mpsleep 52 
+mpmonitor &CDropship is closing. 60 seconds to touchdown. 
+mpsleep 8
+radio One minute and counting. Hold 'em back.
+mpsleep 60
+say 45 seconds.
+mpsleep 60 
+radio Thirty seconds! This is it, Marines! 
+mpsleep 60
+say 15 seconds!
+mpsleep 60
+if variable(PowerOff) == 1
+give floppy handler1
+else
+if variable(Beacon) == 1
+give floppy handler2
+else
+give floppy handler3
+endif
+endif
+mpset DropRun 0
+endif
+~
+|
+#7007
+subspace crew handler1~
+Tim Bates~
+A team of subspace control personel are here, working hard.
+~
+~
+4194304
+3
+S
+1 8 8 0
+> rand_prog 100~
+if variable(JWSecure) == 1
+give floppy tim
+endif
+~
+> act_prog p gives you A Floppy Disk.~
+mpmonitor &CDropship failed to land - Power was offline. 
+mpsleep 4
+mpteamgain alien 500
+mpteamgain predator 500
+mpsleep 4
+mprat 7001 7100 mpecho &wA dropship roars loudly overhead. 
+radio Idiots! The Beacon is offline! Now we'll have to wait! 
+mpsleep 8
+radio Go get the goddamned power online, and I'll send for more help. 
+~
+|
+#7008
+subspace crew handler2~
+Tim Bates~
+A team of subspace control personel are here, working hard.
+~
+~
+4194304
+3
+Z
+1 8 8 0
+10 10 10 10 10 20
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> rand_prog 100~
+if variable(JWSecure) == 1
+give floppy tim
+endif
+~
+> act_prog p gives you A Floppy Disk.~
+mpmonitor &CDropship failed to land - Beacon was offline. 
+mpsleep 4
+mpteamgain alien 500
+mpteamgain predator 500
+mpsleep 4
+mprat 7001 7100 mpecho A dropship roars loudly overhead. 
+radio Idiots! The Beacon is offline! Now we'll have to wait! 
+mpsleep 8
+radio Head up to the roof Marines, get that beacon online. 
+~
+|
+#7009
+subspace crew handler3~
+Tim Bates~
+A team of subspace control personel are here, working hard.
+~
+~
+4194304
+3
+S
+1 8 8 0
+> rand_prog 100~
+if variable(JWSecure) == 1
+give floppy tim
+endif
+~
+> act_prog p gives you A Floppy Disk.~
+mprat 7001 7100 mpecho A dropship roars loudly overhead. 
+radio Damn straight! Dropship is on the ground, boys.
+mpteamgain 0 1000 
+mpsleep 8 
+radio Good work, Marines. More help is on the way. 
+mpgoto 1
+mpmload 7010 
+mpmload 7010 
+mpmload 7010 
+mpmload 7010 
+mpmload 7010 
+mpmload 7010 
+mpoload 80 
+mpoload 80 
+mpoload 80 
+mpoload 80 
+mpoload 80 
+mpoload 80 
+mpoload 81
+mpoload 81
+mpoload 81
+mpoload 81
+mpoload 81
+mpoload 81
+mpoload 667
+mpoload 667
+mpoload 667
+mpoload 667
+mpoload 667
+mpoload 667
+drop all 
+get floppy
+say gear up
+mptrans marine 7008 
+mptrans marine 7021 
+mptrans marine 7074 
+mptrans marine 7074 
+mptrans marine 7042 
+mptrans marine 7042 
+mpgoto 7004
+~
+|
+#7010
+marine guard reinforcement~
+A Marine~
+A Reinforcement Marine stands here, securing the area. 
+~
+~
+0
+3
+Z
+50 8 8 1
+20 15 15 10 20 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> speech_prog p gear up~
+get pulse
+get m309
+get m3
+wield pulse
+reload pulse m309
+setmode full
+wear m3
+~
+|
+#7100
+anchor mob~
+a newly created anchor mob~
+Some god abandoned a newly created anchor mob here.
+~
+~
+0
+67108865
+S
+1 8 8 0
+#0
+
+
+#OBJECTS
+#7000
+alarm console switch~
+Alarm Console~
+An Alarm Console is mounted on the far wall here. ~
+~
+4
+1052673
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(Alarm1) == 0
+mpset Alarm1 1
+mea $n You trip the security alarm!
+mer $n $n trips the security alarm!
+mpecho &w&R[WARNING]: Operation Center is under attack. Backup requested!
+mpsleep 30
+mpat 1 mpmload 7000
+mpat 1 mpmload 7000
+mpat 1 mpmload 7000
+mpat 1 mpoload 80
+mpat 1 mpoload 80
+mpat 1 mpoload 80
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 drop all
+mpat 1 mpforce 1.marine get pulse
+mpat 1 mpforce 2.marine get pulse
+mpat 1 mpforce 3.marine get pulse
+mpat 1 mpforce 1.marine get m309
+mpat 1 mpforce 1.marine get m309
+mpat 1 mpforce 2.marine get m309
+mpat 1 mpforce 2.marine get m309
+mpat 1 mpforce 3.marine get m309
+mpat 1 mpforce 3.marine get m309
+mpat 1 mpforce 1.marine wield pulse 
+mpat 1 mpforce 2.marine wield pulse 
+mpat 1 mpforce 3.marine wield pulse 
+mpat 1 mptrans 3.marine 7001
+mpat 1 mptrans 2.marine 7001
+mpat 1 mptrans 1.marine 7001
+mpecho &wMarines rush in to secure the operation center. 
+mpsleep 120
+mpset Alarm1 0
+endif
+~
+> useoff_prog 100~
+if variable(Alarm1) == 0
+mpset Alarm1 1
+mea $n You trip the security alarm!
+mer $n $n trips the security alarm!
+mpecho &w&R[WARNING]: Operation Center is under attack. Backup requested!
+mpsleep 30
+mpat 1 mpmload 7000
+mpat 1 mpmload 7000
+mpat 1 mpmload 7000
+mpat 1 mpoload 80
+mpat 1 mpoload 80
+mpat 1 mpoload 80
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 drop all
+mpat 1 mpforce 1.marine get pulse
+mpat 1 mpforce 2.marine get pulse
+mpat 1 mpforce 3.marine get pulse
+mpat 1 mpforce 1.marine get m309
+mpat 1 mpforce 1.marine get m309
+mpat 1 mpforce 2.marine get m309
+mpat 1 mpforce 2.marine get m309
+mpat 1 mpforce 3.marine get m309
+mpat 1 mpforce 3.marine get m309
+mpat 1 mpforce 1.marine wield pulse 
+mpat 1 mpforce 2.marine wield pulse 
+mpat 1 mpforce 3.marine wield pulse 
+mpat 1 mptrans 3.marine 7001
+mpat 1 mptrans 2.marine 7001
+mpat 1 mptrans 1.marine 7001
+mpecho &wMarines rush in to secure the operation center. 
+mpsleep 120
+mpset Alarm1 0
+endif
+~
+|
+#7001
+camera security wall~
+Security Camera~
+A security camera is mounted on the far wall. ~
+~
+5
+67108866
+0
+0 0 0 0 0 0
+1 0 0
+> rand_prog 100~
+mpecho &wThe security camera hums into motion, sweeping the room. 
+~
+|
+#7002
+opcenter camera~
+OPCENTER Camera~
+A Camera monitor is showing the Operations Center hallway. (USE OPCENTER)~
+~
+5
+1048576
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+mpechoat $n You glance at the camera console.
+mptransfer $n 7005
+mpat 7005 mpforce $n look
+mpat 7005 mptrans $n 7002
+~
+> useoff_prog 100~
+mpechoat $n You glance at the camera console.
+mptransfer $n 7005
+mpat 7005 mpforce $n look
+mpat 7005 mptrans $n 7002
+~
+|
+#7003
+access ladder~
+Access Ladder~
+A tall steel ladder hangs down from above. (Roof Access)~
+~
+4
+67108864
+0
+0 0 0 0 0 0
+1 0 0
+#7004
+beacon camera~
+BEACON Camera~
+A Camera monitor is showing the Landing Beacon control. (USE BEACON)~
+~
+5
+1048576
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+mpechoat $n You glance at the camera console. 
+mptransfer $n 7021
+mpat 7021 mpforce $n look
+mpat 7021 mptrans $n 7002 
+~
+> useoff_prog 100~
+mpechoat $n You glance at the camera console. 
+mptransfer $n 7021
+mpat 7021 mpforce $n look
+mpat 7021 mptrans $n 7002 
+~
+|
+#7005
+beacon breaker switch~
+Beacon Switch~
+A breaker switch for the Landing Beacon is mounted here. ~
+~
+4
+68157440
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(Beacon) == 0
+mpset Beacon 1
+mer $n $n kills the power to the landing beacon. 
+mea $n You kill the power to the landing beacon. 
+mprat 7000 7100 mpecho &w&R[NOTICE]: Landing Beacon has been disabled.
+else
+mpset Beacon 0
+mer $n $n activates the power to the landing beacon. 
+mea $n You activate the power to the landing beacon. 
+mprat 7000 7100 mpecho &w&G[NOTICE]: Landing Beacon has been engaged.
+endif
+~
+> useoff_prog 100~
+if variable(Beacon) == 0
+mpset Beacon 1
+mer $n $n kills the power to the landing beacon. 
+mea $n You kill the power to the landing beacon. 
+mprat 7000 7100 mpecho &w&R[NOTICE]: Landing Beacon has been disabled.
+else
+mpset Beacon 0
+mer $n $n activates the power to the landing beacon. 
+mea $n You activate the power to the landing beacon. 
+mprat 7000 7100 mpecho &w&G[NOTICE]: Landing Beacon has been engaged.
+endif
+~
+|
+#7006
+table overturned cover~
+table~
+An overturned table lies here, serving as a makeshift cover.~
+~
+25
+0
+0
+8 1 2 200 200 0
+1 0 0
+#7007
+backup generator~
+Backup Generator~
+A backup generator sits in the corner of the room. ~
+~
+4
+68161538
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(PowerOff) == 0
+mpechoat $n The power is already online. That would be a waste. 
+else
+mpset PowerOff 0
+mprat 7001 7046 mpecho &w&G[WARNING]: Backup power is now online.
+mprat 7054 7057 mpecho &w&G[WARNING]: Backup power is now online.
+mprat 7001 7046 mprmflag -1 1 dark
+mprat 7054 7057 mprmflag -1 1 dark
+endif
+~
+> useoff_prog 100~
+if variable(PowerOff) == 0
+mpechoat $n The power is already online. That would be a waste. 
+else
+mpset PowerOff 0
+mprat 7001 7046 mpecho &w&G[WARNING]: Backup power is now online.
+mprat 7054 7057 mpecho &w&G[WARNING]: Backup power is now online.
+mprat 7001 7046 mprmflag -1 1 dark
+mprat 7054 7057 mprmflag -1 1 dark
+endif
+~
+|
+#7008
+crowbar~
+A Metal Crowbar~
+A metal crowbar is lying on the ground here. ~
+~
+2
+67112960
+8193
+1 70 80 3 2 3
+3 100 10
+#7009
+generator primary main uscm base concrete~
+Primary Generator~
+&BThe Primary USCM Generator sits on top of a concrete base.~
+~
+25
+0
+0
+10 2 5 300 300 3
+1 0 0
+> useon_prog 100~
+mpasound &w&RBOOM! Smoke billows from the destroyed generator.
+mpecho &w&RThe generator explodes in a cloud of fire and smoke!
+mpecho &wThat should take care of the base power for now... 
+mpset PowerOff 1
+mprat 7001 7046 mpecho &w&R[WARNING]: Primary power has been lost.
+mprat 7054 7057 mpecho &w&R[WARNING]: Primary power has been lost.
+mprat 7001 7046 mprmflag -1 0 dark
+mprat 7054 7057 mprmflag -1 0 dark
+~
+|
+#7010
+jake marshal armor~
+M3 Titanium-plate Armor~
+A M3 Titanium-plate armor vest was left lying here.~
+~
+3
+37152
+9
+300 300 0 2 0 0
+6 400 40
+A
+11 60
+A
+12 60
+A
+13 30
+A
+14 20
+A
+15 -20
+#7011
+rear camera~
+REAR Camera~
+A Camera monitor is showing the Rear Entrance. (USE REAR)~
+~
+5
+1048576
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+mpechoat $n You glance at the camera console.
+mptransfer $n 7046
+mpat 7046 mpforce $n look
+mpat 7046 mptrans $n 7002
+~
+> useoff_prog 100~
+mpechoat $n You glance at the camera console.
+mptransfer $n 7046
+mpat 7046 mpforce $n look
+mpat 7046 mptrans $n 7002
+~
+|
+#7012
+light post~
+Light Post~
+A Tall, Steel Light Post keeps the access ladder lit up.~
+~
+4
+67108865
+0
+0 0 0 0 0 0
+1 0 0
+#7015
+floppy disk trigger~
+A Floppy Disk~
+A floppy disk was left lying on the ground here.~
+~
+5
+0
+16385
+0 0 0 0 0 0
+1 0 0
+#7016
+security cell trap console~
+Security Console~
+A Security Console rests here, providing access to the network. ~
+~
+5
+68161538
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(Trapdoor) == 0
+mpechoat $n You activate the security on the second floor. 
+mpechoaround $n $n activates the security system. 
+mpset Trapdoor 1
+else
+mpechoat $n You deactivate the security on the second floor. 
+mpechoaround $n $n deactivates the security system. 
+mpset Trapdoor 0
+endif
+~
+> useoff_prog 100~
+if variable(Trapdoor) == 0
+mpechoat $n You activate the security on the second floor. 
+mpechoaround $n $n activates the security system. 
+mpset Trapdoor 1
+else
+mpechoat $n You deactivate the security on the second floor. 
+mpechoaround $n $n deactivates the security system. 
+mpset Trapdoor 0
+endif
+~
+|
+#7017
+information console~
+Information Console~
+An Information Console rests here, showing status information. ~
+~
+4
+68161538
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+mpechoat $n You hit the information summary switch.
+mpechoaround $n $n activates the information console.
+mpecho &w&C(Computer) Floor one : Prison Cell.
+mpecho &w&C(Computer) .: Access Code is 54332 :.
+mpecho &w&C(Computer) Floor two : Backup Generator.
+mpecho &w&C(Computer) .: Access Code is 95595 :.
+mpecho &w&C(Computer) Floor three: Opcenter.
+mpecho &w&C(Computer) .: Access Code is 11342 :.
+mpecho &w&C(Computer) Roof: Landing Beacon
+if variable(Beacon) == 1
+mpecho &w&R(Computer) Warning: Beacon is disabled.
+else
+mpecho &w&C(Computer) Beacon is online.
+endif
+if variable(PowerOff) == 0
+mpecho &w&C(Computer) Power is online. 
+else
+mpecho &w&R(Computer) Power is offline. 
+endif
+~
+> useoff_prog 100~
+mpechoat $n You hit the information summary switch.
+mpechoaround $n $n activates the information console.
+mpecho &w&C(Computer) Floor one : Prison Cell.
+mpecho &w&C(Computer) .: Access Code is 54332 :.
+mpecho &w&C(Computer) Floor two : Backup Generator.
+mpecho &w&C(Computer) .: Access Code is 95595 :.
+mpecho &w&C(Computer) Floor three: Opcenter.
+mpecho &w&C(Computer) .: Access Code is 11342 :.
+mpecho &w&C(Computer) Roof: Landing Beacon
+if variable(Beacon) == 1
+mpecho &w&R(Computer) Warning: Beacon is disabled.
+else
+mpecho &w&C(Computer) Beacon is online.
+endif
+if variable(PowerOff) == 0
+mpecho &w&C(Computer) Power is online. 
+else
+mpecho &w&R(Computer) Power is offline. 
+endif
+~
+|
+#7100
+anchor object~
+a anchor object~
+A anchor object is here.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#7000
+USCM Communications Outpost~
+Anchor
+~
+~
+1073741832
+0
+0 1
+S
+#7001
+Communications Outpost :: Operations Center~
+This is central operations for the USCM communications outpost. From here,
+teams can oversee the operation of the subspace array, and monitor
+security, fire and other alert systems. USCM teams spent millions of
+dollars making sure this base was as well equipped as possible against any
+form of attack. Lets hope it worked. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+16777225
+0
+0 1
+D0
+~
+~
+645922855&3
+-1 7004
+D1
+~
+~
+100663297&1
+-1 7002
+D2
+~
+~
+243269639&3
+11342 7005
+D3
+~
+~
+0
+-1 7003
+S
+#7002
+&w&BCommunications Outpost :: Monitoring Station~
+&zThe monitoring station houses row after row of television screens, all
+keeping a watchful eye on the more secure sections of the base. The room
+is extremely dark, lit only by the blue glow from the monitor screens. A
+heavy metal door blocks out noise and other such disturbances, allowing
+security personal and technicians to focus on the job at hand.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+33554441
+0
+0 1
+D3
+~
+~
+100663297&1
+-1 7001
+S
+#7003
+Communications Outpost :: Security Station~
+This security station provides access to the Communication Outposts most
+important defense systems. Being a somewhat small outpost, few are
+available, but theres a couple that look somewhat interesting. Anything to
+give the Marines the upper hand in combat. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 7001
+D2
+~
+~
+33554432
+-1 7097
+S
+#7004
+Communications Outpost :: Subspace Radio~
+This is the Subspace Array Control Room. Teams of personel spend their
+entire day managing it and keeping it in perfect condition. For such a
+large room, all the people crowded together sure can make it look small.
+In the event an emergancy arises, they will follow their preset guidelines
+and call for help and seal the room against attackers. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D2
+~
+~
+109051943&3
+-1 7001
+> speech_prog testme!~
+mpgoto 1
+mpmload 7010 
+mpmload 7010 
+mpmload 7010 
+mpmload 7010 
+mpmload 7010 
+mpmload 7010 
+mpoload 80 
+mpoload 80 
+mpoload 80 
+mpoload 80 
+mpoload 80 
+mpoload 80 
+mpoload 81
+mpoload 81
+mpoload 81
+mpoload 81
+mpoload 81
+mpoload 81
+mpoload 667
+mpoload 667
+mpoload 667
+mpoload 667
+mpoload 667
+mpoload 667
+drop all 
+get floppy
+say gear up
+mptrans marine 7008 
+mptrans marine 7021 
+mptrans marine 7074 
+mptrans marine 7074 
+mptrans marine 7042 
+mptrans marine 7042 
+~
+|
+S
+#7005
+Enclosed Hallway~
+A dark, non-descript USCM hallway. The walls are plain and bare except for
+the odd obscurity protruding from it, and the occasional camera. Machinery
+noise fills the corridors from piping and mechanical systems used to drive
+the subspace array. Dim lights line the ceiling, lighting the hallway but
+giving it a creepy feeling at the same time.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D0
+~
+~
+176160775&3
+11342 7001
+D2
+~
+~
+0
+-1 7006
+> entry_prog 100~
+if variable(JWSecure) == 0
+mpsleep 4
+mpat 7001 mpforce watson radio The access code for the door is 11342. 
+endif
+~
+|
+S
+#7006
+Enclosed Hallway~
+A dark, non-descript USCM hallway. The walls are plain and bare except for
+the odd obscurity protruding from it, and the occasional camera. Machinery
+noise fills the corridors from piping and mechanical systems used to drive
+the subspace array. Dim lights line the ceiling, lighting the hallway but
+giving it a creepy feeling at the same time.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 7005
+D2
+~
+~
+0
+-1 7008
+D3
+~
+~
+0
+-1 7007
+> entry_prog 100~
+if ispc($n)
+if variable(OCTrap) == 0
+mpset OCTrap 1 
+mpecho &wYou hear a loud hissing noise from the west. 
+mpat 7007 mpmload 7003
+mpat 7007 mpmload 7003
+mpat 7006 mpmload 7003
+mpecho &wAn alien lunges from the west!
+mpsleep 600
+mpset OCTrap 0
+endif
+endif
+~
+|
+S
+#7007
+Electrical Maintenance Locker~
+&w&rThe electrical locker houses all sorts of wiring and routing equipment
+for the floor. This one has been blown open violently, and the cables
+eaten through. Its like something tore its way through it to reach its
+destination. The destruction is amazing. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+37748745
+0
+0 1
+D0
+~
+~
+33554432
+-1 7097
+D1
+~
+~
+0
+-1 7006
+S
+#7008
+Enclosed Hallway~
+A dark, non-descript USCM hallway. The walls are plain and bare except for
+the odd obscurity protruding from it, and the occasional camera. Machinery
+noise fills the corridors from piping and mechanical systems used to drive
+the subspace array. Dim lights line the ceiling, lighting the hallway but
+giving it a creepy feeling at the same time.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+4194313
+0
+0 1
+D0
+~
+~
+0
+-1 7006
+D1
+~
+~
+0
+-1 7011
+D3
+~
+~
+0
+-1 7009
+S
+#7009
+Enclosed Hallway~
+A dark, non-descript USCM hallway. The walls are plain and bare except for
+the odd obscurity protruding from it, and the occasional camera. Machinery
+noise fills the corridors from piping and mechanical systems used to drive
+the subspace array. Dim lights line the ceiling, lighting the hallway but
+giving it a creepy feeling at the same time.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 7008
+D2
+~
+~
+0
+-1 7022
+D3
+~
+~
+0
+-1 7010
+S
+#7010
+Enclosed Hallway~
+A dark, non-descript USCM hallway. The walls are plain and bare except for
+the odd obscurity protruding from it, and the occasional camera. Machinery
+noise fills the corridors from piping and mechanical systems used to drive
+the subspace array. Dim lights line the ceiling, lighting the hallway but
+giving it a creepy feeling at the same time.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 7009
+D4
+~
+~
+1&3
+-1 7013
+S
+#7011
+Enclosed Hallway~
+A dark, non-descript USCM hallway. The walls are plain and bare except for
+the odd obscurity protruding from it, and the occasional camera. Machinery
+noise fills the corridors from piping and mechanical systems used to drive
+the subspace array. Dim lights line the ceiling, lighting the hallway but
+giving it a creepy feeling at the same time.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 7012
+D2
+~
+~
+0
+-1 7031
+D3
+~
+~
+0
+-1 7008
+S
+#7012
+Enclosed Hallway~
+A dark, non-descript USCM hallway. The walls are plain and bare except for
+the odd obscurity protruding from it, and the occasional camera. Machinery
+noise fills the corridors from piping and mechanical systems used to drive
+the subspace array. Dim lights line the ceiling, lighting the hallway but
+giving it a creepy feeling at the same time.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D3
+~
+~
+0
+-1 7011
+D4
+~
+~
+3&3
+-1 7019
+S
+#7013
+Roof Access Ladder~
+A tight fit, these roof access ladders were obviously not made for comfort.
+Nothing more than a tall metal ladder with freezing cold rungs, it still
+provides quick access to the roof, in case of emergancies or when you need
+to access the Landing Beacon. Too bad there isn't an elevator.
+~
+~
+33554441
+0
+0 1
+D4
+~
+~
+0
+-1 7014
+D5
+~
+~
+1&1
+-1 7010
+S
+#7014
+Roof of the Communication Center~
+Unholy winds whistle across the platform at tremendous speeds. Its all but
+impossible to stay grounded without flying away, although the huge amount
+of equipment most marines carry help a bit. This portion of the roof is
+really nothing but a gantryway leading to the Landing Beacon. 
+~
+~
+2097153
+0
+0 1
+D1
+~
+~
+0
+-1 7015
+D5
+~
+~
+0
+-1 7013
+S
+#7015
+Roof of the Communication Center~
+Unholy winds whistle across the platform at tremendous speeds. Its all but
+impossible to stay grounded without flying away, although the huge amount
+of equipment most marines carry help a bit. This portion of the roof is
+really nothing but a gantryway leading to the Landing Beacon. 
+~
+~
+1
+0
+0 1
+D1
+~
+~
+0
+-1 7016
+D3
+~
+~
+0
+-1 7014
+S
+#7016
+Roof of the Communication Center~
+Unholy winds whistle across the platform at tremendous speeds. Its all but
+impossible to stay grounded without flying away, although the huge amount
+of equipment most marines carry help a bit. This portion of the roof is
+really nothing but a gantryway leading to the Landing Beacon. 
+~
+~
+1
+0
+0 1
+D0
+~
+~
+0
+-1 7020
+D1
+~
+~
+0
+-1 7017
+D2
+~
+~
+0
+-1 7088
+D3
+~
+~
+0
+-1 7015
+S
+#7017
+Roof of the Communication Center~
+Unholy winds whistle across the platform at tremendous speeds. Its all but
+impossible to stay grounded without flying away, although the huge amount
+of equipment most marines carry help a bit. This portion of the roof is
+really nothing but a gantryway leading to the Landing Beacon. 
+~
+~
+1
+0
+0 1
+D1
+~
+~
+0
+-1 7018
+D3
+~
+~
+0
+-1 7016
+S
+#7018
+Roof of the Communication Center~
+Unholy winds whistle across the platform at tremendous speeds. Its all but
+impossible to stay grounded without flying away, although the huge amount
+of equipment most marines carry help a bit. This portion of the roof is
+really nothing but a gantryway leading to the Landing Beacon. 
+~
+~
+2097153
+0
+0 1
+D3
+~
+~
+0
+-1 7017
+D5
+~
+~
+0
+-1 7019
+S
+#7019
+Roof Access Ladder~
+A tight fit, these roof access ladders were obviously not made for comfort.
+Nothing more than a tall metal ladder with freezing cold rungs, it still
+provides quick access to the roof, in case of emergancies or when you need
+to access the Landing Beacon. Too bad there isn't an elevator.
+~
+~
+33554441
+0
+0 1
+D4
+~
+~
+0
+-1 7018
+D5
+~
+~
+3&1
+-1 7012
+S
+#7020
+Roof of the Communication Center~
+Unholy winds whistle across the platform at tremendous speeds. Its all but
+impossible to stay grounded without flying away, although the huge amount
+of equipment most marines carry help a bit. This portion of the roof is
+really nothing but a gantryway leading to the Landing Beacon. 
+~
+~
+2097153
+0
+0 1
+D0
+~
+~
+0
+-1 7021
+D2
+~
+~
+0
+-1 7016
+S
+#7021
+&w&GCommunications Outpost :: Landing Beacon~
+&zThe landing beacon is the key to getting large ships in and out of the
+port successfully. Without it, Dropships couldn't land at there desination
+without blowing throw a few important structures. Keep this Beacon online
+so you can call in Dropship support when needed. 
+~
+~
+35651593
+0
+0 1
+D2
+~
+~
+0
+-1 7020
+S
+#7022
+Stairwell~
+A massive concrete stairwell provides access between levels, in the absence
+of a decent elevator. The stairwells provide a tactical advantage over the
+elevators, as they require no power to run and are much harder to disable
+unless your carrying a serious amount of demolition charges. The walls are
+completely bare except for the bulbs lighting the stairs. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 7009
+D5
+~
+~
+0
+-1 7023
+S
+#7023
+Stairwell~
+A massive concrete stairwell provides access between levels, in the absence
+of a decent elevator. The stairwells provide a tactical advantage over the
+elevators, as they require no power to run and are much harder to disable
+unless your carrying a serious amount of demolition charges. The walls are
+completely bare except for the bulbs lighting the stairs. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 7024
+D4
+~
+~
+0
+-1 7022
+S
+#7024
+Hallway~
+A dark, non-descript USCM hallway. The walls are plain and bare except for
+the odd obscurity protruding from it, and the occasional camera. Machinery
+noise fills the corridors from piping and mechanical systems used to drive
+the subspace array. Dim lights line the ceiling, lighting the hallway but
+giving it a creepy feeling at the same time.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 7026
+D2
+~
+~
+0
+-1 7023
+D3
+~
+~
+33554435
+-1 7025
+S
+#7025
+Marine Bunkroom~
+The USCM takes the comfort of its troops seriously, because a fatigued
+marine is a careless marine, and a careless marine is a dead marine. The
+walls of the bunkroom are colorfully decorated, and heating ducks keep the
+room nice and warm. They even have video screens for television and
+GlobalNet access. Its a real home away from home for Marines. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+4194313
+0
+0 1
+D1
+~
+~
+33554435
+-1 7024
+S
+#7026
+Hallway~
+A dark, non-descript USCM hallway. The walls are plain and bare except for
+the odd obscurity protruding from it, and the occasional camera. Machinery
+noise fills the corridors from piping and mechanical systems used to drive
+the subspace array. Dim lights line the ceiling, lighting the hallway but
+giving it a creepy feeling at the same time.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 7028
+D2
+~
+~
+0
+-1 7024
+D3
+~
+~
+33554435
+-1 7027
+S
+#7027
+Marine Bunkroom~
+The USCM takes the comfort of its troops seriously, because a fatigued
+marine is a careless marine, and a careless marine is a dead marine. The
+walls of the bunkroom are colorfully decorated, and heating ducks keep the
+room nice and warm. They even have video screens for television and
+GlobalNet access. Its a real home away from home for Marines. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D1
+~
+~
+33554435
+-1 7026
+S
+#7028
+Hallway~
+A dark, non-descript USCM hallway. The walls are plain and bare except for
+the odd obscurity protruding from it, and the occasional camera. Machinery
+noise fills the corridors from piping and mechanical systems used to drive
+the subspace array. Dim lights line the ceiling, lighting the hallway but
+giving it a creepy feeling at the same time.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 7030
+D2
+~
+~
+0
+-1 7026
+D3
+~
+~
+33554435
+-1 7029
+S
+#7029
+Marine Bunkroom~
+The USCM takes the comfort of its troops seriously, because a fatigued
+marine is a careless marine, and a careless marine is a dead marine. The
+walls of the bunkroom are colorfully decorated, and heating ducks keep the
+room nice and warm. They even have video screens for television and
+GlobalNet access. Its a real home away from home for Marines. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+268435465
+0
+0 1
+D1
+~
+~
+33554433
+-1 7028
+S
+#7030
+Stairwell~
+A massive concrete stairwell provides access between levels, in the absence
+of a decent elevator. The stairwells provide a tactical advantage over the
+elevators, as they require no power to run and are much harder to disable
+unless your carrying a serious amount of demolition charges. The walls are
+completely bare except for the bulbs lighting the stairs. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D2
+~
+~
+0
+-1 7028
+D5
+~
+~
+0
+-1 7041
+S
+#7031
+Stairwell~
+A massive concrete stairwell provides access between levels, in the absence
+of a decent elevator. The stairwells provide a tactical advantage over the
+elevators, as they require no power to run and are much harder to disable
+unless your carrying a serious amount of demolition charges. The walls are
+completely bare except for the bulbs lighting the stairs. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em.
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 7011
+D5
+~
+~
+0
+-1 7032
+S
+#7032
+Stairwell~
+A massive concrete stairwell provides access between levels, in the absence
+of a decent elevator. The stairwells provide a tactical advantage over the
+elevators, as they require no power to run and are much harder to disable
+unless your carrying a serious amount of demolition charges. The walls are
+completely bare except for the bulbs lighting the stairs. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em.
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 7033
+D4
+~
+~
+0
+-1 7031
+S
+#7033
+Hallway~
+A dark, non-descript USCM hallway. The walls are plain and bare except for
+the odd obscurity protruding from it, and the occasional camera. Machinery
+noise fills the corridors from piping and mechanical systems used to drive
+the subspace array. Dim lights line the ceiling, lighting the hallway but
+giving it a creepy feeling at the same time.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em.
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 7034
+D2
+~
+~
+0
+-1 7032
+S
+#7034
+Hallway~
+A dark, non-descript USCM hallway. The walls are plain and bare except for
+the odd obscurity protruding from it, and the occasional camera. Machinery
+noise fills the corridors from piping and mechanical systems used to drive
+the subspace array. Dim lights line the ceiling, lighting the hallway but
+giving it a creepy feeling at the same time.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em.
+~
+4194313
+0
+0 1
+D0
+~
+~
+0
+-1 7035
+D1
+~
+~
+234881025&1
+95595 7037
+D2
+~
+~
+0
+-1 7033
+S
+#7035
+Hallway~
+A dark, non-descript USCM hallway. The walls are plain and bare except for
+the odd obscurity protruding from it, and the occasional camera. Machinery
+noise fills the corridors from piping and mechanical systems used to drive
+the subspace array. Dim lights line the ceiling, lighting the hallway but
+giving it a creepy feeling at the same time.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em.
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 7036
+D2
+~
+~
+0
+-1 7034
+> entry_prog 100~
+if variable(Trapdoor) == 1
+mpecho &w&R[WARNING] - Motion detected, activating defensive systems.
+mpecho &wThe floor drops away, revealing a cell!
+mpat 7044 mpecho &wThe roof of the cell swings open! 
+mpat 7044 mpecho &w&CSomeone falls in from above!
+mpat 7035 mptransfer $n 7044
+mpat 7044 mpforce $n look
+mpat 7035 mpecho &wThe floor snaps shut, resetting the trap. 
+mpat 7044 mpecho &wThe roof slams shut, sealing the cell. 
+mpat 7003 mpecho &w&C(Alert) Second floor motion trap was triggered.
+endif
+~
+|
+S
+#7036
+Stairwell~
+A massive concrete stairwell provides access between levels, in the absence
+of a decent elevator. The stairwells provide a tactical advantage over the
+elevators, as they require no power to run and are much harder to disable
+unless your carrying a serious amount of demolition charges. The walls are
+completely bare except for the bulbs lighting the stairs. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em.
+~
+9
+0
+0 1
+D2
+~
+~
+0
+-1 7035
+D5
+~
+~
+0
+-1 7040
+S
+#7037
+Maintenance Storage~
+The Maintenance Storage section provides access to the power systems,
+including the extremely vital Backup Generator. Should anything happen to
+the Primary Generator outside, the Backup provides a way of calling for
+help. It will, however, need to be started manually. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em.
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 7038
+D2
+~
+~
+0
+-1 7039
+D3
+~
+~
+234881025&1
+95595 7034
+S
+#7038
+Maintenance Storage~
+The Maintenance Storage section provides access to the power systems,
+including the extremely vital Backup Generator. Should anything happen to
+the Primary Generator outside, the Backup provides a way of calling for
+help. It will, however, need to be started manually. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em.
+~
+4194313
+0
+0 1
+D2
+~
+~
+0
+-1 7037
+S
+#7039
+&BCommunications Outpost :: Backup Generator~
+This dark, musty room houses the only backup generator in the entire
+outpost. It couldn't run the entire base for very long, but does have
+enough power to allow radio contact to be established, and backup to be
+requested. It sits behind armored glass, protecting it from harm. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em.
+~
+4194313
+0
+0 1
+D0
+~
+~
+0
+-1 7037
+S
+#7040
+Stairwell~
+A massive concrete stairwell provides access between levels, in the absence
+of a decent elevator. The stairwells provide a tactical advantage over the
+elevators, as they require no power to run and are much harder to disable
+unless your carrying a serious amount of demolition charges. The walls are
+completely bare except for the bulbs lighting the stairs. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em.
+~
+9
+0
+0 1
+D3
+~
+~
+0
+-1 7042
+D4
+~
+~
+0
+-1 7036
+S
+#7041
+Stairwell~
+A massive concrete stairwell provides access between levels, in the absence
+of a decent elevator. The stairwells provide a tactical advantage over the
+elevators, as they require no power to run and are much harder to disable
+unless your carrying a serious amount of demolition charges. The walls are
+completely bare except for the bulbs lighting the stairs. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 7042
+D4
+~
+~
+0
+-1 7030
+S
+#7042
+Main Hallway~
+A dark, non-descript USCM hallway. The walls are plain and bare except for
+the odd obscurity protruding from it, and the occasional camera. Machinery
+noise fills the corridors from piping and mechanical systems used to drive
+the subspace array. Dim lights line the ceiling, lighting the hallway but
+giving it a creepy feeling at the same time.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+4194313
+0
+0 1
+D0
+~
+~
+0
+-1 7054
+D1
+~
+~
+0
+-1 7040
+D2
+~
+~
+0
+-1 7043
+D3
+~
+~
+0
+-1 7041
+D5
+~
+~
+2049
+-1 7084
+S
+#7043
+Main Hallway~
+A dark, non-descript USCM hallway. The walls are plain and bare except for
+the odd obscurity protruding from it, and the occasional camera. Machinery
+noise fills the corridors from piping and mechanical systems used to drive
+the subspace array. Dim lights line the ceiling, lighting the hallway but
+giving it a creepy feeling at the same time.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 7042
+D1
+~
+~
+234881031&3
+54332 7044
+D2
+~
+~
+0
+-1 7046
+D3
+~
+~
+0
+-1 7045
+S
+#7044
+USCM Holding Cell~
+Possibly one of the most secure locations in the entire base, this holding
+cell still isn't much to look at. The walls are solid concrete and
+unmarked except for a single barred window set into it. A massive armored
+door with a small window set into it prevents exit from the cell. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+33554441
+0
+0 1
+D2
+~
+~
+369098752&2
+-1 7051
+D3
+~
+~
+234881025&1
+54332 7043
+S
+#7045
+Marine Guard Station~
+This Guard Station is little more than a small booth, with barred windows
+for keeping a lookout. The walls are bare, and apparently made with
+concrete. Its only tactical advantage is its large firing arc provided by
+the barred windows. Wouldn't want to be in here with a grenade though. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+4194313
+0
+0 1
+D1
+~
+~
+0
+-1 7043
+D2
+~
+~
+369098752&2
+-1 7049
+D3
+~
+~
+369098752
+-1 7069
+D9
+~
+~
+369098752
+-1 7053
+S
+#7046
+&BCommunications Outpost :: Rear Entrance~
+Welcome to the USCM Communications Outpost. A massive structure of concrete
+and steel constructed for the soul purpose of providing long-range
+communication to the military. Standard, shortrange radio systems can
+relay in-system messages to nearby planets, while the massive Subspace
+Array provides long range communications outside of the system. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+37748745
+0
+0 1
+D0
+~
+~
+0
+-1 7043
+D2
+~
+~
+1073741824&2
+-1 7047
+D3
+~
+~
+109051943&3
+-1 7049
+S
+#7047
+&GIn The Jungle :: Southern Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+1073741824
+-1 7046
+D1
+~
+~
+0
+-1 7050
+D3
+~
+~
+0
+-1 7048
+S
+#7048
+&GIn The Jungle :: Southern Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7049
+D1
+~
+~
+0
+-1 7047
+S
+#7049
+&GIn The Jungle :: Southern Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+301989888
+-1 7045
+D1
+~
+~
+109051943&3
+-1 7046
+D2
+~
+~
+0
+-1 7048
+D3
+~
+~
+0
+-1 7053
+S
+#7050
+&GIn The Jungle :: Southern Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7051
+D1
+~
+~
+0
+-1 7083
+D3
+~
+~
+0
+-1 7047
+S
+#7051
+&GIn The Jungle :: Southern Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+301989888
+-1 7044
+D1
+~
+~
+0
+-1 7052
+D2
+~
+~
+0
+-1 7050
+S
+#7052
+&GIn The Jungle :: Eastern Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7070
+D2
+~
+~
+0
+-1 7083
+D3
+~
+~
+0
+-1 7051
+S
+#7053
+&GIn The Jungle :: Western Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7069
+D1
+~
+~
+0
+-1 7049
+D6
+~
+~
+301989888
+-1 7045
+S
+#7054
+Main Hallway~
+A dark, non-descript USCM hallway. The walls are plain and bare except for
+the odd obscurity protruding from it, and the occasional camera. Machinery
+noise fills the corridors from piping and mechanical systems used to drive
+the subspace array. Dim lights line the ceiling, lighting the hallway but
+giving it a creepy feeling at the same time.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls are
+completely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,
+you probably wouldn't even see 'em. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 7057
+D1
+~
+~
+0
+-1 7055
+D2
+~
+~
+0
+-1 7042
+D3
+~
+~
+0
+-1 7056
+S
+#7055
+Marine Guard Station~
+This Guard Station is little more than a small booth, with barred windows
+for keeping a lookout. The walls are bare, and apparently made with
+concrete. Its only tactical advantage is its large firing arc provided by
+the barred windows. Wouldn't want to be in here with a grenade though. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+4194313
+0
+0 1
+D0
+~
+~
+369098752&2
+-1 7060
+D1
+~
+~
+369098752
+-1 7062
+D3
+~
+~
+0
+-1 7054
+D6
+~
+~
+369098752
+-1 7061
+S
+#7056
+Marine Guard Station~
+This Guard Station is little more than a small booth, with barred windows
+for keeping a lookout. The walls are bare, and apparently made with
+concrete. Its only tactical advantage is its large firing arc provided by
+the barred windows. Wouldn't want to be in here with a grenade though. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+4194313
+0
+0 1
+D0
+~
+~
+369098752&2
+-1 7065
+D1
+~
+~
+0
+-1 7054
+D3
+~
+~
+369098752
+-1 7067
+D7
+~
+~
+369098752
+-1 7066
+S
+#7057
+&BCommunications Outpost :: Main Entrance~
+Welcome to the USCM Communications Outpost. A massive structure of concrete
+and steel constructed for the soul purpose of providing long-range
+communication to the military. Standard, shortrange radio systems can
+relay in-system messages to nearby planets, while the massive Subspace
+Array provides long range communications outside of the system.
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+33554441
+0
+0 1
+D0
+~
+~
+243269671&3
+-1 7058
+D2
+~
+~
+0
+-1 7054
+S
+#7058
+&GIn The Jungle :: Northern Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7071
+D1
+~
+~
+0
+-1 7059
+D2
+~
+~
+243269671&3
+-1 7057
+D3
+~
+~
+0
+-1 7064
+S
+#7059
+&GIn The Jungle :: Northern Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7072
+D1
+~
+~
+2048
+-1 7094
+D2
+~
+~
+0
+-1 7060
+D3
+~
+~
+0
+-1 7058
+S
+#7060
+&GIn The Jungle :: Northern Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7059
+D1
+~
+~
+0
+-1 7061
+D2
+~
+~
+301989888
+-1 7055
+S
+#7061
+&GIn The Jungle :: Eastern Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking. 
+~
+~
+0
+0
+0 1
+D2
+~
+~
+0
+-1 7062
+D3
+~
+~
+0
+-1 7060
+D9
+~
+~
+301989888
+-1 7055
+S
+#7062
+&GIn The Jungle :: Eastern Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking. 
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7061
+D1
+~
+~
+0
+-1 7078
+D2
+~
+~
+0
+-1 7063
+D3
+~
+~
+301989888
+-1 7055
+S
+#7063
+&GIn The Jungle :: Eastern Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking. 
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7062
+D1
+~
+~
+0
+-1 7074
+D2
+~
+~
+0
+-1 7070
+S
+#7064
+&GIn The Jungle :: Northern Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7073
+D1
+~
+~
+0
+-1 7058
+D2
+~
+~
+0
+-1 7065
+S
+#7065
+&GIn The Jungle :: Northern Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7064
+D2
+~
+~
+301989888
+-1 7056
+D3
+~
+~
+0
+-1 7066
+S
+#7066
+&GIn The Jungle :: Western Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7065
+D2
+~
+~
+0
+-1 7067
+D8
+~
+~
+301989888
+-1 7056
+S
+#7067
+&GIn The Jungle :: Western Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7066
+D1
+~
+~
+301989888
+-1 7056
+D2
+~
+~
+0
+-1 7068
+S
+#7068
+&GIn The Jungle :: Western Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+536870912
+0
+0 1
+D0
+~
+~
+0
+-1 7067
+D2
+~
+~
+0
+-1 7069
+D5
+~
+~
+33554432
+-1 7096
+S
+#7069
+&GIn The Jungle :: Western Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7068
+D1
+~
+~
+301989888
+-1 7045
+D2
+~
+~
+0
+-1 7053
+S
+#7070
+&GIn The Jungle :: Eastern Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7063
+D1
+~
+~
+0
+-1 7079
+D2
+~
+~
+0
+-1 7052
+S
+#7071
+&GIn The Jungle~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7072
+D2
+~
+~
+0
+-1 7058
+D3
+~
+~
+0
+-1 7073
+S
+#7072
+&GIn The Jungle~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7082
+D2
+~
+~
+0
+-1 7059
+D3
+~
+~
+0
+-1 7071
+S
+#7073
+&GIn The Jungle~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7080
+D1
+~
+~
+0
+-1 7071
+D2
+~
+~
+0
+-1 7064
+S
+#7074
+Communications Outpost :: Primary Generator~
+The Primary Generator provides power to the entire Communications Outpost.
+Should it fail, the base houses an internal backup generator on the second
+floor. The Generator is a massive thing, resting on a concrete base to
+prevent it from shifting should the ground be.. disturbed. 
+~
+~
+2097152
+0
+0 1
+D0
+~
+~
+0
+-1 7078
+D1
+~
+~
+0
+-1 7075
+D2
+~
+~
+0
+-1 7079
+D3
+~
+~
+0
+-1 7063
+D5
+~
+~
+0
+-1 7087
+S
+#7075
+&GIn The Jungle :: Near the Generator~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7076
+D2
+~
+~
+0
+-1 7077
+D3
+~
+~
+0
+-1 7074
+S
+#7076
+&GIn The Jungle :: Near the Generator~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7090
+D2
+~
+~
+0
+-1 7075
+D3
+~
+~
+0
+-1 7078
+S
+#7077
+&GIn The Jungle :: Near the Generator~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7075
+D3
+~
+~
+0
+-1 7079
+S
+#7078
+&GIn The Jungle :: Near the Generator~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7076
+D2
+~
+~
+0
+-1 7074
+D3
+~
+~
+0
+-1 7062
+S
+#7079
+&GIn The Jungle :: Near the Generator~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7074
+D1
+~
+~
+0
+-1 7077
+D3
+~
+~
+0
+-1 7070
+S
+#7080
+&GIn The Jungle~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7081
+D2
+~
+~
+0
+-1 7073
+S
+#7081
+&GIn The Jungle :: Small Clearing~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+136314880
+0
+0 1
+D1
+~
+~
+0
+-1 7082
+D3
+~
+~
+0
+-1 7080
+S
+#7082
+&GIn The Jungle~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D2
+~
+~
+0
+-1 7072
+D3
+~
+~
+0
+-1 7081
+S
+#7083
+&GIn The Jungle :: Eastern Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+536870912
+0
+0 1
+D0
+~
+~
+0
+-1 7052
+D3
+~
+~
+0
+-1 7050
+S
+#7084
+&RUnderground Maintenance Passage~
+&rThis passage is little more than a concrete tube lined with wires and
+cables. Massive lines run east and west, connecting the Primary Generator
+to the Communications Outpost. The tunnel is dark and musty, and extremely
+dark. The floor has a small amount of water covering it from the rain.
+~
+~
+131073
+0
+0 1
+D1
+~
+~
+0
+-1 7085
+D3
+~
+~
+0
+-1 7095
+D4
+~
+~
+1
+-1 7042
+S
+#7085
+&RUnderground Maintenance Passage~
+&rThis passage is little more than a concrete tube lined with wires and
+cables. Massive lines run east and west, connecting the Primary Generator
+to the Communications Outpost. The tunnel is dark and musty, and extremely
+dark. The floor has a small amount of water covering it from the rain.
+~
+~
+131073
+0
+0 1
+D1
+~
+~
+0
+-1 7086
+D3
+~
+~
+0
+-1 7084
+S
+#7086
+&RUnderground Maintenance Passage~
+&rThis passage is little more than a concrete tube lined with wires and
+cables. Massive lines run east and west, connecting the Primary Generator
+to the Communications Outpost. The tunnel is dark and musty, and extremely
+dark. The floor has a small amount of water covering it from the rain.
+~
+~
+131073
+0
+0 1
+D1
+~
+~
+0
+-1 7087
+D3
+~
+~
+0
+-1 7085
+S
+#7087
+&RUnderground Power Vault~
+&rThis chamber houses the power conductor coils for the Primary Generator.
+When the Generator is online, this is absolutely the last place you want
+to be. Coming in here is a good way to get yourself nice and toasty.
+However, the connecting maintenance passage to the west provides handy
+access to the base through a hatchway. 
+~
+~
+2228224
+0
+0 1
+D3
+~
+~
+0
+-1 7086
+D4
+~
+~
+0
+-1 7074
+> entry_prog 100~
+mpgoto 7074
+if ovnumroom(7009) == 1
+mpgoto 7087
+mpechoat $n &w&YElectricity arcs from the coils, shocking you! 
+mpechoat $n &w&RAIIIGH! You've been toasted! Cut the power first! 
+mpdamage $n 1000
+else
+mpgoto 7087
+endif
+~
+|
+S
+#7088
+Roof of the Communication Center~
+Unholy winds whistle across the platform at tremendous speeds. Its all but
+impossible to stay grounded without flying away, although the huge amount
+of equipment most marines carry help a bit. This portion of the roof is
+really nothing but a gantryway leading to the Landing Beacon. 
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7016
+D2
+~
+~
+0
+-1 7089
+S
+#7089
+&RCommunications Outpost :: Helicopter Pad~
+Unholy winds whistle across the platform at tremendous speeds. Its all but
+impossible to stay grounded without flying away, although the huge amount
+of equipment most marines carry help a bit.  Dropships make their landings
+here and at one other pad to provide reinforcements for the outpost.
+~
+~
+270532608
+0
+0 1
+D0
+~
+~
+0
+-1 7088
+S
+#7090
+&GIn The Jungle :: Overgrown Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7091
+D2
+~
+~
+0
+-1 7076
+S
+#7091
+&GIn The Jungle :: Overgrown Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 7092
+D2
+~
+~
+0
+-1 7090
+S
+#7092
+&GIn The Jungle :: Overgrown Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+134217728
+0
+0 1
+D2
+~
+~
+0
+-1 7091
+D3
+~
+~
+0
+-1 7093
+S
+#7093
+&GIn The Jungle :: Overgrown Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7092
+D3
+~
+~
+0
+-1 7094
+S
+#7094
+&GIn The Jungle :: Overgrown Path~
+&gThis hot, humid part of the jungle not only provides shelter for millions
+of mosquitoes, but it houses a moderately-sized USCM Communications
+Facility, for maintaining contact with other planets and systems. Nearby
+is the poorly defended outpost, ready for the taking.
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 7093
+D3
+~
+~
+0
+-1 7059
+S
+#7095
+&RUnderground Maintenance Passage~
+&rThis passage is little more than a concrete tube lined with wires and
+cables. Massive lines run east and west, connecting the Primary Generator
+to the Communications Outpost. The tunnel is dark and musty, and extremely
+dark. The floor has a small amount of water covering it from the rain.
+~
+~
+131073
+0
+0 1
+D1
+~
+~
+0
+-1 7084
+D3
+~
+~
+0
+-1 7096
+S
+#7096
+&RUnderground Maintenance Passage~
+&rThis passage is little more than a concrete tube lined with wires and
+cables. Massive lines run east and west, connecting the Primary Generator
+to the Communications Outpost. The tunnel is dark and musty, and extremely
+dark. The floor has a small amount of water covering it from the rain.
+~
+~
+131073
+0
+0 1
+D1
+~
+~
+0
+-1 7095
+D4
+~
+~
+33554432
+-1 7068
+S
+#7097
+Electrical Maintenance Locker~
+&w&rThe electrical locker houses all sorts of wiring and routing equipment
+for the floor. This one has been blown open violently, and the cables
+eaten through. Its like something tore its way through it to reach its
+destination. The destruction is amazing. 
+~
+&gThis room has been taken over by the ever potent Aliens. The walls
+arecompletely unreconizible under their thick coating of parastic goo. The
+walls are so dark that even if an alien was standing right next to you,you
+probably wouldn't even see 'em. 
+~
+37748744
+0
+0 1
+D2
+~
+~
+33554432
+-1 7007
+S
+#7100
+(Upper Anchor)~
+~
+~
+1073807360
+0
+0 1
+S
+#0
+
+
+#RESETS
+O 1 7001 1 7005
+D 0 7005 0 2
+M 1 7000 2 7006
+E 1 86 1 5
+E 1 666 1 6
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+O 1 7003 1 7010
+D 0 7010 4 1
+D 0 7013 5 1
+D 0 7019 5 1
+O 1 7003 1 7012
+D 0 7012 4 1
+O 1 7001 1 7021
+O 1 7005 1 7021
+M 1 664 11 7016
+E 1 667 1 5
+E 1 666 1 6
+G 1 81 1
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+D 0 7026 3 1
+D 0 7028 3 1
+M 1 7004 2 7024
+E 1 80 1 16
+E 1 667 1 5
+E 1 666 1 6
+G 1 81 1
+G 1 81 1
+G 1 81 1
+O 1 7006 1 7024
+D 0 7024 3 1
+M 1 7004 2 7027
+E 1 80 1 16
+E 1 667 1 5
+E 1 666 1 6
+G 1 81 1
+G 1 81 1
+G 1 81 1
+O 1 7006 1 7027
+D 0 7027 1 1
+O 1 7007 1 7039
+D 0 7034 1 2
+M 1 664 13 7055
+E 1 667 1 5
+E 1 666 1 6
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+M 1 664 13 7057
+E 1 667 1 5
+E 1 666 1 6
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+D 0 7057 0 2
+M 1 664 14 7056
+E 1 667 1 5
+E 1 666 1 6
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+D 0 7047 0 3
+D 0 7043 1 2
+D 0 7058 2 2
+O 1 7009 1 7074
+O 1 7002 1 7002
+O 1 7004 1 7002
+O 1 7011 1 7002
+D 0 7002 3 1
+M 1 7005 1 7046
+E 1 7010 1 5
+E 1 666 1 6
+E 1 80 1 16
+G 1 81 1
+G 1 682 1
+G 1 81 1
+G 1 81 1
+O 1 7001 1 7046
+D 0 7046 2 3
+D 0 7046 3 2
+D 0 7049 1 2
+O 1 7012 1 7018
+O 1 7012 1 7014
+M 1 664 15 7045
+E 1 667 1 5
+E 1 666 1 6
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+O 1 666 1 7025
+D 0 7025 1 1
+M 1 50 1 7037
+D 0 7037 3 2
+D 0 7084 4 1
+D 0 7042 5 1
+M 1 7006 1 7004
+E 1 682 1 17
+E 1 53 1 5
+M 1 7008 1 7004
+E 1 682 1 17
+E 1 53 1 5
+M 1 7009 1 7004
+E 1 682 1 17
+E 1 53 1 5
+M 1 7007 1 7004
+E 1 682 1 17
+E 1 53 1 5
+G 1 7015 1
+D 0 7004 2 2
+M 1 7001 1 7001
+E 1 678 1 16
+G 1 682 1
+G 1 679 1
+D 0 7001 0 2
+D 0 7001 1 1
+D 0 7001 2 2
+O 1 7016 1 7003
+O 1 7017 1 7003
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+M  7000 spec_enemy_scan
+M  7003 spec_enemy_scan
+M  7004 spec_enemy_scan
+M  7010 spec_enemy_scan
+S
+
+
+#$

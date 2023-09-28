@@ -1,0 +1,4150 @@
+#COMMAND
+Name        '~
+Code        do_say
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        ,~
+Code        do_emote
+Position    5
+Level       1
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        .~
+Code        do_ooc
+Position    4
+Level       0
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        1~
+Code        do_radio1
+Position    4
+Level       1
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        2~
+Code        do_radio2
+Position    4
+Level       1
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        3~
+Code        do_radio3
+Position    4
+Level       1
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        4~
+Code        do_radio4
+Position    4
+Level       1
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        :~
+Code        do_immtalk
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        arm~
+Code        do_arm
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        at~
+Code        do_at
+Position    0
+Level       103
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        affected~
+Code        do_affected
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        afk~
+Code        do_afk
+Position    4
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        ansi~
+Code        do_ansi
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        aassign~
+Code        do_aassign
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        activate~
+Code        do_use
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        advance~
+Code        do_advance
+Position    0
+Level       200
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        allow~
+Code        do_allow
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        areas~
+Code        do_areas
+Position    0
+Level       0
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        aset~
+Code        do_aset
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        astat~
+Code        do_astat
+Position    0
+Level       103
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        apply~
+Code        do_apply
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        authorize~
+Code        do_authorize
+Position    0
+Level       102
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        avtalk~
+Code        do_avtalk
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        allowmp~
+Code        do_allowmp
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        allowpk~
+Code        do_allowpk
+Position    0
+Level       200
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        abackup~
+Code        do_abackup
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        armor~
+Code        do_armor
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        allarenas~
+Code        do_allarenas
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        arena~
+Code        do_arena
+Position    0
+Level       1
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        allbots~
+Code        do_allbots
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        attach~
+Code        do_attach
+Position    4
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        block~
+Code        do_block
+Position    7
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        beep~
+Code        do_beep
+Position    5
+Level       0
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        buy~
+Code        do_buy
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        balzhur~
+Code        do_balzhur
+Position    6
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        bamfin~
+Code        do_bamfin
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        bamfout~
+Code        do_bamfout
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        ban~
+Code        do_ban
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        bestow~
+Code        do_bestow
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        bio~
+Code        do_bio
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        bodybag~
+Code        do_bodybag
+Position    0
+Level       200
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        boards~
+Code        do_boards
+Position    0
+Level       103
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        bset~
+Code        do_bset
+Position    0
+Level       104
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        bstat~
+Code        do_bstat
+Position    0
+Level       103
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        bug~
+Code        do_bug
+Position    0
+Level       0
+Log         1
+Ooc         1
+End
+
+#COMMAND
+Name        bury~
+Code        do_bury
+Position    8
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        bestowarea~
+Code        do_bestowarea
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        bashdoor~
+Code        do_bashdoor
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        buildwalk~
+Code        do_buildwalk
+Position    0
+Level       103
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        close~
+Code        do_close
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        channels~
+Code        do_channels
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        chat~
+Code        do_chat
+Position    4
+Level       1
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        checkvnums~
+Code        do_check_vnums
+Position    0
+Level       103
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        cedit~
+Code        do_cedit
+Position    0
+Level       200
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        compare~
+Code        do_compare
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        commands~
+Code        do_commands
+Position    0
+Level       0
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        comment~
+Code        do_comment
+Position    5
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        config~
+Code        do_config
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        credits~
+Code        do_credits
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        cset~
+Code        do_cset
+Position    0
+Level       200
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        cmdtable~
+Code        do_cmdtable
+Position    0
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        cloak~
+Code        do_cloak
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        complain~
+Code        do_complain
+Position    0
+Level       10
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        cannon~
+Code        do_sc
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        carry~
+Code        do_carry
+Position    0
+Level       2
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        compute~
+Code        do_compute
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        changes~
+Code        do_changes
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        censor~
+Code        do_censor
+Position    0
+Level       1
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        cover~
+Code        do_cover
+Position    7
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        confuse~
+Code        do_confuse
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        copyover~
+Code        do_copyover
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        construct~
+Code        do_construct
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        down~
+Code        do_down
+Position    7
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        drop~
+Code        do_drop
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        deny~
+Code        do_deny
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        description~
+Code        do_description
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        destro~
+Code        do_destro
+Position    8
+Level       105
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        destroy~
+Code        do_destroy
+Position    8
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        dig~
+Code        do_dig
+Position    8
+Level       3
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        disconnect~
+Code        do_disconnect
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        dmesg~
+Code        do_dmesg
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        drag~
+Code        do_drag
+Position    8
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        dnd~
+Code        do_dnd
+Position    0
+Level       105
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        deploy~
+Code        do_deploy
+Position    7
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        detach~
+Code        do_detach
+Position    4
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        dehive~
+Code        do_dehive
+Position    7
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        delay~
+Code        do_delay
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        east~
+Code        do_east
+Position    7
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        eat~
+Code        do_eat
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        emote~
+Code        do_emote
+Position    5
+Level       1
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        exits~
+Code        do_exits
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        examine~
+Code        do_examine
+Position    4
+Level       0
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        equipment~
+Code        do_equipment
+Position    0
+Level       0
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        echo~
+Code        do_echo
+Position    0
+Level       105
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        empty~
+Code        do_empty
+Position    6
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        enter~
+Code        do_enter
+Position    7
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        entryvector~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        eject~
+Code        do_eject
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        fire~
+Code        do_fire
+Position    4
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        follow~
+Code        do_follow
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        fixchar~
+Code        do_fixchar
+Position    0
+Level       200
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        foldarea~
+Code        do_foldarea
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        for~
+Code        do_for
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        force~
+Code        do_force
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        forceclose~
+Code        do_forceclose
+Position    0
+Level       102
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        formpass~
+Code        do_form_password
+Position    0
+Level       200
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        freeze~
+Code        do_freeze
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        fquit~
+Code        do_fquit
+Position    0
+Level       102
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        freevnums~
+Code        do_freevnums
+Position    0
+Level       105
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        get~
+Code        do_get
+Position    4
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        gravitywell~
+Code        reserved
+Position    0
+Level       8
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        give~
+Code        do_give
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        glance~
+Code        do_glance
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        goto~
+Code        do_goto
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        gossip~
+Code        do_ooc
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        greet~
+Code        reserved
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        help~
+Code        do_help
+Position    0
+Level       0
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        hyperspace~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        hold~
+Code        do_wear
+Position    4
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        hedit~
+Code        do_hedit
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        hell~
+Code        do_hell
+Position    0
+Level       104
+Log         4
+Ooc         0
+End
+
+#COMMAND
+Name        hlist~
+Code        do_hlist
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        holylight~
+Code        do_holylight
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        hset~
+Code        do_hset
+Position    0
+Level       104
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        homepage~
+Code        do_homepage
+Position    0
+Level       5
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        html~
+Code        do_html
+Position    0
+Level       200
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        hide~
+Code        do_hide
+Position    7
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        hive~
+Code        do_hive
+Position    7
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        inventory~
+Code        do_inventory
+Position    0
+Level       0
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        ide~
+Code        do_ide
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        idea~
+Code        do_idea
+Position    0
+Level       0
+Log         1
+Ooc         1
+End
+
+#COMMAND
+Name        info~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        installarea~
+Code        do_installarea
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        instazone~
+Code        do_instazone
+Position    0
+Level       200
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        invis~
+Code        do_invis
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        instaroom~
+Code        do_instaroom
+Position    0
+Level       103
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        immtalk~
+Code        do_immtalk
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        immortalize~
+Code        do_immortalize
+Position    0
+Level       105
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        iwho~
+Code        reserved
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        i105~
+Code        do_i105
+Position    0
+Level       105
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        i104~
+Code        do_i104
+Position    0
+Level       104
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        i103~
+Code        do_i103
+Position    0
+Level       103
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        intercom~
+Code        reserved
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        injurys~
+Code        reserved
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        i200~
+Code        do_i200
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        imageship~
+Code        reserved
+Position    0
+Level       200
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        inform~
+Code        reserved
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        ignore~
+Code        do_ignore
+Position    0
+Level       1
+Log         1
+Ooc         1
+End
+
+#COMMAND
+Name        jumpvector~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        junk~
+Code        do_junk
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        kill~
+Code        do_kill
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        kneel~
+Code        do_kneel
+Position    4
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        look~
+Code        do_look
+Position    4
+Level       0
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        land~
+Code        reserved
+Position    5
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        launch~
+Code        reserved
+Position    5
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        lock~
+Code        do_lock
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        level~
+Code        do_level
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        list~
+Code        do_list
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        languages~
+Code        reserved
+Position    5
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        last~
+Code        do_last
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        leave~
+Code        do_leave
+Position    7
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        leaveship~
+Code        reserved
+Position    8
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        lightspeed~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        litterbug~
+Code        reserved
+Position    0
+Level       101
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        loadarea~
+Code        do_loadarea
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        loadup~
+Code        do_loadup
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        log~
+Code        do_log
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        laws~
+Code        reserved
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        lowpurge~
+Code        do_low_purge
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        lstat~
+Code        do_lstat
+Position    0
+Level       104
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        lob~
+Code        do_lob
+Position    7
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        makestarsystem~
+Code        reserved
+Position    0
+Level       200
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        mpecho~
+Code        do_mpecho
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpechoat~
+Code        do_mpechoat
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mea~
+Code        do_mpechoat
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpat~
+Code        do_mpat
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpforce~
+Code        do_mpforce
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpechoaround~
+Code        do_mpechoaround
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mer~
+Code        do_mpechoaround
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpasound~
+Code        do_mpasound
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpoload~
+Code        do_mpoload
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpjunk~
+Code        do_mpjunk
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpgoto~
+Code        do_mpgoto
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpdamage~
+Code        do_mp_damage
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mprestore~
+Code        do_mp_restore
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpkill~
+Code        do_mpkill
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mptransfer~
+Code        do_mptransfer
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpmload~
+Code        do_mpmload
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpnothing~
+Code        do_mpnothing
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mppurge~
+Code        do_mppurge
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpinvis~
+Code        do_mpinvis
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpadvance~
+Code        do_mpadvance
+Position    0
+Level       0
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        mpapply~
+Code        do_mpapply
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpapplyb~
+Code        do_mpapplyb
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mppkset~
+Code        do_mppkset
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpclosepassage~
+Code        do_mp_close_passage
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpopenpassage~
+Code        do_mp_open_passage
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpdream~
+Code        do_mpdream
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpslay~
+Code        do_mp_slay
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mppractice~
+Code        do_mp_practice
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mail~
+Code        do_mailroom
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        makeboard~
+Code        do_makeboard
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        makeship~
+Code        reserved
+Position    0
+Level       200
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        makeshop~
+Code        do_makeshop
+Position    0
+Level       103
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        makewizlist~
+Code        do_makewizlist
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        mcreate~
+Code        do_mcreate
+Position    0
+Level       103
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        memory~
+Code        do_memory
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        message~
+Code        do_noteroom
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mfind~
+Code        do_mfind
+Position    0
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        minvoke~
+Code        do_minvoke
+Position    0
+Level       102
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        mlist~
+Code        do_mlist
+Position    0
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpedit~
+Code        do_mpedit
+Position    0
+Level       102
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        mpstat~
+Code        do_mpstat
+Position    0
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mrange~
+Code        do_mrange
+Position    0
+Level       103
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mset~
+Code        do_mset
+Position    0
+Level       103
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        mstat~
+Code        do_mstat
+Position    0
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mwhere~
+Code        do_mwhere
+Position    0
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpgain~
+Code        do_mpgain
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        makeplanet~
+Code        reserved
+Position    0
+Level       200
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        moons~
+Code        reserved
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mdelete~
+Code        do_mdelete
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        moveship~
+Code        reserved
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        makevehicle~
+Code        reserved
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        menu~
+Code        do_menu
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mprmflag~
+Code        do_mprmflag
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mprat~
+Code        do_mprat
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        makearena~
+Code        do_makearena
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        makebot~
+Code        do_makebot
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpset~
+Code        do_mpset
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpteamgain~
+Code        do_mpteamgain
+Position    0
+Level       1
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        mpmonitor~
+Code        do_mpmonitor
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpsay~
+Code        do_say
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpadd~
+Code        do_mpadd
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpsub~
+Code        do_mpsub
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpwait~
+Code        do_mpwait
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpcycle~
+Code        do_mpcycle
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpvar~
+Code        do_mpvar
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        mpblast~
+Code        do_mpblast
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        north~
+Code        do_north
+Position    7
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        name~
+Code        do_name
+Position    0
+Level       0
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        ne~
+Code        do_northeast
+Position    7
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        nw~
+Code        do_northwest
+Position    7
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        note~
+Code        do_noteroom
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        note~
+Code        do_noteroom
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        newbiechat~
+Code        do_newbiechat
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        newbieset~
+Code        do_newbieset
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        noemote~
+Code        do_noemote
+Position    0
+Level       103
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        noresolve~
+Code        do_noresolve
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        northeast~
+Code        do_northeast
+Position    7
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        northwest~
+Code        do_northwest
+Position    7
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        notell~
+Code        do_notell
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        notitle~
+Code        reserved
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        news~
+Code        do_news
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        newswrite~
+Code        reserved
+Position    0
+Level       5
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        navstatus~
+Code        reserved
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        order~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        open~
+Code        do_open
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        openbay~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        openhatch~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        ocreate~
+Code        do_ocreate
+Position    0
+Level       103
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        ofind~
+Code        do_ofind
+Position    0
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        oinvoke~
+Code        do_oinvoke
+Position    0
+Level       102
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        oldscore~
+Code        do_oldscore
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        olist~
+Code        do_olist
+Position    0
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        opedit~
+Code        do_opedit
+Position    0
+Level       103
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        opstat~
+Code        do_opstat
+Position    0
+Level       103
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        orange~
+Code        do_orange
+Position    0
+Level       103
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        ostat~
+Code        do_ostat
+Position    0
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        owhere~
+Code        do_owhere
+Position    0
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        oset~
+Code        do_oset
+Position    0
+Level       103
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        ooc~
+Code        do_ooc
+Position    4
+Level       0
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        ooc2~
+Code        do_newbiechat
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        odelete~
+Code        do_odelete
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        ordership~
+Code        reserved
+Position    0
+Level       1
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        put~
+Code        do_put
+Position    4
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        password~
+Code        do_password
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        practice~
+Code        do_practice
+Position    4
+Level       0
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        pluogus~
+Code        reserved
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        prompt~
+Code        do_prompt
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        pager~
+Code        do_pager
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        planets~
+Code        reserved
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        purge~
+Code        do_purge
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        proximity~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        pfiles~
+Code        do_pfiles
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        prestore~
+Code        do_prestore
+Position    0
+Level       200
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        prone~
+Code        do_prone
+Position    4
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        qui~
+Code        do_qui
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        quit~
+Code        do_quit
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        radar~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        recall~
+Code        do_recall
+Position    5
+Level       100
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        recharge~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        refuel~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        reload~
+Code        do_reload
+Position    4
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        remove~
+Code        do_remove
+Position    4
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        rempilot~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        report~
+Code        reserved
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        repairship~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        reply~
+Code        do_reply
+Position    5
+Level       0
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        rank~
+Code        reserved
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        rat~
+Code        do_rat
+Position    0
+Level       102
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        reboo~
+Code        do_reboo
+Position    0
+Level       103
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        reboot~
+Code        do_reboot
+Position    0
+Level       200
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        recho~
+Code        do_recho
+Position    0
+Level       105
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        redit~
+Code        do_redit
+Position    0
+Level       103
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        regoto~
+Code        do_regoto
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        rent~
+Code        reserved
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        reset~
+Code        do_reset
+Position    0
+Level       103
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        resetship~
+Code        reserved
+Position    0
+Level       103
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        restore~
+Code        do_restore
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        restoretime~
+Code        do_restoretime
+Position    0
+Level       103
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        restrict~
+Code        do_restrict
+Position    0
+Level       105
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        return~
+Code        do_return
+Position    0
+Level       104
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        retran~
+Code        do_retran
+Position    0
+Level       102
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        retire~
+Code        reserved
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        rip~
+Code        do_rip
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        rlist~
+Code        do_rlist
+Position    0
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        rpedit~
+Code        do_rpedit
+Position    0
+Level       103
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        rpstat~
+Code        do_rpstat
+Position    0
+Level       103
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        rstat~
+Code        do_rstat
+Position    0
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        rreset~
+Code        do_rreset
+Position    0
+Level       103
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        rdig~
+Code        do_rdig
+Position    8
+Level       103
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        radio~
+Code        do_radio
+Position    4
+Level       1
+Log         1
+Ooc         1
+End
+
+#COMMAND
+Name        rcopy~
+Code        do_rcopy
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        rdelete~
+Code        do_rdelete
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        rfill~
+Code        do_rfill
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        rpcopy~
+Code        do_rpcopy
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        release~
+Code        do_release
+Position    0
+Level       2
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        remotebay~
+Code        reserved
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        renameship~
+Code        reserved
+Position    0
+Level       5
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        rcreate~
+Code        do_rcreate
+Position    0
+Level       103
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        respawn~
+Code        do_respawn
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        rescue~
+Code        do_rescue
+Position    7
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        request~
+Code        do_request
+Position    0
+Level       7
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        rage~
+Code        do_rage
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        south~
+Code        do_south
+Position    7
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        se~
+Code        do_southeast
+Position    7
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        sw~
+Code        do_southwest
+Position    7
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        show~
+Code        do_show
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        say~
+Code        do_say
+Position    4
+Level       1
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        save~
+Code        do_save
+Position    0
+Level       0
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        sacrifice~
+Code        reserved
+Position    5
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        score~
+Code        do_score
+Position    0
+Level       0
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        shields~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        stand~
+Code        do_stand
+Position    4
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        savearea~
+Code        do_savearea
+Position    0
+Level       103
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        sell~
+Code        do_sell
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        sellship~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        sedit~
+Code        do_sedit
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        setboot~
+Code        do_set_boot_time
+Position    0
+Level       200
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        setship~
+Code        reserved
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        setstarsystem~
+Code        reserved
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        ships~
+Code        reserved
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        shout~
+Code        do_shout
+Position    5
+Level       3
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        shops~
+Code        do_shops
+Position    0
+Level       102
+Log         3
+Ooc         0
+End
+
+#COMMAND
+Name        shopset~
+Code        do_shopset
+Position    0
+Level       103
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        shopstat~
+Code        do_shopstat
+Position    0
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        shove~
+Code        do_shove
+Position    8
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        showship~
+Code        reserved
+Position    0
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        showstarsystem~
+Code        reserved
+Position    0
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        shutdow~
+Code        do_shutdow
+Position    0
+Level       105
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        shutdown~
+Code        do_shutdown
+Position    0
+Level       200
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        sit~
+Code        do_sit
+Position    4
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        silence~
+Code        do_silence
+Position    0
+Level       104
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        sla~
+Code        do_sla
+Position    0
+Level       105
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        slay~
+Code        do_slay
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        slist~
+Code        do_slist
+Position    4
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        slookup~
+Code        do_slookup
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        snoop~
+Code        do_snoop
+Position    0
+Level       102
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        sober~
+Code        do_sober
+Position    0
+Level       102
+Log         4
+Ooc         0
+End
+
+#COMMAND
+Name        socials~
+Code        do_socials
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        southeast~
+Code        do_southeast
+Position    7
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        southwest~
+Code        do_southwest
+Position    7
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        speak~
+Code        do_speak
+Position    5
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        speed~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        sset~
+Code        do_sset
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        switch~
+Code        do_switch
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        starsystems~
+Code        reserved
+Position    0
+Level       2
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        status~
+Code        reserved
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        systemtalk~
+Code        reserved
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        shiptalk~
+Code        reserved
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        speeders~
+Code        reserved
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        sound~
+Code        do_sound
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        setplanet~
+Code        reserved
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        showplanet~
+Code        reserved
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        saveall~
+Code        do_saveall
+Position    0
+Level       105
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        selfdestruct~
+Code        reserved
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        sethome~
+Code        reserved
+Position    0
+Level       30
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        scramble~
+Code        reserved
+Position    0
+Level       30
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        setlock~
+Code        do_setlock
+Position    0
+Level       101
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        setcode~
+Code        reserved
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        showvehicle~
+Code        reserved
+Position    0
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        setvehicle~
+Code        reserved
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        setooc~
+Code        do_setooc
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        setmode~
+Code        do_setmode
+Position    4
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        scan~
+Code        do_scan
+Position    4
+Level       1
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        snipe~
+Code        do_snipe
+Position    4
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        spray~
+Code        do_spray
+Position    4
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        setarena~
+Code        do_setarena
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        showarena~
+Code        do_showarena
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        setbot~
+Code        do_setbot
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        showbot~
+Code        do_showbot
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        stack~
+Code        do_stack
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        spit~
+Code        do_spit
+Position    7
+Level       8
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        smash~
+Code        do_smash
+Position    7
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        slash~
+Code        do_smash
+Position    7
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        tackle~
+Code        do_tackle
+Position    7
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        tell~
+Code        do_tell
+Position    5
+Level       1
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        take~
+Code        do_get
+Position    4
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        target~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        time~
+Code        do_time
+Position    0
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        title~
+Code        reserved
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        trajectory~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        transfer~
+Code        do_transfer
+Position    0
+Level       101
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        trust~
+Code        do_trust
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        typo~
+Code        do_typo
+Position    0
+Level       0
+Log         1
+Ooc         1
+End
+
+#COMMAND
+Name        timecmd~
+Code        do_timecmd
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        teach~
+Code        reserved
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        transship~
+Code        reserved
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        tractorbeam~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        transferfuel~
+Code        reserved
+Position    0
+Level       30
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        taxi~
+Code        reserved
+Position    0
+Level       2
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        tradeship~
+Code        reserved
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        transvehicle~
+Code        reserved
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        throw~
+Code        do_throw
+Position    4
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        track~
+Code        do_track
+Position    4
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        treat~
+Code        do_treat
+Position    7
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        up~
+Code        do_up
+Position    7
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        unlock~
+Code        do_unlock
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        unfoldarea~
+Code        do_unfoldarea
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        unhell~
+Code        do_unhell
+Position    0
+Level       104
+Log         4
+Ooc         0
+End
+
+#COMMAND
+Name        use~
+Code        do_use
+Position    4
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        users~
+Code        do_users
+Position    0
+Level       103
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        unsilence~
+Code        do_unsilence
+Position    0
+Level       104
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        upgrade~
+Code        reserved
+Position    0
+Level       7
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        undock~
+Code        reserved
+Position    0
+Level       10
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        unload~
+Code        do_unload
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        vector~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        value~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        vassign~
+Code        do_vassign
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        velocity~
+Code        reserved
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        vsearch~
+Code        do_vsearch
+Position    0
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        viewship~
+Code        reserved
+Position    0
+Level       200
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        version~
+Code        do_version
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        vision~
+Code        do_switch
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        vote~
+Code        do_vote
+Position    0
+Level       1
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        west~
+Code        do_west
+Position    7
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        who~
+Code        do_who
+Position    0
+Level       0
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        wear~
+Code        do_wear
+Position    4
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        whois~
+Code        do_whois
+Position    0
+Level       0
+Log         0
+Ooc         1
+End
+
+#COMMAND
+Name        wield~
+Code        do_wear
+Position    4
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        where~
+Code        do_where
+Position    5
+Level       102
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        weather~
+Code        do_weather
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        wizlist~
+Code        do_wizlist
+Position    4
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        wizhelp~
+Code        do_wizhelp
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        wizlock~
+Code        do_wizlock
+Position    0
+Level       105
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        whisper~
+Code        do_whisper
+Position    5
+Level       1
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        wounds~
+Code        reserved
+Position    0
+Level       1
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        webserve~
+Code        do_webserve
+Position    0
+Level       200
+Log         1
+Ooc         0
+End
+
+#COMMAND
+Name        wake~
+Code        do_stand
+Position    4
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        yell~
+Code        do_yell
+Position    5
+Level       0
+Log         0
+Ooc         0
+End
+
+#COMMAND
+Name        zones~
+Code        do_zones
+Position    0
+Level       101
+Log         0
+Ooc         0
+End
+
+#END

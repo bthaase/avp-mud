@@ -1,0 +1,52 @@
+The Following Prompt Flags are currently available:
+ %A = Armor Value (Partially complete)
+ %g = Current Credits (On Person)
+ %h = Current Hitpoints (Integer)
+ %H = Maximum Hitpoints (Integer)
+ %i = Current Invisibilty Status
+  (Mortal: Only shows when invisible, Displays '(Invis) ')
+  (Immortal: Only shows when wizinvis, Displays '(Invis #) ')
+ %I = Current Invisibilty Level (Immortal Only --- '104')
+ %m = Current Force Points (Integer)
+ %M = Maximum Force Points (Integer)
+ %r = Current Room Vnum (Immortal Only)
+ %R = Current Room Vnum (Immortal Only --- Requires CONFIG +VNUM)
+ %u = Current Users (Integer)
+ %U = Max Ever Players (Integer)
+ %v = Current Movement Points (Integer)
+ %V = Maximum Movement Points (Integer)
+
+The Following *NEW* Prompt Flags are currently available:
+ %c = Current Health Guage (Colored Gauge Bar, Like %e)
+ %C = Percentage Health Prompt (21%)
+ %t = Time till your backup arrives. (In Rounds)
+ %T = Time till your backup arrives. (Only Visible when Waiting... Displays '(Backup: #) ')
+ %x = Current Mana Gauge (Colored Gauge Bar, Like %e)
+ %X = Percentage Mana Prompt (53%)
+ %z = Current Move Guage (Colored Gauge Bar, Like %e)
+ %Z = Percentage Move Prompt (71%)
+ %_ = Adds a ENTER in the prompt 
+
+New Prompt Flags to be Added:
+ + %b = OOC Limit Break (Integer)
+ + %B = OOC Limit Break (Graphical)
+ - %D = Displays your current IDLE amount.
+ - %G = Total Credits in all personal bank accounts.
+ + %J = Area Ambience
+ + %K = Predator Vision Mode
+ - %l = Display the Language your currently using.
+ - %L = [Unused]
+ - %n = [Unused]
+ - %N = [Unused]
+ - %o = [Unused]
+ - %O = [Unused]
+ + %p = Graphic AP Bar
+ + %P = AP Indicator
+ - %q = [Unused]
+ - %Q = [Unused]
+ - %S = [Unused]
+ + %W = Current time of day.
+ - %y = [Unused]
+ - %Y = [Unused]
+
+Display current postion. (IE: Sitting, Standing, Resting, Sleeping, Stunned)

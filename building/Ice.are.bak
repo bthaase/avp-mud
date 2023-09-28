@@ -1,0 +1,224 @@
+#AREA   {PROTO} Ice's area in progress~
+
+#VERSION 4
+
+#AUTHOR Ice~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#7000
+marine guard~
+A Marine~
+A Hulking Marine stands here, securing the compound.
+~
+&wThis &RU&WS&BC&RM&WC&w MP looks like a regular GI, tall and strong. He is
+wearing city camo BDUs, shiny black combat boots, a M10 helmet, and M3
+body armor. On the right arm of his BDU shirt, there is an MP band to show
+that he is military police. He is wielding a M41A pulse rifle like he will
+use it, and you can count on it!
+~
+0
+3
+Z
+50 8 8 1
+20 15 15 10 20 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#7001
+marine head ops operations human john watson~
+John Watson~
+John Watson, Head of Operations stands here.
+~
+~
+0
+67108865
+S
+1 8 8 0
+> rand_prog 100~
+nod
+if variable(JWSecure) == 1
+mpnothing
+else
+if variable(JWRadio) == 0
+radio Operations Center could use some attention, men.
+mpset JWRadio 1
+mpsleep 240
+mpset JWRadio 0
+endif
+endif
+~
+> all_greet_prog 100~
+if variable(JWSecure) == 0
+mpset JWSecure 1
+say Good to see you men. This place is a mess!
+endif
+~
+|
+#0
+
+
+#OBJECTS
+#7000
+alarm console switch~
+Alarm Console~
+An Alarm Console is mounted on the far wall here. ~
+~
+4
+1048577
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(Alarm1) == 0
+mpset Alarm1 1
+mea $n You trip the security alarm!
+mer $n $n trips the security alarm!
+mpecho &w&R[WARNING]: Operation Center is under attack. Backup requested!
+mpsleep 30
+mpat 1 mpmload 7000
+mpat 1 mpmload 7000
+mpat 1 mpmload 7000
+mpat 1 mpoload 80
+mpat 1 mpoload 80
+mpat 1 mpoload 80
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 drop all
+mpat 1 mpforce 1.marine get pulse
+mpat 1 mpforce 2.marine get pulse
+mpat 1 mpforce 3.marine get pulse
+mpat 1 mpforce 1.marine get m309
+mpat 1 mpforce 1.marine get m309
+mpat 1 mpforce 2.marine get m309
+mpat 1 mpforce 2.marine get m309
+mpat 1 mpforce 3.marine get m309
+mpat 1 mpforce 3.marine get m309
+mpat 1 mpforce 1.marine wield pulse 
+mpat 1 mpforce 2.marine wield pulse 
+mpat 1 mpforce 3.marine wield pulse 
+mpat 1 mptrans 3.marine 7001
+mpat 1 mptrans 2.marine 7001
+mpat 1 mptrans 1.marine 7001
+mpecho &wMarines rush in to secure the operation center. 
+mpsleep 120
+mpset Alarm1 0
+endif
+~
+> useoff_prog 100~
+if variable(Alarm1) == 0
+mpset Alarm1 1
+mea $n You trip the security alarm!
+mer $n $n trips the security alarm!
+mpecho &w&R[WARNING]: Operation Center is under attack. Backup requested!
+mpsleep 30
+mpat 1 mpmload 7000
+mpat 1 mpmload 7000
+mpat 1 mpmload 7000
+mpat 1 mpoload 80
+mpat 1 mpoload 80
+mpat 1 mpoload 80
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 mpoload 81
+mpat 1 drop all
+mpat 1 mpforce 1.marine get pulse
+mpat 1 mpforce 2.marine get pulse
+mpat 1 mpforce 3.marine get pulse
+mpat 1 mpforce 1.marine get m309
+mpat 1 mpforce 1.marine get m309
+mpat 1 mpforce 2.marine get m309
+mpat 1 mpforce 2.marine get m309
+mpat 1 mpforce 3.marine get m309
+mpat 1 mpforce 3.marine get m309
+mpat 1 mpforce 1.marine wield pulse 
+mpat 1 mpforce 2.marine wield pulse 
+mpat 1 mpforce 3.marine wield pulse 
+mpat 1 mptrans 3.marine 7001
+mpat 1 mptrans 2.marine 7001
+mpat 1 mptrans 1.marine 7001
+mpecho &wMarines rush in to secure the operation center. 
+mpsleep 120
+mpset Alarm1 0
+endif
+~
+|
+#0
+
+
+#ROOMS
+#7000
+USCM Communications Outpost~
+Anchor
+~
+~
+1073807372
+0
+0 1
+S
+#7001
+Communications Outpost :: Operations Center~
+This is central operations for the USCM communications outpost. From here,
+teams can oversee the operation of the subspace array, and monitor
+security, fire and other alert systems. USCM teams spent millions of
+dollars making sure this base was as well equipped as possible against any
+form of attack. Lets hope it worked. 
+~
+~
+1073741832
+0
+0 1
+D1
+~
+~
+0
+-1 7002
+S
+#7002
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 7001
+S
+#0
+
+
+#RESETS
+M 1 7001 1 7001
+E 1 678 1 16
+G 1 679 1
+G 1 682 1
+G 1 679 1
+O 1 7000 1 7001
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+M  7000 spec_enemy_scan
+S
+
+
+#$

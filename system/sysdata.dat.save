@@ -1,0 +1,32 @@
+
+#SYSTEM
+Highplayers    21
+Highplayertime Thu Jul 20 23:29:31 2000~
+Nameresolving  0
+Waitforauth    1
+Readallmail    105
+Readmailfree   101
+Writemailfree  1
+Takeothersmail 105
+IMCMailVnum    0
+Muse           102
+Think          102
+Build          102
+Log            102
+Protoflag      102
+Overridepriv   102
+Msetplayer     105
+Stunplrvsplr   20
+Stunregular    0
+Damplrvsplr    103
+Damplrvsmob    103
+Dammobvsplr    103
+Dammobvsmob    103
+Forcepc        103
+Guildoverseer  ~
+Guildadvisor   ~
+Saveflags      2557
+Savefreq       20
+End
+
+#END

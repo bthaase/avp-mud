@@ -1,0 +1,74 @@
+#AREA   {PROTO} Paige's area in progress~
+
+#VERSION 4
+
+#AUTHOR Paige~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#3350
+spear~
+A long sharp alien spear~
+A spear is here.~
+~
+2
+49152
+8193
+11 0 10000 0 0 10000
+1 0 0
+#3351
+body armor~
+A set of alien body armor~
+A set of alien body armor lays here.~
+~
+3
+49152
+524289
+600 600 0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#3350
+The Room of Great Instruction!~
+This is the normal room description!
+~
+This is the hive room description!
+~
+8978436
+2048
+0 1
+S
+#3351
+Floating in a void~
+~
+~
+65540
+0
+0 1
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+S
+
+
+#$

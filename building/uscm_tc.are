@@ -1,0 +1,2143 @@
+#AREA   USCM Combat Training Center~
+
+#VERSION 4
+
+#AUTHOR Ghost~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#3900
+marine guard security~
+A Marine~
+A Hulking Marine stands here, securing the compound.
+~
+&wThis &RU&WS&BC&RM&WC&w MP looks like a regular GI, tall and strong. He is
+wearing city camo BDUs, shiny black combat boots, a M10 helmet, and M3
+body armor. On the right arm of his BDU shirt, there is an MP band to show
+that he is military police. He is wielding a M41A pulse rifle like he will
+use it, and you can count on it!
+~
+0
+3
+Z
+50 8 8 1
+20 15 15 10 20 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#3901
+tall predator store~
+Predator Shopkeeper~
+A Tall Predator stands here, selling weapons and gear.
+~
+~
+0
+3
+Z
+1 8 8 0
+10 10 10 10 10 10
+2 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#0
+
+
+#OBJECTS
+#3900
+power breaker box~
+Power Breaker~
+A Large Power Breaker is mounted on the northern wall. ~
+~
+4
+1048578
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+mpechoat $n You throw the break to the ON position. 
+mpechoaround $n $n throws the breaker to the ON position. 
+mprat 3917 3973 mprmflag -1 1 dark
+mprat 3917 3973 mpecho &YThe overhead lights flare to life.
+~
+> useoff_prog 100~
+mpechoat $n You throw the break to the OFF position. 
+mpechoaround $n $n throws the breaker to the OFF position. 
+mprat 3917 3973 mprmflag -1 0 dark
+mprat 3917 3973 mpecho &zThe room suddenly goes dark.
+~
+|
+#0
+
+
+#ROOMS
+#3900
+USCM Combat Training Facility~
+These walls have more color than most of the facilities hallways.  It is
+done in a very light shade of green, probably because it's suppose to the
+color of intelligence. The floors are of white marble tiles that are done
+in a thick wax to keep up with the shine of the military.
+~
+~
+100663304
+0
+0 1
+D0
+~
+~
+0
+-1 3901
+D4
+~
+~
+0
+-1 2
+S
+#3901
+Central Access Corridor A~
+These walls have more color than most of the facilities hallways.  It is
+done in a very light shade of green, probably because it's suppose to the
+color of intelligence. The floors are of white marble tiles that are done
+in a thick wax to keep up with the shine of the military.
+~
+~
+100663304
+0
+0 1
+D1
+~
+~
+0
+-1 3902
+D2
+~
+~
+0
+-1 3900
+D3
+~
+~
+0
+-1 3904
+S
+#3902
+Central Access Corridor A~
+These walls have more color than most of the facilities hallways.  It is
+done in a very light shade of green, probably because it's suppose to the
+color of intelligence. The floors are of white marble tiles that are done
+in a thick wax to keep up with the shine of the military.
+~
+~
+100663304
+0
+0 1
+D1
+~
+~
+0
+-1 3903
+D3
+~
+~
+0
+-1 3901
+S
+#3903
+Central Access Corridor A~
+These walls have more color than most of the facilities hallways.  It is
+done in a very light shade of green, probably because it's suppose to the
+color of intelligence. The floors are of white marble tiles that are done
+in a thick wax to keep up with the shine of the military.
+&R[Warning: East is the Marine Store - ONLY MARINES ALLOWED] 
+~
+~
+100663304
+0
+0 1
+D0
+~
+~
+0
+-1 3916
+D1
+~
+~
+3&1
+-1 3906
+D3
+~
+~
+0
+-1 3902
+S
+#3904
+Central Access Corridor A~
+These walls have more color than most of the facilities hallways.  It is
+done in a very light shade of green, probably because it's suppose to the
+color of intelligence. The floors are of white marble tiles that are done
+in a thick wax to keep up with the shine of the military.
+~
+~
+100663304
+0
+0 1
+D1
+~
+~
+0
+-1 3901
+D3
+~
+~
+0
+-1 3905
+S
+#3905
+Central Access Corridor A~
+These walls have more color than most of the facilities hallways.  It is
+done in a very light shade of green, probably because it's suppose to the
+color of intelligence. The floors are of white marble tiles that are done
+in a thick wax to keep up with the shine of the military.
+&R[Warning: West is the Predator Store - ONLY PREDATORS ALLOWED] 
+~
+~
+100663304
+0
+0 1
+D0
+~
+~
+0
+-1 3915
+D1
+~
+~
+0
+-1 3904
+D3
+~
+~
+1&1
+-1 3914
+S
+#3906
+USCM Armory Access Checkpoint~
+Coming to this secured area you look to around and notice military
+personell hulking around, going about their duties. This area seems to be
+a checkpoint, at which only flagged marines can enter. Looking around you
+also a security detail of marines waiting to wave you through once you
+have been cleared for access.
+~
+~
+100663304
+0
+0 1
+D0
+~
+~
+369098752
+-1 3908
+D1
+~
+~
+3&1
+-1 3907
+D3
+~
+~
+3&1
+-1 3903
+S
+#3907
+USCM Master Armory Corridor~
+Coming to this secured area you look around and notice military personell
+hulking around, going about their duties. Many of the Marines seen here
+look as if they have been resently armed with the latest technology in
+Armor. 
+~
+~
+100663304
+0
+0 1
+D0
+~
+~
+0
+-1 3909
+D3
+~
+~
+3&1
+-1 3906
+S
+#3908
+USCM Access Security Post~
+Coming into this secured area you look around and notice military personell
+hulking around, going about their duties. This area seems to be a
+checkpoint,at which only flagged marines can enter. Looking around you
+also see a security detail of marines waiting to wave you through conce
+you have been cleared for access.
+~
+~
+100663304
+0
+0 1
+D0
+~
+~
+3
+-1 3912
+D1
+~
+~
+3
+-1 3909
+D2
+~
+~
+369098752
+-1 3906
+S
+#3909
+USCM Master Armory Corridor~
+Coming to this secured area you look around and notice military personell
+hulking around, going about their duties. Many of the marines seen here
+look as if they have been recently armed with the latest technology in
+armor and heavy weaponary. Not people to screw with. 
+~
+~
+100663304
+0
+0 1
+D0
+~
+~
+0
+-1 3910
+D2
+~
+~
+0
+-1 3907
+D3
+~
+~
+3
+-1 3908
+S
+#3910
+USCM Master Armory Corridor~
+Coming to this secured area you look around and notice military personell
+hulking around, going about their duties. Many of the marines seen here
+look as if they have been recently armed with the latest technology in
+armor and heavy weaponary. Not people to screw with. 
+~
+~
+100663304
+0
+0 1
+D0
+~
+~
+0
+-1 3911
+D1
+~
+~
+0
+-1 3913
+D2
+~
+~
+0
+-1 3909
+D3
+~
+~
+0
+-1 3912
+S
+#3911
+USCM General Equipment Armory~
+Coming into this Supply room, you look at a large LIST on standard
+utilities issued to marines. The Quartermaster here seems a bit in a rush
+to get you what you need as the line behind you of young marines grows
+longer. Grab some gear, and hit the field, marine.
+~
+~
+100663304
+0
+0 1
+D2
+~
+~
+0
+-1 3910
+S
+#3912
+USCM Light Weapons Armory~
+Coming into this Supply room, you look at the large list of Standard Light
+Weapons issued to military personell. The Quarter master here looks a
+little in a rush to finish giving you what you need as the line behind you
+of new marines grows longer. 
+~
+~
+100663304
+0
+0 1
+D1
+~
+~
+0
+-1 3910
+D2
+~
+~
+3
+-1 3908
+S
+#3913
+USCM Heavy Weapons Armory~
+coming into this supply room, you look at the large LIST of standard heavy
+weapons issued to military personell. The Quartermaster here looks a
+little in a rush to finish giving you what you need as the line behind you
+of new marines grows longer.
+~
+~
+100663304
+0
+0 1
+D3
+~
+~
+0
+-1 3910
+S
+#3914
+Welcome to the USCM Combat Training Facility~
+&gYour standing just outside the USCM Training Facility. Theres a huge
+forest sprawling out before you. It would appear a small group of
+Predators have set up a little camp in the clearing outside this complex.
+Hey, dont bitch. They need equipment too. 
+~
+~
+69206016
+0
+0 1
+D1
+~
+~
+1&1
+-1 3905
+S
+#3915
+Maintaince Access Ladder 1A~
+A Tall Maintaince ladder stretches out, allowing you to access the other
+levels of the USCM Training Complex. The rungs are cool to the touch, are
+seem quite sturdy. The USCM seems to keep its property in good order. 
+~
+~
+67108872
+0
+0 1
+D2
+~
+~
+0
+-1 3905
+D5
+~
+~
+0
+-1 3917
+S
+#3916
+Maintaince Access Ladder 1B~
+A Tall Maintaince ladder stretches out, allowing you to access the other
+levels of the USCM Training Complex. The rungs are cool to the touch, are
+seem quite sturdy. The USCM seems to keep its property in good order. 
+~
+~
+100663304
+0
+0 1
+D2
+~
+~
+0
+-1 3903
+D5
+~
+~
+0
+-1 3918
+S
+#3917
+Maintaince Access Ladder 2A~
+A Tall Maintaince ladder stretches out, allowing you to access the other
+levels of the USCM Training Complex. The rungs are cool to the touch, are
+seem quite sturdy. The USCM seems to keep its property in good order. 
+~
+~
+33554441
+0
+0 1
+D2
+~
+~
+0
+-1 3919
+D4
+~
+~
+0
+-1 3915
+S
+#3918
+Maintaince Access Ladder 2B~
+A Tall Maintaince ladder stretches out, allowing you to access the other
+levels of the USCM Training Complex. The rungs are cool to the touch, are
+seem quite sturdy. The USCM seems to keep its property in good order. 
+~
+~
+33554441
+0
+0 1
+D2
+~
+~
+0
+-1 3922
+D4
+~
+~
+0
+-1 3916
+S
+#3919
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3917
+D1
+~
+~
+0
+-1 3920
+D2
+~
+~
+0
+-1 3935
+D3
+~
+~
+0
+-1 3933
+S
+#3920
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 3921
+D3
+~
+~
+0
+-1 3919
+S
+#3921
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3928
+D1
+~
+~
+0
+-1 3946
+D3
+~
+~
+0
+-1 3920
+S
+#3922
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3918
+D1
+~
+~
+0
+-1 3923
+D2
+~
+~
+0
+-1 3945
+D3
+~
+~
+0
+-1 3946
+S
+#3923
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3924
+D3
+~
+~
+0
+-1 3922
+S
+#3924
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3925
+D2
+~
+~
+0
+-1 3923
+S
+#3925
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D2
+~
+~
+0
+-1 3924
+D3
+~
+~
+0
+-1 3926
+S
+#3926
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 3925
+D3
+~
+~
+0
+-1 3947
+S
+#3927
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3934
+D1
+~
+~
+0
+-1 3947
+D2
+~
+~
+0
+-1 3928
+D3
+~
+~
+0
+-1 3929
+S
+#3928
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3927
+D2
+~
+~
+0
+-1 3921
+S
+#3929
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 3927
+D3
+~
+~
+0
+-1 3930
+S
+#3930
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 3929
+D3
+~
+~
+0
+-1 3931
+S
+#3931
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 3930
+D2
+~
+~
+0
+-1 3932
+S
+#3932
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3931
+D2
+~
+~
+0
+-1 3933
+S
+#3933
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3932
+D1
+~
+~
+0
+-1 3919
+S
+#3934
+Maintaince Ladder 2C~
+A Tall Maintaince ladder stretches out, allowing you to access the other
+levels of the USCM Training Complex. The rungs are cool to the touch, are
+seem quite sturdy. The USCM seems to keep its property in good order.  
+~
+~
+9
+0
+0 1
+D2
+~
+~
+0
+-1 3927
+D5
+~
+~
+3&1
+-1 3973
+S
+#3935
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3919
+D1
+~
+~
+3
+-1 3953
+D2
+~
+~
+0
+-1 3936
+S
+#3936
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3935
+D1
+~
+~
+3
+-1 3952
+D2
+~
+~
+0
+-1 3937
+S
+#3937
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3936
+D1
+~
+~
+3
+-1 3951
+D2
+~
+~
+0
+-1 3938
+S
+#3938
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3937
+D1
+~
+~
+0
+-1 3939
+S
+#3939
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 3940
+D3
+~
+~
+0
+-1 3938
+S
+#3940
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 3941
+D2
+~
+~
+0
+-1 3954
+D3
+~
+~
+0
+-1 3939
+S
+#3941
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 3942
+D3
+~
+~
+0
+-1 3940
+S
+#3942
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3943
+D3
+~
+~
+0
+-1 3941
+S
+#3943
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3944
+D2
+~
+~
+0
+-1 3942
+D3
+~
+~
+3
+-1 3950
+S
+#3944
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3945
+D2
+~
+~
+0
+-1 3943
+D3
+~
+~
+3
+-1 3949
+S
+#3945
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3922
+D2
+~
+~
+0
+-1 3944
+D3
+~
+~
+3
+-1 3948
+S
+#3946
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 3922
+D3
+~
+~
+0
+-1 3921
+S
+#3947
+USCM Access Corridor B~
+The walls are painted a brillant shade of wall, nearly blinding you. Its
+just another generic corridor that appear to be the staple of government
+buildings and military structures throughout time. A long row of lights on
+the ceiling cast a shimmering glow onto the slick tile floors.  
+~
+&gThe brillant white paintjob of the walls have been burried beneath layers
+of a sticky, goo-like substance used by the Aliens. You almost can't tell
+its part of a military base. The ceiling lights have been obliterated,
+whats left was covered over with that goo-like gunk. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 3926
+D3
+~
+~
+0
+-1 3927
+S
+#3948
+USCM Office Cubicle~
+Just a generic, grey-white office cubicle. It was obviously designed to
+provide the upmost entertainment for its occupants. Well, maybe not.
+Several pictures hang on the back wall, depicting scenes of places you'd
+much rather be, instead of in this drab office cubicle. 
+~
+&gThis once-drab office cubicle is now alive with a whole array of colors.
+And critters. The walls are covered from floor to ceiling in goo, and its
+extremely warm in here. This probably isn't a good place to be. Unless of
+course, your an alien and happen to like this kind of setting. 
+~
+9
+0
+0 1
+D1
+~
+~
+3
+-1 3945
+D2
+~
+~
+100663296
+-1 3949
+S
+#3949
+USCM Office Cubicle~
+Just a generic, grey-white office cubicle. It was obviously designed to
+provide the upmost entertainment for its occupants. Well, maybe not.
+Several pictures hang on the back wall, depicting scenes of places you'd
+much rather be, instead of in this drab office cubicle. 
+~
+&gThis once-drab office cubicle is now alive with a whole array of colors.
+And critters. The walls are covered from floor to ceiling in goo, and its
+extremely warm in here. This probably isn't a good place to be. Unless of
+course, your an alien and happen to like this kind of setting. 
+~
+9
+0
+0 1
+D0
+~
+~
+100663296
+-1 3948
+D1
+~
+~
+3
+-1 3944
+D2
+~
+~
+100663296
+-1 3950
+S
+#3950
+USCM Office Cubicle~
+Just a generic, grey-white office cubicle. It was obviously designed to
+provide the upmost entertainment for its occupants. Well, maybe not.
+Several pictures hang on the back wall, depicting scenes of places you'd
+much rather be, instead of in this drab office cubicle. 
+~
+&gThis once-drab office cubicle is now alive with a whole array of colors.
+And critters. The walls are covered from floor to ceiling in goo, and its
+extremely warm in here. This probably isn't a good place to be. Unless of
+course, your an alien and happen to like this kind of setting. 
+~
+9
+0
+0 1
+D0
+~
+~
+100663296
+-1 3949
+D1
+~
+~
+3
+-1 3943
+S
+#3951
+USCM Office Cubicle~
+Just a generic, grey-white office cubicle. It was obviously designed to
+provide the upmost entertainment for its occupants. Well, maybe not.
+Several pictures hang on the back wall, depicting scenes of places you'd
+much rather be, instead of in this drab office cubicle. 
+~
+&gThis once-drab office cubicle is now alive with a whole array of colors.
+And critters. The walls are covered from floor to ceiling in goo, and its
+extremely warm in here. This probably isn't a good place to be. Unless of
+course, your an alien and happen to like this kind of setting. 
+~
+9
+0
+0 1
+D0
+~
+~
+100663296
+-1 3952
+D3
+~
+~
+3
+-1 3937
+S
+#3952
+USCM Office Cubicle~
+Just a generic, grey-white office cubicle. It was obviously designed to
+provide the upmost entertainment for its occupants. Well, maybe not.
+Several pictures hang on the back wall, depicting scenes of places you'd
+much rather be, instead of in this drab office cubicle. 
+~
+&gThis once-drab office cubicle is now alive with a whole array of colors.
+And critters. The walls are covered from floor to ceiling in goo, and its
+extremely warm in here. This probably isn't a good place to be. Unless of
+course, your an alien and happen to like this kind of setting. 
+~
+9
+0
+0 1
+D0
+~
+~
+100663296
+-1 3953
+D2
+~
+~
+100663296
+-1 3951
+D3
+~
+~
+3
+-1 3936
+S
+#3953
+USCM Office Cubicle~
+Just a generic, grey-white office cubicle. It was obviously designed to
+provide the upmost entertainment for its occupants. Well, maybe not.
+Several pictures hang on the back wall, depicting scenes of places you'd
+much rather be, instead of in this drab office cubicle. 
+~
+&gThis once-drab office cubicle is now alive with a whole array of colors.
+And critters. The walls are covered from floor to ceiling in goo, and its
+extremely warm in here. This probably isn't a good place to be. Unless of
+course, your an alien and happen to like this kind of setting. 
+~
+9
+0
+0 1
+D2
+~
+~
+100663296
+-1 3952
+D3
+~
+~
+3
+-1 3935
+S
+#3954
+Maintaince Ladder 2D~
+A Tall Maintaince ladder stretches out, allowing you to access the other
+levels of the USCM Training Complex. The rungs are cool to the touch, are
+seem quite sturdy. The USCM seems to keep its property in good order. 
+~
+~
+33554441
+0
+0 1
+D0
+~
+~
+0
+-1 3940
+D5
+~
+~
+134217735&1
+13524 3955
+S
+#3955
+Maintaince Ladder 3D~
+A Tall Maintaince ladder stretches out, allowing you to access the other
+levels of the USCM Training Complex. The rungs are cool to the touch, are
+seem quite sturdy. The USCM seems to keep its property in good order. 
+~
+~
+33554441
+0
+0 1
+D0
+~
+~
+0
+-1 3956
+D4
+~
+~
+134217735&1
+13524 3954
+S
+#3956
+USCM Maintaince Access Tunnel~
+This dark, dank tunnel is one of the few ways around the USCM Training
+complex. Usually, if something breaks, it can be found down here. You can
+hear the steady drip-drip-drip of water nearby. You'd think they could
+clean this place up a bit. A row of lights hang overhead. 
+~
+&gAn alien hive is about the only thing creepier than a maintaince tunnel.
+And unforunetly, that appears to be the purpose of this room. Floor to
+ceiling gunk covers everything, and almost blocks the exits. The air
+around you is extremely warm. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 3957
+D2
+~
+~
+0
+-1 3955
+D3
+~
+~
+0
+-1 3965
+S
+#3957
+USCM Maintaince Access Tunnel~
+This dark, dank tunnel is one of the few ways around the USCM Training
+complex. Usually, if something breaks, it can be found down here. You can
+hear the steady drip-drip-drip of water nearby. You'd think they could
+clean this place up a bit. A row of lights hang overhead. 
+~
+&gAn alien hive is about the only thing creepier than a maintaince tunnel.
+And unforunetly, that appears to be the purpose of this room. Floor to
+ceiling gunk covers everything, and almost blocks the exits. The air
+around you is extremely warm. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3958
+D3
+~
+~
+0
+-1 3956
+S
+#3958
+USCM Maintaince Access Tunnel~
+This dark, dank tunnel is one of the few ways around the USCM Training
+complex. Usually, if something breaks, it can be found down here. You can
+hear the steady drip-drip-drip of water nearby. You'd think they could
+clean this place up a bit. A row of lights hang overhead. 
+~
+&gAn alien hive is about the only thing creepier than a maintaince tunnel.
+And unforunetly, that appears to be the purpose of this room. Floor to
+ceiling gunk covers everything, and almost blocks the exits. The air
+around you is extremely warm. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3959
+D2
+~
+~
+0
+-1 3957
+S
+#3959
+USCM Maintaince Access Tunnel~
+This dark, dank tunnel is one of the few ways around the USCM Training
+complex. Usually, if something breaks, it can be found down here. You can
+hear the steady drip-drip-drip of water nearby. You'd think they could
+clean this place up a bit. A row of lights hang overhead. 
+~
+&gAn alien hive is about the only thing creepier than a maintaince tunnel.
+And unforunetly, that appears to be the purpose of this room. Floor to
+ceiling gunk covers everything, and almost blocks the exits. The air
+around you is extremely warm. 
+~
+9
+0
+0 1
+D0
+~
+~
+3
+-1 3960
+D2
+~
+~
+0
+-1 3958
+S
+#3960
+USCM Maintaince Access Tunnel~
+This dark, dank tunnel is one of the few ways around the USCM Training
+complex. Usually, if something breaks, it can be found down here. You can
+hear the steady drip-drip-drip of water nearby. You'd think they could
+clean this place up a bit. A row of lights hang overhead. 
+~
+&gAn alien hive is about the only thing creepier than a maintaince tunnel.
+And unforunetly, that appears to be the purpose of this room. Floor to
+ceiling gunk covers everything, and almost blocks the exits. The air
+around you is extremely warm. 
+~
+9
+0
+0 1
+D0
+~
+~
+3
+-1 3972
+D2
+~
+~
+3
+-1 3959
+D3
+~
+~
+0
+-1 3961
+S
+#3961
+USCM Maintaince - Power Locker~
+This dark, dank tunnel is one of the few ways around the USCM Training
+complex. Usually, if something breaks, it can be found down here. You can
+hear the steady drip-drip-drip of water nearby. You'd think they could
+clean this place up a bit. A row of lights hang overhead. 
+~
+&gAn alien hive is about the only thing creepier than a maintaince tunnel.
+And unforunetly, that appears to be the purpose of this room. Floor to
+ceiling gunk covers everything, and almost blocks the exits. The air
+around you is extremely warm. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 3960
+D3
+~
+~
+0
+-1 3962
+S
+#3962
+USCM Maintaince Access Tunnel~
+This dark, dank tunnel is one of the few ways around the USCM Training
+complex. Usually, if something breaks, it can be found down here. You can
+hear the steady drip-drip-drip of water nearby. You'd think they could
+clean this place up a bit. A row of lights hang overhead. 
+~
+&gAn alien hive is about the only thing creepier than a maintaince tunnel.
+And unforunetly, that appears to be the purpose of this room. Floor to
+ceiling gunk covers everything, and almost blocks the exits. The air
+around you is extremely warm. 
+~
+9
+0
+0 1
+D0
+~
+~
+3
+-1 3966
+D1
+~
+~
+0
+-1 3961
+D2
+~
+~
+3
+-1 3963
+S
+#3963
+USCM Maintaince Access Tunnel~
+This dark, dank tunnel is one of the few ways around the USCM Training
+complex. Usually, if something breaks, it can be found down here. You can
+hear the steady drip-drip-drip of water nearby. You'd think they could
+clean this place up a bit. A row of lights hang overhead. 
+~
+&gAn alien hive is about the only thing creepier than a maintaince tunnel.
+And unforunetly, that appears to be the purpose of this room. Floor to
+ceiling gunk covers everything, and almost blocks the exits. The air
+around you is extremely warm. 
+~
+9
+0
+0 1
+D0
+~
+~
+3
+-1 3962
+D2
+~
+~
+0
+-1 3964
+S
+#3964
+USCM Maintaince Access Tunnel~
+This dark, dank tunnel is one of the few ways around the USCM Training
+complex. Usually, if something breaks, it can be found down here. You can
+hear the steady drip-drip-drip of water nearby. You'd think they could
+clean this place up a bit. A row of lights hang overhead. 
+~
+&gAn alien hive is about the only thing creepier than a maintaince tunnel.
+And unforunetly, that appears to be the purpose of this room. Floor to
+ceiling gunk covers everything, and almost blocks the exits. The air
+around you is extremely warm. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3963
+D2
+~
+~
+0
+-1 3965
+S
+#3965
+USCM Maintaince Access Tunnel~
+This dark, dank tunnel is one of the few ways around the USCM Training
+complex. Usually, if something breaks, it can be found down here. You can
+hear the steady drip-drip-drip of water nearby. You'd think they could
+clean this place up a bit. A row of lights hang overhead. 
+~
+&gAn alien hive is about the only thing creepier than a maintaince tunnel.
+And unforunetly, that appears to be the purpose of this room. Floor to
+ceiling gunk covers everything, and almost blocks the exits. The air
+around you is extremely warm. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3964
+D1
+~
+~
+0
+-1 3956
+S
+#3966
+USCM Maintaince Access Tunnel~
+This dark, dank tunnel is one of the few ways around the USCM Training
+complex. Usually, if something breaks, it can be found down here. You can
+hear the steady drip-drip-drip of water nearby. You'd think they could
+clean this place up a bit. A row of lights hang overhead. 
+~
+&gAn alien hive is about the only thing creepier than a maintaince tunnel.
+And unforunetly, that appears to be the purpose of this room. Floor to
+ceiling gunk covers everything, and almost blocks the exits. The air
+around you is extremely warm. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3967
+D2
+~
+~
+3
+-1 3962
+S
+#3967
+USCM Maintaince Access Tunnel~
+This dark, dank tunnel is one of the few ways around the USCM Training
+complex. Usually, if something breaks, it can be found down here. You can
+hear the steady drip-drip-drip of water nearby. You'd think they could
+clean this place up a bit. A row of lights hang overhead. 
+~
+&gAn alien hive is about the only thing creepier than a maintaince tunnel.
+And unforunetly, that appears to be the purpose of this room. Floor to
+ceiling gunk covers everything, and almost blocks the exits. The air
+around you is extremely warm. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3968
+D2
+~
+~
+0
+-1 3966
+S
+#3968
+USCM Maintaince Access Tunnel~
+This dark, dank tunnel is one of the few ways around the USCM Training
+complex. Usually, if something breaks, it can be found down here. You can
+hear the steady drip-drip-drip of water nearby. You'd think they could
+clean this place up a bit. A row of lights hang overhead. 
+~
+&gAn alien hive is about the only thing creepier than a maintaince tunnel.
+And unforunetly, that appears to be the purpose of this room. Floor to
+ceiling gunk covers everything, and almost blocks the exits. The air
+around you is extremely warm. 
+~
+9
+0
+0 1
+D1
+~
+~
+0
+-1 3969
+D2
+~
+~
+0
+-1 3967
+S
+#3969
+USCM Maintaince Access Tunnel~
+This dark, dank tunnel is one of the few ways around the USCM Training
+complex. Usually, if something breaks, it can be found down here. You can
+hear the steady drip-drip-drip of water nearby. You'd think they could
+clean this place up a bit. A row of lights hang overhead. 
+~
+&gAn alien hive is about the only thing creepier than a maintaince tunnel.
+And unforunetly, that appears to be the purpose of this room. Floor to
+ceiling gunk covers everything, and almost blocks the exits. The air
+around you is extremely warm. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3973
+D1
+~
+~
+0
+-1 3970
+D3
+~
+~
+0
+-1 3968
+S
+#3970
+USCM Maintaince Access Tunnel~
+This dark, dank tunnel is one of the few ways around the USCM Training
+complex. Usually, if something breaks, it can be found down here. You can
+hear the steady drip-drip-drip of water nearby. You'd think they could
+clean this place up a bit. A row of lights hang overhead. 
+~
+&gAn alien hive is about the only thing creepier than a maintaince tunnel.
+And unforunetly, that appears to be the purpose of this room. Floor to
+ceiling gunk covers everything, and almost blocks the exits. The air
+around you is extremely warm. 
+~
+9
+0
+0 1
+D2
+~
+~
+0
+-1 3971
+D3
+~
+~
+0
+-1 3969
+S
+#3971
+USCM Maintaince Access Tunnel~
+This dark, dank tunnel is one of the few ways around the USCM Training
+complex. Usually, if something breaks, it can be found down here. You can
+hear the steady drip-drip-drip of water nearby. You'd think they could
+clean this place up a bit. A row of lights hang overhead. 
+~
+&gAn alien hive is about the only thing creepier than a maintaince tunnel.
+And unforunetly, that appears to be the purpose of this room. Floor to
+ceiling gunk covers everything, and almost blocks the exits. The air
+around you is extremely warm. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3970
+D2
+~
+~
+0
+-1 3972
+S
+#3972
+USCM Maintaince Access Tunnel~
+This dark, dank tunnel is one of the few ways around the USCM Training
+complex. Usually, if something breaks, it can be found down here. You can
+hear the steady drip-drip-drip of water nearby. You'd think they could
+clean this place up a bit. A row of lights hang overhead. 
+~
+&gAn alien hive is about the only thing creepier than a maintaince tunnel.
+And unforunetly, that appears to be the purpose of this room. Floor to
+ceiling gunk covers everything, and almost blocks the exits. The air
+around you is extremely warm. 
+~
+9
+0
+0 1
+D0
+~
+~
+0
+-1 3971
+D2
+~
+~
+3
+-1 3960
+S
+#3973
+Maintaince Ladder 3C~
+A Tall Maintaince ladder stretches out, allowing you to access the other
+levels of the USCM Training Complex. The rungs are cool to the touch, are
+seem quite sturdy. The USCM seems to keep its property in good order.  
+~
+~
+9
+0
+0 1
+D2
+~
+~
+0
+-1 3969
+D4
+~
+~
+3&1
+-1 3934
+S
+#4000
+USCM Training Complex [High Room]~
+~
+~
+33554440
+0
+0 1
+S
+#0
+
+
+#RESETS
+D 0 3903 1 1
+D 0 3905 3 1
+D 0 3906 1 1
+D 0 3906 3 1
+D 0 3907 3 1
+D 0 3909 3 1
+M 1 669 2 3911
+G 1 693 1
+G 1 688 1
+G 1 682 1
+G 1 694 1
+G 1 669 1
+G 1 666 1
+G 1 668 1
+G 1 667 1
+G 1 670 1
+G 1 671 1
+M 1 666 2 3912
+G 1 81 1
+G 1 80 1
+G 1 84 1
+G 1 83 1
+G 1 82 1
+G 1 690 1
+G 1 689 1
+G 1 675 1
+G 1 676 1
+G 1 665 1
+D 0 3912 2 1
+M 1 668 2 3913
+G 1 692 1
+G 1 691 1
+G 1 681 1
+G 1 680 1
+G 1 674 1
+G 1 673 1
+G 1 685 1
+G 1 687 1
+G 1 686 1
+G 1 684 1
+D 0 3934 5 1
+D 0 3935 1 1
+D 0 3936 1 1
+D 0 3937 1 1
+D 0 3943 3 1
+D 0 3944 3 1
+D 0 3945 3 1
+D 0 3948 1 1
+D 0 3949 1 1
+D 0 3950 1 1
+D 0 3951 3 1
+D 0 3952 3 1
+D 0 3953 3 1
+D 0 3954 5 2
+D 0 3955 4 2
+D 0 3959 0 1
+D 0 3960 0 1
+D 0 3960 2 1
+O 1 3900 1 3961
+D 0 3962 0 1
+D 0 3962 2 1
+D 0 3963 0 1
+D 0 3966 2 1
+D 0 3972 2 1
+D 0 3973 4 1
+M 1 3900 1 3908
+E 1 666 1 6
+E 1 667 1 5
+E 1 668 1 8
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+D 0 3908 0 1
+D 0 3908 1 1
+M 1 3901 1 3914
+E 1 70 1 16
+G 1 96 1
+G 1 121 1
+G 1 120 1
+G 1 123 1
+G 1 122 1
+G 1 70 1
+G 1 97 1
+G 1 124 1
+D 0 3914 1 1
+S
+
+
+#SHOPS
+3901; Predator Shopkeeper
+0
+
+
+#SPECIALS
+M  3900 spec_enemy_scan
+S
+
+
+#$

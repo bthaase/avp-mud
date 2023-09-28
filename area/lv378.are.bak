@@ -1,0 +1,5207 @@
+#AREA   LV-378~
+
+#VERSION 4
+
+#AUTHOR Stick~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#4204
+Loorim Thilar~
+Loorim Thilar~
+Loorim Thilar stands here, The Master of Sticks!
+~
+~
+0
+16814085
+S
+1 8 8 0
+> act_prog nod~
+at Xenos mpecho Pick Up Sticks!
+at Xenos mpmload 4204
+at Xenos mpecho &z[&cStick&z] &cStick says: &wOff we go then!
+~
+|
+#4205
+Captain Dax 'The Harlequin' Mattack~
+Dax Mattack~
+Captain Dax 'The Harlequin' Mattack stands here patiently...
+~
+~
+0
+3
+Z
+1 8 8 0
+15 10 10 10 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#4206
+Marine~
+A Marine~
+A Marine patrols the corridors
+~
+~
+0
+32773
+S
+1 8 8 0
+#0
+
+
+#OBJECTS
+#4203
+Drums Barrels~
+Some Barrels of Liquid~
+Some barrels of liquid stand here.~
+~
+25
+0
+0
+16 2 8 300 300 1
+1 0 0
+#4204
+A large cabinet full of antique ceremonial blades lies against the west wall~
+A large cabinet full of antique ceremonial blades.~
+A large cabinet full of antique ceremonial blades lies against the west wall.~
+~
+6
+0
+0
+1000 1000 1000 1000 1000 1000
+1 0 0
+#4207
+Badge~
+A Badge saying, "I was Greever's 3000th Kill!"~
+A Badge saying, "I was Greever's 3000th Kill!" lies here.~
+~
+3
+32784
+16389
+0 0 0 0 0 0
+1 0 0
+#4208
+Key~
+A metallic blue keycard~
+A metallic blue keycard was foolishly left here.~
+~
+5
+4096
+16385
+0 0 0 0 0 0
+1 0 0
+#4209
+Camera Console 1~
+a Camera Console 1~
+A Camera Console 1 is here.~
+~
+25
+1048578
+0
+16 2 8 200 200 1
+1 0 0
+> useoff_prog 100~
+mpechoat $n You flick a switch on the screen and the screen goes
+blank.
+~
+> useon_prog 100~
+mpechoat $n You flick a switch and the screen hums to live .
+mptransfer $n 4354
+mpechoat $n You take a quick look at the screen.
+mpat 4354 mpforce $n glance
+mpat 4354 mptransfer $n 4403
+~
+|
+#4210
+Key DO NOT FUCKING TOUCH~
+a Key~
+A Key is here :o~
+~
+9
+0
+16385
+0 0 0 0 0 0
+1 0 0
+#4211
+pressure control switch chamber~
+Chamber Switch~
+A control switch for the pressure chamber is mounted here. ~
+~
+4
+68157440
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(C1Busy) == 0
+mpset C1Busy 1 
+mpat 4354 mpecho &w&R[WARNING] Doors are closing. Stand clear. 
+mpat 4304 mpecho &w&R[WARNING] Doors are closing. Stand clear. 
+mpat 4355 mpecho &w&R[WARNING] Doors are closing. Stand clear.  
+mpsleep 8
+mpat 4354 mpecho &wThe pressure doors close and seal. 
+mpoload 4210
+mpat 4354 close n
+mpat 4354 close s
+mpat 4354 lock n
+mpat 4354 lock s
+mpat 4354 mpecho &R[WARNING] Decompression Chamber is cycling. Please wait.
+mpsleep 8 
+mpat 4354 mpecho &CYou hear a loud hissing sound fill the chamber. 
+mpsleep 8 
+mpat 4354 mpecho &CThe hissing sound stops, and the room grows quiet. 
+if variable(C1State) == 0
+mpat 4355 mpecho &G[WARNING] Cycle complete. Chamber is ready.
+mpat 4304 mpecho &G[WARNING] Cycle complete. Doors are opening.
+else
+mpat 4355 mpecho &G[WARNING] Cycle complete. Doors are opening.
+mpat 4304 mpecho &G[WARNING] Cycle complete. Chamber is ready.
+endif
+mpsleep 4 
+if variable(C1State) == 0 
+mpset C1State 1 
+mpat 4354 unlock n
+mpat 4354 open n
+mpat 4354 mpecho &wThe northern pressure door swings open. 
+else
+mpset C1State 0
+mpat 4354 unlock s
+mpat 4354 open s
+mpat 4354 mpecho &wThe southern pressure door swings open. 
+endif
+mpat 2 eat key 
+mpset C1Busy 0
+endif 
+~
+> useoff_prog 100~
+if variable(C1Busy) == 0
+mpset C1Busy 1 
+mpat 4354 mpecho &w&R[WARNING] Doors are closing. Stand clear. 
+mpat 4304 mpecho &w&R[WARNING] Doors are closing. Stand clear. 
+mpat 4355 mpecho &w&R[WARNING] Doors are closing. Stand clear.  
+mpsleep 8
+mpat 4354 mpecho &wThe pressure doors close and seal. 
+mpoload 4210
+mpat 4354 close n
+mpat 4354 close s
+mpat 4354 lock n
+mpat 4354 lock s
+mpat 4354 mpecho &R[WARNING] Decompression Chamber is cycling. Please wait.
+mpsleep 8 
+mpat 4354 mpecho &CYou hear a loud hissing sound fill the chamber. 
+mpsleep 8 
+mpat 4354 mpecho &CThe hissing sound stops, and the room grows quiet. 
+if variable(C1State) == 0
+mpat 4355 mpecho &G[WARNING] Cycle complete. Chamber is ready.
+mpat 4304 mpecho &G[WARNING] Cycle complete. Doors are opening.
+else
+mpat 4355 mpecho &G[WARNING] Cycle complete. Doors are opening.
+mpat 4304 mpecho &G[WARNING] Cycle complete. Chamber is ready.
+endif
+mpsleep 4 
+if variable(C1State) == 0 
+mpset C1State 1 
+mpat 4354 unlock n
+mpat 4354 open n
+mpat 4354 mpecho &wThe northern pressure door swings open. 
+else
+mpset C1State 0
+mpat 4354 unlock s
+mpat 4354 open s
+mpat 4354 mpecho &wThe southern pressure door swings open. 
+endif
+mpat 2 eat key 
+mpset C1Busy 0
+endif 
+~
+|
+#4213
+Chair~
+A metallic chair~
+A metallic chair is infront of the Console,~
+~
+4
+0
+0
+10 100 10 10 0 0
+1 0 0
+#4214
+Keypad~
+A keypad~
+A keypad has been attached next to the door.~
+~
+5
+0
+0
+0 0 0 0 0 0
+1 0 0
+#4215
+Sentry Console 1~
+Sentry Console 1~
+Sentry Console 1 rests against the northern wall~
+~
+25
+2097154
+0
+16 2 8 200 200 1
+1 0 0
+> useon_prog 100~
+if variable(Sentry1) == 0
+mpecho &R[WARNING]: Sentry Gun System is now online. 
+mpset Sentry1 1
+else
+mpecho &R[WARNING]: Sentry Gun System is now offline.
+mpset Sentry1 0
+endif
+~
+> useoff_prog 100~
+if variable(Sentry1) == 0
+mpecho &R[WARNING]: Sentry Gun System is now online. 
+mpset Sentry1 1
+else
+mpecho &R[WARNING]: Sentry Gun System is now offline.
+mpset Sentry1 0
+endif
+~
+|
+#4216
+Sentry Console 2~
+Sentry Console 2~
+Sentry Console 2 rests against the northen wall.~
+~
+25
+3145730
+0
+16 2 8 200 200 1
+1 0 0
+> useon_prog 100~
+if variable(sentry3) == 0
+mpecho &w&R[WARNING]: Sentry Gun System is now online. 
+mpset Sentry3 1
+else
+mpecho [WARNING]: Sentry Gun System is now offline.
+mpset Sentry3 0
+endif
+~
+|
+#4217
+Camera Console 2~
+Camera Console 2~
+Camera Console 2 is here, against the eastern wall.~
+~
+25
+1048578
+0
+16 2 8 200 200 1
+1 0 0
+> useon_prog 100~
+mpechoat $n The console hums and the screen coms to life.
+mptransfer $n 4207
+mpechoat $n You glance at the screen quickly.
+mpat 4207 mpforce $n glance
+mpat 4207 mptransfer $n 6000
+~
+> useoff_prog 100~
+mpechoat $n You flip the switch and the screen goes blank.
+~
+|
+#4231
+Pretty flowers for the other avp people~
+Flowers~
+Some flowers have been left her e:( @->--~
+~
+5
+0
+0
+0 0 0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#4203
+Floating in a void~
+~
+~
+1073741824
+0
+0 1
+S
+#4204
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? The
+hallway brances out to the north. 
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+134217731
+73315 4403
+D1
+~
+~
+0
+-1 4205
+D3
+~
+~
+0
+-1 4233
+S
+#4205
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor?
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4206
+D3
+~
+~
+0
+-1 4204
+S
+#4206
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? The
+Hallway branches out to the south, a small room can been seen.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4208
+D2
+~
+~
+0
+-1 4214
+D3
+~
+~
+0
+-1 4205
+S
+#4207
+A Large Office~
+A wooden table, 6ft by 4ft dominates the middle of the room.  A metal chair
+lies beside it on its side, a piece of it clawed away. Large windows flank
+the sides of the room, made of small panels of glass intricatly sowed
+together to form a piece of unwanted art.  The walls are painted a
+military grey, a dark red line laps the room about one third of the way
+up. The cieling being as high up as it is, allows a slight draft to
+circulate the room. A large painting dominates the northen wall, most
+probably of a historical leader or hero of some sort.
+~
+~
+33554440
+0
+0 1
+D2
+~
+~
+1
+-1 4403
+S
+#4208
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4209
+D3
+~
+~
+0
+-1 4206
+S
+#4209
+A Tight Corner~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? The
+hallway makes a sudden turn to the south. 
+~
+~
+37748744
+0
+0 1
+D2
+~
+~
+0
+-1 4210
+D3
+~
+~
+0
+-1 4208
+S
+#4210
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4209
+D2
+~
+~
+0
+-1 4211
+S
+#4211
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? The
+hallway branches out to the west. 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4210
+D2
+~
+~
+0
+-1 4215
+D3
+~
+~
+0
+-1 4212
+S
+#4212
+A Small Room~
+A small room then to the north, it seems this rooms purpose is just allow
+many pipes and cables that have no room to run in the walls and in the
+ceiling through here. Its a very tight squeeze, doubtful wether anyone
+larger then a marine could fit through
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4211
+D3
+~
+~
+0
+-1 4213
+S
+#4213
+A Tight Corner~
+A small room then to the north, it seems this rooms purpose is just allow
+many pipes and cables that have no room to run in the walls and in the
+ceiling through here. Its a very tight squeeze, doubtful wether anyone
+larger then a marine could fit through
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4214
+D1
+~
+~
+0
+-1 4212
+> speech_prog truck 100~
+mpat arigas mpecho A truck falls from the sky!
+mpat arigas mpoload 1725
+~
+|
+S
+#4214
+A Small Room~
+A small room then to the north, it seems this rooms purpose is just allow
+many pipes and cables that have no room to run in the walls and in the
+ceiling through here. Its a very tight squeeze, doubtful wether anyone
+larger then a marine could fit through
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4206
+D2
+~
+~
+0
+-1 4213
+S
+#4215
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4211
+D2
+~
+~
+0
+-1 4216
+S
+#4216
+A Tight Corner~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? The
+hallway makes a sudden turn to the west.
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 4215
+D3
+~
+~
+0
+-1 4217
+S
+#4217
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4216
+D3
+~
+~
+0
+-1 4218
+S
+#4218
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? The
+hallway makes a sudden turn to the south.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4217
+D2
+~
+~
+0
+-1 4219
+D3
+~
+~
+0
+-1 4249
+S
+#4219
+A Long Hallway~
+Much like the other rooms in the upper level of this compound, it is very
+plain. Longer but thiner then the other rooms, it is still painting in the
+untimely grey fashion. 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4218
+D2
+~
+~
+0
+-1 4220
+S
+#4220
+A Long Hallway~
+Much like the other rooms in the upper level of this compound, it is very
+plain. Longer but thiner then the other rooms, it is still painting in the
+untimely grey fashion. 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4219
+D1
+~
+~
+0
+-1 4221
+D2
+~
+~
+0
+-1 4271
+S
+#4221
+A Tunnel leading to Landing Pad 1~
+The tunnel itself is about 2 meters wide, and 3 meters high. It has
+ferra-glass all around it, apart from the main structual points. It goes
+on for quite some way...The tunnel is about 100 meters off the ground,
+creating an impressive view from down from it.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4222
+D3
+~
+~
+0
+-1 4220
+S
+#4222
+A Tunnel Leading to Landing Pad 1~
+The tunnel itself is about 2 meters wide, and 3 meters high. It has
+ferra-glass all around it, apart from the main structual points. It goes
+on for quite some way...The tunnel is about 100 meters off the ground,
+creating an impressive view from down from it.
+~
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 4223
+D3
+~
+~
+0
+-1 4221
+S
+#4223
+A Tunnel Leading to Landing Pad 1~
+The tunnel itself is about 2 meters wide, and 3 meters high. It has
+ferra-glass all around it, apart from the main structual points. It goes
+on for quite some way...The tunnel is about 100 meters off the ground,
+creating an impressive view from down from it.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4224
+D3
+~
+~
+0
+-1 4222
+S
+#4224
+Landing Pad 1~
+The tunnel itself is about 2 meters wide, and 3 meters high. It has
+ferra-glass all around it, apart from the main structual points. It goes
+on for quite some way...The tunnel is about 100 meters off the ground,
+creating an impressive view from down from it. It splits out here, with a
+door to the north and to the west, the helipad can be seen from here.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 4231
+D1
+~
+~
+0
+-1 4225
+D3
+~
+~
+0
+-1 4223
+S
+#4225
+Landing Pad 1~
+The wind blows hard, and whirls around the platoform. A few rails hig the
+circumfrence to help stop accidents from happening. A Illuminous (H) sign
+is painted in the middle of the Heli-pad. Lights blink around the outside
+of the mark aswell.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 4229
+D1
+~
+~
+0
+-1 4226
+D3
+~
+~
+0
+-1 4224
+S
+#4226
+Landing Pad 1~
+The wind blows hard, and whirls around the platoform. A few rails hig the
+circumfrence to help stop accidents from happening. A Illuminous (H) sign
+is painted in the middle of the Heli-pad. Lights blink around the outside
+of the mark aswell.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 4227
+D3
+~
+~
+0
+-1 4225
+S
+#4227
+Landing Pad 1~
+The wind blows hard, and whirls around the platoform. A few rails hig the
+circumfrence to help stop accidents from happening. A Illuminous (H) sign
+is painted in the middle of the Heli-pad. Lights blink around the outside
+of the mark aswell.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 4228
+D2
+~
+~
+0
+-1 4226
+D3
+~
+~
+0
+-1 4229
+S
+#4228
+Landing Pad 1~
+The wind blows hard, and whirls around the platoform. A few rails hig the
+circumfrence to help stop accidents from happening. A Illuminous (H) sign
+is painted in the middle of the Heli-pad. Lights blink around the outside
+of the mark aswell.
+~
+~
+33554432
+0
+0 1
+D2
+~
+~
+0
+-1 4227
+D3
+~
+~
+0
+-1 4230
+S
+#4229
+Landing Pad 1~
+The wind blows hard, and whirls around the platoform. A few rails hig the
+circumfrence to help stop accidents from happening. A Illuminous (H) sign
+is painted in the middle of the Heli-pad. Lights blink around the outside
+of the mark aswell.
+~
+~
+301989888
+0
+0 1
+D0
+~
+~
+0
+-1 4230
+D1
+~
+~
+0
+-1 4227
+D2
+~
+~
+0
+-1 4225
+D3
+~
+~
+0
+-1 4231
+S
+#4230
+Landing Pad 1~
+The wind blows hard, and whirls around the platoform. A few rails hig the
+circumfrence to help stop accidents from happening. A Illuminous (H) sign
+is painted in the middle of the Heli-pad. Lights blink around the outside
+of the mark aswell.
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 4228
+D2
+~
+~
+0
+-1 4229
+D3
+~
+~
+0
+-1 4232
+S
+#4231
+Landing Pad 1~
+The wind blows hard, and whirls around the platoform. A few rails hig the
+circumfrence to help stop accidents from happening. A Illuminous (H) sign
+is painted in the middle of the Heli-pad. Lights blink around the outside
+of the mark aswell.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 4232
+D1
+~
+~
+0
+-1 4229
+D2
+~
+~
+0
+-1 4224
+S
+#4232
+Landing Pad 1~
+The wind blows hard, and whirls around the platoform. A few rails hig the
+circumfrence to help stop accidents from happening. A Illuminous (H) sign
+is painted in the middle of the Heli-pad. Lights blink around the outside
+of the mark aswell.
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 4230
+D2
+~
+~
+0
+-1 4231
+S
+#4233
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4204
+D3
+~
+~
+0
+-1 4234
+S
+#4234
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? The
+hallway branches out to the south. 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4233
+D2
+~
+~
+0
+-1 4241
+D3
+~
+~
+0
+-1 4235
+S
+#4235
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4234
+D3
+~
+~
+0
+-1 4236
+S
+#4236
+A Tight Bend~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? The
+hallway makes a sudden turn to the east.
+~
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 4235
+D2
+~
+~
+0
+-1 4237
+S
+#4237
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4236
+D2
+~
+~
+0
+-1 4238
+S
+#4238
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? The
+hallway branches out to the east. 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4237
+D1
+~
+~
+0
+-1 4243
+D2
+~
+~
+0
+-1 4239
+S
+#4239
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4238
+D2
+~
+~
+0
+-1 4240
+S
+#4240
+A Tight Bend~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor?  The
+hallway makes a sudden turn to the east.
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 4239
+D1
+~
+~
+0
+-1 4244
+S
+#4241
+A Small Room~
+A small room then to the north, it seems this rooms purpose is just allow
+many pipes and cables that have no room to run in the walls and in the
+ceiling through here. Its a very tight squeeze, doubtful wether anyone
+larger then a marine could fit through
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4234
+D2
+~
+~
+0
+-1 4242
+S
+#4242
+A Tight Bend~
+A small room then to the north, it seems this rooms purpose is just allow
+many pipes and cables that have no room to run in the walls and in the
+ceiling through here. Its a very tight squeeze, doubtful wether anyone
+larger then a marine could fit through
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4241
+D3
+~
+~
+0
+-1 4243
+S
+#4243
+A Small Room~
+A small room then to the north, it seems this rooms purpose is just allow
+many pipes and cables that have no room to run in the walls and in the
+ceiling through here. Its a very tight squeeze, doubtful wether anyone
+larger then a marine could fit through
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4242
+D3
+~
+~
+0
+-1 4238
+S
+#4244
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4245
+D3
+~
+~
+0
+-1 4240
+S
+#4245
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? The
+hallway makes a sudden turn to the south.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4247
+D2
+~
+~
+0
+-1 4246
+D3
+~
+~
+0
+-1 4244
+S
+#4246
+A Long Hallway~
+Much like the other rooms in the upper level of this compound, it is very
+plain. Longer but thiner then the other rooms, it is still painting in the
+untimely grey fashion. 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4245
+D2
+~
+~
+0
+-1 4250
+S
+#4247
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4248
+D3
+~
+~
+0
+-1 4245
+S
+#4248
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4249
+D3
+~
+~
+0
+-1 4247
+S
+#4249
+A Long Hallway~
+The metallic grey floor continues down this corridor. The walls are a
+military grey colour, with a dark red strip running parrallel on both
+sides of the wall about 1/2 of the way up. The ceiling is a distasteful
+black. Randomly located on the grated floor, holes can be seen, with a
+sticky substance around them. Somehow it has burnt through the floor? 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4218
+D3
+~
+~
+0
+-1 4248
+S
+#4250
+A Long Hallway~
+Much like the other rooms in the upper level of this compound, it is very
+plain. Longer but thiner then the other rooms, it is still painting in the
+untimely grey fashion. 
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 4246
+D2
+~
+~
+0
+-1 4263
+D3
+~
+~
+0
+-1 4251
+S
+#4251
+A Tunnel Towards Landing Pad 2~
+The tunnel itself is about 2 meters wide, and 3 meters high. It has
+ferra-glass all around it, apart from the main structual points. It goes
+on for quite some way...The tunnel is about 100 meters off the ground,
+creating an impressive view down. 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4250
+D3
+~
+~
+0
+-1 4252
+S
+#4252
+A Tunnel Towards Landing Pad 2~
+The tunnel itself is about 2 meters wide, and 3 meters high. It has
+ferra-glass all around it, apart from the main structual points. It goes
+on for quite some way...The tunnel is about 100 meters off the ground,
+creating an impressive view down. 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4251
+D3
+~
+~
+0
+-1 4253
+S
+#4253
+A Tunnel Towards Landing Pad 2~
+The tunnel itself is about 2 meters wide, and 3 meters high. It has
+ferra-glass all around it, apart from the main structual points. It goes
+on for quite some way...The tunnel is about 100 meters off the ground,
+creating an impressive view down. 
+~
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 4252
+D3
+~
+~
+0
+-1 4254
+S
+#4254
+Landing Pad 2~
+The tunnel itself is about 2 meters wide, and 3 meters high. It has
+ferra-glass all around it, apart from the main structual points. It goes
+on for quite some way...The tunnel is about 100 meters off the ground,
+creating an impressive view down.  There are open doors to the east and
+north, creating quite a draft here.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 4255
+D1
+~
+~
+0
+-1 4253
+D3
+~
+~
+0
+-1 4257
+S
+#4255
+Landing Pad 2~
+The wind blows hard, and whirls around the platoform. A few rails hig the
+circumfrence to help stop accidents from happening. A Illuminous (H) sign
+is painted in the middle of the Heli-pad. Lights blink around the outside
+of the mark aswell.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 4256
+D2
+~
+~
+0
+-1 4254
+D3
+~
+~
+0
+-1 4262
+S
+#4256
+Landing Pad 2~
+The wind blows hard, and whirls around the platoform. A few rails hig the
+circumfrence to help stop accidents from happening. A Illuminous (H) sign
+is painted in the middle of the Heli-pad. Lights blink around the outside
+of the mark aswell.
+~
+~
+33554432
+0
+0 1
+D2
+~
+~
+0
+-1 4255
+D3
+~
+~
+0
+-1 4261
+S
+#4257
+Landing Pad 2~
+The wind blows hard, and whirls around the platoform. A few rails hig the
+circumfrence to help stop accidents from happening. A Illuminous (H) sign
+is painted in the middle of the Heli-pad. Lights blink around the outside
+of the mark aswell.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4262
+D1
+~
+~
+0
+-1 4254
+D3
+~
+~
+0
+-1 4258
+S
+#4258
+Landing Pad 2~
+The wind blows hard, and whirls around the platoform. A few rails hig the
+circumfrence to help stop accidents from happening. A Illuminous (H) sign
+is painted in the middle of the Heli-pad. Lights blink around the outside
+of the mark aswell.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 4259
+D1
+~
+~
+0
+-1 4257
+S
+#4259
+Landing Pad 2~
+The wind blows hard, and whirls around the platoform. A few rails hig the
+circumfrence to help stop accidents from happening. A Illuminous (H) sign
+is painted in the middle of the Heli-pad. Lights blink around the outside
+of the mark aswell.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 4260
+D1
+~
+~
+0
+-1 4262
+D2
+~
+~
+0
+-1 4258
+S
+#4260
+Landing Pad 2~
+The wind blows hard, and whirls around the platoform. A few rails hig the
+circumfrence to help stop accidents from happening. A Illuminous (H) sign
+is painted in the middle of the Heli-pad. Lights blink around the outside
+of the mark aswell.
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 4261
+D2
+~
+~
+0
+-1 4259
+S
+#4261
+Landing Pad 2~
+The wind blows hard, and whirls around the platoform. A few rails hig the
+circumfrence to help stop accidents from happening. A Illuminous (H) sign
+is painted in the middle of the Heli-pad. Lights blink around the outside
+of the mark aswell.
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 4256
+D2
+~
+~
+0
+-1 4262
+D3
+~
+~
+0
+-1 4260
+S
+#4262
+Landing Pad 2~
+The wind blows hard, and whirls around the platoform. A few rails hig the
+circumfrence to help stop accidents from happening. A Illuminous (H) sign
+is painted in the middle of the Heli-pad. Lights blink around the outside
+of the mark aswell.
+~
+~
+301989888
+0
+0 1
+D0
+~
+~
+0
+-1 4261
+D1
+~
+~
+0
+-1 4255
+D2
+~
+~
+0
+-1 4257
+D3
+~
+~
+0
+-1 4259
+S
+#4263
+A Long Hallway~
+Much like the other rooms in the upper level of this compound, it is very
+plain. Longer but thiner then the other rooms, it is still painting in the
+untimely grey fashion. 
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 4250
+D2
+~
+~
+0
+-1 4264
+S
+#4264
+A Long Hallway~
+Much like the other rooms in the upper level of this compound, it is very
+plain. Longer but thiner then the other rooms, it is still painting in the
+untimely grey fashion. 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4263
+D2
+~
+~
+0
+-1 4265
+S
+#4265
+A Tight Bend~
+Much like the other rooms in the upper level of this compound, it is very
+plain. Longer but thiner then the other rooms, it is still painting in the
+untimely grey fashion. 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4264
+D1
+~
+~
+0
+-1 4266
+S
+#4266
+A Long Hallway~
+Much like the other rooms in the upper level of this compound, it is very
+plain. Longer but thiner then the other rooms, it is still painting in the
+untimely grey fashion. 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4267
+D3
+~
+~
+0
+-1 4265
+S
+#4267
+A Stairwell~
+Much like the other rooms in the upper level of this compound, it is very
+plain. Longer but thiner then the other rooms, it is still painting in the
+untimely grey fashion. Two open hatches allow entry to the lower and upper
+levels. 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4268
+D3
+~
+~
+0
+-1 4266
+D5
+~
+~
+1
+-1 4272
+S
+#4268
+A Long Hallway~
+Much like the other rooms in the upper level of this compound, it is very
+plain. Longer but thiner then the other rooms, it is still painting in the
+untimely grey fashion. 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4269
+D3
+~
+~
+0
+-1 4267
+S
+#4269
+A Tight Bend~
+Much like the other rooms in the upper level of this compound, it is very
+plain. Longer but thiner then the other rooms, it is still painting in the
+untimely grey fashion. 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4270
+D3
+~
+~
+0
+-1 4268
+S
+#4270
+A Long Hallway~
+Much like the other rooms in the upper level of this compound, it is very
+plain. Longer but thiner then the other rooms, it is still painting in the
+untimely grey fashion. 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4271
+D2
+~
+~
+0
+-1 4269
+S
+#4271
+A Long Hallway~
+Much like the other rooms in the upper level of this compound, it is very
+plain. Longer but thiner then the other rooms, it is still painting in the
+untimely grey fashion. 
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 4220
+D2
+~
+~
+0
+-1 4270
+S
+#4272
+A Stairwell~
+The way up and down is very tight. A ladder attached on both the east and
+west side allow quite an easy decent or climb. The paint here has been
+worn away from burns and war scars. 
+~
+~
+33554440
+0
+0 1
+D4
+~
+~
+1
+-1 4267
+D5
+~
+~
+1
+-1 4273
+S
+#4273
+A Stairwell~
+The military grey theme carries on here. The stairs come down in a spiral,
+taking up half the room themselves. The wall behind the stairs looks
+misfigured, and out of place. The corridor opens out east west and south,
+for quite a way it would seem. The walls seem to have battle scars in
+them. Bullet shells, fire marks...scratches?!
+~
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 4274
+D2
+~
+~
+0
+-1 4321
+D3
+~
+~
+0
+-1 4291
+D4
+~
+~
+1
+-1 4272
+S
+#4274
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4275
+D3
+~
+~
+0
+-1 4273
+S
+#4275
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4276
+D3
+~
+~
+0
+-1 4274
+S
+#4276
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4277
+D3
+~
+~
+0
+-1 4275
+S
+#4277
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 4278
+D3
+~
+~
+0
+-1 4276
+S
+#4278
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4279
+D3
+~
+~
+0
+-1 4277
+S
+#4279
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4280
+D3
+~
+~
+0
+-1 4278
+S
+#4280
+A Corner in the Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D2
+~
+~
+0
+-1 4281
+D3
+~
+~
+0
+-1 4279
+S
+#4281
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 4280
+D2
+~
+~
+0
+-1 4282
+S
+#4282
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4281
+D2
+~
+~
+0
+-1 4283
+S
+#4283
+An Intersection~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4282
+D2
+~
+~
+0
+-1 4284
+D3
+~
+~
+0
+-1 4350
+S
+#4284
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4283
+D2
+~
+~
+0
+-1 4285
+S
+#4285
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 4284
+D2
+~
+~
+0
+-1 4286
+S
+#4286
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4285
+D2
+~
+~
+0
+-1 4287
+S
+#4287
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4286
+D2
+~
+~
+0
+-1 4288
+S
+#4288
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4287
+D2
+~
+~
+0
+-1 4289
+S
+#4289
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4288
+D2
+~
+~
+0
+-1 4290
+S
+#4290
+A Corner in the Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 4289
+D3
+~
+~
+0
+-1 4298
+S
+#4291
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4273
+D3
+~
+~
+0
+-1 4292
+S
+#4292
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4291
+D3
+~
+~
+0
+-1 4293
+S
+#4293
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4292
+D3
+~
+~
+0
+-1 4294
+S
+#4294
+An Intersection~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 4293
+D2
+~
+~
+0
+-1 4330
+D3
+~
+~
+0
+-1 4295
+S
+#4295
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4294
+D3
+~
+~
+0
+-1 4296
+S
+#4296
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4295
+D3
+~
+~
+0
+-1 4297
+S
+#4297
+A Corner in the Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4296
+D2
+~
+~
+0
+-1 4312
+S
+#4298
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4290
+D3
+~
+~
+0
+-1 4299
+S
+#4299
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4298
+D3
+~
+~
+0
+-1 4300
+S
+#4300
+An Intersection~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4342
+D1
+~
+~
+0
+-1 4299
+D3
+~
+~
+0
+-1 4301
+S
+#4301
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4300
+D3
+~
+~
+0
+-1 4302
+S
+#4302
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4301
+D3
+~
+~
+0
+-1 4303
+S
+#4303
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4302
+D3
+~
+~
+0
+-1 4304
+S
+#4304
+An Intersection~
+The hall carries on the military grey theme. A blue stripe runs down the
+wall horizontally about three quarters of the way up. Lights on either
+side of the floor carry on down the, strafing, trying to show which way to
+go. Sirens can be heard, the computerised voice cycling over and over. To
+the south, a trapezium shaped door with reinforced a ferra-glass window in
+the center can be seen. A control switch sits next to it against the wall.
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 4329
+D1
+~
+~
+0
+-1 4303
+D2
+~
+~
+41943079&1
+4210 4354
+D3
+~
+~
+0
+-1 4305
+> entry_prog 100~
+if variable(Sentry1) == 1
+if variable(Gun2) == 0
+mpset Gun2 1
+mpecho &w&R[WARNING]: Intruder detected. Guns are tracking. 
+mpsleep 4
+mpecho &wThe automatic guns spin up to speed and fire! 
+if rand(50)
+mpdamage $n 300
+else
+if rand(50)
+mpdamage $n 150
+else
+mea $n The guns missed! Lucky bastard!
+endif
+endif
+mpset Gun2 0
+endif
+endif
+~
+|
+S
+#4305
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4304
+D3
+~
+~
+0
+-1 4306
+S
+#4306
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4305
+D3
+~
+~
+0
+-1 4307
+S
+#4307
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4306
+D3
+~
+~
+0
+-1 4308
+S
+#4308
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 4307
+D3
+~
+~
+0
+-1 4309
+S
+#4309
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4308
+D3
+~
+~
+0
+-1 4310
+S
+#4310
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4309
+D3
+~
+~
+0
+-1 4311
+S
+#4311
+A Corner in the Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4320
+D1
+~
+~
+0
+-1 4310
+S
+#4312
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4297
+D2
+~
+~
+0
+-1 4313
+S
+#4313
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 4312
+D2
+~
+~
+0
+-1 4314
+S
+#4314
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4313
+D2
+~
+~
+0
+-1 4315
+S
+#4315
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4314
+D2
+~
+~
+0
+-1 4316
+S
+#4316
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4315
+D2
+~
+~
+0
+-1 4317
+S
+#4317
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 4316
+D2
+~
+~
+0
+-1 4318
+S
+#4318
+An Intersection~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4317
+D1
+~
+~
+0
+-1 4338
+D2
+~
+~
+0
+-1 4319
+S
+#4319
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4318
+D2
+~
+~
+0
+-1 4320
+S
+#4320
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4319
+D2
+~
+~
+0
+-1 4311
+S
+#4321
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4273
+D2
+~
+~
+0
+-1 4322
+S
+#4322
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4321
+D2
+~
+~
+0
+-1 4323
+S
+#4323
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4322
+D1
+~
+~
+0
+-1 4353
+D2
+~
+~
+0
+-1 4324
+S
+#4324
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4323
+D2
+~
+~
+0
+-1 4325
+S
+#4325
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4324
+D2
+~
+~
+0
+-1 4326
+S
+#4326
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 4325
+D2
+~
+~
+0
+-1 4327
+S
+#4327
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4326
+D2
+~
+~
+0
+-1 4328
+D3
+~
+~
+0
+-1 4341
+S
+#4328
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4327
+D2
+~
+~
+0
+-1 4329
+S
+#4329
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4328
+D2
+~
+~
+0
+-1 4304
+S
+#4330
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4294
+D2
+~
+~
+0
+-1 4331
+S
+#4331
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4330
+D2
+~
+~
+0
+-1 4332
+S
+#4332
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4331
+D2
+~
+~
+0
+-1 4333
+S
+#4333
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4332
+D2
+~
+~
+0
+-1 4334
+S
+#4334
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 4333
+D2
+~
+~
+0
+-1 4335
+S
+#4335
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4334
+D2
+~
+~
+0
+-1 4336
+S
+#4336
+An Intersection~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+167772168
+0
+0 1
+D0
+~
+~
+0
+-1 4335
+D1
+~
+~
+0
+-1 4339
+D3
+~
+~
+0
+-1 4337
+S
+#4337
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 4336
+D3
+~
+~
+0
+-1 4338
+S
+#4338
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4337
+D3
+~
+~
+0
+-1 4318
+S
+#4339
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4340
+D3
+~
+~
+0
+-1 4336
+S
+#4340
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4341
+D3
+~
+~
+0
+-1 4339
+S
+#4341
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4327
+D3
+~
+~
+0
+-1 4340
+S
+#4342
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4343
+D2
+~
+~
+0
+-1 4300
+S
+#4343
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+37748744
+0
+0 1
+D0
+~
+~
+0
+-1 4344
+D2
+~
+~
+0
+-1 4342
+S
+#4344
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4345
+D2
+~
+~
+0
+-1 4343
+S
+#4345
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4346
+D2
+~
+~
+0
+-1 4344
+S
+#4346
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4347
+D2
+~
+~
+0
+-1 4345
+S
+#4347
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4348
+D2
+~
+~
+0
+-1 4346
+S
+#4348
+An Intersection~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+167772168
+0
+0 1
+D1
+~
+~
+0
+-1 4349
+D2
+~
+~
+0
+-1 4347
+D3
+~
+~
+0
+-1 4351
+S
+#4349
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4350
+D3
+~
+~
+0
+-1 4348
+S
+#4350
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4283
+D3
+~
+~
+0
+-1 4349
+S
+#4351
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+37748744
+0
+0 1
+D1
+~
+~
+0
+-1 4348
+D3
+~
+~
+0
+-1 4352
+S
+#4352
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4351
+D3
+~
+~
+0
+-1 4353
+S
+#4353
+The Maintenance Corridor~
+The room is as plain and bare as the rest of the compound. Leaking pipes
+spray hot steam here and there. The walls show evidence of battles not
+long ago, fire marks, bullet holes and even...scratches? The ceiling
+appears to support a metallic vent running the width of the room. Some
+rubble litters the floor, and the lights flicker from time to time.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4352
+D3
+~
+~
+0
+-1 4323
+S
+#4354
+The Decompression Chamber~
+The room is earily silent, blood splatters can be seen covering the walls
+ceiling and the floor. The doors hold strong though.A Camera has been set
+up in the celings northeast corner. square gaps in the wall maybe point to
+some sort of device popping out.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+41943079&1
+4210 4304
+D2
+~
+~
+58720295&1
+4210 4355
+> entry_prog 100 ~
+if variable(C1Busy) == 0
+mpset C1Busy 1 
+mpecho &w&R[WARNING] Doors are closing. Stand clear. 
+mpat 4304 mpecho &w&R[WARNING] Doors are closing. Stand clear.
+mpat 4355 mpecho &w&R[WARNING] Doors are closing. Stand clear. 
+mpsleep 8
+mpecho &wThe pressure doors close and seal. 
+mpoload 4210
+close n
+close s
+lock n
+lock s
+mpecho &R[WARNING] Decompression Chamber is cycling. Please wait.
+mpsleep 8 
+mpecho &CYou hear a loud hissing sound fill the chamber. 
+mpsleep 8 
+mpecho &CThe hissing sound stops, and the room grows quiet. 
+if variable(C1State) == 0
+mpat 4355 mpecho &w&G[WARNING] Cycle complete. Chamber is ready.
+mpat 4304 mpecho &w&G[WARNING] Cycle complete. Doors are opening.
+else
+mpat 4355 mpecho &w&G[WARNING] Cycle complete. Doors are opening.
+mpat 4304 mpecho &w&G[WARNING] Cycle complete. Chamber is ready.
+endif
+mpsleep 4 
+if variable(C1State) == 0 
+mpset C1State 1 
+unlock n
+open n
+mpecho &wThe northern pressure door swings open. 
+else
+mpset C1State 0
+unlock s
+open s
+mpecho &wThe southern pressure door swings open. 
+endif
+mpat 2 eat key 
+mpset C1Busy 0
+endif 
+~
+> speech_prog reset~
+mpset C1Busy 0
+~
+|
+S
+#4355
+An Intersection~
+&WIt would appear this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. Some white coats are hung up on the wall next to the northen door.
+The bright yellow lights glare, at an obviously uneeded intensity.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+58720295&1
+4210 4354
+D2
+~
+~
+0
+-1 4367
+D8
+~
+~
+0
+-1 4356
+D9
+~
+~
+0
+-1 4378
+> entry_prog 100~
+if variable(Sentry1) == 1
+if variable(Gun1) == 0
+mpset Gun1 1
+mpecho &w&R[WARNING]: Intruder detected. Guns are tracking. 
+mpsleep 4
+mpecho &wThe automatic guns spin up to speed and fire! 
+if rand(50)
+mpdamage $n 300
+else
+if rand(50)
+mpdamage $n 150
+else
+mea $n The guns missed! Lucky bastard!
+endif
+endif
+mpset Gun1 0
+endif
+endif
+~
+|
+S
+#4356
+A Larger Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity.
+~
+~
+33554440
+0
+0 1
+D7
+~
+~
+0
+-1 4355
+D8
+~
+~
+0
+-1 4357
+S
+#4357
+A Larger Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity.
+~
+~
+33554440
+0
+0 1
+D7
+~
+~
+0
+-1 4356
+D8
+~
+~
+0
+-1 4358
+S
+#4358
+A Larger Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity.
+~
+~
+33554440
+0
+0 1
+D7
+~
+~
+0
+-1 4357
+D8
+~
+~
+0
+-1 4359
+S
+#4359
+A Larger Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity.
+~
+~
+33554440
+0
+0 1
+D7
+~
+~
+0
+-1 4358
+D8
+~
+~
+0
+-1 4360
+S
+#4360
+A Large Room~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+1
+-1 4361
+D2
+~
+~
+1
+-1 4364
+D7
+~
+~
+0
+-1 4359
+S
+#4361
+A Long Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4362
+D3
+~
+~
+1
+-1 4360
+S
+#4362
+A Long Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4363
+D3
+~
+~
+0
+-1 4361
+S
+#4363
+An Incubation Centre~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity. A few
+broken incubation modules are scattered around the room, some icky gooey
+stuff can be seen also.
+~
+~
+33554440
+0
+0 1
+D3
+~
+~
+0
+-1 4362
+S
+#4364
+A Long Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity. 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+1
+-1 4360
+D2
+~
+~
+0
+-1 4365
+S
+#4365
+A Long Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity. 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4364
+D2
+~
+~
+0
+-1 4366
+S
+#4366
+An Incubation Centre~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity. A few
+broken incubation modules are scattered around the room, broken glass lays
+on the floor. A hole appears to have been burnt downwards through the
+floor, some sort of sticky substance sorrounds the hole.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4365
+D5
+~
+~
+0
+-1 4393
+S
+#4367
+A Larger Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4355
+D2
+~
+~
+0
+-1 4368
+S
+#4368
+A Larger Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4367
+D2
+~
+~
+0
+-1 4369
+S
+#4369
+A Larger Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4368
+D2
+~
+~
+0
+-1 4370
+S
+#4370
+A Larger Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4369
+D2
+~
+~
+0
+-1 4371
+S
+#4371
+A Large Room~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4370
+D8
+~
+~
+1
+-1 4372
+D9
+~
+~
+1
+-1 4375
+> speech_prog go~
+if test == 1
+say I am a room and I can talk
+~
+|
+S
+#4372
+A Long Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity. 
+~
+~
+33554440
+0
+0 1
+D7
+~
+~
+1
+-1 4371
+D8
+~
+~
+0
+-1 4373
+S
+#4373
+A Long Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity. 
+~
+~
+33554440
+0
+0 1
+D7
+~
+~
+0
+-1 4372
+D8
+~
+~
+0
+-1 4374
+S
+#4374
+An Incubation Centre~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity. A few
+broken incubation modules are scattered around the room, some icky gooey
+stuff can be seen also.
+~
+~
+33554440
+0
+0 1
+D7
+~
+~
+0
+-1 4373
+S
+#4375
+A Long Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity.
+~
+~
+33554440
+0
+0 1
+D6
+~
+~
+1
+-1 4371
+D9
+~
+~
+0
+-1 4376
+S
+#4376
+A Long Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity.
+~
+~
+33554440
+0
+0 1
+D6
+~
+~
+0
+-1 4375
+D9
+~
+~
+0
+-1 4377
+S
+#4377
+An Incubation Centre~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity. A few
+broken incubation modules are scattered around the room, some icky gooey
+stuff can be seen also.
+~
+~
+33554440
+0
+0 1
+D6
+~
+~
+0
+-1 4376
+S
+#4378
+A Larger Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity. 
+~
+~
+33554440
+0
+0 1
+D6
+~
+~
+0
+-1 4355
+D9
+~
+~
+0
+-1 4379
+S
+#4379
+A Larger Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity.
+~
+~
+33554440
+0
+0 1
+D6
+~
+~
+0
+-1 4378
+D9
+~
+~
+0
+-1 4380
+S
+#4380
+A Long Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity.
+~
+~
+33554440
+0
+0 1
+D6
+~
+~
+0
+-1 4379
+D9
+~
+~
+0
+-1 4381
+S
+#4381
+A Long Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity. 
+~
+~
+33554440
+0
+0 1
+D6
+~
+~
+0
+-1 4380
+D9
+~
+~
+0
+-1 4382
+S
+#4382
+A Large Room~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity. 
+~
+~
+33554440
+0
+0 1
+D2
+~
+~
+0
+-1 4383
+D3
+~
+~
+0
+-1 4386
+D6
+~
+~
+0
+-1 4381
+S
+#4383
+A Long Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity. 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4382
+D2
+~
+~
+0
+-1 4384
+S
+#4384
+A Long Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity. 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 4383
+D2
+~
+~
+1
+-1 4385
+S
+#4385
+An Incubation Centre~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity. A few
+broken incubation modules are scattered around the room, broken glass lays
+on the floor. A hole appears to have been burnt downwards through the
+floor, some sort of sticky substance sorrounds the hole.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+1
+-1 4384
+D5
+~
+~
+0
+-1 4389
+S
+#4386
+A Long Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity. 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4382
+D3
+~
+~
+0
+-1 4387
+S
+#4387
+A Long Corridor~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity. 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 4386
+D3
+~
+~
+1
+-1 4388
+S
+#4388
+An Incubation Centre~
+It would appear that this area was used as some sort of labratory of some
+sort. Its walls and floors are pure white, no scratchings or dirty marks
+at all. The bright lights glare, obviously at an uneeded intensity. A few
+broken Incubation modules are scatterd around the room. Broken glass
+litters the floor, aswell as some icky gooey stuff.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+1
+-1 4387
+S
+#4389
+A Slimy Tunnel~
+Through the hole above, bright light shines into here, it creates a
+spotlight in the gloom of this room. The walls are sticky and green, it
+looks as if there are unconcious humans are caught in the goo. The floor
+squelches as it is trodden on, and a bad smell eminates.
+~
+~
+41943048
+0
+0 1
+D0
+~
+~
+0
+-1 4398
+D1
+~
+~
+0
+-1 4390
+D4
+~
+~
+0
+-1 4385
+S
+#4390
+A Slimy Tunnel~
+The walls are sticky and green, it looks as if there are unconcious humans
+are caught in the goo. The floor squelches as it is trodden on, and a bad
+smell eminates. 
+~
+~
+41943048
+0
+0 1
+D1
+~
+~
+0
+-1 4391
+D3
+~
+~
+0
+-1 4389
+S
+#4391
+A Slimy Tunnel~
+The walls are sticky and green, it looks as if there are unconcious humans
+are caught in the goo. The floor squelches as it is trodden on, and a bad
+smell eminates. 
+~
+~
+41943048
+0
+0 1
+D1
+~
+~
+0
+-1 4392
+D3
+~
+~
+0
+-1 4390
+S
+#4392
+A Slimy Tunnel~
+The walls are sticky and green, it looks as if there are unconcious humans
+are caught in the goo. The floor squelches as it is trodden on, and a bad
+smell eminates. 
+~
+~
+41943048
+0
+0 1
+D1
+~
+~
+0
+-1 4393
+D3
+~
+~
+0
+-1 4391
+S
+#4393
+A Slimy Tunnel~
+Through the hole above, bright light shines into here, it creates a
+spotlight in the gloom of this room. The walls are sticky and green, it
+looks as if there are unconcious humans are caught in the goo. The floor
+squelches as it is trodden on, and a bad smell eminates.
+~
+~
+41943048
+0
+0 1
+D0
+~
+~
+0
+-1 4394
+D3
+~
+~
+0
+-1 4392
+D4
+~
+~
+0
+-1 4366
+S
+#4394
+A Slimy Tunnel~
+The walls are sticky and green, it looks as if there are unconcious humans
+are caught in the goo. The floor squelches as it is trodden on, and a bad
+smell eminates. 
+~
+~
+41943048
+0
+0 1
+D2
+~
+~
+0
+-1 4393
+D7
+~
+~
+0
+-1 4395
+S
+#4395
+A Slimy Tunnel~
+The walls are sticky and green, it looks as if there are unconcious humans
+are caught in the goo. The floor squelches as it is trodden on, and a bad
+smell eminates. 
+~
+~
+41943048
+0
+0 1
+D6
+~
+~
+0
+-1 4396
+D8
+~
+~
+0
+-1 4394
+S
+#4396
+A Slimy Tunnel~
+The walls are sticky and green, it looks as if there are unconcious humans
+are caught in the goo. The floor squelches as it is trodden on, and a bad
+smell eminates. 
+~
+~
+41943048
+0
+0 1
+D0
+~
+~
+0
+-1 4397
+D9
+~
+~
+0
+-1 4395
+S
+#4397
+A Slimy Tunnel~
+The walls are sticky and green, it looks as if there are unconcious humans
+are caught in the goo. The floor squelches as it is trodden on, and a bad
+smell eminates. 
+~
+~
+41943048
+0
+0 1
+D2
+~
+~
+0
+-1 4396
+D3
+~
+~
+0
+-1 4401
+S
+#4398
+A Slimy Tunnel~
+The walls are sticky and green, it looks as if there are unconcious humans
+are caught in the goo. The floor squelches as it is trodden on, and a bad
+smell eminates. 
+~
+~
+41943048
+0
+0 1
+D2
+~
+~
+0
+-1 4389
+D6
+~
+~
+0
+-1 4399
+S
+#4399
+A Slimy Tunnel~
+The walls are sticky and green, it looks as if there are unconcious humans
+are caught in the goo. The floor squelches as it is trodden on, and a bad
+smell eminates. 
+~
+~
+41943048
+0
+0 1
+D6
+~
+~
+0
+-1 4400
+D9
+~
+~
+0
+-1 4398
+S
+#4400
+A Slimy Tunnel~
+The walls are sticky and green, it looks as if there are unconcious humans
+are caught in the goo. The floor squelches as it is trodden on, and a bad
+smell eminates. 
+~
+~
+41943048
+0
+0 1
+D6
+~
+~
+0
+-1 4401
+D9
+~
+~
+0
+-1 4399
+S
+#4401
+A Misty Room~
+The walls are sticky and green, it looks as if there are unconcious humans
+are caught in the goo. The floor squelches as it is trodden on, and a bad
+smell eminates. Mist gathers here aboit a foot of the floor... 
+~
+~
+41943048
+0
+0 1
+D0
+~
+~
+0
+-1 4402
+D1
+~
+~
+0
+-1 4397
+D9
+~
+~
+0
+-1 4400
+S
+#4402
+The Queens Room~
+The walls are sticky and green, it looks as if there are unconcious humans
+are caught in the goo. The floor squelches as it is trodden on, and a bad
+smell eminates. The mist is very thick here. Poking over the top of it,
+can be seen soft egg shaped things. some are open, showing the gap inside
+the eggs.
+~
+~
+578813960
+0
+0 1
+D2
+~
+~
+0
+-1 4401
+S
+#4403
+A Large Room~
+This room would appear to be a waiting room of some kind. A small desk is
+purched against the western wall, with a leather chair behind it.
+Documents and folders fill the shelves that are scattered around the room,
+at various heights.  The grey motif continues here, but some pictures have
+been put up on the wall near the desk. 
+~
+~
+50331656
+0
+0 1
+D0
+~
+~
+1
+-1 4207
+D2
+~
+~
+134217729
+73315 4204
+S
+#0
+
+
+#RESETS
+M 1 51 1 4402
+M 1 52 2 4401
+M 1 52 2 4401
+M 1 52 4 4395
+M 1 52 4 4395
+M 1 52 6 4399
+M 1 52 6 4399
+M 1 52 8 4388
+M 1 52 8 4388
+D 0 4388 1 0
+M 1 52 10 4374
+M 1 52 10 4374
+M 1 52 12 4377
+M 1 52 12 4377
+M 1 52 14 4363
+M 1 52 14 4363
+O 1 4211 1 4355
+D 0 4355 0 2
+D 0 4354 0 2
+D 0 4354 2 2
+O 1 4211 1 4304
+D 0 4304 2 2
+M 1 4206 7 4253
+G 1 80 1
+G 1 81 1
+G 1 81 1
+M 1 4206 8 4240
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+M 1 4206 7 4236
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+M 1 4206 9 4209
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+M 1 4206 10 4216
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+M 1 4206 11 4224
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+O 1 3590 1 4212
+O 1 3590 1 4213
+O 1 3590 1 4214
+O 1 3590 1 4241
+O 1 3590 1 4242
+O 1 3590 1 4243
+O 1 4203 1 4300
+O 1 4203 1 4290
+O 1 4203 1 4286
+O 1 3590 1 4283
+O 1 4203 1 4280
+O 1 4203 1 4275
+O 1 4203 1 4273
+D 0 4273 4 0
+O 1 3590 1 4322
+O 1 4203 1 4352
+O 1 3590 1 4346
+O 1 4203 1 4344
+O 1 4203 1 4327
+O 1 3590 1 4307
+O 1 4203 1 4310
+O 1 4203 1 4318
+O 1 3590 1 4334
+O 1 4203 1 4294
+O 1 4203 1 4297
+O 1 3590 1 4314
+O 1 4214 1 4204
+D 0 4204 0 1
+M 1 4205 1 4207
+G 1 4208 1
+E 1 80 1 16
+E 1 36 1 17
+G 1 81 1
+G 1 81 1
+G 1 81 1
+O 1 4204 1 4207
+D 0 4207 2 0
+O 1 4215 1 4403
+O 1 4214 1 4403
+O 1 4209 1 4403
+D 0 4403 0 0
+D 0 4403 2 0
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+S
+
+
+#$

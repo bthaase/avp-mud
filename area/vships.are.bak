@@ -1,0 +1,92 @@
+#AREA   Virtual Ships~
+
+#VERSION 4
+
+#AUTHOR Automated~
+
+#AMBIENCE 0
+#RANGES
+0 105 0 105
+$
+
+#MOBILES
+#70000
+vships lowmob~
+a newly created vships lowmob~
+Some god abandoned a newly created vships lowmob here.
+~
+~
+0
+1
+S
+1 8 8 0
+#100000
+VShips Highmob~
+a newly created Vships lowmob~
+Some god abandoned a newly created Vships lowmob here.
+~
+~
+0
+1
+S
+1 8 8 0
+#0
+
+
+#OBJECTS
+#70000
+VShips Lowobj~
+a VShips Lowobj~
+A VShips Lowobj is here.~
+~
+6
+0
+0
+0 0 0 0 0 0
+1 0 0
+#100000
+VShips Highobj~
+a VShips Highobj~
+A VShips Highobj is here.~
+~
+6
+0
+0
+0 0 0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#70000
+VShips Lowroom~
+~
+~
+0
+0
+0 1
+S
+#100000
+VShips Highroom~
+~
+~
+0
+0
+0 1
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+S
+
+
+#$

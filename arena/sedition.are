@@ -1,0 +1,45 @@
+#ARENA
+Name         USS Sedition~
+Desc         Marine:
+You all know the situation, but let me refresh your memories.
+After a successful mission, involving the capture of a
+genetically enhanced xenomorph egg, we are sent along with it
+to keep it safe.  The rebel faction we took the egg from,
+somehow managed infiltrate this ship, and neutralize her
+escorts.
+This leads us up to the here and now. We have been captured
+ 
+*Sounds of yelling interrupt the officer's words*
+*The soldiers guarding the marines run off hollering*
+*to each other*
+*The officer looks back at the group of marines*
+This is it marines, lets get our weapons.  We cant take back
+the ship, but we can make certain those filthy rebels don't
+keep those eggs.  Go to the containment room, and bring them
+to the stern.  We'll launch those suckers out the escape
+hatches.
+ 
+Predator:
+*The predators, having learned of the eggs and desiring*
+*to make use of it as a more formidable prey, came to raid*
+*the rebel base.  Realizing they had been beaten to it,*
+*they hunted down the ship they had learned carried the*
+*enhanced eggs.  Seizing the first opportunity they*
+*boarded the small vessel.*
+ 
+Xenomorph:
+*After escaping the rebel base the aliens stowed away on*
+*a small vessel.  The aliens, sensing the presence of*
+*the eggs are now bent on reclaiming the strange eggs.*
+~
+Filename     sedition.are~
+Firstroom    4029
+Lastroom     4065
+Timer        45
+Maxsupport   0 5
+Maxsupport   1 5
+Minp         3
+Maxp         20
+End
+
+#END

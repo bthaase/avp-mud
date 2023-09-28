@@ -1,0 +1,2009 @@
+#AREA   {PROTO} Korrd's area in progress~
+
+#VERSION 4
+
+#AUTHOR Korrd~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#765
+General Hammond~
+General John S. Hammond~
+General Hammond is here in his office.
+~
+General Hammond has been a Marine nearly all his life. It is evident
+through his cold, stone eyes and war scars all over his face. He stands
+tall in his officer's uniform, and has a belt holster around his waist,
+where he keeps his trusty M4A3 automatic pistol.
+~
+0
+67108867
+Z
+20 8 8 1
+20 20 20 20 20 20
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#766
+Major Powell~
+Major Powell~
+Major Powell stands here, observing all that takes place.
+~
+Major Powell has been in the Corps for 15 years after graduating from the
+USCMC academy. He has seen much combat throughout his life, and looks able
+to chew out the meanest hombre you can find. He stands tall and proud in
+his camouflage BDUs. He wears a traditional USCMC fatigue hat and carries
+two loaded sidearms at one time.
+~
+0
+67108867
+Z
+20 8 8 1
+20 20 20 20 20 20
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#767
+Captain Pierce~
+Captain Pierce~
+Captain Pierce is sitting here, supervising the Marines.
+~
+Captain Pierce is always squared away in full military BDUs, and a
+regulation M4A3 in a belt holster. He stands straight and tall at 6'-9".
+He seems really strong; capable of overturning an APC. His eyes are bold,
+saying a lot about him. He is confident in himself and can do his job very
+well. 
+~
+0
+67108867
+Z
+20 8 8 1
+20 20 20 20 20 20
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#768
+Second Lieutenant Palmers~
+Second Lieutenant Palmers~
+Second Lieutenant Palmers sits here near the communications array.
+~
+He seems fresh out of high school; but he isn't. He just looks young for
+his age. Wearing his BDU pants and a t-shirt, he doesn't look like the
+type who are always squared away. His hair is scruffy and there are bags
+under his eyes; he must be tired after managing the communications array,
+but he is just about the only person who can do it.
+~
+0
+67108867
+Z
+20 8 8 1
+20 20 20 20 20 20
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#769
+Sergeant Major Wilkins~
+Sergeant Major Wilkins~
+Sergeant Major Wilkins is here at attention, waiting for his security teams to check in.
+~
+Proud wearing his Marine Corps green, he stands tall and straight with
+pride to be a Marine. He is wearing a full woodland camouflage BDU and a
+USCMC fatigue hat. He has an M41A slinged on his back at all times as well
+as a leg holster containing his VP90.
+~
+0
+67108867
+Z
+20 8 8 1
+20 20 20 20 20 20
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#770
+Marine private~
+a Marine private~
+Some god abandoned a newly created Marine private here.
+~
+~
+0
+67108865
+S
+1 8 8 0
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#765
+&zA Secret Passage~
+&zThe passage is a small cave dug out by the water from the waterfall. It
+is very dark in here. Moss grows on the dark rock walls. The floor is made
+of &Ysand &zand &Oclay&z. It seems to be an undisturbed place, but if
+anyone looks around some more, faint footprints can be seen leading to the
+west and suddenly stopping on a wall. How odd. That's not supposed to
+happen. What mysteries lie here? While thinking, there is a loud shriek
+from a distant creature. Better get out of here fast!
+~
+&zThe passage is filled with the looming darkness of the hive along with
+the light that does not go through the waterfall. This place is half
+filled with &Bwater&z; and the water looks &ggreen&z. The corpses of
+countless water creatures have been littered here; their bloated corpses
+floating on water... Wait, what is that? A human head floating on top of
+the water! Its bloated and a face of shock is forever on his face. This
+sure isn't a good place to be...
+~
+196617
+0
+0 1
+D3
+~
+~
+134219783&1
+11310 766
+S
+#766
+&wAn Airlock~
+The airlock is the first line of defense for the secret marine base. There
+is a hidden screener that scans everything. If a creature in here is other
+than human, it will be eliminated with extreme prejudice. The airlock is a
+round chamber with armored walls to prevent escape and contamination.
+Small sprinklers located at the ceiling sprinkle large amounts of a &Bblue
+liquid&w around the chamber to kill dangerous organisms. A keypadded door
+is to the east and west.
+~
+&zThe once airlock for terrans has been converted to another hived spot
+that is another good ambush spot. However, the hiving materials here have
+been affected by the blue liquid that is usually sprayed here, turning it
+blue. Even so, the materials are learning to adapt in this environment at
+a fast rate. To the west and east is a hived doorway. 
+~
+2293768
+0
+0 0
+D1
+~
+~
+134217735&1
+11310 765
+D3
+~
+~
+134217735&1
+11310 767
+S
+#767
+&wEntrance To Lewis Colonial Marine Supply Base~
+&wAfter the airlock, is the entrance to a secret &RU&WS&BC&RM&WC&w base. To
+the west is a thickly armored door, as well as a lighted metal sign that
+hangs from the ceiling. The sign reads, "Welcome to Lewis Supply Base!" It
+is quite odd that a supply base is so secret, who knows what is inside? To
+the north and south are Colonial Marine insignia painted on the hard wall.
+~
+&zThe sign that once was hanging from the ceiling has been hived over, the
+lights shining on breathing dark matter that seems alive. The insignia to
+the north and south were also hived over, like a metaphor to show the
+power of the xenomorphs. To the west and east are hived doorways as well.
+An eerie silence exists as a memorial for those xenomorphs who died taking
+the base, as well as mocking the deaths of the pitiful humans who tried to
+defend it. 
+~
+2293768
+0
+0 0
+D1
+~
+~
+134217735&1
+11310 766
+D3
+~
+~
+134217735&1
+11310 768
+S
+#768
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 769
+D1
+~
+~
+134217735&1
+11310 767
+D2
+~
+~
+0
+-1 791
+D3
+~
+~
+0
+-1 792
+S
+#769
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 770
+D1
+~
+~
+134219783&1
+11310 801
+D2
+~
+~
+0
+-1 768
+S
+#770
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 771
+D2
+~
+~
+0
+-1 769
+S
+#771
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D2
+~
+~
+0
+-1 770
+D3
+~
+~
+0
+-1 772
+S
+#772
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D1
+~
+~
+0
+-1 771
+D2
+~
+~
+0
+-1 813
+D3
+~
+~
+0
+-1 773
+S
+#773
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D1
+~
+~
+0
+-1 772
+D2
+~
+~
+0
+-1 812
+D3
+~
+~
+0
+-1 774
+S
+#774
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D1
+~
+~
+0
+-1 773
+D2
+~
+~
+0
+-1 797
+D3
+~
+~
+0
+-1 775
+S
+#775
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D1
+~
+~
+0
+-1 774
+D3
+~
+~
+0
+-1 776
+S
+#776
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D1
+~
+~
+0
+-1 775
+D3
+~
+~
+0
+-1 777
+S
+#777
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D1
+~
+~
+0
+-1 776
+D2
+~
+~
+0
+-1 778
+S
+#778
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 777
+D2
+~
+~
+0
+-1 779
+S
+#779
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 778
+D2
+~
+~
+0
+-1 780
+S
+#780
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 779
+D1
+~
+~
+0
+-1 796
+D2
+~
+~
+0
+-1 781
+S
+#781
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 780
+D2
+~
+~
+0
+-1 782
+S
+#782
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 781
+D2
+~
+~
+0
+-1 783
+S
+#783
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 782
+D1
+~
+~
+0
+-1 784
+S
+#784
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D1
+~
+~
+0
+-1 785
+D3
+~
+~
+0
+-1 783
+S
+#785
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D1
+~
+~
+0
+-1 786
+D3
+~
+~
+0
+-1 784
+S
+#786
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 800
+D1
+~
+~
+0
+-1 787
+D3
+~
+~
+0
+-1 785
+S
+#787
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D1
+~
+~
+0
+-1 788
+D3
+~
+~
+0
+-1 786
+S
+#788
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D1
+~
+~
+0
+-1 789
+D3
+~
+~
+0
+-1 787
+S
+#789
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 790
+D3
+~
+~
+0
+-1 788
+S
+#790
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 791
+D2
+~
+~
+0
+-1 789
+S
+#791
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 768
+D1
+~
+~
+134219783&1
+11310 802
+D2
+~
+~
+0
+-1 790
+S
+#792
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D1
+~
+~
+0
+-1 768
+D3
+~
+~
+0
+-1 793
+S
+#793
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 815
+D1
+~
+~
+0
+-1 792
+D2
+~
+~
+0
+-1 808
+D3
+~
+~
+0
+-1 794
+S
+#794
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 798
+D1
+~
+~
+0
+-1 793
+D2
+~
+~
+0
+-1 799
+D3
+~
+~
+0
+-1 795
+D4
+~
+~
+134217735&1
+26931 803
+S
+#795
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D1
+~
+~
+0
+-1 794
+D3
+~
+~
+0
+-1 796
+S
+#796
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+134217735&1
+26931 819
+D1
+~
+~
+0
+-1 795
+D2
+~
+~
+3&1
+-1 820
+D3
+~
+~
+0
+-1 780
+S
+#797
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 774
+D2
+~
+~
+0
+-1 798
+S
+#798
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 797
+D2
+~
+~
+0
+-1 794
+S
+#799
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 794
+D2
+~
+~
+0
+-1 800
+S
+#800
+&wA Hallway~
+This is part of a hallway of Lewis &RU&WS&BC&RM&WC&w Supply Base. The walls
+are made of titanium alloy, concrete, and has an aluminum alloy outer
+shell. The walls are gray, as well as the ceiling. &YLight&w outlets are
+evenly spaced, providing enough light to get around. A nice shiny &Bblue
+tile&w floor continues down the halls. Small vents are located where the
+walls meet the ceiling, providing warm air to the base's occupants.
+~
+&zThe once walls, ceiling, and floor of the supply base have been converted
+into the dark abyss of xenomorph organic compounds. There is a musky smell
+here, and the echos of screeches bounce off the walls. There is a low
+atmosphere here, for the walls seem to breathe. The exits are round, and
+walking around is difficult due to the slippery floor.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 799
+D2
+~
+~
+0
+-1 786
+S
+#801
+&wA Guard Post~
+This guard post acts as one of the last lines of defense for the base.
+There is a table along the south wall, with monitors displaying different
+areas of the base. A secret &Cwindow&w to the south checks out the
+visitors who enter the base via the front entrance. A small equipment
+locker is to the north wall, as well as an &Ralarm&w to the east. 
+~
+&zThe guard post has been converted into a great ambush spot for
+xenomorphs. Since there is no ventilation here, the atmosphere is very
+thin; mostly filled with toxic gasses to anything other than xenomorphs.
+Being here gives an eerie feeling, as if something is watching. The ground
+seems alive, as it pulsates up and down, releasing a myst of some sort.
+The myst makes the floor slippery, so watch your step.
+~
+2293768
+0
+0 0
+D2
+~
+~
+301989888
+-1 767
+D3
+~
+~
+134217735&1
+11310 769
+S
+#802
+&wA Guard Post~
+&wThis guard post acts as one of the last lines of defense for the base.
+There is a table along the north wall, with monitors displaying different
+areas of the base. A secret &Cwindow&w to the north checks out the
+visitors who enter the base via the front entrance. A small equipment
+locker is to the south wall, as well as an &Ralarm&w to the east.
+~
+&zThe guard post has been converted into a great ambush spot for
+xenomorphs. Since there is no ventilation here, the atmosphere is very
+thin; mostly filled with toxic gasses to anything other than xenomorphs.
+Being here gives an eerie feeling, as if something is watching. The ground
+seems alive, as it pulsates up and down, releasing a myst of some sort.
+The myst makes the floor slippery, so watch your step.
+~
+2293768
+0
+0 0
+D0
+~
+~
+301989888
+-1 767
+D3
+~
+~
+134217735&1
+11310 791
+S
+#803
+&wCommand Center~
+&wIn the center of the room is a giant planetary map, displaying friendlies
+and hostiles throughout the place. A large holomap computer terminal in
+the middle of the room projects it, as well has monitors displaying
+various statistical analysis. All around are computers that are used to
+determine things like life support, lighting, environmental systems,
+security nets, etc. An &Ralarm&w is above the map, ready to summon the
+Marines into battle!
+~
+&zThe command center has been converted into the queen's chamber, where she
+can direct her "subjects". Eggs are here, ready to open at anytime to
+impregnate victims. Skeletons of dead creatures like humans and predators
+are scattered about, coated with xenomorph saliva. Damaged equipment are
+scattered around as a warning sign, to show that the power of the
+xenomorphs can overcome hi-tech equipment.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 806
+D1
+~
+~
+1
+-1 805
+D2
+~
+~
+0
+-1 807
+D3
+~
+~
+1
+-1 804
+D5
+~
+~
+134217735&1
+26931 794
+S
+#804
+&wCommander's Office~
+The commander's office is a plain white. A large Colonial Marine insignia,
+as well as the flag of the United States are located on the west wall. The
+commander's desk is resting in middle of the room, and leather chairs are
+nicely emplaced around it. There are various antiques on the desk and on
+shelves installed on the north and south walls.
+~
+&zThis room has been converted to a storage area for eggs. Eggs are evenly
+placed here, with an uncanny precision. Maybe this place is a hibernation
+room where eggs can be kept for safekeeping in times of great distress.
+There are many cracks in the hived walls; undoubtly it is hiding places
+for the xenomorphs who protect this area.
+~
+6488072
+0
+0 0
+D1
+~
+~
+1
+-1 803
+S
+#805
+&wSecurity Office~
+&wThe desks and computer screens here are dedicated for the higher security
+staff of the base. The screens display things ranging from hostile
+tactical analysis to internal alarm systems. A small equipment locker is
+here that carries various equipment for taking care of security measures.
+Bulletin boards filled with paperwork and personal pictures are installed
+in the small place that isnt filled with monitors and other things. 
+~
+&zThe darkness here makes it hard for other races to see clearly. This is
+now the home of countless elite xenomorph warriors who protect the queen
+in case intruders enter the hive. Most man-made items in here have been
+destroyed or hived over. The smell is rotten, for there are many corpses
+of chestburster victims stuck to the walls. There are some skeletons of
+long dead facehuggers here, and &Rblood&z soils the hiving materials,
+turning it into a brilliant &Rred&z black combination. 
+~
+6488072
+0
+0 0
+D3
+~
+~
+1
+-1 803
+S
+#806
+&wOperations~
+&wIt is here that the base's operations are taken care of. Things like
+resupply schedules and personnel transfer are taken care at the computer
+consoles everywhere. Everything about how the base operates is taken care
+of here. To the south is a giant holomap and the main control room for the
+base. Nice comfortable chairs are scattered around the place for the
+marines to sit at.
+~
+&zThis place is reserved for the Queen, because she is so huge, and human
+facilities are so small that this room is for the rest of her. The smell
+of Alien fluids is horrible, stinking up the whole room. There is an
+unusual lump in the hived wall here, which might mean that there is
+something hiding behind there that the queen does not want you to see...
+~
+6488072
+0
+0 0
+D2
+~
+~
+0
+-1 803
+S
+#807
+&wCommunications~
+&wA large communications hub is here, directing signals and transmissions
+of this base with &RU&WS&BC&RM&WC&w command and other Marine facilities or
+spacecraft. There are consoles that monitor the communications satellites
+and the hidden dish that exists on the surface of this planet. Monitors
+display the endless flow of information being passed around every second.
+Beeps emit from the computers as it strains to keep up with the newfound
+information. To the north is a large holomap and the main control room for
+the base.
+~
+&zThe communications room has been turned into a guard post for the elite
+warriors of the Xenomorph race who are assigned the big task of protecting
+the Queen. The place is totally dark; only the best light emitting devices
+can help pierce this darkness. The hived walls are irregular as they might
+be hiding places for these creatures who are always determined to do its
+job.  If you arn't an alien, you'd better get outta here fast, or you will
+be dead before you know it.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 803
+S
+#808
+&wHabitation Area~
+&wThis place is for off duty marines to relax and fool around. On the
+corner are VR games. In the center of the room are tables where marines
+can sit down to play cards and board games. Sofas and massage chairs are
+also available on the northwest corner. A shelf along the west wall holds
+numerous stuff, like medals, framed pictures, and books.
+~
+&zThe room, like the other hived rooms is dark and musty. Scraps of
+magazines and books are on the ground... along with a picture of a &RHOT&z
+human babe! Anyways, there are layers of dried saliva on the floor and on
+the broken pieces of human equipment scattered all around. Better to keep
+moving on and leave this spooky place.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 793
+D1
+~
+~
+0
+-1 809
+D2
+~
+~
+0
+-1 811
+S
+#809
+&wMess Hall~
+&wThere are long metal tables going down the room, with attached seating.
+There is a kitchen at the end of the room that serves food for hungry
+military personnel. On the side of the room is a large garbage disposal
+machine, which grinds waste and compacts it. On the other side are stacks
+of trays, cups, etc and a drinks station. 
+~
+&zThe&w lights&z flicker continuously, displaying the horrid sight. The
+bodies of countless Marines are scattered here; the barracades that were
+set up were quickly destroyed. Since the only way in or out is to the
+east, the defending Marines were easily slaughtered during close quarters
+combat. It was like the Alamo. &RBlood&z is painted all over the
+tables/chairs as well as the walls and the once white tile floor.
+~
+6488072
+0
+0 0
+D3
+~
+~
+0
+-1 808
+S
+#810
+&wBarracks~
+&wMany tidy bunks, or as Marines call them, racks, are lined up against the
+walls. In front of thost bunks are large green footlockers with the
+Colonial Marine insignia on it. The floor is a nice blue carpet, which is
+also spotless clean. The barracks is where the soldiers can sleep or relax
+after their shifts. The walls are a bright white because of the lights of
+the long room. Small vents bring in warm air to keep the base's personnel
+comfortable.
+~
+&zThe Marine barracks is now the barracks for the hive's drones. The place
+is dark and musty; just the way aliens like it. Not a sound can be heard;
+but sometimes there is a sound of bones cracking. A human skeleton is
+hived against the wall, its mouth open wide as if the last thing that it
+did was scream. Shadows move about as drones carry out orders from the
+queen.
+~
+6488072
+0
+0 0
+D3
+~
+~
+0
+-1 811
+S
+#811
+&wBarracks~
+&wMany tidy bunks, or as Marines call them, racks, are lined up against the
+walls. In front of thost bunks are large green footlockers with the
+Colonial Marine insignia on it. The floor is a nice blue carpet, which is
+also spotless clean. The barracks is where the soldiers can sleep or relax
+after their shifts. The walls are a bright white because of the lights of
+the long room. Small vents bring in warm air to keep the base's personnel
+comfortable.
+~
+&zThe Marine barracks is now the barracks for the hive's drones. The place
+is dark and musty; just the way aliens like it. Not a sound can be heard;
+but sometimes there is a sound of bones cracking. A human skeleton is
+hived against the wall, its mouth open wide as if the last thing that it
+did was scream. Shadows move about as drones carry out orders from the
+queen.
+~
+6488072
+0
+0 0
+D0
+~
+~
+0
+-1 808
+D1
+~
+~
+0
+-1 810
+S
+#812
+&WInfirmary~
+&WThe infirmary looks plain white. It seems to be very clean; as the tile
+floor is spotless and gleams in the bright white light. There are cabinets
+full of medical items and medical equipment along the walls of the room.
+In the center of the room are biobeds where the sick and wounded can rest
+and heal. Near the entrance, there are large first aid kits packed in
+plexiglass emergency stations. A few synthetic repair depots are set along
+the western wall.
+~
+&zThere is a pool filled with healing fluids for aliens; aliens can rest
+here to heal their wounds after battling the enemies of the xenomorph
+race. There is an odd shaped orb in the center of the room that opens up
+and aliens can jump inside to get faster regeneration as the hive material
+restructures their wounded areas. However, it cannot fully regenerate
+xenomorph limbs. A couple of limbs of dead xenomorphs have been gathered
+here so xenomorphs missing limbs can replace them with the limbs here.
+~
+6488072
+0
+0 1
+D0
+~
+~
+0
+-1 773
+S
+#813
+Cleaning Facilities~
+&WThis room is filled with massive linen washing machines, as well as
+showers for the troops stationed here. A small storage of cloth cleaning
+liquids and soap/shampoo is stored in large waterproof metal lockers with
+the ooze to create a pool of a horrible substance. The linen washing
+machines have been torn away from the wall and bashed against the floor;
+its contents were shredded to pieces by rampaging aliens. 
+~
+&zThis cleaning facility has turned into a hive dump. All kinds of nasty
+&Obrownish ooze &zleak all over the place. The walls are painted with
+&Rblood &zand the floor is filled with junk. The chemical toilets have
+been smashed; and the shower heads have been snapped off. &BWater &zmixes
+with the ooze to create a pool of a horrible substance.  The linen washing
+machines have been torn away from the wall and bashed against the floor;
+its contents were shredded to pieces by rampaging aliens. 
+~
+6488072
+0
+0 1
+D0
+~
+~
+0
+-1 772
+S
+#814
+&wArmory~
+This is where Marines can get their state of the art firearms. Weapon racks
+full of the basic Marine weaponry are bolted along the walls. Large green
+cases labeled either "explosives" or "ammunition" along with the
+&RU&WS&BC&RM&WC insignia stamped on the top. The room has no ventilation
+whatsoever; not even vent ducts, so there is a murky dusty smell. The room
+is nicely lit so that anyone can find their way through the room without
+tripping and setting off the grenades and mines on the floor.
+~
+&zThe armory of the marines has been turned into a junk pile full of
+damaged military weaponry. The counter in the center of the room is
+crushed and the floor is covered with goo. The corpses of a few marines
+are lying on the floor, as they died in their last stand in the armory.
+They must have believed that the armory was somewhere safe, but poor
+ventilation and a weak barracade ended their belief only a few seconds
+later.
+~
+2293768
+0
+0 1
+D3
+~
+~
+3&1
+-1 815
+S
+#815
+&wSupply Room~
+&wThe supply room is very large with large crates full of food and
+equipment are stacked to the ceiling. There is a small space that leads to
+the center of the room, where there is the logistic officer's station. The
+logistic officer will distribute food and equipment to his fellow marines.
+To the east is the armory, where marines can arm themselves with the best
+state of the art firearms they can get a hold on.
+~
+&zThis room is dark and filled with broken crates. This place is a good
+place for xenomorphs to hibernate until they are called upon by the queen
+to take care of anything. The corpses of countless people are nailed
+against the wall by a gooey substance. Most of their chests have been
+broken open, and &Rdried blood &zcan be seen all over their bodies. 
+~
+2293768
+0
+0 1
+D1
+~
+~
+3&1
+-1 814
+D2
+~
+~
+0
+-1 793
+S
+#816
+A Secret Laboratory~
+&WThe laboratory is like an infirmary, just with more scientific equipment,
+like supercomputers that calculate statistics of lab experiments and does
+analysis in the blink of an eye. There are datapads, paperwork, and
+scientifical instruments all over the place; as well as nice rotating
+leather chairs. Specimens are encased in plexiglass containers, put in
+lockable shelves. This is where Colonial Marine scientists make top of the
+line weaponry and examine special creatures to create new medicine, etc
+that could be applied for the military.
+~
+&zThe lab has been totally ruined. Numerous equipment and specimens are all
+over the floor. The bones of countless creatures are scattered around; as
+well as the corpses of dead facehuggers as they completed their life goal.
+The hive material here is quite odd; the walls of the hive are now rough
+and the air is very stuffy; since there is so little air in here. The
+echos of shrill shrieking and the screams of suffocating impregnated
+creatures bounce along the wall. 
+~
+2293768
+0
+0 1
+D1
+~
+~
+0
+-1 817
+D2
+~
+~
+0
+-1 819
+S
+#817
+A Secret Laboratory~
+&WThe laboratory is like an infirmary, just with more scientific equipment,
+like supercomputers that calculate statistics of lab experiments and does
+analysis in the blink of an eye. There are datapads, paperwork, and
+scientifical instruments all over the place; as well as nice rotating
+leather chairs. Specimens are encased in plexiglass containers, put in
+lockable shelves. This is where Colonial Marine scientists make top of the
+line weaponry and examine special creatures to create new medicine, etc
+that could be applied for the military.
+~
+&zThe lab has been totally ruined. Numerous equipment and specimens are all
+over the floor. The bones of countless creatures are scattered around; as
+well as the corpses of dead facehuggers as they completed their life goal.
+The hive material here is quite odd; the walls of the hive are now rough
+and the air is very stuffy; since there is so little air in here. The
+echos of shrill shrieking and the screams of suffocating impregnated
+creatures bounce along the wall. 
+~
+2293768
+0
+0 1
+D2
+~
+~
+0
+-1 818
+D3
+~
+~
+0
+-1 816
+S
+#818
+A Secret Laboratory~
+&WThe laboratory is like an infirmary, just with more scientific equipment,
+like supercomputers that calculate statistics of lab experiments and does
+analysis in the blink of an eye. There are datapads, paperwork, and
+scientifical instruments all over the place; as well as nice rotating
+leather chairs. Specimens are encased in plexiglass containers, put in
+lockable shelves. This is where Colonial Marine scientists make top of the
+line weaponry and examine special creatures to create new medicine, etc
+that could be applied for the military.
+~
+&zThe lab has been totally ruined. Numerous equipment and specimens are all
+over the floor. The bones of countless creatures are scattered around; as
+well as the corpses of dead facehuggers as they completed their life goal.
+The hive material here is quite odd; the walls of the hive are now rough
+and the air is very stuffy; since there is so little air in here. The
+echos of shrill shrieking and the screams of suffocating impregnated
+creatures bounce along the wall. 
+~
+2293768
+0
+0 1
+D0
+~
+~
+0
+-1 817
+D3
+~
+~
+0
+-1 819
+S
+#819
+A Secret Laboratory~
+&WThe laboratory is like an infirmary, just with more scientific equipment,
+like supercomputers that calculate statistics of lab experiments and does
+analysis in the blink of an eye. There are datapads, paperwork, and
+scientifical instruments all over the place; as well as nice rotating
+leather chairs. Specimens are encased in plexiglass containers, put in
+lockable shelves. This is where Colonial Marine scientists make top of the
+line weaponry and examine special creatures to create new medicine, etc
+that could be applied for the military.
+~
+&zThe lab has been totally ruined. Numerous equipment and specimens are all
+over the floor. The bones of countless creatures are scattered around; as
+well as the corpses of dead facehuggers as they completed their life goal.
+The hive material here is quite odd; the walls of the hive are now rough
+and the air is very stuffy; since there is so little air in here. The
+echos of shrill shrieking and the screams of suffocating impregnated
+creatures bounce along the wall. 
+~
+2293768
+0
+0 1
+D0
+~
+~
+0
+-1 816
+D1
+~
+~
+0
+-1 818
+D2
+~
+~
+134217735&1
+26931 796
+S
+#820
+&wA Large Storage Area~
+&wThis storage area is reserved for large equipment and plenty of other
+stuff that the Colonial Marines on this base needs. There are many green
+crates with the &RU&WS&BC&RM&WC &winsignia here, stacked up to the
+ceiling. They are arranged in tightly packed rows and columns, leaving a
+small little hallway where people can navigate through. On the far corner
+is a large open space for powerloaders so they can do their thing when
+needed.
+~
+&zThe storage area is still a storage area... just for aliens now. Instead
+of green crates, it is filled with eggs and alien exoarmor. Countless
+bashed crates are all over the place. Cocooned creatures are bolted to the
+walls and the ceiling by xenomorph secretions. Some have their chests torn
+open. Its a sign that they gave birth to chestbursters; no doubt full
+sized xenomorph drones by now. 
+~
+2293768
+0
+0 1
+D0
+~
+~
+3&1
+-1 796
+D1
+~
+~
+0
+-1 821
+D2
+~
+~
+0
+-1 823
+S
+#821
+&wA Large Storage Area~
+&wThis storage area is reserved for large equipment and plenty of other
+stuff that the Colonial Marines on this base needs. There are many green
+crates with the &RU&WS&BC&RM&WC &winsignia here, stacked up to the
+ceiling. They are arranged in tightly packed rows and columns, leaving a
+small little hallway where people can navigate through. On the far corner
+is a large open space for powerloaders so they can do their thing when
+needed.
+~
+&zThe storage area is still a storage area... just for aliens now. Instead
+of green crates, it is filled with eggs and alien exoarmor. Countless
+bashed crates are all over the place. Cocooned creatures are bolted to the
+walls and the ceiling by xenomorph secretions. Some have their chests torn
+open. Its a sign that they gave birth to chestbursters; no doubt full
+sized xenomorph drones by now. 
+~
+2293768
+0
+0 1
+D2
+~
+~
+0
+-1 822
+D3
+~
+~
+0
+-1 820
+S
+#822
+&wA Large Storage Area~
+&wThis storage area is reserved for large equipment and plenty of other
+stuff that the Colonial Marines on this base needs. There are many green
+crates with the &RU&WS&BC&RM&WC &winsignia here, stacked up to the
+ceiling. They are arranged in tightly packed rows and columns, leaving a
+small little hallway where people can navigate through. On the far corner
+is a large open space for powerloaders so they can do their thing when
+needed.
+~
+&zThe storage area is still a storage area... just for aliens now. Instead
+of green crates, it is filled with eggs and alien exoarmor. Countless
+bashed crates are all over the place. Cocooned creatures are bolted to the
+walls and the ceiling by xenomorph secretions. Some have their chests torn
+open. Its a sign that they gave birth to chestbursters; no doubt full
+sized xenomorph drones by now. 
+~
+2293768
+0
+0 1
+D0
+~
+~
+0
+-1 821
+D3
+~
+~
+0
+-1 823
+S
+#823
+&wA Large Storage Area~
+&wThis storage area is reserved for large equipment and plenty of other
+stuff that the Colonial Marines on this base needs. There are many green
+crates with the &RU&WS&BC&RM&WC &winsignia here, stacked up to the
+ceiling. They are arranged in tightly packed rows and columns, leaving a
+small little hallway where people can navigate through. On the far corner
+is a large open space for powerloaders so they can do their thing when
+needed.
+~
+&zThe storage area is still a storage area... just for aliens now. Instead
+of green crates, it is filled with eggs and alien exoarmor. Countless
+bashed crates are all over the place. Cocooned creatures are bolted to the
+walls and the ceiling by xenomorph secretions. Some have their chests torn
+open. Its a sign that they gave birth to chestbursters; no doubt full
+sized xenomorph drones by now. 
+~
+2293768
+0
+0 1
+D0
+~
+~
+0
+-1 820
+D1
+~
+~
+0
+-1 822
+S
+#825
+&RInside The Base Power Generator~
+&RThis is Lewis Colonial Marine Base's gigantic power generator. The energy
+from nuclear fusion is very powerful, capable of killing or destroying
+everything inside it. As molecules explode all around, the heat rises to
+super high temperatures. The power this generator creates go to nuclear
+batteries that hold the energy which can last up to a million or so years
+with full usage of the base's electronic devices. 
+~
+&RBeing super hot, the hive materials cannot live here, thus there are no
+hived walls. This place is totally unhiveable; everything that gets in
+will be burned to death. Even the strongest alien cannot get here. The
+only way this place can be hived is by disrupting the fuel source which is
+protected by a high energy forcefield that has power supplied by an
+internal power source within the fuel tank. 
+~
+36243468
+0
+0 1
+S
+#0
+
+
+#RESETS
+D 0 765 3 2
+D 0 766 1 2
+D 0 766 3 2
+D 0 767 1 2
+D 0 767 3 2
+D 0 768 1 2
+D 0 769 1 2
+D 0 791 1 2
+D 0 794 4 2
+D 0 796 0 2
+D 0 796 2 1
+D 0 801 3 2
+D 0 802 3 2
+M 1 766 1 803
+D 0 803 1 0
+D 0 803 3 0
+D 0 803 5 2
+M 1 765 1 804
+D 0 804 1 0
+M 1 769 1 805
+D 0 805 3 0
+M 1 767 1 806
+M 1 768 1 807
+D 0 814 3 1
+D 0 815 1 1
+D 0 819 2 2
+D 0 820 0 1
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+S
+
+
+#$

@@ -1,0 +1,5252 @@
+#AREA   {PROTO} Korrd's area in progress~
+
+#VERSION 3
+
+#AUTHOR Korrd~
+
+#AMBIENCE 0
+#RANGES
+0 20 0 20
+$
+
+#RESETMSG The wind howls past, chilling you to the bone. ~
+
+#MOBILES
+#543
+predator wounded~
+&Ga wounded predator~
+&gA wounded predator sneaks around, trying not to be detected
+~
+~
+0
+67108867
+Z
+5 8 8 1
+10 10 10 10 10 10
+2 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#544
+forest predator~
+&Ga hunting predator~
+&GA predator is here, hunting for prey.
+~
+~
+0
+67108867
+Z
+5 8 8 0
+10 10 10 10 10 10
+2 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#0
+
+
+#OBJECTS
+#543
+giant tree~
+&ga giant tree~
+&gA giant tree sits here, leaves moving like water.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+1000 0 0
+#544
+rocks~
+&za pile of rocks~
+&zA pile of large rocks lie on the ground.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+1000 0 0
+#545
+swamp~
+a swamp~
+&gA stinky, murky swamp is here.~
+~
+13
+1024
+0
+0 0 0 0 0 0
+1000 0 0
+#546
+pebbles sand~
+&Osome pebbles and sand~
+&OSome pebbles and sand are scattered around here.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+1000 0 0
+#547
+skulls~
+&wa pile of skulls~
+&wA pile of skulls are left here as a warning sign.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+200 0 0
+#548
+destroyed camp~
+a destroyed camp~
+&wA destroyed camp was abandoned here.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+1000 0 0
+#549
+shrubs~
+a group of shurbs~
+&gA couple shrubs yielding &Rred berries&g grows here.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#543
+&gIn The Middle Of A Clearing~
+&gThe clearing is totally green with vegetation. Tall, looming trees
+surround the clearing, casting strange shadows on the ground. In the
+distance, squeaky noices and hair-raising howls can be heard, enough to
+spook even the bravest intelligent creature in the galaxy. A small rolling
+hill can be seen to the east. There seems to be some kind of camp there;
+perhaps it would be interesting to check out.
+~
+~
+48
+0 1
+D0
+~
+~
+0
+-1 546
+D1
+~
+~
+0
+-1 544
+D2
+~
+~
+0
+-1 550
+D3
+~
+~
+0
+-1 548
+D6
+~
+~
+0
+-1 545
+D7
+~
+~
+0
+-1 547
+D8
+~
+~
+0
+-1 551
+D9
+~
+~
+0
+-1 549
+S
+#544
+&gA Small, Rolling Hill~
+&gOn top of the hill is a small camp that was abandoned some time ago.
+Weathered tents and crates filled with rusted equipment are left buried
+beneath the dirt. Whoever made this camp had to leave in a rush. In the
+center of the camp is where a &Rcampfire &gonce existed, but now it is
+just a collection of rocks, smashed metal, ash, and &Rred blood&g?!?
+Something is definitely wrong here. It would be wise to get out of here
+while you still can! 
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 545
+D1
+~
+~
+0
+-1 553
+D2
+~
+~
+0
+-1 551
+D3
+~
+~
+0
+-1 543
+D6
+~
+~
+0
+-1 554
+D7
+~
+~
+0
+-1 546
+D8
+~
+~
+0
+-1 552
+D9
+~
+~
+0
+-1 550
+S
+#545
+&gNearing The Forest~
+&gThis is the edge of the clearing, and the tall trees loom overhead,
+blocking out light from the sun. There are &Rred eyes&g in the darkness,
+watching carefully. A &zsmall cave&g is under a large pile of dirt and
+rocks, but it is caved in. Out of the trees is a lingering fog that makes
+scanning the area with eyes hard to do. Clicks and scratches can be heard
+every few seconds. The wildlife here must be scary!
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 556
+D1
+~
+~
+0
+-1 554
+D2
+~
+~
+0
+-1 544
+D3
+~
+~
+0
+-1 546
+D5
+~
+~
+1073741824
+-1 656
+D6
+~
+~
+0
+-1 555
+D7
+~
+~
+0
+-1 557
+D8
+~
+~
+0
+-1 553
+D9
+~
+~
+0
+-1 543
+S
+#546
+&gNearing The Forest~
+&gThis is the edge of the clearing, and the tall trees loom overhead,
+blocking out light from the sun. There are &Rred eyes&g in the darkness,
+watching carefully. Out of the trees is a lingering fog that makes
+scanning the area visually hard to to. Clicks and scratches can be heard
+every few seconds. The wildlife here must be scary!
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 557
+D1
+~
+~
+0
+-1 545
+D2
+~
+~
+0
+-1 543
+D3
+~
+~
+0
+-1 547
+D6
+~
+~
+0
+-1 556
+D7
+~
+~
+0
+-1 558
+D8
+~
+~
+0
+-1 544
+D9
+~
+~
+0
+-1 548
+S
+#547
+&gNearing The Forest~
+&gThis is the edge of the clearing, and the tall trees loom overhead,
+blocking out light from the sun. There are &Rred eyes&g in the darkness,
+watching carefully. Out of the trees is a lingering fog that makes
+scanning the area visually hard to do. Clicks and scratches can be heard
+every few seconds. The wildlife here must be scary!
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 558
+D1
+~
+~
+0
+-1 546
+D2
+~
+~
+0
+-1 548
+D3
+~
+~
+0
+-1 560
+D6
+~
+~
+0
+-1 557
+D7
+~
+~
+0
+-1 559
+D8
+~
+~
+0
+-1 543
+D9
+~
+~
+0
+-1 561
+S
+#548
+&gNearing The Forest~
+&gThis is the edge of the clearing, and the tall trees loom overhead,
+blocking out light from the sun. There are &Rred eyes&g in the darkness,
+watching carefully. Out of the trees is a lingering fog that makes
+scanning the area visually hard to do. Clicks and scratches can be heard
+ever few seconds. The wildlife here must be scary!
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 547
+D1
+~
+~
+0
+-1 543
+D2
+~
+~
+0
+-1 549
+D3
+~
+~
+0
+-1 561
+D6
+~
+~
+0
+-1 546
+D7
+~
+~
+0
+-1 560
+D8
+~
+~
+0
+-1 550
+D9
+~
+~
+0
+-1 562
+> rand_prog 100~
+mpecho Click... Click... Click...
+~
+|
+S
+#549
+&gA Swampy Area~
+&gThe swamp is stinky and teeming with slimy swamp creatures. The ground is
+very boggy and it feels like quicksand. There are sharp grasses protruding
+out of the bog, like punji sticks. Watch out and no one gets hurt! 
+Greenish water floods this swamp by from a nearby stream; the sound of
+running water is relaxing, but it is just creating false security. 
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 548
+D1
+~
+~
+0
+-1 550
+D2
+~
+~
+0
+-1 564
+D3
+~
+~
+0
+-1 562
+D6
+~
+~
+0
+-1 543
+D7
+~
+~
+0
+-1 561
+D8
+~
+~
+0
+-1 565
+D9
+~
+~
+0
+-1 563
+S
+#550
+&gNearing The Forest~
+&gThis is the edge of the clearing, and the tall trees loom overhead,
+blocked out light from the sun. There are &Rred eyes&g in the darkness,
+watching carefully. Out of the trees is a lingering fog that makes
+scanning the area visually hard to do. Clicks and scratches can be heard
+every few seconds. The wildlife here must be scary! 
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 543
+D1
+~
+~
+0
+-1 551
+D2
+~
+~
+0
+-1 565
+D3
+~
+~
+0
+-1 549
+D6
+~
+~
+0
+-1 544
+D7
+~
+~
+0
+-1 548
+D8
+~
+~
+0
+-1 566
+D9
+~
+~
+0
+-1 564
+S
+#551
+&gNearing The Forest~
+&gThis is the edge of the clearing, and the tall trees loom overhead,
+blocked out light from the sun. There are &Rred eyes&g in the darkness,
+watching carefully. Out of the trees is a lingering fog that makes
+scanning the area visually hard to do. Clicks and scratches can be heard
+every few seconds. The wildlife here must be scary!
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 544
+D1
+~
+~
+0
+-1 552
+D2
+~
+~
+0
+-1 566
+D3
+~
+~
+0
+-1 550
+D6
+~
+~
+0
+-1 553
+D7
+~
+~
+0
+-1 543
+D8
+~
+~
+0
+-1 567
+D9
+~
+~
+0
+-1 565
+> rand_prog 100~
+mpecho Scratch... Scratch... Scratch...
+~
+|
+S
+#552
+&gInto The Forest~
+&YLight&g barely illuminates from the clearing to the west. The woods is a
+dark place, teeming with plant life. The vegetation is tall and prohibits
+the ability to see far. Tall trees are everywhere, covered with leaves.
+The soil is very rich, which is ideal for the vegetation it provides
+minerals for.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 553
+D1
+~
+~
+0
+-1 569
+D2
+~
+~
+0
+-1 567
+D3
+~
+~
+0
+-1 551
+D6
+~
+~
+0
+-1 570
+D7
+~
+~
+0
+-1 544
+D8
+~
+~
+0
+-1 568
+D9
+~
+~
+0
+-1 566
+S
+#553
+&gInto The Forest~
+&YLight&g barely illuminates from the clearing to the west. The woods is a
+dark place, teeming with plant life. The vegetation is tall and prohibits
+the ability to see far. Tall trees are everywhere, covered with leaves.
+The soil is very rich, which is ideal for the vegetation it provides
+minerals for.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 554
+D1
+~
+~
+0
+-1 570
+D2
+~
+~
+0
+-1 552
+D3
+~
+~
+0
+-1 544
+D6
+~
+~
+0
+-1 571
+D7
+~
+~
+0
+-1 545
+D8
+~
+~
+0
+-1 569
+D9
+~
+~
+0
+-1 551
+S
+#554
+&gInto The Forest~
+&YLight&g barely illuminates from the clearing to the west. The woods is a
+dark place, teeming with plant life. The vegetation is tall and prohibits
+the ability to see far. Tall trees are everywhere, covered with leaves.
+The soil is very rich, which is ideal for the vegetation it provides
+minerals for.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 555
+D1
+~
+~
+0
+-1 571
+D2
+~
+~
+0
+-1 553
+D3
+~
+~
+0
+-1 545
+D6
+~
+~
+0
+-1 572
+D7
+~
+~
+0
+-1 556
+D8
+~
+~
+0
+-1 570
+D9
+~
+~
+0
+-1 544
+S
+#555
+&gInto The Forest~
+&YLight&g barely illuminates from the clearing to the southwest. The woods
+is a dark place, teeming with plant life. The vegetation is tall and
+prohibits the ability to see far. Tall trees are everywhere, covered with
+leaves. The soil is very rich, which is ideal for the vegetation it
+provides minerals for.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 574
+D1
+~
+~
+0
+-1 572
+D2
+~
+~
+0
+-1 554
+D3
+~
+~
+0
+-1 556
+D6
+~
+~
+0
+-1 573
+D7
+~
+~
+0
+-1 575
+D8
+~
+~
+0
+-1 571
+D9
+~
+~
+0
+-1 545
+S
+#556
+&gInto The Forest~
+&YLight&g barely illuminates from the clearing to the south. The woods is a
+dark place, teeming with plant life. The vegetation is tall and prohibits
+the ability to see far. Tall trees are everywhere, covered with leaves.
+The soil is very rich, which is ideal for the vegetation it provides
+minerals for. 
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 575
+D1
+~
+~
+0
+-1 555
+D2
+~
+~
+0
+-1 545
+D3
+~
+~
+0
+-1 557
+D6
+~
+~
+0
+-1 574
+D7
+~
+~
+0
+-1 576
+D8
+~
+~
+0
+-1 554
+D9
+~
+~
+0
+-1 546
+S
+#557
+&gInto The Forest~
+&YLight&g barely illuminates from the clearing to the south. The woods is a
+dark place, teeming with plant life. The vegetation is tall and prohibits
+the ability to see far. Tall trees are everywhere, covered with leaves.
+The soil is very rich, which is ideal for the vegetation it provides
+minerals for. 
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 576
+D1
+~
+~
+0
+-1 556
+D2
+~
+~
+0
+-1 546
+D3
+~
+~
+0
+-1 558
+D6
+~
+~
+0
+-1 575
+D7
+~
+~
+0
+-1 577
+D8
+~
+~
+0
+-1 545
+D9
+~
+~
+0
+-1 547
+S
+#558
+&gInto The Forest~
+&YLight&g barely illuminates from the clearing to the south. The woods is a
+dark place, teeming with plant life. The vegetation is tall and prohibits
+the ability to see far. Tall trees are everywhere, covered with leaves.
+The soil is very rich, which is ideal for the vegetation it provides
+minerals for. 
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 577
+D1
+~
+~
+0
+-1 557
+D2
+~
+~
+0
+-1 547
+D3
+~
+~
+0
+-1 559
+D6
+~
+~
+0
+-1 576
+D7
+~
+~
+0
+-1 578
+D8
+~
+~
+0
+-1 546
+D9
+~
+~
+0
+-1 560
+S
+#559
+&gShrubery ~
+&gShrubery of all kinds are entangled here. There are even a few berry bush
+trees, filled with delicious and sweet berries. &YLight&g is not as
+obstructed here, so it is bright enough to see real well. A nice &Bcool
+breeze&g can be felt. The shrubs are so thick, its a wonder how it is
+possible to move through it. On the ground, a puddle of dried &Ggreen
+liquid&g is visible. Weird, what is that?!
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 578
+D1
+~
+~
+0
+-1 558
+D2
+~
+~
+0
+-1 560
+D3
+~
+~
+0
+-1 580
+D6
+~
+~
+0
+-1 577
+D7
+~
+~
+0
+-1 579
+D8
+~
+~
+0
+-1 547
+D9
+~
+~
+0
+-1 581
+S
+#560
+&gInto The Forest~
+&YLight&g barely illuminates from the clearing to the east. The woods is a
+dark place, teeming with plant life. The vegetation is tall and prohibits
+the ability to see far. Tall trees are everywhere, covered with leaves.
+The soil is very rich, which is ideal for the vegetation it provides
+minerals for. 
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 559
+D1
+~
+~
+0
+-1 547
+D2
+~
+~
+0
+-1 561
+D3
+~
+~
+0
+-1 581
+D6
+~
+~
+0
+-1 558
+D7
+~
+~
+0
+-1 580
+D8
+~
+~
+0
+-1 548
+D9
+~
+~
+0
+-1 582
+> rand_prog 100~
+mpecho Birds are chirping.
+~
+|
+S
+#561
+&gInto The Forest~
+&YLight&g barely illuminates from the clearing to the east. The woods is a
+dark place, teeming with plant life. The vegetation is tall and prohibits
+the ability to see far. Tall trees are everywhere, covered with leaves.
+The soil is very rich, which is ideal for the vegetation it provides
+minerals for.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 560
+D1
+~
+~
+0
+-1 548
+D2
+~
+~
+0
+-1 562
+D3
+~
+~
+0
+-1 582
+D6
+~
+~
+0
+-1 547
+D7
+~
+~
+0
+-1 581
+D8
+~
+~
+0
+-1 549
+D9
+~
+~
+0
+-1 583
+S
+#562
+&gInto The Forest~
+&YLight&g barely illuminates from the clearing to the east. The woods is a
+dark place, teeming with plant life. The vegetation is tall and prohibits
+the ability to see far. Tall trees are everywhere, covered with leaves.
+The soil is very rich, which is ideal for the vegetation it provides
+minerals for.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 561
+D1
+~
+~
+0
+-1 549
+D2
+~
+~
+0
+-1 563
+D3
+~
+~
+0
+-1 583
+D6
+~
+~
+0
+-1 548
+D7
+~
+~
+0
+-1 582
+D8
+~
+~
+0
+-1 564
+D9
+~
+~
+0
+-1 584
+S
+#563
+&gInto The Forest~
+&YLight&g barely illuminates from the clearing to the northeast. The woods
+is a dark place, teeming with plant life. The vegetation is tall and
+prohibits the ability to see far. Tall trees are everywhere, covered with
+leaves. The soil is very rich, which is ideal for the vegetation it
+provides minerals for.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 562
+D1
+~
+~
+0
+-1 564
+D2
+~
+~
+0
+-1 586
+D3
+~
+~
+0
+-1 584
+D6
+~
+~
+0
+-1 549
+D7
+~
+~
+0
+-1 583
+D8
+~
+~
+0
+-1 587
+D9
+~
+~
+0
+-1 585
+S
+#564
+&gInto The Forest~
+&YLight&g barely illuminates from the clearing to the north. The woods is a
+dark place, teeming with plant life. The vegetation is tall and prohibits
+the ability to see far. Tall trees are everywhere, covered with leaves.
+The soil is very rich, which is ideal for the vegetation it provides
+minerals for.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 549
+D1
+~
+~
+0
+-1 565
+D2
+~
+~
+0
+-1 587
+D3
+~
+~
+0
+-1 563
+D6
+~
+~
+0
+-1 550
+D7
+~
+~
+0
+-1 562
+D8
+~
+~
+0
+-1 588
+D9
+~
+~
+0
+-1 586
+> rand_prog 100~
+mpecho Birds are chirping.
+~
+|
+S
+#565
+&gInto The Forest~
+&YLight&g barely illuminates from the clearing to the north. The woods is a
+dark place, teeming with plant life. The vegetation is tall and prohibits
+the ability to see far. Tall trees are everywhere, covered with leaves.
+The soil is very rich, which is ideal for the vegetation it provides
+minerals for.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 550
+D1
+~
+~
+0
+-1 566
+D2
+~
+~
+0
+-1 588
+D3
+~
+~
+0
+-1 564
+D6
+~
+~
+0
+-1 551
+D7
+~
+~
+0
+-1 549
+D8
+~
+~
+0
+-1 589
+D9
+~
+~
+0
+-1 587
+S
+#566
+&gInto The Forest~
+&YLight&g barely illuminates from the clearing to the north. The woods is a
+dark place, teeming with plant life. The vegetation is tall and prohibits
+the ability to see far. Tall trees are everywhere, covered with leaves.
+The soil is very rich, which is ideal for the vegetation it provides
+minerals for.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 551
+D1
+~
+~
+0
+-1 567
+D2
+~
+~
+0
+-1 589
+D3
+~
+~
+0
+-1 565
+D6
+~
+~
+0
+-1 552
+D7
+~
+~
+0
+-1 550
+D8
+~
+~
+0
+-1 590
+D9
+~
+~
+0
+-1 588
+S
+#567
+&gInto The Forest~
+&YLight&g barely illuminates from the clearing to the northwest. The woods
+is a dark place, teeming with plant life. The vegetation is tall and
+prohibits the ability to see far. Tall trees are everywhere, covered with
+leaves. The soil is very rich, which is ideal for the vegetation it
+provides minerals for.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 552
+D1
+~
+~
+0
+-1 568
+D2
+~
+~
+0
+-1 590
+D3
+~
+~
+0
+-1 566
+D6
+~
+~
+0
+-1 569
+D7
+~
+~
+0
+-1 551
+D8
+~
+~
+0
+-1 591
+D9
+~
+~
+0
+-1 589
+> rand_prog 100~
+mpecho There is a low growl...
+~
+|
+S
+#568
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 569
+D1
+~
+~
+0
+-1 613
+D2
+~
+~
+0
+-1 591
+D3
+~
+~
+0
+-1 567
+D6
+~
+~
+0
+-1 612
+D7
+~
+~
+0
+-1 552
+D8
+~
+~
+0
+-1 614
+D9
+~
+~
+0
+-1 590
+S
+#569
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 570
+D1
+~
+~
+0
+-1 612
+D2
+~
+~
+0
+-1 568
+D3
+~
+~
+0
+-1 552
+D6
+~
+~
+0
+-1 611
+D7
+~
+~
+0
+-1 553
+D8
+~
+~
+0
+-1 613
+D9
+~
+~
+0
+-1 567
+S
+#570
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 571
+D1
+~
+~
+0
+-1 611
+D2
+~
+~
+0
+-1 569
+D3
+~
+~
+0
+-1 553
+D6
+~
+~
+0
+-1 610
+D7
+~
+~
+0
+-1 554
+D8
+~
+~
+0
+-1 612
+D9
+~
+~
+0
+-1 552
+S
+#571
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees. In the middle of this place is a
+towering tree that can be climbed.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 572
+D1
+~
+~
+0
+-1 610
+D2
+~
+~
+0
+-1 570
+D3
+~
+~
+0
+-1 554
+D4
+~
+~
+2048
+-1 651
+D6
+~
+~
+0
+-1 609
+D7
+~
+~
+0
+-1 555
+D8
+~
+~
+0
+-1 611
+D9
+~
+~
+0
+-1 553
+S
+#572
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 573
+D1
+~
+~
+0
+-1 609
+D2
+~
+~
+0
+-1 571
+D3
+~
+~
+0
+-1 555
+D6
+~
+~
+0
+-1 608
+D7
+~
+~
+0
+-1 574
+D8
+~
+~
+0
+-1 610
+D9
+~
+~
+0
+-1 554
+S
+#573
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 592
+D1
+~
+~
+0
+-1 608
+D2
+~
+~
+0
+-1 572
+D3
+~
+~
+0
+-1 574
+D6
+~
+~
+0
+-1 607
+D7
+~
+~
+0
+-1 604
+D8
+~
+~
+0
+-1 609
+D9
+~
+~
+0
+-1 555
+S
+#574
+&OThe Shore Of A Small River~
+&OTo the north is a &Bsmall river&O that is narrow and somewhat shallow.
+The shore is mostly brown clay with some sand and rocks scattered about. A
+nice soft breeze goes past here every so often. The sound and sight of
+rushing water is relaxing, but also creates a sense of thirst. To the
+south is a thick forest. 
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 604
+D1
+~
+~
+0
+-1 573
+D2
+~
+~
+0
+-1 555
+D3
+~
+~
+0
+-1 575
+D6
+~
+~
+0
+-1 592
+D7
+~
+~
+0
+-1 601
+D8
+~
+~
+0
+-1 572
+D9
+~
+~
+0
+-1 556
+S
+#575
+&OThe Shore Of A Small River~
+&OTo the north is a &Bsmall river&O that is narrow and somewhat shallow.
+The shore is mostly brown clay with some sand and rocks scattered about. A
+nice soft breeze goes past here every so often. The sound and sight of
+rushing water is relaxing, but also creates a sense of thirst. To the
+south is a thick forest. 
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 601
+D1
+~
+~
+0
+-1 574
+D2
+~
+~
+0
+-1 556
+D3
+~
+~
+0
+-1 576
+D6
+~
+~
+0
+-1 604
+D7
+~
+~
+0
+-1 600
+D8
+~
+~
+0
+-1 555
+D9
+~
+~
+0
+-1 557
+S
+#576
+&OThe Shore Of A Small River~
+&OTo the north is a &Bsmall river&O that is narrow and somewhat shallow.
+The shore is mostly brown clay with some sand and rocks scattered about. A
+nice soft breeze goes past here every so often. The sound and sight of
+rushing water is relaxing, but also creates a sense of thirst. To the
+south is a thick forest. 
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 600
+D1
+~
+~
+0
+-1 575
+D2
+~
+~
+0
+-1 557
+D3
+~
+~
+0
+-1 577
+D6
+~
+~
+0
+-1 601
+D7
+~
+~
+0
+-1 593
+D8
+~
+~
+0
+-1 556
+D9
+~
+~
+0
+-1 558
+S
+#577
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 593
+D1
+~
+~
+0
+-1 576
+D2
+~
+~
+0
+-1 558
+D3
+~
+~
+0
+-1 578
+D6
+~
+~
+0
+-1 600
+D7
+~
+~
+0
+-1 594
+D8
+~
+~
+0
+-1 557
+D9
+~
+~
+0
+-1 559
+> rand_prog 100~
+mpecho Birds are chirping.
+~
+|
+S
+#578
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 594
+D1
+~
+~
+0
+-1 577
+D2
+~
+~
+0
+-1 559
+D3
+~
+~
+0
+-1 579
+D6
+~
+~
+0
+-1 593
+D7
+~
+~
+0
+-1 595
+D8
+~
+~
+0
+-1 558
+D9
+~
+~
+0
+-1 580
+S
+#579
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 595
+D1
+~
+~
+0
+-1 578
+D2
+~
+~
+0
+-1 580
+D3
+~
+~
+0
+-1 630
+D6
+~
+~
+0
+-1 594
+D7
+~
+~
+0
+-1 631
+D8
+~
+~
+0
+-1 559
+D9
+~
+~
+0
+-1 629
+S
+#580
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees. In the middle of this place is a
+towering tree that can be climbed.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 579
+D1
+~
+~
+0
+-1 559
+D2
+~
+~
+0
+-1 581
+D3
+~
+~
+0
+-1 629
+D4
+~
+~
+2048
+-1 646
+D6
+~
+~
+0
+-1 578
+D7
+~
+~
+0
+-1 630
+D8
+~
+~
+0
+-1 560
+D9
+~
+~
+0
+-1 628
+S
+#581
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 580
+D1
+~
+~
+0
+-1 560
+D2
+~
+~
+0
+-1 582
+D3
+~
+~
+0
+-1 628
+D6
+~
+~
+0
+-1 559
+D7
+~
+~
+0
+-1 629
+D8
+~
+~
+0
+-1 561
+D9
+~
+~
+0
+-1 627
+S
+#582
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 581
+D1
+~
+~
+0
+-1 561
+D2
+~
+~
+0
+-1 583
+D3
+~
+~
+0
+-1 627
+D6
+~
+~
+0
+-1 560
+D7
+~
+~
+0
+-1 628
+D8
+~
+~
+0
+-1 562
+D9
+~
+~
+0
+-1 626
+S
+#583
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 582
+D1
+~
+~
+0
+-1 562
+D2
+~
+~
+0
+-1 584
+D3
+~
+~
+0
+-1 626
+D6
+~
+~
+0
+-1 561
+D7
+~
+~
+0
+-1 627
+D8
+~
+~
+0
+-1 563
+D9
+~
+~
+0
+-1 625
+S
+#584
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 583
+D1
+~
+~
+0
+-1 563
+D2
+~
+~
+0
+-1 585
+D3
+~
+~
+0
+-1 625
+D6
+~
+~
+0
+-1 562
+D7
+~
+~
+0
+-1 626
+D8
+~
+~
+0
+-1 586
+D9
+~
+~
+0
+-1 624
+S
+#585
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 584
+D1
+~
+~
+0
+-1 586
+D2
+~
+~
+0
+-1 622
+D3
+~
+~
+0
+-1 624
+D6
+~
+~
+0
+-1 563
+D7
+~
+~
+0
+-1 625
+D8
+~
+~
+0
+-1 621
+D9
+~
+~
+0
+-1 623
+S
+#586
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 563
+D1
+~
+~
+0
+-1 587
+D2
+~
+~
+0
+-1 621
+D3
+~
+~
+0
+-1 585
+D6
+~
+~
+0
+-1 564
+D7
+~
+~
+0
+-1 584
+D8
+~
+~
+0
+-1 620
+D9
+~
+~
+0
+-1 622
+S
+#587
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 564
+D1
+~
+~
+0
+-1 588
+D2
+~
+~
+0
+-1 620
+D3
+~
+~
+0
+-1 586
+D6
+~
+~
+0
+-1 565
+D7
+~
+~
+0
+-1 563
+D8
+~
+~
+0
+-1 619
+D9
+~
+~
+0
+-1 621
+S
+#588
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 565
+D1
+~
+~
+0
+-1 589
+D2
+~
+~
+0
+-1 619
+D3
+~
+~
+0
+-1 587
+D6
+~
+~
+0
+-1 566
+D7
+~
+~
+0
+-1 564
+D8
+~
+~
+0
+-1 618
+D9
+~
+~
+0
+-1 620
+> rand_prog 100~
+mpecho Birds are chirping.
+~
+|
+S
+#589
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 566
+D1
+~
+~
+0
+-1 590
+D2
+~
+~
+0
+-1 618
+D3
+~
+~
+0
+-1 588
+D6
+~
+~
+0
+-1 567
+D7
+~
+~
+0
+-1 565
+D8
+~
+~
+0
+-1 617
+D9
+~
+~
+0
+-1 619
+S
+#590
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 567
+D1
+~
+~
+0
+-1 591
+D2
+~
+~
+0
+-1 617
+D3
+~
+~
+0
+-1 589
+D6
+~
+~
+0
+-1 568
+D7
+~
+~
+0
+-1 566
+D8
+~
+~
+0
+-1 616
+D9
+~
+~
+0
+-1 618
+S
+#591
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 568
+D1
+~
+~
+0
+-1 614
+D2
+~
+~
+0
+-1 616
+D3
+~
+~
+0
+-1 590
+D6
+~
+~
+0
+-1 613
+D7
+~
+~
+0
+-1 567
+D8
+~
+~
+0
+-1 615
+D9
+~
+~
+0
+-1 617
+S
+#592
+&OThe Shore Of A Small River~
+&OTo the north is a &Bsmall river&O that is narrow and somewhat shallow.
+The shore is mostly brown clay with some sand and rocks scattered about. A
+nice soft breeze goes past here every so often. The sound and sight of
+rushing water is relaxing, but also creates a sense of thirst. To the
+south is a thick forest. 
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 605
+D1
+~
+~
+0
+-1 607
+D2
+~
+~
+0
+-1 573
+D3
+~
+~
+0
+-1 604
+D7
+~
+~
+0
+-1 603
+D8
+~
+~
+0
+-1 608
+D9
+~
+~
+0
+-1 574
+S
+#593
+&OThe Shore Of A Small River~
+&OTo the north is a &Bsmall river&O that is narrow and somewhat shallow.
+The shore is mostly brown clay with some sand and rocks scattered about. A
+nice soft breeze goes past here every so often. The sound and sight of
+rushing water is relaxing, but also creates a sense of thirst. To the
+south is a thick forest. 
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 598
+D1
+~
+~
+0
+-1 600
+D2
+~
+~
+0
+-1 577
+D3
+~
+~
+0
+-1 594
+D6
+~
+~
+0
+-1 599
+D7
+~
+~
+0
+-1 597
+D8
+~
+~
+0
+-1 576
+D9
+~
+~
+0
+-1 578
+S
+#594
+&OThe Shore Of A Small River~
+&OTo the north is a &Bsmall river&O that is narrow and somewhat shallow.
+The shore is mostly brown clay with some sand and rocks scattered about. A
+nice soft breeze goes past here every so often. The sound and sight of
+rushing water is relaxing, but also creates a sense of thirst. To the
+south is a thick forest. 
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 597
+D1
+~
+~
+0
+-1 593
+D2
+~
+~
+0
+-1 578
+D3
+~
+~
+0
+-1 595
+D6
+~
+~
+0
+-1 598
+D7
+~
+~
+0
+-1 596
+D8
+~
+~
+0
+-1 577
+D9
+~
+~
+0
+-1 579
+S
+#595
+&OOverviewing A Giant Waterfall~
+&OFrom here, a giant waterfall can be seen, one very steep that it is
+almost impossible to climb. On the other side, is a very steep cliff,
+going up very high, as this forest is in the middle of a valley. There are
+many large rocks here, probably the result of erosion of the ground due to
+the waterfall.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 596
+D1
+~
+~
+0
+-1 594
+D2
+~
+~
+0
+-1 579
+D3
+~
+~
+0
+-1 631
+D6
+~
+~
+0
+-1 597
+D8
+~
+~
+0
+-1 578
+D9
+~
+~
+0
+-1 630
+S
+#596
+&BUnder A Giant Waterfall!~
+&BThere is a loud thunder of water as it hits the ground at a high
+velocity. There seems to be a small cavern created by the water to the
+west, but its mostly rocks and dirt, not very important. However, the
+pressure is very high, and surely anyone who stays under here will die. Oh
+wait... you're here... too late!
+~
+~
+0
+0 6
+D1
+~
+~
+0
+-1 597
+D2
+~
+~
+0
+-1 595
+D8
+~
+~
+0
+-1 594
+S
+#597
+&BFloating On A Small River~
+&BAh... floating on water feels good... The water is flowing pretty slow,
+and it is nice and cool. The river seems to be around 20 feet deep and
+supports many water creatures. To the north is a &Osuper tall cliff&B that
+appears to be a kilometer or more tall. I hope there arnt any meat eating
+creatures living in the water though...
+~
+~
+0
+0 6
+D1
+~
+~
+0
+-1 598
+D2
+~
+~
+0
+-1 594
+D3
+~
+~
+0
+-1 596
+D8
+~
+~
+0
+-1 593
+D9
+~
+~
+0
+-1 595
+S
+#598
+&BFloating On A Small River~
+&BAh... floating on water feels good... The water is flowing pretty slow,
+and it is nice and cool. The river seems to be around 20 feet deep and
+supports many water creatures. To the north is a &Osuper tall cliff&B that
+appears to be a kilometer or more tall. I hope there arnt any meat eating
+creatures living in the water though...
+~
+~
+0
+0 6
+D1
+~
+~
+0
+-1 599
+D2
+~
+~
+0
+-1 593
+D3
+~
+~
+0
+-1 597
+D5
+~
+~
+0
+-1 660
+D8
+~
+~
+0
+-1 600
+D9
+~
+~
+0
+-1 594
+S
+#599
+&BFloating On A Small River~
+&BAh... floating on water feels good... The water is flowing pretty slow,
+and it is nice and cool. The river seems to be around 20 feet deep and
+supports many water creatures. To the north is a &Osuper tall cliff&B that
+appears to be a kilometer or more tall. I hope there arnt any meat eating
+creatures living in the water though...
+~
+~
+0
+0 6
+D1
+~
+~
+0
+-1 602
+D2
+~
+~
+0
+-1 600
+D3
+~
+~
+0
+-1 598
+D5
+~
+~
+0
+-1 661
+D8
+~
+~
+0
+-1 601
+D9
+~
+~
+0
+-1 593
+S
+#600
+&BFloating On A Small River~
+&BAh... floating on water feels good... The water is flowing pretty slow,
+and it is nice and cool. The river seems to be around 20 feet deep and
+supports many water creatures. To the north is a &Osuper tall cliff&B that
+appears to be a kilometer or more tall. I hope there arnt any meat eating
+creatures living in the water though...
+~
+~
+0
+0 6
+D0
+~
+~
+0
+-1 599
+D1
+~
+~
+0
+-1 601
+D2
+~
+~
+0
+-1 576
+D3
+~
+~
+0
+-1 593
+D6
+~
+~
+0
+-1 602
+D7
+~
+~
+0
+-1 598
+D8
+~
+~
+0
+-1 575
+D9
+~
+~
+0
+-1 577
+S
+#601
+&BFloating On A Small River~
+&BAh... floating on water feels good... The water is flowing pretty slow,
+and it is nice and cool. The river seems to be around 20 feet deep and
+supports many water creatures. To the north is a &Osuper tall cliff&B that
+appears to be a kilometer or more tall. I hope there arnt any meat eating
+creatures living in the water though...
+~
+~
+0
+0 6
+D0
+~
+~
+0
+-1 602
+D1
+~
+~
+0
+-1 604
+D2
+~
+~
+0
+-1 575
+D3
+~
+~
+0
+-1 600
+D6
+~
+~
+0
+-1 603
+D7
+~
+~
+0
+-1 599
+D8
+~
+~
+0
+-1 574
+D9
+~
+~
+0
+-1 576
+S
+#602
+&BFloating On A Small River~
+&BAh... floating on water feels good... The water is flowing pretty slow,
+and it is nice and cool. The river seems to be around 20 feet deep and
+supports many water creatures. To the north is a &Osuper tall cliff&B that
+appears to be a kilometer or more tall. I hope there arnt any meat eating
+creatures living in the water though...
+~
+~
+0
+0 6
+D1
+~
+~
+0
+-1 603
+D2
+~
+~
+0
+-1 601
+D3
+~
+~
+0
+-1 599
+D5
+~
+~
+0
+-1 662
+D8
+~
+~
+0
+-1 604
+D9
+~
+~
+0
+-1 600
+S
+#603
+&BFloating On A Small River~
+&BAh... floating on water feels good... The water is flowing pretty slow,
+and it is nice and cool. The river seems to be around 20 feet deep and
+supports many water creatures. To the north is a &Osuper tall cliff&B that
+appears to be a kilometer or more tall. I hope there arnt any meat eating
+creatures living in the water though...
+~
+~
+0
+0 6
+D1
+~
+~
+0
+-1 605
+D2
+~
+~
+0
+-1 604
+D3
+~
+~
+0
+-1 602
+D5
+~
+~
+0
+-1 663
+D8
+~
+~
+0
+-1 592
+D9
+~
+~
+0
+-1 601
+S
+#604
+&BFloating On A Small River~
+&BAh... floating on water feels good... The water is flowing pretty slow,
+and it is nice and cool. The river seems to be around 20 feet deep and
+supports many water creatures. To the north is a &Osuper tall cliff&B that
+appears to be a kilometer or more tall. I hope there arnt any meat eating
+creatures living in the water though...
+~
+~
+0
+0 6
+D0
+~
+~
+0
+-1 603
+D1
+~
+~
+0
+-1 592
+D2
+~
+~
+0
+-1 574
+D3
+~
+~
+0
+-1 601
+D6
+~
+~
+0
+-1 605
+D7
+~
+~
+0
+-1 602
+D8
+~
+~
+0
+-1 573
+D9
+~
+~
+0
+-1 575
+S
+#605
+&BFlowing Into A Cavern~
+&BAh... floating on water feels good... The water is flowing pretty slow,
+and it is nice and cool. The river seems to be around 20 feet deep and
+supports many water creatures. To the north is a &Osuper tall cliff&B that
+appears to be kilometer or more tall. Oh shoot, the water is falling into
+a cavern! 
+~
+~
+0
+0 6
+D1
+~
+~
+0
+-1 606
+D2
+~
+~
+0
+-1 592
+D3
+~
+~
+0
+-1 603
+D9
+~
+~
+0
+-1 604
+S
+#606
+&zInside A Cavern~
+&zAll around are stone walls with a membrane of crystalized water. Its very
+slippery here, and not to mention pretty dark. A giant pile of rocks let
+enough water go through, but the gaps are not big enough for anything
+else. The sound of rushing water entering the cavern echos and is
+magnified due the bouncing of the sound waves. Nothing else is here, so it
+would be a waste of time to stay in this position.
+~
+~
+0
+0 13
+D3
+~
+~
+0
+-1 605
+S
+#607
+&OAt The Edge Of A Cliff~
+&OAll around is the edge of a cliff that towers a few kilometers high. This
+means that the forest is in a valley! There are a few skeletons of dead
+creatures everywhere, as well as strange markings on a large rock. Some
+equipment was left here as well as skulls to "warn" people to keep away.
+That's strange...
+~
+~
+0
+0 1
+D2
+~
+~
+0
+-1 608
+D3
+~
+~
+0
+-1 592
+D8
+~
+~
+0
+-1 640
+D9
+~
+~
+0
+-1 573
+S
+#608
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 607
+D1
+~
+~
+0
+-1 640
+D2
+~
+~
+0
+-1 639
+D3
+~
+~
+0
+-1 573
+D7
+~
+~
+0
+-1 592
+D9
+~
+~
+0
+-1 572
+S
+#609
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 608
+D2
+~
+~
+0
+-1 610
+D3
+~
+~
+0
+-1 572
+D7
+~
+~
+0
+-1 573
+D8
+~
+~
+0
+-1 639
+D9
+~
+~
+0
+-1 571
+S
+#610
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 609
+D1
+~
+~
+0
+-1 639
+D2
+~
+~
+0
+-1 611
+D3
+~
+~
+0
+-1 571
+D7
+~
+~
+0
+-1 572
+D9
+~
+~
+0
+-1 570
+S
+#611
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 610
+D2
+~
+~
+0
+-1 638
+D3
+~
+~
+0
+-1 570
+D7
+~
+~
+0
+-1 571
+D9
+~
+~
+0
+-1 569
+S
+#612
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 611
+D2
+~
+~
+0
+-1 613
+D3
+~
+~
+0
+-1 569
+D7
+~
+~
+0
+-1 570
+D8
+~
+~
+0
+-1 638
+D9
+~
+~
+0
+-1 568
+> rand_prog 100~
+mpecho There is a low growl...
+~
+|
+S
+#613
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 612
+D1
+~
+~
+0
+-1 638
+D2
+~
+~
+0
+-1 614
+D3
+~
+~
+0
+-1 568
+D7
+~
+~
+0
+-1 569
+D9
+~
+~
+0
+-1 591
+S
+#614
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 613
+D2
+~
+~
+0
+-1 637
+D3
+~
+~
+0
+-1 591
+D7
+~
+~
+0
+-1 568
+D9
+~
+~
+0
+-1 616
+S
+#615
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 614
+D3
+~
+~
+0
+-1 616
+D7
+~
+~
+0
+-1 591
+D8
+~
+~
+0
+-1 637
+S
+#616
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 591
+D1
+~
+~
+0
+-1 637
+D3
+~
+~
+0
+-1 617
+D6
+~
+~
+0
+-1 614
+D7
+~
+~
+0
+-1 590
+S
+#617
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 590
+D1
+~
+~
+0
+-1 616
+D3
+~
+~
+0
+-1 618
+D6
+~
+~
+0
+-1 591
+D7
+~
+~
+0
+-1 589
+D9
+~
+~
+0
+-1 636
+S
+#618
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 589
+D1
+~
+~
+0
+-1 617
+D2
+~
+~
+0
+-1 636
+D3
+~
+~
+0
+-1 619
+D6
+~
+~
+0
+-1 590
+D7
+~
+~
+0
+-1 588
+S
+#619
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 588
+D1
+~
+~
+0
+-1 618
+D3
+~
+~
+0
+-1 620
+D6
+~
+~
+0
+-1 589
+D7
+~
+~
+0
+-1 587
+D8
+~
+~
+0
+-1 636
+S
+#620
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 587
+D1
+~
+~
+0
+-1 619
+D3
+~
+~
+0
+-1 621
+D6
+~
+~
+0
+-1 588
+D7
+~
+~
+0
+-1 586
+D9
+~
+~
+0
+-1 635
+S
+#621
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 586
+D1
+~
+~
+0
+-1 620
+D3
+~
+~
+0
+-1 622
+D6
+~
+~
+0
+-1 587
+D7
+~
+~
+0
+-1 585
+S
+#622
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 585
+D1
+~
+~
+0
+-1 622
+D3
+~
+~
+0
+-1 623
+D6
+~
+~
+0
+-1 586
+D7
+~
+~
+0
+-1 624
+D8
+~
+~
+0
+-1 635
+S
+#623
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 624
+D1
+~
+~
+0
+-1 622
+D6
+~
+~
+0
+-1 585
+D7
+~
+~
+0
+-1 634
+S
+#624
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 625
+D1
+~
+~
+0
+-1 585
+D2
+~
+~
+0
+-1 623
+D3
+~
+~
+0
+-1 634
+D6
+~
+~
+0
+-1 584
+D8
+~
+~
+0
+-1 622
+S
+#625
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 626
+D1
+~
+~
+0
+-1 584
+D2
+~
+~
+0
+-1 624
+D6
+~
+~
+0
+-1 583
+D8
+~
+~
+0
+-1 585
+D9
+~
+~
+0
+-1 634
+S
+#626
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 627
+D1
+~
+~
+0
+-1 583
+D2
+~
+~
+0
+-1 625
+D6
+~
+~
+0
+-1 582
+D7
+~
+~
+0
+-1 633
+D8
+~
+~
+0
+-1 584
+S
+#627
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees. In the middle of this place is a
+towering tree that can be climbed.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 628
+D1
+~
+~
+0
+-1 582
+D2
+~
+~
+0
+-1 626
+D3
+~
+~
+0
+-1 633
+D4
+~
+~
+2048
+-1 641
+D6
+~
+~
+0
+-1 581
+D8
+~
+~
+0
+-1 583
+> act_prog climb tree~
+mea %n You climb the tree.
+transfer %n 641
+~
+|
+S
+#628
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 629
+D1
+~
+~
+0
+-1 581
+D2
+~
+~
+0
+-1 627
+D6
+~
+~
+0
+-1 580
+D8
+~
+~
+0
+-1 582
+D9
+~
+~
+0
+-1 633
+S
+#629
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 630
+D1
+~
+~
+0
+-1 580
+D2
+~
+~
+0
+-1 628
+D6
+~
+~
+0
+-1 579
+D7
+~
+~
+0
+-1 632
+D8
+~
+~
+0
+-1 581
+S
+#630
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 631
+D1
+~
+~
+0
+-1 579
+D2
+~
+~
+0
+-1 629
+D3
+~
+~
+0
+-1 632
+D6
+~
+~
+0
+-1 595
+D8
+~
+~
+0
+-1 580
+S
+#631
+&gThe Forest~
+&gThe woods is a dark place, teeming with plant life. The vegetation is
+tall and prohibits the ability to see far. Tall trees are everywhere,
+covered with leaves. The soil is very rich, which is ideal for the
+vegetation it provides minerals for. There are a few fungi here, along
+with some parts of old dead trees.
+~
+~
+0
+0 1
+D1
+~
+~
+0
+-1 595
+D2
+~
+~
+0
+-1 630
+D8
+~
+~
+0
+-1 579
+D9
+~
+~
+0
+-1 632
+S
+#632
+&OAt The Edge Of A Cliff~
+&OThis is the edge of a looming cliff that sours high above regular vision.
+Large rocks are piled up along the cliff, and some trees grow horizontally
+from the cliff, which is quite odd. This place marks the end of the
+forest. There are some grasses and fungi living along the rocks.
+Occasionally, rocks comes down from the cliffs; as a result there are some
+bodies of dead wildlife that got smashed by the rocks crumbling down.
+~
+~
+0
+0 1
+D1
+~
+~
+0
+-1 630
+D2
+~
+~
+0
+-1 633
+D6
+~
+~
+0
+-1 631
+D8
+~
+~
+0
+-1 629
+S
+#633
+&OAt The Edge Of A Cliff~
+&OThis is the edge of a looming cliff that sours high above regular vision.
+Large rocks are piled up along the cliff, and some trees grow horizontally
+from the cliff, which is quite odd. This place marks the end of the
+forest. There are some grasses and fungi living along the rocks.
+Occasionally, rocks comes down from the cliffs; as a result there are some
+bodies of dead wildlife that got smashed by the rocks crumbling down.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 632
+D1
+~
+~
+0
+-1 627
+D2
+~
+~
+0
+-1 634
+D6
+~
+~
+0
+-1 628
+D8
+~
+~
+0
+-1 626
+S
+#634
+&OAt The Edge Of A Cliff~
+&OThis is the edge of a looming cliff that sours high above regular vision.
+Large rocks are piled up along the cliff, and some trees grow horizontally
+from the cliff, which is quite odd. This place marks the end of the
+forest. There are some grasses and fungi living along the rocks.
+Occasionally, rocks comes down from the cliffs; as a result there are some
+bodies of dead wildlife that got smashed by the rocks crumbling down.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 633
+D1
+~
+~
+0
+-1 624
+D2
+~
+~
+0
+-1 635
+D6
+~
+~
+0
+-1 625
+D8
+~
+~
+0
+-1 623
+S
+#635
+&OAt The Edge Of A Cliff~
+&OThis is the edge of a looming cliff that sours high above regular vision.
+Large rocks are piled up along the cliff, and some trees grow horizontally
+from the cliff, which is quite odd. This place marks the end of the
+forest. There are some grasses and fungi living along the rocks.
+Occasionally, rocks comes down from the cliffs; as a result there are some
+bodies of dead wildlife that got smashed by the rocks crumbling down.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 621
+D1
+~
+~
+0
+-1 636
+D6
+~
+~
+0
+-1 620
+D7
+~
+~
+0
+-1 622
+S
+#636
+&OAt The Edge Of A Cliff~
+&OThis is the edge of a looming cliff that sours high above regular vision.
+Large rocks are piled up along the cliff, and some trees grow horizontally
+from the cliff, which is quite odd. This place marks the end of the
+forest. There are some grasses and fungi living along the rocks.
+Occasionally, rocks comes down from the cliffs; as a result there are some
+bodies of dead wildlife that got smashed by the rocks crumbling down.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 618
+D3
+~
+~
+0
+-1 635
+D6
+~
+~
+0
+-1 637
+D7
+~
+~
+0
+-1 619
+S
+#637
+&OAt The Edge Of A Cliff~
+&OThis is the edge of a looming cliff that sours high above regular vision.
+Large rocks are piled up along the cliff, and some trees grow horizontally
+from the cliff, which is quite odd. This place marks the end of the
+forest. There are some grasses and fungi living along the rocks.
+Occasionally, rocks comes down from the cliffs; as a result there are some
+bodies of dead wildlife that got smashed by the rocks crumbling down.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 614
+D3
+~
+~
+0
+-1 616
+D6
+~
+~
+0
+-1 638
+D7
+~
+~
+0
+-1 615
+D9
+~
+~
+0
+-1 636
+S
+#638
+&OAt The Edge Of A Cliff~
+&OThis is the edge of a looming cliff that sours high above regular vision.
+Large rocks are piled up along the cliff, and some trees grow horizontally
+from the cliff, which is quite odd. This place marks the end of the
+forest. There are some grasses and fungi living along the rocks.
+Occasionally, rocks comes down from the cliffs; as a result there are some
+bodies of dead wildlife that got smashed by the rocks crumbling down.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 611
+D3
+~
+~
+0
+-1 613
+D6
+~
+~
+0
+-1 639
+D7
+~
+~
+0
+-1 612
+D9
+~
+~
+0
+-1 637
+S
+#639
+&OAt The Edge Of A Cliff~
+&OThis is the edge of a looming cliff that sours high above regular vision.
+Large rocks are piled up along the cliff, and some trees grow horizontally
+from the cliff, which is quite odd. This place marks the end of the
+forest. There are some grasses and fungi living along the rocks.
+Occasionally, rocks comes down from the cliffs; as a result there are some
+bodies of dead wildlife that got smashed by the rocks crumbling down.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 608
+D3
+~
+~
+0
+-1 610
+D6
+~
+~
+0
+-1 640
+D7
+~
+~
+0
+-1 609
+D9
+~
+~
+0
+-1 638
+S
+#640
+&OAt The Edge Of A Cliff~
+&OThis is the edge of a looming cliff that sours high above regular vision.
+Large rocks are piled up along the cliff, and some trees grow horizontally
+from the cliff, which is quite odd. This place marks the end of the
+forest. There are some grasses and fungi living along the rocks.
+Occasionally, rocks comes down from the cliffs; as a result there are some
+bodies of dead wildlife that got smashed by the rocks crumbling down.
+~
+~
+0
+0 1
+D3
+~
+~
+0
+-1 608
+D7
+~
+~
+0
+-1 607
+D9
+~
+~
+0
+-1 639
+S
+#641
+&gUp A Giant Tree~
+&gThis tree is very large; it's even large enough to have a little shack
+built in it. There are three main branches on this tree. It is possible to
+climb higher, to the tip of the tree. It is nice and peaceful here. A few
+holes have been dug out of the tree, with who knows what inside. Looks
+nice a good place to snipe...
+~
+~
+0
+0 1
+D2
+~
+~
+0
+-1 645
+D4
+~
+~
+0
+-1 642
+D5
+~
+~
+0
+-1 627
+D6
+~
+~
+0
+-1 643
+D7
+~
+~
+0
+-1 644
+S
+#642
+&gAt The Top Of A Giant Tree~
+&gFrom here, most of the forest and the surrounding cliffs can be seen.
+Looking down is the cloud of leaves of the tree. This is where most birds
+live, away from their predators. This place is unstable, and cannot hold a
+lot of weight. Even so, it is a good place to snipe because it is high and
+the leaves give good cover.
+~
+~
+0
+0 1
+D5
+~
+~
+0
+-1 641
+S
+#643
+&gA Branch~
+&gThere are leaves, leaves, and leaves! Leaves branch out in smaller
+branches. This branch alone can probably hold a small shack up. It is very
+strong and stable, and yet high so natural predators cannot reach it. For
+this reason, many of the more harmless creatures live here to protect
+themselves from death. Its a good place to hide, for the leaves give great
+cover. However, it is hard to see what is outside.
+~
+~
+0
+0 1
+D9
+~
+~
+0
+-1 641
+S
+#644
+&gA Branch~
+&gThere are leaves, leaves, and leaves! Leaves branch out in smaller
+branches. This branch alone can probably hold a small shack up. It is very
+strong and stable, and yet high so natural predators cannot reach it. For
+this reason, many of the more harmless creatures live here to protect
+themselves from death. Its a good place to hide, for the leaves give great
+cover. However, it is hard to see what is outside.
+~
+~
+0
+0 1
+D8
+~
+~
+0
+-1 641
+S
+#645
+&gA Branch~
+&gThere are leaves, leaves, and leaves! Leaves branch out in smaller
+branches. This branch alone can probably hold a small shack up. It is very
+strong and stable, and yet high so natural predators cannot reach it. For
+this reason, many of the more harmless creatures live here to protect
+themselves from death. Its a good place to hide, for the leaves give great
+cover. However, it is hard to see what is outside.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 641
+S
+#646
+&gUp A Giant Tree~
+&gThis tree is very large; it's even large enough to have a little shack
+built in it. There are three main branches on this tree. It is possible to
+climb higher, to the tip of the tree. It is nice and peaceful here. A few
+holes have been dug out of the tree, with who knows what inside. Looks
+nice a good place to snipe...
+~
+~
+0
+0 1
+D2
+~
+~
+0
+-1 649
+D4
+~
+~
+0
+-1 650
+D5
+~
+~
+0
+-1 580
+D6
+~
+~
+0
+-1 648
+D7
+~
+~
+0
+-1 647
+S
+#647
+&gA Branch~
+&gThere are leaves, leaves, and leaves! Leaves branch out in smaller
+branches. This branch alone can probably hold a small shack up. It is very
+strong and stable, and yet high so natural predators cannot reach it. For
+this reason, many of the more harmless creatures live here to protect
+themselves from death. Its a good place to hide, for the leaves give great
+cover. However, it is hard to see what is outside.
+~
+~
+0
+0 1
+D8
+~
+~
+0
+-1 646
+S
+#648
+&gA Branch~
+&gThere are leaves, leaves, and leaves! Leaves branch out in smaller
+branches. This branch alone can probably hold a small shack up. It is very
+strong and stable, and yet high so natural predators cannot reach it. For
+this reason, many of the more harmless creatures live here to protect
+themselves from death. Its a good place to hide, for the leaves give great
+cover. However, it is hard to see what is outside.
+~
+~
+0
+0 1
+D9
+~
+~
+0
+-1 646
+S
+#649
+&gA Branch~
+&gThere are leaves, leaves, and leaves! Leaves branch out in smaller
+branches. This branch alone can probably hold a small shack up. It is very
+strong and stable, and yet high so natural predators cannot reach it. For
+this reason, many of the more harmless creatures live here to protect
+themselves from death. Its a good place to hide, for the leaves give great
+cover. However, it is hard to see what is outside.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 646
+S
+#650
+&gAt The Top Of A Giant Tree~
+&gFrom here, most of the forest and the surrounding cliffs can be seen.
+Looking down is the cloud of leaves of the tree. This is where most birds
+live, away from their predators. This place is unstable, and cannot hold a
+lot of weight. Even so, it is a good place to snipe because it is high and
+the leaves give good cover.
+~
+~
+0
+0 1
+D5
+~
+~
+0
+-1 646
+S
+#651
+&gUp A Giant Tree~
+&gThis tree is very large; it's even large enough to have a little shack
+built in it. There are three main branches on this tree. It is possible to
+climb higher, to the tip of the tree. It is nice and peaceful here. A few
+holes have been dug out of the tree, with who knows what inside. Looks
+nice a good place to snipe...
+~
+~
+0
+0 1
+D2
+~
+~
+0
+-1 654
+D4
+~
+~
+0
+-1 655
+D5
+~
+~
+0
+-1 571
+D6
+~
+~
+0
+-1 653
+D7
+~
+~
+0
+-1 652
+S
+#652
+&gA Branch~
+&gThere are leaves, leaves, and leaves! Leaves branch out in smaller
+branches. This branch alone can probably hold a small shack up. It is very
+strong and stable, and yet high so natural predators cannot reach it. For
+this reason, many of the more harmless creatures live here to protect
+themselves from death. Its a good place to hide, for the leaves give great
+cover. However, it is hard to see what is outside.
+~
+~
+0
+0 1
+D8
+~
+~
+0
+-1 651
+S
+#653
+&gA Branch~
+&gThere are leaves, leaves, and leaves! Leaves branch out in smaller
+branches. This branch alone can probably hold a small shack up. It is very
+strong and stable, and yet high so natural predators cannot reach it. For
+this reason, many of the more harmless creatures live here to protect
+themselves from death. Its a good place to hide, for the leaves give great
+cover. However, it is hard to see what is outside.
+~
+~
+0
+0 1
+D9
+~
+~
+0
+-1 651
+S
+#654
+&gA Branch~
+&gThere are leaves, leaves, and leaves! Leaves branch out in smaller
+branches. This branch alone can probably hold a small shack up. It is very
+strong and stable, and yet high so natural predators cannot reach it. For
+this reason, many of the more harmless creatures live here to protect
+themselves from death. Its a good place to hide, for the leaves give great
+cover. However, it is hard to see what is outside.
+~
+~
+0
+0 1
+D0
+~
+~
+0
+-1 651
+S
+#655
+&gAt The Top Of A Giant Tree~
+&gFrom here, most of the forest and the surrounding cliffs can be seen.
+Looking down is the cloud of leaves of the tree. This is where most birds
+live, away from their predators. This place is unstable, and cannot hold a
+lot of weight. Even so, it is a good place to snipe because it is high and
+the leaves give good cover.
+~
+~
+0
+0 1
+D5
+~
+~
+0
+-1 651
+S
+#656
+&zInside A Cave~
+&zThis is the part of a cave that has been blocked off from the outside.
+Rocks and sand are everywhere, and the walls are stripped of any plants.
+It is very quiet here, and there are no signs of any living being. There
+are some equipment here, old, but probably broken or rusted by now.
+Looking around, causes one to wonder why the equipment is here, who
+brought it, and why they left it behind. 
+~
+&zThe walls over the cave have been hived all over with more organic
+materials. The place is very humid; dark as well. The "walls" seem to
+breathe, so the oxygen levels in here are somewhat low. There is a musky
+smell and odd screeches can be heard echoing around.
+~
+131072
+0 13
+D4
+~
+~
+1073741824
+-1 545
+D7
+~
+~
+0
+-1 657
+S
+#657
+&zInside A Cave~
+&zThis is the part of a cave that has been blocked off from the outside.
+Rocks and sand are everywhere, and the walls are stripped of any plants.
+It is very quiet here, and there are no signs of any living being. There
+are some equipment here, old, but probably broken or rusted by now.
+Looking around, causes one to wonder why the equipment is here, who
+brought it, and why they left it behind. 
+~
+&zThe walls over the cave have been hived all over with more organic
+materials. The place is very humid; dark as well. The "walls" seem to
+breathe, so the oxygen levels in here are somewhat low. There is a musky
+smell and odd screeches can be heard echoing around.
+~
+131072
+0 13
+D3
+~
+~
+0
+-1 659
+D6
+~
+~
+0
+-1 658
+D8
+~
+~
+0
+-1 656
+S
+#658
+&zInside A Cave~
+&zThis is the part of a cave that has been blocked off from the outside.
+Rocks and sand are everywhere, and the walls are stripped of any plants.
+It is very quiet here, and there are no signs of any living being. There
+are some equipment here, old, but probably broken or rusted by now.
+Looking around, causes one to wonder why the equipment is here, who
+brought it, and why they left it behind. 
+~
+&zThe walls over the cave have been hived all over with more organic
+materials. The place is very humid; dark as well. The "walls" seem to
+breathe, so the oxygen levels in here are somewhat low. There is a musky
+smell and odd screeches can be heard echoing around.
+~
+131072
+0 13
+D9
+~
+~
+0
+-1 657
+S
+#659
+&zInside A Cave~
+&zThis is the part of a cave that has been blocked off from the outside.
+Rocks and sand are everywhere, and the walls are stripped of any plants.
+It is very quiet here, and there are no signs of any living being. There
+are some equipment here, old, but probably broken or rusted by now.
+Looking around, causes one to wonder why the equipment is here, who
+brought it, and why they left it behind. 
+~
+&zThe walls over the cave have been hived all over with more organic
+materials. The place is very humid; dark as well. The "walls" seem to
+breathe, so the oxygen levels in here are somewhat low. There is a musky
+smell and odd screeches can be heard echoing around.
+~
+131072
+0 13
+D1
+~
+~
+0
+-1 657
+S
+#660
+&BUnder The River~
+&BThe current is quite strong under the surface of the water. The river
+floor consists of sedimentary rocks and white sand. There are many algae
+and water plants living comfortably on the floor, providing food for the
+water creatures that live in this habitat. Better swim up before air runs
+out! 
+~
+~
+0
+0 8
+D1
+~
+~
+0
+-1 661
+D4
+~
+~
+0
+-1 598
+S
+#661
+&BUnder The River~
+&BThe current is quite strong under the surface of the water. The river
+floor consists of sedimentary rocks and white sand. There are many algae
+and water plants living comfortably on the floor, providing food for the
+water creatures that live in this habitat. Better swim up before air runs
+out! 
+~
+~
+0
+0 8
+D1
+~
+~
+0
+-1 662
+D3
+~
+~
+0
+-1 660
+D4
+~
+~
+0
+-1 599
+S
+#662
+&BUnder The River~
+&BThe current is quite strong under the surface of the water. The river
+floor consists of sedimentary rocks and white sand. There are many algae
+and water plants living comfortably on the floor, providing food for the
+water creatures that live in this habitat. Better swim up before air runs
+out! 
+~
+~
+0
+0 8
+D1
+~
+~
+0
+-1 663
+D3
+~
+~
+0
+-1 661
+D4
+~
+~
+0
+-1 602
+S
+#663
+&BUnder The River~
+&BThe current is quite strong under the surface of the water. The river
+floor consists of sedimentary rocks and white sand. There are many algae
+and water plants living comfortably on the floor, providing food for the
+water creatures that live in this habitat. Better swim up before air runs
+out! 
+~
+~
+0
+0 8
+D3
+~
+~
+0
+-1 662
+D4
+~
+~
+0
+-1 603
+S
+#0
+
+
+#RESETS
+O 1 548 1 544
+O 1 544 1 545
+D 0 545 5 3
+O 1 545 1 549
+M 1 543 1 559
+E 1 70 1 16
+O 1 549 1 559
+O 1 543 1 571
+O 1 546 1 574
+O 1 546 1 575
+O 1 546 1 576
+O 1 543 1 580
+O 1 546 1 592
+O 1 546 1 593
+O 1 546 1 594
+O 1 544 1 595
+O 1 544 1 606
+M 1 544 1 607
+E 1 70 1 16
+O 1 547 1 607
+O 1 543 1 627
+O 1 544 1 632
+O 1 544 1 633
+O 1 544 1 634
+O 1 544 1 635
+O 1 544 1 636
+O 1 544 1 637
+O 1 544 1 638
+O 1 544 1 639
+O 1 544 1 640
+D 0 656 4 3
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+M  543 spec_enemy_scan
+M  544 spec_enemy_scan
+S
+
+
+#$

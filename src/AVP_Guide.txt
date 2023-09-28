@@ -1,0 +1,269 @@
+THE UNOFFICAL AVP GUIDE:
+(Chapter 1) ITEMVALUES:
+--------------------------------------------------------------------
+ITEM_LIGHT:
+  * This item casts light over a room, allowing people to 'see' in
+  * dark rooms. Lights are essential to the game, and come in all shapes
+  * and sizes. They are generally carried (held) and last for a limited time.
+  * --------------------------------------------------------
+  * Value0) [Unused]
+  * Value1) [Unused]
+  * Value2) Hours remaining (Standard: 10-20)
+  * Value3) -Reserved for 'on/off' switch-
+  * Value4) [Unused]
+  * Value5) [Unused]
+  * --------------------------------------------------------
+ITEM_WEAPON:
+  * Weapons are one of the most important devices in the entire game. They
+  * are used at murder, kill, assassinate, and protect yourself. Much of the
+  * gameplay revolves around weapons. Weapons are normally WIELDED.
+  * --------------------------------------------------------
+  * Value0) Weapon type. See WEAPON TYPE INDEX Below.
+  * Ranged/Ammo Weapon:
+  *  Value1) Ammo Code
+  *  Value2) Max Range in rooms
+  *  Value3) Shots fired in BURST Mode
+  *  Value4) Shots fired in AUTOMATIC Mode
+  * Melee Weapon:
+  *  Value1) Minimum Damage
+  *  Value2) Maximum Damage
+  *  Value3) Weapon Reach (5% Accuracy bonus per 1 unit)
+  *  Value4) Damage type. See DAMAGE TYPE INDEX Below.
+  * Value5) Attack rate
+  * --------------------------------------------------------
+ITEM_ARMOR:
+  * Armor may be one of the most flexible and highly used
+  * item types in the World. Armor adds to a players AC
+  * value, which in turn will 'armor' him/her from attacks.
+  * The higher your AC, the less likely you will get hit.
+  * Armor can come in all shapes and sizes. Examples are things
+  * like Thigh pads, Flac Armor, Full Combat Helmet, Etc.
+  * But can even be as small (or undectable) as a Flight suit,
+  * Gloves, shoes, Etc.
+  * --------------------------------------------------------
+  * Value0) Current Condition
+  * Value1) Maximum Condition
+  * Value2) Hides worn items when in OVER Slot (Non-0 value)
+  * Value3) Armor Size. (0 = Small, 1 = Medium, 2 = Heavy)
+  * Value4) [Unused]
+  * Value5) [Unused]
+  * --------------------------------------------------------
+ITEM_CONTAINER:
+  * Containers hold items, which allows you to carry many more
+  * things without worrying about the item limit on your inventory.
+  * Most containers can be worn, held, and 'equipped' in some other
+  * way. Backpacks and Belt Pouchs, Hand bags and Briefcases are
+  * common examples of containers. They damage easily, too.
+  * --------------------------------------------------------
+  * Value0) Capacity
+  * Value1) Container Flags. See CONTAINER FLAGS below.
+  * Value2) Key Vnum (if container is equipped with a lock)
+  * Value3) Condition (13 = Perfect)
+  * Value4) Max weight per item. (No item over v4 may be placed inside)
+  * Value5) [Unused]
+  * --------------------------------------------------------
+ITEM_PAPER:
+  * 
+  * --------------------------------------------------------
+  * Value0)
+  * Value1)
+  * Value2)
+  * Value3)
+  * Value4)
+  * Value5)
+  * --------------------------------------------------------  
+ITEM_DRINK_CON:
+  * 
+  * --------------------------------------------------------
+  * Value0) 
+  * Value1) Current Amount
+  * Value2)
+  * Value3)
+  * Value4)
+  * Value5)
+  * --------------------------------------------------------  
+ITEM_KEY:
+  * 
+  * --------------------------------------------------------
+  * Value0)
+  * Value1)
+  * Value2)
+  * Value3)
+  * Value4)
+  * Value5)
+  * --------------------------------------------------------  
+ITEM_FOOD:
+  * 
+  * --------------------------------------------------------
+  * Value0) Hitpoints to restore
+  * Value1) Movement to restore
+  * Value2)
+  * Value3)
+  * Value4)
+  * Value5)
+  * --------------------------------------------------------  
+ITEM_CORPSE_NPC:
+  * 
+  * --------------------------------------------------------
+  * Value0)
+  * Value1)
+  * Value2)
+  * Value3)
+  * Value4)
+  * Value5)
+  * --------------------------------------------------------  
+ITEM_CORPSE_PC:
+  * 
+  * --------------------------------------------------------
+  * Value0)
+  * Value1)
+  * Value2)
+  * Value3)
+  * Value4)
+  * Value5)
+  * --------------------------------------------------------  
+ITEM_FOUNTAIN:
+  * 
+  * --------------------------------------------------------
+  * Value0)
+  * Value1)
+  * Value2)
+  * Value3)
+  * Value4)
+  * Value5)
+  * --------------------------------------------------------  
+ITEM_BLOODSTAIN:
+  * 
+  * --------------------------------------------------------
+  * Value0)
+  * Value1)
+  * Value2)
+  * Value3)
+  * Value4)
+  * Value5)
+  * --------------------------------------------------------  
+ITEM_SCRAPS:
+  * 
+  * --------------------------------------------------------
+  * Value0)
+  * Value1)
+  * Value2)
+  * Value3)
+  * Value4)
+  * Value5)
+  * --------------------------------------------------------  
+ITEM_FIRE:
+  * 
+  * --------------------------------------------------------
+  * Value0)
+  * Value1)
+  * Value2)
+  * Value3)
+  * Value4)
+  * Value5)
+  * --------------------------------------------------------  
+ITEM_AMMO:
+  * 
+  * --------------------------------------------------------
+  * Value0) Damage Type. See DAMAGE TYPE INDEX Below.
+  * Value1) Damage Amount (Per round)
+  * Value2) Rounds in clip
+  * Value3) Ammo code A
+  * Value4) Ammo code B
+  * Value5) Ammo code C
+  * --------------------------------------------------------  
+ITEM_MEDIKIT:
+  * 
+  * --------------------------------------------------------
+  * Value0) HP Restore Amount
+  * Value1) Uses Remaining
+  * Value2)
+  * Value3)
+  * Value4)
+  * Value5)
+  * --------------------------------------------------------  
+ITEM_GRENADE:
+  * 
+  * --------------------------------------------------------
+  * Value0) Minimum Blast Damage
+  * Value1) Maximum Blast Damage
+  * Value2) Maximum Blast Range (In rooms)
+  * Value3) Damage Type. See DAMAGE TYPE INDEX Below.
+  * Value4) Remaining Time (In Rounds)
+  * Value5)
+  * --------------------------------------------------------  
+ITEM_CLOAK:
+  *
+  * --------------------------------------------------------
+  * Value0) -Reserved for 'on/off' switch-
+  * Value1) [Unused]
+  * Value2) [Unused]
+  * Value3) [Unused]
+  * Value4) [Unused]
+  * Value5) [Unused]
+  * --------------------------------------------------------
+
+--------------------------------------------------------------------
+     OTHER AVP ESSENTIAL INFORMATION: CHARTS/INDEXES
+--------------------------------------------------------------------
+
+(Index A) WEAPON TYPES AND INFORMATION:
+  * AvP supports several weapon types, and may be adding more soon.
+  * The current types are listed below, with extra information pertaining
+  * to each one, such as average settings for weapons.
+  * ----------------------------------------------------------------
+  * [1] Vibro-Axe
+  * [2] Vibro-Blade
+  * [3] Lightsaber
+  * [4] Whip (Mostly Unused)
+  * [5] Claw (Mostly Unused)
+  * [6] Blaster
+  * [7] -Reserved-
+  * [8] Bludgeon
+  * [9] Bowcaster
+  * [10] -Reserved-
+  * [11] Force Pike
+  * [12] Disruptor
+  * ----------------------------------------------------------------
+  * The [Vibro-Blade] and [Vibro-Axe] are both considered MELEE weapons,
+  * which means they are treated as if your fighting at a close range. When
+  * fighting a enemy with a long-range weapon, it will be harded to hit them.
+  * IE: Ghost has a Gentek-3 Heavy Assault Cannon, while Raven has a
+  * vibro-axe. When Raven attacks Ghost, he will have a hitroll penalty,
+  * because Ghost is going to try to keep out of the weapons reach, where
+  * Ghost will be unaffected. Vibro Weapons are quite common in the SWR
+  * Universe, being one of the few legal weapons your allowed to use without
+  * being flatout arrested. Being caught with a vibro weapon will cause it
+  * to be confiscated, which is a lighter punishment then some.
+  * ----------------------------------------------------------------
+  * The [Lightsaber] is a very important weapon. It is also very complex.
+  * When building a lightsaber for your area, you should consider it
+  * very carefully. Non-jedis should *NOT* have a lightsaber, even though
+  * they can use it. Most lightsabers are built by players, which can
+  * save a lot of hassle figuring this out. A Lightsaber in the hands
+  * of a non-jedi is almost worthless. By default, the lightsaber has
+  * a very low accuracy automaticly, which is only boosted by your jedi
+  * skill. The higher your FORCE level, the more accurate your are, the more
+  * damage the lightsaber will do, and various other things. No area should
+  * -EVER- have more then one lightsaber, if ANY. Lightsabers should be
+  * earned, not pre-built. When activated, lightsabers also give off light.
+  *
+  * -==STANDARD SETTINGS==-
+  * Wear) TAKE, WIELD
+  * Cost) 50k to 100k
+  * Flags) Hum (optional), Glow (optional)
+  * Weight) 5-6
+  * Value0) 13          [Condition]
+  * Value1) (Level)/5   [Minimum Damage]
+  * Value2) (Level)/3   [Maximum Damage]
+  * Value3) 3           [Weapon Type]
+  * Value4) 500-1000    [Energy]
+  * Value5) 500-1000    [Max Energy]
+(Index B) CONTAINER FLAGS:
+(Index C) DAMAGE TYPE INDEX:
+  * 0: Fire   
+  * 1: Energy 
+  * 2: Impact
+  * 3: Pierce
+  * 4: Acid
+

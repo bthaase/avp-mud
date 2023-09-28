@@ -1,0 +1,1075 @@
+#AREA   {PROTO} Vaeral's area in progress~
+
+#VERSION 4
+
+#AUTHOR Vaeral~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#4030
+A drugdealer~
+A Drugdealer~
+A drugdealer is slouching against the truck, reloading a shotgun
+~
+~
+0
+67108875
+Z
+1 8 8 0
+15 10 10 10 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#4031
+A Young man~
+A Young man~
+A young man is here, aiming west, while using a Ford pickup as cover
+~
+~
+0
+67108875
+Z
+1 8 8 0
+15 10 10 10 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#4040
+A large marine~
+A large Marine~
+A large marine stands here, a grim smirk upon his face
+~
+~
+0
+67108867
+Z
+1 8 8 0
+25 10 10 10 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#4052
+A Security Guard~
+A security guard~
+A Security Guard stands against the wall here
+~
+~
+0
+67108867
+Z
+1 8 8 0
+15 10 10 10 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#4053
+A Large Sniping Target~
+A Large Sniping Target~
+A Large Sniping Target is against the wall here
+~
+~
+0
+67108867
+S
+1 8 8 0
+#4060
+A Veteran Marine~
+A Veteran Marine~
+A Veteran marine is here, drinking a cup of coffee
+~
+~
+0
+67108867
+Z
+1 8 8 0
+20 10 10 10 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#4063
+A young Marine~
+A young Marine~
+A young marine stands here slightly blocking off the staircase
+~
+~
+0
+67108867
+Z
+1 8 8 0
+15 10 10 10 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#4067
+The Commander of USCM~
+The Commander~
+The Commander of the USCM Marines is standing here, gazing out a window
+~
+~
+0
+67108867
+Z
+1 8 8 0
+15 10 15 10 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#4068
+A young Secretary female woman~
+A Beautiful young Secretary~
+A beautiful young woman is bending over here, searching for something
+~
+~
+0
+67141635
+S
+1 8 8 0
+#0
+
+
+#OBJECTS
+#4029
+A Large Police Car~
+A police car~
+A police car is here, being used as a shield against artillery fire~
+~
+25
+1024
+0
+20 2 10 800 800 1
+500 0 0
+#4031
+Ford Pickup~
+a large ford pickup~
+A large Ford pickup is here, smashed into the wall of a nearby shop~
+~
+25
+1024
+0
+30 2 15 800 800 1
+500 0 0
+#4052
+A Assault rifle~
+a A Assault rifle~
+A A Assault rifle is here.~
+~
+2
+1024
+8193
+5 100 3 9 0 20
+1 0 0
+#4053
+A Large target~
+a A Large target~
+A A Large target is here.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#4001
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4002
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4003
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4004
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4005
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4006
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4007
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4008
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4009
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4010
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4011
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4012
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4013
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4014
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4015
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4016
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4017
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4018
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4019
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4020
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4021
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4022
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4023
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4024
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4025
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4026
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4027
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4028
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4029
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4030
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4031
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4032
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4033
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4034
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4035
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4036
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4037
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4038
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4039
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4040
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4041
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4042
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4043
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4044
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4045
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4046
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4047
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4048
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4049
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4050
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4051
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4052
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4053
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4054
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4055
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4056
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4057
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4058
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4059
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4060
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4061
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4062
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4063
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4064
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4065
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4066
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4067
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4068
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4069
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4070
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4071
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4072
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4073
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4074
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4075
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4076
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4077
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4078
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4079
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4080
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4081
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4082
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4083
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4084
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4085
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4086
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4087
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4088
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4089
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#4090
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#4091
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#4092
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#4093
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#4094
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#4095
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#4096
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#4097
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#4098
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#4099
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#4100
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#4101
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#0
+
+
+#RESETS
+D 0 4004 4 1
+D 0 4008 4 1
+D 0 4012 4 1
+D 0 4021 4 1
+D 0 4023 4 1
+D 0 4024 5 0
+D 0 4028 5 1
+M 1 4040 1 4029
+E 1 684 1 16
+E 1 666 1 6
+E 1 667 1 5
+E 1 696 1 11
+E 1 668 1 8
+G 1 686 1
+G 1 686 1
+O 1 4029 1 4029
+M 1 4031 1 4031
+E 1 691 1 16
+E 1 1722 1 5
+E 1 666 1 6
+G 1 692 1
+G 1 692 1
+M 1 4030 1 4031
+E 1 684 1 16
+E 1 1722 1 5
+G 1 686 1
+G 1 686 1
+O 1 4031 1 4031
+D 0 4032 5 1
+D 0 4036 5 1
+D 0 4040 5 1
+D 0 4042 1 0
+D 0 4042 5 1
+D 0 4047 5 1
+M 1 4052 1 4052
+E 1 689 1 16
+E 1 689 1 18
+G 1 690 1
+E 1 1722 1 5
+G 1 690 1
+G 1 690 1
+G 1 690 1
+M 1 4053 1 4053
+D 0 4057 3 1
+M 1 4060 1 4060
+E 1 687 1 16
+E 1 666 1 6
+E 1 670 1 13
+E 1 668 1 8
+E 1 696 1 11
+E 1 667 1 5
+G 1 685 1
+G 1 685 1
+D 0 4061 3 0
+D 0 4064 1 1
+M 1 1829 1 4066
+E 1 673 1 16
+G 1 674 1
+E 1 667 1 5
+E 1 666 1 6
+E 1 696 1 11
+G 1 674 1
+M 1 4068 1 4067
+E 1 82 1 16
+G 1 84 1
+D 0 4101 4 0
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+S
+
+
+#$

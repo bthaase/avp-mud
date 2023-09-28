@@ -1,0 +1,2720 @@
+#AREA   {PROTO} Trance's area in progress~
+
+#VERSION 4
+
+#AUTHOR Trance~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#3586
+Circuit Breaker~
+a Circuit Breaker~
+A circuit breaker is mounted on the wall. (USE BREAKER)~
+~
+4
+1048578
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+mpechoat $n You throw the break to the ON position. 
+mpechoaround $n $n throws the breaker to the ON position. 
+mprat 3515 3540 mprmflag -1 1 dark
+mprat 3515 3540 mpecho &YThe overhead lights flare to life.
+mprat 3546 3573 mprmflag -1 1 dark
+mprat 3546 3573 mpecho &YThe overhead lights flare to life.
+mprat 3576 3586 mprmflag -1 1 dark
+mprat 3576 3586 mpecho &YThe overhead lights flare to life.
+~
+> useoff_prog 100~
+mpechoat $n You throw the break to the OFF position. 
+mpechoaround $n $n throws the breaker to the OFF position. 
+mprat 3515 3540 mprmflag -1 0 dark
+mprat 3515 3540 mpecho &zThe room suddenly goes dark.
+mprat 3546 3573 mprmflag -1 0 dark
+mprat 3546 3573 mpecho &zThe room suddenly goes dark.
+mprat 3576 3586 mprmflag -1 0 dark
+mprat 3576 3586 mpecho &zThe room suddenly goes dark.
+~
+|
+#0
+
+
+#ROOMS
+#3500
+Lobby Entrance~
+Walking in through the elaborate glass doors of this building, you look
+around and notice a bustling crowd of people making their way around this
+large lobby. Many people in suits and ties walk by you as if you did not
+exist, seemingly tending to more urgent matters at hand. As you continue
+to look around you notice directly ahead of you a security station, as you
+look past the security station you notice a row of elevator doors.
+~
+&g Walking in through the broken glass doors, you hear the echo of the
+crunch from the shattered glass beneath your feet. Looking at the walls
+surrounding you, you notice what seems to be the remains of bodies beneath
+a slimy substance. Ahead of you can be seen the remnance of a security
+station, now a breeding ground of ooze and goo. Past the security station
+can be seen sparks sputtering from what seems to be the control panel of
+the once working elevators.
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3501
+S
+#3501
+Security Station~
+Coming in from the lobby, you stop directly in front of a Security Station.
+Looking behind the large desk you see dozens of small monitors, from which
+the Security Officers of the building keep tight surveilance on all the
+interactions within the building. As you walk past and continue through
+this area you feel the cameras within the building follow your every move.
+~
+&gComing in from the former lobby, you stop directly in front of what
+seemed to be a former security station. Looking behind the half broken
+desk you can see the remains of what used to be rows of monitors. The
+broken monitors still showing signs of life attempt to flicker and show
+brief images through the slimy substance that now covers them.
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3502
+D2
+~
+~
+0
+-1 3500
+S
+#3502
+Waiting Area~
+Entering this waiting area, you notice many people here waiting impatiently
+for the Elevators to arrive. Pushing your way through the crowd you manage
+to stand before a control console for the elevators. Looking directly
+above the great metal doors of the elevator you notice numbers that light
+up as the elevator moves to a different level.
+~
+&gEntering this shell of a waiting area, you notice large strands of goo
+and slime dripping from the ceiling. Light fixtures dangle from the
+ceiling, flickering, providing momentary glimpses of your surroundings.
+Directly in front of can be seen a large half mangled door, which leads to
+the Elevator shafts of this office building.
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3507
+D1
+~
+~
+0
+-1 3504
+D2
+~
+~
+0
+-1 3501
+D3
+~
+~
+0
+-1 3503
+S
+#3503
+Waiting Area~
+Entering this waiting area, you notice many people here waiting impatiently
+for the Elevators to arrive. Pushing your way through the crowd you manage
+to stand before a control console for the elevators. Looking directly
+above the great metal doors of the elevator you notice numbers that light
+up as the elevator moves to a different level.
+~
+&gEntering this shell of a waiting area, you notice large strands of goo
+and slime dripping from the ceiling. Light fixtures dangle from the
+ceiling, flickering, providing momentary glimpses of your surroundings.
+Directly in front of can be seen a large half mangled door, which leads to
+the Elevator shafts of this office building. 
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3506
+D1
+~
+~
+0
+-1 3502
+D7
+~
+~
+3&1
+-1 3505
+S
+#3504
+Waiting Area~
+Entering this waiting area, you notice many people here waiting impatiently
+for the Elevators to arrive. Pushing your way through the crowd you manage
+to stand before a control console for the elevators. Looking directly
+above the great metal doors of the elevator you notice numbers that light
+up as the elevator moves to a different level.
+~
+&gEntering this shell of a waiting area, you notice large strands of goo
+and slime dripping from the ceiling. Light fixtures dangle from the
+ceiling, flickering, providing momentary glimpses of your surroundings.
+Directly in front of can be seen a large half mangled door, which leads to
+the Elevator shafts of this office building. 
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3508
+D3
+~
+~
+0
+-1 3502
+D6
+~
+~
+3&1
+-1 3509
+S
+#3505
+Stairwell~
+Opening the door and walking through into this dank cold stairwell you
+notice graffiti written all over the walls. The stench of urine, the floor
+littered with ciggarette butts, and covered with gum is enough to bring a
+large sensation of nausea. Holding your breath you continue on to the next
+level of this building.
+~
+&gOpening the door and walking through into this warm wet stairwell you
+notice beneath the thick goo on the walls the faint lettering of graffiti.
+The floors, slippery from the slime, convinces you to make sure footing of
+your steps. Attempting to grab onto the metal banister, you notice it
+covered in slimy substance, immediately causing you to grimace at the
+sight.
+~
+8388616
+0
+0 1
+D4
+~
+~
+0
+-1 3510
+D5
+~
+~
+0
+-1 3574
+D8
+~
+~
+3&1
+-1 3503
+S
+#3506
+Elevator Shaft~
+Entering from the waiting area into this dark shaft, you feel cold coming
+from above. A small ladder is here beside you, for what seems to be a way
+for the elevator technician to climb to the elevators when they are not
+operational. This ladder also leads to different levels of the building.
+~
+&gEntering from the waiting area into this dark shaft, you feel heat from
+all sides. A small ladder is here beside you, covered in a thick slime you
+must carefully take each step slowly and carefully not to fall. This goo
+covered ladder also seems to lead to different levels of the building.
+~
+8388617
+0
+0 1
+D2
+~
+~
+0
+-1 3503
+D4
+~
+~
+0
+-1 3511
+S
+#3507
+Elevator Shaft~
+Entering from the waiting area into this dark shaft, you feel cold coming
+from above. A small ladder is here beside you, for what seems to be a way
+for the elevator technician to climb to the elevators when they are not
+operational. This ladder also leads to different levels of the building.
+~
+&gEntering from the waiting area into this dark shaft, you feel heat from
+all sides. A small ladder is here beside you, covered in a thick slime you
+must carefully take each step slowly and carefully not to fall. This goo
+covered ladder also seems to lead to different levels of the building.
+~
+8388617
+0
+0 1
+D2
+~
+~
+0
+-1 3502
+D4
+~
+~
+0
+-1 3512
+S
+#3508
+Elevator Shaft~
+Entering from the waiting area into this dark shaft, you feel cold coming
+from above. A small ladder is here beside you, for what seems to be a way
+for the elevator technician to climb to the elevators when they are not
+operational. This ladder also leads to different levels of the building.
+~
+&gEntering from the waiting area into this dark shaft, you feel heat from
+all sides. A small ladder is here beside you, covered in a thick slime you
+must carefully take each step slowly and carefully not to fall. This goo
+covered ladder also seems to lead to different levels of the building.
+~
+8388617
+0
+0 1
+D2
+~
+~
+0
+-1 3504
+D4
+~
+~
+0
+-1 3513
+S
+#3509
+Stairwell~
+Opening the door and walking through into this dank cold stairwell you
+notice graffiti written all over the walls. The stench of urine, the floor
+littered with ciggarette butts, and covered with gum is enough to bring a
+large sensation of nausea. Holding your breath you continue on to the next
+level of this building. 
+~
+&gOpening the door and walking through into this warm wet stairwell you
+notice beneath the thick goo on the walls the faint lettering of graffiti.
+The floors, slippery from the slime, convinces you to make sure footing of
+your steps. Attempting to grab onto the metal banister, you notice it
+covered in slimy substance, immediately causing you to grimace at the
+sight.
+~
+8388616
+0
+0 1
+D4
+~
+~
+0
+-1 3514
+D9
+~
+~
+3&1
+-1 3504
+S
+#3510
+Stairwell [Level 2]~
+Walking through into this dank cold stairwell you notice graffiti written
+all over the walls. The stench of urine, the floor littered with
+ciggarette butts, and covered with gum is enough to bring a large
+sensation of nausea. Holding your breath you continue on to the next level
+of this building. 
+~
+&gWalking through into this warm wet stairwell you notice beneath the thick
+goo on the walls the faint lettering of graffiti. The floors, slippery
+from the slime, convinces you to make sure footing of your steps.
+Attempting to grab onto the metal banister, you notice it covered in slimy
+substance, immediately causing you to grimace at the sight. 
+~
+8388616
+0
+0 1
+D2
+~
+~
+0
+-1 3524
+D4
+~
+~
+0
+-1 3541
+D5
+~
+~
+0
+-1 3505
+D6
+~
+~
+0
+-1 3515
+S
+#3511
+Elevator Shaft~
+Entering into this dark shaft, you feel cold coming from above and below. A
+small ladder is here beside you, for what seems to be a way for the
+elevator technician to climb to the elevators when they are not
+operational. This ladder also leads to different levels of the building.
+~
+&gEntering into this dark shaft, you feel heat from all sides. A small
+ladder is here beside you, covered in a thick slime you must carefully
+take each step slowly and carefully not to fall. This goo covered ladder
+also seems to lead to different levels of the building.
+~
+8388617
+0
+0 1
+D0
+~
+~
+0
+-1 3515
+D4
+~
+~
+0
+-1 3542
+D5
+~
+~
+0
+-1 3506
+S
+#3512
+Elevator Shaft~
+Entering into this dark shaft, you feel cold coming from above and below. A
+small ladder is here beside you, for what seems to be a way for the
+elevator technician to climb to the elevators when they are not
+operational. This ladder also leads to different levels of the building.
+~
+&gEntering into this dark shaft, you feel heat from all sides. A small
+ladder is here beside you, covered in a thick slime you must carefully
+take each step slowly and carefully not to fall. This goo covered ladder
+also seems to lead to different levels of the building.
+~
+8388617
+0
+0 1
+D2
+~
+~
+0
+-1 3526
+D4
+~
+~
+0
+-1 3543
+D5
+~
+~
+0
+-1 3507
+S
+#3513
+Elevator Shaft~
+Entering into this dark shaft, you feel cold coming from above and below. A
+small ladder is here beside you, for what seems to be a way for the
+elevator technician to climb to the elevators when they are not
+operational. This ladder also leads to different levels of the building.
+~
+&gEntering into this dark shaft, you feel heat from all sides. A small
+ladder is here beside you, covered in a thick slime you must carefully
+take each step slowly and carefully not to fall. This goo covered ladder
+also seems to lead to different levels of the building. 
+~
+8388617
+0
+0 1
+D0
+~
+~
+0
+-1 3517
+D4
+~
+~
+0
+-1 3544
+D5
+~
+~
+0
+-1 3508
+S
+#3514
+Stairwell [Level 2]~
+Walking through into this dank cold stairwell you notice graffiti written
+all over the walls. The stench of urine, the floor littered with
+ciggarette butts, and covered with gum is enough to bring a large
+sensation of nausea. Holding your breath you continue on to the next level
+of this building.
+~
+&gWalking through into this warm wet stairwell you notice beneath the thick
+goo on the walls the faint lettering of graffiti. The floors, slippery
+from the slime, convinces you to make sure footing of your steps.
+Attempting to grab onto the metal banister, you notice it covered in slimy
+substance, immediately causing you to grimace at the sight.
+~
+8388616
+0
+0 1
+D2
+~
+~
+0
+-1 3527
+D4
+~
+~
+0
+-1 3545
+D5
+~
+~
+0
+-1 3509
+D7
+~
+~
+0
+-1 3517
+S
+#3515
+Hallway~
+Coming into this hallway you notice the floors made of a white marble,
+glistening from its constant cleaning. Around you on the whitewashed walls
+hang paintings of old. As your eyes further glance at the walls you notice
+a sign that indicates that you are on Level 2 of the complex. 
+~
+&gComing into this horrifying hallway you notice dismembered bodies hanging
+against the wall, held in place with a slimy membrane substance. The
+floors, filled with what seems to be a pulsing substance, moves slightly
+as you creap along it, giving you the feeling that it is alive. 
+~
+8388616
+0
+0 1
+D1
+~
+~
+0
+-1 3516
+D2
+~
+~
+0
+-1 3511
+D9
+~
+~
+0
+-1 3510
+S
+#3516
+Hallway~
+Coming into this hallway you notice the floors made of a white marble,
+glistening from its constant cleaning. Around you on the whitewashed walls
+hang paintings of old. As your eyes further glance at the walls you notice
+a sign that indicates that you are on Level 2 of the complex. 
+~
+&gComing into this horrifying hallway you notice dismembered bodies hanging
+against the wall, held in place with a slimy membrane substance. The
+floors, filled with what seems to be a pulsing substance, moves slightly
+as you creap along it, giving you the feeling that it is alive. 
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3519
+D1
+~
+~
+0
+-1 3517
+D3
+~
+~
+0
+-1 3515
+S
+#3517
+Hallway~
+Coming into this hallway you notice the floors made of a white marble,
+glistening from its constant cleaning. Around you on the whitewashed walls
+hang paintings of old. As your eyes further glance at the walls you notice
+a sign that indicates that you are on Level 2 of the complex. 
+~
+&gComing into this horrifying hallway you notice dismembered bodies hanging
+against the wall, held in place with a slimy membrane substance. The
+floors, filled with what seems to be a pulsing substance, moves slightly
+as you creap along it, giving you the feeling that it is alive. 
+~
+8388616
+0
+0 1
+D2
+~
+~
+0
+-1 3513
+D3
+~
+~
+0
+-1 3516
+D8
+~
+~
+0
+-1 3514
+S
+#3518
+Mens Bathroom~
+Coming into the bathroom you can smell the heavy odor of the urinal cakes
+used to disinfect the urinals themselves. You see directly to your left a
+large mirror with 3 sinks directly below the mirror. To your right you
+notice 4 bathroom stalls, typical of a mens bathroom. 
+~
+&gComing into the bathroom you notice that the whole area is covered in
+this thick slimy substance. To your left you can barely see through the
+sticky, slimy substance, what seems to be a mirror. To your right you
+notive the dismembered doors of what used to be a row of stalls. 
+~
+8388616
+0
+0 1
+D1
+~
+~
+0
+-1 3519
+S
+#3519
+Corridor~
+Coming into this hallway you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees. 
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3522
+D1
+~
+~
+1
+-1 3520
+D2
+~
+~
+0
+-1 3516
+D3
+~
+~
+0
+-1 3518
+S
+#3520
+Janitorial Closet~
+Opening the door the strong odor of disinfectants hits your nose, nearly
+knocking you to the ground. Looking around you notice that this is the
+Janitors closet, due to the fact of all the cleaning items lieing around.
+~
+&gOpening the door the strong odor of death and decay hits your nose,
+nearly knocking you to the ground. Looking around you can see the remnance
+of some old bottles that used to be filled with disinfectants, giving you
+the hint that this room used to be a Janitorial closet.
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3521
+D3
+~
+~
+1
+-1 3519
+S
+#3521
+Broom Closet~
+Sprawled out on the floor in this closet are many brooms and mops, making
+it very difficult to maneuver in here. Buckets of soapy water spill as you
+knock into them, causing you to slip and slide. 
+~
+&gSprawled out on the floor in this very small closet seems to be the bones
+of a human. The bones have clearly been slashed through by a sharp object.
+Claw marks appear on the wall, giving you the impression that the Bones
+were not cut by an inanimate object but by an attacking alien.
+~
+8388616
+0
+0 1
+D2
+~
+~
+0
+-1 3520
+S
+#3522
+Corridor~
+Coming into this hallway you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3535
+D2
+~
+~
+0
+-1 3519
+D3
+~
+~
+0
+-1 3523
+S
+#3523
+Womens Bathroom~
+As you enter this bathroom you can smell the cleanliness of it. The smell
+of fresh perfume fills your senses. To your left you see 3 elaborate sinks
+directly below a beautiful engraved mirror. To your right you see 5
+bathroom stalls.
+~
+&gComing into the bathroom you notice that the whole area is covered in
+this thick slimy substance. To your left you can barely see through the
+sticky, slimy substance, what seems to be a mirror. To your right you
+notice the dismembered doors of what used to be a row of stalls.
+~
+8388616
+0
+0 1
+D1
+~
+~
+0
+-1 3522
+S
+#3524
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3510
+D1
+~
+~
+0
+-1 3525
+D2
+~
+~
+0
+-1 3530
+S
+#3525
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D1
+~
+~
+0
+-1 3526
+D2
+~
+~
+0
+-1 3528
+D3
+~
+~
+0
+-1 3524
+S
+#3526
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors.
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3512
+D1
+~
+~
+0
+-1 3527
+D2
+~
+~
+0
+-1 3529
+D3
+~
+~
+0
+-1 3525
+S
+#3527
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3514
+D2
+~
+~
+0
+-1 3531
+D3
+~
+~
+0
+-1 3526
+S
+#3528
+Cubicle~
+Looking around you can see many partitions separating each section of this
+large office area. Directly in front of you lies a chair with a desk. On
+the desk you can see many papers in an outbox, and beside the outbox sits
+a flat-screen computer flashing with running programs as if it is doing
+something of importance.
+~
+&g Looking around, you can see many broken and slashed partitions, that
+used to separate each section of this Slime covered, broken down office
+area. Directly in front of you lies a goo covered chair that has been
+practically destroyed. Sitting directly in front of the decrepid chair is
+a desk leaning on its last two legs. As you continue to look around you
+also see sparks coming from the remains of what used to be a computer. 
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3525
+D1
+~
+~
+0
+-1 3529
+D2
+~
+~
+0
+-1 3532
+S
+#3529
+Cubicle~
+Looking around you can see many partitions separating each section of this
+large office area. Directly in front of you lies a chair with a desk. On
+the desk you can see many papers in an outbox, and beside the outbox sits
+a flat-screen computer flashing with running programs as if it is doing
+something of importance. 
+~
+&gLooking around, you can see many broken and slashed partitions, that used
+to separate each section of this Slime covered, broken down office area.
+Directly in front of you lies a goo covered chair that has been
+practically destroyed. Sitting directly in front of the decrepid chair is
+a desk leaning on its last two legs. As you continue to look around you
+also see sparks coming from the remains of what used to be a computer.
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3526
+D2
+~
+~
+0
+-1 3533
+D3
+~
+~
+0
+-1 3528
+S
+#3530
+Narrow Hallway~
+Coming into this hallway you notice the floors made of a white marble,
+glistening from its constant cleaning. Around you on the whitewashed walls
+hang paintings of old. As your eyes further glance at the walls you notice
+a sign that indicates that you are on Level 2 of the complex.
+~
+&gComing into this horrifying hallway you notice dismembered bodies hanging
+against the wall, held in place with a slimy membrane substance. The
+floors, filled with what seems to be a pulsing substance, moves slightly
+as you creap along it, giving you the feeling that it is alive.
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3524
+D8
+~
+~
+0
+-1 3532
+S
+#3531
+Narrow Hallway~
+Coming into this hallway you notice the floors made of a white marble,
+glistening from its constant cleaning. Around you on the whitewashed walls
+hang paintings of old. As your eyes further glance at the walls you notice
+a sign that indicates that you are on Level 2 of the complex.
+~
+&gComing into this horrifying hallway you notice dismembered bodies hanging
+against the wall, held in place with a slimy membrane substance. The
+floors, filled with what seems to be a pulsing substance, moves slightly
+as you creap along it, giving you the feeling that it is alive.
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3527
+D9
+~
+~
+0
+-1 3533
+S
+#3532
+Cubicle~
+Looking around you can see many partitions separating each section of this
+large office area. Directly in front of you lies a chair with a desk. On
+the desk you can see many papers in an outbox, and beside the outbox sits
+a flat-screen computer flashing with running programs as if it is doing
+something of importance.
+~
+&gLooking around, you can see many broken and slashed partitions, that used
+to separate each section of this Slime covered, broken down office area.
+Directly in front of you lies a goo covered chair that has been
+practically destroyed. Sitting directly in front of the decrepid chair is
+a desk leaning on its last two legs. As you continue to look around you
+also see sparks coming from the remains of what used to be a computer.
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3528
+D7
+~
+~
+0
+-1 3530
+D8
+~
+~
+0
+-1 3534
+S
+#3533
+Cubicle~
+Looking around you can see many partitions separating each section of this
+large office area. Directly in front of you lies a chair with a desk. On
+the desk you can see many papers in an outbox, and beside the outbox sits
+a flat-screen computer flashing with running programs as if it is doing
+something of importance. 
+~
+&gLooking around, you can see many broken and slashed partitions, that used
+to separate each section of this Slime covered, broken down office area.
+Directly in front of you lies a goo covered chair that has been
+practically destroyed. Sitting directly in front of the decrepid chair is
+a desk leaning on its last two legs. As you continue to look around you
+also see sparks coming from the remains of what used to be a computer.
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3529
+D6
+~
+~
+0
+-1 3531
+D9
+~
+~
+0
+-1 3534
+S
+#3534
+Managerial Office~
+Glancing around you automatically notice that this isnt just any office,
+but it seems to belong to someone of importance. In front of you sits a
+large heavily engraved mohagony desk. Ontop of the desk lies a large
+supercomputer, continually reading statistical information and feeding it
+to the rest of the network of computers. Behind the desk is a very
+comfortable looking seat covered in Korinthian leather. 
+~
+&gGlancing around the room you automatically notice that this shell of an
+office must have belonged to someone of importance, due to the fact that
+its larger than most offices on this level. Everything in the office is
+slime covered and destroyed, only sparks from the broken computer, and
+burning embers seem to give a sense of life to this room. 
+~
+8388616
+0
+0 1
+D6
+~
+~
+0
+-1 3533
+D7
+~
+~
+0
+-1 3532
+S
+#3535
+Hallway~
+Coming into this hallway you notice the floors made of a white marble,
+glistening from its constant cleaning. Around you on the whitewashed walls
+hang paintings of old.   As your eyes further glance at the walls you
+notice a sign that indicates that you are on Level 2 of the complex. 
+~
+&gComing into this horrifying hallway you notice dismembered bodies hanging
+against the wall, held in place with a slimy membrane substance. The
+floors, filled with what seems to be a pulsing substance, moves slightly
+as you creap along it, giving you the feeling that it is alive. 
+~
+8388616
+0
+0 1
+D1
+~
+~
+0
+-1 3537
+D2
+~
+~
+0
+-1 3522
+D3
+~
+~
+0
+-1 3536
+S
+#3536
+Hallway~
+Coming into this hallway you notice the floors made of a white marble,
+glistening from its constant cleaning. Around you on the whitewashed walls
+hang paintings of old. As your eyes further glance at the walls you notice
+a sign that indicates that you are on Level 2 of the complex. 
+~
+&gComing into this horrifying hallway you notice dismembered bodies hanging
+against the wall, held in place with a slimy membrane substance. The
+floors, filled with what seems to be a pulsing substance, moves slightly
+as you creap along it, giving you the feeling that it is alive. 
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3538
+D1
+~
+~
+0
+-1 3535
+S
+#3537
+Cafeteria~
+Entering through the large swinging doors, you see many tables around with
+people sitting at them eat their meals and discussing matters of the day.
+Beyond all the tables lies a single, of what seems to be, buffet style
+counter with different foods being served by the lunch crew. The ambience
+of the room is loud and boisterous, you can barely hear yourself think.
+~
+&gEntering through the dismembered large swinging doors, you see many
+tables shattered and thrown around. As usual slime and a gooey substance
+covers every inch of this room. Beyond the scattered tables lies a half
+smashed buffet counter. There is an erie feeling in this room as if you
+were being watched. 
+~
+8388616
+0
+0 1
+D3
+~
+~
+0
+-1 3535
+S
+#3538
+Hallway~
+Coming into this hallway you notice the floors made of a white marble,
+glistening from its constant cleaning. Around you on the whitewashed walls
+hang paintings of old. As your eyes further glance at the walls you notice
+a sign that indicates that you are on Level 2 of the complex. 
+~
+&gComing into this horrifying hallway you notice dismembered bodies hanging
+against the wall, held in place with a slimy membrane substance. The
+floors, filled with what seems to be a pulsing substance, moves slightly
+as you creap along it, giving you the feeling that it is alive.
+~
+8388616
+0
+0 1
+D1
+~
+~
+0
+-1 3539
+D2
+~
+~
+0
+-1 3536
+S
+#3539
+Hallway~
+Coming into this hallway you notice the floors made of a white marble,
+glistening from its constant cleaning. Around you on the whitewashed walls
+hang paintings of old. As your eyes further glance at the walls you notice
+a sign that indicates that you are on Level 2 of the complex.
+~
+&gComing into this horrifying hallway you notice dismembered bodies hanging
+against the wall, held in place with a slimy membrane substance. The
+floors, filled with what seems to be a pulsing substance, moves slightly
+as you creap along it, giving you the feeling that it is alive.
+~
+8388616
+0
+0 1
+D1
+~
+~
+0
+-1 3540
+D3
+~
+~
+0
+-1 3538
+S
+#3540
+Lounge~
+In this room can be seen large couches against the wall. Each couch sitting
+approximately 4 people. In the center of the room is a table with a coffee
+machine. Scattered on the table are coffee cups, with sugar lieing all
+around the table as well. To the corner of the room is another table with
+a small screen TV showing news of the current events.
+~
+&gIn this room can be seen torn couches ripped to shreds. Each couch also
+covered in a gooey substance. In the center of the room is a cracked
+table, and lieing next to the table are scattered coffee cups and a
+broken, sparking coffee machine. Towars the corner of the room is a
+destroyed TV set still burning from the destruction caused to it. 
+~
+8388616
+0
+0 1
+D3
+~
+~
+0
+-1 3539
+S
+#3541
+Stairwell [Level 3]~
+Walking through into this dank cold stairwell you notice graffiti written
+all over the walls. The stench of urine, the floor littered with
+ciggarette butts, and covered with gum is enough to bring a large
+sensation of nausea. Holding your breath you continue on to the next level
+of this building. 
+~
+&gWalking through into this warm wet stairwell you notice beneath the thick
+goo on the walls the faint lettering of graffiti. The floors, slippery
+from the slime, convinces you to make sure footing of your steps.
+Attempting to grab onto the metal banister, you notice it covered in slimy
+substance, immediately causing you to grimace at the sight.
+~
+8388616
+0
+0 1
+D5
+~
+~
+0
+-1 3510
+D6
+~
+~
+0
+-1 3561
+D8
+~
+~
+0
+-1 3546
+S
+#3542
+Elevator Shaft~
+Entering into this dark shaft, you feel cold coming from above and below. A
+small ladder is here beside you, for what seems to be a way for the
+elevator technician to climb to the elevators when they are not
+operational.  This ladder also leads to different levels of the building.
+~
+&gEntering into this dark shaft, you feel heat from all sides. A small
+ladder is here beside you, covered in a thick slime you must carefully
+take each step slowly and carefully not to fall. This goo covered ladder
+also seems to lead to different levels of the building. 
+~
+8388617
+0
+0 1
+D0
+~
+~
+0
+-1 3561
+D5
+~
+~
+0
+-1 3511
+S
+#3543
+Elevator Shaft~
+Entering into this dark shaft, you feel cold coming from above and below. A
+small ladder is here beside you, for what seems to be a way for the
+elevator technician to climb to the elevators when they are not
+operational.  This ladder also leads to different levels of the building.
+~
+&gEntering into this dark shaft, you feel heat from all sides. A small
+ladder is here beside you, covered in a thick slime you must carefully
+take each step slowly and carefully not to fall. This goo covered ladder
+also seems to lead to different levels of the building. 
+~
+8388617
+0
+0 1
+D2
+~
+~
+0
+-1 3547
+D5
+~
+~
+0
+-1 3512
+S
+#3544
+Elevator Shaft~
+Entering into this dark shaft, you feel cold coming from above and below. A
+small ladder is here beside you, for what seems to be a way for the
+elevator technician to climb to the elevators when they are not
+operational.  This ladder also leads to different levels of the building.
+~
+&gEntering into this dark shaft, you feel heat from all sides. A small
+ladder is here beside you, covered in a thick slime you must carefully
+take each step slowly and carefully not to fall. This goo covered ladder
+also seems to lead to different levels of the building.
+~
+8388617
+0
+0 1
+D0
+~
+~
+0
+-1 3562
+D5
+~
+~
+0
+-1 3513
+S
+#3545
+Stairwell [Level 3]~
+Walking through into this dank cold stairwell you notice graffiti written
+all over the walls. The stench of urine, the floor littered with
+ciggarette butts, and covered with gum is enough to bring a large
+sensation of nausea. Holding your breath you continue on to the next level
+of this building.
+~
+&gWalking through into this warm wet stairwell you notice beneath the thick
+goo on the walls the faint lettering of graffiti. The floors, slippery
+from the slime, convinces you to make sure footing of your steps.
+Attempting to grab onto the metal banister, you notice it covered in slimy
+substance, immediately causing you to grimace at the sight.
+~
+8388616
+0
+0 1
+D5
+~
+~
+0
+-1 3514
+D7
+~
+~
+0
+-1 3562
+D9
+~
+~
+0
+-1 3548
+S
+#3546
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D1
+~
+~
+0
+-1 3547
+D7
+~
+~
+0
+-1 3541
+D9
+~
+~
+0
+-1 3549
+S
+#3547
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3543
+D1
+~
+~
+0
+-1 3548
+D2
+~
+~
+0
+-1 3550
+D3
+~
+~
+0
+-1 3546
+S
+#3548
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors.
+~
+8388616
+0
+0 1
+D3
+~
+~
+0
+-1 3547
+D6
+~
+~
+0
+-1 3545
+D8
+~
+~
+0
+-1 3551
+S
+#3549
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D6
+~
+~
+0
+-1 3546
+D8
+~
+~
+0
+-1 3552
+S
+#3550
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3547
+D8
+~
+~
+0
+-1 3553
+D9
+~
+~
+0
+-1 3552
+S
+#3551
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D7
+~
+~
+0
+-1 3548
+D9
+~
+~
+0
+-1 3553
+S
+#3552
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D6
+~
+~
+0
+-1 3550
+D7
+~
+~
+0
+-1 3549
+D8
+~
+~
+0
+-1 3554
+S
+#3553
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D6
+~
+~
+0
+-1 3551
+D7
+~
+~
+0
+-1 3550
+D9
+~
+~
+0
+-1 3554
+S
+#3554
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D2
+~
+~
+0
+-1 3556
+D6
+~
+~
+0
+-1 3553
+D7
+~
+~
+0
+-1 3552
+D8
+~
+~
+0
+-1 3557
+D9
+~
+~
+0
+-1 3555
+S
+#3555
+Tech Center~
+As you come in through the other room you can see teaming masses of super
+computers lining the walls of this room. The super computers are the
+communication HUB of this large office building, controlling all computers
+and information entering or leaving the system. 
+~
+&g As you come in through the other room you can see a teaming mass of
+electronic componets destroyed by a violent force. It seems that this mass
+of sparking pieces are the remains of a super computer that controlled all
+aspects of communication through this Large office building. Slime and goo
+cover almost every inch of this room. 
+~
+8388616
+0
+0 1
+D2
+~
+~
+0
+-1 3558
+D6
+~
+~
+0
+-1 3554
+S
+#3556
+Tech Center~
+As you come in through the other room you can see teaming masses of super
+computers lining the walls of this room. The super computers are the
+communication HUB of this large office building, controlling all computers
+and information entering or leaving the system.
+~
+&gAs you come in through the other room you can see a teaming mass of
+electronic componets destroyed by a violent force. It seems that this mass
+of sparking pieces are the remains of a super computer that controlled
+allaspects of communication through this Large office building. Slime and
+goo cover almost every inch of this room. 
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3554
+D2
+~
+~
+0
+-1 3559
+S
+#3557
+Tech Center~
+As you come in through the other room you can see teaming masses of super
+computers lining the walls of this room. The super computers are the
+communication HUB of this large office building, controlling all computers
+and information entering or leaving the system. 
+~
+&gAs you come in through the other room you can see a teaming mass of
+electronic componets destroyed by a violent force. It seems that this mass
+of sparking pieces are the remains of a super computer that controlled
+allaspects of communication through this Large office building. Slime and
+goo cover almost every inch of this room. 
+~
+8388616
+0
+0 1
+D2
+~
+~
+0
+-1 3560
+D7
+~
+~
+0
+-1 3554
+S
+#3558
+Tech Center~
+As you come in through the other room you can see teaming masses of super
+computers lining the walls of this room. The super computers are the
+communication HUB of this large office building, controlling all computers
+and information entering or leaving the system.
+~
+&gAs you come in through the other room you can see a teaming mass of
+electronic componets destroyed by a violent force.  It seems that this
+mass of sparking pieces are the remains of a super computer that
+controlled allaspects of communication through this Large office building.
+Slime and goo cover almost every inch of this room.
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3555
+D1
+~
+~
+0
+-1 3559
+S
+#3559
+Tech Center~
+As you come in through the other room you can see teaming masses of super
+computers lining the walls of this room. The super computers are the
+communication HUB of this large office building, controlling all computers
+and information entering or leaving the system.
+~
+&gAs you come in through the other room you can see a teaming mass of
+electronic componets destroyed by a violent force.  It seems that this
+mass of sparking pieces are the remains of a super computer that
+controlled allaspects of communication through this Large office building.
+Slime and goo cover almost every inch of this room.
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3556
+D1
+~
+~
+0
+-1 3560
+D3
+~
+~
+0
+-1 3558
+S
+#3560
+Tech Center~
+As you come in through the other room you can see teaming masses of super
+computers lining the walls of this room. The super computers are the
+communication HUB of this large office building, controlling all computers
+and information entering or leaving the system.
+~
+&gAs you come in through the other room you can see a teaming mass of
+electronic componets destroyed by a violent force.  It seems that this
+mass of sparking pieces are the remains of a super computer that
+controlled allaspects of communication through this Large office building.
+Slime and goo cover almost every inch of this room.
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3557
+D3
+~
+~
+0
+-1 3559
+S
+#3561
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388620
+0
+0 1
+D0
+~
+~
+0
+-1 3564
+D1
+~
+~
+0
+-1 3562
+D2
+~
+~
+0
+-1 3542
+D6
+~
+~
+0
+-1 3565
+D7
+~
+~
+0
+-1 3563
+D9
+~
+~
+0
+-1 3541
+S
+#3562
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees. 
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3566
+D2
+~
+~
+0
+-1 3544
+D3
+~
+~
+0
+-1 3561
+D6
+~
+~
+0
+-1 3567
+D7
+~
+~
+0
+-1 3565
+D8
+~
+~
+0
+-1 3545
+S
+#3563
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3568
+D8
+~
+~
+0
+-1 3561
+S
+#3564
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D2
+~
+~
+0
+-1 3561
+S
+#3565
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3569
+D8
+~
+~
+0
+-1 3562
+D9
+~
+~
+0
+-1 3561
+S
+#3566
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D2
+~
+~
+0
+-1 3562
+S
+#3567
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3570
+D9
+~
+~
+0
+-1 3562
+S
+#3568
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees. 
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D1
+~
+~
+0
+-1 3569
+D2
+~
+~
+0
+-1 3563
+D6
+~
+~
+0
+-1 3571
+S
+#3569
+Computer Center~
+As you come in through the other room you can see teaming masses of super
+computers lining the walls of this room. The super computers are the
+communication HUB of this large office building, controlling all computers
+and information entering or leaving the system.
+~
+&gAs you come in through the other room you can see a teaming mass of
+electronic componets destroyed by a violent force.  It seems that this
+mass of sparking pieces are the remains of a super computer that
+controlled allaspects of communication through this Large office building.
+Slime and goo cover almost every inch of this room.
+~
+8388616
+0
+0 1
+D1
+~
+~
+0
+-1 3570
+D2
+~
+~
+0
+-1 3565
+D3
+~
+~
+0
+-1 3568
+D6
+~
+~
+0
+-1 3573
+D7
+~
+~
+0
+-1 3571
+S
+#3570
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees. 
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D2
+~
+~
+0
+-1 3567
+D3
+~
+~
+0
+-1 3569
+D7
+~
+~
+0
+-1 3573
+S
+#3571
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees. 
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D1
+~
+~
+0
+-1 3572
+D8
+~
+~
+0
+-1 3569
+D9
+~
+~
+0
+-1 3568
+S
+#3572
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees. 
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors. 
+~
+8388616
+0
+0 1
+D1
+~
+~
+0
+-1 3573
+D3
+~
+~
+0
+-1 3571
+S
+#3573
+Corridor~
+Coming into this corridor you notice large crowds of people coming and
+going. You also hear the loud voices, and laughter of people, as if they
+were in a conversation. As you look at the walls of this corridor you see
+payphones and a sign pointing to the north indicating a recreational room
+for employees.
+~
+&gComing into this Corridor you notice a teaming mass of bodies piled onto
+each other. Blood and guts everywhere, as if something large nearby has
+been eating the bodies of humans. Slime continues to cover the walls and
+floors.
+~
+8388616
+0
+0 1
+D3
+~
+~
+0
+-1 3572
+D8
+~
+~
+0
+-1 3570
+D9
+~
+~
+0
+-1 3569
+S
+#3574
+Stairwell [Parking level]~
+Walking through into this dank cold stairwell you notice graffiti written
+all over the walls. The stench of urine, the floor littered with
+ciggarette butts, and covered with gum is enough to bring a large
+sensation of nausea. Holding your breath you continue on to the next level
+of this building.
+~
+&gWalking through into this warm wet stairwell you notice beneath the thick
+goo on the walls the faint lettering of graffiti. The floors, slippery
+from the slime, convinces you to make sure footing of your steps.
+Attempting to grab onto the metal banister, you notice it covered in slimy
+substance, immediately causing you to grimace at the sight
+~
+8388616
+0
+0 1
+D4
+~
+~
+0
+-1 3505
+D8
+~
+~
+0
+-1 3576
+S
+#3575
+Stairwell [Parking Level]~
+Walking through into this dank cold stairwell you notice graffiti written
+all over the walls. The stench of urine, the floor littered with
+ciggarette butts, and covered with gum is enough to bring a large
+sensation of nausea. Holding your breath you continue on to the next level
+of this building.
+~
+&gWalking through into this warm wet stairwell you notice beneath the thick
+goo on the walls the faint lettering of graffiti. The floors, slippery
+from the slime, convinces you to make sure footing of your steps.
+Attempting to grab onto the metal banister, you notice it covered in slimy
+substance, immediately causing you to grimace at the sight.
+~
+8388616
+0
+0 1
+D9
+~
+~
+0
+-1 3577
+S
+#3576
+Garage~
+Coming into this Garage, you look around and notice the faint flickering of
+the lighting in this large echoing area. You notice cars made from
+different companies parked in various assigned spaces. A parking attendant
+runs around frantically trying to keep up with the people pulling into the
+garage. 
+~
+&gComing into this Garage, you look around and notice Sparks flying from
+what used to be lighting fixtures of the complex. You notice cars that
+have been clawed through and demolished, some even on fire. Every inch of
+this area is coverd in slime and beneath your feat can be seen the
+remnance of a Parking attendants Vest, smeered with blood.
+~
+8388616
+0
+0 1
+D1
+~
+~
+0
+-1 3577
+D2
+~
+~
+0
+-1 3578
+D3
+~
+~
+3&1
+-1 3586
+D7
+~
+~
+0
+-1 3574
+S
+#3577
+Garage~
+Coming into this Garage, you look around and notice the faint flickering of
+the lighting in this large echoing area. You notice cars made from
+different companies parked in various assigned spaces. A parking attendant
+runs around frantically trying to keep up with the people pulling into the
+garage. 
+~
+&gComing into this Garage, you look around and notice Sparks flying from
+what used to be lighting fixtures of the complex. You notice cars that
+have been clawed through and demolished, some even on fire. Every inch of
+this area is coverd in slime and beneath your feat can be seen the
+remnance of a Parking attendants Vest, smeered with blood.
+~
+8388616
+0
+0 1
+D2
+~
+~
+0
+-1 3579
+D3
+~
+~
+0
+-1 3576
+D6
+~
+~
+0
+-1 3575
+S
+#3578
+Garage~
+Coming into this Garage, you look around and notice the faint flickering of
+the lighting in this large echoing area. You notice cars made from
+different companies parked in various assigned spaces. A parking attendant
+runs around frantically trying to keep up with the people pulling into the
+garage. 
+~
+&gComing into this Garage, you look around and notice Sparks flying from
+what used to be lighting fixtures of the complex. You notice cars that
+have been clawed through and demolished, some even on fire. Every inch of
+this area is coverd in slime and beneath your feat can be seen the
+remnance of a Parking attendants Vest, smeered with blood. 
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3576
+D8
+~
+~
+0
+-1 3581
+D9
+~
+~
+0
+-1 3580
+S
+#3579
+Garage~
+Coming into this Garage, you look around and notice the faint flickering of
+the lighting in this large echoing area. You notice cars made from
+different companies parked in various assigned spaces. A parking attendant
+runs around frantically trying to keep up with the people pulling into the
+garage.
+~
+&gComing into this Garage, you look around and notice Sparks flying from
+what used to be lighting fixtures of the complex. You notice cars that
+have been clawed through and demolished, some even on fire. Every inch of
+this area is coverd in slime and beneath your feat can be seen the
+remnance of a Parking attendants Vest, smeered with blood.
+~
+8388616
+0
+0 1
+D0
+~
+~
+0
+-1 3577
+D8
+~
+~
+0
+-1 3582
+D9
+~
+~
+0
+-1 3581
+S
+#3580
+Garage~
+Coming into this Garage, you look around and notice the faint flickering of
+the lighting in this large echoing area. You notice cars made from
+different companies parked in various assigned spaces. A parking attendant
+runs around frantically trying to keep up with the people pulling into the
+garage. 
+~
+&gComing into this Garage, you look around and notice Sparks flying from
+what used to be lighting fixtures of the complex. You notice cars that
+have been clawed through and demolished, some even on fire. Every inch of
+this area is coverd in slime and beneath your feat can be seen the
+remnance of a Parking attendants Vest, smeered with blood.
+~
+8388616
+0
+0 1
+D6
+~
+~
+0
+-1 3578
+D8
+~
+~
+0
+-1 3583
+S
+#3581
+Garage~
+Coming into this Garage, you look around and notice the faint flickering of
+the lighting in this large echoing area. You notice cars made from
+different companies parked in various assigned spaces. A parking attendant
+runs around frantically trying to keep up with the people pulling into the
+garage. 
+~
+&gComing into this Garage, you look around and notice Sparks flying from
+what used to be lighting fixtures of the complex. You notice cars that
+have been clawed through and demolished, some even on fire. Every inch of
+this area is coverd in slime and beneath your feat can be seen the
+remnance of a Parking attendants Vest, smeered with blood.
+~
+8388616
+0
+0 1
+D6
+~
+~
+0
+-1 3579
+D7
+~
+~
+0
+-1 3578
+D8
+~
+~
+0
+-1 3584
+D9
+~
+~
+0
+-1 3583
+S
+#3582
+Garage~
+Coming into this Garage, you look around and notice the faint flickering of
+the lighting in this large echoing area. You notice cars made from
+different companies parked in various assigned spaces. A parking attendant
+runs around frantically trying to keep up with the people pulling into the
+garage. 
+~
+&gComing into this Garage, you look around and notice Sparks flying from
+what used to be lighting fixtures of the complex. You notice cars that
+have been clawed through and demolished, some even on fire. Every inch of
+this area is coverd in slime and beneath your feat can be seen the
+remnance of a Parking attendants Vest, smeered with blood.
+~
+8388616
+0
+0 1
+D7
+~
+~
+0
+-1 3579
+D9
+~
+~
+0
+-1 3584
+S
+#3583
+Garage~
+Coming into this Garage, you look around and notice the faint flickering of
+the lighting in this large echoing area. You notice cars made from
+different companies parked in various assigned spaces. A parking attendant
+runs around frantically trying to keep up with the people pulling into the
+garage.
+~
+&gComing into this Garage, you look around and notice Sparks flying from
+what used to be lighting fixtures of the complex. You notice cars that
+have been clawed through and demolished, some even on fire. Every inch of
+this area is coverd in slime and beneath your feat can be seen the
+remnance of a Parking attendants Vest, smeered with blood.
+~
+8388616
+0
+0 1
+D6
+~
+~
+0
+-1 3581
+D7
+~
+~
+0
+-1 3580
+D8
+~
+~
+0
+-1 3585
+S
+#3584
+Garage~
+Coming into this Garage, you look around and notice the faint flickering of
+the lighting in this large echoing area. You notice cars made from
+different companies parked in various assigned spaces. A parking attendant
+runs around frantically trying to keep up with the people pulling into the
+garage. 
+~
+&gComing into this Garage, you look around and notice Sparks flying from
+what used to be lighting fixtures of the complex. You notice cars that
+have been clawed through and demolished, some even on fire. Every inch of
+this area is coverd in slime and beneath your feat can be seen the
+remnance of a Parking attendants Vest, smeered with blood.
+~
+8388616
+0
+0 1
+D6
+~
+~
+0
+-1 3582
+D7
+~
+~
+0
+-1 3581
+D9
+~
+~
+0
+-1 3585
+S
+#3585
+Garage Entrance~
+Coming into this Garage, you look around and notice the faint flickering of
+the lighting in this large echoing area. You notice cars made from
+different companies parked in various assigned spaces. A parking attendant
+runs around frantically trying to keep up with the people pulling into the
+garage. 
+~
+&gComing into this Garage, you look around and notice Sparks flying from
+what used to be lighting fixtures of the complex. You notice cars that
+have been clawed through and demolished, some even on fire. Every inch of
+this area is coverd in slime and beneath your feat can be seen the
+remnance of a Parking attendants Vest, smeered with blood.
+~
+8388616
+0
+0 1
+D6
+~
+~
+0
+-1 3584
+D7
+~
+~
+0
+-1 3583
+S
+#3586
+Generator Room~
+As you enter this room, the heavy smell of grease overwhelms you. Looking
+around you see a huge generator that is responsible for pumping this
+Office Building with electricity. By the Generator sits a Circuit breaker,
+used in case of an emergency as a cut off switch for the building. 
+~
+&gAs you enter this room, the heavy smell of death overwhelms you. Looking
+around you see a goo covered generator that was once responsible for
+pumping this office building with electricity. By the Generator sits a
+Circuit breaker, once used in case of an emergency as a cut off switch for
+the building. 
+~
+8388616
+0
+0 1
+D1
+~
+~
+2&1
+-1 3576
+S
+#0
+
+
+#RESETS
+D 0 3503 7 1
+D 0 3504 6 1
+D 0 3505 8 1
+D 0 3509 9 1
+D 0 3519 1 0
+D 0 3520 3 0
+D 0 3576 3 1
+O 1 3586 1 3586
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+S
+
+
+#$

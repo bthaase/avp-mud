@@ -1,0 +1,2011 @@
+#AREA   {PROTO} Zyrius's area in progress~
+
+#VERSION 4
+
+#AUTHOR Zyrius~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#4102
+old shopkeeper~
+An Old Shopkeeper~
+&W&zAn Old Yautja Hunter is here, selling his wares.&w
+~
+~
+0
+1
+Z
+1 8 8 1
+10 10 10 10 10 10
+2 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#4103
+young shopkeeper~
+A Young Shopkeeper~
+&W&zA Trigger&w-&zHappy Shopkeeper glares at you from behind the counter&w
+~
+~
+0
+19
+Z
+1 8 8 1
+10 10 10 10 10 10
+2 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#4104
+a weaponsmith~
+A Weaponsmith~
+&W&zA Weaponsmith is here, fiddling with a pistol.&w
+~
+~
+0
+19
+Z
+1 8 8 1
+10 10 10 10 10 10
+2 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#4105
+demolition expert~
+A Demolitions Expert~
+&W&zA One&w-&zArmed Yautja is here, selling explosives.&w
+~
+~
+0
+19
+Z
+1 8 8 1
+10 10 10 10 10 10
+2 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#0
+
+
+#OBJECTS
+#4102
+button~
+a button~
+&W&zA &WBlinking&z Button&w~
+~
+4
+2097152
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+mpechoat $n You press the button and it blinks
+mpechoaround $n $n presses the button and it blinks
+mpsleep 10
+mpecho The elevator slowly drops to the jungle
+mpsleep 10
+mpecho The lift hisses as it stops.
+mpsleep 4
+mpecho The doors swing open, revealing the jungle.
+mptransfer all 4132
+~
+> useoff_prog 100~
+mpechoat $n The button shorts out when you press it!
+mpechoaround $n $n broke the elevator!
+~
+|
+#4103
+button~
+a button~
+&W&zA &WBlinking&z Button&w~
+~
+4
+1048576
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+mpechoat $n You press the button and it blinks
+mpechoaround $n $n presses the button and it blinks
+mpsleep 10
+mpecho The elevator slowly rises to the complex
+mpsleep 10
+mpecho The lift hisses as it stops.
+mpsleep 4
+mpecho The doors swing open, revealing the complex.
+mptransfer all 4131
+~
+> useoff_prog 100~
+mpechoat $n The button shorts out when you press it!
+mpechoaround $n $n broke the elevator!
+~
+|
+#4104
+button~
+a button~
+&W&zAn Elevator Summon Button&w~
+~
+4
+1048576
+0
+0 0 0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#4102
+&W&g-=(&OAn &gOver&O-&gGrown&O Landing Pad&g)=-&w~
+&W&gVines and trees &Oare slowly intruding onto the small steel pad. 
+Echoes of hundreds of animals blow in with the wind.  &rBlood&O stains
+stand out on the steel slab, along with the trail leading north.  The life
+and atmosphere of the surrounding &W&Ojungle makes it obvious that if not
+for this planet's brutal Yautja inhabitants...this would be a beautiful
+place.&w 
+~
+~
+2097152
+0
+0 1
+D0
+~
+~
+0
+-1 4103
+S
+#4103
+&W&g-=(&OEntrance To The Hunter&g'&Os Complex&g)=-&w~
+&W&OTwo massive doors block the path ahead, while the side streets seem to
+be almost ignored.  Heavily armed guards stand at both sides of the
+doorway, prepared to strike intruders.  The &rblood&O trail from the pad
+leads through the guarded entrance, looks as though you may never find out
+who's &rblood&O it is.
+~
+~
+2097160
+0
+0 1
+D0
+~
+~
+0
+-1 4104
+D2
+~
+~
+0
+-1 4102
+D6
+~
+~
+0
+-1 4115
+D7
+~
+~
+0
+-1 4114
+S
+#4104
+&W&R*(&OSecurity Checkpoint&R)*&w~
+&W&OA large laser turret is mounted beside the checkpoint, ready to take
+out unsuspecting enemies.&w &W&OFour angry looking guards pace back and
+forth between the turret and the guard post, simply waiting for something
+to shoot.  If you are not of the Yautja race...this is certainly not a
+good place to be.&w 
+~
+~
+2097160
+0
+0 1
+D0
+~
+~
+0
+-1 4105
+D2
+~
+~
+0
+-1 4103
+S
+#4105
+&W&zInner Corridor&w~
+&W&wThis narrow corridor runs straight through the heart of the Yautja
+Hunting Complex.  The scuff marks on the cold metal surface show how much
+traffic really comes through here.  Unrelenting lines of people stream
+from both ends, &W&was they make their way to their destination.&w
+~
+~
+2097160
+0
+0 1
+D0
+~
+~
+0
+-1 4106
+D2
+~
+~
+0
+-1 4104
+S
+#4106
+&W&g-=+(&OYautja Square&g)+=-~
+&W&OThe crowds here are HORRIBLE!  Yautji push and fight to get to where
+they are going, making a trip to the store a life or death scenario for
+many inhabitants.  Life bustles around this Square like nowhere else on
+this planet, Perhaps theres a good reason for it.  A tall ladder seems to
+lead above to a popular area..
+~
+~
+2097160
+0
+0 1
+D0
+~
+~
+0
+-1 4107
+D1
+~
+~
+0
+-1 4122
+D2
+~
+~
+0
+-1 4105
+D3
+~
+~
+0
+-1 4121
+D4
+~
+~
+0
+-1 4128
+D6
+~
+~
+0
+-1 4124
+D7
+~
+~
+0
+-1 4125
+D8
+~
+~
+0
+-1 4126
+D9
+~
+~
+0
+-1 4127
+S
+#4107
+&W&zInner Corridor&w~
+&W&wThis narrow corridor runs straight through the heart of the Yautja
+Hunting Complex.  The scuff marks on the cold metal surface show how much
+traffic really comes through here.  Unrelenting lines of people stream
+from both ends, &W&was they make their way to their destination.&w
+~
+~
+2097160
+0
+0 1
+D0
+~
+~
+0
+-1 4108
+D2
+~
+~
+0
+-1 4106
+S
+#4108
+&W&R*(&OSecurity Checkpoint&R)*&w~
+&W&OA large laser turret is mounted beside the checkpoint, ready to take
+out unsuspecting enemies.&w &W&OFour angry looking guards pace back and
+forth between the turret and the guard post, simply waiting for something
+to shoot.  If you are not of the Yautja race...this is certainly not a
+good place to be.&w 
+~
+~
+2097160
+0
+0 1
+D0
+~
+~
+0
+-1 4109
+D2
+~
+~
+0
+-1 4107
+S
+#4109
+&W&g-=(&OExit To The Hunter&g'&Os Complex&g)=-&w~
+&W&OIt seems rather quiet here despite the music of the jungle below.  A
+glass floor makes for a breath-taking view into the jungle world below
+you.  Life of all kinds, from beautiful to horrible call the trees home.
+If one were to go to the jungle, they would be wise to arm themselves
+well.&w
+~
+~
+2097160
+0
+0 1
+D0
+~
+~
+0
+-1 4129
+D2
+~
+~
+0
+-1 4108
+D8
+~
+~
+0
+-1 4119
+D9
+~
+~
+0
+-1 4110
+S
+#4110
+&W&wOuter Corridor&w~
+&W&WThis wide corridor seems to run along the base of the massive complex. 
+Suprisingly there seems to be no security here,&w  &W&Wwhich can certainly
+be good news to "unwelcomed" visitors.  One or two Yautja wander past at
+random intervals,&w  &W&Wthe exact opposite of the chaos inside.  With the
+jungle canopy so close here, the soothing sounds of Yautjan birds calms
+you to the core.&w
+~
+~
+2097152
+0
+0 1
+D6
+~
+~
+0
+-1 4109
+D9
+~
+~
+0
+-1 4111
+S
+#4111
+&W&wOuter Corridor&w~
+&W&WThis wide corridor seems to run along the base of the massive complex. 
+Suprisingly there seems to be no security here,&w  &W&Wwhich can certainly
+be good news to "unwelcomed" visitors.  One or two Yautja wander past at
+random intervals,&w  &W&Wthe exact opposite of the chaos inside.  With the
+jungle canopy so close here, the soothing sounds of Yautjan birds calms
+you to the core.&w
+~
+~
+2097152
+0
+0 1
+D6
+~
+~
+0
+-1 4110
+D9
+~
+~
+0
+-1 4112
+S
+#4112
+&W&wOuter Corridor&w~
+&W&WThis wide corridor seems to run along the base of the massive complex. 
+Suprisingly there seems to be no security here,&w  &W&Wwhich can certainly
+be good news to "unwelcomed" visitors.  One or two Yautja wander past at
+random intervals,&w  &W&Wthe exact opposite of the chaos inside.  With the
+jungle canopy so close here, the soothing sounds of Yautjan birds calms
+you to the core.&w
+~
+~
+2097152
+0
+0 1
+D1
+~
+~
+0
+-1 4120
+D6
+~
+~
+0
+-1 4111
+D8
+~
+~
+0
+-1 4113
+S
+#4113
+&W&wOuter Corridor&w~
+&W&WThis wide corridor seems to run along the base of the massive complex. 
+Suprisingly there seems to be no security here,&w  &W&Wwhich can certainly
+be good news to "unwelcomed" visitors.  One or two Yautja wander past at
+random intervals,&w  &W&Wthe exact opposite of the chaos inside.  With the
+jungle canopy so close here, the soothing sounds of Yautjan birds calms
+you to the core.&w
+~
+~
+2097152
+0
+0 1
+D7
+~
+~
+0
+-1 4112
+D8
+~
+~
+0
+-1 4114
+S
+#4114
+&W&wOuter Corridor&w~
+&W&WThis wide corridor seems to run along the base of the massive complex. 
+Suprisingly there seems to be no security here,&w  &W&Wwhich can certainly
+be good news to "unwelcomed" visitors.  One or two Yautja wander past at
+random intervals,&w  &W&Wthe exact opposite of the chaos inside.  With the
+jungle canopy so close here, the soothing sounds of Yautjan birds calms
+you to the core.&w
+~
+~
+2097152
+0
+0 1
+D7
+~
+~
+0
+-1 4113
+D8
+~
+~
+0
+-1 4103
+S
+#4115
+&W&wOuter Corridor&w~
+&W&WThis wide corridor seems to run along the base of the massive complex. 
+Suprisingly there seems to be no security here,&w  &W&Wwhich can certainly
+be good news to "unwelcomed" visitors.  One or two Yautja wander past at
+random intervals,&w  &W&Wthe exact opposite of the chaos inside.  With the
+jungle canopy so close here, the soothing sounds of Yautjan birds calms
+you to the core.&w
+~
+~
+2097152
+0
+0 1
+D6
+~
+~
+0
+-1 4116
+D9
+~
+~
+0
+-1 4103
+S
+#4116
+&W&wOuter Corridor&w~
+&W&WThis wide corridor seems to run along the base of the massive complex. 
+Suprisingly there seems to be no security here,&w  &W&Wwhich can certainly
+be good news to "unwelcomed" visitors.  One or two Yautja wander past at
+random intervals,&w  &W&Wthe exact opposite of the chaos inside.  With the
+jungle canopy so close here, the soothing sounds of Yautjan birds calms
+you to the core.&w
+~
+~
+2097152
+0
+0 1
+D6
+~
+~
+0
+-1 4117
+D9
+~
+~
+0
+-1 4115
+S
+#4117
+&W&wOuter Corridor&w~
+&W&WThis wide corridor seems to run along the base of the massive complex. 
+Suprisingly there seems to be no security here,&w  &W&Wwhich can certainly
+be good news to "unwelcomed" visitors.  One or two Yautja wander past at
+random intervals,&w  &W&Wthe exact opposite of the chaos inside.  With the
+jungle canopy so close here, the soothing sounds of Yautjan birds calms
+you to the core.&w
+~
+~
+2097152
+0
+0 1
+D3
+~
+~
+0
+-1 4123
+D7
+~
+~
+0
+-1 4118
+D9
+~
+~
+0
+-1 4116
+S
+#4118
+&W&wOuter Corridor&w~
+&W&WThis wide corridor seems to run along the base of the massive complex. 
+Suprisingly there seems to be no security here,&w  &W&Wwhich can certainly
+be good news to "unwelcomed" visitors.  One or two Yautja wander past at
+random intervals,&w  &W&Wthe exact opposite of the chaos inside.  With the
+jungle canopy so close here, the soothing sounds of Yautjan birds calms
+you to the core.&w
+~
+~
+2097152
+0
+0 1
+D7
+~
+~
+0
+-1 4119
+D8
+~
+~
+0
+-1 4117
+S
+#4119
+&W&wOuter Corridor&w~
+&W&WThis wide corridor seems to run along the base of the massive complex. 
+Suprisingly there seems to be no security here,&w  &W&Wwhich can certainly
+be good news to "unwelcomed" visitors.  One or two Yautja wander past at
+random intervals,&w  &W&Wthe exact opposite of the chaos inside.  With the
+jungle canopy so close here, the soothing sounds of Yautjan birds calms
+you to the core.&w
+~
+~
+2097152
+0
+0 1
+D7
+~
+~
+0
+-1 4109
+D8
+~
+~
+0
+-1 4118
+S
+#4120
+&W&R*(&OSecurity Checkpoint&R)*&w~
+&W&OA large laser turret is mounted beside the checkpoint, ready to take
+out unsuspecting enemies.&w &W&OFour angry looking guards pace back and
+forth between the turret and the guard post, simply waiting for something
+to shoot.  If you are not of the Yautja race...this is certainly not a
+good place to be.&w 
+~
+~
+2097160
+0
+0 1
+D1
+~
+~
+0
+-1 4121
+D3
+~
+~
+0
+-1 4112
+S
+#4121
+&W&zInner Corridor&w~
+&W&wThis narrow corridor runs straight through the heart of the Yautja
+Hunting Complex.  The scuff marks on the cold metal surface show how much
+traffic really comes through here.  Unrelenting lines of people stream
+from both ends, as they make their &W&wway to their destination.&w
+~
+~
+2097160
+0
+0 1
+D1
+~
+~
+0
+-1 4106
+D3
+~
+~
+0
+-1 4120
+S
+#4122
+&W&zInner Corridor&w~
+&W&wThis narrow corridor runs straight through the heart of the Yautja
+Hunting Complex.  The scuff marks on the cold metal surface show how much
+traffic really comes through here.  Unrelenting lines of people stream
+from both ends, &W&was they make their way to their destination.&w
+~
+~
+2097160
+0
+0 1
+D1
+~
+~
+0
+-1 4123
+D3
+~
+~
+0
+-1 4106
+S
+#4123
+&W&R*(&OSecurity Checkpoint&R)*&w~
+&W&OA large laser turret is mounted beside the checkpoint, ready to take
+out unsuspecting enemies.&w &W&OFour angry looking guards pace back and
+forth between the turret and the guard post, simply waiting for something
+to shoot.  If you are not of the Yautja race...this is certainly not a
+good place to be.&w 
+~
+~
+2097160
+0
+0 1
+D1
+~
+~
+0
+-1 4117
+D3
+~
+~
+0
+-1 4122
+S
+#4124
+&W&B*=(&WRanged-Style Weaponry Outlet&B)=*&W&w~
+&W&WMassive weapons, some looking too large to carry, line the shelves in
+this huge shop.  The paranoid shopkeeper watches you icily as he cleans a
+nearby rifle.  Judging by the power of this equipment, its a good thing
+the humans never secured Yautja &W&WTechnology, or there my not be an
+Earth to speak of these days.&w 
+~
+~
+2097160
+0
+0 1
+D9
+~
+~
+0
+-1 4106
+S
+#4125
+&W&B*=(&WMelee-Style Weaponry Outlet&B)=*&W&w~
+&W&WSmall firearms line the shelves here, and the owner seems to be quite
+obsessed with them.  It's well known that the Yautja have been visiting
+Earth for years, and this weaponsmith has the collection to show it.  This
+&W&WThis shop seems to have it all, from antique and ancient devices to
+the most advanced smallarms money can buy.&w 
+~
+~
+2097160
+0
+0 1
+D8
+~
+~
+0
+-1 4106
+S
+#4126
+&W&B*=(&WHunting Equipment Outlet&B)=*&w~
+&W&WSuited-Dummies stand proudly along the walls, displaying the latest in
+high-tech hunting gear.  From unique and personally designed breathing
+masks to combat armor and cloaking devices, this place has it all.  It
+would be best to stock up, as the &W&WHunter is only as good as his
+equipment.&w 
+~
+~
+2097160
+0
+0 1
+D7
+~
+~
+0
+-1 4106
+S
+#4127
+&W&B*=(&WHigh Explosives Outlet&B)=*&w~
+&W&WExplosives of all shapes and sizes fill the room, and seem to
+completely surround the shopkeeper.  The one-armed Yautja seems very
+content to sit in a pile of grenades..fiddling with each and grumbling to
+himself.  Perhaps whatever cost him is arm &W&Walso cost him his sanity,
+because he doesn't seem to be all there.  Handicap or not, this seems to
+be the best place for explosives.&w
+~
+~
+2097160
+0
+0 1
+D6
+~
+~
+0
+-1 4106
+S
+#4128
+&W&b[<&OYautja Lounge&b>]&w~
+&W&OWhile the crowds are quieter here, they are no smaller.  Countless
+hunters surround the bar, drinking unknown spirits and obviously bragging
+about their past journies.  An occasional fight breaks out, but the
+bartender seems to be in control of the situation.  Perhaps this would be
+a safe enough place to get some rest.
+~
+~
+2097160
+0
+0 1
+D5
+~
+~
+0
+-1 4106
+S
+#4129
+&W&zInner Corridor&w~
+&W&wThis narrow corridor runs straight through the heart of the Yautja
+Hunting Complex.  The scuff marks on the cold metal surface show how much
+traffic really comes through here.  Unrelenting lines of people stream
+from both ends, as they make their way to their destination.&w
+~
+~
+2097160
+0
+0 1
+D0
+~
+~
+0
+-1 4130
+D2
+~
+~
+0
+-1 4109
+S
+#4130
+&W&zInner Corridor&w~
+&W&wThis narrow corridor runs straight through the heart of the Yautja
+Hunting Complex.  The scuff marks on the cold metal surface show how much
+traffic really comes through here.  Unrelenting lines of people stream
+from both ends, as they make their way to their destination.&w
+~
+~
+2097160
+0
+0 1
+D0
+~
+~
+0
+-1 4131
+D2
+~
+~
+0
+-1 4129
+S
+#4131
+&g-={ &GBattleground Entrance &g}=-~
+Time to prepare for combat. This path leads to the hunting grounds, where
+the best of the best get to test their skills. Its a battle royal to the
+death, and only the strongest will survive.  Make sure your geared up, and
+have your wits about you. This'll be the ultimate test. 
+~
+~
+2097160&4
+0
+0 1
+D2
+~
+~
+0
+-1 4130
+S
+#4132
+&W&B-(&wA Hydraulic Elevator&B)-&w~
+&W&wThis machine is in no way meant to be pretty.  Its quite obvious it was
+only put here to serve its purpose, and not to shimmer while doing it. A
+bright button glow from the nearby wall, apparently thats how you operate
+it.&w 
+~
+~
+2097160
+0
+0 1
+D0
+~
+~
+0
+-1 4133
+> entry_prog 100~
+mpechoat $n The cold steel doors slam shut.
+mpechoaround $n The doors open and close briefly letting $n
+~
+|
+S
+#4133
+&W&O<-(&gThe Yautja Jungle&O)->&w~
+&W&OThe lush jungle surrounds from all directions, with trees stretching
+too high to see.  Sounds of life echo loudly, and show no sign of
+quieting.  With so many paths and places to hide...it would be a good
+place to lose someone...&w
+~
+~
+2097152
+0
+0 3
+D0
+~
+~
+0
+-1 4134
+D1
+~
+~
+0
+-1 4140
+D2
+~
+~
+0
+-1 4132
+D3
+~
+~
+0
+-1 4139
+S
+#4134
+&W&O<-(&gThe Yautja Jungle&O)->~
+&W&OThe lush jungle surrounds from all directions, with trees stretching
+too high to see.  Sounds of life echo loudly, and show no sign of
+quieting.  With so many paths and places to hide...it would be a good
+place to lose someone...&w
+~
+~
+2097152
+0
+0 3
+D0
+~
+~
+0
+-1 4135
+D2
+~
+~
+0
+-1 4133
+D6
+~
+~
+0
+-1 4142
+D7
+~
+~
+0
+-1 4141
+D8
+~
+~
+0
+-1 4140
+D9
+~
+~
+0
+-1 4139
+S
+#4135
+&W&O<-(&gThe Yautja Jungle&O)->~
+&W&OThe lush jungle surrounds from all directions, with trees stretching
+too high to see.  Sounds of life echo loudly, and show no sign of
+quieting.  With so many paths and places to hide...it would be a good
+place to lose someone...&w
+~
+~
+2097152
+0
+0 3
+D0
+~
+~
+0
+-1 4136
+D2
+~
+~
+0
+-1 4134
+S
+#4136
+&W&O<-(&gThe Yautja Jungle&O)->~
+&W&OThe lush jungle surrounds from all directions, with trees stretching
+too high to see.  Sounds of life echo loudly, and show no sign of
+quieting.  With so many paths and places to hide...it would be a good
+place to lose someone...&w
+~
+~
+2097152
+0
+0 3
+D0
+~
+~
+0
+-1 4137
+D2
+~
+~
+0
+-1 4135
+D6
+~
+~
+0
+-1 4144
+D7
+~
+~
+0
+-1 4143
+D8
+~
+~
+0
+-1 4142
+D9
+~
+~
+0
+-1 4141
+S
+#4137
+&W&O<-(&gThe Yautja Jungle&O)->~
+&W&OThe lush jungle surrounds from all directions, with trees stretching
+too high to see.  Sounds of life echo loudly, and show no sign of
+quieting.  With so many paths and places to hide...it would be a good
+place to lose someone...&w
+~
+~
+2097152
+0
+0 3
+D0
+~
+~
+0
+-1 4138
+D2
+~
+~
+0
+-1 4136
+S
+#4138
+&W&O<-(&gThe Yautja Jungle&O)->~
+&W&OThe lush jungle surrounds from all directions, with trees stretching
+too high to see.  Sounds of life echo loudly, and show no sign of
+quieting.  With so many paths and places to hide...it would be a good
+place to lose someone...&w
+~
+~
+2097152
+0
+0 3
+D0
+~
+~
+0
+-1 4147
+D1
+~
+~
+0
+-1 4146
+D2
+~
+~
+0
+-1 4137
+D3
+~
+~
+0
+-1 4145
+D8
+~
+~
+0
+-1 4144
+D9
+~
+~
+0
+-1 4143
+S
+#4139
+&W&O<-(&gA Narrow Jungle Path&O)->~
+&W&OThe flora of this vast wilderness has been worn down through here,
+making it possible to move with some effort.  Random treeroots jut from
+the ground, making it difficult to walk fast.  Perhaps this is a good
+place to hide...&w
+~
+~
+2097152
+0
+0 3
+D1
+~
+~
+0
+-1 4133
+D6
+~
+~
+0
+-1 4134
+S
+#4140
+&W&O<-(&gA Narrow Jungle Path&O)->~
+&W&OThe flora of this vast wilderness has been worn down through here,
+making it possible to move with some effort.  Random treeroots jut from
+the ground, making it difficult to walk fast.  Perhaps this is a good
+place to hide...&w
+~
+~
+2097152
+0
+0 3
+D3
+~
+~
+0
+-1 4133
+D7
+~
+~
+0
+-1 4134
+S
+#4141
+&W&O<-(&gA Narrow Jungle Path&O)->~
+&W&OThe flora of this vast wilderness has been worn down through here,
+making it possible to move with some effort.  Random treeroots jut from
+the ground, making it difficult to walk fast.  Perhaps this is a good
+place to hide...&w
+~
+~
+2097152
+0
+0 3
+D6
+~
+~
+0
+-1 4136
+D8
+~
+~
+0
+-1 4134
+S
+#4142
+&W&O<-(&gA Narrow Jungle Path&O)->~
+&W&OThe flora of this vast wilderness has been worn down through here,
+making it possible to move with some effort.  Random treeroots jut from
+the ground, making it difficult to walk fast.  Perhaps this is a good
+place to hide...&w
+~
+~
+2097152
+0
+0 3
+D7
+~
+~
+0
+-1 4136
+D9
+~
+~
+0
+-1 4134
+S
+#4143
+&W&O<-(&gA Narrow Jungle Path&O)->~
+&W&OThe flora of this vast wilderness has been worn down through here,
+making it possible to move with some effort.  Random treeroots jut from
+the ground, making it difficult to walk fast.  Perhaps this is a good
+place to hide...&w
+~
+~
+2097152
+0
+0 3
+D0
+~
+~
+0
+-1 4145
+D6
+~
+~
+0
+-1 4138
+D8
+~
+~
+0
+-1 4136
+S
+#4144
+&W&O<-(&gA Narrow Jungle Path&O)->~
+&W&OThe flora of this vast wilderness has been worn down through here,
+making it possible to move with some effort.  Random treeroots jut from
+the ground, making it difficult to walk fast.  Perhaps this is a good
+place to hide...&w
+~
+~
+2097152
+0
+0 3
+D0
+~
+~
+0
+-1 4146
+D7
+~
+~
+0
+-1 4138
+D9
+~
+~
+0
+-1 4136
+S
+#4145
+&W&O<-(&gA Narrow Jungle Path&O)->~
+&W&OThe flora of this vast wilderness has been worn down through here,
+making it possible to move with some effort.  Random treeroots jut from
+the ground, making it difficult to walk fast.  Perhaps this is a good
+place to hide...&w
+~
+~
+2097152
+0
+0 3
+D1
+~
+~
+0
+-1 4138
+D2
+~
+~
+0
+-1 4143
+D6
+~
+~
+0
+-1 4147
+D7
+~
+~
+0
+-1 4149
+S
+#4146
+&W&O<-(&gA Narrow Jungle Path&O)->~
+&W&OThe flora of this vast wilderness has been worn down through here,
+making it possible to move with some effort.  Random treeroots jut from
+the ground, making it difficult to walk fast.  Perhaps this is a good
+place to hide...&w
+~
+~
+2097152
+0
+0 3
+D2
+~
+~
+0
+-1 4144
+D3
+~
+~
+0
+-1 4138
+D6
+~
+~
+0
+-1 4162
+D7
+~
+~
+0
+-1 4147
+S
+#4147
+&W&O<-(&gThe Vast Wilderness&O)->&w~
+&W&ONarrow paths seem to be cut in multiple directions, spiderwebbing all
+through the massive wall of plant life ahead.  The spent shells littering
+the ground here make it obvious this must be the infamous &RYautja Hunting
+Ground&O.&w &W&ORumors of this place bring horrible thoughts to mind.&w
+~
+~
+2097152
+0
+0 3
+D0
+~
+~
+0
+-1 4166
+D1
+~
+~
+0
+-1 4163
+D2
+~
+~
+0
+-1 4138
+D3
+~
+~
+0
+-1 4148
+D8
+~
+~
+0
+-1 4146
+D9
+~
+~
+0
+-1 4145
+S
+#4148
+&W&O<-(&gThe Vast Wilderness&O)->&w~
+&W&ONarrow paths seem to be cut in multiple directions, spiderwebbing all
+through the massive wall of plant life ahead.  The spent shells littering
+the ground here make it obvious this must be the infamous &RYautja Hunting
+Ground&O. Rumors of this place bring horrible thoughts to mind.&w
+~
+~
+2097152
+0
+0 3
+D0
+~
+~
+0
+-1 4165
+D1
+~
+~
+0
+-1 4147
+D3
+~
+~
+0
+-1 4149
+S
+#4149
+&W&O<-(&gThe Vast Wilderness&O)->&w~
+&W&ONarrow paths seem to be cut in multiple directions, spiderwebbing all
+through the massive wall of plant life ahead.  The spent shells littering
+the ground here make it obvious this must be the infamous &RYautja Hunting
+Ground&O. Rumors of this place bring horrible thoughts to mind.&w
+~
+~
+2097152
+0
+0 3
+D0
+~
+~
+0
+-1 4164
+D1
+~
+~
+0
+-1 4148
+D3
+~
+~
+0
+-1 4150
+D8
+~
+~
+0
+-1 4145
+S
+#4150
+&W&O<-(&gThe Vast Wilderness&O)->&w~
+&W&ONarrow paths seem to be cut in multiple directions, spiderwebbing all
+through the massive wall of plant life ahead.  The spent shells littering
+the ground here make it obvious this must be the infamous &RYautja Hunting
+Ground&O. Rumors of this place bring horrible thoughts to mind.&w
+~
+~
+2097152
+0
+0 3
+D0
+~
+~
+0
+-1 4151
+D1
+~
+~
+0
+-1 4149
+S
+#4151
+&W&O<-(&gThe Vast Wilderness&O)->&w~
+&W&ONarrow paths seem to be cut in multiple directions, spiderwebbing all
+through the massive wall of plant life ahead.  The spent shells littering
+the ground here make it obvious this must be the infamous &RYautja Hunting
+Ground&O. Rumors of this place bring horrible thoughts to mind.&w
+~
+~
+2097152
+0
+0 3
+D0
+~
+~
+0
+-1 4152
+D1
+~
+~
+0
+-1 4164
+D2
+~
+~
+0
+-1 4150
+S
+#4152
+&W&O<-(&gThe Vast Wilderness&O)->&w~
+&W&ONarrow paths seem to be cut in multiple directions, spiderwebbing all
+through the massive wall of plant life ahead.  The spent shells littering
+the ground here make it obvious this must be the infamous &RYautja Hunting
+Ground&O. Rumors of this place bring horrible thoughts to mind.&w
+~
+~
+2097152
+0
+0 3
+D1
+~
+~
+0
+-1 4153
+D2
+~
+~
+0
+-1 4151
+S
+#4153
+&W&O<-(&gThe Vast Wilderness&O)->&w~
+&W&ONarrow paths seem to be cut in multiple directions, spiderwebbing all
+through the massive wall of plant life ahead.  The spent shells littering
+the ground here make it obvious this must be the infamous &RYautja Hunting
+Ground&O. Rumors of this place bring horrible thoughts to mind.&w
+~
+~
+2097152
+0
+0 3
+D1
+~
+~
+0
+-1 4154
+D2
+~
+~
+0
+-1 4164
+D3
+~
+~
+0
+-1 4152
+S
+#4154
+&W&O<-(&gThe Vast Wilderness&O)->&w~
+&W&ONarrow paths seem to be cut in multiple directions, spiderwebbing all
+through the massive wall of plant life ahead.  The spent shells littering
+the ground here make it obvious this must be the infamous &RYautja Hunting
+Ground&O. Rumors of this place bring horrible thoughts to mind.&w
+~
+~
+2097152
+0
+0 3
+D1
+~
+~
+0
+-1 4155
+D2
+~
+~
+0
+-1 4165
+D3
+~
+~
+0
+-1 4153
+S
+#4155
+&W&O<-(&gThe Vast Wilderness&O)->&w~
+&W&ONarrow paths seem to be cut in multiple directions, spiderwebbing all
+through the massive wall of plant life ahead.  The spent shells littering
+the ground here make it obvious this must be the infamous &RYautja Hunting
+Ground&O. Rumors of this place bring horrible thoughts to mind.&w &W&OA
+massive boulder stands against the treeline...it seems a little out of
+place.&w
+~
+~
+2097152
+0
+0 3
+D1
+~
+~
+0
+-1 4156
+D2
+~
+~
+0
+-1 4166
+D3
+~
+~
+0
+-1 4154
+D10
+~
+boulder~
+526336
+-1 4169
+S
+#4156
+&W&O<-(&gThe Vast Wilderness&O)->&w~
+&W&ONarrow paths seem to be cut in multiple directions, spiderwebbing all
+through the massive wall of plant life ahead.  The spent shells littering
+the ground here make it obvious this must be the infamous &RYautja Hunting
+Ground&O. Rumors of this place bring horrible thoughts to mind.&w
+~
+~
+2097152
+0
+0 3
+D1
+~
+~
+0
+-1 4157
+D2
+~
+~
+0
+-1 4167
+D3
+~
+~
+0
+-1 4155
+S
+#4157
+&W&O<-(&gThe Vast Wilderness&O)->&w~
+&W&ONarrow paths seem to be cut in multiple directions, spiderwebbing all
+through the massive wall of plant life ahead.  The spent shells littering
+the ground here make it obvious this must be the infamous &RYautja Hunting
+Ground&O. Rumors of this place bring horrible thoughts to mind.&w
+~
+~
+2097152
+0
+0 3
+D1
+~
+~
+0
+-1 4158
+D2
+~
+~
+0
+-1 4168
+D3
+~
+~
+0
+-1 4156
+S
+#4158
+&W&O<-(&gThe Vast Wilderness&O)->&w~
+&W&ONarrow paths seem to be cut in multiple directions, spiderwebbing all
+through the massive wall of plant life ahead.  The spent shells littering
+the ground here make it obvious this must be the infamous &RYautja Hunting
+Ground&O. Rumors of this place bring horrible thoughts to mind.&w
+~
+~
+2097152
+0
+0 3
+D2
+~
+~
+0
+-1 4159
+D3
+~
+~
+0
+-1 4157
+S
+#4159
+&W&O<-(&gThe Vast Wilderness&O)->&w~
+&W&ONarrow paths seem to be cut in multiple directions, spiderwebbing all
+through the massive wall of plant life ahead.  The spent shells littering
+the ground here make it obvious this must be the infamous &RYautja Hunting
+Ground&O. Rumors of this place bring horrible thoughts to mind.&w
+~
+~
+2097152
+0
+0 3
+D0
+~
+~
+0
+-1 4158
+D2
+~
+~
+0
+-1 4160
+D3
+~
+~
+0
+-1 4168
+S
+#4160
+&W&O<-(&gThe Vast Wilderness&O)->&w~
+&W&ONarrow paths seem to be cut in multiple directions, spiderwebbing all
+through the massive wall of plant life ahead.  The spent shells littering
+the ground here make it obvious this must be the infamous &RYautja Hunting
+Ground&O. Rumors of this place bring horrible thoughts to mind.&w
+~
+~
+2097152
+0
+0 3
+D0
+~
+~
+0
+-1 4159
+D3
+~
+~
+0
+-1 4162
+S
+#4161
+&W&W-(&zBehind A Rock&W)-&w~
+&W&zThis place seems a little safer, so long as its guest isn't careless. 
+The strange boulder seems out of place, but hopefully no one will think
+about that.  All there is to do now is be quiet and wait...&w
+~
+~
+2097152
+0
+0 3
+D7
+~
+~
+0
+-1 4164
+S
+#4162
+&W&O<-(&gThe Vast Wilderness&O)->&w~
+&W&ONarrow paths seem to be cut in multiple directions, spiderwebbing all
+through the massive wall of plant life ahead.  The spent shells littering
+the ground here make it obvious this must be the infamous &RYautja Hunting
+Ground&O. Rumors of this place bring horrible thoughts to mind.&w
+~
+~
+2097152
+0
+0 3
+D0
+~
+~
+0
+-1 4168
+D1
+~
+~
+0
+-1 4160
+D3
+~
+~
+0
+-1 4163
+D9
+~
+~
+0
+-1 4146
+S
+#4163
+&W&O<-(&gThe Vast Wilderness&O)->&w~
+&W&ONarrow paths seem to be cut in multiple directions, spiderwebbing all
+through the massive wall of plant life ahead.  The spent shells littering
+the ground here make it obvious this must be the infamous &RYautja Hunting
+Ground&O. Rumors of this place bring horrible thoughts to mind.&w
+~
+~
+2097152
+0
+0 3
+D0
+~
+~
+0
+-1 4167
+D1
+~
+~
+0
+-1 4162
+D3
+~
+~
+0
+-1 4147
+S
+#4164
+&W&O<-(&gThe Jungle Depths&O)->&w~
+&W&OThe plant growth here is all but helpful, and strange creatures seem to
+lie around every turn.  While none seem to attack, many are quite shocking
+to see regardless.&w &W&OThe thick jungle canopy above blocks the sun so
+well here that it is very hard to see.  Always good to watch your back in
+the dark...&w &W&OA large rock stands firmly beside a tree here...looks
+like a good place for cover.&w
+~
+~
+0
+0
+0 3
+D0
+~
+~
+0
+-1 4153
+D1
+~
+~
+0
+-1 4165
+D2
+~
+~
+0
+-1 4149
+D3
+~
+~
+0
+-1 4151
+D10
+~
+rock~
+526336
+-1 4161
+S
+#4165
+&W&O<-(&gThe Jungle Depths&O)->&w~
+&W&OThe plant growth here is all but helpful, and strange creatures seem to
+lie around every turn.  While none seem to attack, many are quite shocking
+to see regardless.&w &W&OThe thick jungle canopy above blocks the sun so
+well here that it is very hard to see.  Always good to watch your back in
+the dark...&w
+~
+~
+0
+0
+0 3
+D0
+~
+~
+0
+-1 4154
+D1
+~
+~
+0
+-1 4166
+D2
+~
+~
+0
+-1 4148
+D3
+~
+~
+0
+-1 4164
+S
+#4166
+&W&O<-(&gThe Jungle Depths&O)->&w~
+&W&OThe plant growth here is all but helpful, and strange creatures seem to
+lie around every turn.  While none seem to attack, many are quite shocking
+to see regardless.&w &W&OThe thick jungle canopy above blocks the sun so
+well here that it is very hard to see.  Always good to watch your back in
+the dark...&w
+~
+~
+0
+0
+0 3
+D0
+~
+~
+0
+-1 4155
+D1
+~
+~
+0
+-1 4167
+D2
+~
+~
+0
+-1 4147
+D3
+~
+~
+0
+-1 4165
+S
+#4167
+&W&O<-(&gThe Jungle Depths&O)->&w~
+&W&OThe plant growth here is all but helpful, and strange creatures seem to
+lie around every turn.  While none seem to attack, many are quite shocking
+to see regardless.&w &W&OThe thick jungle canopy above blocks the sun so
+well here that it is very hard to see.  Always good to watch your back in
+&W&Othe dark.  There is a massive tree off to the side of the path...it
+looks ancient.&w 
+~
+~
+0
+0
+0 3
+D0
+~
+~
+0
+-1 4156
+D1
+~
+~
+0
+-1 4168
+D2
+~
+~
+0
+-1 4163
+D3
+~
+~
+0
+-1 4166
+D10
+~
+tree~
+526336
+-1 4170
+S
+#4168
+&W&O<-(&gThe Jungle Depths&O)->&w~
+&W&OThe plant growth here is all but helpful, and strange creatures seem to
+lie around every turn.  While none seem to attack, many are quite shocking
+to see regardless.&w &W&OThe thick jungle canopy above blocks the sun so
+well here that it is very hard to see.  Always good to watch your back in
+the dark...&w
+~
+~
+0
+0
+0 3
+D0
+~
+~
+0
+-1 4157
+D1
+~
+~
+0
+-1 4159
+D2
+~
+~
+0
+-1 4162
+D3
+~
+~
+0
+-1 4167
+S
+#4169
+&W-(&zBehind A Boulder&W)-&w~
+&W&zThis place seems a little safer, so long as its guest isn't careless. 
+The strange boulder seems out of place, but hopefully no one will think
+about that.  All there is to do now is be quiet and wait...&w
+~
+~
+0
+0
+0 3
+D0
+~
+~
+0
+-1 4155
+S
+#4170
+&W&w-(&OBehind A Tree&w)-&w~
+&W&OThis wide tree makes a good vantage point.  It seems to be fairly safe
+while giving a nice view of the narrow path ahead.  While rotten, this old
+tree might just take a few bullets..it certainly makes a good hiding
+spot.&w 
+~
+~
+0
+0
+0 3
+D9
+~
+~
+0
+-1 4167
+S
+#4202
+Anchor~
+~
+~
+4
+0
+0 1
+S
+#0
+
+
+#RESETS
+O 1 4103 1 4132
+M 1 4105 1 4127
+G 1 97 1
+M 1 4102 1 4126
+G 1 96 1
+M 1 4103 1 4124
+G 1 123 1
+G 1 122 1
+G 1 121 1
+G 1 120 1
+G 1 126 1
+G 1 125 1
+M 1 4104 1 4125
+G 1 70 1
+G 1 127 1
+G 1 128 1
+S
+
+
+#SHOPS
+4102; An Old Shopkeeper
+4103; A Young Shopkeeper
+4104; A Weaponsmith
+4105; A Demolitions Expert
+0
+
+
+#SPECIALS
+S
+
+
+#$

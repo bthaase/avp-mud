@@ -1,0 +1,708 @@
+#AREA   Central Alien Hive~
+
+#VERSION 4
+
+#AUTHOR Khanar~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#4404
+Anchor Mob~
+a newly created Anchor Mob~
+Some god abandoned a newly created Anchor Mob here.
+~
+~
+0
+1
+S
+1 8 8 0
+#4405
+Large Demon~
+&rA Large Demon~
+&rA Large Demon sits on a pillar of fire.
+~
+~
+4194304
+67108875
+Z
+99 8 8 0
+25 25 25 25 25 25
+1 0 0 0
+7
+7
+0 0 0 0 0 0 0
+> greet_prog 100~
+say Welcome to Hell $n!!! Tissss time to DIE!! 
+emote pokes at $n with a tounge of fire
+~
+|
+#4406
+Bubba~
+Bubba~
+Bubba is standing here gaurding his shop
+~
+~
+0
+67108875
+Z
+50 8 8 1
+15 10 17 10 15 10
+0 0 0 0
+1
+1
+0 0 0 0 0 0 0
+#4407
+Weapons dealer~
+A weapons dealer~
+A weapons dealer is standing over his supply of weapons, guarding them.
+~
+~
+0
+67108875
+Z
+50 8 8 0
+10 10 10 10 10 10
+0 0 0 0
+1
+1
+0 0 0 0 0 0 0
+#4408
+A retired marine~
+A retired marine~
+A retired marine stands here with a heavy mounted smartgun guarding his shop
+~
+~
+0
+67108875
+Z
+50 8 8 0
+10 10 10 10 10 10
+0 0 0 0
+1
+1
+0 0 0 0 0 0 0
+#4409
+Marine Captain~
+A Marine Captain~
+A marine captain is here giving updates to newcomers.
+~
+~
+4194304
+67108867
+Z
+80 8 8 0
+10 10 10 10 10 10
+0 0 0 0
+1
+1
+0 0 0 0 0 0 0
+#4410
+Predator Hunter~
+A predator hunter~
+A predator hunter stands here giving the situation at hand
+~
+~
+4194304
+67108867
+Z
+50 8 8 0
+10 10 10 10 10 10
+2 0 0 0
+4
+4
+0 0 0 0 0 0 0
+#4411
+Alien Drone~
+An alien drone~
+An alien drone stands here giving updates
+~
+~
+4194304
+67108867
+Z
+80 8 8 0
+20 10 15 10 10 10
+1 0 0 0
+2
+0
+0 0 0 0 0 0 0
+#4504
+Anchor Mob~
+a newly created Anchor Mob~
+Some god abandoned a newly created Anchor Mob here.
+~
+~
+0
+1
+S
+1 8 8 0
+#0
+
+
+#OBJECTS
+#4404
+Anchor object~
+a Anchor object~
+A Anchor object is here.~
+~
+5
+0
+0
+0 0 0 0 0 0
+1 0 0
+#4405
+Large Egg~
+A large slimey egg sits here pulsating.~
+A large slimey egg sits here pulsating.~
+~
+5
+0
+0
+0 0 0 0 0 0
+1 0 0
+#4406
+Chitin Carapace~
+Chitin Carapace~
+An alien abandoned its chitin carapace here.~
+~
+3
+50208
+9
+300 300 0 1 0 0
+5 500 40
+A
+13 10
+A
+11 20
+A
+14 10
+#4407
+Pink Furry Underwear~
+&PPink Furry Underwear~
+&PSome Pink Furry Underwear has been abandoned here.~
+~
+5
+4128
+1
+0 0 0 0 0 0
+2 0 0
+#4504
+Anchor object~
+a Anchor object~
+A Anchor object is here.~
+~
+5
+0
+0
+0 0 0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#4404
+Anchor~
+~
+~
+1073741824
+0
+0 1
+S
+#4405
+Queen's Den~
+&g This chamber has an arched cieling. Large glops off goo drip everywhere.
+In the far corner of the room, there sits a large beast from most
+children's nightmares. It is a large alien queen. She  has a tube-like
+transporter for eggs into a room to the north east. There are a few aliens
+that stand here guarding the queen with all vigilance. A couple skeletons
+of a team of marines sit  in a corner where they were dumped after being
+killed.
+~
+~
+1107296264
+0
+0 1
+D0
+~
+~
+0
+-1 4406
+D6
+~
+~
+0
+-1 4417
+S
+#4406
+Antechamber~
+&gThe corridor is fairly small. The walls are thick with a slimey goo
+substance. It drips and slides all over the place. It hangs from rusted
+girders that used to hold the tunnel ceiling in place when this used to be
+held by human miners. Now, the girders have been rusted, and gouged to
+where they look like chunks of scrap metal. Claw marks mark the floor all
+along the bottom and sides of the walls.
+~
+~
+1107296264
+0
+0 1
+D2
+~
+~
+0
+-1 4405
+D5
+~
+~
+0
+-1 4407
+S
+#4407
+Slimey Tunnel~
+&gThe corridor is fairly small. The walls are thick with a slimey goo
+substance. It drips and slides all over the place. It hangs from rusted
+girders that used to hold the tunnel ceiling in place when this used to be
+held by human miners. Now, the girders have been rusted, and gouged to
+where they look like chunks of scrap metal. Claw marks mark the floor all
+along the bottom and sides of the walls.
+~
+~
+1107296264
+0
+0 1
+D4
+~
+~
+0
+-1 4406
+D5
+~
+~
+0
+-1 4408
+S
+#4408
+Slimey Tunnel~
+&gThe corridor is fairly small. The walls are thick with a slimey goo
+substance. It drips and slides all over the place. It hangs from rusted
+girders that used to hold the tunnel ceiling in place when this used to be
+held by human miners. Now, the girders have been rusted, and gouged to
+where they look like chunks of scrap metal. Claw marks mark the floor all
+along the bottom and sides of the walls.
+~
+~
+1107296264&4
+0
+0 1
+D4
+~
+~
+0
+-1 4407
+S
+#4409
+Slimey Tunnel~
+&gThe corridor is fairly small. The walls are thick with a slimey goo
+substance. It drips and slides all over the place. It hangs from rusted
+girders that used to hold the tunnel ceiling in place when this used to be
+held by human miners. Now, the girders have been rusted, and gouged to
+where they look like chunks of scrap metal. Claw marks mark the floor all
+along the bottom and sides of the walls.
+~
+~
+1107296264
+0
+0 1
+D0
+~
+~
+0
+-1 4410
+D2
+~
+~
+0
+-1 4411
+D7
+~
+~
+0
+-1 4408
+S
+#4410
+Slimey Tunnel~
+&gThe corridor is fairly small. The walls are thick with a slimey goo
+substance. It drips and slides all over the place. It hangs from rusted
+girders that used to hold the tunnel ceiling in place when this used to be
+held by human miners. Now, the girders have been rusted, and gouged to
+where they look like chunks of scrap metal. Claw marks mark the floor all
+along the bottom and sides of the walls.
+~
+~
+1107296264
+0
+0 1
+D0
+~
+~
+0
+-1 4418
+D2
+~
+~
+0
+-1 4409
+S
+#4411
+Slimey Tunnel~
+&gThe corridor is fairly small. The walls are thick with a slimey goo
+substance. It drips and slides all over the place. It hangs from rusted
+girders that used to hold the tunnel ceiling in place when this used to be
+held by human miners. Now, the girders have been rusted, and gouged to
+where they look like chunks of scrap metal. Claw marks mark the floor all
+along the bottom and sides of the walls.
+~
+~
+1107296264
+0
+0 1
+D0
+~
+~
+0
+-1 4409
+D5
+~
+~
+0
+-1 4412
+S
+#4412
+Slimey Tunnel~
+&gThe corridor is fairly small. The walls are thick with a slimey goo
+substance. It drips and slides all over the place. It hangs from rusted
+girders that used to hold the tunnel ceiling in place when this used to be
+held by human miners. Now, the girders have been rusted, and gouged to
+where they look like chunks of scrap metal. Claw marks mark the floor all
+along the bottom and sides of the walls.
+~
+~
+1107296264
+0
+0 1
+D1
+~
+~
+0
+-1 4413
+D4
+~
+~
+0
+-1 4411
+S
+#4413
+Slimey Tunnel~
+&gThe corridor is fairly small. The walls are thick with a slimey goo
+substance. It drips and slides all over the place. It hangs from rusted
+girders that used to hold the tunnel ceiling in place when this used to be
+held by human miners. Now, the girders have been rusted, and gouged to
+where they look like chunks of scrap metal. Claw marks mark the floor all
+along the bottom and sides of the walls.
+~
+~
+1107296264
+0
+0 1
+D0
+~
+~
+0
+-1 4415
+D1
+~
+~
+0
+-1 4416
+D2
+~
+~
+0
+-1 4414
+D3
+~
+~
+0
+-1 4412
+S
+#4414
+A small alcove~
+&gThe alcove is very small. It can only admit a couple of fair sized aliens
+at a time. Goo drips from everything. There are a few items scattered
+about the floor. The alien in here sits here guarding them as if they were
+precious items.
+~
+~
+1107296264
+0
+0 1
+D0
+~
+~
+0
+-1 4413
+S
+#4415
+A small alcove~
+&gThe alcove is very small. It can only admit a couple of fair sized aliens
+at a time. Goo drips from everything. There are a few items scattered
+about the floor. The alien in here sits here guarding them as if they were
+precious items.
+~
+~
+1107296264
+0
+0 1
+D2
+~
+~
+0
+-1 4413
+S
+#4416
+A small alcove~
+&gThe alcove is very small. It can only admit a couple of fair sized aliens
+at a time. Goo drips from everything. There are a few items scattered
+about the floor. The alien in here sits here guarding them as if they were
+precious items.
+~
+~
+1107296264
+0
+0 1
+D3
+~
+~
+0
+-1 4413
+S
+#4417
+Hatching Chamber~
+&gThe chamber is oval in shape. There is goo in every orifice and hanging
+from everything possible in here. There is a tube-like sac coming from the
+south west room that is dropping eggs  all along the floor. Some of the
+eggs have started to crack, and there are some that have completely broken
+up, and its contents having walked off. There are a couple of guards
+guarding this room, watchfull for any who would try and kill the next
+generation of the bloodline.
+~
+~
+1107298312
+0
+0 1
+D9
+~
+~
+0
+-1 4405
+> speech_prog office~
+if Name($n) == Zoiloin
+mpecho &GHave a good trip, Master Zoiloin.
+mptransfer $n 7450
+mpat 7450 mpforce $n look
+else
+endif
+~
+|
+S
+#4418
+Slimey Tunnel~
+&gThe corridor is fairly small. The walls are thick with a slimey goo
+substance. It drips and slides all over the place. It hangs from rusted
+girders that used to hold the tunnel ceiling in place when this used to be
+held by human miners. Now, the girders have been rusted, and gouged to
+where they look like chunks of scrap metal. Claw marks mark the floor all
+along the bottom and sides of the walls.
+~
+~
+1107296264
+0
+0 1
+D0
+~
+~
+0
+-1 4424
+D2
+~
+~
+0
+-1 4410
+S
+#4419
+Slimey Tunnel~
+&gThe corridor is fairly small. The walls are thick with a slimey goo
+substance. It drips and slides all over the place. It hangs from rusted
+girders that used to hold the tunnel ceiling in place when this used to be
+held by human miners. Now, the girders have been rusted, and gouged to
+where they look like chunks of scrap metal. Claw marks mark the floor all
+along the bottom and sides of the walls.
+~
+~
+1107296264
+0
+0 1
+D1
+~
+~
+0
+-1 4420
+D5
+~
+~
+0
+-1 4418
+S
+#4420
+Slimey Tunnel~
+&gThe corridor is fairly small. The walls are thick with a slimey goo
+substance. It drips and slides all over the place. It hangs from rusted
+girders that used to hold the tunnel ceiling in place when this used to be
+held by human miners. Now, the girders have been rusted, and gouged to
+where they look like chunks of scrap metal. Claw marks mark the floor all
+along the bottom and sides of the walls.
+~
+~
+1107296264
+0
+0 1
+D0
+~
+~
+0
+-1 4421
+D3
+~
+~
+0
+-1 4419
+S
+#4421
+Slimey Tunnel~
+&gThe corridor is fairly small. The walls are thick with a slimey goo
+substance. It drips and slides all over the place. It hangs from rusted
+girders that used to hold the tunnel ceiling in place when this used to be
+held by human miners. Now, the girders have been rusted, and gouged to
+where they look like chunks of scrap metal. Claw marks mark the floor all
+along the bottom and sides of the walls.
+~
+~
+1107296264
+0
+0 1
+D2
+~
+~
+0
+-1 4420
+D3
+~
+~
+0
+-1 4422
+S
+#4422
+Slimey Tunnel~
+&gThe corridor is fairly small. The walls are thick with a slimey goo
+substance. It drips and slides all over the place. It hangs from rusted
+girders that used to hold the tunnel ceiling in place when this used to be
+held by human miners. Now, the girders have been rusted, and gouged to
+where they look like chunks of scrap metal. Claw marks mark the floor all
+along the bottom and sides of the walls.
+~
+~
+1107296264
+0
+0 1
+D0
+~
+~
+0
+-1 4423
+D1
+~
+~
+0
+-1 4421
+S
+#4423
+Slimey Tunnel~
+&gThe corridor is fairly small. The walls are thick with a slimey goo
+substance. It drips and slides all over the place. It hangs from rusted
+girders that used to hold the tunnel ceiling in place when this used to be
+held by human miners. Now, the girders have been rusted, and gouged to
+where they look like chunks of scrap metal. Claw marks mark the floor all
+along the bottom and sides of the walls.
+~
+~
+1107296264
+0
+0 1
+D2
+~
+~
+0
+-1 4422
+D4
+~
+~
+0
+-1 4424
+S
+#4424
+Slimey Tunnel~
+&gThe corridor is fairly small. The walls are thick with a slimey goo
+substance. It drips and slides all over the place. It hangs from rusted
+girders that used to hold the tunnel ceiling in place when this used to be
+held by human miners. Now, the girders have been rusted, and gouged to
+where they look like chunks of scrap metal. Claw marks mark the floor all
+along the bottom and sides of the walls.
+~
+~
+1107296264
+0
+0 1
+D2
+~
+~
+0
+-1 4418
+S
+#4504
+Anchor~
+~
+~
+1073741824
+0
+0 1
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+S
+
+
+#$

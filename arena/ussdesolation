@@ -1,0 +1,14 @@
+#ARENA
+Name         USS Desolation~
+Desc         ~
+Filename     ussdesolation~
+Firstroom    3587
+Lastroom     3686
+Timer        40
+Maxsupport   0 5
+Maxsupport   1 5
+Minp         0
+Maxp         30
+End
+
+#END

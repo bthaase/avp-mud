@@ -1,0 +1,14 @@
+#ARENA
+Name         LV-378~
+Desc         The Company has found and caught a live specimen of a queen...After 2 weeks with no contact from the LV, the Company is beggining to get worried...~
+Filename     lv378~
+Firstroom    4203
+Lastroom     4403
+Timer        40
+Maxsupport   0 5
+Maxsupport   1 5
+Minp         10
+Maxp         30
+End
+
+#END

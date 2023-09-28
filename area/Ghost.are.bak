@@ -1,0 +1,2741 @@
+#AREA   USCM Central Compound~
+
+#VERSION 4
+
+#AUTHOR Ghost~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#664
+marine guard security~
+A Marine~
+A Hulking Marine stands here, securing the compound.
+~
+&wThis &RU&WS&BC&RM&WC&w MP looks like a regular GI, tall and strong. He is
+wearing city camo BDUs, shiny black combat boots, a M10 helmet, and M3
+body armor. On the right arm of his BDU shirt, there is an MP band to show
+that he is military police. He is wielding a M41A pulse rifle like he will
+use it, and you can count on it!
+~
+0
+3
+Z
+50 8 8 1
+20 15 15 10 20 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> all_greet_prog 100~
+setmode full
+~
+> fight_prog 30~
+setmode full
+~
+|
+#665
+chef man serve~
+The chef~
+The resident chef is standing here, serving food.
+~
+~
+0
+3
+S
+50 8 8 1
+#666
+riggs quartermaster~
+Riggs~
+Quartermaster Riggs is standing here.
+~
+~
+0
+3
+S
+50 8 8 1
+> all_greet_prog 100~
+nod
+say Looking for some weapons?
+~
+|
+#667
+gantill quartermaster~
+Gantill~
+Quartermaster Gantill is standing here
+~
+~
+0
+3
+S
+50 8 8 1
+> all_greet_prog 100~
+smile
+say Need some personal protection, eh?
+wink
+~
+|
+#668
+joseph quartermaster~
+Joseph~
+Quartermaster Joseph is standing here
+~
+~
+0
+3
+S
+50 8 8 1
+> all_greet_prog 100~
+,hefts a bulky-looking M56 smartgun. 
+say Need some serious firepower?
+~
+|
+#669
+johnson quartermaster~
+Johnson~
+Quartermaster Johnson is standing here
+~
+~
+0
+3
+S
+50 8 8 1
+> all_greet_prog 100~
+nod
+say Good morning, sir. What can I do for you?
+~
+|
+#670
+guard support gunner~
+A Support Gunner~
+A Support Gunner stands here, protecting his fellow marines. 
+~
+&wThis &RU&WS&BC&RM&WC&w MP looks like a regular GI, tall and strong. He is
+wearing city camo BDUs, shiny black combat boots, a M10 helmet, and M3
+body armor. On the right arm of his BDU shirt, there is an MP band to show
+that he is military police. He is wielding a M41A pulse rifle like he will
+use it, and you can count on it!
+~
+0
+3
+Z
+50 8 8 1
+20 15 15 10 20 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> all_greet_prog 100~
+setmode full
+~
+> rand_prog 20~
+setmode full
+~
+|
+#671
+USCM commander~
+USCM Commander~
+A USCM Commander stands in the corner of his office.
+~
+~
+0
+3
+S
+1 8 8 1
+#672
+doctor man hillocks~
+Doctor Hillocks~
+Doctor Hillocks stands here, dressed in a lab coat. 
+~
+~
+0
+3
+S
+1 8 8 1
+#673
+sergeant thomas marks~
+Sergeant Marks~
+Sergeant Thomas Marks stands here, watching the entrance. 
+~
+&wThis &RU&WS&BC&RM&WC&w MP looks like a regular GI, tall and strong. He is
+wearing city camo BDUs, shiny black combat boots, a M10 helmet, and M3
+body armor. On the right arm of his BDU shirt, there is an MP band to show
+that he is military police. He is wielding a M41A pulse rifle like he will
+use it, and you can count on it!
+~
+0
+3
+Z
+50 8 8 1
+20 15 15 10 20 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> all_greet_prog 100~
+nod
+~
+|
+#0
+
+
+#OBJECTS
+#664
+ration food~
+Packaged Ration~
+A small packaged ration was left lying here.~
+~
+10
+32
+1
+10 25 0 0 0 0
+1 10 1
+#665
+combat knife~
+Combat Knife~
+A combat knife was left here.~
+~
+2
+36896
+8193
+1 20 30 2 3 3
+1 15 1
+#666
+helmet combat m10~
+M10 Combat Helmet~
+A M10 Combat Helmet was left lying here.~
+~
+3
+36896
+17
+160 160 0 1 0 0
+2 120 12
+A
+13 10
+A
+14 5
+#667
+vest titanium plated m3~
+M3 Titanium-plate Armor~
+A M3 Titanium-plate armor vest was left lying here.~
+~
+3
+36896
+9
+300 300 0 1 0 0
+6 400 40
+A
+13 20
+A
+14 10
+A
+12 -10
+#668
+boots combat altama~
+Altama Combat Boots~
+A pair of altama combat boots was left here.~
+~
+3
+36896
+65
+200 200 0 1 0 0
+2 140 14
+A
+11 10
+#669
+tactical harness~
+TAC-Harness~
+A tactical weapons harness is lying here.~
+~
+6
+4128
+1025
+30 0 0 10 9 0
+1 75 7
+#670
+belt combat utility wilson~
+Wilson combat utility belt~
+A Wilson combat utility belt was left lying here.~
+~
+6
+36896
+2049
+8 0 0 10 3 0
+1 100 10
+#671
+flashlight standard issue~
+Standard-Issue Flashlight~
+A Standard-Issue USCM Flashlight was left lying here.~
+~
+1
+4128
+16385
+0 0 30 0 0 0
+1 25 2
+#672
+shelf metal tall~
+a tall metal shelf~
+A Tall metal shelf is leaning against the far wall~
+~
+6
+0
+0
+100 0 0 0 30 0
+1 0 0
+#673
+m56 smartgun~
+M56 Smartgun~
+Somebody left an M56 Smartgun lying here.~
+~
+2
+497696
+8193
+5 3 2 4 60 4
+10 3000 250
+E
+m56 smartgun~
+The M56 is a quad support weapon used by 'Smart gunners' in a platoon. The
+weapon uses a built in smart-targeting system, considing of several
+targeting processors and tbe gyro-balancing servo arm. It supports both 
+single, four-round burst and a fully automatic fire of 60 rounds. 
+~
+#674
+m250 ammo drum~
+M250 Ammunition Drum~
+Somebody left a M250 Ammunition drum here.~
+~
+17
+4128
+1
+2 8 750 3 0 0
+1 125 7
+#675
+m50 hand grenade~
+M50 Hand Grenade~
+Some moron left a M50 Hand Grenade sitting here.~
+~
+18
+4128
+16385
+200 300 1 0 0 0
+2 50 5
+#676
+shrapnel grenade~
+Shrapnel Grenade~
+Some moron left a Shrapnel Grenade sitting here.~
+~
+18
+4128
+16385
+175 225 1 3 0 0
+3 70 7
+#677
+individual marine pack imp~
+Individual Marine Pack~
+Somebody left a USCM-IMP lying here.~
+~
+6
+36896
+1025
+40 0 0 10 20 0
+1 300 30
+#678
+vp70 sidearm~
+VP70 Sidearm~
+Somebody left an Officer's VP70 Sidearm lying here.~
+~
+2
+626720
+8193
+2 4 1 3 0 3
+2 400 23
+E
+vp70 sidearm~
+A popular sidearm with officers, pilots, and a few infantry men within the
+USCM. It accepts a slightly larger 9mm clip than its M4A3 counterpart, but
+deals less damage per hit. Supports a 3-round burst mode.
+~
+#679
+9mm clip~
+9mm Clip~
+A 9mm clip for a VP70 sidearm was left lying here.~
+~
+17
+4128
+1
+2 15 18 4 0 0
+1 22 2
+#680
+m42a scope rifle~
+M42A Scope Rifle~
+A M42A Scope rifle was left lying here.~
+~
+2
+563232
+8193
+3 5 6 0 0 6
+6 2700 270
+E
+m42a scope rifle~
+Another of the Company's interesting designs, the scope rifle fires
+extremely accurate AP rounds from a huge range. Optional Nightvision
+upgrade for dark areas, and a laser-sight for increased accuracy. Only
+supports single-fire mode, but deals extreme damage. Also accepts any
+conventional M42-Series ammo, including the M42B FMJ and M42A AP.
+~
+A
+6 1
+#681
+m42a ap clip~
+M42A AP Clip~
+Somebody seems to have lost a M24A AP Clip here.~
+~
+17
+4128
+1
+3 200 5 5 0 0
+1 70 7
+#682
+uscmc field radio~
+USCMC Field Radio~
+Somebody seems to have lost a USCMC Field radio.~
+~
+19
+36896
+16385
+0 0 0 0 0 0
+2 100 10
+#683
+painkillers pills~
+Painkillers~
+A pile of pills lie here on the floor.~
+~
+10
+4128
+1
+30 10 0 0 0 0
+1 40 4
+#684
+m25 shotgun~
+M25 Shotgun~
+Some fool ditched a M25 Shotgun here.~
+~
+2
+561184
+8193
+4 6 1 0 0 5
+6 1800 180
+#685
+buckshot box~
+Box of Buckshot~
+Somebody dropped a box of buckshot here.~
+~
+17
+4128
+1
+3 180 6 6 7 0
+1 20 2
+#686
+slugshot box~
+Box of Slugshot~
+Somebody dropped a box of slugshot here.~
+~
+17
+4128
+1
+2 240 6 6 0 0
+1 40 4
+#687
+assault shotgun~
+Assault Shotgun~
+Some fool ditched an Assault Shotgun here.~
+~
+2
+528416
+8193
+4 7 1 0 0 4
+5 400 120
+#688
+uscmc motion tracker~
+USCMC Motion Tracker~
+Some damn fool ditched his USCMC-Issue Motion Tracker here.~
+~
+21
+36896
+16385
+0 0 0 0 0 0
+4 500 80
+#689
+beretta defender pistol~
+Beretta Defender~
+Some idiot ditched a nice Beretta Defender here.~
+~
+2
+528416
+8193
+2 9 2 0 0 3
+2 100 10
+E
+beretta defender pistol~
+The Beretta Defender is a 'next generation' weapon designed by the same
+company. Its a rebuild of the standard Beretta model, and only slightly
+resembles its earlier counterparts. It holds an 11-Round Defender FMJ
+Clip, and supports only single-shot mode. Its medium stopping power makes
+it good for self-defense in many situations. 
+~
+#690
+Defender FMJ Clip~
+Defender FMJ Clip~
+Somebody ditched a Beretta Defender FMJ clip here.~
+~
+17
+4128
+1
+2 40 11 9 0 0
+1 15 1
+#691
+M42B Sniper Rifle~
+M42B Sniper Rifle~
+A M42B Sniper rifle was left lying here.~
+~
+2
+530464
+8193
+3 11 5 0 0 6
+5 700 100
+E
+M42B Sniper Rifle~
+A smaller, more commerical version of the M42A Scope Rifle, the M42B Sniper
+rifle works exactly like its bigger brother, except for a slightly shorter
+range of fire, and smaller clip caliber. It supports no additional
+attachments, and its bolt-action allows only single-fire mode.
+~
+#692
+m42b fmj clip~
+M42B FMJ Clip~
+Some idiot left a M42B FMJ clip lying here.~
+~
+17
+4128
+1
+2 150 5 11 5 0
+1 50 5
+#693
+uscmc binoculars~
+USCMC Binoculars~
+Somebody lost a pair of USCMC Binoculars here.~
+~
+23
+36896
+131073
+2 0 0 0 0 0
+2 250 25
+#694
+uscmc field gps~
+USCMC Field GPS~
+Some moron dumped a USCMC Field GPS device here.~
+~
+24
+36896
+16385
+0 0 0 0 0 0
+2 300 30
+#695
+vehicle bay key~
+-Off Limits-~
+Program Key - Used for unlocking vehicle bay. ~
+~
+9
+0
+1
+999 0 0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#664
+USCM Central Compound [Lobby]~
+Welcome to the USCM Central Compound, the brave home of the United States
+Colonial Marines. This base can house hundreds of marines, and provides
+them with a massive selection of weapons for use in the field. Take a look
+around, stock up on gear, grab some buddies, and go paste some aliens!
+~
+&gOnce the proud USCM Central Compound, its been reduced to nothing more
+than an alien nesting ground. The walls are covered from floor to ceiling
+in a sticky goo-like resin. Once the home of hundreds of marines, it now
+houses thousands of ghastly alien horrors, from drones to facehuggers. 
+~
+8
+1
+0 1
+D0
+~
+~
+369098752
+-1 665
+D1
+~
+~
+0
+-1 667
+S
+#665
+Access Corridor 1B [Main Hall]~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 668
+D1
+~
+~
+0
+-1 666
+D2
+~
+~
+369098752
+-1 664
+D3
+~
+~
+3
+-1 697
+S
+#666
+USCM Security Checkpoint A~
+One of the many security checkpoints throughout the USCM Central Compound.
+A sterile white room with smooth, seamless walls. Theres a single door
+that leads out to the main lobby, and an exit to the west that leads into
+the rest of the USCM central compound. 
+~
+&gPreviously one of the USCM Central Compounds many security checkpoints,
+this chamber is now almost completely unreconizable. The walls are coated
+from floor to ceiling with a gooish substance. Its extremely warm in
+here, and strange sounds can be heard all around you. 
+~
+8
+1
+0 1
+D2
+~
+~
+3
+-1 667
+D3
+~
+~
+0
+-1 665
+S
+#667
+USCM Security Checkpoint A~
+One of the many security checkpoints throughout the USCM Central Compound.
+A sterile white room with smooth, seamless walls. Theres a single guarded
+door that leads into the base, and the exit to the lobby. If your human,
+just continue. Otherwise, you should probably take cover. 
+~
+&gPreviously one of the USCM Central Compounds many security checkpoints,
+this chamber is now almost completely unreconizable. The walls are coated
+from floor to ceiling with a gooish substance. Its extremely warm in
+here, and strange sounds can be heard all around you. 
+~
+8
+1
+0 1
+D0
+~
+~
+3
+-1 666
+D3
+~
+~
+0
+-1 664
+S
+#668
+Access Corridor 1B [Main Hall]~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 669
+D1
+~
+~
+369098752
+-1 679
+D2
+~
+~
+0
+-1 665
+D3
+~
+~
+369098752
+-1 686
+S
+#669
+Inside the USCM Central Compound~
+~
+~
+20971528
+0
+0 1
+D0
+~
+~
+0
+-1 682
+D1
+~
+~
+0
+-1 673
+D2
+~
+~
+0
+-1 668
+D3
+~
+~
+0
+-1 670
+S
+#670
+Access Corridor 2B [Mess Hall]~
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 669
+D3
+~
+~
+0
+-1 671
+S
+#671
+Access Corridor 2B [Mess Hall]~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 680
+D1
+~
+~
+0
+-1 670
+D2
+~
+~
+0
+-1 681
+D3
+~
+~
+3
+-1 672
+S
+#672
+Inside the USCM Compound Mess Hall~
+The USCM Mess hall is a crowed place, a tightly packed room filled with
+sweating marines and officers. The odor is almost overpowering at times,
+but not nearly as bad as the food they serve. Ironicly enough, the 
+tables are spotless, and the floor has a glorious shine to it. These 
+people take their work seriously. 
+~
+&gAt one time, this room resembled the USCM Mess hall. A crowed place,
+tightly packed with Marines. Now its been converted into another chunk of
+the Alien hive, and goo-filled room with the most ungodly things dripping
+from the walls. What a horrible place.
+~
+33554440
+1
+0 1
+D1
+~
+~
+3
+-1 671
+S
+#673
+Access Corridor 2A [Barracks]~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 678
+D1
+~
+~
+0
+-1 674
+D2
+~
+~
+0
+-1 679
+D3
+~
+~
+0
+-1 669
+S
+#674
+Access Corridor 2A [Barracks]~
+~
+~
+4194312
+0
+0 1
+D0
+~
+~
+0
+-1 676
+D1
+~
+~
+0
+-1 675
+D2
+~
+~
+0
+-1 677
+D3
+~
+~
+0
+-1 673
+S
+#675
+USCM Armory Office (Light Arms)~
+The Armory Office is a moderately sized room, filled with lockers and
+shelves pilled high with every piece of hardware ever concieved. The 
+walls are painted the generic USCM white used throughout the base. Make
+sure you gear up before heading out on any missions. 
+~
+&gThis appears to, at one time, have been one of the numerous armory
+offices in charge of gearing up Marines. The walls are now covered in a
+dripping goo, sticky to the touch and disgusting to the eye. Its dark and
+murky in here, and somewhere in the distance you can hear hissing. 
+~
+8
+0
+0 1
+D3
+~
+~
+0
+-1 674
+S
+#676
+USCM Armory Office (Body Armor)~
+The Armory Office is a moderately sized room, filled with lockers and
+shelves pilled high with every piece of hardware ever concieved. The 
+walls are painted the generic USCM white used throughout the base. Make
+sure you gear up before heading out on any missions. 
+~
+&gThis appears to, at one time, have been one of the numerous armory
+offices in charge of gearing up Marines. The walls are now covered in a
+dripping goo, sticky to the touch and disgusting to the eye. Its dark and
+murky in here, and somewhere in the distance you can hear hissing. 
+~
+8
+0
+0 1
+D2
+~
+~
+0
+-1 674
+S
+#677
+USCM Armory Office (Heavy Arms)~
+The Armory Office is a moderately sized room, filled with lockers and
+shelves pilled high with every piece of hardware ever concieved. The 
+walls are painted the generic USCM white used throughout the base. Make
+sure you gear up before heading out on any missions. 
+~
+&gThis appears to, at one time, have been one of the numerous armory
+offices in charge of gearing up Marines. The walls are now covered in a
+dripping goo, sticky to the touch and disgusting to the eye. Its dark and
+murky in here, and somewhere in the distance you can hear hissing. 
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 674
+S
+#678
+USCM Armory Office (General Equipment)~
+The Armory Office is a moderately sized room, filled with lockers and
+shelves pilled high with every piece of hardware ever concieved. The 
+walls are painted the generic USCM white used throughout the base. Make
+sure you gear up before heading out on any missions. 
+~
+&gThis appears to, at one time, have been one of the numerous armory
+offices in charge of gearing up Marines. The walls are now covered in a
+dripping goo, sticky to the touch and disgusting to the eye. Its dark and
+murky in here, and somewhere in the distance you can hear hissing. 
+~
+8
+0
+0 1
+D2
+~
+~
+0
+-1 673
+D3
+~
+~
+369098752
+-1 682
+S
+#679
+USCM Barracks Bunk Room~
+~
+~
+2056
+0
+0 1
+D0
+~
+~
+0
+-1 673
+D3
+~
+~
+369098752
+-1 668
+S
+#680
+USCM Off-Duty Lounge~
+The off-duty lounge gives the Marines somewhere to relax when their not out
+splattering bugs. Theres tables to sitting around with buds, and recliners
+for those looking to lounge around. The walls are a tad darker than the
+generic brillant white paintjob the USCM staff usually employs. 
+~
+&gThis appears to have been the off-duty lounge at one time. Its difficult
+to tell though. The walls are covered in a goo-like substance, which
+almost entirely blots out the off-white walls of the lounge. You can
+barely make out the exits from the room. Man, this is disgusting.
+~
+4194312
+1
+0 1
+D1
+~
+~
+0
+-1 685
+D2
+~
+~
+0
+-1 671
+S
+#681
+USCM Off-Duty Lounge~
+The off-duty lounge gives the Marines somewhere to relax when their not out
+splattering bugs. Theres tables to sitting around with buds, and recliners
+for those looking to lounge around. The walls are a tad darker than the
+generic brillant white paintjob the USCM staff usually employs. 
+~
+&gThis appears to have been the off-duty lounge at one time. Its difficult
+to tell though. The walls are covered in a goo-like substance, which
+almost entirely blots out the off-white walls of the lounge. You can
+barely make out the exits from the room. Man, this is disgusting. 
+~
+4194312
+1
+0 1
+D0
+~
+~
+0
+-1 671
+D1
+~
+~
+0
+-1 686
+S
+#682
+Access Corridor 1A [Main Hall]~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 683
+D1
+~
+~
+369098752
+-1 678
+D2
+~
+~
+0
+-1 669
+D3
+~
+~
+369098752
+-1 685
+S
+#683
+Access Corridor 1A [Main Hall]~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+3
+-1 684
+D1
+~
+~
+0
+-1 728
+D2
+~
+~
+0
+-1 682
+D3
+~
+~
+0
+-1 727
+S
+#684
+USCM Access Stairwell [Level B]~
+~
+~
+8
+0
+0 1
+D2
+~
+~
+3
+-1 683
+D4
+~
+~
+0
+-1 695
+D5
+~
+~
+0
+-1 687
+S
+#685
+USCM Recreation Room~
+The Recreation room provides even more entertainment for the off-duty
+marine. Shelves full of books line a far wall, and pool tables fill the
+center of the room. A huge entertainment system occupies one entire wall.
+A single barred window provides a view into one of the Access Corridors.
+~
+~
+8
+0
+0 1
+D1
+~
+~
+369098752
+-1 682
+D3
+~
+~
+0
+-1 680
+S
+#686
+USCM Recreation Room~
+The Recreation room provides even more entertainment for the off-duty
+marine. Shelves full of books line a far wall, and pool tables fill the
+center of the room. A huge entertainment system occupies one entire wall.
+A single barred window provides a view into one of the Access Corridors.
+~
+~
+8
+0
+0 1
+D1
+~
+~
+369098752
+-1 668
+D3
+~
+~
+0
+-1 681
+S
+#687
+USCM Access Stairwell [Level C]~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+3
+-1 690
+D2
+~
+~
+3&1
+-1 737
+D4
+~
+~
+0
+-1 684
+D5
+~
+~
+0
+-1 688
+S
+#688
+USCM Access Stairwell [Level D]~
+~
+~
+8
+0
+0 1
+D2
+~
+~
+134217735
+15243 689
+D4
+~
+~
+0
+-1 687
+S
+#689
+USCM Sewer Access Point~
+~
+~
+2228224
+0
+0 1
+D0
+~
+~
+134217735
+15243 688
+S
+#690
+USCM Primary Maintance Corridor~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 691
+D2
+~
+~
+3
+-1 687
+S
+#691
+USCM Primary Maintance Corridor~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+3
+-1 692
+D1
+~
+~
+134217731
+60798 693
+D2
+~
+~
+0
+-1 690
+D3
+~
+~
+3
+-1 694
+S
+#692
+USCM Central Furnance System~
+The central furnace system provides heating and climate control for the
+entire base. A network of vents run off into the walls and floor, creating
+a massive network of passages throughout the building. One could likely
+access anywhere if they could get in the vents. 
+~
+&gThe room is a shadow of its former self. The walls and cealing are
+covered in a greenish, snot-like goo that drips down to the floor. The
+interweaving series of vents have been ripped and torn open to gain access
+to the ventilation passages, which lace the buildings infrastructure.
+~
+4194312
+1
+0 1
+D2
+~
+~
+3
+-1 691
+S
+#693
+USCM Air Filtration System~
+This room houses the Primary Air Filtration system. It provides air
+circulation for the entire base. A network of vents run off into the walls
+and floor, creating a massive network of passages throughout the building.
+One could likely access anywhere if they could get in the vents. 
+~
+&gThe room is a shadow of its former self. The walls and cealing are
+covered in a greenish, snot-like goo that drips down to the floor. The
+interweaving series of vents have been ripped and torn open to gain access
+to the ventilation passages, which lace the buildings infrastructure.
+~
+4194312
+0
+0 1
+D3
+~
+~
+134217731
+60798 691
+S
+#694
+USCM Auxiliary Filtration System~
+This room houses the Auxiliary Air Filtration system, the backup for the
+Primary Air Filtration system. A network of vents run off into the walls
+and floor, creating a massive network of passages throughout the building.
+One could likely access anywhere if they could get in those vents. 
+~
+&gThe room is a shadow of its former self. The walls and cealing are
+covered in a greenish, snot-like goo that drips down to the floor. The
+interweaving series of vents have been ripped and torn open to gain access
+to the ventilation passages, which lace the buildings infrastructure. 
+~
+4194312
+0
+0 1
+D1
+~
+~
+3
+-1 691
+S
+#695
+USCM Access Stairwell [Level A]~
+~
+~
+8
+0
+0 1
+D2
+~
+~
+0
+-1 696
+D4
+~
+~
+0
+-1 717
+D5
+~
+~
+0
+-1 684
+S
+#696
+USCM Security Lobby~
+~
+~
+4194312
+0
+0 1
+D0
+~
+~
+0
+-1 695
+D2
+~
+~
+0
+-1 698
+S
+#697
+USCM Security Weapons Locker~
+~
+~
+4194312
+0
+0 1
+D1
+~
+~
+3
+-1 665
+S
+#698
+USCM Security Corridor~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 696
+D1
+~
+~
+0
+-1 700
+D2
+~
+~
+369098752
+-1 703
+D3
+~
+~
+0
+-1 699
+S
+#699
+USCM Security Corridor~
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 698
+D2
+~
+~
+3
+-1 701
+S
+#700
+USCM Security Corridor~
+~
+~
+8
+0
+0 1
+D2
+~
+~
+3
+-1 702
+D3
+~
+~
+0
+-1 698
+S
+#701
+USCM Security Corridor~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+3
+-1 699
+D1
+~
+~
+0
+-1 703
+S
+#702
+USCM Security Corridor~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+3
+-1 700
+D3
+~
+~
+0
+-1 703
+S
+#703
+USCM Security Checkpoint~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+369098752
+-1 698
+D1
+~
+~
+0
+-1 702
+D2
+~
+~
+0
+-1 704
+D3
+~
+~
+0
+-1 701
+S
+#704
+USCM Security Corridor~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 703
+D2
+~
+~
+3
+-1 705
+S
+#705
+USCM Command Corridor~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+3
+-1 704
+D2
+~
+~
+0
+-1 706
+S
+#706
+USCM Command Corridor~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 705
+D1
+~
+~
+3
+-1 708
+D2
+~
+~
+369098752
+-1 707
+D3
+~
+~
+3
+-1 709
+S
+#707
+USCM Security Checkpoint~
+~
+~
+4194312
+0
+0 1
+D0
+~
+~
+369098752
+-1 706
+D2
+~
+~
+7
+-1 712
+D3
+~
+~
+3
+-1 786
+S
+#708
+USCM Officers Corridor~
+~
+~
+8
+0
+0 1
+D2
+~
+~
+0
+-1 710
+D3
+~
+~
+3
+-1 706
+S
+#709
+USCM Officers Corridor~
+~
+~
+8
+0
+0 1
+D1
+~
+~
+3
+-1 706
+D2
+~
+~
+0
+-1 711
+S
+#710
+USCM Officers Corridor~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 708
+D1
+~
+~
+3
+-1 714
+D2
+~
+~
+3
+-1 713
+D3
+~
+~
+0
+-1 712
+S
+#711
+USCM Officers Corridor~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 709
+D2
+~
+~
+3
+-1 715
+D3
+~
+~
+3
+-1 716
+S
+#712
+USCM Security Station Entrance~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+7
+-1 707
+D1
+~
+~
+0
+-1 710
+S
+#713
+USCM Officer's Chambers~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+3
+-1 710
+S
+#714
+USCM Officer's Chambers~
+~
+~
+8
+0
+0 1
+D3
+~
+~
+3
+-1 710
+S
+#715
+USCM Officer's Chambers~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+3
+-1 711
+S
+#716
+USCM Officer's Chambers~
+~
+~
+8
+0
+0 1
+D1
+~
+~
+3
+-1 711
+S
+#717
+USCM Access Stairwell [Rooftop]~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+3&1
+-1 718
+D2
+~
+~
+301989888
+-1 722
+D5
+~
+~
+0
+-1 695
+S
+#718
+USCM Headquarters Rooftop~
+~
+~
+2097152
+0
+0 1
+D1
+~
+~
+0
+-1 719
+D2
+~
+~
+3&1
+-1 717
+D3
+~
+~
+0
+-1 725
+S
+#719
+USCM Headquarters Rooftop~
+~
+~
+2097152
+0
+0 1
+D2
+~
+~
+0
+-1 720
+D3
+~
+~
+0
+-1 718
+S
+#720
+USCM Headquarters Rooftop~
+~
+~
+2097152
+0
+0 1
+D0
+~
+~
+0
+-1 719
+D2
+~
+~
+0
+-1 721
+S
+#721
+USCM Headquarters Rooftop~
+~
+~
+2097152
+0
+0 1
+D0
+~
+~
+0
+-1 720
+D3
+~
+~
+0
+-1 722
+S
+#722
+USCM Headquarters Rooftop~
+~
+~
+2097152
+0
+0 1
+D0
+~
+~
+301989888
+-1 717
+D1
+~
+~
+0
+-1 721
+D2
+~
+~
+0
+-1 726
+D3
+~
+~
+0
+-1 723
+S
+#723
+USCM Headquarters Rooftop~
+~
+~
+2097152
+0
+0 1
+D0
+~
+~
+0
+-1 724
+D1
+~
+~
+0
+-1 722
+S
+#724
+USCM Headquarters Rooftop~
+~
+~
+2097152
+0
+0 1
+D0
+~
+~
+0
+-1 725
+D2
+~
+~
+0
+-1 723
+S
+#725
+USCM Headquarters Rooftop~
+~
+~
+2097152
+0
+0 1
+D1
+~
+~
+0
+-1 718
+D2
+~
+~
+0
+-1 724
+S
+#726
+USCM Ventilation Access~
+~
+~
+6291456
+0
+0 1
+D0
+~
+~
+0
+-1 722
+S
+#727
+Access Corridor 1C [Medical]~
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 683
+D3
+~
+~
+0
+-1 729
+S
+#728
+Access Corridor 1A [Main Hall]~
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 731
+D3
+~
+~
+0
+-1 683
+S
+#729
+Access Corridor 1C [Medical]~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+3&1
+-1 736
+D1
+~
+~
+0
+-1 727
+D3
+~
+~
+1
+-1 730
+S
+#730
+USCM Medical Center~
+~
+~
+8
+0
+0 1
+D1
+~
+~
+1
+-1 729
+S
+#731
+Access Corridor 1A [Main Hall]~
+~
+~
+8
+0
+0 1
+D1
+~
+~
+1
+-1 732
+D3
+~
+~
+0
+-1 728
+S
+#732
+USCM Access Stairwell [Level B]~
+~
+~
+8
+0
+0 1
+D3
+~
+~
+1
+-1 731
+D4
+~
+~
+0
+-1 733
+S
+#733
+USCM Access Stairwell [Level A]~
+~
+~
+4194312
+0
+0 1
+D4
+~
+~
+0
+-1 734
+D5
+~
+~
+0
+-1 732
+S
+#734
+USCM Access Stairwell [Rooftop]~
+~
+~
+8
+0
+0 1
+D1
+~
+~
+3
+-1 735
+D5
+~
+~
+0
+-1 733
+S
+#735
+USCM Primary Landing Platform~
+~
+~
+48
+0
+0 1
+D3
+~
+~
+3
+-1 734
+S
+#736
+USCM Medical Ward~
+~
+~
+8
+0
+0 1
+D2
+~
+~
+3&1
+-1 729
+S
+#737
+Access Corridor 3A~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+3&1
+-1 687
+D1
+~
+~
+134217735
+15243 740
+D2
+~
+~
+0
+-1 738
+D3
+~
+~
+301989888
+-1 742
+S
+#738
+Access Corridor 3A~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 737
+D1
+~
+~
+301989888
+-1 741
+D2
+~
+~
+3&1
+-1 739
+D3
+~
+~
+134217735
+15243 743
+S
+#739
+Access Corridor 3A~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+3&1
+-1 738
+D2
+~
+~
+0
+-1 744
+S
+#740
+USCM Security Checkpoint B~
+~
+~
+8
+0
+0 1
+D2
+~
+~
+0
+-1 741
+D3
+~
+~
+134217735
+15243 737
+S
+#741
+USCM Security Checkpoint B~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 740
+D3
+~
+~
+301989888
+-1 738
+S
+#742
+Security Checkpoint B~
+~
+~
+8
+0
+0 1
+D1
+~
+~
+301989888
+-1 737
+D2
+~
+~
+0
+-1 743
+S
+#743
+Security Checkpoint B~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 742
+D1
+~
+~
+134217735
+15243 738
+S
+#744
+USCM Vehicle Garage~
+~
+~
+72
+0
+0 1
+D0
+~
+~
+0
+-1 739
+D1
+~
+~
+0
+-1 745
+D2
+~
+~
+0
+-1 748
+D3
+~
+~
+0
+-1 746
+S
+#745
+USCM Vehicle Garage~
+~
+~
+72
+0
+0 1
+D2
+~
+~
+0
+-1 747
+D3
+~
+~
+0
+-1 744
+S
+#746
+USCM Vehicle Garage~
+~
+~
+72
+0
+0 1
+D1
+~
+~
+0
+-1 744
+D2
+~
+~
+0
+-1 749
+S
+#747
+USCM Vehicle Garage~
+~
+~
+72
+0
+0 1
+D0
+~
+~
+0
+-1 745
+D3
+~
+~
+0
+-1 748
+S
+#748
+USCM Vehicle Garage~
+~
+~
+72
+0
+0 1
+D0
+~
+~
+0
+-1 744
+D1
+~
+~
+0
+-1 747
+D2
+~
+~
+536870919&1
+999 750
+D3
+~
+~
+0
+-1 749
+> speech_prog gates~
+mpat 764 get key
+if ovnuminv(695) >= 1
+mpat 763 drop key
+mpat 748 mpecho &w&R[ALERT]: Vehicle Bay Gates will open in 5 seconds.&G
+mpat 750 mpecho &w&R[ALERT]: Vehicle Bay Gates will open in 5 seconds.&G
+mpsleep 20
+mpat 763 get key
+unlock s
+open s
+mpat 763 drop key
+mpat 748 mpecho &w&R[ALERT]: Vehicle Bay Gates will shut in 10 seconds.&G
+mpat 750 mpecho &w&R[ALERT]: Vehicle Bay Gates will shut in 10 seconds.&G
+mpsleep 40 
+mpat 763 get key
+close s
+lock s
+mpat 748 mpecho &w&R[ALERT]: Vehicle Bay Gates are now closed.&G 
+mpat 750 mpecho &w&R[ALERT]: Vehicle Bay Gates are now closed.&G 
+mpat 764 drop key
+endif
+~
+|
+S
+#749
+USCM Vehicle Garage~
+~
+~
+72
+0
+0 1
+D0
+~
+~
+0
+-1 746
+D1
+~
+~
+0
+-1 748
+S
+#750
+USCM Vehicle Garage Entrance~
+~
+~
+2097152
+0
+0 1
+D0
+~
+~
+536870919&1
+999 748
+D2
+~
+~
+0
+-1 751
+> speech_prog gates~
+mpat 764 get key
+if ovnuminv(695) >= 1
+mpat 763 drop key
+mpat 748 mpecho &w&R[ALERT]: Vehicle Bay Gates will open in 5 seconds.&G
+mpat 750 mpecho &w&R[ALERT]: Vehicle Bay Gates will open in 5 seconds.&G
+mpsleep 20
+mpat 763 get key
+unlock n
+open n
+mpat 763 drop key
+mpat 748 mpecho &w&R[ALERT]: Vehicle Bay Gates will shut in 10 seconds.&G
+mpat 750 mpecho &w&R[ALERT]: Vehicle Bay Gates will shut in 10 seconds.&G
+mpsleep 40 
+mpat 763 get key
+close n
+lock n
+mpat 748 mpecho &w&R[ALERT]: Vehicle Bay Gates are now closed.&G 
+mpat 750 mpecho &w&R[ALERT]: Vehicle Bay Gates are now closed.&G 
+mpat 764 drop key
+endif
+~
+|
+S
+#751
+USCM Vehicle Ramp~
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 750
+D2
+~
+~
+0
+-1 752
+S
+#752
+USCM Vehicle Ramp~
+~
+~
+0
+0
+0 1
+D0
+~
+~
+0
+-1 751
+S
+#763
+[Area Program Controller]~
+~
+~
+0
+0
+0 1
+S
+#764
+[Area Program Controller]~
+~
+~
+33554440
+0
+0 1
+S
+#0
+
+
+#RESETS
+D 0 664 3 2
+D 0 666 2 1
+D 0 671 3 1
+M 1 665 1 672
+G 1 664 1
+E 1 665 1 16
+D 0 672 1 1
+M 1 667 1 676
+E 1 665 1 16
+G 1 666 1
+G 1 667 1
+G 1 668 1
+G 1 670 1
+G 1 677 1
+G 1 669 1
+D 0 684 2 1
+D 0 687 0 1
+D 0 688 2 2
+D 0 689 0 2
+D 0 690 2 1
+D 0 692 2 1
+D 0 693 3 1
+D 0 694 1 1
+D 0 699 2 1
+D 0 700 2 1
+D 0 701 0 1
+D 0 702 0 1
+D 0 704 2 1
+D 0 705 0 1
+D 0 706 1 1
+D 0 706 3 1
+D 0 708 3 1
+D 0 709 1 1
+D 0 710 1 1
+D 0 710 2 1
+D 0 711 2 1
+D 0 711 3 1
+D 0 712 0 2
+D 0 729 0 1
+D 0 729 3 0
+M 1 672 1 730
+G 1 683 1
+D 0 730 1 0
+D 0 731 1 0
+D 0 732 3 0
+D 0 734 1 1
+D 0 735 3 1
+D 0 736 2 1
+M 1 666 1 675
+E 1 665 1 16
+G 1 81 1
+G 1 80 1
+G 1 84 1
+G 1 83 1
+G 1 82 1
+G 1 679 1
+G 1 678 1
+G 1 690 1
+G 1 689 1
+G 1 665 1
+M 1 668 1 677
+E 1 665 1 16
+G 1 674 1
+G 1 673 1
+G 1 681 1
+G 1 680 1
+G 1 692 1
+G 1 691 1
+G 1 686 1
+G 1 685 1
+G 1 687 1
+G 1 684 1
+M 1 669 1 678
+E 1 665 1 16
+G 1 688 1
+G 1 694 1
+G 1 693 1
+G 1 682 1
+G 1 671 1
+G 1 676 1
+G 1 675 1
+M 1 671 4 713
+E 1 678 1 16
+G 1 679 1
+G 1 679 1
+D 0 713 0 1
+M 1 671 4 714
+E 1 678 1 16
+G 1 679 1
+G 1 679 1
+D 0 714 3 1
+M 1 670 2 707
+E 1 667 1 5
+E 1 666 1 6
+E 1 673 1 16
+E 1 668 1 8
+G 1 674 1
+G 1 674 1
+D 0 707 2 2
+D 0 707 3 1
+M 1 671 4 715
+E 1 678 1 16
+G 1 679 1
+G 1 679 1
+D 0 715 0 1
+M 1 671 4 716
+E 1 678 1 16
+G 1 679 1
+G 1 679 1
+D 0 716 1 1
+M 1 670 2 703
+E 1 667 1 5
+E 1 666 1 6
+E 1 668 1 8
+E 1 673 1 16
+G 1 674 1
+G 1 674 1
+M 1 664 7 696
+E 1 666 1 6
+E 1 667 1 5
+E 1 668 1 8
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+M 1 664 7 696
+E 1 667 1 5
+E 1 666 1 6
+E 1 668 1 8
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+M 1 673 1 718
+E 1 666 1 6
+E 1 667 1 5
+E 1 668 1 8
+E 1 684 1 16
+E 1 682 1 17
+G 1 686 1
+G 1 686 1
+G 1 686 1
+D 0 718 2 1
+M 1 664 7 683
+E 1 666 1 6
+E 1 667 1 5
+E 1 668 1 8
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+D 0 683 0 1
+M 1 664 7 669
+E 1 666 1 6
+E 1 667 1 5
+E 1 668 1 8
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+M 1 664 7 665
+E 1 666 1 6
+E 1 667 1 5
+E 1 668 1 8
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+D 0 665 3 1
+O 1 672 1 697
+P 0 83 1 0
+P 1 81 1 0
+P 2 83 1 0
+P 3 81 1 0
+P 4 83 1 0
+D 0 697 1 1
+M 1 664 7 667
+E 1 666 1 6
+E 1 667 1 5
+E 1 668 1 8
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+D 0 667 0 1
+M 1 664 7 691
+E 1 666 1 6
+E 1 667 1 5
+E 1 668 1 8
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+D 0 691 0 1
+D 0 691 1 1
+D 0 691 3 1
+M 1 664 10 741
+E 1 666 1 6
+E 1 667 1 5
+E 1 668 1 8
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+M 1 664 10 738
+E 1 666 1 6
+E 1 667 1 5
+E 1 668 1 8
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+D 0 738 2 1
+D 0 738 3 2
+M 1 664 10 742
+E 1 666 1 6
+E 1 667 1 5
+E 1 668 1 8
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+D 0 737 0 1
+D 0 737 1 2
+O 1 695 1 764
+M 1 670 3 748
+E 1 666 1 6
+E 1 667 1 5
+E 1 668 1 8
+E 1 673 1 16
+G 1 674 1
+G 1 674 1
+D 0 748 2 2
+M 1 670 5 750
+E 1 666 1 6
+E 1 667 1 5
+E 1 668 1 8
+E 1 673 1 16
+G 1 674 1
+G 1 674 1
+M 1 670 5 750
+E 1 666 1 6
+E 1 667 1 5
+E 1 668 1 8
+E 1 673 1 16
+G 1 674 1
+G 1 674 1
+D 0 750 0 2
+S
+
+
+#SHOPS
+665; The chef
+666; Riggs
+667; Gantill
+668; Joseph
+669; Johnson
+672; Doctor Hillocks
+0
+
+
+#SPECIALS
+M  664 spec_enemy_scan
+M  670 spec_enemy_scan
+M  673 spec_enemy_scan
+S
+
+
+#$

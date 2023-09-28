@@ -1,0 +1,2951 @@
+#AREA   Brazillian Jungle~
+
+#VERSION 4
+
+#AUTHOR Tarkanus~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#1722
+Rebel General Jose Kortez~
+Jose Kortez~
+General Jose Kortez, is standing here
+~
+~
+0
+11
+S
+1 8 8 0
+> rand_prog 90~
+reload assault buck
+~
+|
+#1723
+Captured Marine~
+Captured Marine~
+A Captured Marine is standing here.
+~
+~
+0
+268435459
+S
+1 8 8 0
+#1724
+Rebel Guard~
+Rebel Guard~
+Rebel Guard is here, Watching the area.
+~
+~
+0
+11
+S
+1 8 8 0
+#0
+
+
+#OBJECTS
+#1722
+kevlar jacket~
+Kevlar Jacket~
+A Kevlar Jacket was left lying here.~
+~
+3
+36896
+9
+200 200 0 1 0 0
+5 300 30
+A
+13 30
+#1723
+sr-47 stoner rifle~
+SR-47 Stoner Rifle~
+Some idiot dropped a SR-47 Stoner Rifle on the ground here.~
+~
+2
+202784
+8193
+3 15 2 3 10 5
+5 425 42
+E
+sr-47 stoner rifle~
+This is, basically, an American M4 carbine chambered to fire Russian
+7.62x39mm ammunition and to use Russian AK-series magazines. The original
+idea was to provide special forces a rifle that had all of the "muscle
+memory" of the M4 carbine  but which used Russian ammunition. The SR-47
+barrel is free-floating, making the SR-47 the most accurate AK-47 clone in
+the world. The prototypes shipped so far include sound suppressors,
+regarded as essential for cave fighting.
+~
+#1724
+S-7.62x39mm Clip~
+S-7.62x39mm Clip~
+Some stupid idiot left a 7.62x39mm Clip lying here.~
+~
+17
+4128
+1
+2 20 30 15 0 0
+1 20 2
+#1725
+A truck missing Wheels~
+A Truck~
+A large truck is stranded here, missing its wheels.~
+~
+25
+2
+0
+16 2 8 600 600 1
+80 0 0
+#1726
+Large Boulder~
+Large Boulder~
+A Large Boulder is sitting here, in the center of the clearing.~
+~
+25
+0
+0
+10 4 10 300 300 0
+1 0 0
+#1727
+Human Skin~
+Human Skin~
+Human Skin is Hanging from the ceiling~
+~
+4
+0
+0
+0 0 0 0 0 0
+1 0 0
+#1728
+Human Skull~
+Human Skull~
+A Polished Human Skull~
+~
+4
+0
+0
+0 0 0 0 0 0
+1 0 0
+#1729
+Broken Egg~
+Broken Egg~
+Broken Egg Here, pulsating with slime~
+~
+5
+0
+0
+0 0 0 0 0 0
+1 0 0
+#1730
+Human Corpse~
+Human Corpse~
+Mangled human corpse with a hole in the rib area.~
+~
+5
+0
+0
+0 0 0 0 0 0
+1 0 0
+#1731
+Large Crate~
+Large Crate~
+A large unmarked crate rests up against the far wall.~
+~
+25
+0
+0
+5 1 1 200 200 3
+1 0 0
+> useon_prog 100~
+mpecho The crate bursts open, spilling out its contents!
+mpoload 1723
+mpoload 1723
+drop sr
+drop sr
+mpoload 1724
+mpoload 1724
+mpoload 1724
+mpoload 1724
+drop clip
+drop clip
+drop clip
+drop clip
+~
+|
+#1732
+Fallen Tree~
+Fallen Tree~
+A Fallen Tree rests here, lying among the underbrush.~
+~
+25
+0
+0
+16 1 2 300 300 0
+1 0 0
+#0
+
+
+#ROOMS
+#1722
+&gSmall clearing in the Jungle~
+&gWinthin the clearing, nothing can be seen, with the exception of the
+tree's lining it. However, in the center of the clearing there is a rather
+large boulder.  This boulder could probably be used for cover from any
+form of attack. A large structure can be seen to the northeast. As tall as
+it is, it appears as if you could see over the tops of the trees.
+~
+~
+50331648
+0
+0 1
+D0
+~
+~
+0
+-1 1773
+D1
+~
+~
+0
+-1 1723
+S
+#1723
+&gSmall clearing in the Jungle~
+&gWinthin the clearing, nothing can be seen, with the exception of the
+tree's lining it. However, in the center of the clearing there is a rather
+large boulder.  This boulder could probably be used for cover from any
+form of attack. A large structure can be seen to the northeast. As tall as
+it is, it appears as if you could see over the tops of the trees.
+~
+~
+33554432
+0
+0 1
+D2
+~
+~
+0
+-1 1724
+D3
+~
+~
+0
+-1 1722
+S
+#1724
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth. A
+small clearing appears to be to the north, but other than that nothing can
+be seen with the exception of a mass of flys swarming about.  Sounds of
+wild animals can be heard in the distance. The undergrowth is thick and
+the weather is muggy and rather damp. Something can be heard running about
+in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1723
+D1
+~
+~
+0
+-1 1725
+D2
+~
+~
+0
+-1 1727
+S
+#1725
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth.
+Nothing can be seen with the exception of a mass of flys swarming about.
+Sounds of wild animals can be heard in the distance. The undergrowth is
+thick and the weather is muggy and rather damp. Something can be heard
+running about in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 1732
+D2
+~
+~
+0
+-1 1726
+D3
+~
+~
+0
+-1 1724
+S
+#1726
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth.
+Nothing can be seen with the exception of a mass of flys swarming about.
+Sounds of wild animals can be heard in the distance. The undergrowth is
+thick and the weather is muggy and rather damp. Something can be heard
+running about in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1725
+D1
+~
+~
+0
+-1 1731
+D2
+~
+~
+0
+-1 1729
+D3
+~
+~
+0
+-1 1727
+S
+#1727
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth.
+Nothing can be seen with the exception of a mass of flys swarming about.
+Sounds of wild animals can be heard in the distance. The undergrowth is
+thick and the weather is muggy and rather damp. Something can be heard
+running about in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1724
+D1
+~
+~
+0
+-1 1726
+D2
+~
+~
+0
+-1 1728
+S
+#1728
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth.
+Nothing can be seen with the exception of a mass of flys swarming about.
+Sounds of wild animals can be heard in the distance. The undergrowth is
+thick and the weather is muggy and rather damp. Something can be heard
+running about in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1727
+D1
+~
+~
+0
+-1 1729
+D2
+~
+~
+0
+-1 1741
+S
+#1729
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth.
+Nothing can be seen with the exception of a mass of flys swarming about.
+Sounds of wild animals can be heard in the distance. The undergrowth is
+thick and the weather is muggy and rather damp. Something can be heard
+running about in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1726
+D1
+~
+~
+0
+-1 1730
+D2
+~
+~
+0
+-1 1740
+D3
+~
+~
+0
+-1 1728
+S
+#1730
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth.
+Nothing can be seen with the exception of a mass of flys swarming about.
+Sounds of wild animals can be heard in the distance. The undergrowth is
+thick and the weather is muggy and rather damp. Something can be heard
+running about in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1731
+D1
+~
+~
+0
+-1 1737
+D2
+~
+~
+0
+-1 1739
+D3
+~
+~
+0
+-1 1729
+S
+#1731
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth.
+Nothing can be seen with the exception of a mass of flys swarming about.
+Sounds of wild animals can be heard in the distance. The undergrowth is
+thick and the weather is muggy and rather damp. Something can be heard
+running about in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1732
+D1
+~
+~
+0
+-1 1736
+D2
+~
+~
+0
+-1 1730
+D3
+~
+~
+0
+-1 1726
+S
+#1732
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth.
+Nothing can be seen with the exception of a mass of flys swarming about.
+Sounds of wild animals can be heard in the distance. The undergrowth is
+thick and the weather is muggy and rather damp. Something can be heard
+running about in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1733
+D1
+~
+~
+0
+-1 1735
+D2
+~
+~
+0
+-1 1731
+D3
+~
+~
+0
+-1 1725
+S
+#1733
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth.
+Nothing can be seen with the exception of a mass of flys swarming about.
+Sounds of wild animals can be heard in the distance. The undergrowth is
+thick and the weather is muggy and rather damp. Something can be heard
+running about in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 1734
+D2
+~
+~
+0
+-1 1732
+S
+#1734
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth.
+Nothing can be seen with the exception of a mass of flys swarming about.
+Sounds of wild animals can be heard in the distance. The undergrowth is
+thick and the weather is muggy and rather damp. Something can be heard
+running about in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D2
+~
+~
+0
+-1 1735
+D3
+~
+~
+0
+-1 1733
+S
+#1735
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth.
+Nothing can be seen with the exception of a mass of flys swarming about.
+Sounds of wild animals can be heard in the distance. The undergrowth is
+thick and the weather is muggy and rather damp. Something can be heard
+running about in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1734
+D2
+~
+~
+0
+-1 1736
+D3
+~
+~
+0
+-1 1732
+S
+#1736
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth.
+Nothing can be seen with the exception of a mass of flys swarming about.
+Sounds of wild animals can be heard in the distance. The undergrowth is
+thick and the weather is muggy and rather damp. Something can be heard
+running about in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1735
+D1
+~
+~
+0
+-1 1752
+D2
+~
+~
+0
+-1 1737
+D3
+~
+~
+0
+-1 1731
+S
+#1737
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth.
+Nothing can be seen with the exception of a mass of flys swarming about.
+Sounds of wild animals can be heard in the distance. The undergrowth is
+thick and the weather is muggy and rather damp. Something can be heard
+running about in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1736
+D2
+~
+~
+0
+-1 1738
+D3
+~
+~
+0
+-1 1730
+S
+#1738
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth.
+Nothing can be seen with the exception of a mass of flys swarming about.
+Sounds of wild animals can be heard in the distance. The undergrowth is
+thick and the weather is muggy and rather damp. Something can be heard
+running about in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1737
+D3
+~
+~
+0
+-1 1739
+S
+#1739
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth.
+Nothing can be seen with the exception of a mass of flys swarming about.
+Sounds of wild animals can be heard in the distance. The undergrowth is
+thick and the weather is muggy and rather damp. Something can be heard
+running about in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1730
+D1
+~
+~
+0
+-1 1738
+D3
+~
+~
+0
+-1 1740
+S
+#1740
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth.
+Nothing can be seen with the exception of a mass of flys swarming about.
+Sounds of wild animals can be heard in the distance. The undergrowth is
+thick and the weather is muggy and rather damp. Something can be heard
+running about in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1729
+D1
+~
+~
+0
+-1 1739
+D3
+~
+~
+0
+-1 1741
+S
+#1741
+&gWandering Deep in the Green Masses~
+&gSurrounding you on all sides is a great mass of trees and undergrowth.
+Nothing can be seen with the exception of a mass of flys swarming about.
+Sounds of wild animals can be heard in the distance. The undergrowth is
+thick and the weather is muggy and rather damp. Something can be heard
+running about in the trees surrounding your area. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1728
+D1
+~
+~
+0
+-1 1740
+D2
+~
+~
+0
+-1 1742
+S
+#1742
+&REntrance to a Rebel Encampment~
+As the forrest comes to a halt, you enter a camp, that appears to be
+inhabited by soldiers rebelling against their goverment. in the central
+area there is an old truck missing wheels, this could possibly be used to
+take cover from fire. Its not to stupid to say, that you wouldn't want to
+run into rebel soldiers, they are very armed and dangerous. To the east,
+there is a structure much larger than the rest in the camp. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1741
+D2
+~
+~
+0
+-1 1743
+S
+#1743
+&RRebel Encampment~
+As the forrest comes to a halt, you enter a camp, that appears to be
+inhabited by soldiers rebelling against their goverment. in the central
+area there is an old truck missing wheels, this could possibly be used to
+take cover from fire. Its not to stupid to say, that you wouldn't want to
+run into rebel soldiers, they are very armed and dangerous. To the east,
+there is a structure much larger than the rest in the camp. 
+~
+~
+33554432&8
+0
+0 1
+D0
+~
+~
+0
+-1 1742
+D1
+~
+~
+0
+-1 1744
+D2
+~
+~
+0
+-1 1747
+S
+#1744
+&RRebel Encampment~
+As the forrest comes to a halt, you enter a camp, that appears to be
+inhabited by soldiers rebelling against their goverment. in the central
+area there is an old truck missing wheels, this could possibly be used to
+take cover from fire. Its not to stupid to say, that you wouldn't want to
+run into rebel soldiers, they are very armed and dangerous. To the east,
+there is a structure much larger than the rest in the camp. 
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 1745
+D3
+~
+~
+0
+-1 1743
+S
+#1745
+&RRebel Encampment~
+As the forrest comes to a halt, you enter a camp, that appears to be
+inhabited by soldiers rebelling against their goverment. in the central
+area there is an old truck missing wheels, this could possibly be used to
+take cover from fire. Its not to stupid to say, that you wouldn't want to
+run into rebel soldiers, they are very armed and dangerous. To the east,
+there is a structure much larger than the rest in the camp. 
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 1804
+D2
+~
+~
+0
+-1 1746
+D3
+~
+~
+0
+-1 1744
+S
+#1746
+&RInside of a Rebel Hut~
+This room appears to be a home for the lower grade solder in the rebel
+army. These soldiers respect their leader and hate the current goverment.
+Eventhough their homes are not as fancy or large as their leader's, they
+still show no sign of resistance. Its safe to say, that he is a very
+charismatic person to attain such a large army.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1745
+D3
+~
+~
+33554432
+-1 1748
+S
+#1747
+&RRebel Encampment~
+As the forrest comes to a halt, you enter a camp, that appears to be
+inhabited by soldiers rebelling against their goverment. in the central
+area there is an old truck missing wheels, this could possibly be used to
+take cover from fire. Its not to stupid to say, that you wouldn't want to
+run into rebel soldiers, they are very armed and dangerous. To the east,
+there is a structure much larger than the rest in the camp. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1743
+D1
+~
+~
+0
+-1 1748
+D2
+~
+~
+0
+-1 1749
+S
+#1748
+&RRebel Encampment~
+As the forrest comes to a halt, you enter a camp, that appears to be
+inhabited by soldiers rebelling against their goverment. in the central
+area there is an old truck missing wheels, this could possibly be used to
+take cover from fire. Its not to stupid to say, that you wouldn't want to
+run into rebel soldiers, they are very armed and dangerous. To the east,
+there is a structure much larger than the rest in the camp. 
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+33554432
+-1 1746
+D2
+~
+~
+0
+-1 1750
+D3
+~
+~
+0
+-1 1747
+S
+#1749
+&RInside of a Rebel Hut~
+This room appears to be a home for the lower grade solder in the rebel
+army. These soldiers respect their leader and hate the current goverment.
+Eventhough their homes are not as fancy or large as their leader's, they
+still show no sign of resistance. Its safe to say, that he is a very
+charismatic person to attain such a large army.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1747
+D1
+~
+~
+33554432
+-1 1750
+S
+#1750
+&RPath Leading Away From The Camp~
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1748
+D2
+~
+~
+0
+-1 1751
+D3
+~
+~
+33554432
+-1 1749
+S
+#1751
+&RSmall Clearing South of the Camp~
+This path is leading away from the camp. This path could possibly be used
+for an invasion or attack on the rebels. There is a little undergrowth and
+a few trees around, just enough to give a small group of people cover.
+Following this path could lead to an important place in the camp. 
+~
+~
+301989888
+0
+0 1
+D0
+~
+~
+0
+-1 1750
+D8
+~
+~
+0
+-1 1821
+S
+#1752
+&zEntrance to a Dark Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+~
+33685505
+0
+0 1
+D3
+~
+~
+0
+-1 1736
+D5
+~
+~
+0
+-1 1753
+S
+#1753
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D1
+~
+~
+0
+-1 1754
+D4
+~
+~
+0
+-1 1752
+S
+#1754
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D1
+~
+~
+0
+-1 1755
+D3
+~
+~
+0
+-1 1753
+S
+#1755
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D1
+~
+~
+0
+-1 1770
+D2
+~
+~
+0
+-1 1756
+D3
+~
+~
+0
+-1 1754
+S
+#1756
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D0
+~
+~
+0
+-1 1755
+D3
+~
+~
+0
+-1 1757
+S
+#1757
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D1
+~
+~
+0
+-1 1756
+D2
+~
+~
+0
+-1 1758
+S
+#1758
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D0
+~
+~
+0
+-1 1757
+D3
+~
+~
+0
+-1 1759
+S
+#1759
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D1
+~
+~
+0
+-1 1758
+D2
+~
+~
+0
+-1 1760
+S
+#1760
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D0
+~
+~
+0
+-1 1759
+D3
+~
+~
+0
+-1 1761
+S
+#1761
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D1
+~
+~
+0
+-1 1760
+D2
+~
+~
+0
+-1 1762
+S
+#1762
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D0
+~
+~
+0
+-1 1761
+D1
+~
+~
+0
+-1 1763
+D2
+~
+~
+0
+-1 1772
+S
+#1763
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D1
+~
+~
+0
+-1 1764
+D3
+~
+~
+0
+-1 1762
+S
+#1764
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D0
+~
+~
+0
+-1 1765
+D3
+~
+~
+0
+-1 1763
+S
+#1765
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D1
+~
+~
+0
+-1 1766
+D2
+~
+~
+0
+-1 1764
+S
+#1766
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D0
+~
+~
+0
+-1 1767
+D3
+~
+~
+0
+-1 1765
+S
+#1767
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D1
+~
+~
+0
+-1 1768
+D2
+~
+~
+0
+-1 1766
+S
+#1768
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D0
+~
+~
+0
+-1 1769
+D3
+~
+~
+0
+-1 1767
+S
+#1769
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D0
+~
+~
+0
+-1 1770
+D2
+~
+~
+0
+-1 1768
+S
+#1770
+&zInside of a Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+42074113
+0
+0 1
+D2
+~
+~
+0
+-1 1769
+D3
+~
+~
+0
+-1 1755
+S
+#1771
+&zInside of a Cave~
+~
+~
+1082261505
+0
+0 1
+D0
+~
+~
+0
+-1 1762
+S
+#1772
+&gSlime Covered Room in The Cave~
+&zWhen entering this cave, the first thing you notice, is the foul stench
+of rotting substances. The deeper into the cave you go, the worse the
+stench becomes. Turning back would be a great burden taken away someone's
+nose. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness.
+~
+&g The walls of the cave are covered in this slimey gooie substance. It
+irritates the skin of almost anything that touches it, including predators
+and humans. There is a putrid stench that is pulsating throughout the
+cave. Loud screams, moans, and screeches can be heard echoing throughout
+the cave. Movement can be seen, as it appears something or someone is
+moving about deep in the chasmitic darkness. 
+~
+578947073
+0
+0 1
+D0
+~
+~
+0
+-1 1762
+S
+#1773
+&g Small Clearing in the Jungle~
+&gWinthin the clearing, nothing can be seen, with the exception of the
+tree's lining it. However, in the center of the clearing there is a rather
+large boulder.  This boulder could probably be used for cover from any
+form of attack. A large structure can be seen to the northeast. As tall as
+it is, it appears as if you could see over the tops of the trees.
+~
+~
+33554432
+0
+0 1
+D2
+~
+~
+0
+-1 1722
+D4
+~
+~
+0
+-1 1774
+S
+#1774
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1777
+D1
+~
+~
+0
+-1 1775
+D5
+~
+~
+0
+-1 1773
+S
+#1775
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1776
+D1
+~
+~
+0
+-1 1792
+D3
+~
+~
+0
+-1 1774
+S
+#1776
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1783
+D2
+~
+~
+0
+-1 1775
+D3
+~
+~
+0
+-1 1777
+S
+#1777
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1782
+D1
+~
+~
+0
+-1 1776
+D2
+~
+~
+0
+-1 1774
+D3
+~
+~
+0
+-1 1778
+S
+#1778
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1781
+D1
+~
+~
+0
+-1 1777
+D3
+~
+~
+0
+-1 1779
+S
+#1779
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1780
+D1
+~
+~
+0
+-1 1778
+S
+#1780
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1787
+D1
+~
+~
+0
+-1 1781
+D2
+~
+~
+0
+-1 1779
+S
+#1781
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1786
+D1
+~
+~
+0
+-1 1782
+D2
+~
+~
+0
+-1 1778
+D3
+~
+~
+0
+-1 1780
+S
+#1782
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1785
+D1
+~
+~
+0
+-1 1783
+D2
+~
+~
+0
+-1 1777
+D3
+~
+~
+0
+-1 1781
+D4
+~
+~
+0
+-1 1794
+S
+#1783
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1784
+D2
+~
+~
+0
+-1 1776
+D3
+~
+~
+0
+-1 1782
+S
+#1784
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1791
+D2
+~
+~
+0
+-1 1783
+D3
+~
+~
+0
+-1 1785
+S
+#1785
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1790
+D1
+~
+~
+0
+-1 1784
+D2
+~
+~
+0
+-1 1782
+D3
+~
+~
+0
+-1 1786
+S
+#1786
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1789
+D1
+~
+~
+0
+-1 1785
+D2
+~
+~
+0
+-1 1781
+D3
+~
+~
+0
+-1 1787
+S
+#1787
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1788
+D1
+~
+~
+0
+-1 1786
+D2
+~
+~
+0
+-1 1780
+S
+#1788
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 1789
+D2
+~
+~
+0
+-1 1787
+S
+#1789
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 1790
+D2
+~
+~
+0
+-1 1786
+D3
+~
+~
+0
+-1 1788
+S
+#1790
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 1791
+D2
+~
+~
+0
+-1 1785
+D3
+~
+~
+0
+-1 1789
+S
+#1791
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1793
+D2
+~
+~
+0
+-1 1784
+D3
+~
+~
+0
+-1 1790
+S
+#1792
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D3
+~
+~
+0
+-1 1775
+S
+#1793
+&OLower Level of a Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D2
+~
+~
+0
+-1 1791
+S
+#1794
+&OMiddle Level of Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1795
+D1
+~
+~
+0
+-1 1797
+D2
+~
+~
+0
+-1 1796
+D3
+~
+~
+0
+-1 1798
+D4
+~
+~
+0
+-1 1803
+D5
+~
+~
+0
+-1 1782
+S
+#1795
+&OMiddle Level of Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 1801
+D2
+~
+~
+0
+-1 1794
+D3
+~
+~
+0
+-1 1802
+S
+#1796
+&OMiddle Level of Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1794
+D1
+~
+~
+0
+-1 1800
+D3
+~
+~
+0
+-1 1799
+S
+#1797
+&OMiddle Level of Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1801
+D2
+~
+~
+0
+-1 1800
+D3
+~
+~
+0
+-1 1794
+S
+#1798
+&OMiddle Level of Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1802
+D1
+~
+~
+0
+-1 1794
+D2
+~
+~
+0
+-1 1799
+S
+#1799
+&OMiddle Level of Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1798
+D1
+~
+~
+0
+-1 1796
+S
+#1800
+&OMiddle Level of Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1797
+D3
+~
+~
+0
+-1 1796
+S
+#1801
+&OMiddle Level of Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D2
+~
+~
+0
+-1 1797
+D3
+~
+~
+0
+-1 1795
+S
+#1802
+&OMiddle Level of Tree Hutt~
+&O This wood tree hutt seems to have been built for the soul purpose of
+storing trophy kills. There are skulls of numerous beasts and species
+lining the walls. This Hutt is two stories high and also has a roof acess.
+The higher up you go, the less rooms there are.
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 1795
+D2
+~
+~
+0
+-1 1798
+S
+#1803
+&ORoof of a Tree Hutt~
+&OFrom the roof of this hutt, you can see far out and around you, over the
+treetops. To the south there appears to be a large camp, from which alot
+of noise and gunfire is coming. Also, To the east there is a large cave
+entrance to the east. Distant screams and screeches can be heard coming
+from the direction of the cave. 
+~
+~
+167772160
+0
+0 1
+D5
+~
+~
+0
+-1 1794
+S
+#1804
+&RRebel Encampment~
+As the forrest comes to a halt, you enter a camp, that appears to be
+inhabited by soldiers rebelling against their goverment. in the central
+area there is an old truck missing wheels, this could possibly be used to
+take cover from fire. Its not to stupid to say, that you wouldn't want to
+run into rebel soldiers, they are very armed and dangerous. To the east,
+there is a structure much larger than the rest in the camp. 
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 1808
+D3
+~
+~
+0
+-1 1745
+D7
+~
+~
+0
+-1 1805
+S
+#1805
+&RRebel Encampment~
+As the forrest comes to a halt, you enter a camp, that appears to be
+inhabited by soldiers rebelling against their goverment. in the central
+area there is an old truck missing wheels, this could possibly be used to
+take cover from fire. Its not to stupid to say, that you wouldn't want to
+run into rebel soldiers, they are very armed and dangerous. To the east,
+there is a structure much larger than the rest in the camp. 
+~
+~
+0
+0
+0 1
+D1
+~
+~
+0
+-1 1807
+D3
+~
+~
+0
+-1 1806
+D8
+~
+~
+0
+-1 1804
+S
+#1806
+&RRebel Hutt~
+This room appears to be a home for the lower grade solder in the rebel
+army. These soldiers respect their leader and hate the current goverment.
+Eventhough their homes are not as fancy or large as their leader's, they
+still show no sign of resistance. Its safe to say, that he is a very
+charismatic person to attain such a large army.
+~
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 1805
+S
+#1807
+&RRebel Hutt~
+This room appears to be a home for the lower grade solder in the rebel
+army. These soldiers respect their leader and hate the current goverment.
+Eventhough their homes are not as fancy or large as their leader's, they
+still show no sign of resistance. Its safe to say, that he is a very
+charismatic person to attain such a large army.
+~
+~
+8
+0
+0 1
+D3
+~
+~
+0
+-1 1805
+S
+#1808
+&RRebel Leader's House~
+This room, much like the room to the south, has no decorations. This room
+is very oddly shaped and dosn't appear to match the size of the house. It
+appears as if another room should be to the north. A loud scream from the
+south is heard. The scream is followed by a gunshot. 
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+2051
+-1 1811
+D1
+~
+~
+3
+-1 1813
+D2
+~
+~
+0
+-1 1809
+D3
+~
+~
+0
+-1 1804
+S
+#1809
+&RInside of a House~
+This room, much like the room to the north, has no decorations. This room
+is very oddly shaped and dosn't appear to match the size of the house. It
+appears as if another room should be to the east. A loud scream from the
+east is heard, there evidently is a hidden door. The scream is followed by
+a gunshot.  Sinister laughing is now heard.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1808
+D1
+~
+~
+2051
+-1 1812
+D2
+~
+~
+0
+-1 1810
+S
+#1810
+&RBedroom~
+This bedroom is much better fitted than the ones in the rest of the
+village. The Rebel leader has much more comfort and luxury than the rest
+of his soldiers. The room is decorated with a few peices of art, but
+nothing more. A scream can be heard a few rooms away.
+~
+~
+33554440
+0
+0 1
+D0
+~
+~
+0
+-1 1809
+D3
+~
+~
+0
+-1 1814
+D6
+~
+~
+301991936
+-1 1812
+S
+#1811
+&RWeapons Storage~
+This room is also a hidden room. Many crates containing guns and grenades,
+and also Heroin, are lying about in here. An Empty weapons rack is on the
+wall as well as and empty crate of grenades. You could probably
+temperarily hide weapons in this room, until someone else finds them.
+~
+~
+33554440
+0
+0 1
+D2
+~
+~
+1
+-1 1808
+S
+#1812
+&RTorture Chamber~
+This room has many blood stains and bullet holes in the walls. There is a
+chair with a dead Marine sitting in it. The rebel leader is here, holding
+a shotgun. The shotgun is pointed at the freshly shot marine.  There is a
+line of blood trinkling along the floor. 
+~
+~
+33554440
+0
+0 1
+D3
+~
+~
+3
+-1 1809
+D9
+~
+~
+301989888
+-1 1810
+S
+#1813
+&RStorage Room~
+This room appears to be almost empty with the exception of a few crates. If
+needed these crates could be used for a few moments to hide from gun fire,
+but They wouldn't last to long. This room appears to serve no other
+purpose other than storing items and crates. 
+~
+~
+33554440
+0
+0 1
+D3
+~
+~
+3
+-1 1808
+S
+#1814
+&RBack Room~
+This small room appears to have no purpose other than to lead to the small
+path behind this house. One could probably sneak upon the leader of this
+group of rebels through this entrance. This house is much larger than the
+other hutts in the village. A few noises can be heard. 
+~
+~
+33554440
+0
+0 1
+D1
+~
+~
+0
+-1 1810
+D2
+~
+~
+0
+-1 1815
+S
+#1815
+&RSmall Path~
+This path is leading away from the camp. This path could possibly be used
+for an invasion or attack on the rebels. There is a little undergrowth and
+a few trees around, just enough to give a small group of people cover.
+Following this path could lead to an important place in the camp. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1814
+D2
+~
+~
+0
+-1 1816
+S
+#1816
+&RSmall Path~
+This path is leading away from the camp. This path could possibly be used
+for an invasion or attack on the rebels. There is a little undergrowth and
+a few trees around, just enough to give a small group of people cover.
+Following this path could lead to an important place in the camp. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1815
+D1
+~
+~
+0
+-1 1817
+D3
+~
+~
+0
+-1 1818
+S
+#1817
+&RSmall Path~
+This path is leading away from the camp. This path could possibly be used
+for an invasion or attack on the rebels. There is a little undergrowth and
+a few trees around, just enough to give a small group of people cover.
+Following this path could lead to an important place in the camp. 
+~
+~
+33554432
+0
+0 1
+D3
+~
+~
+0
+-1 1816
+S
+#1818
+&RSmall Path~
+This path is leading away from the camp. This path could possibly be used
+for an invasion or attack on the rebels. There is a little undergrowth and
+a few trees around, just enough to give a small group of people cover.
+Following this path could lead to an important place in the camp. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1821
+D1
+~
+~
+0
+-1 1816
+D3
+~
+~
+0
+-1 1819
+S
+#1819
+&RSmall Path~
+This path is leading away from the camp. This path could possibly be used
+for an invasion or attack on the rebels. There is a little undergrowth and
+a few trees around, just enough to give a small group of people cover.
+Following this path could lead to an important place in the camp. 
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 1818
+D3
+~
+~
+0
+-1 1820
+S
+#1820
+&RSmall Path~
+This path is leading away from the camp. This path could possibly be used
+for an invasion or attack on the rebels. There is a little undergrowth and
+a few trees around, just enough to give a small group of people cover.
+Following this path could lead to an important place in the camp. 
+~
+~
+570425344
+0
+0 1
+D1
+~
+~
+0
+-1 1819
+S
+#1821
+&RSmall Path~
+This path is leading away from the camp. This path could possibly be used
+for an invasion or attack on the rebels. There is a little undergrowth and
+a few trees around, just enough to give a small group of people cover.
+Following this path could lead to an important place in the camp. 
+~
+~
+33554432
+0
+0 1
+D2
+~
+~
+0
+-1 1818
+D7
+~
+~
+0
+-1 1751
+S
+#0
+
+
+#RESETS
+D 0 1808 0 1
+D 0 1808 1 1
+M 1 1724 3 1814
+E 1 1722 1 5
+E 1 1723 1 16
+G 1 1724 1
+G 1 1724 1
+G 1 1724 1
+M 1 1724 3 1814
+E 1 1723 1 16
+E 1 1722 1 5
+G 1 1724 1
+G 1 1724 1
+G 1 1724 1
+M 1 1724 7 1807
+E 1 1722 1 5
+G 1 1724 1
+E 1 1723 1 16
+G 1 1724 1
+G 1 1724 1
+M 1 1724 7 1806
+E 1 1723 1 16
+E 1 1722 1 5
+G 1 1724 1
+G 1 1724 1
+M 1 1724 7 1746
+E 1 1722 1 5
+E 1 1723 1 16
+G 1 1724 1
+G 1 1724 1
+M 1 1724 7 1809
+E 1 1723 1 16
+E 1 1722 1 5
+G 1 1724 1
+G 1 1724 1
+D 0 1809 1 1
+M 1 1722 1 1812
+E 1 1722 1 5
+G 1 685 1
+G 1 685 1
+E 1 687 1 16
+G 1 685 1
+M 1 1723 2 1812
+E 1 1722 1 5
+M 1 1723 2 1812
+E 1 1722 1 5
+D 0 1812 3 1
+O 1 1727 1 1794
+O 1 1727 1 1790
+O 1 1728 1 1782
+O 1 1728 1 1792
+O 1 1726 1 1770
+O 1 1729 1 1758
+O 1 1730 1 1762
+O 1 1725 1 1743
+O 1 1726 1 1754
+O 1 1726 1 1736
+O 1 1726 1 1733
+O 1 1726 1 1731
+O 1 1726 1 1727
+O 1 1726 1 1722
+O 1 1732 1 1724
+O 1 1732 1 1732
+O 1 1732 1 1739
+O 1 1732 1 1737
+O 1 1732 1 1728
+O 1 1731 1 1813
+D 0 1813 3 1
+O 1 1731 1 1811
+D 0 1811 2 0
+M 1 1724 7 1749
+E 1 1723 1 16
+E 1 1722 1 5
+G 1 1724 1
+G 1 1724 1
+G 1 1724 1
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+M  1722 spec_enemy_scan
+M  1724 spec_enemy_scan
+S
+
+
+#$

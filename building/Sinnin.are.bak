@@ -1,0 +1,2767 @@
+#AREA   {PROTO} Sinnin's area in progress~
+
+#VERSION 4
+
+#AUTHOR Sinnin~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#7453
+alien drone~
+an Alien Drone~
+An Alien Drone is here.
+~
+~
+0
+67108865
+Z
+1 8 8 0
+18 10 14 10 10 15
+1 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#7454
+Stressed Sniper~
+a newly created sniper~
+Some god abandoned a newly created sniper here.
+~
+~
+0
+67108865
+S
+1 8 8 0
+#7455
+Sniper Guard~
+a Sniper Guardsman~
+A tall guard gazes out the window here
+~
+~
+0
+67108865
+Z
+1 8 8 1
+15 10 10 10 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#7458
+Predator Hunter~
+Predator~
+A violent looking Predator is hunting here.
+~
+~
+0
+67108865
+Z
+1 8 8 0
+10 10 10 10 10 10
+2 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#7543
+Alien drone~
+an Alien Drone~
+An Alien Drone is here.
+~
+~
+0
+67108865
+Z
+1 8 8 0
+18 10 14 10 10 15
+1 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#0
+
+
+#OBJECTS
+#7456
+Tank~
+Propane Tank~
+A large metal tank rests up against the far wall. ~
+~
+25
+1024
+0
+5 2 1 75 75 1
+10 0 0
+#7457
+Open button~
+a button~
+&W&zA &WBlinking&z Button&w~
+~
+4
+1049600
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+mpopenpassage 7460 7463 s
+~
+> useoff_prog 100~
+mpclosepassage 7460 s
+~
+|
+#0
+
+
+#ROOMS
+#7453
+Marine Bunker~
+A small concrete structure with minimal lighting, small arms fire can be
+heard near you as well as small explosions and screams from the preds,
+aliens, and marine soldiers. the sound of an engine can be heard nearby,
+and a red light labeled 'Emergency Evacuation" is flashing on the roof.
+~
+~
+1377894408
+0
+0 1
+D1
+~
+~
+0
+-1 7454
+D2
+~
+~
+0
+-1 7462
+S
+#7454
+Marine Bunker~
+A small concrete structure with minimal lighting, small arms fire can be
+heard near you as well as small explosions and screams from the preds,
+aliens, and marine soldiers. the sound of an engine can be heard nearby,
+and a red light labeled 'Emergency Evacuation" is flashing on the roof. 
+~
+~
+1109458952
+0
+0 1
+D1
+~
+~
+0
+-1 7455
+D2
+~
+~
+0
+-1 7461
+D3
+~
+~
+0
+-1 7453
+S
+#7455
+Marine Bunker~
+A small concrete structure with minimal lighting, small arms fire can be
+heard near you as well as small explosions and screams from the preds,
+aliens, and marine soldiers. the sound of an engine can be heard nearby,
+and a red light labeled 'Emergency Evacuation" is flashing on the roof. 
+~
+~
+1109458952
+0
+0 1
+D1
+~
+~
+0
+-1 7456
+D2
+~
+~
+0
+-1 7460
+D3
+~
+~
+0
+-1 7454
+S
+#7456
+Marine Bunker~
+A small concrete structure with minimal lighting, small arms fire can be
+heard near you as well as small explosions and screams from the preds,
+aliens, and marine soldiers. the sound of an engine can be heard nearby,
+and a red light labeled 'Emergency Evacuation" is flashing on the roof. 
+~
+~
+1109458952
+0
+0 1
+D1
+~
+~
+0
+-1 7457
+D2
+~
+~
+0
+-1 7459
+D3
+~
+~
+0
+-1 7455
+S
+#7457
+Marine Bunker~
+A small concrete structure with minimal lighting, small arms fire can be
+heard near you as well as small explosions and screams from the preds,
+aliens, and marine soldiers. the sound of an engine can be heard nearby,
+and a red light labeled 'Emergency Evacuation" is flashing on the roof. 
+~
+~
+1109458952
+0
+0 1
+D2
+~
+~
+0
+-1 7458
+D3
+~
+~
+0
+-1 7456
+S
+#7458
+Marine Bunker~
+A small concrete structure with minimal lighting, small arms fire can be
+heard near you as well as small explosions and screams from the preds,
+aliens, and marine soldiers. the sound of an engine can be heard nearby,
+and a red light labeled 'Emergency Evacuation" is flashing on the roof.
+~
+~
+1109458952
+0
+0 1
+D0
+~
+~
+0
+-1 7457
+D2
+~
+none~
+301989888
+0 7469
+D3
+~
+none none~
+0
+-1 7459
+S
+#7459
+Marine Bunker~
+A small concrete structure with minimal lighting, small arms fire can be
+heard near you as well as small explosions and screams from the preds,
+aliens, and marine soldiers. the sound of an engine can be heard nearby,
+and a red light labeled 'Emergency Evacuation" is flashing on the roof.
+~
+~
+1109458952
+0
+0 1
+D0
+~
+~
+0
+-1 7456
+D1
+~
+none none~
+0
+-1 7458
+D3
+~
+none none~
+0
+-1 7460
+S
+#7460
+Garage~
+A small one car garage with sets of tool scattered around on the ground and
+in some toolboxes, A small spot of oil can be seen in the middle of the
+floor, and a giant door can be seen to the south. The switch to the Garage
+Door can't been seen anywhere in this room, maybe it is in another.
+~
+~
+1109458952
+0
+0 1
+D0
+~
+~
+0
+-1 7455
+D1
+~
+none none~
+0
+-1 7459
+D2
+~
+~
+0
+-1 7463
+D3
+~
+none none~
+0
+-1 7461
+S
+#7461
+Marine Bunker~
+A small concrete structure with minimal lighting, small arms fire can be
+heard near you as well as small explosions and screams from the preds,
+aliens, and marine soldiers. the sound of an engine can be heard nearby,
+and a red light labeled 'Emergency Evacuation" is flashing on the roof.
+~
+~
+1109458952
+0
+0 1
+D0
+~
+~
+0
+-1 7454
+D1
+~
+none none~
+0
+-1 7460
+D3
+~
+none none~
+0
+-1 7462
+S
+#7462
+Marine Bunker~
+A small concrete structure with minimal lighting, small arms fire can be
+heard near you as well as small explosions and screams from the preds,
+aliens, and marine soldiers. the sound of an engine can be heard nearby,
+and a red light labeled 'Emergency Evacuation" is flashing on the roof.
+~
+~
+1109458952
+0
+0 1
+D0
+~
+~
+0
+-1 7453
+D1
+~
+none none~
+0
+-1 7461
+D2
+~
+none~
+301989888
+0 7473
+S
+#7463
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7460
+D2
+~
+~
+0
+-1 7464
+S
+#7464
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7463
+D2
+~
+~
+0
+-1 7465
+S
+#7465
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7464
+D1
+~
+~
+0
+-1 7466
+D2
+~
+~
+0
+-1 7474
+D3
+~
+~
+0
+-1 7470
+S
+#7466
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7467
+D3
+~
+~
+0
+-1 7465
+S
+#7467
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7468
+D2
+~
+none~
+0
+0 7482
+D3
+~
+~
+0
+-1 7466
+S
+#7468
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7469
+D2
+~
+~
+0
+-1 7467
+S
+#7469
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+none~
+301989888
+0 7458
+D2
+~
+~
+0
+-1 7468
+S
+#7470
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7465
+D3
+~
+~
+0
+-1 7471
+S
+#7471
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away. 
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7472
+D1
+~
+~
+0
+-1 7470
+D2
+~
+none ~
+0
+0 7488
+S
+#7472
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away. 
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7473
+D2
+~
+~
+0
+-1 7471
+S
+#7473
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away. 
+~
+~
+1073807360
+0
+0 1
+D0
+~
+none~
+301989888
+0 7462
+D2
+~
+~
+0
+-1 7472
+S
+#7474
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7465
+D2
+~
+~
+0
+-1 7475
+S
+#7475
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7474
+D2
+~
+~
+0
+-1 7476
+S
+#7476
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7475
+D2
+~
+~
+0
+-1 7477
+S
+#7477
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7476
+D1
+~
+~
+0
+-1 7478
+D2
+~
+~
+0
+-1 7494
+D3
+~
+~
+0
+-1 7483
+S
+#7478
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7479
+D3
+~
+~
+0
+-1 7477
+S
+#7479
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7480
+D3
+~
+~
+0
+-1 7478
+D5
+~
+none~
+0
+0 7569
+S
+#7480
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7481
+D2
+~
+~
+0
+-1 7479
+S
+#7481
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7482
+D2
+~
+~
+0
+-1 7480
+S
+#7482
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+none~
+0
+0 7467
+D2
+~
+~
+0
+-1 7481
+S
+#7483
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7477
+D3
+~
+~
+0
+-1 7484
+S
+#7484
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7486
+D1
+~
+~
+0
+-1 7483
+D3
+~
+~
+0
+-1 7485
+S
+#7485
+Hunting Trail~
+A small trail leads through the trees. Strange sounds can be heard coming
+from all around you, a faint smell lingers in the air, it almost smells
+like blood but its to faint to make out. the path continues further on and
+some rustling can be heard in the distance.
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7484
+D2
+~
+~
+0
+-1 7489
+S
+#7486
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7487
+D2
+~
+~
+0
+-1 7484
+D5
+~
+none~
+0
+0 7572
+S
+#7487
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7488
+D2
+~
+~
+0
+-1 7486
+S
+#7488
+Dead zone~
+A wasteland of craters and destroyed vehicles. Spent shells litter the
+ground and jagged pieces of metal abound, pieces of flesh from
+undeterminal creatures are laying, slowly rotting away. 
+~
+~
+1073807360
+0
+0 1
+D0
+~
+none ~
+0
+0 7471
+D2
+~
+~
+0
+-1 7487
+S
+#7489
+Hunting Trail~
+A small trail leads through the trees. Strange sounds can be heard coming
+from all around you, a faint smell lingers in the air, it almost smells
+like blood but its to faint to make out. the path continues further on and
+some rustling can be heard in the distance.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7485
+D2
+~
+~
+0
+-1 7490
+S
+#7490
+Hunting Trail~
+A small trail leads through the trees. Strange sounds can be heard coming
+from all around you, a faint smell lingers in the air, it almost smells
+like blood but its to faint to make out. the path continues further on and
+some rustling can be heard in the distance.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7489
+D2
+~
+~
+0
+-1 7491
+S
+#7491
+Hunting Trail~
+A small trail leads through the trees. Strange sounds can be heard coming
+from all around you, a faint smell lingers in the air, it almost smells
+like blood but its to faint to make out. the path continues further on and
+some rustling can be heard in the distance.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7490
+D2
+~
+~
+0
+-1 7492
+D4
+~
+~
+0
+-1 7573
+S
+#7492
+Hunting Trail~
+A small trail leads through the trees. Strange sounds can be heard coming
+from all around you, a faint smell lingers in the air, it almost smells
+like blood but its to faint to make out. the path continues further on and
+some rustling can be heard in the distance.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7491
+D2
+~
+none~
+0
+0 7493
+S
+#7493
+Hunting Trail~
+A small trail leads through the trees. Strange sounds can be heard coming
+from all around you, a faint smell lingers in the air, it almost smells
+like blood but its to faint to make out. the path continues further on and
+some rustling can be heard in the distance.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+none~
+0
+0 7492
+D1
+~
+none~
+0
+0 7500
+D2
+~
+~
+0
+-1 7501
+S
+#7494
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7477
+D2
+~
+~
+0
+-1 7495
+S
+#7495
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7494
+D2
+~
+~
+0
+-1 7496
+S
+#7496
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7495
+D2
+~
+~
+0
+-1 7497
+S
+#7497
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7496
+D2
+~
+~
+0
+-1 7498
+S
+#7498
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7497
+D1
+~
+none~
+0
+0 7522
+D3
+~
+~
+0
+-1 7499
+S
+#7499
+Hunting Trail~
+A small trail leads through the trees. Strange sounds can be heard coming
+from all around you, a faint smell lingers in the air, it almost smells
+like blood but its to faint to make out. the path continues further on and
+some rustling can be heard in the distance.
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7498
+D3
+~
+~
+0
+-1 7500
+S
+#7500
+Hunting Trail~
+A small trail leads through the trees. Strange sounds can be heard coming
+from all around you, a faint smell lingers in the air, it almost smells
+like blood but its to faint to make out. the path continues further on and
+some rustling can be heard in the distance.
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7499
+D3
+~
+none~
+0
+0 7493
+S
+#7501
+Hunting Trail~
+A small trail leads through the trees. Strange sounds can be heard coming
+from all around you, a faint smell lingers in the air, it almost smells
+like blood but its to faint to make out. the path continues further on and
+some rustling can be heard in the distance.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7493
+D2
+~
+~
+0
+-1 7502
+S
+#7502
+Hunting Trail~
+A small trail leads through the trees. Strange sounds can be heard
+coming
+from all around you, a faint smell lingers in the air, it almost
+smells
+like blood but its to faint to make out. the path continues further on
+and
+some rustling can be heard in the distance.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7501
+D2
+~
+~
+0
+-1 7503
+S
+#7503
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7502
+D1
+~
+~
+0
+-1 7504
+D2
+~
+~
+0
+-1 7523
+S
+#7504
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7505
+D3
+~
+~
+0
+-1 7503
+S
+#7505
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7506
+D3
+~
+~
+0
+-1 7504
+D5
+~
+none~
+0
+0 7554
+S
+#7506
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7507
+D3
+~
+~
+0
+-1 7505
+S
+#7507
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7508
+D3
+~
+~
+0
+-1 7506
+S
+#7508
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7509
+D3
+~
+~
+0
+-1 7507
+S
+#7509
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7510
+D3
+~
+~
+0
+-1 7508
+S
+#7510
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7511
+D3
+~
+~
+0
+-1 7509
+S
+#7511
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7512
+D3
+~
+~
+0
+-1 7510
+S
+#7512
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+none~
+0
+0 7514
+D3
+~
+~
+0
+-1 7511
+S
+#7513
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7514
+D2
+~
+~
+0
+-1 7512
+S
+#7514
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7515
+D2
+~
+none~
+0
+0 7512
+S
+#7515
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7516
+D2
+~
+~
+0
+-1 7514
+S
+#7516
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7515
+D3
+~
+~
+0
+-1 7517
+S
+#7517
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7516
+D3
+~
+~
+0
+-1 7518
+S
+#7518
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7519
+D1
+~
+~
+0
+-1 7517
+D3
+~
+~
+0
+-1 7520
+S
+#7519
+Rest Area~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7518
+D5
+~
+none~
+0
+0 7562
+S
+#7520
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7518
+D3
+~
+~
+0
+-1 7521
+S
+#7521
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7520
+D3
+~
+~
+0
+-1 7522
+S
+#7522
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7521
+D3
+~
+none~
+0
+0 7498
+S
+#7523
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7503
+D2
+~
+~
+0
+-1 7524
+S
+#7524
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7523
+D2
+~
+~
+0
+-1 7525
+S
+#7525
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7524
+D1
+~
+~
+0
+-1 7526
+S
+#7526
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7527
+D3
+~
+~
+0
+-1 7525
+S
+#7527
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7528
+D3
+~
+~
+0
+-1 7526
+S
+#7528
+Old Road~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7529
+D3
+~
+~
+0
+-1 7527
+S
+#7529
+Truck Barracade~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7528
+D2
+~
+~
+0
+-1 7530
+S
+#7530
+Landing pad~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7529
+D1
+~
+~
+0
+-1 7533
+D2
+~
+~
+0
+-1 7539
+D3
+~
+~
+0
+-1 7531
+S
+#7531
+Landing pad~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7530
+D2
+~
+~
+0
+-1 7542
+D3
+~
+~
+0
+-1 7532
+D5
+~
+~
+0
+-1 7546
+S
+#7532
+Landing pad~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7531
+D2
+~
+~
+0
+-1 7544
+S
+#7533
+Landing pad~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7534
+D2
+~
+~
+0
+-1 7537
+D3
+~
+~
+0
+-1 7530
+D5
+~
+none~
+0
+0 7548
+S
+#7534
+Landing pad~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7535
+D3
+~
+~
+0
+-1 7533
+S
+#7535
+Landing pad~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7534
+D2
+~
+~
+0
+-1 7536
+D3
+~
+none~
+0
+0 7537
+S
+#7536
+Landing pad~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7535
+D3
+~
+none~
+0
+0 7538
+S
+#7537
+Landing pad~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7533
+D1
+~
+none~
+0
+0 7535
+D2
+~
+~
+0
+-1 7538
+D3
+~
+none~
+0
+0 7539
+S
+#7538
+Landing pad~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7537
+D1
+~
+none~
+0
+0 7536
+D3
+~
+none~
+0
+0 7540
+S
+#7539
+Landing pad~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7530
+D1
+~
+none~
+0
+0 7537
+D2
+~
+~
+0
+-1 7540
+D3
+~
+none~
+0
+0 7542
+S
+#7540
+Landing pad~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7539
+D1
+~
+none~
+0
+0 7538
+D2
+~
+~
+0
+-1 7541
+D3
+~
+none~
+0
+0 7543
+S
+#7541
+Extraction Zone~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7540
+S
+#7542
+Landing pad~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7531
+D1
+~
+none~
+0
+0 7539
+D2
+~
+~
+0
+-1 7543
+D3
+~
+none~
+0
+0 7544
+S
+#7543
+Landing pad~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7542
+D1
+~
+none~
+0
+0 7540
+D3
+~
+none~
+0
+0 7545
+S
+#7544
+Landing pad~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7532
+D1
+~
+none~
+0
+0 7542
+D2
+~
+~
+0
+-1 7545
+S
+#7545
+Landing pad~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7544
+D1
+~
+none~
+0
+0 7543
+S
+#7546
+Underground Tunnel~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7547
+D4
+~
+~
+0
+-1 7531
+S
+#7547
+Underground Tunnel~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7549
+D1
+~
+~
+0
+-1 7548
+D3
+~
+~
+0
+-1 7546
+S
+#7548
+Underground Tunnel~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 7547
+D4
+~
+none~
+0
+0 7533
+S
+#7549
+Underground Tunnel~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7550
+D2
+~
+~
+0
+-1 7547
+S
+#7550
+Underground Tunnel~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7551
+D2
+~
+~
+0
+-1 7549
+S
+#7551
+Underground Tunnel~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7552
+D2
+~
+~
+0
+-1 7550
+S
+#7552
+Underground Tunnel~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7553
+D2
+~
+~
+0
+-1 7551
+S
+#7553
+Underground Tunnel~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7555
+D2
+~
+~
+0
+-1 7552
+D3
+~
+~
+0
+-1 7554
+S
+#7554
+Underground Tunnel~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7553
+D4
+~
+none~
+0
+0 7505
+S
+#7555
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D0
+~
+~
+0
+-1 7556
+D2
+~
+~
+0
+-1 7553
+S
+#7556
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D0
+~
+~
+0
+-1 7557
+D2
+~
+~
+0
+-1 7555
+S
+#7557
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D0
+~
+~
+0
+-1 7563
+D1
+~
+~
+0
+-1 7558
+D2
+~
+~
+0
+-1 7556
+D3
+~
+~
+0
+-1 7574
+S
+#7558
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D1
+~
+~
+0
+-1 7559
+D3
+~
+~
+0
+-1 7557
+S
+#7559
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D1
+~
+~
+0
+-1 7560
+D3
+~
+~
+0
+-1 7558
+S
+#7560
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D1
+~
+~
+0
+-1 7561
+D3
+~
+~
+0
+-1 7559
+S
+#7561
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D0
+~
+~
+0
+-1 7562
+D3
+~
+~
+0
+-1 7560
+S
+#7562
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D2
+~
+~
+0
+-1 7561
+D4
+~
+none~
+0
+0 7519
+S
+#7563
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D0
+~
+~
+0
+-1 7564
+D2
+~
+~
+0
+-1 7557
+S
+#7564
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D0
+~
+~
+0
+-1 7565
+D2
+~
+~
+0
+-1 7563
+S
+#7565
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D0
+~
+~
+0
+-1 7566
+D2
+~
+~
+0
+-1 7564
+S
+#7566
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D0
+~
+~
+0
+-1 7567
+D2
+~
+~
+0
+-1 7565
+S
+#7567
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D1
+~
+~
+0
+-1 7568
+D2
+~
+~
+0
+-1 7566
+D3
+~
+~
+0
+-1 7570
+S
+#7568
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D1
+~
+~
+0
+-1 7569
+D3
+~
+~
+0
+-1 7567
+S
+#7569
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D3
+~
+~
+0
+-1 7568
+D4
+~
+none~
+0
+0 7479
+S
+#7570
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D1
+~
+~
+0
+-1 7567
+D3
+~
+~
+0
+-1 7571
+S
+#7571
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D0
+~
+~
+0
+-1 7572
+D1
+~
+~
+0
+-1 7570
+S
+#7572
+Underground Tunnel~
+~
+~
+1073938432
+0
+0 1
+D2
+~
+~
+0
+-1 7571
+D4
+~
+none~
+0
+0 7486
+S
+#7573
+Hunting Stand~
+~
+~
+1241579520
+0
+0 1
+D5
+~
+~
+0
+-1 7491
+S
+#7574
+Underground tunnel~
+~
+~
+1073938432
+0
+0 1
+D1
+~
+~
+0
+-1 7557
+D3
+~
+~
+0
+-1 7575
+S
+#7575
+Underground tunnel~
+~
+~
+1073938432
+0
+0 1
+D1
+~
+~
+0
+-1 7574
+D3
+~
+~
+0
+-1 7576
+S
+#7576
+Underground tunnel~
+~
+~
+1610809344
+0
+0 1
+D1
+~
+~
+0
+-1 7575
+S
+#7590
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#0
+
+
+#RESETS
+M 1 7455 1 7462
+E 1 691 1 16
+G 1 692 1
+G 1 692 1
+E 1 666 1 6
+E 1 86 1 5
+E 1 668 1 8
+M 1 7455 2 7458
+E 1 691 1 16
+G 1 692 1
+G 1 692 1
+E 1 668 1 8
+E 1 86 1 5
+E 1 666 1 6
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+M  7458 spec_enemy_scan
+M  7458 spec_enemy_grenade
+S
+
+
+#$

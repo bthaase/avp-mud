@@ -1,0 +1,26 @@
+#ARENA
+Name         Communications Outpost~
+Desc         A USCM Communications Outpost located in the middle of a Jungle. Generally
+considered to be one of the most boring places in the universe to be
+stationed, it has suddenly fallen under attack. 
+ 
+USCM Marines must move in and secure the base. They must maintain the power
+by using the Backup Generator as needed, and keep the Landing Beacon
+online for the Support Dropships to land. 
+ 
+Aliens and Predators must lay siege to the outpost, working their way up
+from the bottom floor to the roof, to disable the landing beacon and
+prevent the marines from getting support. They can also destroy the
+Primary Generator to knock out power to the facility.
+~
+Filename     coutpost~
+Firstroom    7000
+Lastroom     7100
+Timer        40
+Maxsupport   0 5
+Maxsupport   1 5
+Minp         0
+Maxp         30
+End
+
+#END

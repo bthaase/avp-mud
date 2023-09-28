@@ -1,0 +1,32 @@
+# Prerequisites
+src/*.d
+
+# Compiled Object files
+src/*.slo
+src/*.lo
+src/*.o
+src/*.obj
+
+# Precompiled Headers
+src/*.gch
+src/*.pch
+
+# Compiled Dynamic libraries
+src/*.so
+src/*.dylib
+src/*.dll
+
+# Fortran module files
+src/*.mod
+src/*.smod
+
+# Compiled Static libraries
+src/*.lai
+src/*.la
+src/*.a
+src/*.lib
+
+# Executables
+src/*.exe
+src/*.out
+src/*.app

@@ -1,0 +1,583 @@
+#SKILL
+Name         reserved~
+Type         Spell
+Minpos       8
+Wearoff      ???~
+Minlevel     101
+End
+
+#SKILL
+Name         acid potency~
+Type         Skill
+Race         1
+Minlevel     13
+End
+
+#SKILL
+Name         acid spit~
+Type         Skill
+Rounds       12
+Race         1
+Wearoff      &w&CThe pain slowly fades, and your vision returns.~
+Minlevel     8
+End
+
+#SKILL
+Name         acute hearing~
+Type         Skill
+Race         1
+Minlevel     16
+End
+
+#SKILL
+Name         advanced medical~
+Type         Skill
+Rounds       8
+Race         0
+Minlevel     12
+End
+
+#SKILL
+Name         air support~
+Type         Skill
+Rounds       120
+Race         0
+Minlevel     20
+End
+
+#SKILL
+Name         alertness~
+Type         Skill
+Race         0
+Minlevel     8
+End
+
+#SKILL
+Name         alien rage~
+Type         Skill
+Rounds       90
+Race         1
+Wearoff      &w&C(Alien Rage) You feel your frenzy wearing away. You are weaker. ~
+Minlevel     6
+End
+
+#SKILL
+Name         armor (heavy)~
+Type         Skill
+Race         0
+Minlevel     15
+End
+
+#SKILL
+Name         armor (light)~
+Type         Skill
+Race         0
+Code         do_nothing
+Minlevel     2
+End
+
+#SKILL
+Name         armor (medium)~
+Type         Skill
+Race         0
+Minlevel     10
+End
+
+#SKILL
+Name         awareness~
+Type         Skill
+Rounds       3
+Race         0
+Minlevel     9
+End
+
+#SKILL
+Name         basic medical~
+Type         Skill
+Rounds       4
+Race         0
+Minlevel     4
+End
+
+#SKILL
+Name         battle focus~
+Type         Skill
+Rounds       60
+Race         2
+Minlevel     2
+End
+
+#SKILL
+Name         battle method~
+Type         Skill
+Rounds       12
+Race         1
+Minlevel     5
+End
+
+#SKILL
+Name         battlecry~
+Type         Skill
+Rounds       20
+Race         2
+Minlevel     18
+End
+
+#SKILL
+Name         breach~
+Type         Skill
+Rounds       12
+Race         1
+Minlevel     10
+End
+
+#SKILL
+Name         cartography~
+Type         Skill
+Rounds       60
+Race         0
+Minlevel     16
+End
+
+#SKILL
+Name         close-range combat~
+Type         Skill
+Race         2
+Minlevel     8
+End
+
+#SKILL
+Name         confuse~
+Type         Skill
+Rounds       60
+Race         1
+Wearoff      &w&C(Confuse) Your fellow aliens return to the Hive, leaving you to your prey.~
+Minlevel     15
+End
+
+#SKILL
+Name         critical strike~
+Type         Skill
+Rounds       12
+Race         1
+Minlevel     7
+End
+
+#SKILL
+Name         demolitions~
+Type         Skill
+Rounds       12
+Race         0
+Minlevel     14
+End
+
+#SKILL
+Name         dodge~
+Type         Skill
+Rounds       6
+Race         1
+Minlevel     2
+End
+
+#SKILL
+Name         double strike~
+Type         Skill
+Rounds       30
+Race         2
+Minlevel     11
+End
+
+#SKILL
+Name         eagle eye~
+Type         Skill
+Race         0
+Minlevel     5
+End
+
+#SKILL
+Name         electronics~
+Type         Skill
+Rounds       10
+Race         0
+Minlevel     11
+End
+
+#SKILL
+Name         evasive~
+Type         Skill
+Race         1
+Minlevel     3
+End
+
+#SKILL
+Name         friendly fire~
+Type         Skill
+Race         0
+Minlevel     7
+End
+
+#SKILL
+Name         hand weapons~
+Type         Skill
+Race         0
+Minlevel     3
+End
+
+#SKILL
+Name         head bite~
+Type         Skill
+Rounds       12
+Race         1
+Minlevel     14
+End
+
+#SKILL
+Name         human technology~
+Type         Skill
+Race         2
+Minlevel     19
+End
+
+#SKILL
+Name         impale~
+Type         Skill
+Rounds       90
+Race         1
+Minlevel     19
+End
+
+#SKILL
+Name         large spacecraft~
+Type         Skill
+Minpos       5
+Code         do_nothing
+Wearoff      !done!~
+Minlevel     60
+End
+
+#SKILL
+Name         lay eggs~
+Type         Skill
+Rounds       120
+Race         1
+Minlevel     20
+End
+
+#SKILL
+Name         leap~
+Type         Skill
+Minpos       7
+Rounds       8
+Race         1
+Code         do_leap
+Minlevel     9
+End
+
+#SKILL
+Name         logistics~
+Type         Skill
+Rounds       120
+Race         0
+Minlevel     17
+End
+
+#SKILL
+Name         lunge~
+Type         Skill
+Minpos       7
+Rounds       12
+Race         1
+Code         do_lunge
+Minlevel     12
+End
+
+#SKILL
+Name         medical~
+Type         Skill
+Race         2
+Minlevel     7
+End
+
+#SKILL
+Name         medium spacecraft~
+Type         Skill
+Minpos       5
+Code         do_nothing
+Wearoff      !done!~
+Minlevel     30
+End
+
+#SKILL
+Name         morale boost~
+Type         Skill
+Rounds       30
+Race         0
+Minlevel     19
+End
+
+#SKILL
+Name         navigation~
+Type         Skill
+Minpos       5
+Code         do_nothing
+Wearoff      !done!~
+Minlevel     1
+End
+
+#SKILL
+Name         near miss~
+Type         Skill
+Rounds       25
+Race         0
+Minlevel     13
+End
+
+#SKILL
+Name         nightvision~
+Type         Skill
+Race         2
+Minlevel     5
+End
+
+#SKILL
+Name         pheromones~
+Type         Skill
+Rounds       60
+Race         1
+Minlevel     18
+End
+
+#SKILL
+Name         primal instinct~
+Type         Skill
+Rounds       30
+Race         2
+Minlevel     16
+End
+
+#SKILL
+Name         pursuit~
+Type         Skill
+Rounds       6
+Race         1
+Minlevel     17
+End
+
+#SKILL
+Name         rage~
+Type         Skill
+Rounds       120
+Race         2
+Minlevel     14
+End
+
+#SKILL
+Name         ranged combat~
+Type         Skill
+Race         2
+Minlevel     15
+End
+
+#SKILL
+Name         request assistance~
+Type         Skill
+Rounds       120
+Race         0
+Minlevel     18
+End
+
+#SKILL
+Name         selfdestruct~
+Type         Skill
+Race         2
+Minlevel     13
+End
+
+#SKILL
+Name         sharpshooting~
+Type         Skill
+Race         0
+Minlevel     6
+End
+
+#SKILL
+Name         ship maintenance~
+Type         Skill
+Minpos       5
+Code         do_nothing
+Wearoff      !done!~
+Minlevel     25
+End
+
+#SKILL
+Name         ship systems~
+Type         Skill
+Minpos       5
+Code         do_nothing
+Wearoff      !done!~
+Minlevel     1
+End
+
+#SKILL
+Name         shoulder cannon~
+Type         Skill
+Rounds       6
+Race         2
+Code         do_nothing
+Minlevel     6
+End
+
+#SKILL
+Name         sixth sense~
+Type         Skill
+Race         2
+Minlevel     17
+End
+
+#SKILL
+Name         small spacecraft~
+Type         Skill
+Minpos       5
+Code         do_nothing
+Wearoff      !done!~
+Minlevel     1
+End
+
+#SKILL
+Name         space combat 1~
+Type         Skill
+Minpos       5
+Code         do_nothing
+Wearoff      !done!~
+Minlevel     25
+End
+
+#SKILL
+Name         space combat 2~
+Type         Skill
+Minpos       5
+Code         do_nothing
+Wearoff      !done!~
+Minlevel     50
+End
+
+#SKILL
+Name         space combat 3~
+Type         Skill
+Minpos       5
+Code         do_nothing
+Wearoff      !done!~
+Minlevel     75
+End
+
+#SKILL
+Name         stealth~
+Type         Skill
+Race         1
+Minlevel     11
+End
+
+#SKILL
+Name         tail slam~
+Type         Skill
+Rounds       6
+Race         1
+Minlevel     4
+End
+
+#SKILL
+Name         track~
+Type         Skill
+Rounds       4
+Race         2
+Minlevel     3
+End
+
+#SKILL
+Name         tractor beams~
+Type         Skill
+Minpos       5
+Code         do_nothing
+Wearoff      !done!~
+Minlevel     35
+End
+
+#SKILL
+Name         trap setting~
+Type         Skill
+Rounds       10
+Race         2
+Minlevel     10
+End
+
+#SKILL
+Name         tumble~
+Type         Skill
+Rounds       25
+Race         2
+Minlevel     9
+End
+
+#SKILL
+Name         upgradeship~
+Type         Skill
+Minlevel     73
+End
+
+#SKILL
+Name         venom cloud module~
+Type         Skill
+Rounds       60
+Race         2
+Minlevel     12
+End
+
+#SKILL
+Name         vision modes~
+Type         Skill
+Race         2
+Minlevel     4
+End
+
+#SKILL
+Name         weapon systems~
+Type         Skill
+Minpos       5
+Code         do_nothing
+Wearoff      !done!~
+Minlevel     2
+End
+
+#SKILL
+Name         vibro-blades~
+Type         Weapon
+Minpos       7
+Wearoff      !Vibro-Blades!~
+Minlevel     1
+End
+
+#SKILL
+Name         alien~
+Type         Tongue
+Code         do_nothing
+Wearoff      !alien!~
+Minlevel     1
+End
+
+#SKILL
+Name         marine~
+Type         Tongue
+Code         do_nothing
+Wearoff      !marine!~
+Minlevel     1
+End
+
+#SKILL
+Name         predator~
+Type         Tongue
+Code         do_nothing
+Wearoff      !predator!~
+Minlevel     1
+End
+
+#END

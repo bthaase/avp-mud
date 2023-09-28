@@ -1,0 +1,2 @@
+[*****] BOOT: ---------------------[ Boot Log ]--------------------
+[*****] BOOT: COPYOVER STATE: Offline 

@@ -1,0 +1,14 @@
+#ARENA
+Name         LV-426~
+Desc         Semi-abandonded Marine base on LV-426.~
+Filename     lv426~
+Firstroom    1822
+Lastroom     1971
+Timer        20
+Maxsupport   0 5
+Maxsupport   1 5
+Minp         10
+Maxp         30
+End
+
+#END

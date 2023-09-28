@@ -1,0 +1,1 @@
+valgrind -v --leak-check=yes --leak-resolution=high --error-limit=no --trace-children=yes --logfile=ValgrindAVP ../src/avp 7000

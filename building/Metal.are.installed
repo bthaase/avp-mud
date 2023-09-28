@@ -1,0 +1,3691 @@
+#AREA   {PROTO} Metal's area in progress~
+
+#VERSION 4
+
+#AUTHOR Metal~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#5801
+Scared Crewmember~
+A Scared Crewmember~
+A Scared Crewmember is nervously twitching
+~
+This member of the crew is scared shitless after the tragic incident of the
+Ebekenezzer. 
+~
+0
+335544323
+Z
+1 8 8 0
+20 10 10 10 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> rand_prog 1~
+say SAVE ME JEBUS!
+~
+> rand_prog 1~
+twitch
+say Ahhhhh!
+~
+|
+#5802
+chief engineer pulski~
+Chief Engineer Pulski~
+Chief Engineer Pulski is here, desperately trying to build an escape ship.
+~
+Chief Engineer Pulski is frantically trying to build an escape ship for
+herself and the remaining members of the crew. 
+~
+0
+67108867
+Z
+1 8 8 2
+10 10 10 20 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> all_greet_prog 100~
+say ARGH! I'll never finish this ship!
+curse
+say There's just too many parts missing. I need help!
+~
+> act_prog 'gives you A Container of Industrial Grade Fuel.'~
+if ovnuminv(5820) >=1
+say Fuel for the escape!
+grin
+mpat 6 drop fuel
+mpgain $n 1 400
+else
+say I don't want this!
+endif
+~
+> act_prog 'gives you A Large MRE (Meals Ready to Eat) Packet.'~
+if ovnuminv(5821) >=1
+say Ahhh food!
+smile
+mpat 6 drop mre
+mpgain $n 1 400
+else
+say I don't want this!
+endif
+~
+> act_prog 'gives you A High Voltage Resistor.'~
+if ovnuminv(5819) >=1
+say Great!Now our ship won't set on fire!
+cackle
+mpat 6 drop resistor
+mpgain $n 1 400
+else
+say I don't want this!
+endif
+~
+> act_prog 'gives you High Density Power Coupling.'~
+if ovnuminv(5818) >=1
+say Now I can finish the engine. Good.
+mpat 6 drop coupling
+mpgain $n 1 400
+else
+say I don't want this!
+endif
+~
+|
+#5803
+yautja predator scout~
+Yautja Scout~
+A Yautja Scout is on the lookout for prey
+~
+This young Yautja scout is eagerly looking to bag it's first kill. 
+~
+0
+67108865
+Z
+1 8 8 0
+20 10 10 10 20 20
+2 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#5804
+alien warrior~
+&zAlien Warrior~
+&zAn Alien Warrior stands fast and defends its territory
+~
+~
+0
+67108865
+Z
+1 8 8 0
+25 20 10 10 20 10
+1 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#6001
+placeholder~
+a newly created placeholder~
+Some god abandoned a newly created placeholder here.
+~
+~
+0
+67108865
+S
+1 8 8 0
+#0
+
+
+#OBJECTS
+#5801
+Captains Captain's Chair~
+The Captain's Chair~
+The badly worn Captain's Chair is here~
+~
+25
+1024
+0
+5 1 10 200 200 0
+1 0 0
+#5802
+makeshift metal scrap barricade~
+A Makeshift Barricade~
+A makeshift barricade of scrap metal is here.~
+~
+25
+1024
+0
+25 2 20 300 300 0
+250 0 0
+#5803
+wall plating piece~
+Wall Plating~
+A portrudng piece of wall plating impedes you.~
+~
+25
+1024
+0
+5 2 5 75 75 0
+10 0 0
+#5804
+engine reactor~
+An Engine Reactor~
+A slightly used Engine Reactor~
+~
+25
+1025
+0
+40 2 20 225 225 1
+2000 0 0
+#5805
+power generator main remnants~
+Remnants of the Main Power Generator~
+The remnants of the Main Power Generator is burned into the deck.~
+~
+25
+1024
+0
+5 2 10 50 1000 4
+1000 0 0
+#5806
+secondary power generator~
+The Secondary Power Generator~
+The Secondary Power Generator quietly sits here.~
+~
+4
+1027
+0
+0 0 0 0 0 0
+1 0 0
+#5807
+alcohol crate~
+A Crate Full of Alcohol~
+A crate full of Alcohol(!) just sits here going to waste.~
+~
+25
+1025
+0
+15 5 15 250 250 3
+1 0 0
+> use_prog 100~
+mpecho The crate bursts open, revealing several beer kegs!
+mpoload 5808
+mpoload 5808
+drop beer
+drop beer
+~
+|
+#5808
+beer keg~
+A keg of Beer~
+A keg of frothy beer is just sitting here.~
+~
+8
+1025
+1
+500 500 1 1000 0 0
+10 125 12
+#5809
+fuel container~
+A Fuel Container~
+A Fuel Container is filled to the brim and ripe for explosion~
+~
+25
+1024
+0
+15 2 15 250 250 1
+31 0 0
+#5810
+small unfinished ship~
+A small unfinished ship~
+A small unfinished ship is the last hope for the survivors~
+~
+4
+1024
+0
+0 0 0 0 0 0
+1 0 0
+#5811
+book crate~
+A Book Crate~
+A Crate filled with Books is here~
+~
+25
+1024
+0
+15 5 15 250 250 3
+1 0 0
+E
+book crate~
+~
+> use_prog 100~
+mpecho The crate bursts open, spilling out several the contents!
+mpoload 5812
+mpoload 5813
+drop porno
+drop bio
+~
+|
+#5812
+ellen ripley biography~
+A Biography of Ellen Ripley~
+A biography on a woman is here.~
+~
+5
+1024
+16385
+0 0 0 0 0 0
+2 15 5
+E
+ellen ripley biography~
+This biography is on Ellen Ripley, survivor of the first encounter with the
+aliens. It describes her life and has some pretty neat full color photos.
+421 pages total. Price: $25.95 
+~
+#5813
+pornography magazine~
+A Pornography Magazine~
+A porno magazine was carelessly thrown here.~
+~
+5
+1024
+1
+0 0 0 0 0 0
+1 10 6
+E
+pornography magazine~
+This magazine has many nice pictures of naked women in it. 50 pages. Price
+$30.00 
+~
+#5814
+cargo crate~
+A Cargo Crate~
+A Cargo Crate has been placed here.~
+~
+25
+1024
+0
+15 5 15 250 250 3
+1 0 0
+> use_prog 100~
+mpecho The contents of the cargo crate are destroyed!
+~
+|
+#5815
+biohazardous crate~
+A Biohazard Crate~
+A crate containing Biohazardous material is here.~
+~
+25
+0
+0
+15 5 20 250 250 3
+1 0 0
+> use_prog 100~
+mpecho The crate bursts open and releases poop all over you!
+mpoload 5816
+mpoload 5816
+drop poop
+drop poop
+~
+|
+#5816
+munitions crate~
+A Munitions Crate~
+An almost depleted Munitions Crate is here.~
+~
+25
+1024
+0
+15 5 15 250 250 3
+1 0 0
+> use_prog 100~
+mpecho The munitions crate falls apart and some items fall out.
+mpoload 686
+mpoload 679
+mpoload 1724
+drop 9mm
+drop slugshot
+drop s-7
+~
+|
+#5817
+toolkit~
+A multi-purpose Toolkit~
+A toolkit is here.~
+~
+5
+1024
+16385
+0 0 0 0 0 0
+1 0 0
+#5818
+high density power coupling~
+High Density Power Coupling~
+A coil of metallic wires is here.~
+~
+5
+1025
+1
+0 0 0 0 0 0
+10 0 0
+#5819
+high voltage resistor~
+A High Voltage Resistor~
+A large cynlindrical object with bent metal wires at the end is here~
+~
+5
+1025
+1
+0 0 0 0 0 0
+10 0 0
+#5820
+container industrial grade fuel~
+A Container of Industrial Grade Fuel~
+A slightly damage container containing fuel has been left here.~
+~
+5
+1025
+1
+0 0 0 0 0 0
+25 0 0
+#5821
+large MRE packet~
+A Large MRE (Meals Ready to Eat) Packet~
+A largr brown packet has been carelessly thrown here.~
+~
+5
+1
+1
+0 0 0 0 0 0
+10 0 0
+#5822
+camera console connecting joint~
+Connecting Joint Camera Console~
+The Camera Console for the Connecting Joint is here.~
+~
+5
+1049600
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+mpechoat $n You take a glance at the camera console. 
+mptransfer $n 5824
+mpat 5824 mpforce $n glance 
+mpat 5824 mptransfer $n 5810
+~
+> useoff_prog 100~
+mea $n The camera screen goes blank.
+~
+|
+#5823
+camera console secondary power generator~
+Secondary Power Generator Camera Console~
+A Camera Console for the Secondary Power Generator is here.~
+~
+5
+1049600
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+mea $n You take a glance at the camera console. 
+mptransfer $n 5841
+mpat 5841 mpforce $n glance 
+mpat 5841 mptransfer $n 5811
+~
+> useoff_prog 100~
+mea $n The camera screen goes blank.
+~
+|
+#5824
+camera console incubation chamber~
+The Incubation Chamber's Camera Console~
+The Camera Console for the Incubation Chamber is here.~
+~
+5
+1049600
+0
+0 0 0 0 0 0
+1 0 0
+> useoff_prog 100~
+mea $n The camera screen goes blank.
+~
+> useon_prog 100~
+mea $n You take a glance at the camera console. 
+mptransfer $n 5913
+mpat 5913 mpforce $n glance 
+mpat 5913 mptransfer $n 5808
+~
+|
+#5825
+camera console docking port~
+A Docking Port Camera Console~
+A Camera Console for the Docking Port is here.~
+~
+5
+1049600
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+mea $n You take a glance at the camera console. 
+mptransfer $n 5853
+mpat 5853 mpforce $n glance 
+mpat 5853 mptransfer $n 5809
+~
+> useoff_prog 100~
+mea $n The camera screen goes blank.
+~
+|
+#6001
+placeholder~
+a placeholder~
+A placeholder is here.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#5801
+&BCaptain's Chair~
+&WThe worn chair of the Captain of the Ebekenezzer is barely standing on
+its on. The chair is stained by a number of liquids, both secreted by the
+human body and not.  It seems that the late Captain was very fat, because
+the chair has a heavy indentation.
+~
+&GIcky dark greenish goo hangs from the ceiling. Some of the goo slowly
+drips down onto the deck. The Captain's Chair has been covered by the
+green slime, and there are a few objects, objects that look like eggs,
+implant on it.
+~
+1090584584&16
+0
+0 1
+D0
+~
+~
+0
+-1 5804
+D2
+~
+~
+0
+-1 5805
+S
+#5802
+&BShip Communications Center~
+&WThe Communications Center is little more than a large computer hooked
+into the ship mainframe. Most of the equipment required for inter system
+communications has been destroyed or salvaged into other parts. What is
+left can only be used for intraship communications. 
+~
+&GA green ooze covers the Communications Computer, but the computer is
+still functional for intraship communications. The deck is very sticky,
+and there are traces of blood, human blood, spilled. The deck is dissolved
+by some kind of acid in some spots.
+~
+1073807368
+0
+0 1
+D3
+~
+~
+0
+-1 5804
+S
+#5803
+&BSpace Guidance Control Systems~
+&WThe Space Guidance Control Systems are completely destroyed. The remains
+are scorched, sugesting some kind of fire of a grenade perhaps.  No one
+bothered to salvage any parts because all the parts are completely burned.
+Without the guidance system, this ship will aimlessly float in the stars
+forever. 
+~
+&GVery little of the green slime covers the burned out guidance control
+systems. The slime appears to dislike burned things.  There appears to be
+attempts to convert the scorched system, with no avail.
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5804
+S
+#5804
+&BBridge Viewport~
+&WFrom here you can see what is directly infront of the ship out in the
+vastness of space. Right now, nothing is out there, just millions upon
+millions of stars and the empty blackness. There are no planets or suns
+nearby. This ship is doomed to be drifting through space for all eternity
+unless someone helps it. 
+~
+&GThe viewport is almost complete covered except for a few spots. Through
+these few spots you see the great stars and the great vast emptiness of
+space.  There is no other celestial object near the ship. 
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5802
+D2
+~
+~
+0
+-1 5801
+D3
+~
+~
+0
+-1 5803
+S
+#5805
+&BBridge of the Ebekenezzer~
+&WThe deck plating groans as you walk on it. The bridge looks like it has
+been through a bad fire or some explosions. Most of the bridge is badly
+scorched, although there are a few things that have been replaced and some
+that were never damage. Although crippled by whatever happened here, the
+ship structure still holds strong and holds back the vacuum of space.
+~
+&GA thick green slime covers the walls, the ceiling, and the deck.  It
+impedes movement and induces a sense of clausterphobia.  Once in a while
+the slime drips down onto the ground. There are spots were the deck has
+been dissolved by some kind of acid.
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5801
+D1
+~
+~
+0
+-1 5808
+D2
+~
+~
+0
+-1 5806
+D3
+~
+~
+0
+-1 5809
+S
+#5806
+&BBridge of the Ebekenezzer~
+&WThe deck plating groans as you walk on it. The bridge looks like it has
+been through a bad fire or some explosions. Most of the bridge is badly
+scorched, although there are a few things that have been replaced and some
+that were never damage. Although crippled by whatever happened here, the
+ship structure still holds strong and holds back the vacuum of space.
+~
+&GA thick green slime covers the walls, the ceiling, and the deck.  It
+impedes movement and induces a sense of clausterphobia.  Once in a while
+the slime drips down onto the ground. There are spots were the deck has
+been dissolved by some kind of acid. 
+~
+1078001672
+0
+0 1
+D0
+~
+~
+0
+-1 5805
+D1
+~
+~
+0
+-1 5810
+D2
+~
+~
+0
+-1 5807
+D3
+~
+~
+0
+-1 5811
+S
+#5807
+&BBridge of the Ebekenezzer~
+&WThe deck plating groans as you walk on it. The bridge looks like it has
+been through a bad fire or some explosions. Most of the bridge is badly
+scorched, although there are a few things that have been replaced and some
+that were never damage. Although crippled by whatever happened here, the
+ship structure still holds strong and holds back the vacuum of space.
+~
+&GA thick green slime covers the walls, the ceiling, and the deck.  It
+impedes movement and induces a sense of clausterphobia.  Once in a while
+the slime drips down onto the ground. There are spots were the deck has
+been dissolved by some kind of acid.  
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5806
+D2
+~
+~
+0
+-1 5812
+S
+#5808
+&BShip Control Station~
+&WThis station controls a section of the ship. It has beeping monitors with
+flashing buttons that make noises each time they're pushed. It appears
+that no one has used this station in a while because of all the dusty on
+the buttons. There is also a large viewscreen here showing one of the
+sections of the ship.
+~
+&GIt looks as if someone took a big poop and the poop was green and they
+couldn't aim. Green slime is randomly slopped in places. In some places
+theres huge chunks, while others theres barely any. The beeping monitors
+and flashing buttons are still operational, even if they are a bit icky.
+~
+1073807368
+0
+0 1
+D3
+~
+~
+0
+-1 5805
+S
+#5809
+&BShip Control Station~
+&WThis station controls a section of the ship. It has beeping monitors with
+flashing buttons that make noises each time they're pushed. It appears
+that no one has used this station in a while because of all the dusty on
+the buttons. There is also a large viewscreen here showing one of the
+sections of the ship. 
+~
+&GIt looks as if someone took a big poop and the poop was green and they
+couldn't aim. Green slime is randomly slopped in places. In some places
+theres huge chunks, while others theres barely any. The beeping monitors
+and flashing buttons are still operational, even if they are a bit icky.
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5805
+S
+#5810
+&BShip Control Station~
+&WThis station controls a section of the ship. It has beeping monitors with
+flashing buttons that make noises each time they're pushed. It appears
+that no one has used this station in a while because of all the dusty on
+the buttons. There is also a large viewscreen here showing one of the
+sections of the ship.
+~
+&GIt looks as if someone took a big poop and the poop was green and they
+couldn't aim. Green slime is randomly slopped in places. In some places
+theres huge chunks, while others theres barely any. The beeping monitors
+and flashing buttons are still operational, even if they are a bit icky.
+~
+1073807368
+0
+0 1
+D3
+~
+~
+0
+-1 5806
+S
+#5811
+&BShip Control Station~
+&WThis station controls a section of the ship. It has beeping monitors with
+flashing buttons that make noises each time they're pushed. It appears
+that no one has used this station in a while because of all the dusty on
+the buttons. There is also a large viewscreen here showing one of the
+sections of the ship.
+~
+&GIt looks as if someone took a big poop and the poop was green and they
+couldn't aim. Green slime is randomly slopped in places. In some places
+theres huge chunks, while others theres barely any. The beeping monitors
+and flashing buttons are still operational, even if they are a bit icky.
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5806
+S
+#5812
+&BIntersection~
+&WThe deck plating here is very worn, worn enough that it makes a path that
+strays away from the edges.  On the ceiling, in the center, is a beautiful
+glass chandelier. Although the chandelier is beautiful, it seems oddly out
+of place in this dead ship drifting aimlessly.
+~
+&GA thick green slime covers the walls, the ceiling, and the deck.  It
+impedes movement and induces a sense of clausterphobia.  Once in a while
+the slime drips down onto the ground. There are spots were the deck has
+been dissolved by some kind of acid. The chandelier attached to the
+ceiling is covered wih a great deal of slime is constantly drips.
+~
+1078001672
+0
+0 1
+D0
+~
+~
+0
+-1 5807
+D1
+~
+~
+0
+-1 5816
+D2
+~
+~
+0
+-1 5818
+D3
+~
+~
+0
+-1 5813
+S
+#5813
+&BDecorated Hallway~
+&WThere are portraits of famous people throughout history hung on the
+walls. The portrait's frames are studded with fabulous jewels. The frames
+themselves are very shiny and appear to be made out of solid 24K platinum
+gold. The floor is carpetted with a rich scarlet velvet that goes the
+entire length of the hallway. 
+~
+&GThe portraits of famous people through history has been replaced with
+pictures of aliens killing people and of aliens killing predators. Skulls
+of humans and other animals are hanging from the ceiling. The velvet
+carpet has been replaced by a carpet of human skin still fresh from the
+body.
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5812
+D3
+~
+~
+0
+-1 5814
+S
+#5814
+&BCaptain's Chambers~
+&WThe walls are chamber are gold! Rich, pure, &YGOLD&W! There are carvings
+of who appears to be the captain killing aliens and hunting animals on the
+walls.  The captain is muscle bound, tall, and handsome, all of which is
+fake considering that he is the captain of this piece of crap ship.
+~
+&GThe pure gold walls have been replaced with pure silver. Carvings of
+aliens massacring humans and predators have replaced the intricate scenes
+of the captain.  Slime lines the ceiling and puddles of red blood are on
+the ground.
+~
+1078001672
+0
+0 1
+D1
+~
+~
+0
+-1 5813
+D3
+~
+~
+2051&1
+-1 5815
+S
+#5815
+&BCaptain's Secret Stash~
+&WThe captain's secret stash of porno mags, alcohol, and sex toys! 
+~
+&GWow, looks like the aliens stole the Captain's stash of porno mags,
+alcohol, and sex toys. 
+~
+1073807368
+0
+0 1
+D1
+~
+~
+3
+-1 5814
+S
+#5816
+&BDilapidated Hallway~
+&WThis hallway is in a complete state of &OCRAP&W. The deck plating is
+worn, and in some places it is missing altogether. Some of the wall
+plating sticks out, portruding into the hallway. The ceiling is sagging
+and looks as if it's about to collapse any minute.
+~
+&GThis hallway is in a complete state of alien &Ocrap&G. The spots that are
+missing in the deck plating have been filled in with alien slime. The
+ceiling has been reinforced with hard, crusty alien goo. The walls are
+still sticking out, causing a navigational hazard.
+~
+1073807368
+0
+0 1
+D1
+~
+~
+3
+-1 5817
+D2
+~
+~
+0
+-1 5875
+D3
+~
+~
+0
+-1 5812
+S
+#5817
+&BCrew Quarters~
+&WThe crew quarter is very plain and unattractive. The bunkbeds are lined
+up in grids.  The beds are a dull white with just a pillow and blankets.
+There are large pictures of naked women pinned up on the ceiling and
+walls. 
+~
+&GThe plain and attractive crew quarter has been redecorate to suit alien
+tastes.  The bunkbeds are now warmed by hot steamy alien goo. The dull
+white beds have been stained green.  Pictures of sexy aliens now hang on
+the ceiling and walls. 
+~
+1078001672
+0
+0 1
+D3
+~
+~
+3
+-1 5816
+S
+#5818
+&BEntrance to the Bridge~
+&WThe walls are stained with blood, red, human blood. It also looks like
+there has been some pretty grenades that have been set off here. Although
+the entire room is pretty banged up, the blast door appears to be brand
+new. The blast door is a little large, indicating that it might not have
+been originally made to be used here.
+~
+&GThe walls have been painted with fresh human blood. There are a few
+chunks of flesh stuck onto the green slime walls.  Shapes of humans and
+aliens have been etched onto the blast door.  The floor is covered with a
+layer of goo, making your footsteps sink in.
+~
+1078001672
+0
+0 1
+D0
+~
+~
+0
+-1 5812
+D5
+~
+~
+8388643&1
+-1 5819
+S
+#5819
+&BEntrance to the Bridge~
+&WThe walls are stained with blood, red, human blood. It also looks like
+there has been some pretty grenades that have been set off here. Although
+the entire room is pretty banged up, the blast door appears to be brand
+new. The blast door is a little large, indicating that it might not have
+been originally made to be used here.
+~
+&GThe walls have been painted with fresh human blood. There are a few
+chunks of flesh stuck onto the green slime walls.  Shapes of humans and
+aliens have been etched onto the blast door.  The floor is covered with a
+layer of goo, making your footsteps sink in. 
+~
+1073807368
+0
+0 1
+D2
+~
+~
+0
+-1 5820
+D4
+~
+~
+8388643&1
+-1 5818
+S
+#5820
+&BBarricaded Corridor~
+&WMakeshift barricades have been put up here to protect from any
+intrusions. The walls have been reinforced with a patchwork of armored
+platings. The plating is scorched with shrapnel and alien acid blood.
+There are large cracks and splits in the deck of the corridor, suggesting
+and directed burst from an energy grenade.
+~
+~
+1111556104
+0
+0 1
+D0
+~
+~
+0
+-1 5819
+D2
+~
+~
+0
+-1 5821
+S
+#5821
+&cCorridor Cyan~
+&cThis is the main corridor of the ship. It connects this part of the ship
+to the rest of the ship. The corridor is relatively clean and free of
+damage.  It's as if no one has used this hallway in a while. There are
+pipes that run the entire length of the corridor. The lights here are dim
+and some are blackened out.  
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5820
+D1
+~
+~
+0
+-1 5842
+D2
+~
+~
+0
+-1 5822
+S
+#5822
+&cCorridor Cyan~
+&cThis is the main corridor of the ship. It connects this part of the ship
+to the rest of the ship. The corridor is relatively clean and free of
+damage.  It's as if no one has used this hallway in a while. There are
+pipes that run the entire length of the corridor. The lights here are dim
+and some are blackened out.  
+~
+~
+1111556104
+0
+0 1
+D0
+~
+~
+0
+-1 5821
+D2
+~
+~
+0
+-1 5823
+D3
+~
+~
+0
+-1 5861
+S
+#5823
+&cCorridor Cyan~
+&cThis is the main corridor of the ship. It connects this part of the ship
+to the rest of the ship. The corridor is relatively clean and free of
+damage.  It's as if no one has used this hallway in a while. There are
+pipes that run the entire length of the corridor. The lights here are dim
+and some are blackened out.  
+~
+~
+1111556104
+0
+0 1
+D0
+~
+~
+0
+-1 5822
+D1
+~
+~
+0
+-1 5877
+D2
+~
+~
+1&3
+-1 5824
+S
+#5824
+&CConnecting Joint~
+&WThis magnetically sealed room connects the aft section of the ship to the
+fore section.  The walls are a thick black.  The walls, ceiling, and
+ground is very smooth, almost icelike slick. The blackness of the walls
+absorbs the light coming from both ends of the corridor.
+~
+~
+1111556105
+0
+0 1
+D0
+~
+~
+1&3
+-1 5823
+D2
+~
+~
+1&3
+-1 5825
+S
+#5825
+&pCorridor Purple~
+&pThis is the main corridor of the ship. It connects this part of the ship
+to the rest of the ship. The corridor is relatively clean and free of
+damage.  It's as if no one has used this hallway in a while. There are
+pipes that run the entire length of the corridor. The lights here are dim
+and some are blackened out.  
+~
+~
+1111556104
+0
+0 1
+D0
+~
+~
+1&3
+-1 5824
+D2
+~
+~
+0
+-1 5826
+D3
+~
+~
+0
+-1 5889
+S
+#5826
+&pCorridor Purple~
+&pThis is the main corridor of the ship. It connects this part of the ship
+to the rest of the ship. The corridor is relatively clean and free of
+damage.  It's as if no one has used this hallway in a while. There are
+pipes that run the entire length of the corridor. The lights here are dim
+and some are blackened out.  
+~
+~
+1111556104
+0
+0 1
+D0
+~
+~
+0
+-1 5825
+D1
+~
+~
+0
+-1 5902
+D2
+~
+~
+0
+-1 5827
+S
+#5827
+&pCorridor Purple~
+&pThis is the main corridor of the ship. It connects this part of the ship
+to the rest of the ship. The corridor is relatively clean and free of
+damage.  It's as if no one has used this hallway in a while. There are
+pipes that run the entire length of the corridor. The lights here are dim
+and some are blackened out.  
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5826
+D2
+~
+~
+0
+-1 5828
+D3
+~
+~
+0
+-1 5914
+S
+#5828
+&RBarricaded Corridor~
+&WMakeshift barricades have been put up here to protect from any
+intrusions. The walls have been reinforced with a patchwork of armored
+platings. The plating is scorched with shrapnel and alien acid blood.
+There are large cracks and splits in the deck of the corridor, suggesting
+and directed burst from an energy grenade.
+~
+~
+1111556104
+0
+0 1
+D0
+~
+~
+0
+-1 5827
+D2
+~
+~
+0
+-1 5829
+S
+#5829
+&REntrance to Engineering~
+&WThe walls are stained with blood, red, human blood. It also looks like
+there has been some pretty grenades that have been set off here. Although
+the entire room is pretty banged up, the blast door appears to be brand
+new. The blast door is a little large, indicating that it might not have
+been originally made to be used here.  &R(The entrance to engineering is
+stuck, perhaps an explosion would open it.)
+~
+&GThe walls have been painted with fresh human blood. There are a few
+chunks of flesh stuck onto the green slime walls.  Shapes of humans and
+aliens have been etched onto the blast door.  The floor is covered with a
+layer of goo, making your footsteps sink in. 
+~
+1078001672
+0
+0 1
+D0
+~
+~
+0
+-1 5828
+D5
+~
+~
+1082130432&2
+-1 5830
+S
+#5830
+&REntrance to Engineering~
+&WThe walls are stained with blood, red, human blood. It also looks like
+there has been some pretty grenades that have been set off here. Although
+the entire room is pretty banged up, the blast door appears to be brand
+new. The blast door is a little large, indicating that it might not have
+been originally made to be used here. &R(The entrance to engineering is
+stuck, perhaps an explosion would open it.)
+~
+&GThe walls have been painted with fresh human blood. There are a few
+chunks of flesh stuck onto the green slime walls.  Shapes of humans and
+aliens have been etched onto the blast door.  The floor is covered with a
+layer of goo, making your footsteps sink in. 
+~
+1078001672
+0
+0 1
+D2
+~
+~
+0
+-1 5831
+D4
+~
+~
+1082130432&2
+-1 5829
+S
+#5831
+&REngineering Intersection~
+&WPieces of the ceiling are missing, pieces of the deck are missing, the
+wall plating is missing, this place is in a really bad condition.  It
+looks as though someone has tried to make repairs using glue and plastic
+wood. The only things that are undamaged are the anti magnetic linings in
+the walls. 
+~
+&GPieces of the ceiling are missing, pieces of the deck are missing, the
+wall plating is missing, this place is in a really bad condition.  It
+looks as though someone has tried to make repairs using glue and plastic
+wood. Aliens have also helped with the repairing process by adding their
+own secretations. 
+~
+1078001672
+0
+0 1
+D0
+~
+~
+0
+-1 5830
+D1
+~
+~
+0
+-1 5832
+D2
+~
+~
+0
+-1 5838
+D3
+~
+~
+0
+-1 5835
+S
+#5832
+&RMagnetic Protection Room~
+&WThis room is cylindrical in shape. The 'walls' are actually large square
+slabs of magnetically charged metal.  The artificial magnetic field
+generated from the spinning walls was designed to protect the ship from
+the radiation of the engines.   The only place that is walkable here is
+the ceramic walkway upon which you stand.
+~
+&GThis room is cylindrical in shape. The 'walls' are actually large square
+slabs of magnetically charged metal.  The artificial magnetic field
+generated from the spinning walls was designed to protect the ship from
+the radiation of the engines.  It seems aliens have reinforced the walkway
+and made it larger. 
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5833
+D3
+~
+~
+0
+-1 5831
+S
+#5833
+&RMagnetic Protection Room~
+&WThis room is cylindrical in shape. The 'walls' are actually large square
+slabs of magnetically charged metal.  The artificial magnetic field
+generated from the spinning walls was designed to protect the ship from
+the radiation of the engines.   The only place that is walkable here is
+the ceramic walkway upon which you stand.
+~
+&GThis room is cylindrical in shape. The 'walls' are actually large square
+slabs of magnetically charged metal.  The artificial magnetic field
+generated from the spinning walls was designed to protect the ship from
+the radiation of the engines.  It seems aliens have reinforced the walkway
+and made it larger.  
+~
+1073807368
+0
+0 1
+D3
+~
+~
+0
+-1 5832
+D8
+~
+~
+0
+-1 5834
+S
+#5834
+&REngine Reactor 2~
+&WThis enormous room houses one of the ship's two engines. The engines have
+to be monitored constantly, or else they explode or go offline, in which
+case this one did.  The control panels and most of the circuits are
+completely destroyed, obliterating any hope of ever repairing the engine
+with any of the parts on board. The engine seems be in a stable condition.
+~
+&GThis enormous room houses one of the ship's two engines. The engines have
+to be monitored constantly, or else they explode or go offline, in which
+case this one did. Aliens have tried to 'repair' the engine, with no
+avail. It's a good thing no alien acid blood is on the engine, otherwise
+it would surely cause a massive explosion. 
+~
+1073807368
+0
+0 1
+D7
+~
+~
+0
+-1 5833
+S
+#5835
+&RMagnetic Protection Room~
+&WThis room is cylindrical in shape. The 'walls' are actually large square
+slabs of magnetically charged metal.  The artificial magnetic field
+generated from the spinning walls was designed to protect the ship from
+the radiation of the engines.   The only place that is walkable here is
+the ceramic walkway upon which you stand.
+~
+&GThis room is cylindrical in shape. The 'walls' are actually large square
+slabs of magnetically charged metal.  The artificial magnetic field
+generated from the spinning walls was designed to protect the ship from
+the radiation of the engines.  It seems aliens have reinforced the walkway
+and made it larger.  
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5831
+D3
+~
+~
+0
+-1 5836
+S
+#5836
+&RMagnetic Protection Room~
+&WThis room is cylindrical in shape. The 'walls' are actually large square
+slabs of magnetically charged metal.  The artificial magnetic field
+generated from the spinning walls was designed to protect the ship from
+the radiation of the engines.   The only place that is walkable here is
+the ceramic walkway upon which you stand.
+~
+&GThis room is cylindrical in shape. The 'walls' are actually large square
+slabs of magnetically charged metal.  The artificial magnetic field
+generated from the spinning walls was designed to protect the ship from
+the radiation of the engines.  It seems aliens have reinforced the walkway
+and made it larger.  
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5835
+D9
+~
+~
+0
+-1 5837
+S
+#5837
+&REngine Reactor 1~
+&WThis enormous room houses one of the ship's two engines. The engines have
+to be monitored constantly, or else they explode or go offline, in which
+case this one did.  The control panels and most of the circuits are
+completely destroyed, obliterating any hope of ever repairing the engine
+with any of the parts on board. The engine seems be in a stable condition.
+~
+&GThis enormous room houses one of the ship's two engines. The engines have
+to be monitored constantly, or else they explode or go offline, in which
+case this one did. Aliens have tried to 'repair' the engine, with no
+avail. It's a good thing no alien acid blood is on the engine, otherwise
+it would surely cause a massive explosion.  
+~
+1073807368
+0
+0 1
+D6
+~
+~
+0
+-1 5836
+S
+#5838
+&RMagnetic Protection Room~
+&WThis room is cylindrical in shape. The 'walls' are actually large square
+slabs of magnetically charged metal.  The artificial magnetic field
+generated from the spinning walls was designed to protect the ship from
+the radiation of the engines.   The only place that is walkable here is
+the ceramic walkway upon which you stand. 
+~
+&GThis room is cylindrical in shape. The 'walls' are actually large square
+slabs of magnetically charged metal.  The artificial magnetic field
+generated from the spinning walls was designed to protect the ship from
+the radiation of the engines.  It seems aliens have reinforced the walkway
+and made it larger. 
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5831
+D2
+~
+~
+0
+-1 5839
+S
+#5839
+&RMagnetic Protection Room~
+&WThis room is cylindrical in shape. The 'walls' are actually large square
+slabs of magnetically charged metal.  The artificial magnetic field
+generated from the spinning walls was designed to protect the ship from
+the radiation of the engines.   The only place that is walkable here is
+the ceramic walkway upon which you stand. 
+~
+&GThis room is cylindrical in shape. The 'walls' are actually large square
+slabs of magnetically charged metal.  The artificial magnetic field
+generated from the spinning walls was designed to protect the ship from
+the radiation of the engines.  It seems aliens have reinforced the walkway
+and made it larger.
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5838
+D2
+~
+~
+0
+-1 5840
+S
+#5840
+&RMain Power Generator~
+&WThe place is completely drenched in black ash.  It looks as if the power
+generator overloaded and annihilated everything in the room. The is very
+little that remains from the power generator. Shrapnel is embedded into
+the walls from the shrapnel.
+~
+&GThe place is completely drenched in black ash.  It looks as if the power
+generator overloaded and annihilated everything in the room. The is very
+little that remains from the power generator. Shrapnel is embedded into
+the walls from the shrapnel. There are also some spots where alien acid
+blood was corroded the deck.
+~
+1078001672
+0
+0 1
+D0
+~
+~
+0
+-1 5839
+D6
+~
+~
+2051&1
+-1 5841
+S
+#5841
+&RSeconday Power Generator~
+&WThe secondary power generator is amazingly still intact after the
+overloading of the main power generator.  Although it is still intact, the
+secondary power generator is functioning at minimal efficiency. It looks
+like this power generator isn't going to last long.  
+~
+&GThe secondary power generator is amazingly still intact after the
+overloading of the main power generator.  Although it is still intact, the
+secondary power generator is functioning at minimal efficiency. It looks
+like this power generator isn't going to last long.   Alien acid blood has
+corroded some of the power generator.
+~
+1073807368&16
+0
+0 1
+D9
+~
+~
+3&1
+-1 5840
+S
+#5842
+&CAirlock Cyan One~
+&WThe airlock is clean and tidy. It's moderate in size, allowing for a
+group of humans to move through with ease.  The airlock itself is
+undamaged in any way and is functioning with maximum efficiency.
+~
+~
+1111556104
+0
+0 1
+D1
+~
+~
+3&1
+-1 5843
+D3
+~
+~
+0
+-1 5821
+S
+#5843
+&CAirlock Cyan One~
+&WThe airlock is clean and tidy. It's moderate in size, allowing for a
+group of humans to move through with ease.  The airlock itself is
+undamaged in any way and is functioning with maximum efficiency.
+~
+~
+1111556104
+0
+0 1
+D1
+~
+~
+0
+-1 5852
+D3
+~
+~
+3&1
+-1 5842
+S
+#5844
+&CStorage Area Cyan One~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5848
+D1
+~
+~
+0
+-1 5845
+D2
+~
+~
+0
+-1 5852
+S
+#5845
+&CStorage Area Cyan One~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1111556104
+0
+0 1
+D0
+~
+~
+0
+-1 5847
+D1
+~
+~
+0
+-1 5846
+D2
+~
+~
+0
+-1 5850
+D3
+~
+~
+0
+-1 5844
+S
+#5846
+&CStorage Area Cyan One~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5849
+D1
+~
+~
+0
+-1 5853
+D2
+~
+~
+0
+-1 5851
+D3
+~
+~
+0
+-1 5845
+S
+#5847
+&CStorage Area Cyan One~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D1
+~
+~
+0
+-1 5849
+D2
+~
+~
+0
+-1 5845
+D3
+~
+~
+0
+-1 5848
+S
+#5848
+&CStorage Area Cyan One~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1111556104
+0
+0 1
+D1
+~
+~
+0
+-1 5847
+D2
+~
+~
+0
+-1 5844
+S
+#5849
+&CStorage Area Cyan One~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1111556104
+0
+0 1
+D1
+~
+~
+0
+-1 5854
+D2
+~
+~
+0
+-1 5846
+D3
+~
+~
+0
+-1 5847
+S
+#5850
+&CStorage Area Cyan One~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1111556104
+0
+0 1
+D0
+~
+~
+0
+-1 5845
+D1
+~
+~
+0
+-1 5851
+D3
+~
+~
+0
+-1 5852
+S
+#5851
+&CStorage Area Cyan One~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5846
+D1
+~
+~
+0
+-1 5855
+D3
+~
+~
+0
+-1 5850
+S
+#5852
+&CStorage Area Cyan One~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1111556104
+0
+0 1
+D0
+~
+~
+0
+-1 5844
+D1
+~
+~
+0
+-1 5850
+D3
+~
+~
+0
+-1 5843
+S
+#5853
+Small Docking Port~
+&CThe only noticeable from this docking port and the rest of Storage Area
+Cyan One is that there is a hatch that leads out into space.  The hatch
+has no door, it is sealed by a magnetic force field and anything thrown
+that way would easily float out into space.
+~
+~
+1375797256&8
+0
+0 1
+D0
+~
+~
+0
+-1 5854
+D2
+~
+~
+0
+-1 5855
+D3
+~
+~
+0
+-1 5846
+D5
+~
+~
+0&2
+-1 5856
+S
+#5854
+&CStorage Area Cyan One~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D2
+~
+~
+0
+-1 5853
+D3
+~
+~
+0
+-1 5849
+S
+#5855
+&CStorage Area Cyan One~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5853
+D3
+~
+~
+0
+-1 5851
+S
+#5856
+&zFloating in the void of Space~
+~
+~
+1107365888
+0
+0 8
+D4
+~
+~
+0
+-1 5853
+D5
+~
+~
+0
+-1 5857
+S
+#5857
+&zFloating in the void of Space~
+~
+~
+1107365888
+0
+0 8
+D4
+~
+~
+0
+-1 5856
+> rand_prog 90~
+mpecho You can't breathe!!!
+mpdamage $n 25
+~
+|
+S
+#5858
+&zFloating in the void of Space~
+~
+~
+1107365888
+0
+0 8
+D4
+~
+~
+0
+-1 5873
+D5
+~
+~
+0
+-1 5859
+> entry_prog 10~
+mpecho The lack of oxygen causes your head to explode!
+mpdamage $n 1000
+~
+> rand_prog 50~
+mpecho The lack of oxygen causes your head to explode!
+mpdamage $n 50
+~
+|
+S
+#5859
+&zFloating in the void of Space~
+~
+~
+1107365888
+0
+0 8
+D4
+~
+~
+0
+-1 5858
+> rand_prog 90~
+mpecho You can't breathe!
+mpdamage $n 50
+~
+|
+S
+#5860
+&zFloating in the void of Space~
+~
+~
+1107361792
+0
+0 8
+D4
+~
+~
+0
+-1 5859
+> rand_prog 50~
+mpecho The lack of oxygen causes your head to explode!
+mpdamage $n 50
+~
+|
+S
+#5861
+&CAirlock Cyan Two~
+&WThe airlock is clean and tidy. It's moderate in size, allowing for a
+group of humans to move through with ease.  The airlock itself is
+undamaged in any way and is functioning with maximum efficiency. 
+~
+~
+1111556104
+0
+0 1
+D1
+~
+~
+0
+-1 5822
+D3
+~
+~
+3&1
+-1 5862
+S
+#5862
+&CAirlock Cyan Two~
+&WThe airlock is clean and tidy. It's moderate in size, allowing for a
+group of humans to move through with ease.  The airlock itself is
+undamaged in any way and is functioning with maximum efficiency.
+~
+~
+1111556104
+0
+0 1
+D1
+~
+~
+3&1
+-1 5861
+D3
+~
+~
+0&2
+-1 5863
+S
+#5863
+&CStorage Area Cyan Two~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1111556104
+0
+0 1
+D0
+~
+~
+0
+-1 5866
+D1
+~
+~
+0&2
+-1 5862
+D2
+~
+~
+0
+-1 5871
+D3
+~
+~
+0
+-1 5864
+S
+#5864
+&CStorage Area Cyan Two~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1111556104
+0
+0 1
+D0
+~
+~
+0
+-1 5865
+D1
+~
+~
+0
+-1 5863
+D2
+~
+~
+0
+-1 5870
+D3
+~
+~
+0
+-1 5868
+S
+#5865
+&CStorage Area Cyan Two~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D1
+~
+~
+0
+-1 5866
+D2
+~
+~
+0
+-1 5864
+D3
+~
+~
+0
+-1 5867
+S
+#5866
+&CStorage Area Cyan Two~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D2
+~
+~
+0
+-1 5863
+D3
+~
+~
+0
+-1 5865
+S
+#5867
+&CStorage Area Cyan Two~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D1
+~
+~
+0
+-1 5865
+D2
+~
+~
+0
+-1 5868
+D3
+~
+~
+0
+-1 5872
+S
+#5868
+&CStorage Area Cyan Two~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5867
+D1
+~
+~
+0
+-1 5864
+D2
+~
+~
+0
+-1 5869
+D3
+~
+~
+0
+-1 5873
+S
+#5869
+&CStorage Area Cyan Two~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5868
+D1
+~
+~
+0
+-1 5870
+D3
+~
+~
+0
+-1 5874
+S
+#5870
+&CStorage Area Cyan Two~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5864
+D1
+~
+~
+0
+-1 5871
+D3
+~
+~
+0
+-1 5869
+S
+#5871
+&CStorage Area Cyan Two~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1111556104
+0
+0 1
+D0
+~
+~
+0
+-1 5863
+D3
+~
+~
+0
+-1 5870
+S
+#5872
+&CStorage Area Cyan Two~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1111556104
+0
+0 1
+D1
+~
+~
+0
+-1 5867
+D2
+~
+~
+0
+-1 5873
+S
+#5873
+Small Docking Port~
+&cThe only noticeable from this docking port and the rest of Storage Area
+Cyan One is that there is a hatch that leads out into space.  The hatch
+has no door, it is sealed by a magnetic force field and anything thrown
+that way would easily float out into space.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5872
+D1
+~
+~
+0
+-1 5868
+D2
+~
+~
+0
+-1 5874
+D5
+~
+~
+0&2
+-1 5858
+S
+#5874
+&CStorage Area Cyan Two~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5873
+D1
+~
+~
+0
+-1 5869
+S
+#5875
+&BDilapidated Hallway~
+&WThis hallway is in a complete state of &OCRAP&W. The deck plating is
+worn, and in some places it is missing altogether. Some of the wall
+plating sticks out, portruding into the hallway. The ceiling is sagging
+and looks as if it's about to collapse any minute.
+~
+&GThis hallway is in a complete state of alien&O crap&G. The spots that are
+missing in the deck plating have been filled in with alien slime. The
+ceiling has been reinforced with hard, crusty alien goo. The walls are
+still sticking out, causing a navigational hazard.
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5816
+D2
+~
+~
+0
+-1 5876
+S
+#5876
+&BMess Hall~
+&WThe floor is thick with decaying scraps of food and other things. It
+looks like whoever went through here was a voracious eater.  There are
+remnants of carcasses of humans and aliens that have been carved up. There
+are, however, some food that has been untouched by whatever that went
+through here.
+~
+~
+1078001672
+0
+0 1
+D0
+~
+~
+0
+-1 5875
+S
+#5877
+&CAirlock Cyan Three~
+&WThe airlock is clean and tidy. It's moderate in size, allowing for a
+group of humans to move through with ease.  The airlock itself is
+undamaged in any way and is functioning with maximum efficiency. 
+~
+~
+1111556104
+0
+0 1
+D1
+~
+~
+3&1
+-1 5878
+D3
+~
+~
+0
+-1 5823
+S
+#5878
+&CAirlock Cyan Three~
+&WThe airlock is clean and tidy. It's moderate in size, allowing for a
+group of humans to move through with ease.  The airlock itself is
+undamaged in any way and is functioning with maximum efficiency. 
+~
+~
+1111556104
+0
+0 1
+D1
+~
+~
+0
+-1 5879
+D3
+~
+~
+3&1
+-1 5877
+S
+#5879
+&CStorage Area Cyan Three~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5882
+D1
+~
+~
+0
+-1 5880
+D2
+~
+~
+0
+-1 5887
+D3
+~
+~
+0
+-1 5878
+S
+#5880
+&CStorage Area Cyan Three~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5881
+D1
+~
+~
+0
+-1 5884
+D2
+~
+~
+0
+-1 5885
+D3
+~
+~
+0
+-1 5879
+S
+#5881
+&CStorage Area Cyan Three~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D1
+~
+~
+0
+-1 5883
+D2
+~
+~
+0
+-1 5880
+D3
+~
+~
+0
+-1 5882
+S
+#5882
+&CStorage Area Cyan Three~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D1
+~
+~
+0
+-1 5881
+D2
+~
+~
+0
+-1 5879
+S
+#5883
+&CStorage Area Cyan Three~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D2
+~
+~
+0
+-1 5884
+D3
+~
+~
+0
+-1 5881
+S
+#5884
+&CStorage Area Cyan Three~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5883
+D2
+~
+~
+0
+-1 5886
+D3
+~
+~
+0
+-1 5880
+S
+#5885
+&CStorage Area Cyan Three~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship. 
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5880
+D1
+~
+~
+0
+-1 5886
+D3
+~
+~
+0
+-1 5887
+S
+#5886
+&CStorage Area Cyan Three~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship. 
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5884
+D3
+~
+~
+0
+-1 5885
+S
+#5887
+&CStorage Area Cyan Three~
+&cThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship. &cThis storage area is massive. It houses many items, from the
+mundane to the extraordinarily secretive.  It looks like most of the
+ship's cargo is intact and not damaged by the unfortunate incidents that
+has plagued this ship.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5879
+D1
+~
+~
+0
+-1 5885
+S
+#5888
+&pStorage Area Purple Three~
+&pThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5895
+D1
+~
+~
+0
+-1 5890
+D2
+~
+~
+0
+-1 5897
+D3
+~
+~
+0
+-1 5891
+S
+#5889
+&pAirlock Purple Three~
+&WThe airlock is clean and tidy. It's moderate in size, allowing for a
+group of humans to move through with ease.  The airlock itself is
+undamaged in any way and is functioning with maximum efficiency. 
+~
+~
+1111556104
+0
+0 1
+D1
+~
+~
+0
+-1 5825
+D3
+~
+~
+1&1
+-1 5890
+S
+#5890
+&pAirlock Purple Three~
+&WThe airlock is clean and tidy. It's moderate in size, allowing for a
+group of humans to move through with ease.  The airlock itself is
+undamaged in any way and is functioning with maximum efficiency. 
+~
+~
+1111556108
+0
+0 1
+D1
+~
+~
+3&1
+-1 5889
+D3
+~
+~
+0
+-1 5888
+S
+#5891
+&pStorage Area Purple Three~
+&pThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1111556104
+0
+0 1
+D0
+~
+~
+0
+-1 5893
+D1
+~
+~
+0
+-1 5888
+D2
+~
+~
+0
+-1 5896
+D3
+~
+~
+0
+-1 5892
+S
+#5892
+&pStorage Area Purple Three~
+&pThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5894
+D1
+~
+~
+0
+-1 5891
+D2
+~
+~
+0
+-1 5898
+D3
+~
+~
+0
+-1 5899
+S
+#5893
+&pStorage Area Purple Three~
+&pThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1111556104
+0
+0 1
+D1
+~
+~
+0
+-1 5895
+D2
+~
+~
+0
+-1 5891
+D3
+~
+~
+0
+-1 5894
+S
+#5894
+&pStorage Area Purple Three~
+&pThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D1
+~
+~
+0
+-1 5893
+D2
+~
+~
+0
+-1 5892
+S
+#5895
+&pStorage Area Purple Three~
+&pThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D2
+~
+~
+0
+-1 5888
+D3
+~
+~
+0
+-1 5893
+S
+#5896
+&pStorage Area Purple Three~
+&pThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1111556104
+0
+0 1
+D0
+~
+~
+0
+-1 5891
+D1
+~
+~
+0
+-1 5897
+D3
+~
+~
+0
+-1 5898
+S
+#5897
+&pStorage Area Purple Three~
+&pThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5888
+D3
+~
+~
+0
+-1 5896
+S
+#5898
+&pStorage Area Purple Three~
+&pThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like most of the ship's cargo is
+intact and not damaged by the unfortunate incidents that has plagued this
+ship.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5892
+D1
+~
+~
+0
+-1 5896
+S
+#5899
+&WSmall Docking Port~
+&WThe only noticeable from this docking port and the rest of Storage Area
+Cyan One is that there is a hatch that leads out into space.  The hatch
+has no door, it is sealed by a magnetic force field and anything thrown
+that way would easily float out into space.
+~
+~
+1241579528
+0
+0 1
+D1
+~
+~
+0
+-1 5892
+D5
+~
+~
+0&2
+-1 5900
+S
+#5900
+&zFloating in the Void of Space~
+~
+~
+1073811456
+0
+0 8
+D4
+~
+~
+0
+-1 5899
+D5
+~
+~
+0
+-1 5901
+S
+#5901
+&zFloating in the Void of Space~
+~
+~
+1073811456
+0
+0 8
+D4
+~
+~
+0
+-1 5900
+> rand_prog 50~
+mpecho The lack of oxygen causes your head to explode!
+mpdamage $n 50
+~
+|
+S
+#5902
+&pAirlock Purple Two~
+&pThe airlock is clean and tidy. It's moderate in size, allowing for a
+group of humans to move through with ease.  The airlock itself is
+undamaged in any way and is functioning with maximum efficiency. 
+~
+~
+1111556104
+0
+0 1
+D1
+~
+~
+1&1
+-1 5903
+D3
+~
+~
+0
+-1 5826
+S
+#5903
+&pAirlock Purple Two~
+&pThe airlock is clean and tidy. It's moderate in size, allowing for a
+group of humans to move through with ease.  The airlock itself is
+undamaged in any way and is functioning with maximum efficiency. 
+~
+~
+1111556104
+0
+0 1
+D1
+~
+~
+0
+-1 5904
+D3
+~
+~
+1&1
+-1 5902
+S
+#5904
+&pStorage Area Purple Two~
+&GThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like aliens have converted this
+storage area for their own twisted uses. Slime hangs from the ceiling and
+covers the deck.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5910
+D1
+~
+~
+0
+-1 5905
+D2
+~
+~
+0
+-1 5909
+D3
+~
+~
+0
+-1 5903
+S
+#5905
+&pStorage Area Purple Two~
+&GThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like aliens have converted this
+storage area for their own twisted uses. Slime hangs from the ceiling and
+covers the deck.
+~
+~
+1111556104
+0
+0 1
+D0
+~
+~
+0
+-1 5911
+D1
+~
+~
+0
+-1 5906
+D2
+~
+~
+0
+-1 5907
+D3
+~
+~
+0
+-1 5904
+S
+#5906
+&pStorage Area Purple Two~
+&GThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like aliens have converted this
+storage area for their own twisted uses. Slime hangs from the ceiling and
+covers the deck.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5912
+D2
+~
+~
+0
+-1 5908
+D3
+~
+~
+0
+-1 5905
+D8
+~
+~
+0
+-1 5913
+S
+#5907
+&pStorage Area Purple Two~
+&GThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like aliens have converted this
+storage area for their own twisted uses. Slime hangs from the ceiling and
+covers the deck.
+~
+~
+1107361800
+0
+0 1
+D0
+~
+~
+0
+-1 5905
+D1
+~
+~
+0
+-1 5908
+D3
+~
+~
+0
+-1 5909
+S
+#5908
+&pStorage Area Purple Two~
+&GThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like aliens have converted this
+storage area for their own twisted uses. Slime hangs from the ceiling and
+covers the deck.
+~
+~
+1111556104
+0
+0 1
+D0
+~
+~
+0
+-1 5906
+D1
+~
+~
+0
+-1 5913
+D3
+~
+~
+0
+-1 5907
+S
+#5909
+&pStorage Area Purple Two~
+&GThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like aliens have converted this
+storage area for their own twisted uses. Slime hangs from the ceiling and
+covers the deck.
+~
+~
+1111556104
+0
+0 1
+D0
+~
+~
+0
+-1 5904
+D1
+~
+~
+0
+-1 5907
+S
+#5910
+&pStorage Area Purple Two~
+&GThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like aliens have converted this
+storage area for their own twisted uses. Slime hangs from the ceiling and
+covers the deck.
+~
+~
+1111556104
+0
+0 1
+D1
+~
+~
+0
+-1 5911
+D2
+~
+~
+0
+-1 5904
+S
+#5911
+&pStorage Area Purple Two~
+&GThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like aliens have converted this
+storage area for their own twisted uses. Slime hangs from the ceiling and
+covers the deck.
+~
+~
+1107361800
+0
+0 1
+D1
+~
+~
+0
+-1 5912
+D2
+~
+~
+0
+-1 5905
+D3
+~
+~
+0
+-1 5910
+S
+#5912
+&pStorage Area Purple Two~
+&GThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like aliens have converted this
+storage area for their own twisted uses. Slime hangs from the ceiling and
+covers the deck.
+~
+~
+1107361800
+0
+0 1
+D2
+~
+~
+0
+-1 5906
+D3
+~
+~
+0
+-1 5911
+S
+#5913
+&pSmall Egg Incubation Chamber~
+&GThis storage area is massive. It houses many items, from the mundane to
+the extraordinarily secretive.  It looks like aliens have converted this
+storage area for their own twisted uses. Slime hangs from the ceiling and
+covers the deck. There are small eggs stuck to the floor by alien slime.
+~
+~
+1644232712
+0
+0 1
+D3
+~
+~
+0
+-1 5908
+D7
+~
+~
+0
+-1 5906
+S
+#5914
+&pAirlock Purple One~
+&pThe airlock is clean and tidy. It's moderate in size, allowing for a
+group of humans to move through with ease.  The airlock itself is
+undamaged in any way and is functioning with maximum efficiency.
+~
+~
+1111556104
+0
+0 1
+D1
+~
+~
+0
+-1 5827
+D3
+~
+~
+1&1
+-1 5915
+S
+#5915
+&pBroken Airlock Purple One~
+&pThe airlock is clean and tidy. It's moderate in size, allowing for a
+group of humans to move through with ease.  The airlock itself is
+undamaged in any way and is functioning with maximum efficiency. It looks
+like a large explosion has ruptured the airlock and sent the cargo pod
+floating. What's left is protect by an amateurish magnetic shield.
+~
+~
+1111556104
+0
+0 1
+D1
+~
+~
+0
+-1 5914
+D5
+~
+~
+0&2
+-1 5916
+S
+#5916
+&zVoid of Space~
+~
+~
+1073811456
+0
+0 8
+D4
+~
+~
+0
+-1 5915
+D5
+~
+~
+0
+-1 5917
+S
+#5917
+&zVoid of Space~
+~
+~
+1073811456
+0
+0 8
+D4
+~
+~
+0
+-1 5916
+S
+#5950
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#5999
+Auto-Turret Room A~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 6001
+S
+#6000
+Auto-turret Room B~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 6001
+S
+#6001
+A Small Room~
+~
+~
+1073807364
+0
+0 1
+D1
+~
+~
+0
+-1 6000
+D2
+~
+~
+134217729&1
+73315 4273
+D3
+~
+~
+0
+-1 5999
+S
+#0
+
+
+#RESETS
+O 1 5801 1 5801
+O 1 5802 1 5820
+O 1 5802 1 5828
+D 0 5830 4 3
+D 0 5829 5 3
+O 1 5803 1 5813
+O 1 5804 1 5834
+O 1 5804 1 5837
+O 1 5807 1 5853
+O 1 5807 1 5844
+D 0 5843 3 1
+O 1 5807 1 5852
+O 1 5807 1 5849
+O 1 5807 1 5846
+O 1 5809 1 5845
+O 1 5809 1 5847
+O 1 5809 1 5854
+O 1 5809 1 5850
+O 1 5809 1 5855
+O 1 5811 1 5871
+O 1 5814 1 5848
+O 1 5814 1 5851
+O 1 5814 1 5874
+O 1 5814 1 5872
+O 1 5815 1 5867
+O 1 5815 1 5864
+O 1 4216 1 6001
+O 1 4217 1 6001
+D 0 6001 2 0
+O 1 5811 1 5868
+O 1 5814 1 5869
+D 0 5862 1 1
+D 0 5861 3 1
+D 0 5842 1 1
+D 0 5819 4 1
+D 0 5818 5 1
+O 1 5803 1 5875
+O 1 5812 1 5814
+D 0 5814 3 1
+O 1 687 1 5815
+O 1 685 1 5815
+O 1 5812 1 5815
+D 0 5815 1 1
+O 1 5813 1 5817
+D 0 5817 3 1
+O 1 5803 1 5816
+D 0 5816 1 1
+O 1 5821 1 5876
+O 1 5806 1 5841
+O 1 5818 1 5841
+D 0 5841 9 1
+O 1 5805 1 5840
+D 0 5840 6 1
+D 0 5877 1 1
+D 0 5878 3 1
+O 1 5807 1 5879
+O 1 5815 1 5882
+O 1 5815 1 5881
+O 1 5815 1 5883
+O 1 5811 1 5884
+O 1 5814 1 5880
+O 1 5814 1 5887
+O 1 5814 1 5885
+O 1 5814 1 5886
+D 0 5823 2 1
+D 0 5824 0 1
+D 0 5824 2 1
+D 0 5825 0 1
+O 1 5814 1 5891
+O 1 5814 1 5894
+O 1 5814 1 5893
+O 1 5814 1 5897
+O 1 5814 1 5896
+O 1 5814 1 5898
+D 0 5890 1 1
+M 1 5803 2 5892
+E 1 98 1 16
+M 1 5803 2 5892
+E 1 99 1 16
+E 1 99 1 18
+O 1 5809 1 5892
+O 1 5802 1 5892
+M 1 5803 4 5888
+E 1 98 1 16
+M 1 5803 4 5888
+E 1 98 1 16
+O 1 5802 1 5888
+O 1 5814 1 5888
+M 1 5801 5 5873
+E 1 696 1 11
+E 1 673 1 16
+G 1 674 1
+G 1 674 1
+M 1 5801 5 5873
+E 1 696 1 11
+E 1 684 1 16
+G 1 686 1
+G 1 686 1
+M 1 5802 1 5873
+E 1 5817 1 17
+E 1 678 1 16
+G 1 679 1
+G 1 679 1
+O 1 5810 1 5873
+O 1 5816 1 5873
+O 1 5802 1 5873
+M 1 5801 5 5870
+E 1 665 1 16
+E 1 696 1 11
+E 1 667 1 5
+E 1 665 1 18
+O 1 5814 1 5870
+M 1 5801 5 5863
+E 1 684 1 16
+E 1 696 1 11
+G 1 686 1
+G 1 686 1
+M 1 5801 5 5863
+E 1 678 1 16
+E 1 696 1 11
+G 1 679 1
+G 1 679 1
+O 1 5802 1 5863
+M 1 5804 6 5906
+M 1 5804 6 5909
+O 1 5807 1 5909
+M 1 5804 6 5910
+O 1 5811 1 5910
+O 1 5815 1 5904
+M 1 5804 6 5905
+O 1 5814 1 5905
+O 1 5814 1 5911
+O 1 5820 1 5907
+O 1 5814 1 5907
+O 1 5809 1 5908
+O 1 5809 1 5912
+M 1 5804 7 5913
+M 1 5804 7 5913
+M 1 5804 7 5913
+O 1 5809 1 5913
+O 1 5802 1 5913
+O 1 5819 1 5915
+O 1 5823 1 5811
+O 1 5822 1 5810
+O 1 5824 1 5808
+O 1 5825 1 5809
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+M  5801 spec_enemy_grenade
+M  5801 spec_enemy_scan
+M  5803 spec_enemy_scan
+M  5803 spec_enemy_grenade
+M  5804 spec_enemy_scan
+S
+
+
+#$

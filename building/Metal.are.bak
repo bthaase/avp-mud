@@ -1,0 +1,44 @@
+#AREA   {PROTO} Metal's area in progress~
+
+#VERSION 4
+
+#AUTHOR Metal~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#9599
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+S
+
+
+#$

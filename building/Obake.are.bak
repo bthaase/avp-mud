@@ -1,0 +1,3539 @@
+#AREA   {PROTO} Obake's area in progress~
+
+#VERSION 4
+
+#AUTHOR Obake~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#1501
+Large Metal Desk~
+a Large Metal Desk~
+A Large Metal Desk is here.~
+~
+6
+1024
+0
+0 0 0 0 0 0
+1 0 0
+#1502
+Data Stick~
+a Data Stick~
+A Data Stick is here.~
+~
+7
+1024
+0
+0 0 0 0 0 0
+1 0 0
+E
+Data Stick~
+Attention staff, it has come to my attention that someone has been
+"borrowing" supplies from the weapons storage room in the back of the
+animal testing facility. they are either very smart or very dumb.
+Therefore untill further notice it is to be kept locked at all times. The
+key code has temporarily been changed to 89950. Destroy this data stick
+immediatly.
+~
+#1503
+Lvl-1 Keycard~
+a Lvl-1 Keycard~
+A Lvl-1 Keycard is here.~
+~
+9
+1024
+0
+0 0 0 0 0 0
+1 0 0
+#1504
+Body of an eviscerated science officer~
+a Body of an eviscerated science officer~
+A Body of an eviscerated science officer lies here.~
+~
+4
+1152
+0
+0 0 0 0 0 0
+1 0 0
+E
+Body of an eviscerated science officer~
+The tourmented look on his face sends shivers down your spine. Being torn
+nearly in two by a Xenomorph does not seem like a very peacefull way to
+go. Mixed about the pool of blood and guts you notice the tip of a small
+plastic object, perhaps you should look under the corpse.
+~
+#1505
+Scrap of paper~
+a Scrap of paper~
+A Scrap of paper is here.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+1 0 0
+E
+Scrap of paper~
+I have installed a lock on the Ground floor stair well door and have put
+the keypad only on the inside just like you have asked. I sure hope you
+dont lock yourself out, anyway the code is 77332.
+~
+#1506
+arm~
+Someones arm.~
+Someone seems to have lost an arm.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+1 0 0
+E
+arm~
+Nothing special, just a regular arm, tho it seems to have been drained of
+blood. Tattoed along the inside are 3 numbers 774 
+~
+#1507
+arm~
+a arm~
+Someone seems to have lost an arm.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+1 0 0
+E
+arm~
+Nothing special, just a regular arm, tho it seems to have been drained of
+blood. Tattoed along the inside are 3 numbers 883 
+~
+#1508
+shuttle debris~
+Shuttle Debris~
+Chunks of shuttle debris scatter the landing pad, providing cover.~
+~
+25
+1024
+0
+15 2 6 400 400 0
+1 0 0
+#1509
+crate steel reinforced~
+Reinforced Steel Crate~
+A massive reinforced steel crate rests on the floor here. ~
+~
+25
+1024
+0
+8 2 8 100 100 1
+15 0 0
+#1510
+crate metal plain~
+Metal crate~
+A plain metal crate rests in the center of the floor.~
+~
+25
+1024
+0
+5 2 5 200 200 0
+1 0 0
+#1511
+crate wooden~
+Wooden crate~
+A wooden crate sits in the middle of the floor.~
+~
+25
+1024
+0
+5 1 3 200 200 0
+1 0 0
+#1512
+barrel drum metal ~
+Metal drums~
+A towering rack of metal drums sit in the center of the floor.~
+~
+25
+1024
+0
+15 2 6 500 500 1
+80 0 0
+#0
+
+
+#ROOMS
+#1501
+Before Facility Main Gate~
+A long dirt road travels north toward an abandoned USCM military base, even
+from this distance you can smell the stong aroma of human blood. That
+feeling deep inside your gut urges you to turn back before its too late.
+The main gate up ahead has been torn down by something, and it opens up to
+the remains of Einstein's Colonial Marine Research Base. Damaged military
+vehicles and combat armor has been scattered all over here, as well as a
+crumbled barracade.
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1502
+S
+#1502
+Research Facility Main Gate~
+A large reinforced durasteel gate looms in front of you, sturdy enough to
+stop even the most determined assault. Bloody claw marks decorate its
+surface and bends it into weird shapes. The southwest wall has a long
+crack hidden skillfully by xenomorph body parts and human endtrails. A
+small window to the east provides a clear view into the guard station.
+The corpses of a few dead marines are over here, and it seems like they
+died trying to defend the base entrance.
+~
+~
+-2147418048
+0
+0 1
+D0
+~
+~
+7&1
+1503 1503
+D1
+~
+~
+301991936
+-1 1504
+D2
+~
+~
+0
+-1 1501
+D7
+~
+~
+1073741824
+-1 1507
+S
+#1503
+Intersection Inside Main Gate~
+Just inside the main gate the ground make a soft squishy sound, perhaps its
+better not to look down. The alley streches long into the darkness into
+all directions. The lights seem to be broken, because the switch isnt
+working. The only way to move around here is if there is a portable light
+source or infrared. There are a few corpses here, along with the
+exoskeletons of countless xenomorphs. Who knows what horrors lie beyond?
+~
+~
+65545
+0
+0 1
+D0
+~
+~
+0
+-1 1506
+D1
+~
+~
+0
+-1 1505
+D2
+~
+~
+7&1
+1502 1502
+D3
+~
+~
+0
+-1 1507
+D8
+~
+~
+3
+-1 1504
+S
+#1504
+Guard Station~
+This guard station would normally have housed a heavily armed marine. The
+broken vent in the ceiling and the large pool of cold blood on the floor
+tell his tale. To the west a small window offers a fantastic view of the
+main gate area, that is if you can  see past the blood stains.
+~
+~
+-2147418104
+0
+0 1
+D3
+~
+~
+301991936
+-1 1502
+D7
+~
+~
+3
+-1 1503
+S
+#1505
+Dark Alley~
+The musty air reminds you of a crypt, and your not to far off. The alley
+continues east and west into the dark abyss. 
+~
+~
+65600
+0
+0 1
+D1
+~
+~
+0
+-1 1533
+D3
+~
+~
+0
+-1 1503
+S
+#1506
+Dark Alley~
+The musty air reminds you of a crypt, and your not to far off. The alley
+continues north and south into the dark abyss. 
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1522
+D2
+~
+~
+0
+-1 1503
+S
+#1507
+Dark Alley Near Animal Testing~
+The musty air reminds you of a crypt, and your not to far off. To the north
+east and west into the dark abyss. Before this incident, there were noises
+from countless animals of all kinds. Now, there is silence. It wouldn't be
+wise to stand around here so keep moving. To the north is a closed door.
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+3&1
+-1 1508
+D1
+~
+~
+0
+-1 1503
+D3
+~
+~
+0
+-1 1515
+D8
+~
+~
+1073741824
+-1 1502
+S
+#1508
+Animal Testing Office~
+A corpse lies in the corner of this room, it chest torn open from the
+inside. Tell tale sign of a chestburster. Research on the xenomorphs would
+have been conducted in this facility, no doubt they escaped. The cage room
+is to the west, where shards of broken plexiglass and durasteel lie all
+over the floor. Paperwork and datapads lie on the floor here, scattered
+everywhere. 
+~
+~
+-2147418104
+0
+0 1
+D2
+~
+~
+3&1
+-1 1507
+D3
+~
+~
+0
+-1 1509
+S
+#1509
+Cages~
+Small white hatches line both of walls from floor to ceiling. A few of them
+are open, the rest contain dead facehuggers. One of these things must have
+gotten loose and caused all the problems. To the west are stasis chambers
+that have been broken; however, the occupants inside were already dead
+xenomorph drones. Their shells are all that remain.
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 1510
+D1
+~
+~
+0
+-1 1508
+D3
+~
+~
+0
+-1 1512
+S
+#1510
+Cages~
+Small white hatches line both of walls from floor to ceiling. A few of them
+are open, the rest contain dead facehuggers. One of these things must have
+gotten loose and caused all the problems. Dead scientists and marine along
+with their fierce enemies are scattered here, for all to see.
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 1511
+D2
+~
+~
+0
+-1 1509
+S
+#1511
+Cages~
+Small white hatches line both of walls from floor to ceiling. A few of them
+are open, the rest contain dead facehuggers. One of these things must have
+gotten loose and cause all the problems.
+~
+~
+65544
+0
+0 1
+D2
+~
+~
+0
+-1 1510
+D3
+~
+~
+0
+-1 1514
+S
+#1512
+Cages~
+Small white hatches line both of walls from floor to ceiling. A few of them
+are open, the rest contain dead facehuggers. One of these things must have
+gotten loose and cause all the problems.
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 1513
+D1
+~
+~
+0
+-1 1509
+S
+#1513
+Cages~
+Small white hatches line both of walls from floor to ceiling. A few of them
+are open, the rest contain dead facehuggers. One of these things must have
+gotten loose and cause all the problems.
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 1514
+D2
+~
+~
+0
+-1 1512
+S
+#1514
+Cages~
+Small white hatches line both of walls from floor to ceiling. A few of them
+are open, the rest contain dead facehuggers. One of these things must have
+gotten loose and cause all the problems.
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+134217735&1
+89950 1521
+D1
+~
+~
+0
+-1 1511
+D2
+~
+~
+0
+-1 1513
+S
+#1515
+Dark Alley~
+The musty air reminds you of a crypt, and your not to far off. The alley
+continues east and west into the dark abyss. 
+~
+~
+65600
+0
+0 1
+D1
+~
+~
+0
+-1 1507
+D3
+~
+~
+0
+-1 1516
+S
+#1516
+Dark Alley~
+The musty air reminds you of a crypt, and your not to far off. The alley
+continues east and west into the dark abyss. 
+~
+~
+65600
+0
+0 1
+D1
+~
+~
+0
+-1 1515
+D3
+~
+~
+0
+-1 1517
+S
+#1517
+Dark Alley~
+The musty air reminds you of a crypt, and your not to far off. The alley
+continues east and north into the dark abyss. 
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1518
+D1
+~
+~
+0
+-1 1516
+S
+#1518
+Dark Ally~
+The musty air reminds you of a crypt, and your not to far off. The alley
+continues north and south into the dark abyss. 
+~
+~
+4259904
+0
+0 1
+D0
+~
+~
+0
+-1 1519
+D2
+~
+~
+0
+-1 1517
+S
+#1519
+Dark Ally~
+The musty air reminds you of a crypt, and your not to far off. The alley
+continues north and south into the dark abyss. 
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1520
+D2
+~
+~
+0
+-1 1518
+S
+#1520
+Dark Alley~
+The musty air reminds you of a crypt, and your not to far off. The alley
+continues northeast and south into the dark abyss.  
+~
+~
+65600
+0
+0 1
+D2
+~
+~
+0
+-1 1519
+D6
+~
+~
+0
+-1 1527
+S
+#1521
+Armory~
+A small light bulb sways back and forth at the end of a long black cord
+causing the shaddows to jump and flicker about wildly. A few racks have
+been set up allong the wall and a large crate occupies most of the floor
+space. The air smells stale like a crypt and a small hatch juts from the
+ceiling.
+~
+~
+4259848
+0
+0 1
+D2
+~
+~
+134217735&1
+89950 1514
+D4
+~
+hatch~
+2099211
+-1 1557
+S
+#1522
+Dark Alley Near Garage~
+The musty air reminds you of a crypt, and your not to far off. The alley
+continues north and south into the dark abyss. to the east lies the bases
+garage where all vehicles are stored. Although things seem quiet, you can
+smell trouble.
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1523
+D1
+~
+~
+3&1
+-1 1528
+D2
+~
+~
+0
+-1 1506
+S
+#1523
+Dark Ally~
+The musty air reminds you of a crypt, and your not to far off. The alley
+continues north and south into the dark abyss. 
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1524
+D2
+~
+~
+0
+-1 1522
+S
+#1524
+Central Junction~
+You have reached the main junction within the complex itself. From the
+looks of things it would appear that this area has been abandoned for some
+time, the broken lights and laque of power only confirm this. Heading
+south will take you back to the main gate and a large warehouse is located
+to the west. Looming overhead some distance to the north you can make out
+a large communicatios array and a landing beacon, perhaps you may find an
+operational shuttle.
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1563
+D1
+~
+~
+0
+-1 1562
+D2
+~
+~
+0
+-1 1523
+D3
+~
+~
+0
+-1 1525
+S
+#1525
+Dark Alley~
+The musty air reminds you of a crypt, and your not to far off. The alley
+continues east and west into the dark abyss.
+~
+~
+65600
+0
+0 1
+D1
+~
+~
+0
+-1 1524
+D3
+~
+~
+0
+-1 1526
+S
+#1526
+Dark Alley Near Warehouse~
+The musty air reminds you of a crypt, and your not to far off. The alley
+continues east and west into the dark abyss. Located immediatly to the
+north is the bases warehouse, the scent of blood permeates the air.
+Something went seriously wrong in there.
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+1&1
+-1 1536
+D1
+~
+~
+0
+-1 1525
+D3
+~
+~
+0
+-1 1527
+S
+#1527
+Dark Alley~
+The must air reminds you of a crypt, and your not to far off. The alley
+continues east and southwest into the dark abyss. 
+~
+~
+65600
+0
+0 1
+D1
+~
+~
+0
+-1 1526
+D9
+~
+~
+0
+-1 1520
+S
+#1528
+Garage Main Floor~
+The smell or oil and brake fluid hits you like a point blank shot in the
+face. This place is obviously used as a maintinance area for the bases
+vehicles. Perhaps if you were to take a look around you might find an
+alternative form of transportation. 
+~
+~
+65608
+0
+0 1
+D1
+~
+~
+0
+-1 1530
+D2
+~
+~
+0
+-1 1529
+D3
+~
+~
+3&1
+-1 1522
+D8
+~
+~
+0
+-1 1531
+S
+#1529
+Garage Main Floor~
+The smell or oil and brake fluid hits you like a point blank shot in the
+face. This place is obviously used as a maintinance area for the bases
+vehicles. Perhaps if you were to take a look around you might find an
+alternative form of transportation. 
+~
+~
+-2147418040
+0
+0 1
+D0
+~
+~
+0
+-1 1528
+D1
+~
+~
+0
+-1 1531
+D6
+~
+~
+0
+-1 1530
+S
+#1530
+Garage Main Floor~
+Tools and other mechanical devices lay strewn about the area, sign of some
+sort of struggle. Smears of blood streak scross the floor and up the back
+wall into a small air duct. The smell of death has completly overpowered
+the scent of oil. Located to the north is a door. 
+~
+~
+65608
+0
+0 1
+D0
+~
+~
+3
+-1 1532
+D2
+~
+~
+0
+-1 1531
+D3
+~
+~
+0
+-1 1528
+D9
+~
+~
+0
+-1 1529
+S
+#1531
+Garage Overhaul Area~
+The smell or oil and brake fluid hits you like a point blank shot in the
+face. This place is obviously used as a maintinance area for the bases
+vehicles. Perhaps if you were to take a look around you might find an
+alternative form of transportation. 
+~
+~
+65608
+0
+0 1
+D0
+~
+~
+0
+-1 1530
+D3
+~
+~
+0
+-1 1529
+D7
+~
+~
+0
+-1 1528
+S
+#1532
+Main Office~
+Nothing special here, a small computer sits in the corner of the room and a
+large filing cabinate occupies most of the back wall. The rooms seems
+clean and undesturbed, things are just too quiet here. 
+~
+~
+-2147418112
+0
+0 1
+D2
+~
+~
+3
+-1 1530
+S
+#1533
+Dark Alley~
+The musty air reminds you of a crypt, and your not to far off. The alley
+continues east and west into the dark abyss. 
+~
+~
+65600
+0
+0 1
+D1
+~
+~
+0
+-1 1534
+D3
+~
+~
+0
+-1 1505
+S
+#1534
+Dark Alley Approaching Crash Sight~
+Leaving the base far in the distance you approach a poorly guarded trail.
+The trees are decorated with the innards of your fallen comrads and a
+large chainlink fence block your progress northeast. A large hole has been
+ripped into the fence but is far out of reach, perhaps the gate has been
+left unlocked.
+~
+~
+65600
+0
+0 1
+D3
+~
+~
+0
+-1 1533
+D6
+~
+Gate~
+3
+-1 1535
+S
+#1535
+Rocky Cliff Overlooking Crash Sight~
+Sorry, predator crash sight coming soon!!!
+~
+~
+65536
+0
+0 1 5 1536 0
+D9
+~
+~
+2
+-1 1534
+S
+#1536
+Warehouse Ground Floor~
+Numerous small wooden boxes are strewn about the floor along with the
+occasional reinforced metal storage container providing adequate cover in
+the event of a battle. A large streak of blood meanders across the floor
+until it reaches a door located in the back of the warehouse. Glancing
+upwards you notice the skinned remains of humanoid lifeforms hanging from
+the ceiling. Predators should be close by
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 1540
+D1
+~
+~
+0
+-1 1537
+D2
+~
+~
+1&1
+-1 1526
+D3
+~
+~
+0
+-1 1538
+S
+#1537
+Warehouse Ground Floor~
+Numerous small wooden boxes are strewn about the floor along with the
+occasional reinforced metal storage container providing adequate cover in
+the event of a battle. A large streak of blood meanders across the floor
+until it reaches a door located in the back of the warehouse. Glancing
+upwards you notice the skinned remains of humanoid lifeforms hanging from
+the ceiling. Predators should be close by
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 1541
+D3
+~
+~
+0
+-1 1536
+D7
+~
+~
+33556480
+-1 1540
+S
+#1538
+Warehouse Ground Floor~
+Numerous small wooden boxes are strewn about the floor along with the
+occasional reinforced metal storage container providing adequate cover in
+the event of a battle. A large streak of blood meanders across the floor
+until it reaches a door located in the back of the warehouse. Glancing
+upwards you notice the skinned remains of humanoid lifeforms hanging from
+the ceiling. Predators should be close by
+~
+~
+-2147418104
+0
+0 1
+D0
+~
+~
+0
+-1 1539
+D1
+~
+~
+0
+-1 1536
+D6
+~
+~
+0
+-1 1540
+S
+#1539
+Warehouse Ground Floor~
+Numerous small wooden boxes are strewn about the floor along with the
+occasional reinforced metal storage container providing adequate cover in
+the event of a battle. A large streak of blood meanders across the floor
+until it reaches a door located in the back of the warehouse. Glancing
+upwards you notice the skinned remains of humanoid lifeforms hanging from
+the ceiling. Predators should be close by
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 1542
+D1
+~
+~
+0
+-1 1540
+D2
+~
+~
+0
+-1 1538
+S
+#1540
+Warehouse Central Area~
+Numerous small wooden boxes are strewn about the floor along with the
+occasional reinforced metal storage container providing adequate cover in
+the event of a battle. A large streak of blood meanders across the floor
+until it reaches a door located in the back of the warehouse. Glancing
+upwards you notice the skinned remains of humanoid lifeforms hanging from
+the ceiling. Predators should be close by
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 1543
+D1
+~
+~
+0
+-1 1541
+D2
+~
+~
+0
+-1 1536
+D3
+~
+~
+0
+-1 1539
+D6
+~
+~
+0
+-1 1544
+D7
+~
+~
+0
+-1 1542
+D8
+~
+~
+0
+-1 1537
+D9
+~
+~
+0
+-1 1538
+S
+#1541
+Warehouse Ground floor~
+Numerous small wooden boxes are strewn about the floor along with the
+occasional reinforced metal storage container providing adequate cover in
+the event of a battle. A large streak of blood meanders across the floor
+until it reaches a door located in the back of the warehouse. Glancing
+upwards you notice the skinned remains of humanoid lifeforms hanging from
+the ceiling. Predators should be close by
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 1544
+D2
+~
+~
+0
+-1 1537
+D3
+~
+~
+0
+-1 1540
+S
+#1542
+Warehouse Ground Floor~
+Numerous small wooden boxes are strewn about the floor along with the
+occasional reinforced metal storage container providing adequate cover in
+the event of a battle. A large streak of blood meanders across the floor
+until it reaches a door located in the back of the warehouse. Glancing
+upwards you notice the skinned remains of humanoid lifeforms hanging from
+the ceiling. Predators should be close by
+~
+~
+65544
+0
+0 1
+D1
+~
+~
+0
+-1 1543
+D2
+~
+~
+0
+-1 1539
+D8
+~
+~
+0
+-1 1540
+S
+#1543
+Warehouse Ground Floor~
+This area of the floor has been kept clear to provide easy access to the
+door which leads upstairs so you will not find any cover in this area. A
+large streak of blood disappears under the door and the handle is covered
+in a greenish liquid. 
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+3
+-1 1545
+D1
+~
+~
+0
+-1 1544
+D2
+~
+~
+0
+-1 1540
+D3
+~
+~
+0
+-1 1542
+S
+#1544
+Warehouse Ground Floor~
+Numerous small wooden boxes are strewn about the floor along with the
+occasional reinforced metal storage container providing adequate cover in
+the event of a battle. A large streak of blood meanders across the floor
+until it reaches a door located in the back of the warehouse. Glancing
+upwards you notice the skinned remains of humanoid lifeforms hanging from
+the ceiling. Predators should be close by
+~
+~
+65544
+0
+0 1
+D2
+~
+~
+0
+-1 1541
+D3
+~
+~
+0
+-1 1543
+D9
+~
+~
+0
+-1 1540
+S
+#1545
+Stairwell - Ground Floor~
+A simple, undecorated durasteel stairwell links the ground and the second
+floor together. A crimson puddle glares upwards through the grating which
+makes up the floor and the stench of blood is overpowering.
+~
+~
+65544
+0
+0 1
+D2
+~
+~
+134217735
+77332 1543
+D4
+~
+~
+0
+-1 1555
+S
+#1546
+Warehouse Main Office~
+~
+~
+-2147418104
+0
+0 1
+D0
+~
+~
+1
+-1 1555
+D2
+~
+~
+3
+-1 1547
+S
+#1547
+Catwalk~
+Loud creaking sound eco through the warehouse as the metal grating creaks
+and sways. This high vantage point offers an excelent view of the
+warehouse floor below.  Might be a good idea to snipe some of the
+intruders before they have the chance to reach your level.
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+3
+-1 1546
+D1
+~
+~
+0
+-1 1548
+D2
+~
+~
+33556488
+-1 1540
+D3
+~
+~
+0
+-1 1554
+D8
+~
+~
+33556488
+-1 1537
+D9
+~
+~
+33556488
+-1 1538
+S
+#1548
+Catwalk~
+Loud creaking sound eco through the warehouse as the metal grating creaks
+and sways. This high vantage point offers an excelent view of the
+warehouse floor below.  A small window is visible to the east. Perhaps if
+you open it you could make a hasty retreat down the fire escape. Might be
+a good idea to snipe some of the intruders before they have the chance to
+reach your level.
+~
+~
+65544
+0
+0 1
+D1
+~
+window~
+2059
+-1 1587
+D2
+~
+~
+0
+-1 1549
+D3
+~
+~
+0
+-1 1547
+D9
+~
+~
+33556488
+-1 1540
+S
+#1549
+Catwalk~
+Loud creaking sound eco through the warehouse as the metal grating creaks
+and sways. This high vantage point offers an excelent view of the
+warehouse floor below.  Might be a good idea to snipe some of the
+intruders before they have the chance to reach your level.
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 1548
+D2
+~
+~
+0
+-1 1550
+D3
+~
+~
+33556488
+-1 1540
+D7
+~
+~
+33556488
+-1 1542
+D9
+~
+~
+33556488
+-1 1538
+S
+#1550
+Catwalk~
+Loud creaking sound eco through the warehouse as the metal grating creaks
+and sways. This high vantage point offers an excelent view of the
+warehouse floor below.  Might be a good idea to snipe some of the
+intruders before they have the chance to reach your level.
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 1549
+D3
+~
+~
+0
+-1 1551
+D7
+~
+~
+33556488
+-1 1540
+S
+#1551
+Catwalk~
+Loud creaking sound eco through the warehouse as the metal grating creaks
+and sways. This high vantage point offers an excelent view of the
+warehouse floor below.  Might be a good idea to snipe some of the
+intruders before they have the chance to reach your level.
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+33556488
+-1 1540
+D1
+~
+~
+0
+-1 1550
+D3
+~
+~
+0
+-1 1552
+D6
+~
+~
+33556488
+-1 1544
+D7
+~
+~
+33556488
+-1 1542
+S
+#1552
+Catwalk~
+Loud creaking sound eco through the warehouse as the metal grating creaks
+and sways. This high vantage point offers an excelent view of the
+warehouse floor below.  Might be a good idea to snipe some of the
+intruders before they have the chance to reach your level.
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 1553
+D1
+~
+~
+0
+-1 1551
+D6
+~
+~
+33556488
+-1 1540
+S
+#1553
+Catwalk~
+Loud creaking sound eco through the warehouse as the metal grating creaks
+and sways. This high vantage point offers an excelent view of the
+warehouse floor below.  Might be a good idea to snipe some of the
+intruders before they have the chance to reach your level.
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 1554
+D1
+~
+~
+33556488
+-1 1540
+D2
+~
+~
+0
+-1 1552
+D6
+~
+~
+33556488
+-1 1544
+D8
+~
+~
+33556488
+-1 1537
+S
+#1554
+Catwalk~
+Loud creaking sound eco through the warehouse as the metal grating creaks
+and sways. This high vantage point offers an excelent view of the
+warehouse floor below.  Might be a good idea to snipe some of the
+intruders before they have the chance to reach your level.
+~
+~
+65544
+0
+0 1
+D1
+~
+~
+0
+-1 1547
+D2
+~
+~
+0
+-1 1553
+D8
+~
+~
+33556488
+-1 1540
+S
+#1555
+Stairwell - Top Floor~
+A simple, undecorated, durasteel stairwell links the second and ground
+floor together. A large streak of blood travels underneath the door into
+the second floor office. 
+~
+~
+65544
+0
+0 1
+D2
+~
+~
+1
+-1 1546
+D5
+~
+~
+0
+-1 1545
+S
+#1556
+Rooftop of Animal Testing~
+Loose gravel makes a soft crunching sound which eccos of the surrounding
+buildings. You do have a perfect view of the entire front half of the
+complex and should use this position to your advantage. A small vetelation
+unit hums softly, sucking in fresh air.
+~
+~
+4259840
+0
+0 1
+D0
+~
+~
+0
+-1 1557
+D1
+~
+~
+0
+-1 1560
+D2
+~
+~
+0
+-1 1558
+D3
+~
+~
+33556488
+-1 1519
+D6
+~
+~
+0
+-1 1561
+D7
+~
+~
+33556488
+-1 1520
+D8
+~
+~
+0
+-1 1559
+D9
+~
+~
+33556488
+-1 1518
+S
+#1557
+Rooftop of Animal Testing~
+The rooftop seems somewhat desolate, the only object is a tall
+communtications antena reaching towards the sky. You do have a perfect
+view of the entire front half of the complex and should use this position
+to your advantage. A small hatch in the floor leads downward, probably
+inside the Animal Testing Facility.
+~
+~
+65536
+0
+0 1
+D0
+~
+~
+33556488
+-1 1527
+D1
+~
+~
+0
+-1 1561
+D2
+~
+~
+0
+-1 1556
+D3
+~
+~
+33556488
+-1 1520
+D5
+~
+hatch~
+3
+-1 1521
+D6
+~
+~
+33556488
+-1 1526
+D8
+~
+~
+0
+-1 1560
+D9
+~
+~
+33556488
+-1 1519
+S
+#1558
+Rooftop of Animal Testing~
+Loose gravel makes a soft crunching sound which eccos of the surrounding
+buildings. You do have a perfect view of the entire front half of the
+complex and should use this position to your advantage. 
+~
+~
+65536
+0
+0 1
+D0
+~
+~
+0
+-1 1556
+D1
+~
+~
+0
+-1 1559
+D2
+~
+~
+33556488
+-1 1516
+D3
+~
+~
+33556488
+-1 1518
+D6
+~
+~
+0
+-1 1560
+D7
+~
+~
+33556488
+-1 1519
+D8
+~
+~
+33556488
+-1 1515
+D9
+~
+~
+33556488
+-1 1517
+S
+#1559
+Rooftop of Animal Testing~
+Loose gravel makes a soft crunching sound which eccos of the surrounding
+buildings. You do have a perfect view of the entire front half of the
+complex and should use this position to your advantage. 
+~
+~
+65536
+0
+0 1
+D0
+~
+~
+0
+-1 1560
+D1
+~
+~
+33556488
+-1 1506
+D2
+~
+~
+33556488
+-1 1515
+D3
+~
+~
+0
+-1 1558
+D6
+~
+~
+33556488
+-1 1522
+D7
+~
+~
+0
+-1 1556
+D8
+~
+~
+33556488
+-1 1507
+D9
+~
+~
+33556488
+-1 1516
+S
+#1560
+Rooftop of Animal Testing~
+Loose gravel makes a soft crunching sound which eccos of the surrounding
+buildings. You do have a perfect view of the entire front half of the
+complex and should use this position to your advantage. 
+~
+~
+65536
+0
+0 1
+D0
+~
+~
+0
+-1 1561
+D1
+~
+~
+33556488
+-1 1522
+D2
+~
+~
+0
+-1 1559
+D3
+~
+~
+0
+-1 1556
+D6
+~
+~
+33556488
+-1 1523
+D7
+~
+~
+0
+-1 1557
+D8
+~
+~
+33556488
+-1 1506
+D9
+~
+~
+0
+-1 1558
+S
+#1561
+Rooftop of Animal Testing~
+Loose gravel makes a soft crunching sound which eccos of the surrounding
+buildings. You do have a perfect view of the entire front half of the
+complex and should use this position to your advantage. 
+~
+~
+65536
+0
+0 1
+D0
+~
+~
+33556488
+-1 1526
+D1
+~
+~
+33556488
+-1 1523
+D2
+~
+~
+0
+-1 1560
+D3
+~
+~
+0
+-1 1557
+D6
+~
+~
+33556488
+-1 1525
+D7
+~
+~
+33556488
+-1 1527
+D8
+~
+~
+33556488
+-1 1522
+D9
+~
+~
+0
+-1 1556
+S
+#1562
+Dark Alley~
+You have reached a very dark and secluded section of the base. Large metal
+crates have been piled high here and a tall chain link fence prevents
+further progress east. Amongst a pool of blood you notice a single arm has
+been left here, It's fingers appear to be pointing westwards. 
+~
+~
+65600
+0
+0 1
+D3
+~
+~
+0
+-1 1524
+S
+#1563
+Dark Alley~
+A large light flashes brilliantly from the north. With the landing becon
+operational perhaps there is a way to get out of this god forsaken hell
+hole.  The area around you seems quiet enough, the only sound comes from a
+series of high voltage power cables located overhead. Their soft buzz is
+almost hypnotic. 
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1564
+D2
+~
+~
+0
+-1 1524
+S
+#1564
+Dark Alley Approaching Spaceport~
+The power cables over head continue along, the buzzing growing louder as
+you aproach a large transformer. Half a human body lies on top of it,
+throwing sparks and making quite a smell. Continue north and you will
+eventually reach the spaceport, heading south leads back towards the front
+gate.
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1565
+D2
+~
+~
+0
+-1 1563
+S
+#1565
+Just Before Spaceport Gates~
+The spaceport looms overhead, blocking everything else from view. Towards
+the north you notice a large and heavily armored gate leading into the
+spaceport itself. A small metal ladder hangs off the side of the warehouse
+which appears to be used as some sort of fire escape.
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1566
+D2
+~
+~
+0
+-1 1564
+D4
+~
+~
+2056
+-1 1587
+S
+#1566
+Spaceport Main Gate~
+Before you lies the spaceport main gate, its cold metal surface seems able
+to withstand even the most determined of assaults. If you want to gain
+access you will first have to find the proper access codes. 
+~
+~
+65600&1
+0
+0 1
+D0
+~
+~
+134217735&1
+883774 1567
+D2
+~
+~
+0
+-1 1565
+S
+#1567
+Inside Spaceport Main Gate~
+Just inside the main gate lies a large open area commonly used for shuttle
+landing and takeoffs. Located on the east side of the landing platform is
+the control tower and to the west is the Primary Operations Complex.
+Although you could most likely remote pilot a shuttle down from the
+orbital station from the control tower, the landing becon does not seem to
+be operational at the moment.
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1568
+D1
+~
+~
+0
+-1 1574
+D2
+~
+~
+134217735&1
+883774 1566
+D3
+~
+~
+0
+-1 1575
+D6
+~
+~
+0
+-1 1573
+D7
+~
+~
+0
+-1 1576
+S
+#1568
+Landing Platform - South~
+This a large landing platform surround by a series of blinking lights. If
+the landing becon were activated a shuttle could be remote piloted to this
+point. Perhaps you should try locating the control room in the tower to
+your east. 
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1569
+D1
+~
+~
+0
+-1 1573
+D2
+~
+~
+0
+-1 1567
+D3
+~
+~
+0
+-1 1576
+D6
+~
+~
+0
+-1 1572
+D7
+~
+~
+0
+-1 1577
+D8
+~
+~
+0
+-1 1574
+D9
+~
+~
+0
+-1 1575
+S
+#1569
+Landing Platform - North~
+Looks like someone already tried using a shuttle to escape. A Xenomorph
+must have been hidden inside, it does not look prety. The windows are dyed
+a deep color of red and the rear cargo hatch has been completly ripped to
+shreds. It seems doubtfull that this thing could lift off, perhaps you
+should try locating another means of escape. 
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1570
+D1
+~
+~
+0
+-1 1572
+D2
+~
+~
+0
+-1 1568
+D3
+~
+~
+0
+-1 1577
+D6
+~
+~
+0
+-1 1571
+D7
+~
+~
+0
+-1 1578
+D8
+~
+~
+0
+-1 1573
+D9
+~
+~
+0
+-1 1576
+S
+#1570
+Spaceport Courtyard~
+Crates and cargo canisters of various shapes and sizes liter the area. This
+place would have been used as a loading dock for spacecraft. 
+~
+~
+65600
+0
+0 1
+D1
+~
+~
+0
+-1 1571
+D2
+~
+~
+0
+-1 1569
+D3
+~
+~
+0
+-1 1578
+D8
+~
+~
+0
+-1 1572
+D9
+~
+~
+0
+-1 1577
+S
+#1571
+Spaceport Courtyard~
+Crates and cargo canisters of various shapes and sizes liter the area. This
+place would have been used as a loading dock for spacecraft. The entrance
+to the underground passage lies to the east along with access to the area
+overlooking the docking platforms.
+~
+~
+65600
+0
+0 1
+D1
+~
+~
+0
+-1 1592
+D2
+~
+~
+0
+-1 1572
+D3
+~
+~
+0
+-1 1570
+D9
+~
+~
+0
+-1 1569
+S
+#1572
+Spaceport Courtyard~
+Crates and cargo canisters of various shapes and sizes liter the area. This
+place would have been used as a loading dock for spacecraft.
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1571
+D2
+~
+~
+0
+-1 1573
+D3
+~
+~
+0
+-1 1569
+D7
+~
+~
+0
+-1 1570
+D9
+~
+~
+0
+-1 1568
+S
+#1573
+Spaceport Courtyard~
+Crates and cargo canisters of various shapes and sizes liter the area. This
+place would have been used as a loading dock for spacecraft. The easter
+door leads into the control tower.
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1572
+D1
+~
+~
+3
+-1 1584
+D2
+~
+~
+0
+-1 1574
+D3
+~
+~
+0
+-1 1568
+D7
+~
+~
+0
+-1 1569
+D9
+~
+~
+0
+-1 1567
+S
+#1574
+Spaceport Courtyard~
+Crates and cargo canisters of various shapes and sizes liter the area. This
+place would have been used as a loading dock for spacecraft. 
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1573
+D3
+~
+~
+0
+-1 1567
+D7
+~
+~
+0
+-1 1568
+S
+#1575
+Spaceport Courtyard~
+Crates and cargo canisters of various shapes and sizes liter the area. This
+place would have been used as a loading dock for spacecraft. 
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1576
+D1
+~
+~
+0
+-1 1567
+D6
+~
+~
+0
+-1 1568
+S
+#1576
+Spaceport Courtyard~
+Crates and cargo canisters of various shapes and sizes liter the area. This
+place would have been used as a loading dock for spacecraft. 
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1577
+D1
+~
+~
+0
+-1 1568
+D2
+~
+~
+0
+-1 1575
+D6
+~
+~
+0
+-1 1569
+D8
+~
+~
+0
+-1 1567
+S
+#1577
+Spaceport Courtyard~
+Crates and cargo canisters of various shapes and sizes liter the area. This
+place would have been used as a loading dock for spacecraft. Going west
+will lead to the Primary Operations Complex. 
+~
+~
+65600
+0
+0 1
+D0
+~
+~
+0
+-1 1578
+D1
+~
+~
+0
+-1 1569
+D2
+~
+~
+0
+-1 1576
+D3
+~
+~
+134217735&1
+12345 1583
+D6
+~
+~
+0
+-1 1570
+D8
+~
+~
+0
+-1 1568
+S
+#1578
+Backup Generator Access~
+Crates and cargo canisters of various shapes and sizes liter the area. This
+place would have been used as a loading dock for spacecraft. Also, located
+in the floor is a small hatch leading to the backup generator. 
+~
+~
+65600
+0
+0 1
+D1
+~
+~
+0
+-1 1570
+D2
+~
+~
+0
+-1 1577
+D5
+~
+hatch~
+2059&1
+-1 1579
+D8
+~
+~
+0
+-1 1569
+S
+#1579
+Dark Passageway~
+A long and dark corridor stretches far into the distance and the floor is
+burried in about a foot of water making it somewhat difficult to move
+around. Thick power cables run the length of the ceiling indicating the
+presence of some sort of power generator. A small hatch it located on the
+ceiling. 
+~
+~
+196617
+0
+0 1
+D1
+~
+~
+0
+-1 1580
+D4
+~
+hatch~
+2059&1
+-1 1578
+S
+#1580
+Deeper Into The Darkness~
+The long dark corridor stretches a great distance in both directions and
+the water is begining to get deeper. 
+~
+~
+196617
+0
+0 1
+D1
+~
+~
+0
+-1 1581
+D3
+~
+~
+0
+-1 1579
+S
+#1581
+Sharp Turn~
+The passageway makes a sharp turn, something floats by 
+~
+~
+196617
+0
+0 1
+D2
+~
+~
+0
+-1 1582
+D3
+~
+~
+0
+-1 1580
+S
+#1582
+Backup Generator Room~
+A series of compley looking machinery fills the area and an old looking
+backup generator sits idly by in the corner. Perhaps powering up the
+generator would provide some power to the base, but you may need to locate
+some fuel first.
+~
+~
+196617&1
+0
+0 1
+D0
+~
+~
+0
+-1 1581
+D2
+~
+~
+1073741824
+-1 1615
+S
+#1583
+Long Corridor~
+Sorry, P.O.C coming soon!!!
+~
+~
+65536
+0
+0 1
+D1
+~
+~
+134217735&1
+12345 1577
+S
+#1584
+Long Corridor~
+This is the main door of the control tower which leads outside to the
+landing platform. The floor grating is plastered with tiny pieces of human
+flesh, it looks like someone was grated like cheese. Further down the
+corridor is a stairwell leading to the other levels. 
+~
+~
+65544
+0
+0 1
+D1
+~
+~
+0
+-1 1585
+D3
+~
+~
+3
+-1 1573
+S
+#1585
+End of a Long Corridor~
+The overhead lighting gleams off of the floor and brings out the inner
+beauty of the blood on the walls, perhaps Predators realy do have an
+artistic side to them. A small door here leads to a stairwell which can be
+used to access the other levels of the facility. 
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+3
+-1 1586
+D3
+~
+~
+0
+-1 1584
+S
+#1586
+Stairwell - Ground Floor~
+This staircase connect the three levels of the control tower together, Sub
+Level A is below and Level 2 is above. Some type of green fluid is smeared
+on the railing heading in a downward direction toward the unpowered lower
+level, the marines must have injured a predator. 
+~
+~
+65544
+0
+0 1
+D2
+~
+~
+3
+-1 1585
+D4
+~
+~
+0
+-1 1594
+D5
+~
+~
+0
+-1 1607
+S
+#1587
+Warehouse Fire Escape~
+Jagged metal edges and years of rust tear at your body as you ascend to the
+top of the fire escape. The moon light floods in from the east and
+illuminates a window to your west. Most often, the alternate route is the
+safest . 
+~
+~
+65536
+0
+0 1
+D3
+~
+window~
+2059
+-1 1548
+D5
+~
+~
+0
+-1 1565
+S
+#1588
+Darkened Corner~
+The metal grating below creaks and cracks as it sways under your weight.
+The lights flicker but dont remain on long enough to illuminate the area.
+Moving west will take you to an area overlooking the landing area
+~
+~
+65536
+0
+0 1
+D3
+~
+~
+0
+-1 1589
+D5
+~
+~
+0
+-1 1592
+S
+#1589
+Landing Pad Overlook~
+The metal grating below creaks and cracks as it sways under your weight,
+The lights flicker rapidly but dont remain on long enough to illuminate
+the area. The railing on the walkway wall is solid enough to repel any
+incoming shots for the landing area but at the same time offers an
+excellent view. Take advantage of this.
+~
+~
+65536
+0
+0 1
+D1
+~
+~
+0
+-1 1588
+D2
+~
+~
+0
+-1 1590
+D3
+~
+~
+33556488
+-1 1571
+D9
+~
+~
+33556488
+-1 1572
+S
+#1590
+Landing Pad Overlook~
+The metal grating below creaks and cracks as it sways under your weight,
+The lights flicker rapidly but dont remain on long enough to illuminate
+the area. The railing on the walkway wall is solid enough to repel any
+incoming shots for the landing area but at the same time offers an
+excellent view. Take advantage of this.
+~
+~
+65536
+0
+0 1
+D0
+~
+~
+0
+-1 1589
+D2
+~
+~
+0
+-1 1591
+D3
+~
+~
+33556488
+-1 1572
+D7
+~
+~
+33556488
+-1 1571
+D9
+~
+~
+33556488
+-1 1573
+S
+#1591
+Landing Pad Overlook~
+The metal grating below creaks and cracks as it sways under your weight,
+The lights flicker rapidly but dont remain on long enough to illuminate
+the area. The railing on the walkway wall is solid enough to repel any
+incoming shots for the landing area but at the same time offers an
+excellent view. Take advantage of this.
+~
+~
+65536
+0
+0 1
+D0
+~
+~
+0
+-1 1590
+D2
+~
+~
+0
+-1 1593
+D3
+~
+~
+33556488
+-1 1573
+D7
+~
+~
+33556488
+-1 1572
+D9
+~
+~
+33556488
+-1 1574
+S
+#1592
+Darkened Corner~
+The ground feels a bit sticky, you might not want to know why. A small
+metal staircase leads upwards to a catwalk overlooking the entire landing
+area, to the east lies a heavily fortified gate.  It is locked and has no
+keypad or visible place to use a key, it must be unlocked and opened from
+the inside. 
+~
+~
+65601
+0
+0 1
+D1
+~
+~
+7&1
+67990 1595
+D3
+~
+~
+0
+-1 1571
+D4
+~
+~
+0
+-1 1588
+S
+#1593
+Controll Tower Entrance~
+The metal grating below creaks and cracks as it sways under your weight,
+The lights flicker rapidly but dont remain on long enough to illuminate
+the area. The railing on the walkway wall is solid enough to repel any
+incoming shots for the landing area but at the same time offers an
+excellent view. Take advantage of this. the door here leads directly into
+the control room.
+~
+~
+65536
+0
+0 1
+D0
+~
+~
+0
+-1 1591
+D1
+~
+~
+3&1
+-1 1600
+D3
+~
+~
+33556488
+-1 1574
+D7
+~
+~
+33556488
+-1 1573
+S
+#1594
+Stairwell - Level 2~
+This staircase connects the three levels of the control tower together, the
+ground floor is directly below and Sub level A is a ways downward. The
+door west is full of bullet holes and the opposite wall is stained a
+bright greenish color. 
+~
+~
+65544
+0
+0 1
+D3
+~
+~
+3
+-1 1597
+D5
+~
+~
+0
+-1 1586
+S
+#1595
+Tunnel Checkpoint 1~
+The main passage way through the tunnel is large enough to easily
+accomodate 2 large APC carriers. Its floor, wall, and ceiling are all made
+of a dull grey concrete like material that allows the dank and stagnant
+water from above to seep through. The first security checkpoint is located
+to the north. 
+~
+~
+65608
+0
+0 1
+D0
+~
+~
+3&1
+-1 1605
+D1
+~
+~
+134217735&1
+67790 1596
+D3
+~
+~
+134217735&1
+67990 1592
+S
+#1596
+Tunnel Checkpoint 2~
+Sorry, PODS coming soon!!!
+~
+~
+65608
+0
+0 1
+D0
+~
+~
+301991944
+-1 1606
+D3
+~
+~
+134217735&1
+67790 1595
+S
+#1597
+Controll Tower Hallway~
+The uniform metal sheeting that makes up the walls and floors stretch out
+as far as the eye can see. The combination of the flickering lights and
+the reflective surface aid in disorienting you. The stair well is located
+to the east and the corridor continues north.
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 1598
+D1
+~
+~
+3
+-1 1594
+S
+#1598
+Controll Tower Hallway~
+The uniform metal sheeting that makes up the walls and floors stretch out
+as far as the eye can see. The combination of the flickering lights and
+the reflective surface aid in disorienting you. A large smear of blood
+trails past the control room door and continues on in a northward
+direction.
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 1601
+D2
+~
+~
+0
+-1 1597
+D3
+~
+~
+3&1
+-1 1599
+S
+#1599
+&YControl Room~
+High tech equipment litters the area, and a series of clicks and beeps fill
+the airways. A large desk is located in the back of the room, and a half
+eaten candybar is stuck to the floor. The main control panels are located
+a little further south. 
+~
+~
+65544&1
+0
+0 1
+D1
+~
+~
+3&1
+-1 1598
+D2
+~
+~
+0
+-1 1600
+S
+#1600
+Controll Room~
+High tech equipmen litters the aread and a series of clicks and beeps
+dominate the airways. A colossal radar screen towers over everything else
+in the room. If someone activates the power, you could call down a shuttle
+for evacuation.
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+0
+-1 1599
+D3
+~
+~
+3
+-1 1593
+S
+#1601
+Controll Tower Hallway~
+The uniform metal sheeting that makes up the walls and floors stretch out
+as far as the eye can see. The combination of the flickering lights and
+the reflective surface aid in disorienting you. A large smear of blood
+leads directly underneath the elevator doors to your west. 
+~
+~
+65544
+0
+0 1
+D0
+~
+~
+3
+-1 1603
+D2
+~
+~
+0
+-1 1598
+D3
+~
+~
+3
+-1 1602
+S
+#1602
+Empty Elevator Shaft~
+Usually this space would contain an elevator, Unfortunatly for you it seems
+to be empty at the moment, hope you have good health insurance. 
+~
+~
+69640
+0
+0 1
+D1
+~
+~
+3
+-1 1601
+D5
+~
+~
+2056
+-1 1614
+S
+#1603
+Storage Room~
+Nothing more than a simple supply closed. Metal shelves line the walls,
+stocked with a sorts of cleaning supplies. A single yet very large hole
+has been burned into the floor here, by a Xenomorph no doubt. The rest of
+the floor looks rather weak and it would probably not be a very smart idea
+to tread here.
+~
+~
+69641
+0
+0 1
+D2
+~
+~
+3
+-1 1601
+D5
+~
+~
+2056
+-1 1604
+S
+#1604
+Hitting a Pipe~
+After falling for what seemed like hours through the empty darkness you
+finally strike a hard metalic object. After releasing a sigh you hear a
+loud snap and begin to fall once again
+~
+~
+69632
+0
+0 1
+D5
+~
+~
+2056
+-1 1595
+S
+#1605
+Checkpoint Station~
+The walls gleam with the cool glow of tempered durasteel. A computer
+terminal rests in the far corner of the room but has been torn to pieces
+by a set of razor sharp claws. Bloody slash marks streak across the floor
+and disappear into an air duck located  near the floor. 
+~
+~
+65544
+0
+0 1
+D1
+~
+~
+0
+-1 1606
+D2
+~
+~
+2
+-1 1595
+S
+#1606
+Checkpoint 2~
+The walls gleam with the cool glow of tempered durasteel. A computer
+terminal rests in the far corner of the room but has been torn to pieces
+by a set of razor sharp claws. Bloody slash marks streak across the floor
+and disappear  into an air duck located near the floor. Upon closer
+inspection you notice that 67790 has been carved into the wall. To the
+south a broken viewport offeres a perfect view of tunnel checkpoint 2.
+~
+~
+65544&1
+0
+0 1
+D2
+~
+~
+301991944
+-1 1596
+D3
+~
+~
+0
+-1 1605
+S
+#1607
+Stairwell - Sublevel A~
+This staircase connects the three levels of the control tower together,
+Level 1 and 2 are both above. A large pool of blood lies below the floor
+grating along with a solitary index finger. The lights don't appear to be
+functional this deep into the facility.
+~
+~
+196617
+0
+0 1
+D3
+~
+~
+3
+-1 1608
+D4
+~
+~
+0
+-1 1586
+S
+#1608
+Main Corridor~
+None of the lighting or electronic devices seem to be functioning this far
+down and the walls are covered with a thick layer of xenomorph biomass.
+What appears to be a freight elevator lies directly north.
+~
+~
+8585225&1
+0
+0 1
+D0
+~
+~
+3
+-1 1613
+D1
+~
+~
+3
+-1 1607
+D6
+~
+~
+0
+-1 1615
+D8
+~
+~
+0
+-1 1609
+S
+#1609
+Main Corridor~
+None of the lighting or electronic devices seem to be functioning this far
+down and the walls are covered with a thick layer of xenomorph biomass.
+The crew locker room lies directly east and what reamains of the crew
+quarters is to the Northeast.
+~
+~
+8585225
+0
+0 1
+D1
+~
+~
+3
+-1 1610
+D6
+~
+~
+3
+-1 1616
+D7
+~
+~
+0
+-1 1608
+S
+#1610
+Locker Room~
+A series of large lockers are lined up allong the walls, each looking
+identical except for the occasional poster taped to the outside. Locker
+rooms usually do smell foul, but a very potent odor sweeps in from the
+east. 
+~
+~
+8585225
+0
+0 1
+D1
+~
+~
+0
+-1 1611
+D3
+~
+~
+3
+-1 1609
+S
+#1611
+Showers~
+Numerous shower heads protrude from the wall and a large drain is situated
+in the center of the showering area. It is a good thing too, otherwise all
+the blood from the hundreds of mangled human carcasses would have just
+pooled up. Some of the blood is however seeping into the south wall and
+flowing through a very large crack.
+~
+~
+8585225&1
+0
+0 1
+D2
+~
+~
+1073741832
+-1 1612
+D3
+~
+~
+0
+-1 1610
+S
+#1612
+Abandoned Sewer Line~
+This sewer line is an old relic from long ago, its primitave construction
+allows some of the human feces to leak out into the surrounding areas.
+Suprisingly enough, after all these years, the waste is still moist and
+fresh. The passage continues into the dark depths of the earth. 
+~
+~
+196609
+0
+0 1
+D0
+~
+~
+1073741832
+-1 1611
+S
+#1613
+Bottom of Shaft~
+Shredded pieces of metal and twisted hunks of the old freight elevator lie
+in ruins on the floor, apparently some of the cables snapped and the
+elevator tore itself apart on the way down. 
+~
+~
+8589321
+0
+0 1
+D2
+~
+~
+3
+-1 1608
+S
+#1614
+Falling Down~
+~
+~
+69641
+0
+0 1
+D5
+~
+~
+2056
+-1 1613
+S
+#1615
+Main Corridor~
+None of the lighting or electronic devices seem to be functioning this far
+down and the walls are covered with a thick layer of xenomorph biomass.
+What remains of the crew quarters lies to the Southeast. 
+~
+~
+8585225
+0
+0 1
+D0
+~
+~
+1073741824
+-1 1582
+D8
+~
+~
+3
+-1 1616
+D9
+~
+~
+0
+-1 1608
+S
+#1616
+Pilot's Quarters~
+A few large beds are lined up and down both sides of this room with a
+medium sized metal crate at the foot of each. The walls, floor, and every
+other exposed surface have been completly covered in xenomorph biomass.
+~
+~
+8585225&1
+0
+0 1
+D1
+~
+~
+0
+-1 1617
+D7
+~
+~
+3
+-1 1615
+D9
+~
+~
+3
+-1 1609
+S
+#1617
+Pilot's Quarters~
+A large hole is torn through the floor and the crushed bones and endtrails
+of marines surround the entrance. This is obviously the source of the
+alien infestation, they must have never expected an assault from the
+inside. 
+~
+~
+8585225
+0
+0 1
+D1
+~
+~
+0
+-1 1618
+D3
+~
+~
+0
+-1 1616
+S
+#1618
+Infested Room~
+Sorry, alien hive coming soon !!
+~
+~
+196617
+0
+0 1
+D3
+~
+~
+0
+-1 1617
+S
+#0
+
+
+#RESETS
+O 1 1504 1 1502
+P 0 1503 1 0
+D 0 1502 0 2
+D 0 1502 7 3
+D 0 1503 2 2
+D 0 1503 8 1
+D 0 1504 7 1
+D 0 1507 0 1
+D 0 1507 8 3
+O 1 1501 1 1508
+P 0 1502 1 0
+D 0 1508 2 1
+D 0 1514 0 2
+D 0 1522 1 1
+D 0 1526 0 0
+O 1 1506 1 1527
+D 0 1528 3 1
+D 0 1530 0 1
+D 0 1532 2 1
+D 0 1534 6 1
+D 0 1536 2 0
+D 0 1543 0 1
+D 0 1545 2 2
+O 1 1501 1 1546
+P 0 1505 1 0
+D 0 1546 0 0
+D 0 1546 2 1
+D 0 1547 0 1
+D 0 1548 1 1
+D 0 1555 2 0
+D 0 1557 5 1
+O 1 1507 1 1562
+D 0 1566 0 2
+D 0 1567 2 2
+D 0 1573 1 1
+D 0 1577 3 2
+D 0 1578 5 1
+D 0 1579 4 1
+D 0 1582 2 3
+D 0 1583 1 2
+D 0 1584 3 1
+D 0 1585 0 1
+D 0 1586 2 1
+D 0 1587 3 1
+D 0 1592 1 2
+D 0 1593 1 1
+D 0 1594 3 1
+D 0 1595 0 1
+D 0 1595 1 2
+D 0 1595 3 2
+D 0 1596 3 2
+D 0 1597 1 1
+D 0 1598 3 1
+D 0 1599 1 1
+D 0 1600 3 1
+D 0 1601 0 1
+D 0 1601 3 1
+D 0 1602 1 1
+D 0 1603 2 1
+D 0 1607 3 1
+D 0 1608 0 1
+D 0 1608 1 1
+D 0 1609 1 1
+D 0 1609 6 1
+D 0 1610 3 1
+D 0 1611 2 3
+D 0 1612 0 3
+D 0 1613 2 1
+D 0 1615 0 3
+D 0 1615 8 1
+D 0 1616 7 1
+D 0 1616 9 1
+O 1 1508 1 1569
+O 1 672 1 1521
+P 0 80 1 0
+P 1 687 1 0
+P 2 685 1 0
+P 3 81 1 0
+P 4 687 1 0
+P 5 685 1 0
+P 6 81 1 0
+P 7 685 1 0
+D 0 1521 2 2
+D 0 1521 4 1
+O 1 1510 1 1540
+O 1 1511 1 1537
+O 1 1511 1 1542
+O 1 1511 1 1539
+O 1 1512 1 1531
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+S
+
+
+#$

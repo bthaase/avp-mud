@@ -1,0 +1,2095 @@
+#AREA   {PROTO} Utacha's area in progress~
+
+#VERSION 4
+
+#AUTHOR Utacha~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#4029
+Predator guardian~
+a predator guardian~
+A predator stands here guarding the entrance to the ship.
+~
+~
+4194304&1
+67108867
+Z
+1 8 8 1
+25 10 25 25 10 25
+2 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#4030
+operations manager~
+Operations Manager~
+An operations manager stands here watching monitors.
+~
+~
+0
+67108867
+S
+1 8 8 0
+> rand_prog 100~
+if variable(init) == 0
+mpset predator 0
+mpset marine 0
+mpset alien 0
+mpset init 111
+endif
+~
+> speech_prog 'score!'~
+mpsleep 15
+mpmonitor Predators have successfully acquired an egg.
+mpteamgain 2 500
+mpsleep 3
+mpmonitor Current score:
+mpvar marine The Marines have %d points!
+Mpvar alien The Aliens have %d points!
+mpvar predator The Predators have %d points!
+~
+> speech_prog 'victory!'~
+mpsleep 15
+mpmonitor Marines have successfully recaptured an egg.
+mpteamgain 0 500
+mpsleep 3
+mpmonitor Current score:
+mpvar marine The Marines have %d points!
+Mpvar alien The Aliens have %d points!
+mpvar predator The Predators have %d points!
+~
+> speech_prog 'success!'~
+mpsleep 15
+mpmonitor Xenomorphs have successfully liberated an egg.
+mpteamgain 1 500
+mpsleep 3
+mpmonitor Current score:
+mpvar marine The Marines have %d points!
+Mpvar alien The Aliens have %d points!
+mpvar predator The Predators have %d points!
+~
+|
+#4031
+predator elder~
+a predator elder~
+A predator elder stands here.
+~
+~
+0
+67108867
+Z
+1 8 8 1
+25 10 25 25 25 25
+2 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> give_prog genetically altered egg~
+mpecho The predator examines the egg quickly before handing it back.
+mpat 4064 say score!
+mpat 4065 drop egg
+say well done!
+mpadd predator 1
+mpset egg 0
+mea $n _gre You reach over and grab a nearby container.
+mer $n _ora $n reaches over and grabs a nearby container.
+mea $n _gre You put the unhatched egg into the metallic container.
+mer $n _ora $n puts the unhatched egg into the metallic container.
+mea $n _gre You quickly slap a Yautja tracking device on the container.
+mer $n _ora $n quickly slaps somekind of device on the container.
+mea $n _gre You shove the now filled container near the bay's door.
+mer $n _ora $n shoves the now filled container near the bay's door.
+mea $n _gre Slamming your wristblades into the metal floor,
+mea $n _gre you reach up to the door's controls and switch it on.
+mer $n _ora $n slams their wristblades into the metal floor,
+mer $n _ora before reaching up to the door's controls and switching it
+mer $n _ora on.
+mpecho _ora The large cargo bay door opens slowly.
+mpecho _ora The small cargo container is whisked out of the bay.
+mpsleep 3
+mea $n _gre You reach up and flick the controls off.
+mer $n _ora $n reaches up and flicks the controls off.
+~
+> death_prog 100~
+mpset predloaded 0
+~
+|
+#4032
+marine officer~
+a marine officer~
+A marine officer stands here.
+~
+~
+0
+67108867
+Z
+1 8 8 1
+25 10 25 25 25 25
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> give_prog genetically altered egg~
+mpecho The marine examines the egg quickly before handing it back.
+mpat 4065 drop egg
+mpat 4064 say victory!
+say well done!
+mpadd marine 1
+mpset egg 0
+mea $n _gre You quickly punch in several instructions into the
+mea $n _gre panel, telling the pod to head for the nearest
+mea $n _gre marine controlled colony.
+mea $n _gre As a quick precaution you instruct the pod to send
+mea $n _gre hazardous cargo signals to keep away the curious.
+mer $n _ora $n quickly punches in instructions to the pod.
+mea $n _gre You carefully place the egg in the escape pod.
+mer $n _ora $n carefully places the egg in the escape pod.
+mea $n _gre you press a button and the hatch closes.
+mer $n _ora $n presses a button and the hatch closes.
+mpecho The escape pod launches with a loud *clunk*
+~
+> death_prog 100~
+mpset marloaded 0
+~
+|
+#4033
+alien attendant~
+an alien hive attendant~
+An alien hive attendant is here.
+~
+~
+0
+67108867
+Z
+1 8 8 1
+25 10 25 25 25 25
+1 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> give_prog genetically altered egg~
+mpecho The alien examines the egg quickly before handing it back.
+mpat 4065 drop egg
+mpat 4064 say success!
+say well done!
+mpadd alien 1
+mpset egg 0
+mea $n _gre You leap into the hole.
+mea $n _gre after you find a safe place to leave the egg,
+mea $n _gre you exit the hole, dropping to the ground.
+mer $n _ora $n leaps into the hole.
+mer $n _ora A few moments later $n exits the hole,
+mer $n _ora dropping to the ground.
+~
+> death_prog 100~
+mpset alienloaded 0
+~
+|
+#4034
+Alien guardian~
+an alien guardian~
+A alien drone stands here.
+~
+~
+0
+67108867
+Z
+1 8 8 0
+25 25 25 10 10 25
+1 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> rand_prog 25~
+w
+k m
+e
+hide
+~
+|
+#4035
+marine guardian~
+a marine guardian~
+A marine stands guarding the room.
+~
+Typical marine, other then the stolen goggles on his face.
+~
+4194304
+67108867
+Z
+1 8 8 0
+25 10 25 10 25 25
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> greet_prog 55~
+if race($n) == alien
+4 2
+endif
+if race($n) == predator
+4 1
+endif
+if race($n) == marine
+salute $n
+endif
+~
+> rand_prog 25~
+cover locker
+~
+|
+#4036
+rebel guard~
+a rebel guard~
+A rebel guard equiped with heavy goggles stands here.
+~
+~
+4194304
+67108875
+Z
+1 8 8 1
+15 10 10 10 10 18
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#4037
+marine deserter~
+a marine deserter~
+A marine deserter equiped with heavy goggles stands here.
+~
+~
+4194304
+67108873
+Z
+1 8 8 1
+19 10 15 10 10 18
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#0
+
+
+#OBJECTS
+#4029
+cargo bay controls~
+a cargo bay controls~
+The cargo bay door controls are bolted to the floor here.~
+~
+5
+68158465
+0
+0 0 0 0 0 0
+1 25 2
+> useon_prog 100~
+if variable(predloaded) == 0
+mea $n _gre A predator elder decloaks and stops you from using
+mea $n _gre the control panel.  He motions for you to give him
+mea $n _gre the egg.
+mer $n _ora A predator decloaks.
+mpmload 4031
+mpset predloaded 1
+endif
+~
+> useoff_prog 100~
+if variable(predloaded) == 0
+mea $n _gre A predator elder decloaks and stops you from using
+mea $n _gre the control panel.  He motions for you to give him
+mea $n _gre the egg.
+mer $n _ora A predator decloaks.
+mpmload 4031
+mpset predloaded 1
+endif
+~
+|
+#4030
+starboard cargo container~
+cargo container near the starboard wall~
+A cargo container stands bolted near the starboard wall.~
+~
+25
+1024
+0
+14 2 17 365 365 0
+1 0 0
+#4031
+port cargo container~
+cargo container near the port wall~
+A cargo container stands bolted near the port wall.~
+~
+25
+1024
+0
+14 2 17 365 365 0
+1 0 0
+#4032
+flamable cargo container~
+cargo container~
+A cargo container labeled 'flamable' stands bolted here.~
+~
+25
+1024
+0
+14 2 17 365 365 1
+1 0 0
+#4033
+genetically altered egg~
+a genetically altered egg~
+A slimy greenish egg is here.~
+~
+5
+67109888
+1
+0 0 0 0 0 0
+1 0 0
+#4034
+metal locker~
+metal locker~
+Several large lockers stand here.~
+~
+25
+1024
+0
+34 2 8 600 600 0
+1 0 0
+#4035
+vent hole~
+a hole in the ventilation system~
+There is a metal hole in the ceiling here.~
+~
+5
+68158464
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(alienloaded) == 0
+mea $n _gre A hive attendant comes out of the hole before
+mea $n _gre you can enter. It motions for you to give
+mea $n _gre it the egg.
+mer $n _ora An alien hive attendant exits the hole.
+mpmload 4033
+mpset alienloaded 1
+endif
+~
+> useoff_prog 100~
+if variable(alienloaded) == 0
+mea $n _gre A hive attendant comes out of the hole before
+mea $n _gre you can enter. It motions for you to give
+mea $n _gre it the egg.
+mer $n _ora An alien hive attendant exits the hole.
+mpmload 4033
+mpset alienloaded 1
+endif
+~
+|
+#4036
+overturned locker~
+barrier of lockers~
+Several large lockers have been overturned here and lined up like a barrier.~
+~
+25
+1024
+0
+34 2 8 600 600 0
+1 0 0
+#4037
+escape hatch~
+escape hatch~
+Six escape hatchs are lined up against the walls.~
+~
+25
+1049600
+0
+34 2 80 600 600 0
+1 0 0
+#4038
+escape pod controls~
+an escape hatch control panel~
+Several control panels stand beside the escape hatchs.~
+~
+5
+68158465
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(marloaded) == 0
+mea $n _gre A marine comes out of his hiding before you can
+mea $n _gre use the panel.  He motions for you to give him
+mea $n _gre the egg.
+mer $n _ora A marine comes out of his hiding place.
+mpmload 4032
+mpset marloaded 1
+endif
+~
+> useoff_prog 100~
+if variable(marloaded) == 0
+mea $n _gre A marine comes out of his hiding before you can
+mea $n _gre use the panel.  He motions for you to give him
+mea $n _gre the egg.
+mer $n _ora A marine comes out of his hiding place.
+mpmload 4032
+mpset marloaded 1
+endif
+~
+|
+#4039
+lab table~
+lab table~
+Several large lab tables stand here.~
+~
+25
+1024
+0
+34 2 8 600 600 0
+1 0 0
+#4040
+containment cylander~
+a containment cylander~
+A great many containment cylanders stand here.~
+~
+5
+68158465
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(egg) == 0
+if race($n) == predator
+mea $n _gre You slam your fist into a containment
+mea $n _gre cylander, shattering the glass.
+mea $n _gre Carefully you pull out an egg.
+mer $n _ora $n slams their fist into a containment
+mer $n _ora cylander, shattering the glass.
+mer $n _ora $n carefully pulls out an egg.
+endif
+if race($n) == marine
+mea $n _gre You slam the butt of your rifle into
+mea $n _gre a containment cylander, shattering the
+mea $n _gre glass.
+mea $n _gre Reaching your hand in you pull out an
+mea $n _gre egg.
+mer $n _ora $n slams the butt of their rifle into
+mer $n _ora a containment cylander, shattering the 
+mer $n _ora glass.
+mer $n _ora Reaching their hand in, $n carefully 
+mer $n _ora pulls out an egg.
+endif
+if race($n) == alien
+mea $n _gre You slam your clawed hand into a
+mea $n _gre containment cylander, shattering the 
+mea $n _gre glass.
+mea $n _gre Carefully you pull out an egg.
+mer $n _ora $n slams their clawed hand into a
+mer $n _ora containment cylander, shattering the 
+mer $n _gre glass.
+mer $n _ora $n carefully pulls out an egg.
+endif
+mpoload 4033
+mpforce $n get egg
+mpset egg 1
+else
+mea $n _ora An egg has already be recently taken, get that one
+mea $n _ora first!
+endif
+~
+> useoff_prog 100~
+if variable(egg) == 0
+if race($n) == predator
+mea $n _gre You slam your fist into a containment
+mea $n _gre cylander, shattering the glass.
+mea $n _gre Carefully you pull out an egg.
+mer $n _ora $n slams their fist into a containment
+mer $n _ora cylander, shattering the glass.
+mer $n _ora $n carefully pulls out an egg.
+endif
+if race($n) == marine
+mea $n _gre You slam the butt of your rifle into
+mea $n _gre a containment cylander, shattering the
+mea $n _gre glass.
+mea $n _gre Reaching your hand in you pull out an
+mea $n _gre egg.
+mer $n _ora $n slams the butt of their rifle into
+mer $n _ora a containment cylander, shattering the 
+mer $n _ora glass.
+mer $n _ora Reaching their hand in, $n carefully 
+mer $n _ora pulls out an egg.
+endif
+if race($n) == alien
+mea $n _gre You slam your clawed hand into a
+mea $n _gre containment cylander, shattering the 
+mea $n _gre glass.
+mea $n _gre Carefully you pull out an egg.
+mer $n _ora $n slams their clawed hand into a
+mer $n _ora containment cylander, shattering the 
+mer $n _gre glass.
+mer $n _ora $n carefully pulls out an egg.
+endif
+mpoload 4033
+mpforce $n get egg
+mpset egg 1
+else
+mea $n _ora An egg has already be recently taken, get that one
+mea $n _ora first!
+endif
+~
+|
+#4041
+miniture energy grenade~
+a miniature energy grenade~
+A small energy grenade is here.~
+~
+18
+9248
+16385
+35 35 0 1 0 2
+2 25 2
+#4042
+massive shoulderplates~
+Massive Shoulder Plates~
+Some predator left a set of shoulder plates lying here.~
+~
+3
+42016
+5
+200 200 0 1 0 0
+2 9999 999
+A
+14 100
+A
+13 100
+A
+15 100
+A
+12 100
+A
+11 100
+#4043
+floor hole~
+a hole in the floor~
+A hole has been burned in the floor.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+1 0 0
+E
+floor hole~
+beyond the end of the hole you can see a rust colored metal floor.  Smoke
+swirls above the reddish floor.
+~
+#4044
+heavy kevlar jacket~
+USCM Heavy Kevlar Jacket~
+A USCM Heavy Kevlar Jacket has been left here.~
+~
+3
+37920
+9
+100 100 0 1 0 0
+2 200 20
+A
+15 5
+A
+11 10
+A
+14 100
+#4045
+human corpse~
+a human corpse~
+A human corpse is here.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+195 0 0
+#4046
+weapons locker~
+a weapons locker~
+A weapons locker is here.~
+~
+5
+67109888
+0
+0 0 0 0 0 0
+500 0 0
+> greet_prog 100~
+if race($n) == marine
+mea $n _yel You pick up your previously confiscated
+mea $n _yel weapons.
+mer $n _bro $n picks up thier previously
+mer $n _bro confiscated weapons.
+endif
+~
+|
+#4047
+hanging human~
+a human corpse~
+A skinless human corpse is hanging upside down from a pipe.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+185 0 0
+#4048
+headless human~
+a human corpse~
+A headless human corpse lies here.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+185 0 0
+#4049
+facemask~
+A facemask~
+A acid resistant facemask is here.~
+~
+3
+37920
+131072
+100 100 0 0 0 0
+1 0 0
+A
+15 100
+#0
+
+
+#ROOMS
+#4029
+The Lab~
+&C The lab's smooth metallic walls are interrupted only occasionally by
+pipes and computer consoles. Against several of the walls stand
+containment cylinders. In those cylinders can be seen objects resembling
+large greenish eggs. A staircase ascends in the center of the circular
+room. Tiny ramps and grooves assist in the transport of wheeled equipment
+up and down the stairs. Lights along the exterior contour of the ceiling
+illuminate the room. Wheeled tables and counters stand laden with
+equipment and containers.
+~
+&G  The labs metallic walls are almost covered in a slimy greenish black
+substance. The hard material also covers most of the tables and counters
+littering the room. The exterior contour of the ceiling is thick with the
+substance. The center stairs are covered  to such a degree it can now only
+be described as a ramp. The floor is covered in pillars of the material.
+Several containment cylinders stand almost untouched by the material, only
+at their base does any of the black substance cling. The material hangs
+menacingly like a broken web, or hanging moss.
+~
+1075904520
+1
+0 1
+D4
+~
+~
+0
+-1 4030
+S
+#4030
+Stairs to the Lab~
+&C The Stairwell opens up to a corridor along the four points of the
+compass. The curved metal walls are well kept and polished. A single large
+set of circular stairs travels down in the center of the room. Ramps and
+grooves in the stair aid in the moving of wheeled equipment. Railings keep
+the occupants of the room from falling down the stairwell. Four lights
+situated in the ceiling of the room illuminate the stairwell. Pipes of
+medium size interrupt the smooth walls, heading down to the lab below.
+Small vents, almost too small to put your hand in, circulate the air.
+~
+&G The Stairwell opens up to a corridor roughly along the four points of
+the compass. The curved walls are covered in a greenish black substance.
+The material hangs menacingly from the ceiling, covering the lightsource
+that must have once lit the room. A single circular staircase, now more a
+ramp then a set of stairs, travels down in the center of the room. A wall
+of the slimy but strong substance encircles the stairwell.  The floor can
+only be seen in patches underneath the dark material.
+~
+1075904520
+1
+0 1
+D0
+~
+~
+0
+-1 4031
+D1
+~
+~
+0
+-1 4034
+D2
+~
+~
+0
+-1 4033
+D3
+~
+~
+0
+-1 4032
+D5
+~
+~
+0
+-1 4029
+S
+#4031
+Circular Corridor~
+&C The corridor's shiny metal surface is smooth to the touch. The floor is
+clean and well polished. Two strips of lights follow the curved contours
+of the corridor. The walls are interrupted occasionally accessible panels.
+Incredibly small vents travel the middle of the ceiling. Pipes of mediocre
+size come out from the wall to turn down to the floor or follow the walls
+for a time before returning back to the wall's interior.  Above the head
+most doorway are the words Operations corridor. A large doorway intersects
+one of the corridors walls.
+~
+&G  The formerly well kept and polished metal corridor is filled with
+greenish black filth. The filth covers the two strips of lights that
+normally follow the contours of the walls. The slimy, yet strong,
+substance hangs from the ceiling like thick webs. It stands in piles and
+pillars along the floor. The substance climbs the walls inhibiting vents
+and panels. Filth covered pipes jut out from walls more menacingly then
+they no doubt formerly had. Righting above the head most door can almost
+be seen. A doorway intersects one of the corridor's filth ridden walls.
+~
+1075904520
+1
+0 1
+D0
+~
+~
+7&3
+-1 4064
+D2
+~
+~
+0
+-1 4030
+D8
+~
+~
+0
+-1 4034
+D9
+~
+~
+0
+-1 4032
+S
+#4032
+Circular Corridor~
+&C The corridor's shiny metal surface is smooth to the touch. The floor is
+clean and well polished. Two strips of lights follow the curved contours
+of the corridor. The walls are interrupted occasionally accessible panels.
+Incredibly small vents travel the middle of the ceiling. Pipes of mediocre
+size come out from the wall to turn down to the floor or follow the walls
+for a time before returning back to the wall's interior.  A large doorway
+intersects one of the corridors walls.
+~
+&G The formerly well kept and polished metal corridor is filled with
+greenish black filth. The filth covers the two strips of lights that
+normally follow the contours of the walls. The slimy, yet strong,
+substance hangs from the ceiling like thick webs. It stands in piles and
+pillars along the floor. The substance climbs the walls inhibiting vents
+and panels. Filth covered pipes jut out from walls more menacingly then
+they no doubt formed.
+~
+1075904520
+1
+0 1
+D1
+~
+~
+0
+-1 4030
+D3
+~
+~
+0
+-1 4035
+D6
+~
+~
+0
+-1 4031
+D8
+~
+~
+0
+-1 4033
+S
+#4033
+Circular Corridor~
+&C The corridor's shiny metal surface is smooth to the touch. The floor is
+clean and well polished. Two strips of lights follow the curved contours
+of the corridor. The walls are interrupted occasionally accessible panels.
+Incredibly small vents travel the middle of the ceiling. Pipes of mediocre
+size come out from the wall to turn down to the floor or follow the walls
+for a time before returning back to the wall's interior.  A large doorway
+intersects one of the corridors walls.
+~
+&G  The formerly well kept and polished metal corridor is filled with
+greenish black filth. The filth covers the two strips of lights that
+normally follow the contours of the walls. The slimy, yet strong,
+substance hangs from the ceiling like thick webs. It stands in piles and
+pillars along the floor. The substance climbs the walls inhibiting vents
+and panels. Filth covered pipes jut out from walls more menacingly then
+they no doubt formerly had. A doorway intersects one of the corridor's
+filth ridden walls.
+~
+1075904520
+1
+0 1
+D0
+~
+~
+0
+-1 4030
+D2
+~
+~
+0
+-1 4046
+D6
+~
+~
+0
+-1 4034
+D7
+~
+~
+0
+-1 4032
+S
+#4034
+Circular Corridor~
+&C The corridor's shiny metal surface is smooth to the touch. The floor is
+clean and well polished. Two strips of lights follow the curved contours
+of the corridor. The walls are interrupted occasionally accessible panels.
+Incredibly small vents travel the middle of the ceiling. Pipes of mediocre
+size come out from the wall to turn down to the floor or follow the walls
+for a time before returning back to the wall's interior.  A large doorway
+intersects one of the corridors walls.
+~
+&G  The formerly well kept and polished metal corridor is filled with
+greenish black filth. The filth covers the two strips of lights that
+normally follow the contours of the walls. The slimy, yet strong,
+substance hangs from the ceiling like thick webs. It stands in piles and
+pillars along the floor. The substance climbs the walls inhibiting vents
+and panels. Filth covered pipes jut out from walls more menacingly then
+they no doubt formerly had. A doorway intersects one of the corridor's
+filth ridden walls.
+~
+1075904520
+1
+0 1
+D1
+~
+~
+0
+-1 4056
+D3
+~
+~
+0
+-1 4030
+D7
+~
+~
+0
+-1 4031
+D9
+~
+~
+0
+-1 4033
+S
+#4035
+Port Circular Corridor~
+&C The corridor's shiny metal surface is smooth to the touch. The floor is
+clean and well polished. Two strips of lights follow the curved contours
+of the corridor. The walls are interrupted occasionally accessible panels.
+Incredibly small vents travel the middle of the ceiling. Pipes of mediocre
+size come out from the wall to turn down to the floor or follow the walls
+for a time before returning back to the wall's interior.  A large doorway
+intersects one of the corridors walls.
+~
+&G  The formerly well kept and polished metal corridor is filled with
+greenish black filth. The filth covers the two strips of lights that
+normally follow the contours of the walls. The slimy, yet strong,
+substance hangs from the ceiling like thick webs. It stands in piles and
+pillars along the floor. The substance climbs the walls inhibiting vents
+and panels. Filth covered pipes jut out from walls more menacingly then
+they no doubt formerly had. A doorway intersects one of the corridor's
+filth ridden walls.
+~
+1075904520
+1
+0 1
+D1
+~
+~
+0
+-1 4032
+D3
+~
+~
+0
+-1 4036
+D7
+~
+~
+0
+-1 4039
+D9
+~
+~
+0
+-1 4041
+S
+#4036
+Top of the Port Stairwell~
+&C The stairwell's metal walls are shiny and smooth. The stairwell goes
+down in a smooth spiral. Small 6 inch wide ramps follow the edges of the
+stairs, for use with wheeled equipment. Handlebars and pipes follow the
+stairs down. Handlebars keep those above the stairs from falling down
+unintentionally. A large circular set of lights lights the stairwell.
+~
+&G The stairwells metallic walls are covered in a strong greenish black
+substance. The filth covered stairs go down in a relatively smooth spiral.
+Handlebars and pipes that follow the stairs path are covered in the dark
+material. the material hangs menacingly from the ceiling, obstructing the
+lights. A pocketed wall of the strange substance stands where once must've
+stood railings to keep those standing above  the stairs from falling down
+unintentionally.
+~
+1075904520
+1
+0 1
+D1
+~
+~
+0
+-1 4035
+D5
+~
+~
+0
+-1 4037
+S
+#4037
+Bottom of the Port Stairwell~
+&C The stairwell's metal walls are shiny and smooth. The stairwell goes up
+in a smooth spiral. Small 6 inch wide ramps follow the edges of the
+stairs, for use with wheeled equipment. Handlebars and pipes follow the
+stairs up. Lights mounted on the circular walls light the bottom portion
+of the stairwell. The three lowest stairs have lights mounted into them.
+~
+&G The stairwells metallic walls are covered in a strong greenish black
+substance. The filth covered stairs go up in a relatively smooth spiral.
+Handlebars and pipes that follow the stairs path are covered in the dark
+material. The material hangs menacingly from the underside of the stairs.
+The wall mounted lights are almost completely covered, making their light
+useless. Towards the bottom of the stairs the material covers the steps
+like a slick ramp. the floor and walls are covered clumps of the
+substance. The material stands like pillars in many places.
+~
+1075904520
+1
+0 1
+D1
+~
+~
+0
+-1 4038
+D4
+~
+~
+0
+-1 4036
+S
+#4038
+Equipment Room~
+&C  The smooth metallic walls are interrupted by medium sized pipes and
+removable panels. Many small vents encircle the room. Lights travel port
+to starboard, illuminating the rectangular room. Electronic, and
+mechanical equipment fills the room. Lab supplies are kept neatly in
+several of the large lockers that are arranged throughout the room. Rimmed
+shelves keep various supplies ready for use.
+~
+&G  The metallic walls are almost completely covered by layers of a
+greenish black material. Small vents can only be occasionally seen,
+partially covered by the slimy substance. The material hangs menacingly
+from the ceiling, obstructing any light that may have at one time been
+there. Huge pillars of the strong substance stands where once lockers and
+shelves must have stood.  Containers and cleaners litter the dark floor.
+~
+1612775432
+1
+0 1
+D3
+~
+~
+0
+-1 4037
+S
+#4039
+Port Circular Corridor~
+&C The corridor's shiny metal surface is smooth to the touch. The floor is
+clean and well polished. Two strips of lights follow the curved contours
+of the corridor. The walls are interrupted occasionally accessible panels.
+Incredibly small vents travel the middle of the ceiling. Pipes of mediocre
+size come out from the wall to turn down to the floor or follow the walls
+for a time before returning back to the wall's interior.
+~
+&G  The formerly well kept and polished metal corridor is filled with
+greenish black filth. The filth covers the two strips of lights that
+normally follow the contours of the walls. The slimy, yet strong,
+substance hangs from the ceiling like thick webs. It stands in piles and
+pillars along the floor. The substance climbs the walls inhibiting vents
+and panels. Filth covered pipes jut out from walls more menacingly then
+they no doubt formerly had.
+~
+1075904520
+1
+0 1
+D8
+~
+~
+0
+-1 4035
+D9
+~
+~
+0
+-1 4040
+S
+#4040
+Port Circular Corridor~
+&C The corridor's shiny metal surface is smooth to the touch. The floor is
+clean and well polished. Two strips of lights follow the curved contours
+of the corridor. The walls are interrupted occasionally accessible panels.
+Incredibly small vents travel the middle of the ceiling. Pipes of mediocre
+size come out from the wall to turn down to the floor or follow the walls
+for a time before returning back to the wall's interior.
+~
+&G  The formerly well kept and polished metal corridor is filled with
+greenish black filth. The filth covers the two strips of lights that
+normally follow the contours of the walls. The slimy, yet strong,
+substance hangs from the ceiling like thick webs. It stands in piles and
+pillars along the floor. The substance climbs the walls inhibiting vents
+and panels. Filth covered pipes jut out from walls more menacingly then
+they no doubt formerly had.
+~
+1075904520
+1
+0 1
+D6
+~
+~
+0
+-1 4039
+D8
+~
+~
+0
+-1 4041
+D9
+~
+~
+0
+-1 4042
+S
+#4041
+Port Circular Corridor~
+&C  The corridor's shiny metal surface is smooth to the touch. The floor is
+clean and well polished. Two strips of lights follow the curved contours
+of the corridor. The walls are interrupted occasionally accessible panels.
+Incredibly small vents travel the middle of the ceiling. Pipes of mediocre
+size come out from the wall to turn down to the floor or follow the walls
+for a time before returning back to the wall's interior.  A single vent
+grating, almost large enough for a human to enter, is built into the
+ceiling between the two lines of lights.
+~
+&G  The formerly well kept and polished metal corridor is filled with
+greenish black filth. The filth covers the two strips of lights that
+normally follow the contours of the walls. The slimy, yet strong,
+substance hangs from the ceiling like thick webs. It stands in piles and
+pillars along the floor. The substance climbs the walls inhibiting vents
+and panels. Filth covered pipes jut out from walls more menacingly then
+they no doubt formerly had. A single broken vent grating, almost large
+enough for a human to enter, is built into the ceiling between the two
+walls. The dark material hangs from it's broken edges.
+~
+1080098824
+1
+0 1
+D6
+~
+~
+0&2
+-1 4035
+D7
+~
+~
+0&2
+-1 4040
+D8
+~
+~
+0
+-1 4044
+S
+#4042
+Port Cargo Bay~
+&C  The large rectangular cargo bay's metallic walls are clean and well
+polished. The wall is interrupted only by an occasional pipe or removable
+panel. Large metal containers are strapped to the metal floor. Small
+gratings show little in their dark depths. The small view provided by the
+vents seems to show the vents tapering into smaller vents as they leave
+the room. Lights run from bow to stern lighting the bay.
+~
+&G  The large rectangular cargo bay's metallic walls are thick with a
+greenish black substance. The wall is also covered in layers of the strong
+slimy substance. Small broken material laced gratings show little from
+their dark depths. The small view provided by these gratings seems to show
+the vents tapering into smaller filth ridden vents. The material hangs
+from the ceiling menacingly, covering the lights that must have at once
+shown there. Piles and pillars of the substance stands along the floor.
+The metallic cargo containers are almost covered in the material.
+~
+1075904520
+1
+0 1
+D2
+~
+~
+0
+-1 4043
+D6
+~
+~
+0
+-1 4040
+S
+#4043
+Port Cargo Bay~
+&C  The large rectangular cargo bay's metallic walls are clean and well
+polished. The wall is interrupted only by an occasional pipe or removable
+panel. Large metal containers are strapped to the metal floor. Small
+gratings show little in their dark depths. The small view provided by the
+vents seems to show the vents tapering into smaller vents as they leave
+the room. Lights run from bow to stern lighting the bay. A rectangular
+groove in the floor appears to be a large ramp like door.
+~
+&G  The large rectangular cargo bay's metallic walls are thick with a
+greenish black substance. The wall is also covered in layers of the strong
+slimy substance. Small broken material laced gratings show little from
+their dark depths. The small view provided by these gratings seems to show
+the vents tapering into smaller filth ridden vents. The material hangs
+from the ceiling menacingly, covering the lights that must have at once
+shown there. Piles and pillars of the substance stands along the floor.
+The metallic cargo containers are almost covered in the material. A
+rectangular groove in the slimy floor appears to be a large ramp like
+door. The slimy material almost covers the groove.
+~
+1075904520
+1
+0 1
+D0
+~
+~
+0
+-1 4042
+> speech_prog 'well done!'~
+mpsleep 12
+mptrans attendant 4065
+mpecho The alien hive attendant quickly returns to the hole
+mpset alienloaded 0
+~
+|
+S
+#4044
+Port Hall~
+&C  The hall's metal walls are well polished and smooth. The hall is lit by
+two lines of lights running along the contours of the hall. Pipes of
+medium size, run the length of the hall, occasionally dipping into the
+floor and walls. Large vents run the length of the hall, an extremely
+small grating occasionally showing little of the dark vent's interior.
+~
+&G  The hall's formerly shiny, well polished, walls are now scuffed and
+dark. They are covered in a strange greenish black substance. The
+substance is slimy, but strong. It hangs from the walls and ceiling like
+think webbing. It travels with the pipes, almost hiding them from sight.
+The floor is covered in pools and pillars of the material. The two lines
+of lights are almost completely covered with it, making the lights
+useless. The small vent gratings can only be seen occasionally, revealing
+nothing in their dark depths.
+~
+1075904520
+1
+0 1
+D7
+~
+~
+0
+-1 4041
+D8
+~
+~
+0
+-1 4045
+S
+#4045
+Stern Circular Corridor~
+&C   The corridor's shiny metal surface is smooth to the touch. The floor
+is clean and well polished. Two strips of lights follow the curved
+contours of the corridor. The walls are interrupted occasionally
+accessible panels. Incredibly small vents travel the middle of the
+ceiling. Pipes of mediocre size come out from the wall to turn down to the
+floor or follow the walls for a time before returning back to the wall's
+interior.  A single vent grating, almost large enough for a human to
+enter, is built into the ceiling between the two lines of lights.
+~
+&G  The formerly well kept and polished metal corridor is filled with
+greenish black filth. The filth covers the two strips of lights that
+normally follow the contours of the walls. The slimy, yet strong,
+substance hangs from the ceiling like thick webs. It stands in piles and
+pillars along the floor. The substance climbs the walls inhibiting vents
+and panels. Filth covered pipes jut out from walls more menacingly then
+they no doubt formerly had. A single broken vent grating, almost large
+enough for a human to enter, is built into the ceiling between the two
+walls. The dark material hangs from it's broken edges.
+~
+1080098824
+1
+0 1
+D6
+~
+~
+0&2
+-1 4046
+D7
+~
+~
+0
+-1 4044
+D8
+~
+~
+0&2
+-1 4051
+S
+#4046
+Stern Circular Corridor~
+&C The corridor's shiny metal surface is smooth to the touch. The floor is
+clean and well polished. Two strips of lights follow the curved contours
+of the corridor. The walls are interrupted occasionally accessible panels.
+Incredibly small vents travel the middle of the ceiling. Pipes of mediocre
+size come out from the wall to turn down to the floor or follow the walls
+for a time before returning back to the wall's interior.  A large doorway
+intersects one of the corridors walls.
+~
+&G  The formerly well kept and polished metal corridor is filled with
+greenish black filth. The filth covers the two strips of lights that
+normally follow the contours of the walls. The slimy, yet strong,
+substance hangs from the ceiling like thick webs. It stands in piles and
+pillars along the floor. The substance climbs the walls inhibiting vents
+and panels. Filth covered pipes jut out from walls more menacingly then
+they no doubt formerly had. A doorway intersects one of the corridor's
+filth ridden walls.
+~
+1075904520
+1
+0 1
+D0
+~
+~
+0
+-1 4033
+D2
+~
+~
+0
+-1 4048
+D8
+~
+~
+0
+-1 4047
+D9
+~
+~
+0
+-1 4045
+S
+#4047
+Stern Circular Corridor~
+&C  The corridor's shiny metal surface is smooth to the touch. The floor is
+clean and well polished. Two strips of lights follow the curved contours
+of the corridor. The walls are interrupted occasionally accessible panels.
+Incredibly small vents travel the middle of the ceiling. Pipes of mediocre
+size come out from the wall to turn down to the floor or follow the walls
+for a time before returning back to the wall's interior.  A single vent
+grating, almost large enough for a human to enter, is built into the
+ceiling between the two lines of lights.
+~
+&G The formerly well kept and polished metal corridor is filled with
+greenish black filth. The filth covers the two strips of lights that
+normally follow the contours of the walls. The slimy, yet strong,
+substance hangs from the ceiling like thick webs. It stands in piles and
+pillars along the floor. The substance climbs the walls inhibiting vents
+and panels. Filth covered pipes jut out from walls more menacingly then
+they no doubt formerly had. A single broken vent grating, almost large
+enough for a human to enter, is built into the ceiling between the two
+walls. The dark material hangs from it's broken edges.
+~
+1080098824
+1
+0 1
+D6
+~
+~
+0
+-1 4054
+D7
+~
+~
+0&2
+-1 4046
+D9
+~
+~
+0&2
+-1 4051
+S
+#4048
+Top of the Stern Stairwell~
+&C The stairwell's metal walls are shiny and smooth. The stairwell goes
+down in a smooth spiral. Small 6 inch wide ramps follow the edges of the
+stairs, for use with wheeled equipment. Handlebars and pipes follow the
+stairs down. Handlebars keep those above the stairs from falling down
+unintentionally. A large circular set of lights lights the stairwell.
+~
+&G The stairwells metallic walls are covered in a strong greenish black
+substance. The filth covered stairs go down in a relatively smooth spiral.
+Handlebars and pipes that follow the stairs path are covered in the dark
+material. the material hangs menacingly from the ceiling, obstructing the
+lights. A pocketed wall of the strange substance stands where once must've
+stood railings to keep those standing above  the stairs from falling down
+unintentionally.
+~
+1075904520
+1
+0 1
+D0
+~
+~
+0
+-1 4046
+D5
+~
+~
+0
+-1 4049
+S
+#4049
+Bottom of the Stern Stairwell~
+&C The stairwell's metal walls are shiny and smooth. The stairwell goes up
+in a smooth spiral. Small 6 inch wide ramps follow the edges of the
+stairs, for use with wheeled equipment. Handlebars and pipes follow the
+stairs up. Lights mounted on the circular walls light the bottom portion
+of the stairwell. The three lowest stairs have lights mounted into them.
+~
+&G The stairwells metallic walls are covered in a strong greenish black
+substance. The filth covered stairs go up in a relatively smooth spiral.
+Handlebars and pipes that follow the stairs path are covered in the dark
+material. The material hangs menacingly from the underside of the stairs.
+The wall mounted lights are almost completely covered, making their light
+useless. Towards the bottom of the stairs the material covers the steps
+like a slick ramp. the floor and walls are covered clumps of the
+substance. The material stands like pillars in many places.
+~
+1075904520
+1
+0 1
+D0
+~
+~
+0
+-1 4050
+D4
+~
+~
+0
+-1 4048
+S
+#4050
+Equipment Room~
+&C  The smooth metallic walls are interrupted by medium sized pipes and
+removable panels. Many small vents encircle the room. Lights travel port
+to starboard, illuminating the rectangular room. Electronic, and
+mechanical equipment fills the room. Lab supplies are kept neatly in
+several of the large lockers that are arranged throughout the room. Rimmed
+shelves keep various supplies ready for use. 
+~
+&G  The metallic walls are almost completely covered by layers of a
+greenish black material. Small vents can only be occasionally seen,
+partially covered by the slimy substance. The material hangs menacingly
+from the ceiling, obstructing any light that may have at one time been
+there. Huge pillars of the strong substance stands where once lockers and
+shelves must have stood.  Containers and cleaners litter the dark floor.
+~
+1344339976
+1
+0 1
+D2
+~
+~
+0
+-1 4049
+S
+#4051
+Stern Circular Corridor~
+&C  The corridor's shiny metal surface is smooth to the touch. The floor is
+clean and well polished. Two strips of lights follow the curved contours
+of the corridor. The walls are interrupted occasionally accessible panels.
+Incredibly small vents travel the middle of the ceiling. Pipes of mediocre
+size come out from the wall to turn down to the floor or follow the walls
+for a time before returning back to the wall's interior.
+~
+&G   The formerly well kept and polished metal corridor is filled with
+greenish black filth. The filth covers the two strips of lights that
+normally follow the contours of the walls. The slimy, yet strong,
+substance hangs from the ceiling like thick webs. It stands in piles and
+pillars along the floor. The substance climbs the walls inhibiting vents
+and panels. Filth covered pipes jut out from walls more menacingly then
+they no doubt formerly had.
+~
+1075904520
+1
+0 1
+D2
+~
+~
+0
+-1 4052
+D6
+~
+~
+0
+-1 4047
+D7
+~
+~
+0
+-1 4045
+S
+#4052
+Stern Cargo Bay~
+&C   The large rectangular cargo bay's metallic walls are clean and well
+polished. The wall is interrupted only by an occasional pipe or removable
+panel. Large metal containers are strapped to the metal floor. Small
+gratings show little in their dark depths. The small view provided by the
+vents seems to show the vents tapering into smaller vents as they leave
+the room. Lights run from bow to stern lighting the bay. A rectangular
+groove in the floor appears to be a large ramp like door.
+~
+&G   The large rectangular cargo bay's metallic walls are thick with a
+greenish black substance. The wall is also covered in layers of the strong
+slimy substance. Small broken material laced gratings show little from
+their dark depths. The small view provided by these gratings seems to show
+the vents tapering into smaller filth ridden vents. The material hangs
+from the ceiling menacingly, covering the lights that must have at once
+shown there. Piles and pillars of the substance stands along the floor.
+The metallic cargo containers are almost covered in the material. A
+rectangular groove in the slimy floor appears to be a large ramp like
+door. The slimy material almost covers the groove.
+~
+1075904520
+1
+0 1
+D0
+~
+~
+0
+-1 4051
+D2
+~
+~
+0
+-1 4053
+S
+#4053
+Escape Pod Launchbay~
+&C  The metallic walls appear clean and well polished. Lights run from bow
+to stern lighting the room. Escape hatches to the escape pods slope down
+from the middle of the metallic walls. Controls for the pods are situated
+near the hatches. A few medium sized pipes run along the edges of the
+ceiling. Small vents dot the ceiling spaced evenly. The floor is
+interrupted occasionally by removable panels.
+~
+&G    The metallic walls are almost covered in a greenish black substance.
+The material hangs menacingly from the ceiling covering the lights that
+may have once lit the room. Sloping escape hatches to the escape pods are
+draped in the slimy substance. The floor is almost covered in the uneven
+substance. Material seems to have brushed away from several of the
+controls to the escape hatches. Small filth ridden vents dot the ceiling.
+~
+1075904520
+1
+0 1
+D0
+~
+~
+0
+-1 4052
+> speech_prog 'well done!'~
+mpsleep 12
+mptrans officer 4065
+mpecho The officer salutes before returning to his hiding.
+mpset marloaded 0
+~
+|
+S
+#4054
+Starboard Hall~
+&C  The hall's metal walls are well polished and smooth. The hall is lit by
+two lines of lights running along the contours of the hall. Pipes of
+medium size, run the length of the hall, occasionally dipping into the
+floor and walls. Large vents run the length of the hall, an extremely
+small grating occasionally showing little of the dark vent's interior.
+~
+&G  The hall's formerly shiny, well polished, walls are now scuffed and
+dark. They are covered in a strange greenish black substance. The
+substance is slimy, but strong. It hangs from the walls and ceiling like
+think webbing. It travels with the pipes, almost hiding them from sight.
+The floor is covered in pools and pillars of the material. The two lines
+of lights are almost completely covered with it, making the lights
+useless. The small vent gratings can only be seen occasionally, revealing 
+it's dark interior.
+~
+1075904520
+1
+0 1
+D6
+~
+~
+0
+-1 4055
+D9
+~
+~
+0
+-1 4047
+S
+#4055
+Starboard Circular Corridor~
+&C  The corridor's shiny metal surface is smooth to the touch. The floor is
+clean and well polished. Two strips of lights follow the curved contours
+of the corridor. The walls are interrupted occasionally accessible panels.
+Incredibly small vents travel the middle of the ceiling. Pipes of mediocre
+size come out from the wall to turn down to the floor or follow the walls
+for a time before returning back to the wall's interior.  A single vent
+grating, almost large enough for a human to enter, is built into the
+ceiling between the two lines of lights.
+~
+&G The formerly well kept and polished metal corridor is filled with
+greenish black filth. The filth covers the two strips of lights that
+normally follow the contours of the walls. The slimy, yet strong,
+substance hangs from the ceiling like thick webs. It stands in piles and
+pillars along the floor. The substance climbs the walls inhibiting vents
+and panels. Filth covered pipes jut out from walls more menacingly then
+they no doubt formerly had. A single broken vent grating, almost large
+enough for a human to enter, is built into the ceiling between the two
+walls. The dark material hangs from it's broken edges.
+~
+1080098824
+1
+0 1
+D6
+~
+~
+0&2
+-1 4061
+D7
+~
+~
+0&2
+-1 4056
+D9
+~
+~
+0
+-1 4054
+S
+#4056
+Starboard Circular Corridor~
+&C The corridor's shiny metal surface is smooth to the touch. The floor is
+clean and well polished. Two strips of lights follow the curved contours
+of the corridor. The walls are interrupted occasionally accessible panels.
+Incredibly small vents travel the middle of the ceiling. Pipes of mediocre
+size come out from the wall to turn down to the floor or follow the walls
+for a time before returning back to the wall's interior.  A large doorway
+intersects one of the corridors walls.
+~
+&G  The formerly well kept and polished metal corridor is filled with
+greenish black filth. The filth covers the two strips of lights that
+normally follow the contours of the walls. The slimy, yet strong,
+substance hangs from the ceiling like thick webs. It stands in piles and
+pillars along the floor. The substance climbs the walls inhibiting vents
+and panels. Filth covered pipes jut out from walls more menacingly then
+they no doubt formerly had. A doorway intersects one of the corridor's
+filth ridden walls.
+~
+1075904520
+1
+0 1
+D1
+~
+~
+0
+-1 4057
+D3
+~
+~
+0
+-1 4034
+D6
+~
+~
+0
+-1 4060
+D8
+~
+~
+0
+-1 4055
+S
+#4057
+Top of the Starboard Stairwell~
+&C The stairwell's metal walls are shiny and smooth. The stairwell goes
+down in a smooth spiral. Small 6 inch wide ramps follow the edges of the
+stairs, for use with wheeled equipment. Handlebars and pipes follow the
+stairs down. Handlebars keep those above the stairs from falling down
+unintentionally. A large circular set of lights lights the stairwell.
+~
+&G The stairwells metallic walls are covered in a strong greenish black
+substance. The filth covered stairs go down in a relatively smooth spiral.
+Handlebars and pipes that follow the stairs path are covered in the dark
+material. the material hangs menacingly from the ceiling, obstructing the
+lights. A pocketed wall of the strange substance stands where once must've
+stood railings to keep those standing above  the stairs from falling down
+unintentionally.
+~
+1075904520
+1
+0 1
+D3
+~
+~
+0
+-1 4056
+D5
+~
+~
+0
+-1 4058
+S
+#4058
+Bottom of the Starboard Stairwell~
+&C The stairwell's metal walls are shiny and smooth. The stairwell goes up
+in a smooth spiral. Small 6 inch wide ramps follow the edges of the
+stairs, for use with wheeled equipment. Handlebars and pipes follow the
+stairs up. Lights mounted on the circular walls light the bottom portion
+of the stairwell. The three lowest stairs have lights mounted into them.
+~
+&G The stairwells metallic walls are covered in a strong greenish black
+substance. The filth covered stairs go up in a relatively smooth spiral.
+Handlebars and pipes that follow the stairs path are covered in the dark
+material. The material hangs menacingly from the underside of the stairs.
+The wall mounted lights are almost completely covered, making their light
+useless. Towards the bottom of the stairs the material covers the steps
+like a slick ramp. the floor and walls are covered clumps of the
+substance. The material stands like pillars in many places.
+~
+1075904520
+1
+0 1
+D3
+~
+~
+0
+-1 4059
+D4
+~
+~
+0
+-1 4057
+S
+#4059
+Equipment Room~
+&C  The smooth metallic walls are interrupted by medium sized pipes and
+removable panels. Many small vents encircle the room. Lights travel port
+to starboard, illuminating the rectangular room. Electronic, and
+mechanical equipment fills the room. Lab supplies are kept neatly in
+several of the large lockers that are arranged throughout the room. Rimmed
+shelves keep various supplies ready for use.
+~
+&G  The metallic walls are almost completely covered by layers of a
+greenish black material. Small vents can only be occasionally seen,
+partially covered by the slimy substance. The material hangs menacingly
+from the ceiling, obstructing any light that may have at one time been
+there. Huge pillars of the strong substance stands where once lockers and
+shelves must have stood.  Containers and cleaners litter the dark floor.
+~
+1210122248
+1
+0 1
+D1
+~
+~
+0
+-1 4058
+S
+#4060
+Starboard Circular Corridor~
+&C The corridor's shiny metal surface is smooth to the touch. The floor is
+clean and well polished. Two strips of lights follow the curved contours
+of the corridor. The walls are interrupted occasionally accessible panels.
+Incredibly small vents travel the middle of the ceiling. Pipes of mediocre
+size come out from the wall to turn down to the floor or follow the walls
+for a time before returning back to the wall's interior.
+~
+&G  The formerly well kept and polished metal corridor is filled with
+greenish black filth. The filth covers the two strips of lights that
+normally follow the contours of the walls. The slimy, yet strong,
+substance hangs from the ceiling like thick webs. It stands in piles and
+pillars along the floor. The substance climbs the walls inhibiting vents
+and panels. Filth covered pipes jut out from walls more menacingly then
+they no doubt formerly had.
+~
+1075904520
+1
+0 1
+D8
+~
+~
+0
+-1 4061
+D9
+~
+~
+0
+-1 4056
+S
+#4061
+Starboard Circular Corridor~
+&C The corridor's shiny metal surface is smooth to the touch. The floor is
+clean and well polished. Two strips of lights follow the curved contours
+of the corridor. The walls are interrupted occasionally accessible panels.
+Incredibly small vents travel the middle of the ceiling. Pipes of mediocre
+size come out from the wall to turn down to the floor or follow the walls
+for a time before returning back to the wall's interior.
+~
+&G The formerly well kept and polished metal corridor is filled with
+greenish black filth. The filth covers the two strips of lights that
+normally follow the contours of the walls. The slimy, yet strong,
+substance hangs from the ceiling like thick webs. It stands in piles and
+pillars along the floor. The substance climbs the walls inhibiting vents
+and panels. Filth covered pipes jut out from walls more menacingly then
+they no doubt formerly had.
+~
+1075904520
+1
+0 1
+D7
+~
+~
+0
+-1 4060
+D8
+~
+~
+0
+-1 4062
+D9
+~
+~
+0
+-1 4055
+S
+#4062
+Starboard Cargo Bay~
+&C  The large rectangular cargo bay's metallic walls are clean and well
+polished. The wall is interrupted only by an occasional pipe or removable
+panel. Large metal containers are strapped to the metal floor. Small
+gratings show little in their dark depths. The small view provided by the
+vents seems to show the vents tapering into smaller vents as they leave
+the room. Lights run from bow to stern lighting the bay.
+~
+&G The large rectangular cargo bay's metallic walls are thick with a
+greenish black substance. The wall is also covered in layers of the strong
+slimy substance. Small broken material laced gratings show little from
+their dark depths. The small view provided by these gratings seems to show
+the vents tapering into smaller filth ridden vents. The material hangs
+from the ceiling menacingly, covering the lights that must have at once
+shown there. Piles and pillars of the substance stands along the floor.
+The metallic cargo containers are almost covered in the material.
+~
+1075904520
+1
+0 1
+D2
+~
+~
+0
+-1 4063
+D7
+~
+~
+0
+-1 4061
+S
+#4063
+Starboard Cargo Bay~
+&C  The large rectangular cargo bay's metallic walls are clean and well
+polished. The wall is interrupted only by an occasional pipe or removable
+panel. Large metal containers are strapped to the metal floor. Small
+gratings show little in their dark depths. The small view provided by the
+vents seems to show the vents tapering into smaller vents as they leave
+the room. Lights run from bow to stern lighting the bay. A rectangular
+groove in the floor appears to be a large ramp like door.
+~
+&G  The large rectangular cargo bay's metallic walls are thick with a
+greenish black substance. The wall is also covered in layers of the strong
+slimy substance. Small broken material laced gratings show little from
+their dark depths. The small view provided by these gratings seems to show
+the vents tapering into smaller filth ridden vents. The material hangs
+from the ceiling menacingly, covering the lights that must have at once
+shown there. Piles and pillars of the substance stands along the floor.
+The metallic cargo containers are almost covered in the material. A
+rectangular groove in the slimy floor appears to be a large ramp like
+door. The slimy material almost covers the groove.
+~
+1075904520
+1
+0 1
+D0
+~
+~
+0
+-1 4062
+> speech_prog 'well done!'~
+mpsleep 12
+mptrans elder 4065
+mpecho A predator elder recloaks.
+mpset predloaded 0
+~
+|
+S
+#4064
+PROGs~
+&C Cockpit
+~
+Cockpit
+~
+1109458952
+0
+0 1
+D2
+~
+~
+7&3
+-1 4031
+D5
+~
+~
+301989888
+-1 4065
+S
+#4065
+Purging~
+purge me
+~
+purge me
+~
+1109458956
+0
+0 1
+D4
+~
+~
+301989888
+-1 4064
+> rand_prog 100~
+mppurge
+~
+|
+S
+#0
+
+
+#RESETS
+O 1 4030 1 4062
+O 1 4031 1 4062
+O 1 4032 1 4062
+M 1 4030 1 4064
+D 0 4064 2 2
+O 1 4030 1 4052
+O 1 4031 1 4052
+O 1 4032 1 4052
+O 1 4030 1 4063
+O 1 4029 1 4063
+O 1 4037 1 4053
+O 1 4038 1 4053
+O 1 4030 1 4043
+O 1 4035 1 4043
+M 1 4029 2 4059
+E 1 96 1 10
+E 1 4041 1 17
+E 1 4042 1 3
+E 1 70 1 16
+E 1 130 1 6
+G 1 4041 1
+G 1 4041 1
+G 1 4041 1
+G 1 4041 1
+G 1 4041 1
+M 1 4029 2 4059
+E 1 4041 1 17
+G 1 4041 1
+G 1 4041 1
+G 1 4041 1
+G 1 4041 1
+E 1 96 1 10
+E 1 4042 1 3
+G 1 121 1
+G 1 121 1
+G 1 121 1
+G 1 121 1
+E 1 120 1 16
+E 1 130 1 6
+O 1 4034 1 4059
+O 1 4043 1 4059
+M 1 4034 3 4038
+M 1 4034 3 4038
+M 1 4034 3 4038
+O 1 4034 1 4038
+M 1 4037 1 4030
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+G 1 81 1
+M 1 4036 2 4030
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+G 1 81 1
+G 1 81 1
+M 1 4036 2 4029
+G 1 83 1
+G 1 83 1
+E 1 82 1 16
+G 1 83 1
+G 1 679 1
+G 1 679 1
+E 1 678 1 18
+M 1 4037 3 4029
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+M 1 4037 3 4029
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+O 1 4039 1 4029
+O 1 4040 1 4029
+M 1 4036 3 4034
+G 1 80 1
+G 1 81 1
+G 1 81 1
+G 1 81 1
+G 1 81 1
+M 1 4036 4 4031
+G 1 81 1
+E 1 80 1 16
+G 1 81 1
+D 0 4031 0 2
+M 1 4036 5 4032
+G 1 81 1
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+M 1 4036 6 4033
+G 1 81 1
+E 1 80 1 16
+G 1 81 1
+G 1 81 1
+G 1 81 1
+O 1 4045 1 4035
+O 1 4045 1 4037
+O 1 4045 1 4039
+O 1 4030 1 4042
+O 1 4031 1 4042
+O 1 4032 1 4042
+O 1 4045 1 4042
+O 1 4046 1 4049
+O 1 4045 1 4051
+O 1 4047 1 4060
+O 1 4048 1 4061
+O 1 4048 1 4055
+M 1 4035 3 4050
+E 1 682 1 17
+E 1 687 1 16
+E 1 4044 1 5
+G 1 685 1
+E 1 4049 1 20
+M 1 4035 3 4050
+E 1 691 1 16
+E 1 4044 1 5
+G 1 692 1
+G 1 692 1
+E 1 4049 1 20
+M 1 4035 3 4050
+E 1 80 1 16
+E 1 4044 1 5
+G 1 81 1
+G 1 81 1
+G 1 81 1
+E 1 4049 1 20
+O 1 4036 1 4050
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+M  4029 spec_enemy_scan
+M  4029 spec_enemy_grenade
+M  4035 spec_enemy_scan
+M  4036 spec_enemy_scan
+M  4037 spec_enemy_scan
+S
+
+
+#$

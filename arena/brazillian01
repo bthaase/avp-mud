@@ -1,0 +1,14 @@
+#ARENA
+Name         Brazillian Jungle~
+Desc         Mixture of Jungle and Cave area. Contains Rebel Marine base.~
+Filename     brazillian01~
+Firstroom    1722
+Lastroom     1821
+Timer        30
+Maxsupport   0 5
+Maxsupport   1 5
+Minp         0
+Maxp         30
+End
+
+#END

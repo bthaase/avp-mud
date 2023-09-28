@@ -1,0 +1,14 @@
+#ARENA
+Name         Standard Building Melee 1~
+Desc         A Standard Building Melee Battle. Nothing fancy.~
+Filename     sbuilding1~
+Firstroom    3500
+Lastroom     3586
+Timer        15
+Maxsupport   0 5
+Maxsupport   1 5
+Minp         999
+Maxp         999
+End
+
+#END

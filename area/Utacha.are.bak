@@ -1,0 +1,6391 @@
+#AREA   Separatist Camp~
+
+#VERSION 4
+
+#AUTHOR Utacha~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#4655
+MControl01~
+Master Control 01~
+Master control prog 01
+~
+~
+0
+3
+S
+1 8 8 0
+> speech_prog 'initiate SEBase Pistolier 1 creation'~
+mpat 4764 mpmload 4657
+mpoload 4659
+mpat 4764 give jacket pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpat 4764 mpforce pistol wear all
+mpat 4764 mpforce pistol wear all
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpat 4764 mpforce pistol s
+mpat 4763 mptrans pistol 4694
+~
+> speech_prog 'initiate SEBase Sniper 1 creation'~
+mpat 4764 mpmload 4656
+mpoload 4659
+mpat 4764 give jacket sniper
+mpoload 691
+mpat 4764 give sniper sniper
+mpat 4764 mpforce sniper wear all
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpat 4764 mpforce sniper s
+mpat 4763 mptrans sniper 4695
+~
+> speech_prog 'initiate SEBase Rica creation'~
+mpat 4764 mpmload 4661
+mpoload 4659
+mpat 4764 give jacket rica
+mpoload 665
+mpat 4764 give knife rica
+mpoload 678
+mpat 4764 give vp7 rica
+mpat 4764 mpforce rica wear all
+mpat 4764 mpforce rica wear all
+mpoload 679
+mpat 4764 give clip rica
+mpoload 679
+mpat 4764 give clip rica
+mpoload 679
+mpat 4764 give clip rica
+mpoload 679
+mpat 4764 give clip rica
+mpoload 679
+mpat 4764 give clip rica
+mpat 4764 mpforce rica s
+mpat 4763 mptrans rica 4693
+~
+> speech_prog 'initiate NWBase Sniper 1 creation'~
+mpat 4764 mpmload 4656
+mpoload 4659
+mpat 4764 give jacket sniper
+mpoload 691
+mpat 4764 give sniper sniper
+mpat 4764 mpforce sniper wear all
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpat 4764 mpforce sniper s
+mpat 4763 mptrans sniper 4699
+~
+> speech_prog 'initiate NWBase Payton creation'~
+mpat 4764 mpmload 4663
+mpoload 4659
+mpat 4764 give jacket payton
+mpoload 678
+mpat 4764 give vp7 payton
+mpat 4764 mpforce payton wear all
+mpoload 679
+mpat 4764 give clip payton
+mpoload 679
+mpat 4764 give clip payton
+mpoload 679
+mpat 4764 give clip payton
+mpoload 679
+mpat 4764 give clip payton
+mpoload 679
+mpat 4764 give clip payton
+mpat 4764 mpforce payton s
+mpat 4763 mptrans payton 4697
+~
+> speech_prog 'initiate NWBase Pistolier creation'~
+mpat 4764 mpmload 4657
+mpoload 4659
+mpat 4764 give jacket pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpat 4764 mpforce pistol wear all
+mpat 4764 mpforce pistol wear all
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpat 4764 mpforce pistol s
+mpat 4763 mptrans pistol 4698
+~
+> speech_prog 'initiate MBase Sniper 1 creation'~
+mpat 4764 mpmload 4656
+mpoload 4659
+mpat 4764 give jacket sniper
+mpoload 691
+mpat 4764 give sniper sniper
+mpat 4764 mpforce sniper wear all
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpat 4764 mpforce sniper s
+mpat 4763 mptrans sniper 4702
+~
+> speech_prog 'initiate MBase Sniper 2 creation'~
+mpat 4764 mpmload 4656
+mpoload 4659
+mpat 4764 give jacket sniper
+mpoload 691
+mpat 4764 give sniper sniper
+mpat 4764 mpforce sniper wear all
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpat 4764 mpforce sniper s
+mpat 4763 mptrans sniper 4703
+~
+> speech_prog 'initiate MBase Sniper 3 creation'~
+mpat 4764 mpmload 4656
+mpoload 4659
+mpat 4764 give jacket sniper
+mpoload 691
+mpat 4764 give sniper sniper
+mpat 4764 mpforce sniper wear all
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpat 4764 mpforce sniper s
+mpat 4763 mptrans sniper 4705
+~
+> speech_prog 'initiate MBase Sniper 4 creation'~
+mpat 4764 mpmload 4656
+mpoload 4659
+mpat 4764 give jacket sniper
+mpoload 691
+mpat 4764 give sniper sniper
+mpat 4764 mpforce sniper wear all
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpat 4764 mpforce sniper s
+mpat 4763 mptrans sniper 4704
+~
+> speech_prog 'initiate MBase Captain creation'~
+mpat 4764 mpmload 4666
+mpoload 4659
+mpat 4764 give jacket mandez
+mpoload 678
+mpat 4764 give vp7 mandez
+mpat 4764 mpforce mandez wear all
+mpoload 679
+mpat 4764 give clip mandez
+mpoload 679
+mpat 4764 give clip mandez
+mpoload 679
+mpat 4764 give clip mandez
+mpoload 679
+mpat 4764 give clip mandez
+mpoload 679
+mpat 4764 give clip mandez
+mpat 4764 mpforce mandez s
+mpat 4763 mptrans mandez 4701
+~
+> speech_prog 'initiate MBase Pistolier 1 creation'~
+mpat 4764 mpmload 4657
+mpoload 4659
+mpat 4764 give jacket pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpat 4764 mpforce pistol wear all
+mpat 4764 mpforce pistol wear all
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpat 4764 mpforce pistol s
+mpat 4763 mptrans pistol 4701
+~
+> speech_prog 'initiate MBase Pistolier 2 creation'~
+mpat 4764 mpmload 4657
+mpoload 4659
+mpat 4764 give jacket pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpat 4764 mpforce pistol wear all
+mpat 4764 mpforce pistol wear all
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpat 4764 mpforce pistol s
+mpat 4763 mptrans pistol 4701
+~
+> speech_prog 'initiate Tunnel Aniele creation'~
+mpat 4764 mpmload 4665
+mpoload 4659
+mpat 4764 give jacket anelie
+mpoload 678
+mpat 4764 give vp7 anelie
+mpat 4764 mpforce anelie wear all
+mpoload 679
+mpat 4764 give clip anelie
+mpoload 679
+mpat 4764 give clip anelie
+mpoload 679
+mpat 4764 give clip anelie
+mpoload 679
+mpat 4764 give clip anelie
+mpoload 679
+mpat 4764 give clip anelie
+mpat 4764 mpforce anelie s
+mpat 4763 mptrans anelie 4677
+~
+> speech_prog 'initiate Tunnel Pistolier 1 creation'~
+mpat 4764 mpmload 4657
+mpoload 4659
+mpat 4764 give jacket pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpat 4764 mpforce pistol wear all
+mpat 4764 mpforce pistol wear all
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpat 4764 mpforce pistol s
+mpat 4763 mptrans pistol 4678
+~
+> speech_prog 'initiate Tunnel Pistolier 2 creation'~
+mpat 4764 mpmload 4657
+mpoload 4659
+mpat 4764 give jacket pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpat 4764 mpforce pistol wear all
+mpat 4764 mpforce pistol wear all
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpat 4764 mpforce pistol s
+mpat 4763 mptrans pistol 4678
+~
+> speech_prog 'initiate Tunnel Pistolier 3 creation'~
+mpat 4764 mpmload 4657
+mpoload 4659
+mpat 4764 give jacket pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpat 4764 mpforce pistol wear all
+mpat 4764 mpforce pistol wear all
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpat 4764 mpforce pistol s
+mpat 4763 mptrans pistol 4677
+~
+> speech_prog 'initiate EPath Sniper 1 creation'~
+mpat 4764 mpmload 4656
+mpoload 4659
+mpat 4764 give jacket sniper
+mpoload 691
+mpat 4764 give sniper sniper
+mpat 4764 mpforce sniper wear all
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpat 4764 mpforce sniper s
+mpat 4763 mptrans sniper 4685
+~
+> speech_prog 'initiate EPath Aliet creation'~
+mpat 4764 mpmload 4664
+mpoload 4659
+mpat 4764 give jacket Aliet
+mpoload 678
+mpat 4764 give vp7 Aliet
+mpat 4764 mpforce Aliet wear all
+mpoload 679
+mpat 4764 give clip Aliet
+mpoload 679
+mpat 4764 give clip Aliet
+mpoload 679
+mpat 4764 give clip Aliet
+mpoload 679
+mpat 4764 give clip Aliet
+mpoload 679
+mpat 4764 give clip Aliet
+mpat 4764 mpforce Aliet s
+mpat 4763 mptrans Aliet 4684
+~
+> speech_prog 'initiate EPath Pistolier 1 creation'~
+mpat 4764 mpmload 4657
+mpoload 4659
+mpat 4764 give jacket pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpat 4764 mpforce pistol wear all
+mpat 4764 mpforce pistol wear all
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpat 4764 mpforce pistol s
+mpat 4763 mptrans pistol 4684
+~
+> speech_prog 'initiate Cavern Pistolier 1 creation'~
+mpat 4764 mpmload 4657
+mpoload 4659
+mpat 4764 give jacket pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpat 4764 mpforce pistol wear all
+mpat 4764 mpforce pistol wear all
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpat 4764 mpforce pistol s
+mpat 4763 mptrans pistol 4676
+~
+> speech_prog 'initiate Cavern Pistolier 2 creation'~
+mpat 4764 mpmload 4657
+mpoload 4659
+mpat 4764 give jacket pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpat 4764 mpforce pistol wear all
+mpat 4764 mpforce pistol wear all
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpat 4764 mpforce pistol s
+mpat 4763 mptrans pistol 4672
+~
+> speech_prog 'initiate Cavern Pistolier 3 creation'~
+mpat 4764 mpmload 4657
+mpoload 4659
+mpat 4764 give jacket pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpat 4764 mpforce pistol wear all
+mpat 4764 mpforce pistol wear all
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpat 4764 mpforce pistol s
+mpat 4763 mptrans pistol 4674
+~
+> speech_prog 'initiate Cavern Ridley creation'~
+mpat 4764 mpmload 4662
+mpoload 4659
+mpat 4764 give jacket ridley
+mpoload 678
+mpat 4764 give vp7 ridley
+mpat 4764 mpforce ridley wear all
+mpoload 679
+mpat 4764 give clip ridley
+mpoload 679
+mpat 4764 give clip ridley
+mpoload 679
+mpat 4764 give clip ridley
+mpoload 679
+mpat 4764 give clip ridley
+mpoload 679
+mpat 4764 give clip ridley
+mpat 4764 mpforce ridley s
+mpat 4763 mptrans ridley 4671
+~
+|
+#4656
+Seperatist sniper~
+a seperatist sniper~
+A separatist sniper stands here.
+~
+~
+0
+11
+Z
+1 8 8 1
+15 15 15 10 15 25
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> act_prog '*sounds of comm chatter* -Northwestern bunker-'~
+w
+n
+mpsleep 25
+w
+w
+se
+~
+> act_prog '*sounds of comm chatter* -Southeastern bunker-'~
+e
+s
+mpsleep 25
+e
+e
+nw
+~
+> act_prog '*sounds of comm chatter* -Main bunker-'~
+w
+n
+mpsleep 10
+n
+mpsleep 25
+if rand(75)
+if rand(50)
+nw
+else
+ne
+if rand(25)
+nw
+endif
+endif
+endif
+~
+> act_prog '*static*...Go..Southeastern bunker...Revenge!'~
+e
+s
+mpsleep 25
+e
+e
+nw
+~
+> act_prog '*static*...Go..Northeastern bunker...Revenge!'~
+w
+n
+mpsleep 25
+w
+w
+se
+~
+> act_prog '*static*...Go..Main bunker...Revenge!'~
+w
+n
+mpsleep 10
+n
+mpsleep 25
+if rand(75)
+if rand(50)
+nw
+else
+ne
+if rand(25)
+nw
+endif
+endif
+endif
+~
+|
+#4657
+seperatist pistolier~
+a seperatist pistolier~
+A seperatist soldier wielding two pistols stand here.
+~
+~
+0
+9
+Z
+1 8 8 1
+12 18 18 18 23 18
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> act_prog '*sounds of comm chatter* -East Path-'~
+mpsleep 20
+s
+se
+e
+u
+se
+e
+e
+e
+se
+~
+> act_prog '*sounds of comm chatter* -Tunnel-'~
+ne
+d
+n
+w
+n
+e
+se
+~
+> act_prog '*sounds of comm chatter* -Northwester bunker-'~
+w
+n
+mpsleep 10
+w
+w
+s
+~
+|
+#4658
+seperatist minigunner~
+a seperatist minigunner~
+A paranoid Minigunner stands here, his finger twitching.
+~
+~
+0
+9
+Z
+1 8 8 1
+25 13 8 8 25 23
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> act_prog '*static*...Go..Main bunker...Revenge!'~
+w
+n
+open n
+n
+~
+> act_prog '*static*...Go..Southeastern bunker...Revenge!'~
+e
+s
+open e
+e
+e
+spray n
+n
+~
+> act_prog '*static*...Go..Northwestern bunker...Revenge!'~
+w
+n
+mpsleep 7
+w
+w
+if rand(50)
+spray s
+endif
+s
+~
+> act_prog '*static*...Go..East path...Revenge!'~
+s
+se
+e
+u
+se
+if rand(75)
+if rand(50)
+ne
+else
+se
+endif
+else
+spray e
+endif
+~
+> act_prog '*static*...Go..Tunnel...Revenge!'~
+ne
+d
+n
+w
+n
+spray ne
+~
+> act_prog '*static*...Go..Cavern...Revenge!'~
+s
+w
+w
+w
+sw
+w
+sw
+spray s
+s
+~
+|
+#4659
+seperatist shotgunner~
+a seperatist shotgunner~
+A seperatist soldier stands here holding a shotgun.
+~
+~
+0
+9
+Z
+1 8 8 1
+21 18 10 10 17 17
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> act_prog '*static*...Go..East path...Revenge!'~
+s
+se
+e
+u
+se
+mpsleep 25
+e
+e
+e
+se
+~
+> act_prog '*static*...Go..Northwestern bunker...Revenge!'~
+w
+n
+mpsleep 9
+w
+w
+se
+~
+> act_prog '*static*...Go..Southeastern bunker...Revenge!'~
+e
+s
+mpsleep 10
+e
+e
+nw
+~
+> act_prog '*static*...Go..Main bunker...Revenge!'~
+w
+n
+open n
+mpsleep 15
+n
+if rand(50)
+nw
+ne
+else
+ne
+nw
+endif
+s
+~
+> act_prog '*sounds of comm chatter* -East Path-'~
+s
+se
+e
+u
+se
+if rand(50)
+ne
+else
+se
+endif
+~
+> act_prog '*sounds of comm chatter* -Tunnel-'~
+ne
+d
+n
+w
+n
+if rand(50)
+ne
+else
+e
+se
+endif
+~
+> act_prog '*sounds of comm chatter* -Cavern-'~
+s
+w
+w
+w
+sw
+if rand(50)
+w
+sw
+if rand(65)
+s
+endif
+else
+s
+sw
+if rand(65)
+w
+endif
+endif
+~
+> act_prog '*sounds of comm chatter* -Southeastern bunker-'~
+e
+s
+mpsleep 10
+e
+e
+n
+~
+> act_prog '*sounds of comm chatter* -Main bunker-'~
+w
+n
+open n
+n
+if rand(50)
+nw
+ne
+else
+ne
+nw
+endif
+s
+~
+|
+#4660
+seperatist rifleman~
+a seperatist rifleman~
+A seperatist soldier stands here wielding a pulse rifle.
+~
+~
+0
+9
+Z
+1 8 8 1
+18 22 22 15 18 22
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> act_prog '*sounds of comm chatter* -East Path-'~
+s
+se
+e
+u
+se
+~
+> act_prog '*sounds of comm chatter* -Northwestern bunker-'~
+w
+n
+open w
+w
+w
+~
+> act_prog '*sounds of comm chatter* -Southeastern bunker-'~
+e
+s
+open e
+e
+e
+~
+> act_prog '*sounds of comm chatter* -Main bunker-'~
+w
+n
+mpsleep 8
+n
+~
+> act_prog '*static*...Go..Southeastern bunker...Revenge!'~
+e
+s
+open e
+e
+e
+~
+> act_prog '*static*...Go..Northwestern bunker...Revenge!'~
+w
+n
+open w
+w
+w
+~
+> act_prog '*static*...Go..East path...Revenge!'~
+s
+se
+e
+u
+se
+mpsleep 25
+e
+e
+e
+se
+~
+> act_prog '*static*...Go..Tunnel...Revenge!'~
+ne
+d
+n
+w
+n
+e
+se
+~
+> act_prog '*static*...Go..Cavern...Revenge!'~
+s
+w
+w
+w
+sw
+s
+sw
+spray w
+w
+~
+|
+#4661
+seperatist rica~
+Ltnt. Rica~
+A seperatist Lieutenant stands here.
+~
+~
+0
+9
+Z
+1 8 8 0
+10 10 10 18 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset sebase 2
+~
+|
+#4662
+seperatist ridley~
+Ltnt. Ridley~
+A seperatist Lieutenant stands here.
+~
+~
+0
+9
+Z
+1 8 8 0
+10 10 10 18 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset cavern 2
+~
+|
+#4663
+seperatist payton~
+Ltnt. Payton~
+A seperatist Lieutenant stands here.
+~
+~
+0
+9
+Z
+1 8 8 0
+10 10 10 18 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset nwbase 2
+~
+|
+#4664
+seperatist aliet~
+Ltnt. Aliet~
+A seperatist Lieutenant stands here.
+~
+~
+0
+9
+Z
+1 8 8 0
+10 10 10 18 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset epath 2
+~
+|
+#4665
+seperatist anelie~
+Ltnt. Anelie~
+A seperatist Lieutenant stands here.
+~
+~
+0
+9
+Z
+1 8 8 0
+10 10 10 18 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset tunnel 2
+~
+|
+#4666
+seperatist mandez~
+Cpt. Mandez~
+A seperatist Captain stands here.
+~
+~
+0
+9
+Z
+1 8 8 0
+10 10 10 22 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset mbase 2
+~
+|
+#4667
+Sergeant pyro~
+a Seperatist Sergeant~
+A seperatist sergeant stands here wielding a flamethrower.
+~
+~
+0
+11
+Z
+1 8 8 1
+18 15 15 22 18 23
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset sebase 4
+~
+> act_prog '*sounds of comm chatter* -Southeastern bunker-'~
+e
+s
+mpsleep 15
+e
+e
+n
+~
+|
+#4668
+Sergeant shotgunner~
+a Seperatist Sergeant~
+A seperatist sergeant stands here wielding a shotgun.
+~
+~
+0
+11
+Z
+1 8 8 1
+18 18 18 18 18 12
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset tunnel 4
+~
+> act_prog '*sounds of comm chatter* -Tunnel-'~
+mpsleep 5
+ne
+d
+n
+w
+n
+e
+se
+~
+|
+#4669
+Sergeant pistolier~
+a Seperatist Sergeant~
+A seperatist sergeant stands here wielding two pistols.
+~
+~
+0
+11
+Z
+1 8 8 1
+18 18 18 18 18 23
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset nwbase 4
+~
+> act_prog '*sounds of comm chatter* -Northwestern bunker-'~
+w
+n
+mpsleep 15
+w
+w
+s
+~
+|
+#4670
+Sergeant sniper~
+a Seperatist Sergeant~
+A seperatist sergeant stands here wielding a sniper rifle.
+~
+~
+0
+11
+Z
+1 8 8 1
+18 18 18 18 18 25
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset epath 4
+~
+> act_prog '*sounds of comm chatter* -East Path-'~
+mpsleep 35
+s
+se
+e
+u
+se
+e
+e
+e
+~
+|
+#4671
+Sergeant smartgunner~
+a Seperatist Sergeant~
+A seperatist sergeant stands here wielding a smartgun.
+~
+~
+0
+11
+Z
+1 8 8 1
+25 18 21 18 18 23
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset mbase 4
+~
+> act_prog '*sounds of comm chatter* -Main bunker-'~
+w
+n
+mpsleep 10
+n
+nw
+ne
+s
+~
+|
+#4672
+Sergeant minigunner~
+a Seperatist Sergeant~
+A seperatist sergeant stands here wielding a large minigun.
+~
+~
+0
+11
+Z
+1 8 8 1
+25 18 18 18 18 17
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset caverns 4
+~
+> act_prog '*sounds of comm chatter* -Cavern-'~
+minigunner seargent
+s
+w
+w
+w
+sw
+s
+sw
+spray w
+w
+~
+|
+#4673
+fire specialist~
+a fire specialist~
+A seperatist stands here wielding a flamethrower.
+~
+~
+0
+11
+Z
+1 8 8 1
+25 15 10 10 15 15
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset cavern 2
+~
+> act_prog '*static*...Go..Cavern...Revenge!'~
+s
+w
+w
+w
+sw
+s
+sw
+spray w
+w
+~
+|
+#4674
+sidearm specialist~
+a sidearms specialist~
+A seperatist specialist stands here.
+~
+~
+0
+11
+Z
+1 8 8 1
+18 15 10 10 15 25
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset nwbase 2
+~
+|
+#4675
+seperatist marksman~
+a seperatist marksman~
+A seperatist specialist stands here wearing multilensed goggles.
+~
+~
+4194304
+11
+Z
+1 8 8 1
+18 15 10 10 15 25
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset epath 2
+~
+> act_prog '*static*...Go..East path...Revenge!'~
+mpsleep 35
+s
+se
+e
+u
+se
+e
+e
+e
+~
+|
+#4676
+specialist rifleman~
+a rifle specialist~
+A seperatist specialist stands here.
+~
+~
+0
+11
+Z
+1 8 8 1
+18 15 18 10 15 22
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset tunnel 2
+~
+> act_prog '*static*...Go..Tunnel...Revenge!'~
+ne
+d
+n
+w
+n
+e
+se
+~
+|
+#4677
+specialist covert~
+a covert specialist~
+A seperatist specialist stands here.
+~
+~
+32768
+11
+Z
+1 8 8 1
+18 15 10 10 15 25
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset mbase 2
+~
+> act_prog '*static*...Go..Main bunker...Revenge!'~
+w
+n
+mpsleep 10
+n
+nw
+ne
+s
+~
+> act_prog '*static*...Go..Main bunker...Revenge!'~
+w
+n
+mpsleep 10
+n
+nw
+ne
+s
+~
+|
+#4678
+specialist closerange~
+a closerange specialist~
+A seperatist specialist stands here.
+~
+~
+0
+11
+Z
+1 8 8 1
+24 15 10 10 15 18
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> death_prog 100~
+mpset sebase 2
+~
+> act_prog '*static*...Go..Southeastern bunker...Revenge!'~
+e
+s
+mpsleep 12
+e
+e
+n
+n
+~
+|
+#4679
+nwbase0 subroutine~
+NWBase Subroutine~
+NWBase Subroutine is here.
+~
+~
+0
+3
+S
+1 8 8 0
+> speech_prog 'NWBase S Check Status'~
+say checking...
+if variable(nwbg) == 0
+say initiate NWBase Sniper 1 creation
+mpset nwbg 1
+mpset nwbase 1
+endif
+if variable(nwbg) == 1
+say initiate NWBase Payton creation
+mpset nwbg 2
+endif
+if variable(nwbg) == 2
+say initiate NWBase Pistolier creation
+mpset nwbg 3
+endif
+say finished...
+~
+|
+#4680
+sebase0 subroutine~
+SEBase Subroutine~
+A SEBase Subroutine stands here.
+~
+~
+0
+1
+S
+1 8 8 0
+> speech_prog 'SEBase S Check Status'~
+say Checking...
+if variable(sebg) == 0
+mpset sebase 1
+say initiate SEBase Pistolier 1 creation
+mpset sebg 1
+endif
+if variable(sebg) == 1
+say initiate SEBase Sniper 1 creation
+mpset sebg 2
+endif
+if variable(sebg) == 2
+say initiate SEBase Rica creation
+mpset sebg 3
+endif
+say finished...
+~
+|
+#4681
+mbase0 subroutine~
+Mbase Subroutine~
+A MBase Subroutine is here.
+~
+~
+0
+3
+S
+1 8 8 0
+> speech_prog 'MBase S Check Status'~
+say checking...
+if variable(mbg) == 0
+say initiate MBase Sniper 1 creation
+mpset mbg 1
+mpset mbase 1
+endif
+if variable(mbg) == 1
+say initiate MBase Sniper 2 creation
+mpset mbg 2
+endif
+if variable(mbg) == 2
+say initiate MBase Sniper 3 creation
+mpset mbg 3
+endif
+if variable(mbg) == 3
+say initiate MBase Sniper 4 creation
+mpset mbg 4
+endif
+if variable(mbg) == 4
+say initiate MBase Captain creation
+mpset mbg 5
+endif
+if variable(sebg) == 5
+say initiate MBase Pistolier 1 creation
+mpset sebg 6
+endif
+if variable(sebg) == 6
+say initiate MBase Pistolier 2 creation
+mpset sebg 7
+endif
+say finished...
+~
+|
+#4682
+epath0 subroutine~
+Epath Subroutine~
+Epath Subroutine is here.
+~
+~
+0
+1
+S
+1 8 8 0
+> speech_prog 'Epath S Check Status'~
+say checking...
+if variable(epg) == 0
+say initiate EPath Sniper 1 creation
+mpset epg 1
+mpset epath 1
+endif
+if variable(epg) == 1
+say initiate EPath Aliet creation
+mpset epg 2
+endif
+if variable(epg) == 2
+say initiate EPath Pistolier 1 creation
+mpset epg 3
+endif
+say finished...
+~
+|
+#4683
+tunnel0 subroutine~
+Tunnel Subroutine~
+A Tunnel Subroutine stands here.
+~
+~
+0
+1
+S
+1 8 8 0
+> speech_prog 'Tunnel S Check Status'~
+say checking...
+if variable(tg) == 0
+say initiate Tunnel Aniele creation
+mpset tg 1
+mpset Tunnel 1
+endif
+if variable(tg) == 1
+say initiate Tunnel Pistolier 1 creation
+mpset tg 2
+endif
+if variable(tg) == 2
+say initiate Tunnel Pistolier 2 creation
+mpset tg 3
+endif
+if variable(tg) == 3
+say initiate Tunnel Pistolier 3 creation
+mpset tg 4
+endif
+say finished...
+~
+|
+#4684
+Cavern0 Subroutine~
+Cavern Subroutine~
+A Cavern Subroutine stands here.
+~
+~
+0
+1
+S
+1 8 8 0
+> speech_prog 'Cavern S Check Status'~
+say checking...
+if variable(cg) == 0
+say initiate Cavern Ridley creation
+mpset cg 1
+mpset cavern 1
+endif
+if variable(cg) == 1
+say initiate Cavern Pistolier 1 creation
+mpset cg 2
+endif
+if variable(cg) == 2
+say initiate Cavern Pistolier 2 creation
+mpset cg 3
+endif
+if variable(cg) == 3
+say initiate Cavern Pistolier 3 creation
+mpset cg 4
+endif
+say finished...
+~
+|
+#4685
+Reinforcement1 subroutine~
+RSub1~
+RSub1 is here.
+~
+~
+0
+1
+S
+1 8 8 0
+> speech_prog 'Reinforcement S Check Status'~
+say checking...
+if variable(tunnel) == 2
+say Tunnel needs reinforcements
+endif
+if variable(cavern) == 2
+say Cavern needs reinforcements
+endif
+if variable(nwbase) == 2
+say NWBase needs reinforcements
+endif
+if variable(sebase) == 2
+say SEBase needs reinforcements
+endif
+if variable(mbase) == 2
+say MBase needs reinforcements
+endif
+if variable(epath) == 2
+say EPath needs reinforcements
+endif
+say finished...
+~
+|
+#4686
+reinforcement2 subroutine~
+RSub2~
+RSub2 is here.
+~
+~
+0
+1
+S
+1 8 8 0
+> speech_prog 'Reinforcement S2 Check Status'~
+say checking...
+if variable(tunnel) == 4
+say Tunnel needs revenge
+endif
+if variable(cavern) == 4
+say Cavern needs revenge
+endif
+if variable(nwbase) == 4
+say NWBase needs revenge
+endif
+if variable(sebase) == 4
+say SEBase needs revenge
+endif
+if variable(mbase) == 4
+say MBase needs revenge
+endif
+if variable(epath) == 4
+say EPath needs revenge
+endif
+say finished...
+~
+|
+#4687
+mcontrol02~
+Master Control 02~
+Master Control 02 is here
+~
+~
+0
+3
+S
+1 8 8 0
+> speech_prog 'sending shotgunner 4726'~
+mpat 4764 mpmload 4659
+mpoload 4659
+mpat 4764 give jacket shotg
+mpoload 687
+mpat 4764 give shotg shotg
+mpat 4764 mpforce shotg wear all
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotgun
+mpoload 685
+mpat 4764 give box shotgun
+mpat 4764 mpforce shotg s
+mpat 4763 mptrans shotg 4726
+~
+> speech_prog 'sending shotgunner sergeant'~
+mpat 4764 mpmload 4668
+mpoload 4659
+mpat 4764 give jacket shotg
+mpoload 687
+mpat 4764 give shotg shotg
+mpat 4764 mpforce shotg wear all
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotgun
+mpoload 685
+mpat 4764 give box shotgun
+mpat 4764 mpforce shotg s
+mpat 4763 mptrans shotg 4726
+~
+> speech_prog 'sending pistolier 4726'~
+mpat 4764 mpmload
+4657
+mpoload 4659
+mpat 4764 give jacket
+pistol
+mpoload 678
+mpat 4764 give vp7
+pistol
+mpoload 678
+mpat 4764 give vp7
+pistol
+mpat 4764 mpforce pistol wear all
+mpat 4764 mpforce pistol wear all
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpat 4764 mpforce pistol s
+mpat 4763 mptrans pistol
+4726
+~
+> speech_prog 'sending shotgunner 4761'~
+mpat 4764 mpmload 4659
+mpoload 4659
+mpat 4764 give jacket shotg
+mpoload 687
+mpat 4764 give shotg shotg
+mpat 4764 mpforce shotg wear all
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotgun
+mpoload 685
+mpat 4764 give box shotgun
+mpat 4764 mpforce shotg s
+mpat 4763 mptrans shotg 4761
+~
+> speech_prog 'sending minigunner sergeant'~
+mpat 4764 mpmload 4658
+mpoload 4659
+mpat 4764 give jacket minigun
+mpoload 162
+mpat 4764 give minig minigun
+mpat 4764 mpforce minigun wear all
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpat 4764 mpforce minigun s
+mpat 4763 mptrans minig 4761
+~
+> speech_prog 'sending sniper 4744'~
+mpat 4764 mpmload 4656
+mpoload 4659
+mpat 4764 give jacket sniper
+mpoload 691
+mpat 4764 give sniper sniper
+mpat 4764 mpforce sniper wear all
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpat 4764 mpforce sniper s
+mpat 4763 mptrans sniper 4744
+~
+> speech_prog 'sending rifleman 4744'~
+mpat 4764 mpmload 4660
+mpoload 4659
+mpat 4764 give jacket riflem
+mpoload 80
+mpat 4764 give pulse riflem
+mpat 4764 mpforce riflem wear all
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpat 4764 mpforce riflem s
+mpat 4763 mptrans riflem 4744
+~
+> speech_prog 'sending shotgun 4744'~
+mpat 4764 mpmload 4659
+mpoload 4659
+mpat 4764 give jacket shotg
+mpoload 687
+mpat 4764 give shotg shotg
+mpat 4764 mpforce shotg wear all
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotgun
+mpoload 685
+mpat 4764 give box shotgun
+mpat 4764 mpforce shotg s
+mpat 4763 mptrans shotg 4744
+~
+> speech_prog 'sending shotgun 4753'~
+mpat 4764 mpmload 4659
+mpoload 4659
+mpat 4764 give jacket shotg
+mpoload 687
+mpat 4764 give shotg shotg
+mpat 4764 mpforce shotg wear all
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotgun
+mpoload 685
+mpat 4764 give box shotgun
+mpat 4764 mpforce shotg s
+mpat 4763 mptrans shotg 4753
+~
+> speech_prog 'sending pistol 4753'~
+mpat 4764 mpmload 4657
+mpoload 4659
+mpat 4764 give jacket pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpat 4764 mpforce pistol wear all
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpat 4764 mpforce pistol wear all
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpat 4764 mpforce pistol s
+mpat 4763 mptrans pistol 4753
+~
+> speech_prog 'sending sniper sergeant'~
+mpat 4764 mpmload 4670
+mpoload 4659
+mpat 4764 give jacket sniper
+mpoload 691
+mpat 4764 give sniper sniper
+mpat 4764 mpforce sniper wear all
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpat 4764 mpforce sniper s
+mpat 4763 mptrans sniper 4753
+~
+> speech_prog 'sending rifleman 4726'~
+mpat 4764 mpmload 4660
+mpoload 4659
+mpat 4764 give jacket riflem
+mpoload 80
+mpat 4764 give pulse riflem
+mpat 4764 mpforce riflem wear all
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpat 4764 mpforce riflem s
+mpat 4763 mptrans riflem 4726
+~
+> speech_prog 'sending sniper 4726'~
+mpat 4764 mpmload 4656
+mpoload 4659
+mpat 4764 give jacket sniper
+mpoload 691
+mpat 4764 give sniper sniper
+mpat 4764 mpforce sniper wear all
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpoload 692
+mpat 4764 give clip sniper
+mpat 4764 mpforce sniper s
+mpat 4763 mptrans sniper 4726
+~
+> speech_prog 'sending pistol sergeant'~
+mpat 4764 mpmload 4669
+mpoload 4659
+mpat 4764 give jacket pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpoload 678
+mpat 4764 give vp7 pistol
+mpat 4764 mpforce pistol wear all
+mpat 4764 mpforce pistol wear all
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpoload 679
+mpat 4764 give clip pistol
+mpat 4764 mpforce pistol s
+mpat 4763 mptrans pistol 4726
+~
+> speech_prog 'sending sergeant smartgunner'~
+mpat 4764 mpmload 4671
+mpoload 4659
+mpat 4764 give jacket smartg
+mpoload 673
+mpat 4764 give m240 smartg
+mpat 4764 mpforce smartg wear all
+mpoload 674
+mpat 4764 give m250 smartg
+mpoload 674
+mpat 4764 give m250 smartg
+mpoload 674
+mpat 4764 give m250 smartg
+mpoload 674
+mpat 4764 give m250 smartg
+mpoload 674
+mpat 4764 give m250 smartg
+mpat 4764 mpforce smartg s
+mpat 4763 mptrans smartg 4744
+~
+> speech_prog 'sending flamethrower sergeant'~
+mpat 4764 mpmload 4660
+mpoload 4659
+mpat 4764 give jacket pyro
+mpoload 751
+mpat 4764 give m240 pyro
+mpat 4764 mpforce pyro wear all
+mpoload 752
+mpat 4764 give napth pyro
+mpoload 752
+mpat 4764 give napth pyro
+mpoload 752
+mpat 4764 give napth pyro
+mpoload 752
+mpat 4764 give napth pyro
+mpoload 752
+mpat 4764 give napth pyro
+mpat 4764 mpforce pyro s
+mpat 4763 mptrans pyro 4744
+~
+> speech_prog 'sending rifleman 4753'~
+mpat 4764 mpmload 4660
+mpoload 4659
+mpat 4764 give jacket riflem
+mpoload 80
+mpat 4764 give pulse riflem
+mpat 4764 mpforce riflem wear all
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpat 4764 mpforce riflem s
+mpat 4763 mptrans riflem 4753
+~
+|
+#4688
+mcontrol03~
+Master control 03~
+Master contorl prog 03 is here.
+~
+~
+0
+1
+S
+1 8 8 0
+> speech_prog 'sending minigunner 4726'~
+mpat 4764 mpmload 4658
+mpoload 4659
+mpat 4764 give jacket minigun
+mpoload 162
+mpat 4764 give minig minigun
+mpat 4764 mpforce minigun wear all
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpat 4764 mpforce minigun s
+mpat 4763 mptrans minig 4726
+~
+> speech_prog 'sending minigunner 4744'~
+mpat 4764 mpmload 4658
+mpoload 4659
+mpat 4764 give jacket minigun
+mpoload 162
+mpat 4764 give minig minigun
+mpat 4764 mpforce minigun wear all
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpat 4764 mpforce minigun s
+mpat 4763 mptrans minig 4744
+~
+> speech_prog 'sending minigunner 4761'~
+mpat 4764 mpmload 4658
+mpoload 4659
+mpat 4764 give jacket minigun
+mpoload 162
+mpat 4764 give minig minigun
+mpat 4764 mpforce minigun wear all
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpat 4764 mpforce minigun s
+mpat 4763 mptrans minig 4761
+~
+> speech_prog 'sending minigunner 4753'~
+mpat 4764 mpmload 4658
+mpoload 4659
+mpat 4764 give jacket minigun
+mpoload 162
+mpat 4764 give minig minigun
+mpat 4764 mpforce minigun wear all
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpoload 693
+mpat 4764 give clip minigun
+mpat 4764 mpforce minigun s
+mpat 4763 mptrans minig 4753
+~
+> speech_prog 'sending shotgunner 4726'~
+mpat 4764 mpmload 4659
+mpoload 4659
+mpat 4764 give jacket shotg
+mpoload 687
+mpat 4764 give shotg shotg
+mpat 4764 mpforce shotg wear all
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotg
+mpoload 685
+mpat 4764 give box shotgun
+mpoload 685
+mpat 4764 give box shotgun
+mpat 4764 mpforce shotg s
+mpat 4763 mptrans shotg 4726
+~
+> speech_prog 'sending rifleman 4761'~
+mpat 4764 mpmload 4660
+mpoload 4659
+mpat 4764 give jacket riflem
+mpoload 80
+mpat 4764 give pulse riflem
+mpat 4764 mpforce riflem wear all
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpat 4764 mpforce riflem s
+mpat 4763 mptrans riflem 4761
+~
+> speech_prog 'sending rifle specialist'~
+mpat 4764 mpmload 4676
+mpoload 4659
+mpat 4764 give jacket riflem
+mpoload 80
+mpat 4764 give pulse riflem
+mpat 4764 mpforce riflem wear all
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpoload 81
+mpat 4764 give m309 riflem
+mpat 4764 mpforce riflem s
+mpat 4763 mptrans riflem 4726
+~
+> speech_prog 'sending fire specialist'~
+mpat 4764 mpmload 4673
+mpoload 4659
+mpat 4764 give jacket fire
+mpoload 751
+mpat 4764 give m240 fire
+mpat 4764 mpforce fire wear all
+mpoload 752
+mpat 4764 give napth fire
+mpoload 752
+mpat 4764 give napth fire
+mpoload 752
+mpat 4764 give napth fire
+mpoload 752
+mpat 4764 give napth fire
+mpoload 752
+mpat 4764 give napth fire
+mpat 4764 mpforce fire s
+mpat 4763 mptrans fire 4761
+~
+> speech_prog 'sending sniper specialist'~
+mpat 4764 mpmload 4675
+mpoload 4659
+mpat 4764 give jacket marksman
+mpoload 691
+mpat 4764 give sniper marksman
+mpat 4764 mpforce marksman wear all
+mpoload 692
+mpat 4764 give clip marksman
+mpoload 692
+mpat 4764 give clip marksman
+mpoload 692
+mpat 4764 give clip marksman
+mpoload 692
+mpat 4764 give clip marksman
+mpoload 692
+mpat 4764 give clip marksman
+mpat 4764 mpforce marksman s
+mpat 4763 mptrans marksman 4753
+~
+> speech_prog 'sending covert specialist'~
+mpat 4764 mpmload 4677
+mpoload 4659
+mpat 4764 give jacket covert
+mpoload 82
+mpoload 84
+mpoload 665
+mpat 4764 give knife covert
+mpat 4764 give pist covert
+mpoload 706
+mpat 4764 give silen covert
+mpat 4764 mpforce covert attach silen pist
+mpat 4764 mpforce covert wear all
+mpat 4764 mpforce covert wear all
+mpoload 84
+mpat 4764 give clip covert
+mpoload 84
+mpat 4764 give clip covert
+mpoload 84
+mpat 4764 give clip covert
+mpoload 84
+mpat 4764 give clip covert
+mpoload 84
+mpat 4764 give clip covert
+mpat 4764 give clip covert
+mpat 4764 mpforce covert s
+mpat 4763 mptrans covert 4744
+~
+> speech_prog 'sending closerange specialist'~
+mpat 4764 mpmload 4678
+mpoload 4659
+mpat 4764 give jacket closer
+mpoload 687
+mpat 4764 give closer shotg
+mpat 4764 mpforce closer wear all
+mpoload 685
+mpat 4764 give box closer
+mpoload 685
+mpat 4764 give box closer
+mpoload 685
+mpat 4764 give box closer
+mpoload 685
+mpat 4764 give box closer
+mpoload 685
+mpat 4764 give box closer
+mpat 4764 mpforce closer s
+mpat 4763 mptrans closer 4744
+~
+> speech_prog 'sending sidearm specialist'~
+mpat 4764 mpmload 4674
+mpoload 4659
+mpat 4764 give jacket sidearm
+mpoload 678
+mpat 4764 give vp7 sidearm
+mpoload 678
+mpat 4764 give vp7 sidearm
+mpat 4764 mpforce sidearm wear all
+mpat 4764 mpforce sidearm wear all
+mpoload 679
+mpat 4764 give clip sidearm
+mpoload 679
+mpat 4764 give clip sidearm
+mpoload 679
+mpat 4764 give clip sidearm
+mpoload 679
+mpat 4764 give clip sidearm
+mpoload 679
+mpat 4764 give clip sidearm
+mpat 4764 mpforce sidearm s
+mpat 4763 mptrans sidearm 4726
+~
+|
+#4689
+mctactician~
+a tactically inclined MC~
+A tactically inclined MC is here.
+~
+~
+0
+1
+S
+1 8 8 0
+> speech_prog 'Initiate epath reinforcements'~
+mpat 4753 mpecho *sounds of comm chatter* -East Path-
+say dispatched!
+~
+> speech_prog 'Initiate tunnel reinforcements'~
+mpat 4726 mpecho *sounds of comm chatter* -Tunnel-
+say Dispatched!
+~
+> speech_prog 'Initiate cavern reinforcements'~
+mpat 4761 mpecho *sounds of comm chatter* -Cavern-
+say dispatched!
+~
+> speech_prog 'Initiate nwbase reinforcements'~
+mpat 4726 mpecho *sounds of comm chatter* -Northwestern bunker-
+say dispatched!
+~
+> speech_prog 'Initiate sebase reinforcements'~
+mpat 4744 mpecho *sounds of comm chatter* -Southeastern bunker-
+say dispatched!
+~
+> speech_prog 'Initiate mbase reinforcements'~
+mpat 4744 mpecho *sounds of comm chatter* -Main bunker-
+say dispatched!
+~
+> speech_prog 'bring sebase revenge'~
+mpat 4744 mpecho *static*...Go..Southeastern bunker...Revenge!
+say Glory!
+~
+> speech_prog 'bring mbase revenge'~
+mpat 4744 mpecho *static*...Go..Main bunker...Revenge!
+say Glory!
+~
+> speech_prog 'bring nwbase revenge'~
+mpat 4726 mpecho *static*...Go..Northwestern
+say Glory!
+~
+> speech_prog 'bring tunnel revenge'~
+mpat 4726 mpecho *static*...Go..Tunnel...Revenge!
+say Glory!
+~
+> speech_prog 'bring epath revenge'~
+mpat 4753 mpecho *static*...Go..East path...Revenge!
+say Glory!
+~
+> speech_prog 'bring cavern revenge'~
+mpat 4761 mpecho *static*...Go..Cavern...Revenge!
+say Glory!
+~
+|
+#4690
+dropshipmonitor~
+Dropship monitor prog~
+Dropship monitor prog is here.
+~
+~
+0
+1
+S
+1 8 8 0
+> speech_prog 'Glory!'~
+mprat 4655 5765 mpecho _lbl A dropship roars overhead.
+~
+> speech_prog 'dispatched!'~
+mprat 4655 5765 mpecho _lbl A dropship roars overhead.
+~
+|
+#0
+
+
+#OBJECTS
+#4655
+Oak tree~
+a Oak tree~
+A oak tree grows here.~
+~
+25
+0
+0
+5 1 9 280 280 0
+1000 0 0
+#4656
+Small outcropping~
+small outcropping~
+A small outcropping pushes up out of the ground.~
+~
+25
+0
+0
+9 3 11 456 456 0
+1200 0 0
+#4657
+crate table~
+table of crates~
+A table made of several crates is here.~
+~
+25
+0
+0
+10 1 7 125 125 0
+999 0 0
+#4658
+separatist map~
+a map~
+A map is posted against one of the walls.~
+~
+5
+0
+0
+0 0 0 0 0 0
+20 0 0
+E
+separatist map~
+XXXXXXXXXXC
+XBBOXTOOOOX
+XBBOOOOOXOX
+XOOOOOOOOXX
+XUXOOBOOOUX
+XXXOBBBOOXX
+XUOOOBOOXUX
+XXOOOOOOOOX
+XOXXOOOOBBX
+XOOOOTXOBBX
+CXXXXXXXXXX
+~
+E
+separatist map~
+~
+E
+separatist map~
+&zX&zX&zX&zX&zX&zX&zX&zX&zX&zX&CC
+&zX&RB&RB&GO&zX&OT&GO&GO&GO&GO&zX
+&zX&RB&RB&GO&GO&GO&GO&GO&zX&GO&zX
+&zX&GO&GO&GO&GO&GO&GO&GO&GO&zX&zX
+&zX&GU&zX&GO&GO&RB&GO&GO&GO&GU&zX
+&zX&zX&zX&GO&RB&RB&RB&GO&GO&zX&zX
+&zX&GU&GO&GO&GO&RB&GO&GO&zX&GU&zX
+&zX&zX&GO&GO&GO&GO&GO&GO&GO&GO&zX
+&zX&GO&zX&zX&GO&GO&GO&GO&RB&RB&zX
+&zX&GO&GO&GO&GO&OT&zX&GO&RB&RB&zX
+&CC&zX&zX&zX&zX&zX&zX&zX&zX&zX&zX
+~
+#4659
+seperatist field jacket~
+A Leather Jacket~
+A leather jacket with a red 'S' painted on it, lies here.~
+~
+3
+36896
+9
+150 150 0 1 0 0
+2 125 12
+A
+14 5
+#0
+
+
+#ROOMS
+#4655
+Cavern~
+&z The grey walls are smooth and cool to the touch. There rough surface is
+interupted only by occassional holes bored into it's surface. Rocks of
+varoius sizes and kinds, mostly rocks that have broken off from the rest
+of the cavern, pile here and there following the floor of the cavern.
+Stalagmites stand firmly grown into the rock. Stalagtites hang down
+menacingly from the tall ceiling. very little light filters into the
+cavern from a nearby entrance.   A strange metalic camoflaged door like
+structure seems to have been placed against the back wall. It appears as
+if, if it were moved there would be a large cavern.
+~
+&w &g The black walls are rough and cool to the touch, slick with slime.
+The surface appears uninterupted and random. Piles of greenish black
+material stands in various sized columns. The material hangs down
+menacingly from the tall ceiling. Large columns of the material stands
+here and there throughout the cavern. Almost no light at all filters into
+teh cavern from a nearby entrance.
+~
+1208090625
+0
+0 1
+D2
+~
+~
+0
+-1 4656
+D3
+~
+~
+0
+-1 4660
+S
+#4656
+Cavern~
+&z The grey walls are smooth and cool to the touch. There rough surface is
+interupted only by occassional holes bored into it's surface. Rocks of
+varoius sizes and kinds, mostly rocks that have broken off from the rest
+of the cavern, pile here and there following the floor of the cavern.
+Stalagmites stand firmly grown into the rock. Stalagtites hang down
+menacingly from the tall ceiling. very little light filters into the
+cavern from a nearby entrance.
+~
+&w &g The black walls are rough and cool to the touch, slick with slime.
+The surface appears uninterupted and random. Piles of greenish black
+material stands in various sized columns. The material hangs down
+menacingly from the tall ceiling. Large columns of the material stands
+here and there throughout the cavern. Almost no light at all filters into
+teh cavern from a nearby entrance.
+~
+1073872897
+0
+0 1
+D0
+~
+~
+0
+-1 4655
+D2
+~
+~
+0
+-1 4657
+S
+#4657
+Cavern~
+&z The grey walls are smooth and cool to the touch. There rough surface is
+interupted only by occassional holes bored into it's surface. Rocks of
+varoius sizes and kinds, mostly rocks that have broken off from the rest
+of the cavern, pile here and there following the floor of the cavern.
+Stalagmites stand firmly grown into the rock. Stalagtites hang down
+menacingly from the tall ceiling. very little light filters into the
+cavern from a nearby entrance.
+~
+&w &g The black walls are rough and cool to the touch, slick with slime.
+The surface appears uninterupted and random. Piles of greenish black
+material stands in various sized columns. The material hangs down
+menacingly from the tall ceiling. Large columns of the material stands
+here and there throughout the cavern. Almost no light at all filters into
+teh cavern from a nearby entrance.
+~
+1073872897
+0
+0 1
+D0
+~
+~
+0
+-1 4656
+D7
+~
+~
+0
+-1 4658
+S
+#4658
+Cavern~
+&z The grey walls are smooth and cool to the touch. There rough surface is
+interupted only by occassional holes bored into it's surface. Rocks of
+varoius sizes and kinds, mostly rocks that have broken off from the rest
+of the cavern, pile here and there following the floor of the cavern.
+Stalagmites stand firmly grown into the rock. Stalagtites hang down
+menacingly from the tall ceiling. very little light filters into the
+cavern from a nearby entrance.
+~
+&w &g The black walls are rough and cool to the touch, slick with slime.
+The surface appears uninterupted and random. Piles of greenish black
+material stands in various sized columns. The material hangs down
+menacingly from the tall ceiling. Large columns of the material stands
+here and there throughout the cavern. Almost no light at all filters into
+teh cavern from a nearby entrance.
+~
+1073872897
+0
+0 1
+D7
+~
+~
+0
+-1 4659
+D8
+~
+~
+0
+-1 4657
+D9
+~
+~
+0
+-1 4732
+S
+#4659
+Cavern~
+&z The grey walls are smooth and cool to the touch. There rough surface is
+interupted only by occassional holes bored into it's surface. Rocks of
+varoius sizes and kinds, mostly rocks that have broken off from the rest
+of the cavern, pile here and there following the floor of the cavern.
+Stalagmites stand firmly grown into the rock. Stalagtites hang down
+menacingly from the tall ceiling. very little light filters into the
+cavern from a nearby entrance.
+~
+&w &g The black walls are rough and cool to the touch, slick with slime.
+The surface appears uninterupted and random. Piles of greenish black
+material stands in various sized columns. The material hangs down
+menacingly from the tall ceiling. Large columns of the material stands
+here and there throughout the cavern. Almost no light at all filters into
+teh cavern from a nearby entrance.
+~
+1073872897
+0
+0 1
+D1
+~
+~
+0
+-1 4660
+D8
+~
+~
+0
+-1 4658
+S
+#4660
+Cavern~
+&z The grey walls are smooth and cool to the touch. There rough surface is
+interupted only by occassional holes bored into it's surface. Rocks of
+varoius sizes and kinds, mostly rocks that have broken off from the rest
+of the cavern, pile here and there following the floor of the cavern.
+Stalagmites stand firmly grown into the rock. Stalagtites hang down
+menacingly from the tall ceiling. very little light filters into the
+cavern from a nearby entrance.
+~
+&w &g The black walls are rough and cool to the touch, slick with slime.
+The surface appears uninterupted and random. Piles of greenish black
+material stands in various sized columns. The material hangs down
+menacingly from the tall ceiling. Large columns of the material stands
+here and there throughout the cavern. Almost no light at all filters into
+teh cavern from a nearby entrance.
+~
+1208090625
+0
+0 1
+D1
+~
+~
+0
+-1 4655
+D3
+~
+~
+0
+-1 4659
+S
+#4661
+Grassy Clearing~
+&w &G The grassy clearing is enclosed in a ring of rock outcroppings. The
+clearing is large enough to allow dropships to land and take off easily
+here. The green grass appears healthy. The grass appears to have been
+recently smashed down by a large heavy object. The clearing is lit by
+multiple flares near it's exterior. 
+~
+&R BUG
+~
+1344274432&8
+0
+0 1
+D1
+~
+~
+0
+-1 4662
+S
+#4662
+Grassy path~
+&G The path winds about, turning and straightening, occassionaly dividing
+off into other paths.  The green grass appears green and healthy.  The
+grass towards the center of the path appears worn and trampled. The sky is
+clearly visible from this vantage point. Large rock outcroppings stand on
+either side of the path, occassionally seeming to cut the path off in a
+dead end. flares line the path here.
+~
+&R BUG 
+~
+1075838976
+0
+0 1
+D1
+~
+~
+0
+-1 4663
+D3
+~
+~
+0
+-1 4661
+S
+#4663
+Grassy path~
+&G The path winds about, turning and straightening, occassionaly dividing
+off into other paths.  The green grass appears green and healthy.  The
+grass towards the center of the path appears worn and trampled. The sky is
+clearly visible from this vantage point. Large rock outcroppings stand on
+either side of the path, occassionally seeming to cut the path off in a
+dead end. flares line the path here.
+~
+&R BUG 
+~
+1075838976
+0
+0 1
+D3
+~
+~
+0
+-1 4662
+D6
+~
+~
+0
+-1 4664
+D8
+~
+~
+0
+-1 4665
+S
+#4664
+Grassy path~
+&G The path winds about, turning and straightening, occassionaly dividing
+off into other paths.  The green grass appears green and healthy.  The
+grass towards the center of the path appears worn and trampled. The sky is
+clearly visible from this vantage point. Large rock outcroppings stand on
+either side of the path, occassionally seeming to cut the path off in a
+dead end.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D5
+~
+~
+0
+-1 4723
+D9
+~
+~
+0
+-1 4663
+S
+#4665
+Grassy path~
+&G The path winds about, turning and straightening, occassionaly dividing
+off into other paths.  The green grass appears green and healthy.  The
+grass towards the center of the path appears worn and trampled. The sky is
+clearly visible from this vantage point. Large rock outcroppings stand on
+either side of the path, occassionally seeming to cut the path off in a
+dead end.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D5
+~
+~
+0
+-1 4716
+D7
+~
+~
+0
+-1 4663
+S
+#4666
+Tunnel~
+&W &w &O The dirt tunnel's brown walls are covered in roots of varoius
+sizes and hues. Bugs and worms crawl along the tunnel carrying out varous
+tasks. A few stones dot the walls, floor, and ceiling. The dirt tunnel is
+barely large enough to stand upright in. Very little light filters in from
+the tunnel's entrance. The tunnel occassionaly opens up to a wider area.
+wooden bracers line the walls, supporting the ceiling. Lights swing from
+the ceiling connected to the support beams.
+~
+&W &g The greenish black tunnel's brown walls are covered in columns,
+ropes, and piles of a slimy material.  A few spires of material dot the
+ground. the dark tunnel is  barely large enough to walk upright. bell like
+clumps of material hang from the ceiling at almost regular intervals. The
+tunnel occassionaly opens up to a wider area. only a miniscule amount of
+light gets in from the tunnel's entrance.
+~
+1621229569
+1
+0 1
+D6
+~
+~
+0
+-1 4667
+S
+#4667
+Tunnel~
+&W &w &O The dirt tunnel's brown walls are covered in roots of varoius
+sizes and hues. Bugs and worms crawl along the tunnel carrying out varous
+tasks. A few stones dot the walls, floor, and ceiling. The dirt tunnel is
+barely large enough to stand upright in. Very little light filters in from
+the tunnel's entrance. The tunnel occassionaly opens up to a wider area.
+wooden bracers line the walls, supporting the ceiling. Lights swing from
+the ceiling connected to the support beams.
+~
+&W &g The greenish black tunnel's brown walls are covered in columns,
+ropes, and piles of a slimy material.  A few spires of material dot the
+ground. the dark tunnel is  barely large enough to walk upright. bell like
+clumps of material hang from the ceiling at almost regular intervals. The
+tunnel occassionaly opens up to a wider area. only a miniscule amount of
+light gets in from the tunnel's entrance.
+~
+1075970048
+1
+0 1
+D7
+~
+~
+0
+-1 4668
+D9
+~
+~
+0
+-1 4666
+S
+#4668
+Tunnel~
+&W &w &O The dirt tunnel's brown walls are covered in roots of varoius
+sizes and hues. Bugs and worms crawl along the tunnel carrying out varous
+tasks. A few stones dot the walls, floor, and ceiling. The dirt tunnel is
+barely large enough to stand upright in. Very little light filters in from
+the tunnel's entrance. The tunnel occassionaly opens up to a wider area.
+wooden bracers line the walls, supporting the ceiling. Lights swing from
+the ceiling connected to the support beams.
+~
+&W &g The greenish black tunnel's brown walls are covered in columns,
+ropes, and piles of a slimy material.  A few spires of material dot the
+ground. the dark tunnel is  barely large enough to walk upright. bell like
+clumps of material hang from the ceiling at almost regular intervals. The
+tunnel occassionaly opens up to a wider area. only a miniscule amount of
+light gets in from the tunnel's entrance.
+~
+1075970048
+1
+0 1
+D4
+~
+~
+0
+-1 4708
+D8
+~
+~
+0
+-1 4667
+D9
+~
+~
+0
+-1 4669
+S
+#4669
+Tunnel~
+&W &w &O The dirt tunnel's brown walls are covered in roots of varoius
+sizes and hues. Bugs and worms crawl along the tunnel carrying out varous
+tasks. A few stones dot the walls, floor, and ceiling. The dirt tunnel is
+barely large enough to stand upright in. Very little light filters in from
+the tunnel's entrance. The tunnel occassionaly opens up to a wider area.
+wooden bracers line the walls, supporting the ceiling. Lights swing from
+the ceiling connected to the support beams.
+~
+&W &g The greenish black tunnel's brown walls are covered in columns,
+ropes, and piles of a slimy material.  A few spires of material dot the
+ground. the dark tunnel is  barely large enough to walk upright. bell like
+clumps of material hang from the ceiling at almost regular intervals. The
+tunnel occassionaly opens up to a wider area. only a miniscule amount of
+light gets in from the tunnel's entrance.
+~
+1075970048
+1
+0 1
+D2
+~
+~
+0
+-1 4670
+D6
+~
+~
+0
+-1 4668
+S
+#4670
+Tunnel~
+&W &w &O The dirt tunnel's brown walls are covered in roots of varoius
+sizes and hues. Bugs and worms crawl along the tunnel carrying out varous
+tasks. A few stones dot the walls, floor, and ceiling. The dirt tunnel is
+barely large enough to stand upright in. Very little light filters in from
+the tunnel's entrance. The tunnel occassionaly opens up to a wider area.
+wooden bracers line the walls, supporting the ceiling. Lights swing from
+the ceiling connected to the support beams.
+~
+&W &g The greenish black tunnel's brown walls are covered in columns,
+ropes, and piles of a slimy material.  A few spires of material dot the
+ground. the dark tunnel is  barely large enough to walk upright. bell like
+clumps of material hang from the ceiling at almost regular intervals. The
+tunnel occassionaly opens up to a wider area. only a miniscule amount of
+light gets in from the tunnel's entrance.
+~
+1075970048
+1
+0 1
+D0
+~
+~
+0
+-1 4669
+S
+#4671
+Cavern <(CP)>~
+&z The grey walls are smooth and cool to the touch. There rough surface is
+interupted only by occassional holes bored into it's surface. Rocks of
+varoius sizes and kinds, mostly rocks that have broken off from the rest
+of the cavern, pile here and there following the floor of the cavern.
+Stalagmites stand firmly grown into the rock. Stalagtites hang down
+menacingly from the tall ceiling. very little light filters into the
+cavern from a nearby entrance. Flood lights light up the room.
+~
+&w &g The black walls are rough and cool to the touch, slick with slime.
+The surface appears uninterupted and random. Piles of greenish black
+material stands in various sized columns. The material hangs down
+menacingly from the tall ceiling. Large columns of the material stands
+here and there throughout the cavern. Almost no light at all filters into
+teh cavern from a nearby entrance.
+~
+1075970048&16
+1
+0 1
+D0
+~
+~
+0
+-1 4674
+D1
+~
+~
+0
+-1 4672
+S
+#4672
+Cavern~
+&z The grey walls are smooth and cool to the touch. There rough surface is
+interupted only by occassional holes bored into it's surface. Rocks of
+varoius sizes and kinds, mostly rocks that have broken off from the rest
+of the cavern, pile here and there following the floor of the cavern.
+Stalagmites stand firmly grown into the rock. Stalagtites hang down
+menacingly from the tall ceiling. very little light filters into the
+cavern from a nearby entrance. A large amount of light lights the area
+from floodlights to the south.
+~
+&w &g The black walls are rough and cool to the touch, slick with slime.
+The surface appears uninterupted and random. Piles of greenish black
+material stands in various sized columns. The material hangs down
+menacingly from the tall ceiling. Large columns of the material stands
+here and there throughout the cavern. Almost no light at all filters into
+teh cavern from a nearby entrance.
+~
+1075970048
+1
+0 1
+D3
+~
+~
+0
+-1 4671
+D6
+~
+~
+0
+-1 4673
+D7
+~
+~
+0
+-1 4674
+S
+#4673
+Cavern~
+&z The grey walls are smooth and cool to the touch. There rough surface is
+interupted only by occassional holes bored into it's surface. Rocks of
+varoius sizes and kinds, mostly rocks that have broken off from the rest
+of the cavern, pile here and there following the floor of the cavern.
+Stalagmites stand firmly grown into the rock. Stalagtites hang down
+menacingly from the tall ceiling. very little light filters into the
+cavern from a nearby entrance.
+~
+&w &g The black walls are rough and cool to the touch, slick with slime.
+The surface appears uninterupted and random. Piles of greenish black
+material stands in various sized columns. The material hangs down
+menacingly from the tall ceiling. Large columns of the material stands
+here and there throughout the cavern. Almost no light at all filters into
+teh cavern from a nearby entrance.
+~
+1073872897
+0
+0 1
+D0
+~
+~
+0
+-1 4676
+D9
+~
+~
+0
+-1 4672
+S
+#4674
+Cavern~
+&z The grey walls are smooth and cool to the touch. There rough surface is
+interupted only by occassional holes bored into it's surface. Rocks of
+varoius sizes and kinds, mostly rocks that have broken off from the rest
+of the cavern, pile here and there following the floor of the cavern.
+Stalagmites stand firmly grown into the rock. Stalagtites hang down
+menacingly from the tall ceiling. very little light filters into the
+cavern from a nearby entrance. A large amount of light lights the area
+from floodlights to the south.
+~
+&w &g The black walls are rough and cool to the touch, slick with slime.
+The surface appears uninterupted and random. Piles of greenish black
+material stands in various sized columns. The material hangs down
+menacingly from the tall ceiling. Large columns of the material stands
+here and there throughout the cavern. Almost no light at all filters into
+teh cavern from a nearby entrance.
+~
+1075970048
+1
+0 1
+D2
+~
+~
+0
+-1 4671
+D6
+~
+~
+0
+-1 4675
+D8
+~
+~
+0
+-1 4672
+S
+#4675
+Cavern~
+&z The grey walls are smooth and cool to the touch. There rough surface is
+interupted only by occassional holes bored into it's surface. Rocks of
+varoius sizes and kinds, mostly rocks that have broken off from the rest
+of the cavern, pile here and there following the floor of the cavern.
+Stalagmites stand firmly grown into the rock. Stalagtites hang down
+menacingly from the tall ceiling. very little light filters into the
+cavern from a nearby entrance.
+~
+&w &g The black walls are rough and cool to the touch, slick with slime.
+The surface appears uninterupted and random. Piles of greenish black
+material stands in various sized columns. The material hangs down
+menacingly from the tall ceiling. Large columns of the material stands
+here and there throughout the cavern. Almost no light at all filters into
+teh cavern from a nearby entrance.
+~
+1073872897
+0
+0 1
+D1
+~
+~
+0
+-1 4676
+D9
+~
+~
+0
+-1 4674
+S
+#4676
+Cavern~
+&z The grey walls are smooth and cool to the touch. There rough surface is
+interupted only by occassional holes bored into it's surface. Rocks of
+varoius sizes and kinds, mostly rocks that have broken off from the rest
+of the cavern, pile here and there following the floor of the cavern.
+Stalagmites stand firmly grown into the rock. Stalagtites hang down
+menacingly from the tall ceiling. very little light filters into the
+cavern from a nearby entrance.
+~
+&w &g The black walls are rough and cool to the touch, slick with slime.
+The surface appears uninterupted and random. Piles of greenish black
+material stands in various sized columns. The material hangs down
+menacingly from the tall ceiling. Large columns of the material stands
+here and there throughout the cavern. Almost no light at all filters into
+teh cavern from a nearby entrance.
+~
+1073872897
+0
+0 1
+D2
+~
+~
+0
+-1 4673
+D3
+~
+~
+0
+-1 4675
+D6
+~
+~
+0
+-1 4712
+S
+#4677
+Tunnel <(CP)>~
+&W &w &O The dirt tunnel's brown walls are covered in roots of varoius
+sizes and hues. Bugs and worms crawl along the tunnel carrying out varous
+tasks. A few stones dot the walls, floor, and ceiling. The dirt tunnel is
+barely large enough to stand upright in. Very little light filters in from
+the tunnel's entrance. The tunnel occassionaly opens up to a wider area.
+wooden bracers line the walls, supporting the ceiling. Lights swing from
+the ceiling connected to the support beams.
+~
+&W &g The greenish black tunnel's brown walls are covered in columns,
+ropes, and piles of a slimy material.  A few spires of material dot the
+ground. the dark tunnel is  barely large enough to walk upright. bell like
+clumps of material hang from the ceiling at almost regular intervals. The
+tunnel occassionaly opens up to a wider area. only a miniscule amount of
+light gets in from the tunnel's entrance.
+~
+1075970048
+1
+0 1
+D7
+~
+~
+0
+-1 4678
+S
+#4678
+Tunnel~
+&W &w &O The dirt tunnel's brown walls are covered in roots of varoius
+sizes and hues. Bugs and worms crawl along the tunnel carrying out varous
+tasks. A few stones dot the walls, floor, and ceiling. The dirt tunnel is
+barely large enough to stand upright in. Very little light filters in from
+the tunnel's entrance. The tunnel occassionaly opens up to a wider area.
+wooden bracers line the walls, supporting the ceiling. Lights swing from
+the ceiling connected to the support beams.
+~
+&W &g The greenish black tunnel's brown walls are covered in columns,
+ropes, and piles of a slimy material.  A few spires of material dot the
+ground. the dark tunnel is  barely large enough to walk upright. bell like
+clumps of material hang from the ceiling at almost regular intervals. The
+tunnel occassionaly opens up to a wider area. only a miniscule amount of
+light gets in from the tunnel's entrance.
+~
+1075970048
+1
+0 1
+D3
+~
+~
+0
+-1 4679
+D8
+~
+~
+0
+-1 4677
+S
+#4679
+Tunnel~
+&W &w &O The dirt tunnel's brown walls are covered in roots of varoius
+sizes and hues. Bugs and worms crawl along the tunnel carrying out varous
+tasks. A few stones dot the walls, floor, and ceiling. The dirt tunnel is
+barely large enough to stand upright in. Very little light filters in from
+the tunnel's entrance. The tunnel occassionaly opens up to a wider area.
+wooden bracers line the walls, supporting the ceiling. Lights swing from
+the ceiling connected to the support beams.
+~
+&W &g The greenish black tunnel's brown walls are covered in columns,
+ropes, and piles of a slimy material.  A few spires of material dot the
+ground. the dark tunnel is  barely large enough to walk upright. bell like
+clumps of material hang from the ceiling at almost regular intervals. The
+tunnel occassionaly opens up to a wider area. only a miniscule amount of
+light gets in from the tunnel's entrance.
+~
+1075970048
+1
+0 1
+D1
+~
+~
+0
+-1 4678
+D2
+~
+~
+0
+-1 4681
+D6
+~
+~
+0
+-1 4680
+S
+#4680
+Tunnel~
+&W &w &O The dirt tunnel's brown walls are covered in roots of varoius
+sizes and hues. Bugs and worms crawl along the tunnel carrying out varous
+tasks. A few stones dot the walls, floor, and ceiling. The dirt tunnel is
+barely large enough to stand upright in. Very little light filters in from
+the tunnel's entrance. The tunnel occassionaly opens up to a wider area.
+wooden bracers line the walls, supporting the ceiling. Lights swing from
+the ceiling connected to the support beams.
+~
+&W &g The greenish black tunnel's brown walls are covered in columns,
+ropes, and piles of a slimy material.  A few spires of material dot the
+ground. the dark tunnel is  barely large enough to walk upright. bell like
+clumps of material hang from the ceiling at almost regular intervals. The
+tunnel occassionaly opens up to a wider area. only a miniscule amount of
+light gets in from the tunnel's entrance.
+~
+1075970048
+1
+0 1
+D9
+~
+~
+0
+-1 4679
+S
+#4681
+Tunnel~
+&W &w &O The dirt tunnel's brown walls are covered in roots of varoius
+sizes and hues. Bugs and worms crawl along the tunnel carrying out varous
+tasks. A few stones dot the walls, floor, and ceiling. The dirt tunnel is
+barely large enough to stand upright in. Very little light filters in from
+the tunnel's entrance. The tunnel occassionaly opens up to a wider area.
+wooden bracers line the walls, supporting the ceiling. Lights swing from
+the ceiling connected to the support beams.
+~
+&W &g The greenish black tunnel's brown walls are covered in columns,
+ropes, and piles of a slimy material.  A few spires of material dot the
+ground. the dark tunnel is  barely large enough to walk upright. bell like
+clumps of material hang from the ceiling at almost regular intervals. The
+tunnel occassionaly opens up to a wider area. only a miniscule amount of
+light gets in from the tunnel's entrance.
+~
+1075970048
+1
+0 1
+D0
+~
+~
+0
+-1 4679
+D1
+~
+~
+0
+-1 4682
+S
+#4682
+Tunnel~
+&W &w &O The dirt tunnel's brown walls are covered in roots of varoius
+sizes and hues. Bugs and worms crawl along the tunnel carrying out varous
+tasks. A few stones dot the walls, floor, and ceiling. The dirt tunnel is
+barely large enough to stand upright in. Very little light filters in from
+the tunnel's entrance. The tunnel occassionaly opens up to a wider area.
+wooden bracers line the walls, supporting the ceiling. Lights swing from
+the ceiling connected to the support beams.
+~
+&W &g The greenish black tunnel's brown walls are covered in columns,
+ropes, and piles of a slimy material.  A few spires of material dot the
+ground. the dark tunnel is  barely large enough to walk upright. bell like
+clumps of material hang from the ceiling at almost regular intervals. The
+tunnel occassionaly opens up to a wider area. only a miniscule amount of
+light gets in from the tunnel's entrance.
+~
+1075970048
+1
+0 1
+D2
+~
+~
+0
+-1 4683
+D3
+~
+~
+0
+-1 4681
+S
+#4683
+Tunnel~
+&W &w &O The dirt tunnel's brown walls are covered in roots of varoius
+sizes and hues. Bugs and worms crawl along the tunnel carrying out varous
+tasks. A few stones dot the walls, floor, and ceiling. The dirt tunnel is
+barely large enough to stand upright in. Very little light filters in from
+the tunnel's entrance. The tunnel occassionaly opens up to a wider area.
+wooden bracers line the walls, supporting the ceiling. Lights swing from
+the ceiling connected to the support beams.
+~
+&W &g The greenish black tunnel's brown walls are covered in columns,
+ropes, and piles of a slimy material.  A few spires of material dot the
+ground. the dark tunnel is  barely large enough to walk upright. bell like
+clumps of material hang from the ceiling at almost regular intervals. The
+tunnel occassionaly opens up to a wider area. only a miniscule amount of
+light gets in from the tunnel's entrance.
+~
+1075970048
+1
+0 1
+D0
+~
+~
+0
+-1 4682
+D4
+~
+~
+0
+-1 4728
+S
+#4684
+Grassy Path <(CP)>~
+&G The path winds about, turning and straightening, occassionaly dividing
+off into other paths.  The green grass appears green and healthy.  The
+grass towards the center of the path appears worn and trampled. The sky is
+clearly visible from this vantage point. Large rock outcroppings stand on
+either side of the path, occassionally seeming to cut the path off in a
+dead end. Floodlamps light the grassy path here.
+~
+&R BUG 
+~
+1075838976&16
+0
+0 1
+D7
+~
+~
+0
+-1 4685
+S
+#4685
+Grassy path~
+&G The path winds about, turning and straightening, occassionaly dividing
+off into other paths.  The green grass appears green and healthy.  The
+grass towards the center of the path appears worn and trampled. The sky is
+clearly visible from this vantage point. Large rock outcroppings stand on
+either side of the path, occassionally seeming to cut the path off in a
+dead end. The light of floodlamps come in from the southeast lighting the
+grassy path here.
+~
+&R BUG 
+~
+1075838976
+0
+0 1
+D3
+~
+~
+0
+-1 4686
+D8
+~
+~
+0
+-1 4684
+S
+#4686
+Grassy path~
+&G The path winds about, turning and straightening, occassionaly dividing
+off into other paths.  The green grass appears green and healthy.  The
+grass towards the center of the path appears worn and trampled. The sky is
+clearly visible from this vantage point. Large rock outcroppings stand on
+either side of the path, occassionally seeming to cut the path off in a
+dead end.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D1
+~
+~
+0
+-1 4685
+D3
+~
+~
+0
+-1 4687
+S
+#4687
+Grassy path~
+&G The path winds about, turning and straightening, occassionaly dividing
+off into other paths.  The green grass appears green and healthy.  The
+grass towards the center of the path appears worn and trampled. The sky is
+clearly visible from this vantage point. Large rock outcroppings stand on
+either side of the path, occassionally seeming to cut the path off in a
+dead end.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D1
+~
+~
+0
+-1 4686
+D3
+~
+~
+0
+-1 4688
+S
+#4688
+Grassy path~
+&G The path winds about, turning and straightening, occassionaly dividing
+off into other paths.  The green grass appears green and healthy.  The
+grass towards the center of the path appears worn and trampled. The sky is
+clearly visible from this vantage point. Large rock outcroppings stand on
+either side of the path, occassionally seeming to cut the path off in a
+dead end.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D1
+~
+~
+0
+-1 4687
+D6
+~
+~
+0
+-1 4689
+D7
+~
+~
+0
+-1 4692
+D8
+~
+~
+0
+-1 4690
+D9
+~
+~
+0
+-1 4691
+S
+#4689
+Grassy path~
+&G The path winds about, turning and straightening, occassionaly dividing
+off into other paths.  The green grass appears green and healthy.  The
+grass towards the center of the path appears worn and trampled. The sky is
+clearly visible from this vantage point. Large rock outcroppings stand on
+either side of the path, occassionally seeming to cut the path off in a
+dead end.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D9
+~
+~
+0
+-1 4688
+S
+#4690
+Grassy path~
+&G The path winds about, turning and straightening, occassionaly dividing
+off into other paths.  The green grass appears green and healthy.  The
+grass towards the center of the path appears worn and trampled. The sky is
+clearly visible from this vantage point. Large rock outcroppings stand on
+either side of the path, occassionally seeming to cut the path off in a
+dead end.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D7
+~
+~
+0
+-1 4688
+S
+#4691
+Grassy path~
+&G The path winds about, turning and straightening, occassionaly dividing
+off into other paths.  The green grass appears green and healthy.  The
+grass towards the center of the path appears worn and trampled. The sky is
+clearly visible from this vantage point. Large rock outcroppings stand on
+either side of the path, occassionally seeming to cut the path off in a
+dead end.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D5
+~
+~
+0
+-1 4738
+D6
+~
+~
+0
+-1 4688
+S
+#4692
+Grassy path~
+&G The path winds about, turning and straightening, occassionaly dividing
+off into other paths.  The green grass appears green and healthy.  The
+grass towards the center of the path appears worn and trampled. The sky is
+clearly visible from this vantage point. Large rock outcroppings stand on
+either side of the path, occassionally seeming to cut the path off in a
+dead end.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D5
+~
+~
+0
+-1 4736
+D8
+~
+~
+0
+-1 4688
+S
+#4693
+Bunker Interior <(CP)>~
+&w &c The concrete walls are rough and cool to the touch. The floor, though
+smoother, is no more comfortable. A bright ceiling light, lights the room
+in a bluish light. Wires and cables, housed in metal casing and poles,
+travel along the walls and ceiling.
+~
+&w &g The concrete walls are almost completely covreed in a greenish black
+substance. the substance is hard and slimy to the touch . The floor is
+also covered in the strange material, making it unreliably uneven. The
+ceiling light is almost covered in the substance, making its few rays of
+light useless as a light source. Wires and cables are  barely recognizable
+under the material.
+~
+1075838984&16
+1
+0 1
+D2
+~
+~
+0
+-1 4694
+S
+#4694
+Bunker Interior~
+&w &c The concrete walls are rough and cool to the touch. The floor, though
+smoother, is no more comfortable. A bright ceiling light, lights the room
+in a bluish light. Wires and cables, housed in metal casing and poles,
+travel along the walls and ceiling.
+~
+&w &g The concrete walls are almost completely covreed in a greenish black
+substance. the substance is hard and slimy to the touch . The floor is
+also covered in the strange material, making it unreliably uneven. The
+ceiling light is almost covered in the substance, making its few rays of
+light useless as a light source. Wires and cables are  barely recognizable
+under the material.
+~
+1075838984
+1
+0 1
+D0
+~
+~
+0
+-1 4693
+D3
+~
+~
+0
+-1 4696
+D7
+~
+~
+0
+-1 4695
+S
+#4695
+Bunker Vantage Point~
+&w &c The concrete walls are cool and rough to the touch. The wall's barred
+window is nothing more then a long rectangular hole in the bunker's wall.
+The bunker's concrete floor is smoother then the wall, but just as
+uncomfortable. A dim light allows those in the room to see without
+allowing much light to be seen outside of the structure.
+~
+&w &g The concrete walls are almost covered in a greenish black slimy
+substance. The substance almost completely coveres the dim light mounted
+in the ceiling, rendering it useless as a light source. The bunker's
+concrete floor is also covered in the strange substance, making it uneven.
+Spires of the strange substance hang from the ceiling, climb the walls,
+and stand on the floor. 
+~
+1075838984
+1
+0 1
+D0
+~
+~
+301989888
+-1 4740
+D3
+~
+~
+301989888
+-1 4742
+D7
+~
+~
+301989888
+-1 4741
+D8
+~
+~
+0
+-1 4694
+S
+#4696
+Bunker Interior~
+&w &c The concrete walls are rough and cool to the touch. The floor, though
+smoother, is no more comfortable. A bright ceiling light, lights the room
+in a bluish light. Wires and cables, housed in metal casing and poles,
+travel along the walls and ceiling. A strong armored door is built into
+the west wall.
+~
+&w &g The concrete walls are almost completely covreed in a greenish black
+substance. the substance is hard and slimy to the touch . The floor is
+also covered in the strange material, making it unreliably uneven. The
+ceiling light is almost covered in the substance, making its few rays of
+light useless as a light source. Wires and cables are  barely recognizable
+under the material. A strong slime covered armored door is built into the
+west wall.
+~
+1075838984
+1
+0 1
+D1
+~
+~
+0
+-1 4694
+D3
+~
+~
+3&1
+-1 4743
+S
+#4697
+Bunker Interior <(CP)>~
+&w &c The concrete walls are rough and cool to the touch. The floor, though
+smoother, is no more comfortable. A bright ceiling light, lights the room
+in a bluish light. Wires and cables, housed in metal casing and poles,
+travel along the walls and ceiling.
+~
+&w &g The concrete walls are almost completely covreed in a greenish black
+substance. the substance is hard and slimy to the touch . The floor is
+also covered in the strange material, making it unreliably uneven. The
+ceiling light is almost covered in the substance, making its few rays of
+light useless as a light source. Wires and cables are  barely recognizable
+under the material.
+~
+1075838984&16
+1
+0 1
+D0
+~
+~
+0
+-1 4698
+S
+#4698
+Bunker Interior~
+&w &c The concrete walls are rough and cool to the touch. The floor, though
+smoother, is no more comfortable. A bright ceiling light, lights the room
+in a bluish light. Wires and cables, housed in metal casing and poles,
+travel along the walls and ceiling.
+~
+&w &g The concrete walls are almost completely covreed in a greenish black
+substance. the substance is hard and slimy to the touch . The floor is
+also covered in the strange material, making it unreliably uneven. The
+ceiling light is almost covered in the substance, making its few rays of
+light useless as a light source. Wires and cables are  barely recognizable
+under the material.
+~
+1075838984
+1
+0 1
+D1
+~
+~
+0
+-1 4700
+D2
+~
+~
+0
+-1 4697
+D8
+~
+~
+0
+-1 4699
+S
+#4699
+Bunker Vantage Point~
+&w &c The concrete walls are cool and rough to the touch. The wall's barred
+window is nothing more then a long rectangular hole in the bunker's wall.
+The bunker's concrete floor is smoother then the wall, but just as
+uncomfortable. A dim light allows those in the room to see without
+allowing much light to be seen outside of the structure.
+~
+&w &g The concrete walls are almost covered in a greenish black slimy
+substance. The substance almost completely coveres the dim light mounted
+in the ceiling, rendering it useless as a light source. The bunker's
+concrete floor is also covered in the strange substance, making it uneven.
+Spires of the strange substance hang from the ceiling, climb the walls,
+and stand on the floor. 
+~
+1075838984
+1
+0 1
+D1
+~
+~
+301989888
+-1 4724
+D2
+~
+~
+301989888
+-1 4721
+D7
+~
+~
+0
+-1 4698
+D8
+~
+~
+301989888
+-1 4720
+S
+#4700
+Bunker Interior~
+&w &c The concrete walls are rough and cool to the touch. The floor, though
+smoother, is no more comfortable. A bright ceiling light, lights the room
+in a bluish light. Wires and cables, housed in metal casing and poles,
+travel along the walls and ceiling. A strong armored door is built into
+the east wall.
+~
+&w &g The concrete walls are almost completely covreed in a greenish black
+substance. the substance is hard and slimy to the touch . The floor is
+also covered in the strange material, making it unreliably uneven. The
+ceiling light is almost covered in the substance, making its few rays of
+light useless as a light source. Wires and cables are  barely recognizable
+under the material. A strong armored slime covered door is built into the
+east wall.
+~
+1075838984
+1
+0 1
+D1
+~
+~
+3&1
+-1 4725
+D3
+~
+~
+0
+-1 4698
+S
+#4701
+Bunker Interior <(CP)>~
+&w &c The concrete walls are rough and cool to the touch. The floor, though
+smoother, is no more comfortable. A bright ceiling light, lights the room
+in a bluish light. Wires and cables, housed in metal casing and poles,
+travel along the walls and ceiling.
+~
+&w &g The concrete walls are almost completely covreed in a greenish black
+substance. the substance is hard and slimy to the touch . The floor is
+also covered in the strange material, making it unreliably uneven. The
+ceiling light is almost covered in the substance, making its few rays of
+light useless as a light source. Wires and cables are  barely recognizable
+under the material.
+~
+1075838984&16
+1
+0 1
+D0
+~
+~
+0
+-1 4702
+S
+#4702
+Bunker Vantage Point~
+&w &c The concrete walls are cool and rough to the touch. The wall's barred
+window is nothing more then a long rectangular hole in the bunker's wall.
+The bunker's concrete floor is smoother then the wall, but just as
+uncomfortable. A dim light allows those in the room to see without
+allowing much light to be seen outside of the structure.
+~
+&w &g The concrete walls are almost covered in a greenish black slimy
+substance. The substance almost completely coveres the dim light mounted
+in the ceiling, rendering it useless as a light source. The bunker's
+concrete floor is also covered in the strange substance, making it uneven.
+Spires of the strange substance hang from the ceiling, climb the walls,
+and stand on the floor. 
+~
+1075838984
+1
+0 1
+D0
+~
+~
+301989888
+-1 4755
+D2
+~
+~
+0
+-1 4701
+D6
+~
+~
+301989888
+-1 4752
+D7
+~
+~
+301989888
+-1 4757
+D8
+~
+~
+0
+-1 4705
+D9
+~
+~
+0
+-1 4703
+S
+#4703
+Bunker Vantage Point~
+&w &c The concrete walls are cool and rough to the touch. The wall's barred
+window is nothing more then a long rectangular hole in the bunker's wall.
+The bunker's concrete floor is smoother then the wall, but just as
+uncomfortable. A dim light allows those in the room to see without
+allowing much light to be seen outside of the structure.
+~
+&w &g The concrete walls are almost covered in a greenish black slimy
+substance. The substance almost completely coveres the dim light mounted
+in the ceiling, rendering it useless as a light source. The bunker's
+concrete floor is also covered in the strange substance, making it uneven.
+Spires of the strange substance hang from the ceiling, climb the walls,
+and stand on the floor. 
+~
+1075838984
+1
+0 1
+D3
+~
+~
+301989888
+-1 4718
+D6
+~
+~
+0
+-1 4702
+D7
+~
+~
+301989888
+-1 4719
+D8
+~
+~
+0
+-1 4704
+D9
+~
+~
+301989888
+-1 4717
+S
+#4704
+Bunker Entance~
+&w &c The concrete walls are cool and rough to the touch. The wall's barred
+window is nothing more then a long rectangular hole in the bunker's wall.
+The bunker's concrete floor is smoother then the wall, but just as
+uncomfortable. A dim light allows those in the room to see without
+allowing much light to be seen outside of the structure. An armored door
+is built into the south wall.
+~
+&w &g The concrete walls are almost covered in a greenish black slimy
+substance. The substance almost completely coveres the dim light mounted
+in the ceiling, rendering it useless as a light source. The bunker's
+concrete floor is also covered in the strange substance, making it uneven.
+Spires of the strange substance hang from the ceiling, climb the walls,
+and stand on the floor.  An armored door is built into the south wall, and
+almost covered in a thin film of the substance.
+~
+1075838984
+1
+0 1
+D2
+~
+~
+3&1
+-1 4706
+D6
+~
+~
+0
+-1 4705
+D7
+~
+~
+0
+-1 4703
+D8
+~
+~
+301989888
+-1 4745
+D9
+~
+~
+301989888
+-1 4759
+S
+#4705
+Bunker Vantage Point~
+&w &c The concrete walls are cool and rough to the touch. The wall's barred
+window is nothing more then a long rectangular hole in the bunker's wall.
+The bunker's concrete floor is smoother then the wall, but just as
+uncomfortable. A dim light allows those in the room to see without
+allowing much light to be seen outside of the structure.
+~
+&w &g The concrete walls are almost covered in a greenish black slimy
+substance. The substance almost completely coveres the dim light mounted
+in the ceiling, rendering it useless as a light source. The bunker's
+concrete floor is also covered in the strange substance, making it uneven.
+Spires of the strange substance hang from the ceiling, climb the walls,
+and stand on the floor. 
+~
+1075838984
+1
+0 1
+D1
+~
+~
+301989888
+-1 4748
+D6
+~
+~
+301989888
+-1 4750
+D7
+~
+~
+0
+-1 4702
+D8
+~
+~
+301989888
+-1 4747
+D9
+~
+~
+0
+-1 4704
+S
+#4706
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+3&1
+-1 4704
+D1
+~
+~
+0
+-1 4745
+D2
+~
+~
+0
+-1 4707
+D3
+~
+~
+0
+-1 4759
+D6
+~
+~
+0
+-1 4746
+D7
+~
+~
+0
+-1 4758
+D8
+~
+~
+0
+-1 4744
+S
+#4707
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4706
+D1
+~
+~
+0
+-1 4744
+D2
+~
+~
+0
+-1 4708
+D3
+~
+~
+0
+-1 4761
+D6
+~
+~
+0
+-1 4745
+D7
+~
+~
+0
+-1 4759
+D9
+~
+~
+0
+-1 4709
+S
+#4708
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4707
+D3
+~
+~
+0
+-1 4709
+D5
+~
+~
+0
+-1 4668
+D7
+~
+~
+0
+-1 4761
+S
+#4709
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4761
+D1
+~
+~
+0
+-1 4708
+D3
+~
+~
+0
+-1 4710
+D6
+~
+~
+0
+-1 4707
+S
+#4710
+Large Grassy Path~
+&w &G The grass appears green and healthy. The path winds about twisting
+and straightening at seemingly random points. Large rock outcroppings
+surround the path obstructing any way other then the path's.  Moss grows
+on the shady side of the rocks. The sky is clearly visible from here.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D1
+~
+~
+0
+-1 4709
+D3
+~
+~
+0
+-1 4711
+S
+#4711
+Large Grassy Path~
+&w &G The grass appears green and healthy. The path winds about twisting
+and straightening at seemingly random points. Large rock outcroppings
+surround the path obstructing any way other then the path's.  Moss grows
+on the shady side of the rocks. The sky is clearly visible from here.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D1
+~
+~
+0
+-1 4710
+D3
+~
+~
+0
+-1 4712
+S
+#4712
+Large Grassy Path~
+&w &G The grass appears green and healthy. The path winds about twisting
+and straightening at seemingly random points. Large rock outcroppings
+surround the path obstructing any way other then the path's.  Moss grows
+on the shady side of the rocks. The sky is clearly visible from here.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4713
+D1
+~
+~
+0
+-1 4711
+D9
+~
+~
+0
+-1 4676
+S
+#4713
+Large Grassy Path~
+&w &G The grass appears green and healthy. The path winds about twisting
+and straightening at seemingly random points. Large rock outcroppings
+surround the path obstructing any way other then the path's.  Moss grows
+on the shady side of the rocks. The sky is clearly visible from here.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D2
+~
+~
+0
+-1 4712
+D6
+~
+~
+0
+-1 4714
+S
+#4714
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4715
+D1
+~
+~
+0
+-1 4760
+D6
+~
+~
+0
+-1 4717
+D9
+~
+~
+0
+-1 4713
+S
+#4715
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D1
+~
+~
+0
+-1 4717
+D2
+~
+~
+0
+-1 4714
+D3
+~
+~
+0
+-1 4716
+D6
+~
+~
+0
+-1 4718
+D8
+~
+~
+0
+-1 4760
+S
+#4716
+Large Grassy Path~
+&w &G The grass appears green and healthy. The path winds about twisting
+and straightening at seemingly random points. Large rock outcroppings
+surround the path obstructing any way other then the path's.  Moss grows
+on the shady side of the rocks. The sky is clearly visible from here.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D1
+~
+~
+0
+-1 4715
+D4
+~
+~
+0
+-1 4665
+S
+#4717
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4718
+D1
+~
+~
+0
+-1 4758
+D2
+~
+~
+0
+-1 4760
+D3
+~
+~
+0
+-1 4715
+D6
+~
+~
+301989888
+-1 4703
+D8
+~
+~
+0
+-1 4759
+D9
+~
+~
+0
+-1 4714
+S
+#4718
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4719
+D1
+~
+~
+301989888
+-1 4703
+D2
+~
+~
+0
+-1 4717
+D6
+~
+~
+0
+-1 4756
+D8
+~
+~
+0
+-1 4758
+D9
+~
+~
+0
+-1 4715
+S
+#4719
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4720
+D1
+~
+~
+0
+-1 4756
+D2
+~
+~
+0
+-1 4718
+D6
+~
+~
+0
+-1 4757
+D7
+~
+~
+0
+-1 4721
+D8
+~
+~
+301989888
+-1 4703
+S
+#4720
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4724
+D1
+~
+~
+0
+-1 4757
+D2
+~
+~
+0
+-1 4719
+D3
+~
+~
+0
+-1 4721
+D6
+~
+~
+0
+-1 4726
+D7
+~
+~
+301989888
+-1 4699
+D8
+~
+~
+0
+-1 4756
+S
+#4721
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+301989888
+-1 4699
+D1
+~
+~
+0
+-1 4720
+D3
+~
+~
+0
+-1 4722
+D8
+~
+~
+0
+-1 4719
+S
+#4722
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D1
+~
+~
+0
+-1 4721
+D2
+~
+~
+0
+-1 4723
+S
+#4723
+Large Grassy Path~
+&w &G The grass appears green and healthy. The path winds about twisting
+and straightening at seemingly random points. Large rock outcroppings
+surround the path obstructing any way other then the path's.  Moss grows
+on the shady side of the rocks. The sky is clearly visible from here.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4722
+D4
+~
+~
+0
+-1 4664
+S
+#4724
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4725
+D1
+~
+~
+0
+-1 4726
+D2
+~
+~
+0
+-1 4720
+D3
+~
+~
+301989888
+-1 4699
+D8
+~
+~
+0
+-1 4757
+S
+#4725
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D2
+~
+~
+0
+-1 4724
+D3
+~
+~
+3&1
+-1 4700
+S
+#4726
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D1
+~
+~
+0
+-1 4727
+D2
+~
+~
+0
+-1 4757
+D3
+~
+~
+0
+-1 4724
+D6
+~
+~
+0
+-1 4728
+D8
+~
+~
+0
+-1 4755
+D9
+~
+~
+0
+-1 4720
+S
+#4727
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4728
+D1
+~
+~
+0
+-1 4754
+D2
+~
+~
+0
+-1 4755
+D3
+~
+~
+0
+-1 4726
+D6
+~
+~
+0
+-1 4729
+D9
+~
+~
+0
+-1 4757
+S
+#4728
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D1
+~
+~
+0
+-1 4729
+D2
+~
+~
+0
+-1 4727
+D5
+~
+~
+0
+-1 4683
+D8
+~
+~
+0
+-1 4754
+D9
+~
+~
+0
+-1 4726
+S
+#4729
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D1
+~
+~
+0
+-1 4730
+D2
+~
+~
+0
+-1 4754
+D3
+~
+~
+0
+-1 4728
+D8
+~
+~
+0
+-1 4753
+D9
+~
+~
+0
+-1 4727
+S
+#4730
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D1
+~
+~
+0
+-1 4731
+D2
+~
+~
+0
+-1 4753
+D3
+~
+~
+0
+-1 4729
+D9
+~
+~
+0
+-1 4754
+S
+#4731
+Large Grassy Path~
+&w &G The grass appears green and healthy. The path winds about twisting
+and straightening at seemingly random points. Large rock outcroppings
+surround the path obstructing any way other then the path's.  Moss grows
+on the shady side of the rocks. The sky is clearly visible from here.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D1
+~
+~
+0
+-1 4732
+D3
+~
+~
+0
+-1 4730
+S
+#4732
+Large Grassy Path~
+&w &G The grass appears green and healthy. The path winds about twisting
+and straightening at seemingly random points. Large rock outcroppings
+surround the path obstructing any way other then the path's.  Moss grows
+on the shady side of the rocks. The sky is clearly visible from here.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D2
+~
+~
+0
+-1 4733
+D3
+~
+~
+0
+-1 4731
+D6
+~
+~
+0
+-1 4658
+S
+#4733
+Large Grassy Path~
+&w &G The grass appears green and healthy. The path winds about twisting
+and straightening at seemingly random points. Large rock outcroppings
+surround the path obstructing any way other then the path's.  Moss grows
+on the shady side of the rocks. The sky is clearly visible from here.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4732
+D9
+~
+~
+0
+-1 4734
+S
+#4734
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D2
+~
+~
+0
+-1 4735
+D3
+~
+~
+0
+-1 4751
+D6
+~
+~
+0
+-1 4733
+D9
+~
+~
+0
+-1 4750
+S
+#4735
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4734
+D1
+~
+~
+0
+-1 4736
+D2
+~
+~
+0
+-1 4737
+D3
+~
+~
+0
+-1 4750
+D7
+~
+~
+0
+-1 4751
+D9
+~
+~
+0
+-1 4748
+S
+#4736
+Large Grassy Path~
+&w &G The grass appears green and healthy. The path winds about twisting
+and straightening at seemingly random points. Large rock outcroppings
+surround the path obstructing any way other then the path's.  Moss grows
+on the shady side of the rocks. The sky is clearly visible from here.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D3
+~
+~
+0
+-1 4735
+D4
+~
+~
+0
+-1 4692
+S
+#4737
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4735
+D3
+~
+~
+0
+-1 4748
+D7
+~
+~
+0
+-1 4750
+D8
+~
+~
+0
+-1 4738
+S
+#4738
+Large Grassy Path~
+&w &G The grass appears green and healthy. The path winds about twisting
+and straightening at seemingly random points. Large rock outcroppings
+surround the path obstructing any way other then the path's.  Moss grows
+on the shady side of the rocks. The sky is clearly visible from here.
+~
+&R BUG 
+~
+1073741824
+0
+0 1
+D2
+~
+~
+0
+-1 4739
+D4
+~
+~
+0
+-1 4691
+D7
+~
+~
+0
+-1 4737
+S
+#4739
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4738
+D3
+~
+~
+0
+-1 4740
+S
+#4740
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D1
+~
+~
+0
+-1 4739
+D2
+~
+~
+301989888
+-1 4695
+D3
+~
+~
+0
+-1 4741
+S
+#4741
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4747
+D1
+~
+~
+0
+-1 4740
+D2
+~
+~
+0
+-1 4742
+D3
+~
+~
+0
+-1 4745
+D7
+~
+~
+0
+-1 4746
+D8
+~
+~
+301989888
+-1 4695
+D9
+~
+~
+0
+-1 4744
+S
+#4742
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4741
+D1
+~
+~
+301989888
+-1 4695
+D2
+~
+~
+0
+-1 4743
+D3
+~
+~
+0
+-1 4744
+D7
+~
+~
+0
+-1 4745
+S
+#4743
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4742
+D1
+~
+~
+3&1
+-1 4696
+S
+#4744
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4745
+D1
+~
+~
+0
+-1 4742
+D3
+~
+~
+0
+-1 4707
+D6
+~
+~
+0
+-1 4741
+D7
+~
+~
+0
+-1 4706
+S
+#4745
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4746
+D1
+~
+~
+0
+-1 4741
+D2
+~
+~
+0
+-1 4744
+D3
+~
+~
+0
+-1 4706
+D6
+~
+~
+0
+-1 4747
+D7
+~
+~
+301989888
+-1 4704
+D8
+~
+~
+0
+-1 4742
+D9
+~
+~
+0
+-1 4707
+S
+#4746
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D1
+~
+~
+0
+-1 4747
+D2
+~
+~
+0
+-1 4745
+D6
+~
+~
+0
+-1 4748
+D8
+~
+~
+0
+-1 4741
+D9
+~
+~
+0
+-1 4706
+S
+#4747
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4748
+D2
+~
+~
+0
+-1 4741
+D3
+~
+~
+0
+-1 4746
+D7
+~
+~
+301989888
+-1 4705
+D9
+~
+~
+0
+-1 4745
+S
+#4748
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4750
+D1
+~
+~
+0
+-1 4737
+D2
+~
+~
+0
+-1 4747
+D3
+~
+~
+301989888
+-1 4705
+D6
+~
+~
+0
+-1 4735
+D7
+~
+~
+0
+-1 4749
+D9
+~
+~
+0
+-1 4746
+S
+#4749
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4752
+D1
+~
+~
+0
+-1 4750
+D6
+~
+~
+0
+-1 4751
+D7
+~
+~
+0
+-1 4755
+D8
+~
+~
+0
+-1 4748
+S
+#4750
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4751
+D1
+~
+~
+0
+-1 4735
+D2
+~
+~
+0
+-1 4748
+D3
+~
+~
+0
+-1 4749
+D6
+~
+~
+0
+-1 4734
+D7
+~
+~
+0
+-1 4752
+D8
+~
+~
+0
+-1 4737
+D9
+~
+~
+301989888
+-1 4705
+S
+#4751
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4753
+D1
+~
+~
+0
+-1 4734
+D2
+~
+~
+0
+-1 4750
+D3
+~
+~
+0
+-1 4752
+D7
+~
+~
+0
+-1 4754
+D8
+~
+~
+0
+-1 4735
+D9
+~
+~
+0
+-1 4749
+S
+#4752
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4754
+D1
+~
+~
+0
+-1 4751
+D2
+~
+~
+0
+-1 4749
+D3
+~
+~
+0
+-1 4755
+D6
+~
+~
+0
+-1 4753
+D8
+~
+~
+0
+-1 4750
+D9
+~
+~
+301989888
+-1 4702
+S
+#4753
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4730
+D2
+~
+~
+0
+-1 4751
+D3
+~
+~
+0
+-1 4754
+D7
+~
+~
+0
+-1 4729
+D9
+~
+~
+0
+-1 4752
+S
+#4754
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4729
+D1
+~
+~
+0
+-1 4753
+D2
+~
+~
+0
+-1 4752
+D3
+~
+~
+0
+-1 4727
+D6
+~
+~
+0
+-1 4730
+D7
+~
+~
+0
+-1 4728
+D8
+~
+~
+0
+-1 4751
+D9
+~
+~
+0
+-1 4755
+S
+#4755
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4727
+D1
+~
+~
+0
+-1 4752
+D2
+~
+~
+301989888
+-1 4702
+D3
+~
+~
+0
+-1 4757
+D6
+~
+~
+0
+-1 4754
+D7
+~
+~
+0
+-1 4726
+D8
+~
+~
+0
+-1 4749
+D9
+~
+~
+0
+-1 4756
+S
+#4756
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4757
+D3
+~
+~
+0
+-1 4719
+D6
+~
+~
+0
+-1 4755
+D7
+~
+~
+0
+-1 4720
+D9
+~
+~
+0
+-1 4718
+S
+#4757
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4726
+D1
+~
+~
+0
+-1 4755
+D2
+~
+~
+0
+-1 4756
+D3
+~
+~
+0
+-1 4720
+D6
+~
+~
+0
+-1 4727
+D7
+~
+~
+0
+-1 4724
+D8
+~
+~
+301989888
+-1 4702
+D9
+~
+~
+0
+-1 4719
+S
+#4758
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D2
+~
+~
+0
+-1 4759
+D3
+~
+~
+0
+-1 4717
+D7
+~
+~
+0
+-1 4718
+D8
+~
+~
+0
+-1 4706
+D9
+~
+~
+0
+-1 4760
+S
+#4759
+Next to a Bunker~
+&w &G The grass here appears green and fresh. The grassy plains extends a
+good distance. The bunker's concrete walls feel rough and cool to the
+touch. The sky can be seen clearly from this point.  A few stones pile
+against the bunker's slanted walls.
+~
+&R Bug
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4758
+D1
+~
+~
+0
+-1 4706
+D2
+~
+~
+0
+-1 4761
+D3
+~
+~
+0
+-1 4760
+D6
+~
+~
+301989888
+-1 4704
+D7
+~
+~
+0
+-1 4717
+D8
+~
+~
+0
+-1 4707
+S
+#4760
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4717
+D1
+~
+~
+0
+-1 4759
+D3
+~
+~
+0
+-1 4714
+D6
+~
+~
+0
+-1 4758
+D7
+~
+~
+0
+-1 4715
+S
+#4761
+Grassy Plain~
+&w &g The grass here appears green and healthy. large rocks and trees dot
+the plains, along with smaller stones. The plains appear almost
+uninterupted, save for the occassional unpassable outcropping. Winds whip
+around the rocks and trees, gliding over the cool grass. The sky can be
+clearly seen here.
+~
+&R BUG
+~
+1073741824
+0
+0 1
+D0
+~
+~
+0
+-1 4759
+D1
+~
+~
+0
+-1 4707
+D2
+~
+~
+0
+-1 4709
+D8
+~
+~
+0
+-1 4708
+S
+#4763
+Deploy zone~
+mob deploy
+~
+mob deploy
+~
+1075838976
+0
+0 1
+D0
+~
+~
+0
+-1 4764
+S
+#4764
+Construction zone~
+Mob manufacturing
+~
+construction zone.  NO mobs allowed!
+~
+1075838980
+0
+0 1
+D2
+~
+~
+0
+-1 4763
+D4
+~
+~
+0
+-1 4765
+D8
+~
+~
+0
+-1 4769
+D9
+~
+~
+0
+-1 4768
+S
+#4765
+Master Control~
+master control room, spawns the separatists...
+ no lesser mobs allowed!
+~
+master control room, spawns the separatists...
+~
+1109393416
+0
+0 1
+D5
+~
+~
+0
+-1 4764
+> rand_prog 100~
+say NWBase S Check Status
+say SEBase S Check Status
+say MBase S Check Status
+say Tunnel S Check Status
+say Cavern S Check Status
+say Epath S Check Status
+say Reinforcement S Check Status
+say Reinforcement S2 Check Status
+~
+> speech_prog 'Tunnel needs reinforcements'~
+say sending Shotgunner sergeant
+say sending shotgunner 4726
+say sending shotgunner 4726
+say sending shotgunner 4726
+say sending shotgunner 4726
+say sending shotgunner 4726
+say sending shotgunner 4726
+say sending shotgunner 4726
+say sending pistolier 4726
+say sending pistolier 4726
+say Initiate tunnel reinforcements
+~
+> speech_prog 'Cavern needs reinforcements'~
+say sending minigunner sergeant
+say sending shotgunner 4761
+say sending shotgunner 4761
+say sending shotgunner 4761
+say sending shotgunner 4761
+say sending shotgunner 4761
+say sending shotgunner 4761
+say Initiate cavern reinforcements
+~
+> speech_prog 'nwbase needs reinforcements'~
+say sending pistol sergeant
+say sending rifleman 4726
+say sending rifleman 4726
+say sending rifleman 4726
+say sending sniper 4726
+say sending pistol 4726
+say sending pistol 4726
+say Initiate NWBase reinforcements
+~
+> speech_prog 'sebase needs reinforcements'~
+say sending sniper 4744
+say sending rifleman 4744
+say sending rifleman 4744
+say sending rifleman 4744
+say sending flamethrower sergeant
+say sending shotgun 4744
+say sending shotgun 4744
+say Initiate sebase reinforcements
+~
+> speech_prog 'mbase needs reinforcements'~
+say sending sniper 4744
+say sending sniper 4744
+say sending sniper 4744
+say sending sniper 4744
+say sending rifleman 4744
+say sending rifleman 4744
+say sending shotgun 4744
+say sending shotgun 4744
+say sending shotgun 4744
+say sending shotgun 4744
+say sending sergeant smartgunner
+say Initiate mbase reinforcements
+~
+> speech_prog 'epath needs reinforcements'~
+say sending sniper sergeant
+say sending rifleman 4753
+say sending rifleman 4753
+say sending rifleman 4753
+say sending rifleman 4753
+say sending shotgun 4753
+say sending shotgun 4753
+say sending shotgun 4753
+say sending shotgun 4753
+say sending pistol 4753
+say sending pistol 4753
+say Initiate epath reinforcements
+~
+> speech_prog 'nwbase needs revenge'~
+say sending sidearm specialist
+say sending sniper 4726
+say sending rifleman 4726
+say sending rifleman 4726
+say sending shotgunner 4726
+say sending shotgunner 4726
+say sending minigunner 4726
+say bring nwbase revenge
+~
+> speech_prog 'sebase needs revenge'~
+say sending closerange specialist
+say sending rifleman 4744
+say sending rifleman 4744
+say sending sniper 4744
+say sending minigunner 4744
+say sending minigunner 4744
+say sending shotgunner 4744
+say sending shotgunner 4744
+say bring sebase revenge
+~
+> speech_prog 'mbase needs revenge'~
+say sending minigunner 4744
+say sending shotgunner 4744
+say sending shotgunner 4744
+say sending shotgunner 4744
+say sending shotgunner 4744
+say sending shotgunner 4744
+say sending sniper 4744
+say sending sniper 4744
+say sending sniper 4744
+say sending sniper 4744
+say sending covert specialist
+say bring mbase revenge
+~
+> speech_prog 'tunnel needs revenge'~
+say sending rifle specialist
+say sending minigunner 4726
+say sending rifleman 4726
+say sending rifleman 4726
+say sending rifleman 4726
+say sending rifleman 4726
+say bring tunnel revenge
+~
+> speech_prog 'cavern needs revenge'~
+say sending fire specialist
+say sending rifleman 4761
+say sending rifleman 4761
+say sending minigunner 4761
+say sending minigunner 4761
+say bring cavern revenge
+~
+> speech_prog 'epath needs revenge'~
+say sending sniper specialist
+say sending minigunner 4753
+say sending minigunner 4753
+say sending minigunner 4753
+say sending shotgunner 4753
+say sending shotgunner 4753
+say sending rifleman 4753
+say sending rifleman 4753
+say bring epath revenge
+~
+|
+S
+#0
+
+
+#RESETS
+D 0 4725 3 1
+D 0 4700 1 1
+D 0 4706 0 1
+D 0 4704 2 1
+D 0 4743 1 1
+D 0 4696 3 1
+O 1 4655 1 4715
+O 1 4655 1 4760
+O 1 4655 1 4707
+O 1 4655 1 4727
+O 1 4656 1 4729
+O 1 4656 1 4751
+O 1 4656 1 4709
+O 1 4657 1 4693
+O 1 4658 1 4693
+O 1 4658 1 4697
+O 1 4657 1 4697
+O 1 4658 1 4701
+O 1 4657 1 4701
+O 1 4657 1 4677
+O 1 4658 1 4677
+O 1 4657 1 4684
+O 1 4658 1 4671
+O 1 4657 1 4671
+M 1 4679 1 4765
+E 1 53 1 5
+M 1 4680 1 4765
+E 1 53 1 5
+M 1 4681 1 4765
+E 1 53 1 5
+M 1 4682 1 4765
+E 1 53 1 5
+M 1 4683 1 4765
+E 1 53 1 5
+M 1 4684 1 4765
+E 1 53 1 5
+M 1 4685 1 4765
+E 1 53 1 5
+M 1 4686 1 4765
+E 1 53 1 5
+M 1 4688 1 4765
+E 1 53 1 5
+M 1 4687 1 4765
+E 1 53 1 5
+G 1 673 1
+M 1 4689 1 4765
+E 1 53 1 5
+M 1 4655 1 4765
+E 1 53 1 5
+M 1 4690 1 4765
+E 1 53 1 5
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+M  4656 spec_enemy_scan
+M  4660 spec_enemy_scan
+M  4667 spec_enemy_scan
+M  4669 spec_enemy_scan
+M  4670 spec_enemy_scan
+M  4671 spec_enemy_scan
+M  4672 spec_enemy_scan
+M  4675 spec_enemy_scan
+M  4676 spec_enemy_scan
+S
+
+
+#$

@@ -1,0 +1,4884 @@
+#AREA   {PROTO} Tael's area in progress~
+
+#VERSION 4
+
+#AUTHOR Tael~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#5500
+face hugger alien~
+A Face Hugger~
+A Face Hugger
+~
+~
+0
+67108865
+Z
+1 8 8 0
+4 25 1 1 1 1
+1 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#5500
+ANCHOR~
+ANCHOR
+~
+ANCHOR
+~
+1073807364
+0
+0 1
+S
+#5501
+&bMarine Landing Site~
+&cIt's relatively quiet here. There is an open field a short distance north
+of you, and many trees ahead of that. All around are hills and mountains,
+and the location is very isolated.
+~
+How the hell did this become hived idiot? IT'S NOT SUPPOSE TO BE HIVED!
+~
+1375797248
+0
+0 1
+D0
+~
+~
+0
+-1 5502
+S
+#5502
+&zHeading to Area 57~
+&cYou stand in the middle of a grassy plain. North of you lies a slightly
+large but inconspicious fence, with large trees beyond that. Around you
+are hills and in the far distance lies several mountains. To the south
+lies another grassy plain that could be used for helicopter drop off
+points.
+~
+How the hell did this become hived idiot? IT'S NOT SUPPOSE TO BE HIVED!
+~
+1107361792
+0
+0 1
+D0
+~
+~
+0
+-1 5503
+D2
+~
+~
+0
+-1 5501
+S
+#5503
+&zHeading to Area 57~
+&cHere lies a nice spot of solitude. South of you lies a stretching grassy
+plain, and north lies a fence and forest. Outside of that, rolling hills
+and mountains. The scenes are here are beginning to become quite
+tedious...
+~
+How the hell did this become hived idiot? IT'S NOT SUPPOSE TO BE HIVED! 
+~
+1107361792
+0
+0 1
+D0
+~
+~
+0
+-1 5504
+D2
+~
+~
+0
+-1 5502
+S
+#5504
+&zEntrance to Area 57~
+&bFencing stretching to your east and west, with a single gate softly
+swaying to the wind in the middle come into view. A road becomes more and
+more visible as you look north, heading deep into the forest obstructed to
+your view by trees. All around you is forest, and all there is south of
+you are some grassy plains.
+~
+&OThe grass is pale, and there is a slight scent of gasoline in the air.
+Fencing stretches to your east and west, and there lies a single gate in
+the middle. A road heads north, into the forest all around you. South of
+you lies some grassy plains.
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5505
+D2
+~
+~
+0
+-1 5503
+S
+#5505
+&zInside Area 57~
+&gThere lies a heavy tension in the air, sprinkled with quick moments of
+eerieness. There isn't a single sound, no birds chirping, no squirrels
+chattering, not even the howl of a wolf, which would seem natural in such
+an isolated area. &gThe road stretches north into the surface level of
+Area 57, and the unflattering gate that serves as the entranceway lies
+south.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5506
+D2
+~
+~
+0
+-1 5504
+S
+#5506
+&zIn Sight of Area 57~
+&gAt last, there is a clearing up ahead that reveals the entrance way into
+the surface camp of Area 57. There lies not a single person up ahead. The
+forest remains still and quiet, and that familiar feeling of dread and
+incoming fear hangs in the air. There is also another clearing to the
+west.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5510
+D2
+~
+~
+0
+-1 5505
+D3
+~
+~
+0
+-1 5507
+S
+#5507
+&gIn Sight of an Odd Clearing~
+&gThere is a small trail here that leads west towards a little clearing
+with what seems like sand. To the east lies the main road to Area 57.
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5506
+D3
+~
+~
+0
+-1 5508
+S
+#5508
+&OAn Odd Clearing~
+&gThere lies a small patch of sand here, and a tree that seems to be higher
+than all the other forest trees, and has vines snaking down its trunk.
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5507
+D4
+~
+~
+0
+-1 5509
+S
+#5509
+&rUp a Tree~
+&gUpon climbing the tree, you see nothing but leaves and branches. Every
+now and then, a dripping sound can be heard. Upon reaching the top, the
+forest resumes it's quiet mood without the sound of someone climbing a
+tree.  &RThen you feel a drop of liquid fall upon your forehead, and look
+up. A decapitated human body hangs from a tree, with a spear impaled
+through it's middle and a rope that's tearing into it attaching it to the
+tree branch above you.
+~
+~
+1073807360
+0
+0 1
+D5
+~
+~
+0
+-1 5508
+S
+#5510
+&zDeep in Camp~
+&zThe trail continues into camp that you see ahead. Tents can be seen, and
+a few large structures as well. The trees begin to thin, and finally the
+forest is no more. Further up ahead, you can see the entrance into the
+&zArea 57 Facility, a magnificent engineering feat.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5511
+D2
+~
+~
+0
+-1 5506
+S
+#5511
+&zAn Intersection~
+&zThere lies 4 paths here, each heading in one of the 4 general directions.
+To the east lies visible tents with white flags bearing red crosses. To
+the west lies a tall tower with an antenna on the very top. To the south
+lies the entrance of the camp and there are several structures visible to
+the north. 
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5517
+D1
+~
+~
+0
+-1 5512
+D2
+~
+~
+0
+-1 5510
+D3
+~
+~
+0
+-1 5513
+S
+#5512
+&zIn Sight of the Medical Facilities~
+&zThe pathway going east leads to a clearing surrounded by large green
+tents. Several large white flags can be seen, all with a large red cross
+in the middle. To the west lies a large guard tower and southern middle of
+the Surface Camp.
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5529
+D3
+~
+~
+0
+-1 5511
+S
+#5513
+&BEntrance to a Guard Tower~
+&BEntering the threshold reveals a ladder going up that's placed in the
+center of the room and another room to the west that seems to be full of
+equipment. 
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5511
+D3
+~
+~
+0
+-1 5516
+D4
+~
+~
+0
+-1 5514
+S
+#5514
+&YUp the Ladder~
+&BThe ladder continues up to the top of the guard tower, and down into the
+entrance of the guard tower. This is a very unsafe spot to be, as holding
+a gun and shooting would be quite difficult without falling.
+~
+~
+1073807360
+0
+0 1
+D4
+~
+~
+0
+-1 5515
+D5
+~
+~
+0
+-1 5513
+S
+#5515
+&YOn Top of the Guard Tower~
+&zIt's relatively high up here, and the entire camp can be seen. This would
+be a good place to set up a sniper hole, as everything is visible from
+here. To the west lies forest, but the south side shows the pathway into
+the Area 57 Surface Camp. To the east lies the Medical Tents and to the
+North lies more buildings.
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+33554432
+-1 5517
+D1
+~
+~
+33554432
+-1 5511
+D2
+~
+~
+33554432
+-1 5510
+D5
+~
+~
+0
+-1 5514
+S
+#5516
+&BA Communication Station~
+&BHere lies several desks with large equipment placed upon them. There's a
+radio, computer, and a weapon rack on the western wall. 
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5513
+S
+#5517
+&zDeep in Camp~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5518
+D2
+~
+~
+0
+-1 5511
+S
+#5518
+&zA Second Intersection~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5566
+D1
+~
+~
+0
+-1 5519
+D2
+~
+~
+0
+-1 5517
+D3
+~
+~
+0
+-1 5550
+S
+#5519
+To the Guard Station~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5520
+D3
+~
+~
+0
+-1 5518
+S
+#5520
+In the Guard Station~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5521
+D2
+~
+~
+0
+-1 5522
+D3
+~
+~
+0
+-1 5519
+S
+#5521
+In a Closet~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5528
+D2
+~
+~
+0
+-1 5520
+S
+#5522
+Communications Station~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5520
+D1
+~
+~
+0
+-1 5523
+S
+#5523
+Intersection~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5540
+D1
+~
+~
+0
+-1 5524
+D3
+~
+~
+0
+-1 5522
+S
+#5524
+Heading for the Guard Quarters~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5525
+D3
+~
+~
+0
+-1 5523
+S
+#5525
+Heading for the Guard Quarters~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5526
+D2
+~
+~
+0
+-1 5524
+S
+#5526
+At the Stairs~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 5525
+D4
+~
+~
+0
+-1 5527
+S
+#5527
+In the Guard Quarters~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5543
+D1
+~
+~
+0
+-1 5545
+D2
+~
+~
+0
+-1 5547
+D3
+~
+~
+0
+-1 5541
+D5
+~
+~
+0
+-1 5526
+D6
+~
+~
+0
+-1 5544
+D7
+~
+~
+0
+-1 5542
+D8
+~
+~
+0
+-1 5546
+D9
+~
+~
+0
+-1 5548
+S
+#5528
+Storage Closet~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5521
+S
+#5529
+&zNear the Medical Facilities~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5530
+D3
+~
+~
+0
+-1 5512
+S
+#5530
+In the Medical Facilities~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5531
+D1
+~
+~
+0
+-1 5532
+D2
+~
+~
+0
+-1 5533
+D3
+~
+~
+0
+-1 5529
+S
+#5531
+The Clinic~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5537
+D2
+~
+~
+0
+-1 5530
+S
+#5532
+Emergency Hospital~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5534
+D3
+~
+~
+0
+-1 5530
+S
+#5533
+Medical Storage Tent~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5530
+S
+#5534
+Deeper in the Emergency Hospital~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5535
+D3
+~
+~
+0
+-1 5532
+S
+#5535
+&BThe Back Storage Room~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5534
+D5
+~
+~
+0
+-1 5536
+S
+#5536
+&pIn a Hole~
+~
+~
+1073807360
+0
+0 1
+D4
+~
+~
+0
+-1 5535
+D5
+~
+~
+0
+-1 5636
+S
+#5537
+The Lounge~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5539
+D2
+~
+~
+0
+-1 5531
+D3
+~
+~
+0
+-1 5538
+S
+#5538
+Examination Room~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5537
+S
+#5539
+Miscellaneous Room~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5537
+S
+#5540
+Surface Armory~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 5523
+S
+#5541
+West Wall of the Guard Quarters~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5542
+D1
+~
+~
+0
+-1 5527
+D2
+~
+~
+0
+-1 5548
+S
+#5542
+Northwest Corner of the Guard Quarters~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5543
+D2
+~
+~
+0
+-1 5541
+D8
+~
+~
+0
+-1 5527
+S
+#5543
+North Wall of the Guard Quarters~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5544
+D2
+~
+~
+0
+-1 5527
+D3
+~
+~
+0
+-1 5542
+S
+#5544
+Northeast Corner of the Guard Quarters~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 5545
+D3
+~
+~
+0
+-1 5543
+D9
+~
+~
+0
+-1 5527
+S
+#5545
+East Wall of the Guard Quarters~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5544
+D2
+~
+~
+0
+-1 5546
+D3
+~
+~
+0
+-1 5527
+S
+#5546
+Southeast Corner of the Guard Quarters~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5545
+D3
+~
+~
+0
+-1 5547
+D7
+~
+~
+0
+-1 5527
+S
+#5547
+South Wall of the Guard Quarters~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5527
+D1
+~
+~
+0
+-1 5546
+D3
+~
+~
+0
+-1 5548
+S
+#5548
+Southwest Corner of the Guard Quarters~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5541
+D1
+~
+~
+0
+-1 5547
+D6
+~
+~
+0
+-1 5527
+S
+#5549
+Before the Fence~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5565
+D3
+~
+~
+0
+-1 5569
+S
+#5550
+Heading for the Storage Area~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5518
+D3
+~
+~
+0
+-1 5551
+S
+#5551
+Storage Area~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5552
+D1
+~
+~
+0
+-1 5550
+D2
+~
+~
+0
+-1 5554
+D3
+~
+~
+0
+-1 5555
+S
+#5552
+In a Storage Tent~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5553
+D2
+~
+~
+0
+-1 5551
+S
+#5553
+In the Back of a Storage Tent~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 5552
+S
+#5554
+In a Storage Tent~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5551
+S
+#5555
+Storage Area~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5556
+D1
+~
+~
+0
+-1 5551
+D2
+~
+~
+0
+-1 5557
+D3
+~
+~
+0
+-1 5559
+S
+#5556
+In a Storage Tent~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 5555
+S
+#5557
+In a Storage Tent~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5555
+D2
+~
+~
+0
+-1 5558
+S
+#5558
+In the Back of a Storage Tent~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5557
+S
+#5559
+Storage Area~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5560
+D1
+~
+~
+0
+-1 5555
+D2
+~
+~
+0
+-1 5561
+D3
+~
+~
+0
+-1 5563
+S
+#5560
+In a Storage Tent~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 5559
+S
+#5561
+In a Storage Tent~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5559
+D2
+~
+~
+0
+-1 5562
+S
+#5562
+In the Back of a Storage Tent~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5561
+S
+#5563
+Heading into Camp~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5559
+D3
+~
+~
+0
+-1 5564
+S
+#5564
+Inside the Camp, Next to the Fence~
+~
+~
+1074855936
+0
+0 1
+D1
+~
+~
+0
+-1 5563
+D4
+~
+~
+0
+-1 5565
+S
+#5565
+Over the Fence~
+~
+~
+1073811456
+0
+0 1
+D5
+~
+~
+0
+-1 5564
+S
+#5566
+Heading for Area 57~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5567
+D2
+~
+~
+0
+-1 5518
+S
+#5567
+Heading for Area 57~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5568
+D2
+~
+~
+0
+-1 5566
+S
+#5568
+At the Entrance to Area 57~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5582
+D2
+~
+~
+0
+-1 5567
+S
+#5569
+Near the Fence~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5549
+D3
+~
+~
+0
+-1 5570
+S
+#5570
+Heading for Area 57~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5569
+D3
+~
+~
+0
+-1 5571
+S
+#5571
+Heading for Area 57~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5572
+D1
+~
+~
+0
+-1 5570
+S
+#5572
+At a Crashed Ship~
+~
+~
+1208025088
+0
+0 1
+D0
+~
+~
+0
+-1 5573
+D2
+~
+~
+0
+-1 5571
+S
+#5573
+The Bridge~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5576
+D1
+~
+~
+0
+-1 5574
+D2
+~
+~
+0
+-1 5572
+D3
+~
+~
+0
+-1 5575
+S
+#5574
+At the Cockpit~
+~
+~
+1073807368
+0
+0 1
+D3
+~
+~
+0
+-1 5573
+S
+#5575
+A Weapons Locker~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5573
+S
+#5576
+In the Crashed Ship~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5579
+D1
+~
+~
+0
+-1 5577
+D2
+~
+~
+0
+-1 5573
+D3
+~
+~
+0
+-1 5578
+S
+#5577
+A Storage Room~
+~
+~
+1073807368
+0
+0 1
+D3
+~
+~
+0
+-1 5576
+S
+#5578
+Towards the Cargo Bay~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5576
+D5
+~
+~
+0
+-1 5580
+S
+#5579
+A Storage Room~
+~
+~
+1073807368
+0
+0 1
+D2
+~
+~
+0
+-1 5576
+S
+#5580
+The Cargo Bay~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5581
+D4
+~
+~
+0
+-1 5578
+S
+#5581
+The Cargo Bay Door~
+~
+~
+1208025096
+0
+0 1
+D2
+~
+~
+0
+-1 5580
+S
+#5582
+Area 57 Check Point~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5583
+D1
+~
+~
+0
+-1 5588
+D2
+~
+~
+0
+-1 5568
+D3
+~
+~
+0
+-1 5591
+S
+#5583
+A Hallway~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5584
+D2
+~
+~
+0
+-1 5582
+S
+#5584
+An Intersection~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5587
+D2
+~
+~
+0
+-1 5583
+D3
+~
+~
+0
+-1 5585
+S
+#5585
+The Guard Post~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5584
+D2
+~
+~
+0
+-1 5586
+S
+#5586
+A Communications Room~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5585
+S
+#5587
+The Weapons Locker~
+~
+~
+1073807368
+0
+0 1
+D3
+~
+~
+0
+-1 5584
+S
+#5588
+A Hallway~
+~
+~
+1073807368
+0
+0 1
+D3
+~
+~
+0
+-1 5582
+D4
+~
+~
+0
+-1 5589
+S
+#5589
+Upstairs~
+~
+~
+1073807368
+0
+0 1
+D2
+~
+~
+0
+-1 5590
+D5
+~
+~
+0
+-1 5588
+S
+#5590
+The Surface Relay Station~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5589
+S
+#5591
+Level 1 Entrance~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5592
+D1
+~
+~
+0
+-1 5582
+S
+#5592
+Stairs~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5593
+D2
+~
+~
+0
+-1 5591
+S
+#5593
+Stairs~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5613
+D2
+~
+~
+0
+-1 5594
+D3
+~
+~
+0
+-1 5592
+S
+#5594
+Stairs~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5593
+D3
+~
+~
+0
+-1 5595
+S
+#5595
+Level 2 Entrance~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5596
+D1
+~
+~
+0
+-1 5594
+D2
+~
+~
+0
+-1 5637
+S
+#5596
+Stairs~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5597
+D2
+~
+~
+0
+-1 5595
+S
+#5597
+Stairs~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5614
+D2
+~
+~
+0
+-1 5598
+D3
+~
+~
+0
+-1 5596
+S
+#5598
+Stairs~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5597
+D3
+~
+~
+0
+-1 5599
+S
+#5599
+Level 3 Entrance~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5600
+D1
+~
+~
+0
+-1 5598
+D2
+~
+~
+0
+-1 5663
+S
+#5600
+Stairs~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5601
+D2
+~
+~
+0
+-1 5599
+S
+#5601
+Stairs~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5615
+D2
+~
+~
+0
+-1 5602
+D3
+~
+~
+0
+-1 5600
+S
+#5602
+Stairs~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5601
+D3
+~
+~
+0
+-1 5603
+S
+#5603
+Level 4 Entrance~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5604
+D1
+~
+~
+0
+-1 5602
+S
+#5604
+Stairs~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5605
+D2
+~
+~
+0
+-1 5603
+S
+#5605
+Stairs~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5616
+D2
+~
+~
+0
+-1 5606
+D3
+~
+~
+0
+-1 5604
+S
+#5606
+Stairs~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5605
+D3
+~
+~
+0
+-1 5607
+S
+#5607
+Level 5 Entrance~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5608
+D1
+~
+~
+0
+-1 5606
+S
+#5608
+Stairs~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5609
+D2
+~
+~
+0
+-1 5607
+S
+#5609
+Stairs~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5617
+D2
+~
+~
+0
+-1 5610
+D3
+~
+~
+0
+-1 5608
+S
+#5610
+Deep in the Facility~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5609
+D2
+~
+~
+0
+-1 5611
+S
+#5611
+A Hallway~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5610
+D1
+~
+~
+0
+-1 5612
+S
+#5612
+Floating in a void~
+~
+~
+1073807368
+0
+0 1
+D3
+~
+~
+0
+-1 5611
+S
+#5613
+&bThe Elevator Shaft Level 1~
+~
+~
+1073807368
+0
+0 1
+D2
+~
+~
+0
+-1 5593
+D5
+~
+~
+0
+-1 5614
+S
+#5614
+&bThe Elevator Shaft Level 2~
+~
+~
+1073807368
+0
+0 1
+D2
+~
+~
+0
+-1 5597
+D4
+~
+~
+0
+-1 5613
+D5
+~
+~
+0
+-1 5615
+S
+#5615
+&bThe Elevator Shaft Level 3~
+~
+~
+1073807368
+0
+0 1
+D2
+~
+~
+0
+-1 5601
+D4
+~
+~
+0
+-1 5614
+D5
+~
+~
+0
+-1 5616
+S
+#5616
+&bThe Elevator Shaft Level 4~
+~
+~
+1073807368
+0
+0 1
+D2
+~
+~
+0
+-1 5605
+D4
+~
+~
+0
+-1 5615
+D5
+~
+~
+0
+-1 5617
+S
+#5617
+&bThe Elevator Shaft Level 5~
+~
+~
+1073807368
+0
+0 1
+D2
+~
+~
+0
+-1 5609
+D4
+~
+~
+0
+-1 5616
+D5
+~
+~
+0
+-1 5618
+S
+#5618
+&pIn a Hole~
+~
+~
+1073807368
+0
+0 1
+D2
+~
+~
+0
+-1 5619
+D4
+~
+~
+0
+-1 5617
+S
+#5619
+&pIn a Dark Tunnel~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5618
+D1
+~
+~
+0
+-1 5620
+S
+#5620
+&pIn a Dark Tunnel~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5621
+D3
+~
+~
+0
+-1 5619
+S
+#5621
+&pIn a Dark Tunnel~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5622
+D2
+~
+~
+0
+-1 5620
+S
+#5622
+&pIn a Dark Tunnel~
+~
+~
+1073807368
+0
+0 1
+D2
+~
+~
+0
+-1 5623
+D3
+~
+~
+0
+-1 5621
+S
+#5623
+&pIn a Dark Tunnel~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5622
+D2
+~
+~
+0
+-1 5624
+S
+#5624
+&pIn a Dark Tunnel~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5623
+D3
+~
+~
+0
+-1 5625
+S
+#5625
+&pIn a Dark Tunnel~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5624
+D3
+~
+~
+0
+-1 5626
+S
+#5626
+&pIn a Dark Tunnel~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5627
+D1
+~
+~
+0
+-1 5625
+S
+#5627
+&pIn a Dark Tunnel~
+~
+~
+1073807368
+0
+0 1
+D2
+~
+~
+0
+-1 5626
+D3
+~
+~
+0
+-1 5628
+S
+#5628
+&pIn a Dark Tunnel~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5627
+D2
+~
+~
+0
+-1 5629
+S
+#5629
+&pIn a Dark Tunnel~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5628
+D2
+~
+~
+0
+-1 5630
+S
+#5630
+&pIn a Dark Tunnel~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5629
+D2
+~
+~
+0
+-1 5631
+S
+#5631
+&pIn a Dark Tunnel~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5630
+D1
+~
+~
+0
+-1 5632
+S
+#5632
+&pAt the Bottom of the Hole~
+~
+~
+1073807368
+0
+0 1
+D3
+~
+~
+0
+-1 5631
+D4
+~
+~
+0
+-1 5633
+S
+#5633
+&pDown the Hole~
+~
+~
+1073807368
+0
+0 1
+D4
+~
+~
+0
+-1 5634
+D5
+~
+~
+0
+-1 5632
+S
+#5634
+&pDown the Hole~
+~
+~
+1073807368
+0
+0 1
+D4
+~
+~
+0
+-1 5635
+D5
+~
+~
+0
+-1 5633
+S
+#5635
+&pDown the Hole~
+~
+~
+1073807368
+0
+0 1
+D4
+~
+~
+0
+-1 5636
+D5
+~
+~
+0
+-1 5634
+S
+#5636
+&pDown a Hole~
+~
+~
+1073807368
+0
+0 1
+D4
+~
+~
+0
+-1 5536
+D5
+~
+~
+0
+-1 5635
+S
+#5637
+Down a Hallway~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5595
+D1
+~
+~
+0
+-1 5638
+D2
+~
+~
+0
+-1 5644
+S
+#5638
+Entrance to Lab01~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5642
+D3
+~
+~
+0
+-1 5637
+S
+#5639
+Northeast Corner of Lab01~
+~
+~
+1073807368
+0
+0 1
+D2
+~
+~
+0
+-1 5643
+D3
+~
+~
+0
+-1 5640
+S
+#5640
+Northwest Corner of Lab01~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5639
+D2
+~
+~
+0
+-1 5642
+S
+#5641
+Alien Spawn~
+To Mortals:
+WHAT THE FUCK ARE YOU DOING HERE!?!?!?
+To Everyone Else:
+This is the Alien Drone Spawn Area. Get out. Now.
+~
+To Mortals:
+WHAT THE FUCK ARE YOU DOING HERE!?!?!?
+To Everyone Else:
+This is the Alien Drone Spawn Area. Get out. Now.
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5640
+S
+#5642
+Southwest Corner of Lab01~
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 5643
+D3
+~
+~
+0
+-1 5638
+S
+#5643
+Southeast Corner of Lab01~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+0
+-1 5639
+D3
+~
+~
+0
+-1 5642
+S
+#5644
+Down a Hallway~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5637
+D2
+~
+~
+0
+-1 5651
+D3
+~
+~
+0
+-1 5645
+S
+#5645
+Entrance to Lab02~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5644
+D3
+~
+~
+0
+-1 5646
+S
+#5646
+Southeast Corner of Lab02~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5649
+D1
+~
+~
+0
+-1 5645
+D3
+~
+~
+0
+-1 5647
+S
+#5647
+Southwest Corner of Lab02~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5648
+D1
+~
+~
+0
+-1 5646
+S
+#5648
+Northwest Corner of Lab02~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5649
+D2
+~
+~
+0
+-1 5647
+S
+#5649
+Northeast Corner of Lab02~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 5646
+D3
+~
+~
+0
+-1 5648
+S
+#5650
+Alien Spawn 2~
+To Mortals:
+WHAT THE FUCK ARE YOU DOING HERE!?!?!?
+To Everyone Else:
+This is the Alien Drone Spawn Area. Get out. Now.
+~
+To Mortals:
+WHAT THE FUCK ARE YOU DOING HERE!?!?!?
+To Everyone Else:
+This is the Alien Drone Spawn Area. Get out. Now.
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5648
+S
+#5651
+Down a Hallway~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5644
+D1
+~
+~
+0
+-1 5658
+D2
+~
+~
+0
+-1 5652
+S
+#5652
+At the End of the Hallway~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5651
+D3
+~
+~
+0
+-1 5653
+S
+#5653
+Entrance to Lab04~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5652
+D3
+~
+~
+0
+-1 5654
+S
+#5654
+Southeast Corner of Lab04~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5657
+D1
+~
+~
+0
+-1 5653
+D3
+~
+~
+0
+-1 5655
+S
+#5655
+Southwest Corner of Lab04~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5656
+D1
+~
+~
+0
+-1 5654
+S
+#5656
+Northwest Corner of Lab04~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5657
+D2
+~
+~
+0
+-1 5655
+S
+#5657
+Northeast Corner of Lab04~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 5654
+D3
+~
+~
+0
+-1 5656
+S
+#5658
+Entrance to Lab03~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5659
+D3
+~
+~
+0
+-1 5651
+S
+#5659
+Southwest Corner of Lab03~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5662
+D1
+~
+~
+0
+-1 5660
+D3
+~
+~
+0
+-1 5658
+S
+#5660
+Southeast Corner of Lab03~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5661
+D3
+~
+~
+0
+-1 5659
+S
+#5661
+Northeast Corner of Lab03~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 5660
+D3
+~
+~
+0
+-1 5662
+S
+#5662
+Northwest Corner of Lab03~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5661
+D2
+~
+~
+0
+-1 5659
+S
+#5663
+Entrance to the Living Quarters~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5599
+D2
+~
+~
+0
+-1 5664
+S
+#5664
+North Sector of the Living Quarters~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5663
+D1
+~
+~
+0
+-1 5666
+D3
+~
+~
+0
+-1 5665
+S
+#5665
+North-West Sector of the Living Quarters~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5664
+D2
+~
+~
+0
+-1 5673
+S
+#5666
+North-East Sector of the Living Quarters~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 5667
+D3
+~
+~
+0
+-1 5664
+S
+#5667
+East Sector of the Living Quarters~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5666
+D2
+~
+~
+0
+-1 5668
+S
+#5668
+South-East Sector of the Living Quarters~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5667
+D3
+~
+~
+0
+-1 5669
+S
+#5669
+South Sector of the Living Quarters~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5668
+D2
+~
+~
+0
+-1 5718
+D3
+~
+~
+0
+-1 5670
+S
+#5670
+South Sector of the Living Quarters~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5669
+D2
+~
+~
+0
+-1 5710
+D3
+~
+~
+0
+-1 5671
+S
+#5671
+South-West Sector of the Living Quarters~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5672
+D1
+~
+~
+0
+-1 5670
+S
+#5672
+West Sector of the Living Quarters~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5673
+D2
+~
+~
+0
+-1 5671
+D3
+~
+~
+0
+-1 5693
+S
+#5673
+West Sector of the Living Quarters~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5665
+D2
+~
+~
+0
+-1 5672
+D3
+~
+~
+0
+-1 5676
+S
+#5674
+Alien Spawn 3~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5661
+S
+#5675
+Alien Spawn 4~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5655
+S
+#5676
+Entrance to the Men's Dormitory~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5673
+D3
+~
+~
+0
+-1 5677
+S
+#5677
+In the Men's Dormitory~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5678
+D1
+~
+~
+0
+-1 5676
+S
+#5678
+Men's Dormitory Row 1~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5679
+D1
+~
+~
+0
+-1 5691
+D2
+~
+~
+0
+-1 5677
+D3
+~
+~
+0
+-1 5692
+S
+#5679
+Men's Dormitory Row 2~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5680
+D1
+~
+~
+0
+-1 5689
+D2
+~
+~
+0
+-1 5678
+D3
+~
+~
+0
+-1 5690
+S
+#5680
+Men's Dormitory Row 3~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5681
+D1
+~
+~
+0
+-1 5687
+D2
+~
+~
+0
+-1 5679
+D3
+~
+~
+0
+-1 5688
+S
+#5681
+Men's Dormitory Row 4~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5682
+D1
+~
+~
+0
+-1 5685
+D2
+~
+~
+0
+-1 5680
+D3
+~
+~
+0
+-1 5686
+S
+#5682
+Men's Dormitory Row 5~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5683
+D2
+~
+~
+0
+-1 5681
+D3
+~
+~
+0
+-1 5684
+S
+#5683
+Row 5 East Side~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5682
+S
+#5684
+Row 5 West Side~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5682
+S
+#5685
+Row 4 East Side~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5681
+S
+#5686
+Row 4 West Side~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5681
+S
+#5687
+Row 3 East Side~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5680
+S
+#5688
+Row 3 West Side~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5680
+S
+#5689
+Row 2 East Side~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5679
+S
+#5690
+Row 2 West Side~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5679
+S
+#5691
+Row 1 East Side~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5678
+S
+#5692
+Row 1 West Side~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5678
+S
+#5693
+Entrance to the Women's Dormitory~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5672
+D3
+~
+~
+0
+-1 5694
+S
+#5694
+In the Women's Dormitory~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5693
+D2
+~
+~
+0
+-1 5695
+S
+#5695
+Women's Dormitory Row 1~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5694
+D1
+~
+~
+0
+-1 5708
+D2
+~
+~
+0
+-1 5696
+D3
+~
+~
+0
+-1 5709
+S
+#5696
+Women's Dormitory Row 2~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5695
+D1
+~
+~
+0
+-1 5706
+D2
+~
+~
+0
+-1 5697
+D3
+~
+~
+0
+-1 5707
+S
+#5697
+Women's Dormitory Row 3~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5696
+D1
+~
+~
+0
+-1 5704
+D2
+~
+~
+0
+-1 5698
+D3
+~
+~
+0
+-1 5705
+S
+#5698
+Women's Dormitory Row 4~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5697
+D1
+~
+~
+0
+-1 5702
+D2
+~
+~
+0
+-1 5699
+D3
+~
+~
+0
+-1 5703
+S
+#5699
+Women's Dormitory Row 5~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5698
+D1
+~
+~
+0
+-1 5700
+D3
+~
+~
+0
+-1 5701
+S
+#5700
+Row 5 East Side~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5699
+S
+#5701
+Row 5 West Side~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5699
+S
+#5702
+Row 4 East Side~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5698
+S
+#5703
+Row 4 West Side~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5698
+S
+#5704
+Row 3 East Side~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5697
+S
+#5705
+Row 3 West Side~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5697
+S
+#5706
+Row 2 East Side~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5696
+S
+#5707
+Row 2 West Side~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5696
+S
+#5708
+Row 1 East Side~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5695
+S
+#5709
+Row 1 West Side~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5695
+S
+#5710
+Entrance to the Women's Comfort Facility~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5670
+D2
+~
+~
+0
+-1 5711
+S
+#5711
+In the Women's Comfort Facility~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5710
+D2
+~
+~
+0
+-1 5712
+D3
+~
+~
+0
+-1 5719
+S
+#5712
+In the Women's Comfort Facility~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5711
+D1
+~
+~
+0
+-1 5717
+D2
+~
+~
+0
+-1 5713
+S
+#5713
+In the Women's Comfort Facility~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5712
+D1
+~
+~
+0
+-1 5716
+D2
+~
+~
+0
+-1 5714
+S
+#5714
+In the Women's Comfort Facility~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5713
+D1
+~
+~
+0
+-1 5715
+S
+#5715
+6 Shower Stalls~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5714
+S
+#5716
+6 Shower Stalls~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5713
+S
+#5717
+6 Shower Stalls~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5712
+S
+#5718
+Entrance to the Men's Comfort Facility~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5669
+D2
+~
+~
+0
+-1 5733
+S
+#5719
+Entrance to the Women's Lavatory Area~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5711
+D3
+~
+~
+0
+-1 5720
+S
+#5720
+In the Women's Lavatory Area~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5719
+D2
+~
+~
+0
+-1 5721
+S
+#5721
+In the Women's Lavatory Area~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5720
+D1
+~
+~
+0
+-1 5731
+D2
+~
+~
+0
+-1 5722
+D3
+~
+~
+0
+-1 5732
+S
+#5722
+In the Women's Lavatory Area~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5721
+D1
+~
+~
+0
+-1 5729
+D2
+~
+~
+0
+-1 5723
+D3
+~
+~
+0
+-1 5730
+S
+#5723
+In the Women's Lavatory Area~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5722
+D1
+~
+~
+0
+-1 5727
+D2
+~
+~
+0
+-1 5724
+D3
+~
+~
+0
+-1 5728
+S
+#5724
+In the Women's Lavatory Area~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5723
+D1
+~
+~
+0
+-1 5725
+D3
+~
+~
+0
+-1 5726
+S
+#5725
+A Toilet Stall~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5724
+S
+#5726
+A Toilet Stall~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5724
+S
+#5727
+A Toilet Stall~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5723
+S
+#5728
+A Toilet Stall~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5723
+S
+#5729
+A Toilet Stall~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5722
+S
+#5730
+A Toilet Stall~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5722
+S
+#5731
+A Toilet Stall~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5721
+S
+#5732
+A Toilet Stall~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5721
+S
+#5733
+In the Men's Comfort Facility~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5718
+D1
+~
+~
+0
+-1 5753
+D2
+~
+~
+0
+-1 5734
+S
+#5734
+In the Men's Comfort Facility~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5733
+D2
+~
+~
+0
+-1 5735
+D3
+~
+~
+0
+-1 5745
+S
+#5735
+In the Men's Comfort Facility~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5734
+D2
+~
+~
+0
+-1 5736
+D3
+~
+~
+0
+-1 5744
+S
+#5736
+In the Men's Comfort Facility~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5735
+D3
+~
+~
+0
+-1 5743
+S
+#5737
+In the Men's Lavatory Area~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 5738
+D3
+~
+~
+0
+-1 5753
+S
+#5738
+In the Men's Lavatory Area~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5737
+D1
+~
+~
+0
+-1 5747
+D2
+~
+~
+0
+-1 5739
+D3
+~
+~
+0
+-1 5746
+S
+#5739
+In the Men's Lavatory Area~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5738
+D1
+~
+~
+0
+-1 5755
+D2
+~
+~
+0
+-1 5740
+D3
+~
+~
+0
+-1 5748
+S
+#5740
+In the Men's Lavatory Area~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5739
+D1
+~
+~
+0
+-1 5754
+D2
+~
+~
+0
+-1 5741
+D3
+~
+~
+0
+-1 5749
+S
+#5741
+In the Men's Lavatory Area~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 5740
+D1
+~
+~
+0
+-1 5752
+D3
+~
+~
+0
+-1 5751
+S
+#5742
+Floating in the Void~
+~
+~
+1073807364
+0
+0 1
+S
+#5743
+6 Shower Stalls~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5736
+S
+#5744
+6 Shower Stalls~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5735
+S
+#5745
+6 Shower Stalls~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5734
+S
+#5746
+3 Urinals~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5738
+S
+#5747
+A Toilet Stall~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5738
+S
+#5748
+3 Urinals~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5739
+S
+#5749
+3 Urinals~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5740
+S
+#5750
+Floating in a void~
+~
+~
+1073807364
+0
+0 1
+S
+#5751
+3 Urinals~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5741
+S
+#5752
+A Toilet Stall~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5741
+S
+#5753
+Entrance to the Men's Lavatory Area~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 5737
+D3
+~
+~
+0
+-1 5733
+S
+#5754
+A Toilet Stall~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5740
+S
+#5755
+A Toilet Stall~
+~
+~
+1073807360
+0
+0 1
+D3
+~
+~
+0
+-1 5739
+S
+#5800
+ANCHOR~
+ANCHOR
+~
+ANCHOR
+~
+1073807364
+0
+0 1
+S
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+S
+
+
+#$

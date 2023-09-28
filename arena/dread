@@ -1,0 +1,33 @@
+#ARENA
+Name         'Mount Dread' Dropship Crash~
+Desc         Marines:
+One of our high ranking superiors has gone behind the core's back.  He
+has hired a science expedition to study a mountain on a distant planet.
+individual knew this and sent a team with the scientists to collect a
+Xenomorph.  The converted Dropship they were using crashed.  A group of
+marines were sent with them.  Your mission is to find the crashsite and
+rescue any survivors.  Two dropships will go down ahead of you to
+secure the dropzone.  Recon reports strange activity in the area, keep
+your eyes open.  Move out marines!
+ 
+Predators:
+Our hunt takes us to a mountain filled with worthy prey.  For those of
+you who have not yet killed the master of prey there will be plenty of
+opportunities.  For us, who have proved our skill again and again, 
+their is the Queen!  This will be a glorious hunt!
+ 
+Aliens:
+The Queen is restless.  The predators have returned, and strangers 
+approach.  Defend the Queen! 
+~
+Filename     dread~
+Firstroom    7604
+Lastroom     7800
+Timer        40
+Maxsupport   0 5
+Maxsupport   1 5
+Minp         0
+Maxp         30
+End
+
+#END

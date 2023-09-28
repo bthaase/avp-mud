@@ -1,0 +1,1730 @@
+#AREA   Limbo~
+
+#VERSION 4
+
+#AUTHOR Raven/Ghost~
+
+#AMBIENCE 0
+#RANGES
+0 105 0 105
+$
+
+#MOBILES
+#1
+Puff~
+Puff~
+Puff the Fractal Dragon is here, contemplating a higher reality.
+~
+~
+0
+3
+S
+50 8 8 2
+#3
+supermob~
+the supermob~
+The supermob is here.  He looks busy as hell.
+~
+How clever he looks!
+~
+4194304
+786433
+Z
+105 8 8 2
+13 13 13 13 13 13
+0 0 0 0
+0
+21
+0 0 0 0 0 0 0
+#50
+alien drone~
+An alien drone~
+An alien drone stands here, drooling.
+~
+~
+0
+1
+Z
+10 8 8 0
+10 10 10 10 10 10
+1 0 0 0
+2
+2
+0 0 0 0 0 0 0
+#51
+alien queen~
+the alien queen~
+The alien queen sits here, guarding her brood.
+~
+~
+0
+1
+Z
+20 8 8 0
+10 10 10 10 10 10
+1 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#52
+alien drone guard~
+An alien drone~
+An alien drone stands here, drooling.
+~
+~
+0
+257
+Z
+10 8 8 0
+25 10 10 10 10 10
+1 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> rand_prog 100~
+spit $r 
+~
+> fight_prog 60~
+spit $r
+~
+|
+#53
+predator hunter~
+Predator~
+A violent looking Predator is hunting here.
+~
+~
+0
+1
+Z
+1 8 8 0
+10 10 10 10 10 10
+2 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#80
+bot template~
+Dont delete~
+Bot template stands here.
+~
+~
+0
+3
+S
+1 8 8 0
+#97
+blank mob~
+a Blank Mob~
+A Blank mob stands here, waiting to be created
+~
+~
+0
+3
+S
+1 8 8 0
+#100
+pitbull dog~
+A Pitbull~
+A very, very angry looking pitbull is standing here. 
+~
+~
+0
+16777217
+Z
+10 8 8 1
+25 10 20 10 25 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+> rand_prog 80~
+growl
+~
+|
+#200
+marine guard~
+A Marine~
+A Hulking Marine stands here, securing the compound.
+~
+&wThis &RU&WS&BC&RM&WC&w MP looks like a regular GI, tall and strong. He is
+wearing city camo BDUs, shiny black combat boots, a M10 helmet, and M3
+body armor. On the right arm of his BDU shirt, there is an MP band to show
+that he is military police. He is wielding a M41A pulse rifle like he will
+use it, and you can count on it!
+~
+0
+3
+Z
+50 8 8 1
+20 15 15 10 20 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#300
+High Mob~
+a newly created High Mob~
+Some god abandoned a newly created High Mob here.
+~
+~
+0
+1
+S
+1 8 8 0
+#0
+
+
+#OBJECTS
+#9
+corpse remains pieces parts~
+The Broken parts of %s~
+The Shattered remains of %s of here.~
+~
+11
+0
+0
+0 0 0 0 0 0
+1 0 0
+#10
+corpse~
+The corpse of %s~
+The corpse of %s lies here.~
+~
+11
+0
+0
+0 0 0 0 0 0
+1 0 0
+#11
+backpack~
+%s's Backpack~
+%s's Backpack is lying in a pool of blood. ~
+~
+12
+0
+0
+0 0 0 0 0 0
+1 0 0
+#12
+Shiny Silver Waffle~
+&WS&wh&Wi&wn&Wy &wS&Wi&wl&Wv&we&Wr &wW&Wa&wf&Wf&wl&We~
+&WS&wh&Wi&wn&Wy &wS&Wi&wl&Wv&we&Wr &wW&Wa&wf&Wf&wl&We~
+~
+9
+49152
+16385
+0 0 0 0 0 0
+1 0 0
+#18
+bloodstain~
+the bloodstain~
+Blood stains the ground.~
+~
+14
+0
+0
+5 0 0 1 0 0
+1 0 0
+#19
+scraps~
+the scraps of %s~
+The scraps of %s lie here~
+~
+15
+0
+0
+0 0 0 0 0 0
+1 0 0
+#20
+miniature landmine mine~
+Miniature Landmine~
+A miniature landmine sits here, threateningly.~
+~
+33
+67108896
+16385
+100 200 0 0 0 0
+1 200 20
+#35
+immortal terminal~
+Immortal terminal~
+An Immortal Data Terminal sits here, humming slightly.~
+~
+4
+0
+0
+0 0 0 0 0 0
+1000 0 0
+#36
+message disk~
+a message disk~
+A message disk was left lying here.~
+~
+7
+0
+16385
+0 0 0 0 0 0
+1 12 1
+#40
+blank obj~
+a blank object~
+A Blank object lies here~
+~
+5
+40960
+8208
+0 0 0 0 0 0
+1 0 0
+#53
+godplate~
+Armored Plating~
+Ooooh Shit.~
+~
+3
+256
+9
+100000 100000 0 1 0 0
+1 0 0
+A
+13 100
+A
+14 100
+A
+15 100
+A
+12 100
+A
+11 100
+#70
+combispear combi-spear spear~
+Combi-Spear~
+A combi-spear was left lying here.~
+~
+2
+43008
+8193
+11 75 85 6 1 4
+3 300 2
+#80
+m41a pulse rifle~
+M41A Pulse Rifle~
+A M41A Pulse Rifle is lying here.~
+~
+2
+8886272
+8193
+3 2 2 4 15 4
+6 1200 10
+E
+m41a pulse rifle~
+The standard rifle of the USCMC fires explosive tip caseless rounds made
+from depleted uranium, allowing it to inflict massive damage. The M41A
+also supports a over-and-under pump-action grenade launcher attachment,
+for those more 'intense' conflicts. It supports single, 4-round burst, and
+fully automatic fire. Accepts any standard M309 ammunition clip. 
+~
+#81
+m309 clip~
+M309 Pulse rifle clip~
+A M309 Pulse rifle clip was left lying here~
+~
+17
+4128
+1
+2 30 99 2 0 0
+1 12 1
+#82
+m4a3 pistol~
+M4A3 Pistol~
+A Standard-issue M4A3 Pistol was left here.~
+~
+2
+4755456
+8193
+2 1 1 0 0 3
+3 250 2
+#83
+clip FMJ~
+FMJ Pistol Clip~
+A Standard FMJ Pistol Clip was left lying here.~
+~
+17
+32
+1
+2 50 12 1 0 0
+1 10 1
+#84
+clip ap armor piercing armor-piercing~
+AP Pistol Clip~
+A Armor-Piercing pistol clip was left lying here.~
+~
+17
+32
+1
+3 70 12 1 0 0
+1 25 2
+#85
+clip devastator~
+Devastor Pistol Clip~
+A Devastor pistol clip was left lying here.~
+~
+17
+32
+1
+0 80 12 1 0 0
+1 50 5
+#86
+jacket leather uscm~
+USCM Leather Jacket~
+Somebody left a USCM Leather Jacket lying on the ground. ~
+~
+3
+36896
+9
+200 200 0 1 0 0
+2 200 20
+A
+15 5
+A
+11 10
+A
+14 5
+#95
+Standard Issue USCM Backpack~
+Standard-Issue USCM Backpack~
+A Standard Issue USCM Backpack lays here, abandoned.~
+~
+6
+0
+1025
+30 0 0 10 20 0
+1 0 0
+A
+14 20
+#96
+cloaking device~
+Cloaking Device~
+A Cloaking Device is lying here.~
+~
+22 4
+40960
+257
+0 0 0 0 0 0
+4 1000 100
+#97
+energy grenade~
+Energy Grenade~
+Some moron left an Energy Grenade sitting here.~
+~
+18
+8224
+16385
+120 150 1 1 0 3
+2 50 10
+#98
+scatter gun~
+Scatter Gun~
+Some moron left a Scatter Gun lying on the ground.~
+~
+2
+8759328
+8193
+12 2 2 10 25 5
+8 800 80
+#99
+energy pistol~
+Energy Pistol~
+Some moron left an Energy Pistol lying here.~
+~
+2
+8953888
+8193
+12 2 1 3 70 3
+4 500 50
+#100
+Desert Eagle deagle pistol .50 50 caliber~
+a Desert Eagle .50 caliber~
+A Desert Eagle .50 caliber sits here, evil as hell.~
+~
+2
+0
+8193
+2 8 1 1 0 3
+1 0 0
+A
+5 2
+#101
+a Colt M4A1 Maverick Carbine Assault Rifle~
+a Colt M4A1 'Maverick' Carbine~
+A Colt M4A1 assault rifle is laying here.~
+~
+2
+198656
+8193
+5 10 3 10 20 5
+1 0 0
+#105
+caliber clip~
+a 50 caliber clip~
+A 50 caliber clip is sitting here.~
+~
+17
+0
+1
+2 75 7 8 0 0
+1 0 0
+#106
+automatic ammo clip~
+a 5.56 automatic ammo clip~
+A 5.56 automatic ammo clip sits here.~
+~
+17
+0
+1
+2 60 30 10 0 0
+1 0 0
+#110
+black gas mask~
+a black gas mask~
+A black gas mask sits here.~
+~
+3
+0
+17
+0 0 0 0 0 0
+1 0 0
+A
+15 10
+A
+2 5
+A
+3 5
+A
+9 -200
+#120
+speargun compact spear gun~
+Compact Speargun~
+Some foolish Predator left a Compact Speargun lying here. ~
+~
+2
+567328
+8193
+13 12 4 0 0 5
+5 600 60
+#121
+spear cartridge~
+Spear cartridge~
+Some foolish Predator left a spear cartridge lying here.~
+~
+17
+8192
+1
+3 150 12 12 0 0
+1 50 5
+#122
+burner shotgun~
+Burner Shotgun~
+Some idiot predator left a Burner lying here.~
+~
+2
+239648
+8193
+13 13 1 2 4 4
+1 450 45
+#123
+burner clip~
+Burner Clip~
+Some idiot predator left a burner clip lying around.~
+~
+17
+8224
+1
+1 50 12 13 0 0
+1 30 3
+#124
+light sphere~
+Light Sphere~
+Some idiot left a light sphere sitting here.~
+~
+1
+40992
+16385
+0 0 6 0 6 0
+1 60 6
+#125
+harpoon gun~
+Harpoon Gun~
+Some foolish Predator left a Harpoon Gun lying here.~
+~
+2
+34121760
+8193
+13 14 3 0 0 5
+6 500 50
+#126
+harpoon clip~
+Harpoon Clip~
+Some foolish Predator left a harpoon clip lying here.~
+~
+17
+8192
+1
+3 220 6 14 0 0
+1 40 4
+#127
+side blade sideblade~
+Side Blade~
+A predator side blade was left lying here.~
+~
+2
+40960
+8193
+10 30 45 3 3 3
+2 40 4
+#128
+naginata~
+Naginata~
+Some stupid predator left a Naginata lying here.~
+~
+2
+43008
+8193
+11 110 140 8 3 4
+3 500 10
+#130
+predator hunter mask~
+Hunter Mask~
+Some predator carelessly left his mask here.~
+~
+3
+67149824
+17
+100 100 0 1 0 0
+1 1000 100
+A
+6 1
+#150
+m40 hand grenade~
+M40 Hand Grenade~
+Some moron left a M40 Hand Grenade sitting here~
+~
+18
+4128
+16385
+200 300 1 0 0 3
+2 50 5
+#160
+pancor jackhammer shotgun~
+Pancor 'Jackhammer' Shotgun~
+A drum clip for a Pancor 'Jackhammer' was left lying here.~
+~
+2
+8886304
+8193
+4 16 1 2 3 3
+9 3500 350
+#161
+pancor ammo drum~
+Pancor Ammo Drum~
+A Pancor Ammunition Drum is lying on the ground here. ~
+~
+17
+4128
+1
+3 160 10 16 0 0
+1 45 4
+#162
+m90 m-90 minigun~
+M90 Minigun~
+Somebody left a M90 Minigun lying here. ~
+~
+2
+184784928
+8193
+5 17 3 100 300 6
+20 5000 400
+#163
+M90 ammunition drum~
+M90 Ammunition Drum~
+Somebody left an ammunition drum for an M90 Minigun here. ~
+~
+17
+4128
+1
+2 20 900 17 0 0
+3 150 15
+#180
+energy sift~
+Energy Sift~
+An energy sift was carelessly left lying on the ground.~
+~
+44
+40960
+16385
+6 6 50 3 0 0
+8 750 75
+#181
+m94 flare~
+M94 Flare~
+A fairly large M94 Marine Flare is lying here, burning.~
+~
+45
+0
+16385
+6 6 0 0 0 0
+1 10 1
+#182
+hand grenade~
+Hand Grenade~
+Some idiot predator left a hand grenade lying here.~
+~
+18
+8224
+16385
+250 300 1 0 0 3
+2 50 5
+#183
+motion decoy~
+Motion Decoy~
+Some predator left an extremely irritating motion beacon here. ~
+~
+36
+67108868
+0
+2 2 10 0 0 0
+1 0 0
+#200
+grenade belt~
+M40 Grenade Belt~
+Some idiot marine left a grenade belt lying here.~
+~
+32 2
+36896
+2049
+8 8 675 1 0 0
+8 800 80
+#201
+ammo pouch m309~
+M309 Ammo Pouch~
+Some idiot marine left a m309 ammo pouch lying here.~
+~
+32 4
+36896
+2049
+5 5 81 0 0 0
+5 100 10
+#202
+M4A3 Ammo Pouch~
+M4A3 Ammo Pouch~
+Some idiot marine left a m4a3 ammo pouch lying here.~
+~
+32 4
+36896
+2049
+6 6 84 0 0 0
+6 150 15
+#203
+survival pouch~
+Survival Pouch~
+Some idiot marine left a survival pouch lying here.~
+~
+32 4
+36896
+2049
+12 12 664 0 0 0
+6 250 25
+#204
+demolition belt~
+Demolition Belt~
+Some idiot marine left a belt full of explosives here.~
+~
+32 2
+36896
+2049
+5 5 254 1 0 0
+5 1000 100
+#205
+slugshot belt~
+Slugshot Ammo Belt~
+Some idiot marine left a belt full of slugshot lying here.~
+~
+32 2
+36896
+2049
+5 5 686 0 0 0
+5 400 40
+#206
+medical pouch~
+Medical Pouch~
+Some idiot marine left a medical pouch lying here.~
+~
+32 4
+36896
+2049
+6 6 698 1 0 0
+6 200 20
+#207
+flare pouch~
+Flare Pouch~
+Some idiot marine left a flare pouch lying here.~
+~
+32 4
+36896
+2049
+12 12 181 1 0 0
+6 200 20
+#208
+30mm ammo canister~
+30mm Ammo Canister~
+Some idiot marine left a canister full of 30mm grenades lying here.~
+~
+32
+36896
+1
+6 6 703 0 0 0
+6 750 75
+#210
+ua 571-c remote automated sentry system gun~
+UA 571-C Sentry System~
+A UA 571-C Remote Automated Sentry System is setup here. ~
+~
+47
+4096
+1
+210 50 3 75 75 50
+12 8000 800
+#211
+heavy ammunition drum~
+571-C Heavy Ammunition Drum~
+A Heavy Ammunition Drum for the 571-C Sentry System is lying here. ~
+~
+17
+4096
+1
+2 8 500 210 0 0
+1 500 50
+#220
+M79 frag grenade drum~
+M79 FRAG Grenade Drum~
+Some idiot marine left an M79 FRAG Grenade Drum lying here.~
+~
+17
+4128
+1
+5 230 6 19 0 0
+1 100 10
+#221
+m79 emp grenade drum~
+M79 EMP Grenade Drum~
+Some idiot marine left an M79 EMP Grenade Drum lying here.~
+~
+17
+4128
+1
+5 231 6 19 0 0
+1 200 20
+#230
+FRAG Grenade~
+A Frag Grenade~
+A Frag Grenade fired from an M79 Grenade Launcher is lying here.~
+~
+18
+4128
+16385
+150 200 2 3 0 5
+2 25 2
+#231
+emp grenade~
+An EMP Grenade~
+An EMP Grenade fired from an M79 Grenade Launcher is lying here.~
+~
+18
+4128
+16385
+100 150 1 1 0 5
+2 25 2
+#250
+metal dumpster large~
+Large Metal Dumpster~
+A large metal dumpster sits against the wall.~
+~
+25
+0
+0
+10 2 5 500 500 0
+1 0 0
+#251
+propane tank~
+Propane Tank~
+A large metal tank rests up against the far wall. ~
+~
+25
+0
+0
+5 2 1 75 75 1
+10 0 0
+#252
+trophy belt~
+Trophy Belt~
+Some idiot predator left a prized trophy belt here~
+~
+6
+40992
+2049
+12 0 0 10 3 0
+1 200 20
+#253
+hunting pack~
+Hunting Pack~
+Some stupid predator left a vaulable hunting pack lying here.~
+~
+6
+40992
+1025
+50 0 0 10 25 0
+1 400 40
+#254
+semtex c4 explosive~
+SEMTEX C4 Explosive~
+Somebody left a brick of SEMTEX C4 lying here.~
+~
+27
+4128
+16385
+400 600 2 0 0 45
+1 150 15
+#260
+nuclear tactical weapon nuke~
+Tactical Nuclear Weapon~
+A Tactical Nuclear Weapon rests here, threateningly.~
+~
+18
+67108866
+16385
+1000 2000 4 0 0 60
+10 10000 1000
+#261
+cpd-10 flux pack~
+CPD-10 Flux Pack~
+A CPD-10 flux pack system is lying on the ground here.~
+~
+34
+4128
+16385
+4 262 50 0 0 0
+1 400 40
+#262
+charged partical device portable weapon CPD-10~
+CPD-10 Portable Weapon~
+Some idiot marine left a CPD-10 Portable Weapon lying here.~
+~
+2
+4429856
+8193
+3 50 4 10 30 4
+6 2000 200
+E
+charged partical device portable weapon CPD-10~
+The CPD-10 is a Charged Partical Weapon for use against Predators. You can
+purchase an Infrared Scope upgrade, which when used in combination with
+the CPD-10's energy-damage can short out Predator cloaking devices,
+rendering them visible to your teammates. 
+~
+#263
+CPD-10 Battery Pack~
+CPD-10 Battery Pack~
+A CPD-10 Battery Pack has been left lying here.~
+~
+17
+4128
+1
+1 5 300 50 0 0
+1 100 10
+#264
+CPD-10 infrared scope~
+CPD-10 Infrared Scope~
+An infrared scope for a CPD-10 portable weapon is lying here. ~
+~
+34
+4128
+16385
+6 262 0 1 0 0
+1 600 60
+#265
+energy ki'cti'pa~
+Energy Ki'cti'pa~
+Vaar apparently dropped one of his Energy Ki'ctipa's here.~
+~
+2
+67149824
+8193
+10 50 70 4 1 3
+3 1000 100
+#270
+camera console~
+a camera console~
+A camera console is here.~
+~
+5
+1048576
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+mpechoat $n &w&CYou glance at the camera console. 
+mptransfer $n 2
+mpat 2 mpforce $n glance 
+mpat 2 mptransfer $n 100 
+~
+> useoff_prog 100~
+mpechoat $n &w&CYou glance at the camera console. 
+mptransfer $n 2
+mpat 2 mpforce $n glance 
+mpat 2 mptransfer $n 100 
+~
+|
+#271
+bypass console~
+a bypass console~
+A bypass console is here.~
+~
+5
+1052672
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+if variable(SecurityBypass) == 0
+mea $n You call up the administration controls on the console.
+mer $n $n carefully accesses the security console.
+mpset SecurityBypass 1
+mpecho &w&G[Notice]: Security System has been bypassed.
+else
+mea $n You call up the administration controls on the console.
+mer $n $n carefully accesses the security console.
+mpset SecurityBypass 0
+mpecho &w&R[Warning]: Security System has been reactivated.
+endif
+~
+> useoff_prog 100~
+if variable(SecurityBypass) == 0
+mea $n You call up the administration controls on the console.
+mer $n $n carefully accesses the security console.
+mpset SecurityBypass 1 
+mpecho &w&G[Notice]: Security System has been bypassed.
+else
+mea $n You call up the administration controls on the console.
+mer $n $n carefully accesses the security console.
+mpset SecurityBypass 0 
+mpecho &w&R[Warning]: Security System has been reactivated.
+endif
+~
+|
+#280
+gift candy cane~
+&wA &Rc&wa&Rn&wd&Ry &wc&Ra&wn&Re~
+Some twit left a perfectly good candy cane lying here. ~
+~
+10
+67108864
+1
+50 50 0 0 0 0
+1 0 0
+#281
+resin pool~
+Resin Pool~
+An Alien Resin pool is here, churning away.~
+~
+46
+16384
+0
+250 500 0 3 0 2
+100 0 0
+#282
+regeneration pool~
+Regeneration Pool~
+An Alien Regeneration pool is here, churning away.~
+~
+46
+16384
+0
+250 500 10 0 0 10
+100 0 0
+#283
+Acid Burst~
+an acid burst trap~
+An Alien has constructed an Acid Burst here.~
+~
+40
+268447744
+0
+7 4 100 0 0 3
+1 0 0
+#284
+shock web~
+a shock web trap~
+An Alien has constructed a Shock Web here.~
+~
+40
+268447744
+0
+7 1 100 0 0 3
+1 0 0
+#290
+compound crossbow~
+Compound Crossbow~
+A very medieval looking compound crossbow is lying on the ground here.~
+~
+2
+4757536
+8193
+3 25 4 0 0 4
+6 1000 100
+#291
+crossbow bolts~
+Crossbow Bolts~
+A case of crossbow bolts have been left lying here.~
+~
+17
+32
+1
+3 150 5 25 0 0
+1 25 2
+#292
+fn p90 tactical~
+FN P90 Tactical~
+A P90 Tactical Submachine Gun was left lying here.~
+~
+2
+75732992
+8193
+5 25 3 25 50 3
+6 1000 100
+#293
+p90 5.7mm clip~
+5.7mm P90 Clip~
+Some idiot left a 5.7mm clip for a FN P90 Tactical lying here.~
+~
+17
+0
+1
+3 8 50 25 0 0
+1 100 10
+#294
+entanglement~
+Entanglement Trap~
+A massive wall of resin impeds progress.~
+~
+40
+268447744
+0
+6 0 0 0 0 0
+1 0 0
+#295
+alien lure~
+An Alien Lure~
+An Alien Lure trap is here, swaying slightly to distract marines.~
+~
+36
+268435456
+0
+3 3 0 0 0 0
+1 0 0
+#296
+acid trap~
+Acid Trap~
+An Alien has constructed a creepy Acid Trap here.~
+~
+40
+268439552
+0
+3 15 0 0 0 1
+1 0 0
+#297
+alien cubby~
+Alien Cubby~
+A Shadowy Alien Cubby sits in the wall, waiting for some unsuspecting marine. ~
+~
+40
+268447744
+0
+5 50 1 0 0 3
+1 0 0
+#298
+alien ambush~
+Alien Ambush~
+Several Alien Heads stick slightly out of the shadows, in ambush.~
+~
+40
+335556608
+0
+5 50 4 0 0 1
+1 0 0
+#299
+alien tunnel~
+Alien Tunnel~
+A massive shadowy alien tunnel is here, releasing the little hellspawns.~
+~
+41
+0
+0
+30 30 50 1 100 0
+1 0 0
+#300
+High object~
+a High object~
+A High object is here.~
+~
+6
+0
+0
+0 0 0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#1
+Limbo~
+You are floating in nothing.
+~
+~
+0
+0
+0 0
+S
+#2
+Limbo~
+You float in a formless void, detached from all sensation of physical
+matter, surrounded by swirling glowing light which fades into the
+relative darkness around you without any trace of edge or shadow.
+ 
+&w&RType DEPLOY to exit Limbo.
+~
+~
+1006635016
+1
+0 0
+D4
+~
+~
+838860800
+13131 100
+> rand_prog 100~
+mpforce $r deploy
+~
+|
+S
+#3
+Storage~
+This room is reserved for storage of polymorphed players.
+~
+~
+0
+0
+0 0
+S
+#4
+Storage~
+This room is reserved for future use.
+~
+~
+0
+0
+0 0
+S
+#5
+Bot Storage (Bots sit here while respawning)~
+~
+~
+1140850696
+0
+0 1
+S
+#6
+&RH&re&Rl&rl&W~
+&RFlames lick at your feet...causing eternal pain! You can't stand here
+forever...but you know you may very well be damned here for all eternity!
+You hear the cries of lost souls, screaming out their agony... trying to
+repent for whatever sorry sin they committed. &rThis truly is the pit of
+evil.
+~
+~
+9
+0
+0 0
+D2
+~
+~
+369098752
+-1 102
+> act_prog p has lost her link.~
+mpforce $n quit
+~
+> act_prog p has lost his link.~
+mpforce $n quit
+~
+|
+S
+#7
+Immortal Prison Sector A~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+301989888
+-1 8
+D1
+~
+~
+301989888
+-1 11
+D2
+~
+~
+301989888
+-1 12
+D3
+~
+~
+301989888
+-1 9
+D4
+~
+~
+134217729
+0 116
+D5
+~
+~
+301989888
+-1 13
+S
+#8
+Immortal Prison Cell #1~
+Welcome to the Immortal Prison Sector. Guarded by a very irritable marine,
+your odds of escaping are nearly zilch. The wall are made of a translucent
+material that zaps the shit out of you when you touch it. Interesting
+enough, so are the bars on the door. Yeah - Your screwed. 
+~
+~
+67176456
+0
+0 1
+D2
+~
+~
+301989888
+-1 7
+S
+#9
+Immortal Prison Cell #4~
+Welcome to the Immortal Prison Sector. Guarded by a very irritable marine,
+your odds of escaping are nearly zilch. The wall are made of a translucent
+material that zaps the shit out of you when you touch it. Interesting
+enough, so are the bars on the door. Yeah - Your screwed. 
+~
+~
+67174408
+0
+0 1
+D1
+~
+~
+301989888
+-1 7
+S
+#10
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#11
+Immortal Prison Cell #2~
+Welcome to the Immortal Prison Sector. Guarded by a very irritable marine,
+your odds of escaping are nearly zilch. The wall are made of a translucent
+material that zaps the shit out of you when you touch it. Interesting
+enough, so are the bars on the door. Yeah - Your screwed. 
+~
+~
+67174408
+0
+0 1
+D3
+~
+~
+301989888
+-1 7
+S
+#12
+Immortal Prison Cell #3~
+Welcome to the Immortal Prison Sector. Guarded by a very irritable marine,
+your odds of escaping are nearly zilch. The wall are made of a translucent
+material that zaps the shit out of you when you touch it. Interesting
+enough, so are the bars on the door. Yeah - Your screwed. 
+~
+~
+67174408
+0
+0 1
+D0
+~
+~
+301989888
+-1 7
+S
+#13
+Immortal Prison Cell #5~
+Welcome to the Immortal Prison Sector. Guarded by a very irritable marine,
+your odds of escaping are nearly zilch. The wall are made of a translucent
+material that zaps the shit out of you when you touch it. Interesting
+enough, so are the bars on the door. Yeah - Your screwed. 
+~
+~
+67174408
+0
+0 1
+D4
+~
+~
+301989888
+-1 7
+S
+#20
+Immortal Prison~
+~
+~
+8
+0
+0 1
+D0
+~
+~
+33554432
+-1 102
+S
+#45
+Limbo Shipyard~
+A wet grey mist hangs over this large yard of old an unused vessels.
+Ships of all types and sizes rest here empty and abandoned...
+~
+~
+32&65536
+0
+0 0
+D0
+~
+~
+4194304
+-1 100
+D1
+~
+~
+0
+-1 46
+S
+#46
+Limbo Blast Chamber~
+A massive storage yard of destroyed and lost items of past. Many items look
+new, only slightly scathed by the raging fires of the exploding ships.
+Most look old, to old to even be called old. 
+~
+~
+2097152&8208
+0
+0 1
+D3
+~
+~
+0
+-1 45
+> speech_prog p testing now~
+mpechoat $n Suddenly, th heavens part and a giant
+mpechoat $n thumb comes down and smushes you, but then hell opens
+mpechoat $n up and a rollercoaster sweeps you away!
+mptransfer $n 116
+mpat $n mpforce $n look
+~
+> rand_prog 100~
+mpecho &w&CYou hear clicking sounds nearby. 
+~
+|
+S
+#50
+Vent Template - Do not touch!~
+This vent is metallic in nature, its walls built of riveted metal sheets
+that are common in a billion different installations, bunkers, and
+spacecraft throughout the galaxy. Scratches and other marks of rather
+mundane origin abound on the supposedly unscratchable surface of the
+ventilation duct. Its extremely dark in here. 
+~
+~
+9
+0
+0 1
+S
+#51
+Floating in a void~
+~
+~
+65536
+0
+0 1
+S
+#65
+Floating in a void~
+~
+~
+65536
+0
+0 1
+S
+#100
+Immortal Command~
+This is a massive room centering around a totally lifelike model of the
+galaxy... it looks like if you got close enough you could see sentients
+living their lives out on every planet. This room's 'walls,' if they could
+be called that, are totally black, but the room seems to be circular, and
+you can see distant galaxies... 
+~
+~
+58722312&2368
+0
+0 1
+D0
+A massive archway leads into another antechamber that you can barely see...
+~
+~
+0
+-1 116
+D2
+~
+~
+138412039
+-1 45
+D3
+~
+~
+0
+-1 102
+D5
+~
+~
+301989888
+13131 2
+S
+#101
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#102
+&RFight Club&W~
+~
+~
+67110920&131072
+0
+0 1
+D0
+~
+~
+369098752
+-1 6
+D1
+~
+~
+0
+-1 100
+D2
+~
+~
+33554432
+-1 20
+S
+#115
+&RThe Burning Hells&W~
+~
+~
+100663304&2432
+0
+0 1
+D1
+~
+~
+0
+-1 116
+S
+#116
+Administrative Quarters~
+~
+~
+0
+0
+0 1
+D0
+~
+~
+134217735&1
+13131 118
+D1
+~
+~
+0
+-1 117
+D2
+~
+~
+0
+-1 100
+D3
+~
+~
+0
+-1 115
+S
+#117
+Immortal Conference Room~
+~
+~
+67108872&384
+0
+0 1
+D3
+~
+~
+0
+-1 116
+S
+#118
+&CGhost's Chambers&W~
+~
+~
+268296&2436
+0
+0 1
+D2
+~
+~
+134217735&1
+13131 116
+D5
+~
+~
+2048
+-1 120
+S
+#120
+&w&RGhost's Dungeon of Deception~
+~
+~
+2056
+0
+0 1
+D4
+~
+~
+301989888
+-1 118
+S
+#162
+Floating in a void~
+~
+~
+65536
+0
+0 1
+S
+#232
+Floating in a void~
+~
+~
+65536
+0
+0 1
+S
+#236
+Floating in a void~
+~
+~
+65536
+0
+0 1
+S
+#288
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+S
+#300
+Limbo Highroom~
+~
+~
+0
+0
+0 1
+S
+#0
+
+
+#RESETS
+M 1 3 1 3
+D 0 118 2 2
+O 1 35 1 100
+O 1 251 1 100
+D 0 100 2 2
+M 1 53 1 120
+E 1 53 1 5
+E 1 96 1 10
+E 1 97 1 17
+G 1 97 1
+G 1 121 1
+E 1 120 1 16
+G 1 97 1
+G 1 121 1
+G 1 121 1
+M 1 200 1 7
+E 1 684 1 16
+E 1 667 1 5
+E 1 666 1 6
+E 1 668 1 8
+G 1 686 1
+G 1 686 1
+G 1 686 1
+O 1 250 1 116
+D 0 116 0 2
+D 0 116 5 2
+S
+
+
+#SHOPS
+1; Puff
+0
+
+
+#SPECIALS
+M  50 spec_enemy_scan
+M  52 spec_enemy_scan
+M  53 spec_enemy_scan
+M  53 spec_enemy_grenade
+M  97 spec_enemy_scan
+M  97 spec_enemy_grenade
+M  100 spec_enemy_scan
+M  200 spec_enemy_scan
+S
+
+
+#$

@@ -1,0 +1,36 @@
+#AREA   {PROTO} Nield's area in progress~
+
+#VERSION 4
+
+#AUTHOR Nield~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#0
+
+
+#OBJECTS
+#0
+
+
+#ROOMS
+#0
+
+
+#RESETS
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+S
+
+
+#$

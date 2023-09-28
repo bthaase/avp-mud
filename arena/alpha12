@@ -1,0 +1,23 @@
+#ARENA
+Name         Marine Research Center Alpha 12~
+Desc         Marines must locate the three reactor room control consoles necessary to
+unlock the Reactor Control Room. After that, they must enter the control
+room and use the airlock to reach the inner core - And then arm the
+Tactical Nuclear Weapon.
+ 
+Predators and Aliens both are after the queen, however Predators want to
+kill the queen and Aliens want to rescue her. Either way, the Mainframe
+must be destroyed to unlock the containment chamber, and the security
+bypass used to unlock the outer doors.
+~
+Filename     alpha12~
+Firstroom    1972
+Lastroom     2172
+Timer        40
+Maxsupport   0 5
+Maxsupport   1 5
+Minp         10
+Maxp         30
+End
+
+#END

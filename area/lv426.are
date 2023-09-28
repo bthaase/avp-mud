@@ -1,0 +1,2678 @@
+#AREA   LV-426~
+
+#VERSION 4
+
+#AUTHOR Vaeral~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#1829
+Sniper guard~
+a Sniper Guardsman~
+A tall guard gazes out the window here
+~
+~
+0
+3
+Z
+1 8 8 1
+15 10 10 10 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#1872
+Old man~
+An old man~
+An old man gazes out the windows, with a troubled look upon his face
+~
+~
+0
+268435459
+Z
+1 8 8 1
+15 10 10 10 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#1884
+Dlein~
+Dlein the Bartender~
+A Cantonese Bartender is here, cooking something upon a grill.
+~
+~
+0
+3
+S
+1 8 8 0
+#1892
+girl newt~
+Newt~
+A young girl with a name-tag showing the name "Newt" cringes here
+~
+~
+0
+268435459
+Z
+1 8 8 2
+15 10 15 15 10 10
+0 0 0 0
+0
+0
+0 0 0 0 0 0 0
+#0
+
+
+#OBJECTS
+#1825
+Fragment of the Wing~
+a Fragment of the Wing~
+A Fragment of the Wing is here.~
+~
+25
+0
+0
+0 0 0 0 0 0
+1 0 0
+#1871
+Badly damaged Truck~
+A Truck~
+A Badly damaged Truck is here.~
+~
+25
+0
+0
+0 0 0 0 0 0
+1000 0 0
+#1872
+large broadsword antique~
+Large Antique Broadsword~
+A Large Antique Broadsword is mounted on the wall.~
+~
+2
+6144
+8193
+1 60 80 4 2 4
+15 400 40
+#1916
+large Cheyenne class Starship~
+a large Cheyenne class Starship~
+A large Cheyenne class Starship is here.~
+~
+5
+0
+0
+0 0 0 0 0 0
+1000 0 0
+#1917
+power breaker~
+Power Breaker~
+A power breaker box is mounted on the wall here.~
+~
+4
+1048576
+0
+0 0 0 0 0 0
+1 0 0
+> useon_prog 100~
+mpechoat $n You throw the break to the ON position. 
+mpechoaround $n $n throws the breaker to the ON position.
+mprat 1888 1915 mprmflag -1 1 dark
+mprat 1888 1915 mpecho &YThe overhead lights flare to life. 
+~
+> useoff_prog 100~
+mpechoat $n You throw the break to the OFF position. 
+mpechoaround $n $n throws the breaker to the OFF position.
+mprat 1888 1915 mprmflag -1 0 dark
+mprat 1888 1915 mpecho &zThe room suddenly goes dark.
+~
+|
+#0
+
+
+#ROOMS
+#1822
+&WNear the remains of a crashed Cheyenne&w~
+&cThe &CUSCM&c Starship Cheyenne lays in several pieces, here. Its hull
+appears to be completely destroyed, resulting in a painful death for the
+pilots. The Cheyenne seems to have smashed a large section of the &GLV-426
+C&golony's&c protective fencing upon impact. This appears to have opened a
+fairly accessible entrance to the Colony's main base.
+~
+~
+50331648
+0
+0 1
+D1
+~
+~
+0
+-1 1823
+S
+#1823
+&WA small Clearing&w~
+&cA large escape shuttle has landed here, and although damaged slightly on
+impact the passenger section of it seems to have served its purpose well.
+There are several small tracks which appear to have been made by the soles
+of a human boot, aswell as crates which appear to contain ammo and other
+military weaponry.  
+~
+~
+301989888
+0
+0 1
+D0
+~
+~
+0
+-1 1824
+D2
+~
+~
+0
+-1 1825
+D3
+~
+~
+0
+-1 1822
+S
+#1824
+&WA large opening in the Fence&D~
+&cA large section of the fence has been smashed by the crashing of the
+&CUSCM&c spaceship Cheyenne. The fence normally was meant to keep any
+unknown intruders out, as a slight defense against a horror that an
+officer of the company reported, however unrealistic it was. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1853
+D1
+~
+~
+0
+-1 1852
+D2
+~
+~
+0
+-1 1823
+D3
+~
+~
+0
+-1 1851
+S
+#1825
+&WAn open Clearing~
+&cSoutheast of the Cheyenne crashsite there are still obvious parts of the
+ship. A large fragment of the wing is smashed deep into the ground, while
+nearby a section of the passenger seating is visible. This section of the
+seating almost appears to be a skeleton of its former self.  
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1823
+D3
+~
+~
+0
+-1 1826
+S
+#1826
+&WA path to the south of the Cheyenne&D~
+&cA path seems to be visible a little to the south of the Cheyenne. This
+path goes further south, into what then appears a turn. A Large section of
+the Cheyenne cargo bay, can be seen along the eastern side of the path,
+and it is quite obvious that anything remaining side, will stay there, for
+a long, long, time.
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 1825
+D2
+~
+~
+0
+-1 1827
+S
+#1827
+&WA small path~
+&cA large pathway extends around the outside of the fencing, which was
+probably used mainly for patroling the borders of the colony. The brush at
+the sides of the clearing show signs of being pushed aside, as if someone
+recently traveled this very path. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1826
+D3
+~
+~
+0
+-1 1828
+S
+#1828
+The Entrance to a Control Tower~
+&cThis large tower is one of the primary defensive points of the colony, as
+it allows the Marine guards to watch for movement and fire upon them with
+very little chance of a counter attack. Although the entrance is open to
+the east and north, a trapdoor is the only entrance to the upper level. 
+~
+&gThe tower appears to be a disgusting mirror of its former self, as now
+large bulbous fleshlike materials hang from the upper floor and along the
+outside walls. A small pool of &RB&rlood&g has formed near the ladder that
+leads to the trapdoor above. 
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 1830
+D1
+~
+~
+0
+-1 1827
+D4
+~
+~
+3
+-1 1829
+S
+#1829
+The Control Tower~
+&cThis large tower has been built with only defense in mind. The windows
+face the only two possible directions of approach and can only be fired
+from if the shooter is located inside the tower. Two large computer
+screens line the western wall, showing  a grid arround this tower so that
+any movement can be tracked.
+~
+&gLarge bulbous materials coat the inside of this room, ruining several of
+the normal defensive functions of the tower itself. A young marines body
+lies near the trapdoor, his throat ripped open.  Surely whatever has
+caused this cannot be far.
+~
+8
+0
+0 1
+D0
+~
+~
+301989888
+-1 1830
+D1
+~
+~
+301989888
+-1 1827
+D5
+~
+~
+3
+-1 1828
+S
+#1830
+To the east of the Cheyenne Crashsite~
+&cA large section of the piloting control-board is smashed against the
+ground here, making it obvious that the removal of the Cheyenne's damage,
+is going to take a lot of time. Still quite visible is the wreckage of the
+starship itself, where it smashed into the fencing of the Colony.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1831
+D2
+~
+~
+0
+-1 1828
+S
+#1831
+A small path~
+&cA large pathway extends around the outside of the fencing, which was
+probably used mainly for patroling the borders of the colony. The brush at
+the sides of the clearing show signs of being pushed aside, as if someone
+recently traveled this very path.  
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1832
+D2
+~
+~
+0
+-1 1830
+D3
+~
+~
+0
+-1 1835
+S
+#1832
+A small path~
+&cA large pathway extends around the outside of the fencing, which was
+probably used mainly for patroling the borders of the colony. The brush at
+the sides of the clearing show signs of being pushed aside, as if someone
+recently traveled this very path.  
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 1833
+D2
+~
+~
+0
+-1 1831
+D3
+~
+~
+0
+-1 1834
+S
+#1833
+A clearing north of the Cheyenne~
+&cNear where the fence meets the shredded Cheyenne starship is a small
+clearing with a small, now destroyed generator. The generator was meant to
+be used as a spare in case of an emergency within the Colony itself. 
+~
+~
+33554432
+0
+0 1
+D3
+~
+~
+0
+-1 1832
+S
+#1834
+A small path~
+&cA large pathway extends around the outside of the fencing, which was
+probably used mainly for patroling the borders of the colony. The brush at
+the sides of the clearing show signs of being pushed aside, as if someone
+recently traveled this very path.  
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1836
+D1
+~
+~
+0
+-1 1832
+D2
+~
+~
+0
+-1 1835
+S
+#1835
+A small path~
+&cA large pathway extends around the outside of the fencing, which was
+probably used mainly for patroling the borders of the colony. The brush at
+the sides of the clearing show signs of being pushed aside, as if someone
+recently traveled this very path.  
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1834
+D1
+~
+~
+0
+-1 1831
+S
+#1836
+a small path~
+&cA large pathway extends around the outside of the fencing, which was
+probably used mainly for patroling the borders of the colony. The brush at
+the sides of the clearing show signs of being pushed aside, as if someone
+recently traveled this very path.  
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1837
+D2
+~
+~
+0
+-1 1834
+S
+#1837
+a small path~
+&cA large pathway extends around the outside of the fencing, which was
+probably used mainly for patroling the borders of the colony. The brush at
+the sides of the clearing show signs of being pushed aside, as if someone
+recently traveled this very path.  
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1838
+D2
+~
+~
+0
+-1 1836
+S
+#1838
+a Odd Clearing~
+&cThis clearing has been desecrated from the affects of gunfire, energy
+weaponry, and explosives. To the north is probably the reason of half the
+desecration, the remains of a Marine Guardtower. While to the east, it
+appears the creatures that destroyed the guardtower may have escaped
+through a hole melted into the fence itself.
+~
+~
+167772160
+0
+0 1
+D0
+~
+~
+0
+-1 1840
+D1
+~
+~
+0
+-1 1839
+D2
+~
+~
+0
+-1 1837
+S
+#1839
+A small hole in the Fence~
+&cThe fencing at this location has been melted inward with what one might
+assume is the affect of an energy weapon. The edges of the fence itself
+curve inward and end in strange stubs that normally are the result of an
+extreme heat.
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 1841
+D2
+~
+~
+0
+-1 1847
+D3
+~
+~
+0
+-1 1838
+S
+#1840
+A demolished Guardtower~
+&cThis guardtower, once a part of the Colony's defense, now is little more
+then rubble, after what appears to have been a battle that included use of
+energy weapons, and explosives. Whomever attacked the tower, was very
+serious. 
+~
+~
+33554432
+0
+0 1
+D2
+~
+~
+0
+-1 1838
+S
+#1841
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 1842
+D2
+~
+~
+0
+-1 1846
+D3
+~
+~
+0
+-1 1839
+S
+#1842
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 1843
+D2
+~
+~
+0
+-1 1845
+D3
+~
+~
+0
+-1 1841
+S
+#1843
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1860
+D1
+~
+~
+0
+-1 1855
+D2
+~
+~
+0
+-1 1844
+D3
+~
+~
+0
+-1 1842
+S
+#1844
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1843
+D1
+~
+~
+0
+-1 1853
+D2
+~
+~
+0
+-1 1851
+D3
+~
+~
+0
+-1 1845
+S
+#1845
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1842
+D1
+~
+~
+0
+-1 1844
+D2
+~
+~
+0
+-1 1850
+D3
+~
+~
+0
+-1 1846
+S
+#1846
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1841
+D1
+~
+~
+0
+-1 1845
+D2
+~
+~
+0
+-1 1849
+D3
+~
+~
+0
+-1 1847
+S
+#1847
+A section of the Fencing~
+&cPart of a large section of fencing, which circles the entire &CUSCM&c
+colony. Every five yards, a large spotlight shines light into the base,,
+with large speakers positioned overhead so as to alert the defensive
+forces of any future assaults. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1839
+D1
+~
+~
+0
+-1 1846
+D2
+~
+~
+0
+-1 1848
+S
+#1848
+A section of the Fencing~
+&cPart of a large section of fencing, which circles the entire &CUSCM&c
+colony. Every five yards, a large spotlight shines light into the base,,
+with large speakers positioned overhead so as to alert the defensive
+forces of any future  assaults. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1847
+D1
+~
+~
+0
+-1 1849
+S
+#1849
+A section of the Fencing~
+&cPart of a large section of fencing, which circles the entire &CUSCM&c
+colony. Every five yards, a large spotlight shines light into the base,,
+with large speakers positioned overhead so as to alert the defensive
+forces of any future assaults. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1846
+D1
+~
+~
+0
+-1 1850
+D3
+~
+~
+0
+-1 1848
+S
+#1850
+A section of the Fencing~
+&cPart of a large section of fencing, which circles the entire &CUSCM&c
+colony. Every five yards, a large spotlight shines light into the base,,
+with large speakers positioned overhead so as to alert the defensive
+forces of any future assaults. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1845
+D1
+~
+~
+0
+-1 1851
+D3
+~
+~
+0
+-1 1849
+S
+#1851
+A Smashed section of the Fencing~
+&cPart of a large section of fencing, which circles the entire USCM colony.
+Every five yards, a large spotlight shines light into the base.. with
+large speakers positioned overhead so as to alert the defensive forces of
+any future assaults.  But this section has been brutally smashed, as a
+large corner of the Cheyenne Starship has been bashed through it.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1844
+D1
+~
+~
+0
+-1 1824
+D3
+~
+~
+0
+-1 1850
+S
+#1852
+A section of the Fencing~
+&cPart of a large section of fencing, which circles the entire &CUSCM&c
+colony. Every five yards, a large spotlight shines light into the base,,
+with large speakers positioned overhead so as to alert the defensive
+forces of any future assaults. 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1856
+D3
+~
+~
+0
+-1 1824
+S
+#1853
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1855
+D1
+~
+~
+0
+-1 1856
+D2
+~
+~
+0
+-1 1824
+D3
+~
+~
+0
+-1 1844
+S
+#1854
+Floating in a void~
+~
+~
+1073741824
+0
+0 1
+D1
+~
+~
+0
+-1 1853
+S
+#1855
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1859
+D1
+~
+~
+0
+-1 1857
+D2
+~
+~
+0
+-1 1853
+D3
+~
+~
+0
+-1 1843
+S
+#1856
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1857
+D2
+~
+~
+0
+-1 1852
+D3
+~
+~
+0
+-1 1853
+S
+#1857
+A large Hangar Entrance~
+This is the entrance to the hanger bay, which is locked to the outside
+world, as the Colony was meant to use it only if in immediate danger. The
+Inner chambers havent been used in quite some time, and if the ship inside
+is still operational, it will be surprising.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1858
+D1
+~
+~
+1
+-1 1916
+D2
+~
+~
+0
+-1 1856
+D3
+~
+~
+0
+-1 1855
+S
+#1858
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1863
+D2
+~
+~
+0
+-1 1857
+D3
+~
+~
+0
+-1 1859
+S
+#1859
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1862
+D1
+~
+~
+0
+-1 1858
+D2
+~
+~
+0
+-1 1855
+D3
+~
+~
+0
+-1 1860
+S
+#1860
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1861
+D1
+~
+~
+0
+-1 1859
+D2
+~
+~
+0
+-1 1843
+S
+#1861
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1866
+D1
+~
+~
+0
+-1 1862
+D2
+~
+~
+0
+-1 1860
+S
+#1862
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1865
+D1
+~
+~
+0
+-1 1863
+D2
+~
+~
+0
+-1 1859
+D3
+~
+~
+0
+-1 1861
+S
+#1863
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1864
+D2
+~
+~
+0
+-1 1858
+D3
+~
+~
+0
+-1 1862
+S
+#1864
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1867
+D2
+~
+~
+0
+-1 1863
+D3
+~
+~
+0
+-1 1865
+S
+#1865
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+0
+-1 1864
+D2
+~
+~
+0
+-1 1862
+D3
+~
+~
+0
+-1 1866
+S
+#1866
+&WThe Entrance to the Command Center~
+&gThe outside of the command center is a ghastly sight, as it is obvious
+that aliens are upon this planet. The Entire door, has been torn
+completely off its henges, and the slashes in it are incredibly deep.
+Within the door itself is what appears to be Demolished Scientific
+equipment, which was most likely meant to 'study' the inhabitants of the
+planet.
+~
+~
+41943040
+0
+0 1
+D1
+~
+~
+0
+-1 1865
+D2
+~
+~
+0
+-1 1861
+D3
+~
+~
+0
+-1 1888
+S
+#1867
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1876
+D1
+~
+~
+0
+-1 1868
+D2
+~
+~
+0
+-1 1864
+S
+#1868
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1875
+D1
+~
+~
+0
+-1 1869
+D3
+~
+~
+0
+-1 1867
+S
+#1869
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1874
+D1
+~
+~
+0
+-1 1870
+D3
+~
+~
+0
+-1 1868
+S
+#1870
+&WA large Armored Garage Entrance&D~
+Outside a large garage, which can only be used to hold the militarys
+vehicles and mechanical assistance units. It more then likely has a guard
+stationed at it at all times, but then again, perhaps they do not expect
+any trouble, as life has been quiet for this colony, for such a long time.
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1873
+D1
+~
+~
+3
+-1 1871
+D3
+~
+~
+0
+-1 1869
+S
+#1871
+A large Garage~
+This garage holds what used to be state of the art mechanical assistance,
+and military vehicles. Used to be, that is...20 years ago. Now these
+vehicles have become rusty, and if they still work, it would be a miracle.
+~
+&gA hole has been rended through the eastern wall, destroying the security
+camera that watched these vehicles just in case something of this type may
+happen. It is most likely that any poor sap who thought to defend this
+place,  is now dead, because it has been completely hived, by those of the
+Alien Kind.
+~
+8
+0
+0 1
+D0
+~
+~
+0
+-1 1872
+D3
+~
+~
+3
+-1 1870
+S
+#1872
+the Back of the Garage~
+The back room of the Garage holds a small resting place for the old guard
+posted here, a cot in the corner, a bookshelf containing all playboy
+magazines, going back the last 30 years, and a coffee machine on his desk.
+A large sword scabbard seems to hang from over the cot, oddly now
+empty.
+~
+&gThe back room of the garage, consists of a destroyed Cot, which now holds
+a man cocooned securely, A Magazine rack of playboys, going back 30 years,
+covered in an acidic slime, which melted through every single photo, but
+left all the articles alone, and, A coffee machine which has been
+destroyed, in the most hideous of ways...The pot was broken.
+~
+8
+0
+0 1
+D2
+~
+~
+0
+-1 1871
+D3
+~
+~
+301989888
+-1 1873
+S
+#1873
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D1
+~
+~
+301989888
+-1 1872
+D2
+~
+~
+0
+-1 1870
+D3
+~
+~
+0
+-1 1874
+S
+#1874
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1882
+D1
+~
+~
+0
+-1 1873
+D2
+~
+~
+0
+-1 1869
+D3
+~
+~
+0
+-1 1875
+S
+#1875
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+301989888
+-1 1878
+D1
+~
+~
+0
+-1 1874
+D2
+~
+~
+0
+-1 1868
+D3
+~
+~
+0
+-1 1876
+S
+#1876
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+1
+-1 1877
+D1
+~
+~
+0
+-1 1875
+D2
+~
+~
+0
+-1 1867
+S
+#1877
+A Hallway~
+This hallway leads from the entrance to the guardtower, into the sniping
+area itself. Overhead, a large vent allows air to get in, so as to not
+suffocate the men defending the colony. 
+~
+This hallway is covered in large bulbous glands, which cover the walls, and
+hang from the ceiling. Every so often, a blob of acidic slime will drop
+from above, with a hiss. Sounds are heard further down the hallway, as if
+something quickly moved by it.
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 1878
+D2
+~
+~
+1
+-1 1876
+S
+#1878
+A small Guard-station~
+A Small guard station which allows the user to fire in several directions,
+and reload in what was assumed as very great defense. Boasting very few
+weaknesses. A Display pannel normally would allow the user to see anything
+coming, but sadly, its smashed.
+~
+&gOnce this used to be a well built guard tower, but somehow an alien made
+its way in and demolished everything of worth, and coated it in what can
+only be called...slime.  
+~
+-2147483640
+0
+0 1
+D0
+~
+~
+301989888
+-1 1880
+D1
+~
+~
+301989888
+-1 1882
+D2
+~
+~
+301989888
+-1 1875
+D3
+~
+~
+0
+-1 1877
+S
+#1879
+The USCM Cooling System~
+This chamber is what cools the entire colony down, as its vents reach
+through each and every building that was deemed as important. It has been
+taken care of quite well, most likely as the marines did not want to die
+of boredom, nor melt to death. 
+~
+&gThe vents themselves remain in working order, but the cooling system has
+been destroyed with use of a long, serrated object. The damage was not
+only to the cooling system thou, as there are also long slashes in the
+walls themselves, and acid has eaten holes through several sections of the
+floor. 
+~
+-2147483640
+0
+0 1
+D0
+~
+~
+0
+-1 1887
+S
+#1880
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+3
+-1 1885
+D1
+~
+~
+0
+-1 1881
+D2
+~
+~
+301989888
+-1 1878
+S
+#1881
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+33554432
+-1 1886
+D1
+~
+~
+0
+-1 1883
+D2
+~
+~
+0
+-1 1882
+D3
+~
+~
+0
+-1 1880
+S
+#1882
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D0
+~
+~
+0
+-1 1881
+D1
+~
+~
+33554432
+-1 1884
+D2
+~
+~
+0
+-1 1874
+D3
+~
+~
+301989888
+-1 1878
+S
+#1883
+A wide street~
+there are several wide streets here, leading to numerous locations in the
+colony. There appears to be signs of a recent battle, and sounds are still
+being heard coming from several directions at once..perhaps you should
+shorten your visit at this time? 
+~
+~
+33554432
+0
+0 1
+D2
+~
+~
+1
+-1 1884
+D3
+~
+~
+0
+-1 1881
+S
+#1884
+"Kcuf Uoy Dlein" Cantonese Bar~
+A large bar table goes along the room, with several old fashioned bar
+stools facing the door. On the opposite side of the entrance, a large
+grill is placed, which is often used to make the best Cantonese food on
+LV-426. Although, being the only location they can get Cantonese food,
+does make that a bit easier.
+~
+&gOnce a well established bar, the Kcuf Uoy Dlein is now a hideous
+reflection of its former self. Odd, fleshlike glands cover the walls,
+oozing slime, and acid.. A Body is on the grill, sizzling, and judging by
+the name on the bodies jacket, This  would be Dlein.
+~
+8
+0
+0 1
+D0
+~
+~
+1
+-1 1883
+D3
+~
+~
+33554432
+-1 1882
+S
+#1885
+Housing Quarters of the USCM Marines~
+the Sleeping quarters of the USCM Marines is Oddly unguarded, perhaps the
+marines figured with so many of them there, they would be perfectly safe
+at all times. The building also contains the Cooling system, which vents
+the entire Colony.
+~
+&gThe housing quarters are now covered in a acidic slime, which drips from
+the ceiling with a disgusting plop, and sizzle. The poor marines likely
+still sleeping will not know what hit them, And the vents are now free for
+travel for the Alien Kind.
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 1886
+D2
+~
+~
+3
+-1 1880
+D3
+~
+~
+0
+-1 1887
+S
+#1886
+The bunkrooms of the USCM Marines~
+A small bedroom for the marines to use, after the days work has been
+finished. It is somewhat obvious, from the disgusting housekeeping, and
+the fact that they leave the toilet seat up, that the marines are all,
+Male. The Women have their own quarters, which they happily use. 
+~
+Although the housekeeping was bad before, it seems it was possible to get
+even worse. Now, everything is coated in slime, the toilet lid is STILL
+up, cocoons hang over the bunks, and, the aliens have taken to using the
+bunks as a form of..Outhouse. 
+~
+8
+0
+0 1
+D2
+~
+~
+33554432
+-1 1881
+D3
+~
+~
+0
+-1 1885
+S
+#1887
+A hallway~
+This hallway leads from the cooling systems, to the other sections of this
+building, namely, the sleeping quarters of the marines. The Cooling
+systems themselves have vents reaching several locations in the colony
+Itself. 
+~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+8
+0
+0 1
+D1
+~
+~
+0
+-1 1885
+D2
+~
+~
+0
+-1 1879
+S
+#1888
+A Hallway~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+41943048
+0
+0 1
+D1
+~
+~
+0
+-1 1866
+D2
+~
+~
+0
+-1 1889
+D3
+~
+~
+0
+-1 1890
+S
+#1889
+USCM Command Storage~
+&gThis room was once used to store any files or scientific information
+found about this planet. Sadly, any and all, the files, are now destroyed
+in the acidic slime that now coats what once was a filing cabinet. 
+~
+&gThis room was once used to store any files or scientific information
+found about this planet. Sadly, any and all, the files, are now destroyed
+in the acidic slime that now coats what once was a filing cabinet. 
+~
+46137352
+0
+0 1
+D0
+~
+~
+0
+-1 1888
+S
+#1890
+A Hallway~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+41943048
+0
+0 1
+D0
+~
+~
+0
+-1 1892
+D1
+~
+~
+0
+-1 1888
+D3
+~
+~
+4194311
+-1 1891
+S
+#1891
+USCM's Food Storage Supply~
+&gThis once was where the civilians would store their food that was shipped
+in at certain intervals, but, now..it has became moldy, rotten, and worse.
+The smell of the room is that of death, and would sicken any sane man, and
+most that are insane. 
+~
+&gThis once was where the civilians would store their food that was shipped
+in at certain intervals, but, now..it has became moldy, rotten, and worse.
+The smell of the room is that of death, and would sicken any sane man, and
+most that are insane. 
+~
+46137352
+0
+0 1
+D1
+~
+~
+4194311
+-1 1890
+S
+#1892
+A Hallway~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+41943048
+0
+0 1
+D0
+~
+~
+0
+-1 1896
+D1
+~
+~
+0
+-1 1893
+D2
+~
+~
+0
+-1 1890
+D3
+~
+~
+0
+-1 1894
+S
+#1893
+A Small Closet~
+&gA small broom closet is here, containing normal cleaning supplies..but
+all of which are ruined beyond any sort of repair. A vent is visible along
+the northern wall, covered in several bits of slime. the nails holding it
+in, appear to have been removed, and the places to replace them, destroyed
+completely. 
+~
+&gA small broom closet is here, containing normal cleaning supplies..but
+all of which are ruined beyond any sort of repair. A vent is visible along
+the northern wall, covered in several bits of slime. the nails holding it
+in, appear to have been removed, and the places to replace them, destroyed
+completely. 
+~
+46137352
+0
+0 1
+D3
+~
+~
+0
+-1 1892
+S
+#1894
+The Lounge~
+&gThis appears to be what once was the lounge. A small card table is placed
+against the west wall of the chamber, several chairs nearby, One such
+chair, contains the remains of a man.. The cause of his death appears
+quite obvious, as their is a  huge gaping hole in the center of the mans
+chest. 
+~
+&gThis appears to be what once was the lounge. A small card table is placed
+against the west wall of the chamber, several chairs nearby, One such
+chair, contains the remains of a man.. The cause of his death appears
+quite obvious, as their is a  huge gaping hole in the center of the mans
+chest. 
+~
+41943048
+0
+0 1
+D0
+~
+~
+0
+-1 1895
+D1
+~
+~
+0
+-1 1892
+S
+#1895
+A Small Kitchen~
+&gThere appears to be a makeshift kitchen here, probably used to feed the
+men who once worked here. It appears to have at one time been quite well
+stocked, but now, nearly everything has been destroyed. Oddly, a strange
+grate is in the center of the floor.
+~
+&gThere appears to be a makeshift kitchen here, probably used to feed the
+men who once worked here. It appears to have at one time been quite well
+stocked, but now, nearly everything has been destroyed. Oddly, a strange
+grate is in the center of the floor.
+~
+46137352
+0
+0 1
+D2
+~
+~
+0
+-1 1894
+S
+#1896
+A Hallway~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+41943048
+0
+0 1
+D0
+~
+~
+0
+-1 1897
+D2
+~
+~
+0
+-1 1892
+S
+#1897
+A Hallway~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+41943048
+0
+0 1
+D0
+~
+~
+0
+-1 1904
+D1
+~
+~
+0
+-1 1898
+D2
+~
+~
+0
+-1 1896
+S
+#1898
+A Hallway~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+46137352
+0
+0 1
+D1
+~
+~
+0
+-1 1899
+D3
+~
+~
+0
+-1 1897
+S
+#1899
+A Hallway~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+41943048
+0
+0 1
+D0
+~
+~
+0
+-1 1902
+D2
+~
+~
+0
+-1 1900
+D3
+~
+~
+0
+-1 1898
+S
+#1900
+The Lab~
+&gA large desk with several odd tools is here, barely surviving the harsh
+damages done to it. It seems the scientists finally found a specimen to
+study, as, A face hugger is pinned to the top of the desk, and expertly
+bisected. Too bad the scientist didnt know, that Aliens hunted in packs.
+~
+~
+41943048
+0
+0 1
+D0
+~
+~
+0
+-1 1899
+D3
+~
+~
+0
+-1 1901
+S
+#1901
+Test Subject Containment Chambers~
+&gThis is where the scientists keep their specimens before study, And it
+appears that they have been allowed to exist by the other aliens. There
+are several odd tanks holding what appears to be Face-huggers. 
+~
+~
+46137352
+0
+0 1
+D1
+~
+~
+0
+-1 1900
+S
+#1902
+The Security Control Center~
+&gThis once was where the Marines would keep watch on the entire colony,
+using several security alarms and camera's. If any attack was visible, it
+was possible to relay a warning to the entire compound.
+~
+&gThis once was where the Marines would keep watch on the entire colony,
+using several security alarms and cameras. If any attack was visible, it
+was possible to relay a warning to the entire compound.
+~
+41943048
+0
+0 1
+D2
+~
+~
+0
+-1 1899
+D3
+~
+~
+0
+-1 1903
+S
+#1903
+Weapons Locker~
+&gA weapons rack lines the west wall, containing the weapons the marines
+were unable to get at in time. These weapons were outdated, and have
+gathered rust during the time they have been unused. There is very little
+chance that they would be in working order .
+~
+~
+46137352
+0
+0 1
+D1
+~
+~
+0
+-1 1902
+S
+#1904
+A Hallway~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+41943048
+0
+0 1
+D1
+~
+~
+0
+-1 1905
+D2
+~
+~
+0
+-1 1897
+D3
+~
+~
+0
+-1 1915
+S
+#1905
+A Hallway~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+41943048
+0
+0 1
+D0
+~
+~
+0
+-1 1906
+D1
+~
+~
+0
+-1 1912
+D3
+~
+~
+0
+-1 1904
+S
+#1906
+A Hallway~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+41943048
+0
+0 1
+D0
+~
+~
+0
+-1 1909
+D1
+~
+~
+0
+-1 1908
+D2
+~
+~
+0
+-1 1905
+D3
+~
+~
+0
+-1 1907
+S
+#1907
+A Working Station~
+&gThis small chamber is where the scholars would send in information for
+the USCM to study and log, but now, all that is left, is the blood of
+those who 'used' to work here, and the slime left by their killers. 
+~
+~
+41943048
+0
+0 1
+D1
+~
+~
+0
+-1 1906
+S
+#1908
+A Working Station~
+&gThis small chamber is where the scholars would send in information for
+the USCM to study and log, but now, all that is left, is the blood of
+those who 'used' to work here, and the slime left by their killers. 
+~
+~
+41943048
+0
+0 1
+D3
+~
+~
+0
+-1 1906
+S
+#1909
+A Hallway~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+41943048
+0
+0 1
+D1
+~
+~
+0
+-1 1911
+D2
+~
+~
+0
+-1 1906
+D3
+~
+~
+0
+-1 1910
+S
+#1910
+A destroyed Working Station~
+&gThis small chamber is where the scholars would send in information for
+the USCM to study and log, but now, all that is left, is the blood of
+those who 'used' to work here, and the slime left by their killers. 
+~
+~
+41943048
+0
+0 1
+D1
+~
+~
+0
+-1 1909
+S
+#1911
+A Working Station~
+&gThis small chamber is where the scholars would send in information for
+the USCM to study and log, but now, all that is left, is the blood of
+those who 'used' to work here, and the slime left by their killers.  
+~
+~
+41943048
+0
+0 1
+D3
+~
+~
+0
+-1 1909
+S
+#1912
+A Hallway~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+41943048
+0
+0 1
+D1
+~
+~
+0
+-1 1913
+D3
+~
+~
+0
+-1 1905
+S
+#1913
+A Turn in the Hallway~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+&gThis hallway is covered in large bulbous glands, which cover the walls,
+and hang from the ceiling. Every so often, a blob of acidic slime will
+drop from above, with a hiss. Sounds are heard further down the hallway,
+as if something quickly moved by it.
+~
+41943048
+0
+0 1
+D0
+~
+~
+0
+-1 1914
+D3
+~
+~
+0
+-1 1912
+S
+#1914
+The Nesting Chamber~
+&gLarge Pods line the walls of this chamber, each containing what once was
+a human. Slime hangs from these pods, dripping to the ground every few
+seconds. A few face huggers scurry across the ground, after impregnating
+any living human that is being held
+~
+&gLarge Pods line the walls of this chamber, each containing what once was
+a human. Slime hangs from these pods, dripping to the ground every few
+seconds. A few face huggers scurry across the ground, after impregnating
+any living human that is being held
+~
+578813960
+0
+0 1
+D2
+~
+~
+0
+-1 1913
+S
+#1915
+Power Supply Generator~
+&gA generator sits amongst a large pile of slime, in fact, its covered in
+it. The Back is slightly damaged it appears, but it may still work. Then
+again, it may just explode. Along the walls surrounding the generator, are
+bits of dry blood and and even more slime..Along the floor, mutilated
+bodies are numerous, this place appears to not be the safest place to be.
+~
+&gA generator sits amongst a large pile of slime, in fact, its covered in
+it. The Back is slightly damaged it appears, but it may still work. Then
+again, it may just explode. Along the walls surrounding the generator, are
+bits of dry blood and and even more slime..Along the floor, mutilated
+bodies are numerous, this place appears to not be the safest place to be.
+~
+46137352
+0
+0 1
+D1
+~
+~
+0
+-1 1904
+S
+#1916
+The Hangar Bay~
+This Chamber has been developed to contain the spacecraft the colonists
+themselves landed within, and has held it for the last fourteen years. If
+you are in this chamber, it more then likely means there is an emergency,
+and that the ship  will be used, once more.
+~
+~
+33554440
+0
+0 1
+D3
+~
+~
+1
+-1 1857
+S
+#1971
+Floating in a void~
+~
+~
+1073741824
+0
+0 1
+S
+#0
+
+
+#RESETS
+O 1 1825 1 1825
+D 0 1828 4 1
+M 1 1829 1 1829
+E 1 680 1 16
+G 1 681 1
+E 1 1722 1 5
+D 0 1857 1 0
+O 1 251 1 1868
+D 0 1870 1 1
+O 1 1871 1 1871
+D 0 1871 3 1
+M 1 1872 1 1872
+E 1 1872 1 16
+D 0 1876 0 0
+D 0 1877 2 0
+D 0 1880 0 1
+D 0 1883 2 0
+M 1 1884 1 1884
+E 1 665 1 16
+D 0 1884 0 0
+D 0 1885 2 1
+E 1 82 1 16
+G 1 679 1
+G 1 679 1
+D 0 1890 3 2
+M 1 1892 1 1891
+E 1 665 1 16
+E 1 665 1 18
+D 0 1891 1 2
+D 0 1916 3 0
+O 1 1917 1 1915
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+S
+
+
+#$

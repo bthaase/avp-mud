@@ -1,0 +1,30 @@
+#ARENA
+Name         Separatist Camp~
+Desc         Take and hold the six Separatist command positions.
+
+Marine:
+We have located a small seperatist instillation on one of our colonies.
+Luckily, The seperatists do not have support of the citizens - This means
+we can remove them with extreme prejudice. Take control of the command
+structure. We are not certain how big this seperatist faction is, so expect
+a counterstrike. Eliminate all resistance. 
+ 
+Alien:
+Consume! Grow! Spread!
+ 
+Predator:
+We have released several alien eggs near a military installation, and they
+should make worthy prey. Watch out for the humans, they will try to
+disrupt the hunt. 
+~
+Filename     separatist~
+Firstroom    4655
+Lastroom     4765
+Timer        40
+Maxsupport   0 5
+Maxsupport   1 5
+Minp         0
+Maxp         20
+End
+
+#END

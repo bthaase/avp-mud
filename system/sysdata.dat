@@ -1,0 +1,37 @@
+#SYSTEM
+Highplayers    45
+Highplayertime Sat Aug 14 22:13:26 2004~
+Nameresolving  0
+Allowooc       1
+Setwizlock     0
+Waitforauth    0
+Readallmail    105
+Readmailfree   101
+Writemailfree  1
+Takeothersmail 105
+Currid         6225
+Muse           102
+Think          102
+Build          101
+Log            102
+Protoflag      101
+Overridepriv   104
+Msetplayer     105
+Stunplrvsplr   20
+Stunregular    0
+Damplrvsplr    100
+Damplrvsmob    100
+Dammobvsplr    100
+Dammobvsmob    100
+Forcepc        104
+Guildoverseer  ~
+Guildadvisor   ~
+Saveflags      2557
+Savefreq       20
+Newbie_purge   7
+Regular_purge  186
+Autopurge      1
+Tmcblock       0
+End
+
+#END

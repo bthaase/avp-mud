@@ -1,0 +1,14 @@
+#ARENA
+Name         Mountain Forest Test Zone~
+Desc         Just a generic mountain forest, used for testing~
+Filename     mtforest01~
+Firstroom    543
+Lastroom     663
+Timer        30
+Maxsupport   0 5
+Maxsupport   1 5
+Minp         999
+Maxp         999
+End
+
+#END

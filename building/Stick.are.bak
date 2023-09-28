@@ -1,0 +1,614 @@
+#AREA   {PROTO} Stick's area in progress~
+
+#VERSION 4
+
+#AUTHOR Stick~
+
+#AMBIENCE 0
+#RANGES
+0 0 0 0
+$
+
+#MOBILES
+#7101
+Low Mob~
+a newly created Low Mob~
+Some god abandoned a newly created Low Mob here.
+~
+~
+0
+67108865
+S
+1 8 8 0
+#7102
+Apone~
+Colenel Apone~
+Colenel Apone is standing here, Ushering his squad into the APC.
+~
+~
+0
+32771
+S
+1 8 8 0
+> all_greet_prog 100~
+salute $n
+mpsleep 4
+if variable(Hudson) == 0
+mpecho &cColenel Apone points to the east.
+say Hop in the APC, Marine.
+else
+say Sit tight, Marine. Next APC is en route.
+endif
+~
+> act_prog p leaves east.~
+block e
+mpsleep 4
+say Sorry, theres no more room on that APC.
+mpsleep 6
+say Next APC will be along in a minute.
+msleep 6
+shrug
+~
+|
+#7103
+Hudson~
+Private Hudson~
+Private Hudson is standing here boasting about something.
+~
+~
+0
+1
+S
+1 8 8 0
+> all_greet_prog 100~
+mpset Hudson 1
+mpecho &w&CThe doors close behind you and the engines hum to life. 
+mpsleep 6
+say I'd si'down if i were you.
+mpsleep 6
+mpforce $n sit
+mpsleep 6
+mpechoat $n hudson pulls the bar down over you.
+mpsleep 8
+mpcehoat $n Hudson peers at you quizzically.
+mpsleep 8
+say Hey...Whassa Matter? This ain't ya first drop is it?
+mpsleep 4
+grin
+mpsleep 8
+say Heh, Check it out! We got independently firing partical phalanxes
+mpsleep 10
+say We got tactical smart missiles, phase plasma pulse rifles
+mpsleep 10
+say We got sonic, electronic ball breakers, we got nukes, we got knives
+mpsleep 10
+say Hell, we even got sharp sticks...Take your pick.
+mpsleep 12
+mpecho Hudson looks around at the other marines.
+mpsleep 4
+smirk
+say Don't worry me and my ultimate team of baddass' will protect
+mpsleep 20
+mpecho Radio:[Gorman]: We're coming up on the target.
+mpsleep 20
+mpecho Radio:[Gorman]: Ok marines, lock and load, it's show time.
+mpsleep 8
+mpecho The side doors slide open and the engines stop.
+mpsleep 6
+Say Let's go, you wanna live forever?!
+mpsleep 7
+mpecho The rest of the marines grab their gear and Exit
+mpsleep 8
+mpforce $n stand
+mpsleep 4
+mpechoat $n You pull the rail up, stand and exit the APC.
+mpsleep 6
+mptrans $n 7104
+mpsleep 6
+radio Ok top, we're clear for another unit to be dropped in!
+mpset Hudson 0
+mpat 7102 mpforce Apone block
+mpat 7102 mpforce Apone say Okay. Next APC is ready. 
+~
+|
+#7104
+Corporal Hicks~
+Corporal Hicks~
+Corporal Hicks stands here, confident as ever.
+~
+~
+0
+1
+S
+1 8 8 0
+#7106
+Private Vasquez~
+Private Vasquez~
+Private Vasquez stands here, alert and ready.
+~
+~
+0
+1
+S
+1 8 8 0
+#7107
+Private Frosty~
+Private Frosty~
+Private Frosty scans the area for enemies.
+~
+~
+0
+3
+S
+1 8 8 0
+#7108
+Private Hudson~
+Private Hudson~
+Private Hudson stands here, trying to look Badass.
+~
+~
+0
+1
+S
+1 8 8 0
+#7109
+Colonel Apone~
+Colonel Apone~
+Colonel Apone is here, smoking one of his cigars.
+~
+~
+0
+1
+S
+1 8 8 0
+#7110
+Private Drake~
+Private Drake~
+Private Drake is here, fiddling with his smartgun.
+~
+~
+0
+1
+S
+1 8 8 0
+#7111
+Private Ferro~
+Private Ferro~
+Private Ferro is here, retrieving medical samples.
+~
+~
+0
+1
+S
+1 8 8 0
+#7112
+Bishop~
+Bishop the Synthetic~
+Bishop the Synthetic stands here, poised as usual.
+~
+~
+0
+1
+S
+1 8 8 0
+#7401
+High Mob~
+a newly created High Mob~
+Some god abandoned a newly created High Mob here.
+~
+~
+0
+67108865
+S
+1 8 8 0
+#0
+
+
+#OBJECTS
+#7101
+Low Obj~
+a Low Obj~
+A Low Obj is here.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+1 0 0
+#7401
+Hugh Obj~
+a Hugh Obj~
+A Hugh Obj is here.~
+~
+5
+1024
+0
+0 0 0 0 0 0
+1 0 0
+#0
+
+
+#ROOMS
+#7101
+Low Room~
+~
+~
+1073807364
+0
+0 1
+S
+#7102
+&gThe Camp Courtyard~
+The makeshift camp is about 30 meters by 30 meters . A dropship towers over
+the rest of the stuff here, its bay doors open. An apc is parked behind
+it, ready to be driven onto the dropship. Tents. barrels, crates have all
+been left here. Some marines pace around the area keeping guard.
+~
+~
+1075904516
+0
+0 1
+D1
+~
+~
+0
+-1 7103
+D3
+~
+~
+0
+-1 7116
+S
+#7103
+&bInside an APC~
+~
+~
+1073807368
+0
+0 1
+D0
+~
+~
+301989888
+-1 7104
+D2
+~
+~
+301989888
+-1 7104
+D3
+~
+~
+301989888
+-1 7104
+S
+#7104
+&OHarsh Wasteland~
+~
+~
+1075904516
+0
+0 1
+S
+#7105
+Floating in a void~
+~
+~
+1075904512
+0
+0 1
+S
+#7106
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7107
+S
+#7107
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7108
+D2
+~
+~
+0
+-1 7106
+S
+#7108
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7109
+D3
+~
+~
+0
+-1 7107
+S
+#7109
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7110
+D2
+~
+~
+0
+-1 7108
+S
+#7110
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D2
+~
+~
+0
+-1 7109
+D3
+~
+~
+0
+-1 7111
+S
+#7111
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7110
+D2
+~
+~
+0
+-1 7112
+S
+#7112
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7111
+D2
+~
+~
+0
+-1 7113
+D3
+~
+~
+0
+-1 7115
+S
+#7113
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7112
+D3
+~
+~
+0
+-1 7114
+S
+#7114
+Floating in a void~
+~
+~
+1073807360
+0
+0 1
+D0
+~
+~
+0
+-1 7115
+D1
+~
+~
+0
+-1 7113
+S
+#7115
+Stick pwns ju~
+~
+~
+1073807360
+0
+0 1
+D1
+~
+~
+0
+-1 7112
+D2
+~
+~
+0
+-1 7114
+S
+#7116
+&gIn a Tent~
+A new day rises, a new mission is at hand. What does Colenel Apone have in
+store today? Another stand up fight, or a bug hunt...Who cares, This team
+of ultimate bad-asses can take on whatever he throws at them.
+~
+~
+1073807368
+0
+0 1
+D1
+~
+~
+0
+-1 7102
+S
+#7401
+High Room~
+~
+~
+1073807364
+0
+0 1
+S
+#0
+
+
+#RESETS
+M 1 7102 1 7102
+E 1 80 1 16
+G 1 81 1
+G 1 82 1
+G 1 84 1
+E 1 667 1 5
+E 1 666 1 6
+E 1 668 1 8
+G 1 81 1
+G 1 84 1
+M 1 7103 1 7103
+E 1 668 1 8
+E 1 666 1 6
+E 1 80 1 16
+E 1 667 1 5
+E 1 677 1 12
+P 0 681 1 0
+P 1 82 1 0
+P 2 681 1 0
+G 1 81 1
+G 1 682 1
+M 1 7108 1 7105
+E 1 667 1 5
+E 1 668 1 8
+E 1 666 1 6
+G 1 84 1
+E 1 80 1 16
+G 1 82 1
+E 1 677 1 12
+G 1 81 1
+G 1 84 1
+E 1 688 1 17
+M 1 7107 1 7105
+E 1 666 1 6
+E 1 667 1 5
+E 1 677 1 12
+G 1 84 1
+E 1 668 1 8
+E 1 80 1 16
+G 1 84 1
+G 1 81 1
+G 1 82 1
+M 1 7110 1 7105
+E 1 673 1 16
+G 1 82 1
+E 1 677 1 12
+E 1 666 1 6
+E 1 668 1 8
+E 1 667 1 5
+G 1 84 1
+G 1 674 1
+G 1 84 1
+M 1 7106 1 7105
+E 1 673 1 16
+G 1 82 1
+G 1 84 1
+E 1 667 1 5
+E 1 677 1 12
+E 1 666 1 6
+E 1 668 1 8
+G 1 674 1
+G 1 84 1
+M 1 7111 1 7105
+G 1 84 1
+G 1 82 1
+E 1 80 1 16
+E 1 667 1 5
+E 1 666 1 6
+E 1 668 1 8
+G 1 81 1
+G 1 84 1
+E 1 697 1 17
+E 1 677 1 12
+M 1 7109 1 7105
+E 1 667 1 5
+G 1 84 1
+G 1 82 1
+E 1 80 1 16
+E 1 666 1 6
+E 1 677 1 12
+E 1 668 1 8
+G 1 81 1
+G 1 84 1
+M 1 7104 1 7105
+E 1 688 1 17
+G 1 84 1
+G 1 82 1
+E 1 666 1 6
+E 1 668 1 8
+G 1 667 1
+G 1 677 1
+E 1 80 1 16
+G 1 81 1
+G 1 84 1
+S
+
+
+#SHOPS
+0
+
+
+#SPECIALS
+S
+
+
+#$
