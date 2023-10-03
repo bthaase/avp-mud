@@ -53,13 +53,13 @@ void              lstat_keys    args( ( CHAR_DATA *ch ) );
 /*
  * Global variables.
  */
-OBJ_DATA *  gobj_prev;
 bool pk_allow = TRUE;
 char reboot_time[50];
 time_t new_boot_time_t;
 extern struct tm new_boot_struct;
 extern OBJ_INDEX_DATA *obj_index_hash[MAX_KEY_HASH];
 extern MOB_INDEX_DATA *mob_index_hash[MAX_KEY_HASH];
+// extern bool MOBtrigger;
 
 void do_allowpk( CHAR_DATA *ch, char *argument )
 {

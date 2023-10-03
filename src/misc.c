@@ -34,13 +34,15 @@
 /*
  * Global Variables
  */
-OBJ_DATA   *  gobj_prev;
-
 #define BFS_ERROR	   -1
 #define BFS_ALREADY_THERE  -2
 #define BFS_NO_PATH	   -3
 
 bool hail_route_check   args( ( CHAR_DATA *ch, ROOM_INDEX_DATA *toroom ) );
+bool reload_sentry( CHAR_DATA *ch, char * arg1, char * arg2 );
+bool rem_sentry( OBJ_DATA * obj, CHAR_DATA * ch );
+void add_sentry( OBJ_DATA * obj, CHAR_DATA * ch, int dir );
+SENTRY_DATA * get_sentry( OBJ_DATA * obj );
 
 extern int	top_exit;
 

@@ -51,6 +51,12 @@ int     obj_hitroll args( ( OBJ_DATA *obj ) );
 bool    get_cover( CHAR_DATA *ch );
 bool	dual_flip = FALSE;
 void    add_xname( char *arg);
+char *  current_weapon( CHAR_DATA * ch );
+bool    check_rescue( CHAR_DATA * ch );
+bool    is_enemy( CHAR_DATA * ch, CHAR_DATA * victim );
+int     cdamage( CHAR_DATA *ch, CHAR_DATA *victim, int dam, bool silent );
+bool    is_ranged( int type );
+bool    mob_reload( CHAR_DATA * ch, OBJ_DATA * weapon );
 
 
 /*

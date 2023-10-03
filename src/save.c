@@ -67,6 +67,8 @@ static  OBJ_DATA *      rgObjNest       [MAX_NEST];
 void    fwrite_char     args( ( CHAR_DATA *ch, FILE *fp ) );
 void    fread_char      args( ( CHAR_DATA *ch, FILE *fp, bool preload) );
 void    write_corpses   args( ( CHAR_DATA *ch, char *name ) );
+CHAR_DATA *  fread_mobile( FILE *fp );
+char * simple_encode( char * in, int off );
 
 /*
  * Un-equip character before saving to ensure proper    -Thoric

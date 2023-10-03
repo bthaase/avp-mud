@@ -222,6 +222,7 @@ void	load_buildlist	args( ( void ) );
 bool	load_systemdata	args( ( SYSTEM_DATA *sys ) );
 void    load_banlist    args( ( void ) );
 void    load_mplist	args( ( void ) );
+ROOM_INDEX_DATA * make_vent_room( int x, int y, int z );
 
 void	fix_exits	args( ( void ) );
 

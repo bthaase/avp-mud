@@ -292,6 +292,21 @@ void load_bots( )
 }
 
 /*
+ * Get pointer to an bot from the bot ID.
+ */
+BOT_DATA *bot_from_id( int id )
+{
+    BOT_DATA *bot;
+       
+    for ( bot = first_bot; bot; bot = bot->next )
+       if ( bot->id == id )
+         return bot;
+    
+    return NULL;
+}
+
+
+/*
  * Get pointer to an bot from the bot name.
  */
 BOT_DATA *bot_from_name( char *name )
@@ -307,20 +322,6 @@ BOT_DATA *bot_from_name( char *name )
     
     for ( bot = first_bot; bot; bot = bot->next )
        if ( !str_prefix( name, bot->name ) )
-         return bot;
-    
-    return NULL;
-}
-
-/*
- * Get pointer to an bot from the bot ID.
- */
-BOT_DATA *bot_from_id( int id )
-{
-    BOT_DATA *bot;
-       
-    for ( bot = first_bot; bot; bot = bot->next )
-       if ( bot->id == id )
          return bot;
     
     return NULL;

@@ -25,6 +25,7 @@
 #include "mud.h"
 
 void     make_ash    args( ( CHAR_DATA *ch, CHAR_DATA *killer ) );
+OBJ_DATA * pull_blank_obj( void );
 
 /*
  * Make a fire.

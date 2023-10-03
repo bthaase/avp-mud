@@ -38,6 +38,8 @@ void send_room_page_to_char(CHAR_DATA * ch, ROOM_INDEX_DATA * idx, char page);
 void send_page_to_char(CHAR_DATA * ch, MOB_INDEX_DATA * idx, char page);
 void send_control_page_to_char(CHAR_DATA * ch, char page);
 
+// extern bool MOBtrigger;
+
 /*
  * Local functions.
  */

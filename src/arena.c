@@ -308,6 +308,21 @@ void load_arenas( )
 }
 
 /*
+ * Get pointer to an arena from the arena ID.
+ */
+ARENA_DATA *arena_from_id( int id )
+{
+    ARENA_DATA *arena;
+       
+    for ( arena = first_arena; arena; arena = arena->next )
+       if ( arena->id == id )
+         return arena;
+    
+    return NULL;
+}
+
+
+/*
  * Get pointer to an arena from the arena name.
  */
 ARENA_DATA *arena_from_name( char *name )
@@ -323,20 +338,6 @@ ARENA_DATA *arena_from_name( char *name )
     
     for ( arena = first_arena; arena; arena = arena->next )
        if ( !str_prefix( name, arena->name ) )
-         return arena;
-    
-    return NULL;
-}
-
-/*
- * Get pointer to an arena from the arena ID.
- */
-ARENA_DATA *arena_from_id( int id )
-{
-    ARENA_DATA *arena;
-       
-    for ( arena = first_arena; arena; arena = arena->next )
-       if ( arena->id == id )
          return arena;
     
     return NULL;

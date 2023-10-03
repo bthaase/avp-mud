@@ -622,7 +622,7 @@ ROOM_INDEX_DATA *generate_exit( ROOM_INDEX_DATA *in_room, EXIT_DATA **pexit )
 	  bxit->distance = fulldist - distance;
 	}
     }
-    (EXIT_DATA *) pexit = xit;
+    *pexit = xit;
     return room;
 }
 

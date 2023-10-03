@@ -328,14 +328,13 @@ struct allowmp_data
     char  name[MAX_STRING_LENGTH], host[MAX_STRING_LENGTH], by[MAX_STRING_LENGTH];
     struct allowmp_data *next;
 } ;
-struct xname_data *xnames;
 struct xname_data 
 {
     char name[MAX_STRING_LENGTH];
     time_t time;
     struct xname_data *next;
 };
-struct xname_data *xnames;
+extern struct xname_data *xnames;
 
 /*
  * Site ban structure.
@@ -727,7 +726,7 @@ struct mpsleep_data
     bool single_step;
 };
 
-bool	MOBtrigger;
+extern bool MOBtrigger;
 
 /* Race Dedicated stuff */
 struct	race_type
@@ -2511,7 +2510,7 @@ extern          VOTE_DATA         *     curr_vote;
 
 extern		BAN_DATA	  *	first_ban;
 extern		BAN_DATA	  *	last_ban;
-struct		allowmp_data	  *     mplist;
+extern struct		allowmp_data	  *     mplist;
 extern		CHAR_DATA	  *	first_char;
 extern		CHAR_DATA	  *	last_char;
 extern          BOT_DATA          *     first_bot;

@@ -28,7 +28,6 @@
 
 ROOM_INDEX_DATA *generate_exit( ROOM_INDEX_DATA *in_room, EXIT_DATA **pexit );
 
-int         port;                             /* Master MUD Port */
 char        conv_result[MAX_STRING_LENGTH];   /* Color Token Filtering */
 
 char *	const	where_name	[] =
@@ -4058,12 +4057,12 @@ void HTML_Who( void )
   fclose(fpReserve);
 
   /* IMPORTANT: This file needs to exist before you attempt to run this. */
-  sprintf( fname, "../../webpage/avp_who.htm" );
+  sprintf( fname, "../webpage/avp_who.htm" );
  
   if ( (fp = fopen(fname, "w") ) == NULL)
   {
-     bug( "who.htm: fopen", 0 );
-     perror( "who.htm" );
+     bug( "avp_who.htm: fopen", 0 );
+     perror( "avp_who.htm" );
   }
   else
   {
@@ -4160,10 +4159,10 @@ void HTML_Allrooms( void )
   fclose(fpReserve);
 
   /* IMPORTANT: This file needs to exist before you attempt to run this. */
-  if ( (fp = fopen("/home/bhaase/webpage/avp_allrooms.htm", "w") ) == NULL)
+  if ( (fp = fopen("/../webpage/avp_allrooms.htm", "w") ) == NULL)
   {
-     bug( "who.htm: fopen", 0 );
-     perror( "who.htm" );
+     bug( "avp_allrooms.htm: fopen", 0 );
+     perror( "avp_allrooms.htm" );
   }
   else
   {

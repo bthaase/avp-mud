@@ -110,7 +110,11 @@ fd_set           in_set;         /* Set of desc's for reading    */
 fd_set           out_set;        /* Set of desc's for writing    */
 fd_set           exc_set;        /* Set of desc's with errors    */
 int              maxdesc;
-bool             emergancy_copy; /* Emergancy Copyover Flag      */            
+bool             emergancy_copy; /* Emergancy Copyover Flag      */           
+bool             MOBtrigger;
+struct xname_data *xnames;
+struct allowmp_data *mplist;
+
 /*
  * OS-dependent local functions.
  */
@@ -725,7 +729,7 @@ void game_loop( )
     signal( SIGALRM, caught_alarm );
 
     // Emergancy Copyover System - PREVENTS COREDUMPS.
-    signal( SIGSEGV, SegVio );
+    // signal( SIGSEGV, SegVio );
 
     gettimeofday( &last_time, NULL );
     current_time = (time_t) last_time.tv_sec;
@@ -1881,14 +1885,14 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 		log_string_plus( buf, LOG_NORMAL, 103 );
 		return;
 	    }
-            else if ( ( !str_prefix( pban->name, d->host ) || !str_suffix( pban->name, d->host ) ) && is_school_day( ) && pban->level == -2 )
-	    {
-                sprintf( buf, "User %s rejected from %s by School restrictions.", argument, d->host );
-                send_to_buffer( "\n\r&z(&CY&z)our site has been banned during school days.\n\r", d );
-		close_socket( d, FALSE );
-		log_string_plus( buf, LOG_NORMAL, 103 );
-		return;
-	    }
+    //         else if ( ( !str_prefix( pban->name, d->host ) || !str_suffix( pban->name, d->host ) ) && is_school_day( ) && pban->level == -2 )
+	  //   {
+    //             sprintf( buf, "User %s rejected from %s by School restrictions.", argument, d->host );
+    //             send_to_buffer( "\n\r&z(&CY&z)our site has been banned during school days.\n\r", d );
+		// close_socket( d, FALSE );
+		// log_string_plus( buf, LOG_NORMAL, 103 );
+		// return;
+	  //   }
 	} 
 
 
@@ -3899,11 +3903,11 @@ int getcolor(char clr)
   return -1;
 }
 
-bool is_school_day( void )
-{
+// bool is_school_day( void )
+// {
 
-  return FALSE;
-}
+//   return FALSE;
+// }
 
 void display_prompt( DESCRIPTOR_DATA *d )
 {

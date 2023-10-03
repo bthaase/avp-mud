@@ -55,6 +55,8 @@ void vec_explode_2( ROOM_INDEX_DATA *room , int blast, int range );
 void room_explode( OBJ_DATA *obj , CHAR_DATA *xch, ROOM_INDEX_DATA *room );
 void room_explode_1( OBJ_DATA *obj , CHAR_DATA *xch, ROOM_INDEX_DATA *room , int blast, int range, int type );
 void room_explode_2( ROOM_INDEX_DATA *room , int blast, int range );
+bool using_nvg( CHAR_DATA * ch );
+char LetterConversion( char chLetter );
 
 /*
  * Detonates a object.
@@ -4206,7 +4208,7 @@ int SoundexMatch( char *szFirst, char *szSecond )
  *
  * The return value is a single character which contains the converted value.
  */
-static char LetterConversion( char chLetter )
+/*static*/ char LetterConversion( char chLetter )
 {
    const char * kszSoundexData = "01230120022455012623010202";
    char chResult; /* Store the soundex value, or NUL */
