@@ -729,7 +729,7 @@ void game_loop( )
     signal( SIGALRM, caught_alarm );
 
     // Emergancy Copyover System - PREVENTS COREDUMPS.
-    // signal( SIGSEGV, SegVio );
+    signal( SIGSEGV, SegVio );
 
     gettimeofday( &last_time, NULL );
     current_time = (time_t) last_time.tv_sec;

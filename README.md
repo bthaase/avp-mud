@@ -27,3 +27,4 @@ Some other things I tried when getting this up and running, unsure what all is r
     - `cd area`
     - `../src/avp [port]`
 - There is a `./debug.sh` script in the root, that will start the server inside GDB.
+- If you see `SEGMENTATION VIOLATION` errors, that's a SIGSEGV handler attempting automatic copyover. This unforunately tends to consume the error, so you might want to comment out the hook while troubleshooting. Search comm.c for `signal( SIGSEGV, SegVio );`
