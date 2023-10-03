@@ -30,3 +30,4 @@ src/*.lib
 src/*.exe
 src/*.out
 src/*.app
+src/avp
