@@ -9,4 +9,4 @@ User=avpmud
 Group=avpmud
 ExecStart=/opt/avp-mud/src/avp 7000
 WorkingDirectory=/opt/avp-mud/area
-Restart=on-failure
+Restart=alwyas
