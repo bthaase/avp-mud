@@ -445,6 +445,8 @@ static void SegVio()
 
   log_string( "--- SEGMENTATION VIOLATION ---" );
 
+  capturebacktrace("SegVio");
+
   sprintf( buf, "%slastcmd.log", LOG_DIR );
 
   /* Stops logging at 5 megs */
