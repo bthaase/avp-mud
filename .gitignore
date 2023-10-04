@@ -31,3 +31,7 @@ src/*.exe
 src/*.out
 src/*.app
 src/avp
+
+stats/*
+system/bugs.txt
+webpage/*
