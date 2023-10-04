@@ -7,7 +7,7 @@ WantedBy=multi-user.target
 [Service]
 User=avpmud
 Group=avpmud
-ExecStart=/opt/avp-mud/src/swreality 5656
+ExecStart=/opt/avp-mud/src/avp 7000
 WorkingDirectory=/opt/avp-mud/area
 Restart=on-failure
 WatchdogSec=30s
