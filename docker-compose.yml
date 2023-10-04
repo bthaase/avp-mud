@@ -1,0 +1,36 @@
+version: '3'
+services:
+  avp_mud:
+    stdin_open: true
+    tty: true
+    build: .
+    environment:
+      - NOGDB=$NOGDB
+    security_opt:
+      - seccomp:unconfined
+    ports:
+      - '7000:7000'
+      - '4444:4444'
+    networks:
+      - mud_network
+    volumes:
+      - ./area:/opt/avp-mud/area
+      - ./arena:/opt/avp-mud/arena
+      - ./boards:/opt/avp-mud/boards
+      - ./bots:/opt/avp-mud/bots
+      - ./building:/opt/avp-mud/building
+      - ./gods:/opt/avp-mud/gods
+      - ./planets:/opt/avp-mud/planets
+      - ./report:/opt/avp-mud/report
+      - ./save_eq:/opt/avp-mud/save_eq
+      - ./space:/opt/avp-mud/space
+      - ./stats:/opt/avp-mud/stats
+      - ./system:/opt/avp-mud/system
+      - ./vehicle:/opt/avp-mud/vehicle
+      - ./webpage:/opt/avp-mud/webpage
+      - ./player:/opt/avp-mud/player
+
+networks:
+  mud_network:
+    driver: bridge
+
