@@ -61,6 +61,6 @@ void capturebacktrace(const char* type) {
             fclose( fp );
         }
 
-        log_string(buf2);
+        fprintf(stderr, buf2);
     }
 }
