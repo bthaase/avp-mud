@@ -445,6 +445,8 @@ static void SegVio()
 
   log_string( "--- SEGMENTATION VIOLATION ---" );
 
+  capturebacktrace("SegVio");
+
   sprintf( buf, "%slastcmd.log", LOG_DIR );
 
   /* Stops logging at 5 megs */
@@ -2160,7 +2162,7 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 	{
 	    HELP_DATA *pHelp = NULL;
 	    pHelp = get_help( NULL, "disclaimer" );
-	    if ( pHelp != NULL )
+	    if ( FALSE &&  pHelp != NULL && pHelp->text != NULL && pHelp->text[0] != '\0')
 	    {
                 send_to_buffer( "\n\r\n\r&WAliens vs. Predator: Disclaimer &z[&RPlease read carefully&z]\n\r&z", d );
 
@@ -2168,13 +2170,14 @@ void nanny( DESCRIPTOR_DATA *d, char *argument )
 		if ( pHelp->text[0] != '.' ) send_to_buffer( pHelp->text, d );
 
 		send_to_buffer( "\n\r&z(&CD&z)o you accept the terms stated before? Type &RI AGREE&z to continue:\n\r", d );
-		d->connected = CON_DISCLAIMER;
+		
 	    }
 	    else
 	    {
-		send_to_buffer( "\n\r&R[ALERT]: Unable to locate disclaimer text. Continuing.\n\r", d );
+		send_to_buffer( "\n\r&R[ALERT]: Unable to locate disclaimer text. Continuing. (type \"i agree\" to continue.)\n\r", d );
 
 	    }
+      d->connected = CON_DISCLAIMER;
 	}    
 	
 	break;

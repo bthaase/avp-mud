@@ -197,6 +197,10 @@ typedef bool	SPEC_FUN	args( ( CHAR_DATA *ch ) );
 #define MAX_INBUF_SIZE		 1024
 
 #define MSL  MAX_STRING_LENGTH
+#define SUB_MIL              1536
+#define SUPER_MIL            4096
+#define SUB_MSL              22528
+#define SUPER_MSL            26624
 
 #define HASHSTR			 /* use string hashing */
 
@@ -2091,12 +2095,21 @@ void	ext_toggle_bits		args( ( EXT_BV *var, EXT_BV *bits) );
 /*
  * Memory allocation macros.
  */
-#define CREATE(result, type, number)				\
-do								\
-{								\
-   if (!((result) = (type *) CALLOC ((number), sizeof(type))))  \
-	{ perror("malloc failure"); abort(); }			\
-} while(0)
+
+/*
+    Memory allocation macros.
+*/
+#define CREATE(result, type, number)                    \
+    do                                          \
+    {                                           \
+        if (!((result) = (type *) calloc ((number), sizeof(type)))) \
+        {                                           \
+            perror("malloc failure");                       \
+            fprintf(stderr, "Malloc failure @ %s:%d\n", __FILE__, __LINE__ ); \
+            abort();                                    \
+        }       \
+        memset((result),0,sizeof(type)*(number));                                   \
+    } while(0)
 
 #define RECREATE(result,type,number)					\
 do											\
@@ -3064,6 +3077,7 @@ char *	crypt		args( ( const char *key, const char *salt ) );
 #define BOT_DIR         "../bots/"      /* Bot Files                    */
 #define BUILD_DIR       "../building/"  /* Online building save dir     */
 #define SYSTEM_DIR	"../system/"	/* Main system files		*/
+#define BACKTRACE_DIR "../backtraces/" /* Backtraces                   */
 #define PROG_DIR	"mudprogs/"	/* MUDProg files		*/
 #define CORPSE_DIR	"../corpses/"	/* Corpses			*/
 #ifdef WIN32

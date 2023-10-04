@@ -35,3 +35,4 @@ src/avp
 stats/*
 system/bugs.txt
 webpage/*
+backtraces/*

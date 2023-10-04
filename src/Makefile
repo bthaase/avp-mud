@@ -15,7 +15,7 @@ O_FILES = act_comm.o act_info.o act_move.o act_obj.o act_wiz.o arena.o \
       fight.o greet.o handler.o hashstr.o id.o mapout.o makeobjs.o save.o interp.o tables.o \
       misc.o mud_comm.o mud_prog.o player.o requests.o pfiles.o \
       reset.o shops.o skills.o special.o track.o update.o upgrades.o \
-      swskills.o websrv.o mc_mem.o monitor.o
+      swskills.o websrv.o mc_mem.o monitor.o backtrace.c
 
 C_FILES = act_comm.c act_info.c act_move.c act_obj.c act_wiz.c arena.c \
           boards.c bots.c build.c comm.c comments.c const.c db.c dns.c \
@@ -32,7 +32,7 @@ all:
 
 avp: $(O_FILES)
 	rm -f avp
-	$(CC) $(L_FLAGS) -o avp $(O_FILES) -lm -lpthread
+	$(CC) $(L_FLAGS) -o avp $(O_FILES) -lm -lpthread -lbacktrace
 	chmod g+w avp
 	chmod g+w $(O_FILES)
 
