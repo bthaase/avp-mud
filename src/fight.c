@@ -3472,7 +3472,7 @@ int snipe_direction( CHAR_DATA * ch, CHAR_DATA * vic, char * arg, OBJ_DATA * wie
     }
 
     // Firing Message
-    ch_printf( ch, "&RYou draw a bead and open fire to %s. &z(&W%d round%s&z)\n\r", main_exit(dir), rounds, (rounds > 1 ? "s" : "" ) );
+    ch_printf( ch, "&RYou draw a bead and open fire to %s. &z(&W%d round%s&z)\n\r", dir_name[dir], rounds, (rounds > 1 ? "s" : "" ) );
     sprintf( buf, "$n takes aim and opens fire %s." , dir_name[dir] );
     act( AT_BLOOD, buf, ch, NULL, NULL, TO_ROOM );          
 
