@@ -2887,6 +2887,11 @@ int spray_direction( CHAR_DATA * ch, OBJ_DATA * wield, int dir, int dual )
     int hits=0, misses=0;
     bool flame = FALSE;
 
+    if(!ch) { 
+        bug("spray_direction: ch is NULL", 0);
+        return -1; 
+    }
+
     if ( !wield )
     {
         if ( dual == 1 ) send_to_char( "&RYou dont seem to have a weapon!\n\r", ch );
