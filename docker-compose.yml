@@ -29,6 +29,7 @@ services:
       - ./vehicle:/opt/avp-mud/vehicle
       - ./webpage:/opt/avp-mud/webpage
       - ./player:/opt/avp-mud/player
+      - ./backtraces:/opt/avp-mud/backtraces
 
 networks:
   mud_network:
