@@ -368,6 +368,7 @@ void process_dns( DESCRIPTOR_DATA *d )
 /* DNS Resolver hook. Code written by Trax of Forever's End */
 void resolve_dns( DESCRIPTOR_DATA *d, long ip )
 {
+   return; // broken, ~Miros
    int fds[2];
    pid_t pid;
     

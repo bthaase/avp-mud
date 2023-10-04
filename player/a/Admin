@@ -1,0 +1,193 @@
+#PLAYER
+Version      4
+ID           6225
+Name         Admin~
+Sex          1
+Race         0
+MainAbility  0
+Language1    0
+Language2    1
+Toplevel     200
+Played       36
+Playedweek   36
+Room         100
+HpMove   150 150 100 100 100 100
+Act          33556040
+Position     7
+Currexp      0
+Maxexp       0
+Glory        0
+MGlory       0
+Mentalstate  -8
+Password     admin~
+Lastplayed   1696432225
+Title        john 'Admin' doe~
+Firstname    john~
+Lastname     doe~
+WizInvis     200
+Flags        65536
+Quit         1696432225
+KillsPC         0 0 0
+KillsNPC        0 0 0
+KillsBOT        0 0 0
+KilledPC        0 0 0
+KilledNPC       0 0 0
+KilledBOT       0 0 0
+AttrPerm     10 10 10 12 12 10
+AttrMod      0 0 0 0 0 0
+Site         172.20.0.1
+Tongue       100 'marine'
+End
+
+#OBJECT
+Name         kevlar helmet combat~
+ShortDescr   Kevlar Helmet~
+Description  A kevlar combat helmet was left here.~
+Vnum         40
+ExtraFlags   4096
+WearFlags    17
+WearLoc      6
+ItemType     3
+Weight       2
+Level        1
+Cost         30
+Values       180 180 0 1 0 0
+Affect       -1 -1 5 13 0
+End
+
+#OBJECT
+Name         kevlar vest~
+ShortDescr   Kevlar Vest~
+Description  A kevlar vest was left here.~
+Vnum         40
+ExtraFlags   4096
+WearFlags    9
+WearLoc      5
+ItemType     3
+Weight       3
+Level        1
+Cost         90
+Values       220 220 0 1 0 0
+Affect       -1 -1 10 13 0
+End
+
+#OBJECT
+Name         protective boots~
+ShortDescr   Protective Boots~
+Description  A pair of protective combat boots were left here.~
+Vnum         40
+ExtraFlags   4096
+WearFlags    65
+WearLoc      8
+ItemType     3
+Level        1
+Cost         25
+Values       150 150 0 1 0 0
+Affect       -1 -1 10 11 0
+End
+
+#OBJECT
+Name         combat knife~
+ShortDescr   Combat Knife~
+Description  A combat knife was left here.~
+Vnum         40
+ExtraFlags   36864
+WearFlags    8193
+ItemType     2
+Level        1
+Cost         10
+Values       1 20 30 2 3 3
+End
+
+#OBJECT
+Vnum         82
+Level        1
+Values       2 1 1 0 2000 3
+End
+
+#OBJECT
+Vnum         83
+Level        1
+Values       2 50 12 1 0 0
+End
+
+#OBJECT
+Name         ration food~
+ShortDescr   Packaged Ration~
+Description  A small packaged ration was left lying here.~
+Vnum         40
+ExtraFlags   0
+WearFlags    1
+ItemType     10
+Level        1
+Values       20 50 0 0 0 0
+End
+
+#OBJECT
+Vnum         150
+Level        1
+Values       200 300 1 0 0 3
+End
+
+#OBJECT
+Vnum         682
+Level        1
+End
+
+#OBJECT
+Vnum         671
+WearLoc      0
+Level        1
+Values       0 0 8 0 8 0
+End
+
+#OBJECT
+Vnum         80
+WearLoc      16
+Level        1
+Values       3 2 2 4 15 4
+End
+
+#OBJECT
+Vnum         81
+Level        1
+Values       2 30 99 2 0 0
+End
+
+#OBJECT
+Vnum         81
+Level        1
+Values       2 30 99 2 0 0
+End
+
+#OBJECT
+Vnum         150
+Level        1
+Values       200 300 1 0 0 3
+End
+
+#OBJECT
+Name         ration food~
+ShortDescr   Packaged Ration~
+Description  A small packaged ration was left lying here.~
+Vnum         40
+ExtraFlags   0
+WearFlags    1
+ItemType     10
+Level        1
+Values       20 50 0 0 0 0
+End
+
+#OBJECT
+Vnum         83
+Level        1
+Values       2 50 12 1 0 0
+End
+
+#OBJECT
+Vnum         150
+Level        1
+Values       200 300 1 0 0 3
+End
+
+#END

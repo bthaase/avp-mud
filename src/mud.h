@@ -2091,13 +2091,21 @@ void	ext_toggle_bits		args( ( EXT_BV *var, EXT_BV *bits) );
 /*
  * Memory allocation macros.
  */
-#define CREATE(result, type, number)				\
-do								\
-{								\
-   if (!((result) = (type *) CALLOC ((number), sizeof(type))))  \
-	{ perror("malloc failure"); abort(); }			\
-} while(0)
 
+/*
+    Memory allocation macros.
+*/
+#define CREATE(result, type, number)                    \
+    do                                          \
+    {                                           \
+        if (!((result) = (type *) calloc ((number), sizeof(type)))) \
+        {                                           \
+            perror("malloc failure");                       \
+            fprintf(stderr, "Malloc failure @ %s:%d\n", __FILE__, __LINE__ ); \
+            abort();                                    \
+        }       \
+        memset((result),0,sizeof(type)*(number));                                   \
+    } while(0)
 #define RECREATE(result,type,number)					\
 do											\
 {											\

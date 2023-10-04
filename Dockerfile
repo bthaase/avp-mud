@@ -24,8 +24,8 @@ WORKDIR /opt/avp-mud/area
 
 EXPOSE 7000
 
-RUN echo "set print thread-events off" >> /root/.gdbinit
+# RUN echo "set print thread-events off" >> /root/.gdbinit
 
-RUN echo "set print inferior-events off" >> /root/.gdbinit
+# RUN echo "set print inferior-events off" >> /root/.gdbinit
 
 CMD ["/opt/avp-mud/src/run_under_docker.sh", "/opt/avp-mud/src/avp", "7000"]

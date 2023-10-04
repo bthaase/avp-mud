@@ -83,7 +83,7 @@ void assign_gname( CHAR_DATA * ch )
 
    strcpy( buf, get_race( ch ) );
 
-   strcpy( buf, aoran_cap( buf ) );
+   // strcpy( buf, aoran_cap( buf ) );
 
    if ( ch->pcdata->gname ) DISPOSE(ch->pcdata->gname);
    ch->pcdata->gname = str_dup( buf );

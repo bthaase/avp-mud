@@ -28,6 +28,7 @@ services:
       - ./system:/opt/avp-mud/system
       - ./vehicle:/opt/avp-mud/vehicle
       - ./webpage:/opt/avp-mud/webpage
+      - ./player:/opt/avp-mud/player
 
 networks:
   mud_network:
