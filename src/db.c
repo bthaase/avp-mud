@@ -6031,7 +6031,7 @@ int file_size( char * buf )
 
     if ( ( fp = fopen( buf, "rb" ) ) == NULL )
     {
-       bug( "file_size: could not open file to retrive size.");
+       bug( "file_size: could not open file to retrive size (%s).", buf);
        return -1;
     }
 

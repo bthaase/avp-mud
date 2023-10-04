@@ -8,8 +8,8 @@ MainAbility  0
 Language1    0
 Language2    1
 Toplevel     200
-Played       36
-Playedweek   36
+Played       57
+Playedweek   57
 Room         100
 HpMove   150 150 100 100 100 100
 Act          33556040
@@ -18,15 +18,15 @@ Currexp      0
 Maxexp       0
 Glory        0
 MGlory       0
-Mentalstate  -8
-Password     admin~
-Lastplayed   1696432225
+Mentalstate  0
+Password     NeuKPjDZwC3iE~
+Lastplayed   1696445114
 Title        john 'Admin' doe~
 Firstname    john~
 Lastname     doe~
 WizInvis     200
 Flags        65536
-Quit         1696432225
+Quit         1696445114
 KillsPC         0 0 0
 KillsNPC        0 0 0
 KillsBOT        0 0 0

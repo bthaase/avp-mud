@@ -44,7 +44,7 @@
 
 typedef	int				ch_ret;
 typedef	int				obj_ret;
-#define NOCRYPT
+//#define NOCRYPT
 
 /*
  * Accommodate old non-Ansi compilers.

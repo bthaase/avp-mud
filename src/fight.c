@@ -2887,6 +2887,11 @@ int spray_direction( CHAR_DATA * ch, OBJ_DATA * wield, int dir, int dual )
     int hits=0, misses=0;
     bool flame = FALSE;
 
+    if(!ch) { 
+        bug("spray_direction: ch is NULL", 0);
+        return -1; 
+    }
+
     if ( !wield )
     {
         if ( dual == 1 ) send_to_char( "&RYou dont seem to have a weapon!\n\r", ch );
@@ -3467,7 +3472,7 @@ int snipe_direction( CHAR_DATA * ch, CHAR_DATA * vic, char * arg, OBJ_DATA * wie
     }
 
     // Firing Message
-    ch_printf( ch, "&RYou draw a bead and open fire to %s. &z(&W%d round%s&z)\n\r", main_exit(dir), rounds, (rounds > 1) ? "s" : "" );
+    ch_printf( ch, "&RYou draw a bead and open fire to %s. &z(&W%d round%s&z)\n\r", main_exit(dir), rounds, (rounds > 1 ? "s" : "" ) );
     sprintf( buf, "$n takes aim and opens fire %s." , dir_name[dir] );
     act( AT_BLOOD, buf, ch, NULL, NULL, TO_ROOM );          
 
