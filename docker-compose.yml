@@ -30,6 +30,8 @@ services:
       - ./webpage:/opt/avp-mud/webpage
       - ./player:/opt/avp-mud/player
       - ./backtraces:/opt/avp-mud/backtraces
+      - ./corpses:/opt/avp-mud/corpses
+      - ./log:/opt/avp-mud/log
 
 networks:
   mud_network:

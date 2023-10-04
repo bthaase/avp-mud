@@ -32,7 +32,7 @@ all:
 
 avp: $(O_FILES)
 	rm -f avp
-	$(CC) $(L_FLAGS) -o avp $(O_FILES) -lm -lpthread -lbacktrace
+	$(CC) $(L_FLAGS) -o avp $(O_FILES) -lm -lpthread -lbacktrace -lcrypt
 	chmod g+w avp
 	chmod g+w $(O_FILES)
 
