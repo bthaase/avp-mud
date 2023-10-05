@@ -2067,12 +2067,11 @@ See REDIT.
 -1 GREETING~
 &g-={ &GWelcome to Aliens vs. Predator: Legend &g}=- 
 
-&w&zServer: &Wmud.archsysinc.com : 7000 &z[&W66.15.109.101&z] 
 &zVersion: &W1.0.51 - Open Alpha 
-&w&zHomepage: &Chttp://finalstand.archsysinc.com/avp 
- 
 &zCoding by CYBER_Aeon (&W...&z)
- 
+
+&zCode modernized by Nield and Miros&z
+
 &BLicensing Credits: 
 &zSWReality 1.0 by Sean (Durga the Hutt) Cooper.
 Original SMAUG 1.0 written by (Written by Thoric, Altrag, Blodkai, Narn,
@@ -2081,10 +2080,6 @@ Original MERC 2.1 code by Hatchet, Furey, and Kahn.
 Original DikuMUD code by: Hans Staerfeldt, Katja Nyboe, Tom Madsen, Michael
 Seifert && Sebastian Hammer. 
 
-&w&BContact me at ... for Information.
-
- 
- 
 &zEnter your name, or type &CNEW&z for a new character.
 ~
 
