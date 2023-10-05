@@ -31,6 +31,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include "mud.h"
+#include <systemd/sd-daemon.h>
 
 /*
     Socket and TCP/IP stuff.
@@ -144,6 +145,8 @@ void    set_pager_input      args( ( DESCRIPTOR_DATA* d, char* argument ) );
 void    mail_count              args( ( CHAR_DATA* ch ) );
 bool    service_shut_down;  /* Shutdown by operator closing down service */
 bool    fCopyOver;
+bool    systemd_watchdog_enabled;
+uint64_t systemd_watchdog_interval;
 
 #ifdef WIN32
     int mainthread( int argc, char** argv )
@@ -203,6 +206,8 @@ bool    fCopyOver;
     get_reboot_string();
     /* Pfile autocleanup initializer - Samson 5-8-99 */
     init_pfile_scan_time();
+    systemd_watchdog_enabled = sd_watchdog_enabled( 0, &systemd_watchdog_interval );
+
 
     /*
         Reserve two channels for our use.
@@ -705,6 +710,19 @@ void game_loop( )
     signal( SIGALRM, caught_alarm );
     // emergency Copyover System - PREVENTS COREDUMPS.
     signal( SIGSEGV, SegVio );
+    struct timeval last_systemd_watchdog;
+
+    if ( systemd_watchdog_enabled )
+    {
+        log_string( "Systemd watchdog is enabled." );
+        gettimeofday( &last_systemd_watchdog, NULL );
+        sd_notify( 0, "WATCHDOG=1" );
+    }
+    else
+    {
+        log_string( "Systemd watchdog is not enabled." );
+    }
+
     gettimeofday( &last_time, NULL );
     current_time = ( time_t ) last_time.tv_sec;
 
@@ -901,6 +919,15 @@ void game_loop( )
             struct timeval now_time;
             long secDelta;
             long usecDelta;
+
+            if ( systemd_watchdog_enabled &&
+                    ( now_time.tv_usec - last_systemd_watchdog.tv_usec +
+                      ( now_time.tv_sec - last_systemd_watchdog.tv_sec ) * 1000000 > ( int64_t )systemd_watchdog_interval / 2 ) )
+            {
+                gettimeofday( &last_systemd_watchdog, NULL );
+                sd_notify( 0, "WATCHDOG=1" );
+            }
+
             gettimeofday( &now_time, NULL );
             usecDelta   = ( ( int ) last_time.tv_usec ) - ( ( int ) now_time.tv_usec )
                           + 1000000 / PULSE_PER_SECOND;
