@@ -1,21 +1,21 @@
 /***************************************************************************
-*                           STAR WARS REALITY 1.0                          *
-*--------------------------------------------------------------------------*
-* Star Wars Reality Code Additions and changes from the Smaug Code         *
-* copyright (c) 1997 by Sean Cooper                                        *
-* -------------------------------------------------------------------------*
-* Starwars and Starwars Names copyright(c) Lucas Film Ltd.                 *
-*--------------------------------------------------------------------------*
-* SMAUG 1.0 (C) 1994, 1995, 1996 by Derek Snider                           *
-* SMAUG code team: Thoric, Altrag, Blodkai, Narn, Haus,                    *
-* Scryn, Rennard, Swordbearer, Gorog, Grishnakh and Tricops                *
-* ------------------------------------------------------------------------ *
-* Merc 2.1 Diku Mud improvments copyright (C) 1992, 1993 by Michael        *
-* Chastain, Michael Quan, and Mitchell Tse.                                *
-* Original Diku Mud copyright (C) 1990, 1991 by Sebastian Hammer,          *
-* Michael Seifert, Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.     *
-* ------------------------------------------------------------------------ *
-*			     Mud constants module			   *
+                            STAR WARS REALITY 1.0
+    --------------------------------------------------------------------------
+    Star Wars Reality Code Additions and changes from the Smaug Code
+    copyright (c) 1997 by Sean Cooper
+    -------------------------------------------------------------------------
+    Starwars and Starwars Names copyright(c) Lucas Film Ltd.
+    --------------------------------------------------------------------------
+    SMAUG 1.0 (C) 1994, 1995, 1996 by Derek Snider
+    SMAUG code team: Thoric, Altrag, Blodkai, Narn, Haus,
+    Scryn, Rennard, Swordbearer, Gorog, Grishnakh and Tricops
+    ------------------------------------------------------------------------
+    Merc 2.1 Diku Mud improvments copyright (C) 1992, 1993 by Michael
+    Chastain, Michael Quan, and Mitchell Tse.
+    Original Diku Mud copyright (C) 1990, 1991 by Sebastian Hammer,
+    Michael Seifert, Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.
+    ------------------------------------------------------------------------
+                 Mud constants module
 ****************************************************************************/
 
 #include <sys/types.h>
@@ -34,118 +34,118 @@
 #define AA 95
 
 /*
- * Race table.
- */
+    Race table.
+*/
 const   struct  race_type      race_table     [MAX_RACE]  =
 {
- /* RACE NAME    MENU NAME    str sta int rec bra per  hit  mvm  LANGUAGE      */
- { "Marine",     "Human",     10, 10, 12, 10, 12, 10,  150, 100, LANG_MARINE  , "Defensive race with incredible firepower." },
- { "Alien",      "Xenomorph", 12, 10, 10, 12, 10, 10,  150, 200, LANG_ALIEN   , "Fastest, most potent close-range attacks." },
- { "Predator",   "Yautja",    10, 12, 10, 10, 10, 12,  300, 150, LANG_PREDATOR, "Deadly one-man armies. Very specialized." }
+    /* RACE NAME    MENU NAME    str sta int rec bra per  hit  mvm  LANGUAGE      */
+    { "Marine",     "Human",     10, 10, 12, 10, 12, 10,  150, 100, LANG_MARINE, "Defensive race with incredible firepower." },
+    { "Alien",      "Xenomorph", 12, 10, 10, 12, 10, 10,  150, 200, LANG_ALIEN, "Fastest, most potent close-range attacks." },
+    { "Predator",   "Yautja",    10, 12, 10, 10, 10, 12,  300, 150, LANG_PREDATOR, "Deadly one-man armies. Very specialized." }
 };
 
 /*
- * Curse words
- */
-char *  const   curse_table[] =
+    Curse words
+*/
+char*   const   curse_table[] =
 {
-  "fuck","shit","bitch","bastard","faggot","pussy","cock","asshole",
-  "tits", "cunt","penis", "piss","crap","ass","whore","slut","twat","jackass",
-  "anal", "dick","damn","hell", "prick", "balls", "dildo", "boner", "skank",
-  "cum", "sex", "$"
+    "fuck", "shit", "bitch", "bastard", "faggot", "pussy", "cock", "asshole",
+    "tits", "cunt", "penis", "piss", "crap", "ass", "whore", "slut", "twat", "jackass",
+    "anal", "dick", "damn", "hell", "prick", "balls", "dildo", "boner", "skank",
+    "cum", "sex", "$"
 };
 
 /*
- * Ignore words
- *  [Checks for these words first, so as to avoid filtering them]
- */
-char *  const   ignore_table[] =
+    Ignore words
+    [Checks for these words first, so as to avoid filtering them]
+*/
+char*   const   ignore_table[] =
 {
-  "hello", "mass", "assault", "damnumroll", "assess", "assign", "pussycat",
-  "pass", "scrap", "cockp", "lass", "cocker", "rass", "assa", "asso",
-  "assi", "sass", "assu", "cockt", "cockr", "shell", "shite", "encumb",
-  "asse", "$"
+    "hello", "mass", "assault", "damnumroll", "assess", "assign", "pussycat",
+    "pass", "scrap", "cockp", "lass", "cocker", "rass", "assa", "asso",
+    "assi", "sass", "assu", "cockt", "cockr", "shell", "shite", "encumb",
+    "asse", "$"
 };
 
 /*
- * Quick Radio Functions
- */
-char *  const   radio_set1[] =
+    Quick Radio Functions
+*/
+char*   const   radio_set1[] =
 {
-  "Standard Messages", // Title of Menu
-  "What the fuck are we gonna do now?",
-  "Whatever your going to do, do it fast!",
-  "Hey top, what's the op?",
-  "I need a Medic!",
-  "Friendly Fire! Friendly Fire!",
-  "Game over, man! Game over!",
-  "Fire in the hole!",
-  "$"
+    "Standard Messages", // Title of Menu
+    "What the fuck are we gonna do now?",
+    "Whatever your going to do, do it fast!",
+    "Hey top, what's the op?",
+    "I need a Medic!",
+    "Friendly Fire! Friendly Fire!",
+    "Game over, man! Game over!",
+    "Fire in the hole!",
+    "$"
 };
-char *  const   radio_set2[] =
+char*   const   radio_set2[] =
 {
-  "Command Messages", // Title of Menu
-  "Fall Back!",
-  "Need Backup!",
-  "Hold your ground!",
-  "Nobody touch nothin'",
-  "Box 'em in!",
-  "Report in, Marines.",
-  "Use short, controlled bursts!",
-  "Marines, we are LEAVING!",
-  "$"
+    "Command Messages", // Title of Menu
+    "Fall Back!",
+    "Need Backup!",
+    "Hold your ground!",
+    "Nobody touch nothin'",
+    "Box 'em in!",
+    "Report in, Marines.",
+    "Use short, controlled bursts!",
+    "Marines, we are LEAVING!",
+    "$"
 };
-char *  const   radio_set3[] =
+char*   const   radio_set3[] =
 {
-  "Confirmation Messages", // Title of Menu
-  "Acknowledged.",
-  "Affirmitive!",
-  "Negative.",
-  "On my way!",
-  "Be right there!",
-  "Are you crazy?",
-  "$"
+    "Confirmation Messages", // Title of Menu
+    "Acknowledged.",
+    "Affirmitive!",
+    "Negative.",
+    "On my way!",
+    "Be right there!",
+    "Are you crazy?",
+    "$"
 };
-char *  const   radio_set4[] =
+char*   const   radio_set4[] =
 {
-  "Report Messages", // Title of Menu
-  "Incoming Predator!",
-  "Incoming Alien!",
-  "Enemy Spotted!",
-  "We have incoming!",
-  "I'm surrounded!",
-  "There above us!",
-  "They cut the power!",
-  "All Clear.",
-  "$"
-};
-
-/*
- * Ship classes
- */
-char *  const   class_types[] =
-{
-  "Starfighter", "Transport", "Freighter", "Gunboat", "Corvette", "Frigate",
-  "Cruiser", "Battleship", "Battlestation", "Ship Platform", "Cloud Car",
-  "Ocean Ship", "Land Speeder", "Wheeled", "Land Crawler", "Walker"
+    "Report Messages", // Title of Menu
+    "Incoming Predator!",
+    "Incoming Alien!",
+    "Enemy Spotted!",
+    "We have incoming!",
+    "I'm surrounded!",
+    "There above us!",
+    "They cut the power!",
+    "All Clear.",
+    "$"
 };
 
 /*
- * Vehicle classes
- */
-char *  const   vclass_types[] =
+    Ship classes
+*/
+char*   const   class_types[] =
 {
-  "Cloud Car", "Ocean Ship", "Land Speeder", "Wheeled", "Land Crawler", "Walker"
+    "Starfighter", "Transport", "Freighter", "Gunboat", "Corvette", "Frigate",
+    "Cruiser", "Battleship", "Battlestation", "Ship Platform", "Cloud Car",
+    "Ocean Ship", "Land Speeder", "Wheeled", "Land Crawler", "Walker"
 };
 
-char *	const	npc_race	[MAX_NPC_RACE] =
+/*
+    Vehicle classes
+*/
+char*   const   vclass_types[] =
 {
- "Marine", "Alien", "Predator"
+    "Cloud Car", "Ocean Ship", "Land Speeder", "Wheeled", "Land Crawler", "Walker"
+};
+
+char*   const   npc_race    [MAX_NPC_RACE] =
+{
+    "Marine", "Alien", "Predator"
 };
 
 const int weapon_accuracy[MAX_WEAPON_TYPES] =
 {
-  0, 25, 10, 10, 30, 20, 0, -25, 0, 0, 25, -5, -10, 10, 25, 0, 0, 0, 0, 0, 25
+    0, 25, 10, 10, 30, 20, 0, -25, 0, 0, 25, -5, -10, 10, 25, 0, 0, 0, 0, 0, 25
 };
 
 const  struct    quote_type    quote_table [MAX_QUOTES] =
@@ -187,18 +187,18 @@ const  struct    quote_type    quote_table [MAX_QUOTES] =
 };
 
 /*
- * The skill and spell table.
- * Slot numbers must never be changed as they appear in #OBJECTS sections.
- */
-#define SLOT(n)	n
+    The skill and spell table.
+    Slot numbers must never be changed as they appear in #OBJECTS sections.
+*/
+#define SLOT(n) n
 #define LI LEVEL_IMMORTAL
 
-#undef AM 
-#undef AC 
-#undef AT 
-#undef AW 
-#undef AV 
-#undef AD 
+#undef AM
+#undef AC
+#undef AT
+#undef AW
+#undef AV
+#undef AD
 #undef AR
 #undef AA
 
