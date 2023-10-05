@@ -672,7 +672,6 @@ void do_chat( CHAR_DATA* ch, char* argument )
 
 void do_radio( CHAR_DATA* ch, char* argument )
 {
-    char buf[MAX_STRING_LENGTH];
     bool silent = FALSE;
 
     if ( ch->hit < 0 )
@@ -3503,7 +3502,6 @@ void update_swarm( void )
 {
     DESCRIPTOR_DATA* d;
     CHAR_DATA* ch;
-    int count = 0;
 
     /* Only players need to be updated, so skim descriptors */
     for ( d = first_descriptor; d; d = d->next )
@@ -3538,9 +3536,7 @@ void update_swarm( void )
 int count_friends( CHAR_DATA* ch )
 {
     EXIT_DATA* pexit = NULL;
-    CHAR_DATA* rch = NULL;
     int count = 0;
-    int race = 0;
 
     if ( !ch )
         return 0;
@@ -3548,7 +3544,6 @@ int count_friends( CHAR_DATA* ch )
     if ( !ch->in_room )
         return 0;
 
-    race = ch->race;
     count = count + _count_friends( ch->in_room, ch );
 
     for ( pexit = ch->in_room->first_exit; pexit; pexit = pexit->next )

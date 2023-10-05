@@ -808,7 +808,7 @@ char* copy_buffer( CHAR_DATA* ch )
         strcpy( tmp, ch->editor->line[x] );
         len = strlen( tmp );
 
-        if ( tmp && tmp[len - 1] == '~' )
+        if ( !NULLSTR( tmp ) && tmp[len - 1] == '~' )
             tmp[len - 1] = '\0';
         else
             strcat( tmp, "\n\r" );
@@ -1135,9 +1135,6 @@ void do_mset( CHAR_DATA* ch, char* argument )
     char arg2 [MAX_INPUT_LENGTH];
     char arg3 [MAX_INPUT_LENGTH];
     char buf  [MAX_STRING_LENGTH];
-    char outbuf[MAX_STRING_LENGTH];
-    int  num, size, plus;
-    char char1, char2;
     CHAR_DATA* victim;
     int value, i;
     int minattr, maxattr;
@@ -2304,7 +2301,6 @@ void do_oset( CHAR_DATA* ch, char* argument )
     char arg2 [MAX_INPUT_LENGTH];
     char arg3 [MAX_INPUT_LENGTH];
     char buf  [MAX_STRING_LENGTH];
-    char outbuf  [MAX_STRING_LENGTH];
     OBJ_DATA* obj, *tmpobj;
     EXTRA_DESCR_DATA* ed;
     bool lockobj;
@@ -2903,7 +2899,7 @@ void do_oset( CHAR_DATA* ch, char* argument )
         int bitv;
         argument = one_argument( argument, arg2 );
 
-        if ( !arg2 || arg2[0] == '\0' || !argument || argument[0] == 0 )
+        if ( NULLSTR( arg2 ) || NULLSTR( argument ) )
         {
             send_to_char( "Usage: oset <object> affect <field> <value>\n\r", ch );
             send_to_char( "Affect Fields:\n\r", ch );
@@ -3030,7 +3026,7 @@ void do_oset( CHAR_DATA* ch, char* argument )
 
     if ( !str_cmp( arg2, "ed" ) )
     {
-        if ( !arg3 || arg3[0] == '\0' )
+        if ( NULLSTR( arg3 ) )
         {
             send_to_char( "Syntax: oset <object> ed <keywords>\n\r",
                           ch );
@@ -3111,7 +3107,7 @@ void do_oset( CHAR_DATA* ch, char* argument )
 
     if ( !str_cmp( arg2, "rmed" ) )
     {
-        if ( !arg3 || arg3[0] == '\0' )
+        if ( NULLSTR( arg3 ) )
         {
             send_to_char( "Syntax: oset <object> rmed <keywords>\n\r", ch );
             return;
@@ -3350,14 +3346,13 @@ int get_dir( char* txt )
 
 char* sprint_reset( CHAR_DATA* ch, RESET_DATA* pReset, sh_int num, bool rlist )
 {
-    static char buf[MAX_STRING_LENGTH];
-    char mobname[MAX_STRING_LENGTH];
-    char roomname[MAX_STRING_LENGTH];
-    char objname[MAX_STRING_LENGTH];
+    static char buf[MSL];
+    char mobname[MIL], roomname[MIL], objname[MIL];
     static ROOM_INDEX_DATA* room;
     static OBJ_INDEX_DATA* obj, *obj2;
     static MOB_INDEX_DATA* mob;
     int rvnum;
+    strncpy( buf, "", MSL );
 
     if ( ch->in_room )
         rvnum = ch->in_room->vnum;
@@ -3373,7 +3368,7 @@ char* sprint_reset( CHAR_DATA* ch, RESET_DATA* pReset, sh_int num, bool rlist )
     switch ( pReset->command )
     {
         default:
-            sprintf( buf, "%2d) *** BAD RESET: %c %d %d %d %d ***\n\r",
+            snprintf( buf, MSL, "%2d) *** BAD RESET: %c %d %d %d %d ***\n\r",
                      num,
                      pReset->command,
                      pReset->extra,
@@ -3387,16 +3382,16 @@ char* sprint_reset( CHAR_DATA* ch, RESET_DATA* pReset, sh_int num, bool rlist )
             room = get_room_index( pReset->arg3 );
 
             if ( mob )
-                strcpy( mobname, mob->player_name );
+                strncpy( mobname, mob->player_name, MIL );
             else
-                strcpy( mobname, "Mobile: *BAD VNUM*" );
+                strncpy( mobname, "Mobile: *BAD VNUM*", MIL );
 
             if ( room )
-                strcpy( roomname, room->name );
+                strncpy( roomname, room->name, MIL );
             else
-                strcpy( roomname, "Room: *BAD VNUM*" );
+                strncpy( roomname, "Room: *BAD VNUM*", MIL );
 
-            sprintf( buf, "%2d) %s (%d) -> %s (%d) [%d]\n\r",
+            snprintf( buf, MSL, "%2d) %s (%d) -> %s (%d) [%d]\n\r",
                      num,
                      mobname,
                      pReset->arg1,
@@ -3407,14 +3402,14 @@ char* sprint_reset( CHAR_DATA* ch, RESET_DATA* pReset, sh_int num, bool rlist )
 
         case 'E':
             if ( !mob )
-                strcpy( mobname, "* ERROR: NO MOBILE! *" );
+                strncpy( mobname, "* ERROR: NO MOBILE! *", MIL );
 
             if ( ( obj = get_obj_index( pReset->arg1 ) ) == NULL )
-                strcpy( objname, "Object: *BAD VNUM*" );
+                strncpy( objname, "Object: *BAD VNUM*", MIL );
             else
-                strcpy( objname, obj->name );
+                strncpy( objname, obj->name, MIL );
 
-            sprintf( buf, "%2d) %s (%d) -> %s (%s) [%d]\n\r",
+            snprintf( buf, MSL, "%2d) %s (%d) -> %s (%s) [%d]\n\r",
                      num,
                      objname,
                      pReset->arg1,
@@ -3426,11 +3421,11 @@ char* sprint_reset( CHAR_DATA* ch, RESET_DATA* pReset, sh_int num, bool rlist )
         case 'H':
             if ( pReset->arg1 > 0
                     &&  ( obj = get_obj_index( pReset->arg1 ) ) == NULL )
-                strcpy( objname, "Object: *BAD VNUM*" );
+                strncpy( objname, "Object: *BAD VNUM*", MIL );
             else if ( !obj )
-                strcpy( objname, "Object: *NULL obj*" );
+                strncpy( objname, "Object: *NULL obj*", MIL );
 
-            sprintf( buf, "%2d) Hide %s (%d)\n\r",
+            snprintf( buf, MSL, "%2d) Hide %s (%d)\n\r",
                      num,
                      objname,
                      obj ? obj->vnum : pReset->arg1 );
@@ -3438,14 +3433,14 @@ char* sprint_reset( CHAR_DATA* ch, RESET_DATA* pReset, sh_int num, bool rlist )
 
         case 'G':
             if ( !mob )
-                strcpy( mobname, "* ERROR: NO MOBILE! *" );
+                strncpy( mobname, "* ERROR: NO MOBILE! *", MIL );
 
             if ( ( obj = get_obj_index( pReset->arg1 ) ) == NULL )
-                strcpy( objname, "Object: *BAD VNUM*" );
+                strncpy( objname, "Object: *BAD VNUM*", MIL );
             else
-                strcpy( objname, obj->name );
+                strncpy( objname, obj->name, MIL );
 
-            sprintf( buf, "%2d) %s (%d) -> %s (carry) [%d]\n\r",
+            snprintf( buf, MSL, "%2d) %s (%d) -> %s (carry) [%d]\n\r",
                      num,
                      objname,
                      pReset->arg1,
@@ -3455,18 +3450,18 @@ char* sprint_reset( CHAR_DATA* ch, RESET_DATA* pReset, sh_int num, bool rlist )
 
         case 'O':
             if ( ( obj = get_obj_index( pReset->arg1 ) ) == NULL )
-                strcpy( objname, "Object: *BAD VNUM*" );
+                strncpy( objname, "Object: *BAD VNUM*", MIL );
             else
-                strcpy( objname, obj->name );
+                strncpy( objname, obj->name, MIL );
 
             room = get_room_index( pReset->arg3 );
 
             if ( !room )
-                strcpy( roomname, "Room: *BAD VNUM*" );
+                strncpy( roomname, "Room: *BAD VNUM*", MIL );
             else
-                strcpy( roomname, room->name );
+                strncpy( roomname, room->name, MIL );
 
-            sprintf( buf, "%2d) (object) %s (%d) -> %s (%d) [%d]\n\r",
+            snprintf( buf, MSL, "%2d) (object) %s (%d) -> %s (%d) [%d]\n\r",
                      num,
                      objname,
                      pReset->arg1,
@@ -3477,19 +3472,19 @@ char* sprint_reset( CHAR_DATA* ch, RESET_DATA* pReset, sh_int num, bool rlist )
 
         case 'P':
             if ( ( obj2 = get_obj_index( pReset->arg1 ) ) == NULL )
-                strcpy( objname, "Object1: *BAD VNUM*" );
+                strncpy( objname, "Object1: *BAD VNUM*", MIL );
             else
-                strcpy( objname, obj2->name );
+                strncpy( objname, obj2->name, MIL );
 
             if ( pReset->arg3 > 0
                     &&  ( obj = get_obj_index( pReset->arg3 ) ) == NULL )
-                strcpy( roomname, "Object2: *BAD VNUM*" );
+                strncpy( roomname, "Object2: *BAD VNUM*", MIL );
             else if ( !obj )
-                strcpy( roomname, "Object2: *NULL obj*" );
+                strncpy( roomname, "Object2: *NULL obj*", MIL );
             else
-                strcpy( roomname, obj->name );
+                strncpy( roomname, obj->name, MIL );
 
-            sprintf( buf, "%2d) (Put) %s (%d) -> %s (%d) [%d]\n\r",
+            snprintf( buf, MSL, "%2d) (Put) %s (%d) -> %s (%d) [%d]\n\r",
                      num,
                      objname,
                      pReset->arg1,
@@ -3504,14 +3499,14 @@ char* sprint_reset( CHAR_DATA* ch, RESET_DATA* pReset, sh_int num, bool rlist )
 
             if ( ( room = get_room_index( pReset->arg1 ) ) == NULL )
             {
-                strcpy( roomname, "Room: *BAD VNUM*" );
-                sprintf( objname, "%s (no exit)",
+                strncpy( roomname, "Room: *BAD VNUM*", MIL );
+                snprintf( objname, MIL, "%s (no exit)",
                          dir_name[pReset->arg2] );
             }
             else
             {
-                strcpy( roomname, room->name );
-                sprintf( objname, "%s%s",
+                strncpy( roomname, room->name, MIL );
+                snprintf( objname, MIL, "%s%s",
                          dir_name[pReset->arg2],
                          get_exit( room, pReset->arg2 ) ? "" : " (NO EXIT!)" );
             }
@@ -3519,23 +3514,23 @@ char* sprint_reset( CHAR_DATA* ch, RESET_DATA* pReset, sh_int num, bool rlist )
             switch ( pReset->arg3 )
             {
                 default:
-                    strcpy( mobname, "(* ERROR *)" );
+                    strncpy( mobname, "(* ERROR *)", MIL );
                     break;
 
                 case 0:
-                    strcpy( mobname, "Open" );
+                    strncpy( mobname, "Open", MIL );
                     break;
 
                 case 1:
-                    strcpy( mobname, "Close" );
+                    strncpy( mobname, "Close", MIL );
                     break;
 
                 case 2:
-                    strcpy( mobname, "Close and lock" );
+                    strncpy( mobname, "Close and lock", MIL );
                     break;
             }
 
-            sprintf( buf, "%2d) %s [%d] the %s [%d] door %s (%d)\n\r",
+            snprintf( buf, MSL, "%2d) %s [%d] the %s [%d] door %s (%d)\n\r",
                      num,
                      mobname,
                      pReset->arg3,
@@ -3547,11 +3542,11 @@ char* sprint_reset( CHAR_DATA* ch, RESET_DATA* pReset, sh_int num, bool rlist )
 
         case 'R':
             if ( ( room = get_room_index( pReset->arg1 ) ) == NULL )
-                strcpy( roomname, "Room: *BAD VNUM*" );
+                strncpy( roomname, "Room: *BAD VNUM*", MIL );
             else
-                strcpy( roomname, room->name );
+                strncpy( roomname, room->name, MIL );
 
-            sprintf( buf, "%2d) Randomize exits 0 to %d -> %s (%d)\n\r",
+            snprintf( buf, MSL, "%2d) Randomize exits 0 to %d -> %s (%d)\n\r",
                      num,
                      pReset->arg2,
                      roomname,
@@ -3559,7 +3554,7 @@ char* sprint_reset( CHAR_DATA* ch, RESET_DATA* pReset, sh_int num, bool rlist )
             break;
 
         case 'T':
-            sprintf( buf, "%2d) TRAP: %d %d %d %d\n\r",
+            snprintf( buf, MSL, "%2d) TRAP: %d %d %d %d\n\r",
                      num,
                      pReset->extra,
                      pReset->arg1,
@@ -4410,7 +4405,7 @@ void do_redit( CHAR_DATA* ch, char* argument )
         argument = one_argument( argument, arg2 );
         argument = one_argument( argument, arg3 );
 
-        if ( !arg2 || arg2[0] == '\0' )
+        if ( NULLSTR( arg2 ) )
         {
             send_to_char( "Create, change or remove an exit.\n\r", ch );
             send_to_char( "Usage: redit exit <dir> [room] [flags] [key] [keywords]\n\r", ch );
@@ -4436,7 +4431,7 @@ void do_redit( CHAR_DATA* ch, char* argument )
                 break;
         }
 
-        if ( !arg3 || arg3[0] == '\0' )
+        if ( NULLSTR( arg3 ) )
             evnum = 0;
         else
             evnum = atoi( arg3 );
@@ -4553,15 +4548,15 @@ void do_redit( CHAR_DATA* ch, char* argument )
     if ( !str_cmp( arg, "bexit" ) )
     {
         EXIT_DATA* xit, *rxit;
-        char tmpcmd[MAX_INPUT_LENGTH];
+        char tmpcmd[MSL];
         ROOM_INDEX_DATA* tmploc;
         int vnum, exnum;
-        char rvnum[MAX_INPUT_LENGTH];
+        char rvnum[MIL];
         bool numnotdir;
         argument = one_argument( argument, arg2 );
         argument = one_argument( argument, arg3 );
 
-        if ( !arg2 || arg2[0] == '\0' )
+        if ( NULLSTR( arg2 ) )
         {
             send_to_char( "Create, change or remove a two-way exit.\n\r", ch );
             send_to_char( "Usage: redit bexit <dir> [room] [flags] [key] [keywords]\n\r", ch );
@@ -4614,7 +4609,7 @@ void do_redit( CHAR_DATA* ch, char* argument )
                 rxit = NULL;
         }
 
-        sprintf( tmpcmd, "exit %s %s %s", arg2, arg3, argument );
+        snprintf( tmpcmd, MSL, "exit %s %s %s", arg2, arg3, argument );
         do_redit( ch, tmpcmd );
 
         if ( numnotdir )
@@ -4637,7 +4632,7 @@ void do_redit( CHAR_DATA* ch, char* argument )
 
         if ( vnum )
         {
-            sprintf( tmpcmd, "%d redit exit %d %s %s",
+            snprintf( tmpcmd, MSL, "%d redit exit %d %s %s",
                      vnum,
                      rev_dir[edir],
                      rvnum,
@@ -4652,7 +4647,7 @@ void do_redit( CHAR_DATA* ch, char* argument )
     {
         argument = one_argument( argument, arg2 );
 
-        if ( !arg2 || arg2[0] == '\0' )
+        if ( NULLSTR( arg2 ) )
         {
             send_to_char( "Set the distance (in rooms) between this room, and the destination room.\n\r", ch );
             send_to_char( "Usage: redit exdistance <dir> [distance]\n\r", ch );
@@ -4685,7 +4680,7 @@ void do_redit( CHAR_DATA* ch, char* argument )
     {
         argument = one_argument( argument, arg2 );
 
-        if ( !arg2 || arg2[0] == '\0' )
+        if ( NULLSTR( arg2 ) )
         {
             send_to_char( "Create or clear a description for an exit.\n\r", ch );
             send_to_char( "Usage: redit exdesc <dir> [description]\n\r", ch );
@@ -4711,7 +4706,7 @@ void do_redit( CHAR_DATA* ch, char* argument )
                 xit->description = STRALLOC( "" );
             else
             {
-                sprintf( buf, "%s\n\r", argument );
+                snprintf( buf, MSL, "%s\n\r", argument );
                 xit->description = STRALLOC( buf );
             }
 
@@ -4985,7 +4980,7 @@ void edit_buffer( CHAR_DATA* ch, char* argument )
             char word1[MAX_INPUT_LENGTH];
             char word2[MAX_INPUT_LENGTH];
             char* sptr, *wptr, *lwptr;
-            int x, count, wordln, word2ln, lineln;
+            int x, count, wordln, lineln;
             sptr = one_argument( argument, word1 );
             sptr = one_argument( sptr, word1 );
             sptr = one_argument( sptr, word2 );
@@ -5004,7 +4999,6 @@ void edit_buffer( CHAR_DATA* ch, char* argument )
 
             count = 0;
             wordln = strlen( word1 );
-            word2ln = strlen( word2 );
             ch_printf( ch, "Replacing all occurrences of %s with %s...\n\r", word1, word2 );
 
             for ( x = edit->on_line; x < edit->numlines; x++ )
@@ -6569,7 +6563,7 @@ void do_aset( CHAR_DATA* ch, char* argument )
     char arg1[MAX_INPUT_LENGTH];
     char arg2[MAX_INPUT_LENGTH];
     char arg3[MAX_INPUT_LENGTH];
-    bool proto, found;
+    bool found;
     int vnum, value;
     argument = one_argument( argument, arg1 );
     argument = one_argument( argument, arg2 );
@@ -6586,7 +6580,6 @@ void do_aset( CHAR_DATA* ch, char* argument )
     }
 
     found = FALSE;
-    proto = FALSE;
 
     for ( tarea = first_area; tarea; tarea = tarea->next )
         if ( !str_cmp( tarea->filename, arg1 ) )
@@ -6600,7 +6593,6 @@ void do_aset( CHAR_DATA* ch, char* argument )
             if ( !str_cmp( tarea->filename, arg1 ) )
             {
                 found = TRUE;
-                proto = TRUE;
                 break;
             }
 
@@ -6812,7 +6804,7 @@ void do_abackup( CHAR_DATA* ch, char* argument )
     char buf[MAX_STRING_LENGTH];
     char arg1[MAX_INPUT_LENGTH];
     char arg2[MAX_INPUT_LENGTH];
-    bool proto, found;
+    bool found;
     argument = one_argument( argument, arg1 );
     argument = one_argument( argument, arg2 );
 
@@ -6831,7 +6823,6 @@ void do_abackup( CHAR_DATA* ch, char* argument )
     }
 
     found = FALSE;
-    proto = FALSE;
 
     for ( tarea = first_area; tarea; tarea = tarea->next )
         if ( !str_cmp( tarea->filename, arg1 ) )
@@ -6845,7 +6836,6 @@ void do_abackup( CHAR_DATA* ch, char* argument )
             if ( !str_cmp( tarea->filename, arg1 ) )
             {
                 found = TRUE;
-                proto = TRUE;
                 break;
             }
 
@@ -8279,18 +8269,18 @@ void do_mdelete( CHAR_DATA* ch, char* argument )
 
 void do_rdig( CHAR_DATA* ch, char* argument )
 {
-    char arg [MAX_INPUT_LENGTH];
-    char buf [MAX_STRING_LENGTH];
+    char arg [MIL];
+    char buf [MSL];
     ROOM_INDEX_DATA* location, *ch_location;
     AREA_DATA*           pArea;
     int         vnum, edir;
-    char tmpcmd[MAX_INPUT_LENGTH];
+    char tmpcmd[MSL];
     EXIT_DATA*       xit;
     set_char_color( AT_PLAIN, ch );
     ch_location = ch->in_room;
     argument = one_argument( argument, arg );
 
-    if ( !arg || arg[0] == '\0' )
+    if ( NULLSTR( arg ) )
     {
         send_to_char( "Dig out a new room or dig into an existing room.\n\r", ch );
         send_to_char( "Usage: rdig <dir>\n\r", ch );
@@ -8322,7 +8312,7 @@ void do_rdig( CHAR_DATA* ch, char* argument )
             return;
         }
 
-        sprintf( buf, "Digging out room %d to the %s.\r\n", vnum, arg );
+        snprintf( buf, MSL, "Digging out room %d to the %s.\r\n", vnum, arg );
         send_to_char( buf, ch );
         location = make_room( vnum );
 
@@ -8333,14 +8323,14 @@ void do_rdig( CHAR_DATA* ch, char* argument )
         }
 
         location->area = ch->pcdata->area;
-        sprintf( tmpcmd, "bexit %s %d", arg, vnum );
+        snprintf( tmpcmd, MSL, "bexit %s %d", arg, vnum );
         do_redit( ch, tmpcmd );
     }
     else
     {
         vnum = xit->vnum;
         location = get_room_index( vnum );
-        sprintf( buf, "Digging into room %d to the %s.\r\n", vnum, arg );
+        snprintf( buf, MSL, "Digging into room %d to the %s.\r\n", vnum, arg );
         send_to_char( buf, ch );
     }
 
@@ -8842,12 +8832,11 @@ void rcopy( ROOM_INDEX_DATA* target, ROOM_INDEX_DATA* room )
 
 void do_rpcopy( CHAR_DATA* ch, char* argument )
 {
-    char buf  [MAX_INPUT_LENGTH];
     char arg1 [MAX_INPUT_LENGTH];
     char arg2 [MAX_INPUT_LENGTH];
     ROOM_INDEX_DATA* from = NULL, *to = NULL;
-    MPROG_DATA* mprog, *mprg, *mprg_next;
-    int value, mptype = 0, cnt = 0, fault = 0;
+    MPROG_DATA* mprog, *mprg;
+    int cnt = 0, fault = 0;
 
     if ( IS_NPC( ch ) )
     {

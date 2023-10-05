@@ -378,12 +378,12 @@ ARENA_DATA* arena_from_vnum( int vnum )
 */
 void do_makearena( CHAR_DATA* ch, char* argument )
 {
-    char arg[MAX_INPUT_LENGTH];
-    char filename[256];
+    char arg[MIL];
+    char filename[MIL];
     ARENA_DATA* arena;
     argument = one_argument( argument, arg );
 
-    if ( !argument || argument[0] == '\0' )
+    if ( NULLSTR( argument ) )
     {
         send_to_char( "Usage: makearena <filename> <arena name>\n\r", ch );
         send_to_char( " IE: makearena 'MACompoundRush' USCM Compound Rush\n\r", ch );
@@ -399,7 +399,7 @@ void do_makearena( CHAR_DATA* ch, char* argument )
         arena->id = arena->prev->id + 1;
 
     arena->name            = STRALLOC( argument );
-    sprintf( filename, "%s", arg );
+    strncpy( filename, arg, MIL );
     arena->filename = STRALLOC( filename );
     save_arena( arena );
     write_arena_list();
@@ -719,12 +719,10 @@ void set_arena( ARENA_DATA* arena )
 
 void empty_arena( ARENA_DATA* arena )
 {
-    char buf[MAX_STRING_LENGTH];
     ROOM_INDEX_DATA* room;
-    AREA_DATA* area = NULL;
     CHAR_DATA* victim, *vnext;
     OBJ_DATA*  object, *onext;
-    int vnum, num;
+    int vnum;
 
     for ( vnum = arena->firstroom; vnum <= arena->lastroom; vnum++ )
     {
@@ -912,7 +910,6 @@ void do_deploy( CHAR_DATA* ch, char* argument )
 {
     char buf[MAX_STRING_LENGTH];
     ROOM_INDEX_DATA* room;
-    ARENA_DATA* arena;
     int tar = 0, vnum = 0, count = 0;
 
     if ( is_spectator( ch ) )

@@ -1604,7 +1604,6 @@ void do_ostat( CHAR_DATA* ch, char* argument )
 void do_mstat( CHAR_DATA* ch, char* argument )
 {
     char arg[MAX_INPUT_LENGTH];
-    char buf[MAX_INPUT_LENGTH];
     AFFECT_DATA* paf;
     CHAR_DATA* victim;
     SKILLTYPE* skill;
@@ -1894,7 +1893,7 @@ void do_gwhere( CHAR_DATA* ch, char* argument )
     char arg2[MAX_INPUT_LENGTH];
     char arg3[MAX_INPUT_LENGTH];
     DESCRIPTOR_DATA* d;
-    bool found = FALSE, pmobs = FALSE;
+    bool pmobs = FALSE;
     int low = 1, high = 65, count = 0;
     argument = one_argument( argument, arg1 );
     argument = one_argument( argument, arg2 );
@@ -1932,7 +1931,6 @@ void do_gwhere( CHAR_DATA* ch, char* argument )
                     &&   can_see( ch, victim )
                     &&   victim->top_level >= low && victim->top_level <= high )
             {
-                found = TRUE;
                 pager_printf( ch, "(%2d) %-12.12s   [%-5d - %-19.19s]   %-25.25s\n\r",
                               victim->top_level, victim->name, victim->in_room->vnum, victim->in_room->area->name, victim->in_room->name );
                 count++;
@@ -1945,7 +1943,6 @@ void do_gwhere( CHAR_DATA* ch, char* argument )
                     &&   victim->in_room && can_see( ch, victim )
                     &&   victim->top_level >= low && victim->top_level <= high )
             {
-                found = TRUE;
                 pager_printf( ch, "(%2d) %-12.12s   [%-5d - %-19.19s]   %-25.25s\n\r",
                               victim->top_level, victim->name, victim->in_room->vnum, victim->in_room->area->name, victim->in_room->name );
                 count++;
@@ -2735,15 +2732,13 @@ void do_low_purge( CHAR_DATA* ch, char* argument )
 
 void do_balzhur( CHAR_DATA* ch, char* argument )
 {
-    char arg[MAX_INPUT_LENGTH];
-    char buf[MAX_STRING_LENGTH];
-    char buf2[MAX_STRING_LENGTH];
+    char arg[MIL], buf[MSL], buf2[SUPER_MSL], buf3[SUB_MSL];
     CHAR_DATA* victim;
     AREA_DATA* pArea;
     int sn;
     argument = one_argument( argument, arg );
 
-    if ( arg[0] == '\0' )
+    if ( NULLSTR( arg ) )
     {
         send_to_char( "Who is deserving of such a fate?\n\r", ch );
         return;
@@ -2772,7 +2767,7 @@ void do_balzhur( CHAR_DATA* ch, char* argument )
     send_to_char( "Balzhur sneers at you evilly, then vanishes in a puff of smoke.\n\r", ch );
     set_char_color( AT_IMMORT, victim );
     send_to_char( "You hear an ungodly sound in the distance that makes your blood run cold!\n\r", victim );
-    sprintf( buf, "Balzhur screams, 'You are MINE %s!!!'", victim->name );
+    snprintf( buf, MSL, "Balzhur screams, 'You are MINE %s!!!'", victim->name );
     echo_to_all( AT_IMMORT, buf, ECHOTAR_ALL );
     victim->top_level = 1;
     victim->trust    = 0;
@@ -2792,22 +2787,22 @@ void do_balzhur( CHAR_DATA* ch, char* argument )
     {
         ch_printf( ch, "Unknown error #%d - %s (immortal data).  Report to Thoric\n\r",
                    errno, strerror( errno ) );
-        sprintf( buf2, "%s balzhuring %s", ch->name, buf );
+        snprintf( buf2, SUPER_MSL, "%s balzhuring %s", ch->name, buf );
         perror( buf2 );
     }
 
-    sprintf( buf2, "%s.are", capitalize( arg ) );
+    snprintf( buf3, SUB_MSL, "%s.are", capitalize( arg ) );
 
     for ( pArea = first_build; pArea; pArea = pArea->next )
-        if ( !strcmp( pArea->filename, buf2 ) )
+        if ( !strcmp( pArea->filename, buf3 ) )
         {
-            sprintf( buf, "%s%s", BUILD_DIR, buf2 );
+            snprintf( buf, MSL, "%s%s", BUILD_DIR, buf3 );
 
             if ( IS_SET( pArea->status, AREA_LOADED ) )
                 fold_area( pArea, buf, FALSE );
 
             close_area( pArea );
-            sprintf( buf2, "%s.bak", buf );
+            snprintf( buf2, SUPER_MSL, "%s.bak", buf );
             set_char_color( AT_RED, ch ); /* Log message changes colors */
 
             if ( !rename( buf, buf2 ) )
@@ -2816,7 +2811,7 @@ void do_balzhur( CHAR_DATA* ch, char* argument )
             {
                 ch_printf( ch, "Unknown error #%d - %s (area data).  Report to Thoric.\n\r",
                            errno, strerror( errno ) );
-                sprintf( buf2, "%s destroying %s", ch->name, buf );
+                snprintf( buf2, SUPER_MSL, "%s destroying %s", ch->name, buf );
                 perror( buf2 );
             }
         }
@@ -3939,7 +3934,7 @@ void do_invis( CHAR_DATA* ch, char* argument )
     */
     argument = one_argument( argument, arg );
 
-    if ( arg && arg[0] != '\0' )
+    if ( !NULLSTR( arg ) )
     {
         if ( !is_number( arg ) )
         {
@@ -4296,7 +4291,6 @@ void do_loadup( CHAR_DATA* ch, char* argument )
     char fname[1024];
     char name[256];
     struct stat fst;
-    bool loaded;
     DESCRIPTOR_DATA* d;
     int old_room_vnum;
     char buf[MAX_STRING_LENGTH];
@@ -4320,7 +4314,7 @@ void do_loadup( CHAR_DATA* ch, char* argument )
         d->connected = CON_GET_NAME;
         d->outsize = 2000;
         CREATE( d->outbuf, char, d->outsize );
-        loaded = load_char_obj( d, name, FALSE );
+        load_char_obj( d, name, FALSE );
         add_char( d->character );
         old_room_vnum = d->character->in_room->vnum;
         char_to_room( d->character, ch->in_room );
@@ -5106,9 +5100,7 @@ void close_area( AREA_DATA* pArea )
 void do_destroy( CHAR_DATA* ch, char* argument )
 {
     CHAR_DATA* victim;
-    char buf[MAX_STRING_LENGTH];
-    char buf2[MAX_STRING_LENGTH];
-    char arg[MAX_INPUT_LENGTH];
+    char buf[MSL], buf2[SUPER_MSL], buf3[SUB_MSL], arg[MIL];
     one_argument( argument, arg );
 
     if ( arg[0] == '\0' )
@@ -5155,7 +5147,7 @@ void do_destroy( CHAR_DATA* ch, char* argument )
         AREA_DATA* pArea;
         set_char_color( AT_RED, ch );
         send_to_char( "Player destroyed.  Pfile saved in backup directory.\n\r", ch );
-        sprintf( buf, "%s%s", GOD_DIR, capitalize( arg ) );
+        snprintf( buf, MSL, "%s%s", GOD_DIR, capitalize( arg ) );
 
         if ( !remove( buf ) )
             send_to_char( "Player's immortal data destroyed.\n\r", ch );
@@ -5163,22 +5155,22 @@ void do_destroy( CHAR_DATA* ch, char* argument )
         {
             ch_printf( ch, "Unknown error #%d - %s (immortal data).  Report to Thoric.\n\r",
                        errno, strerror( errno ) );
-            sprintf( buf2, "%s destroying %s", ch->name, buf );
+            snprintf( buf2, SUPER_MSL, "%s destroying %s", ch->name, buf );
             perror( buf2 );
         }
 
-        sprintf( buf2, "%s.are", capitalize( arg ) );
+        snprintf( buf3, SUB_MSL, "%s.are", capitalize( arg ) );
 
         for ( pArea = first_build; pArea; pArea = pArea->next )
-            if ( !strcmp( pArea->filename, buf2 ) )
+            if ( !strcmp( pArea->filename, buf3 ) )
             {
-                sprintf( buf, "%s%s", BUILD_DIR, buf2 );
+                snprintf( buf, MSL, "%s%s", BUILD_DIR, buf3 );
 
                 if ( IS_SET( pArea->status, AREA_LOADED ) )
                     fold_area( pArea, buf, FALSE );
 
                 close_area( pArea );
-                sprintf( buf2, "%s.bak", buf );
+                snprintf( buf2, SUPER_MSL, "%s.bak", buf );
                 set_char_color( AT_RED, ch ); /* Log message changes colors */
 
                 if ( !rename( buf, buf2 ) )
@@ -5187,7 +5179,7 @@ void do_destroy( CHAR_DATA* ch, char* argument )
                 {
                     ch_printf( ch, "Unknown error #%d - %s (area data).  Report to Thoric.\n\r",
                                errno, strerror( errno ) );
-                    sprintf( buf2, "%s destroying %s", ch->name, buf );
+                    snprintf( buf2, SUPER_MSL, "%s destroying %s", ch->name, buf );
                     perror( buf2 );
                 }
             }
@@ -5202,7 +5194,7 @@ void do_destroy( CHAR_DATA* ch, char* argument )
         set_char_color( AT_WHITE, ch );
         ch_printf( ch, "Unknown error #%d - %s.  Report to Thoric.\n\r",
                    errno, strerror( errno ) );
-        sprintf( buf, "%s destroying %s", ch->name, arg );
+        snprintf( buf, MSL, "%s destroying %s", ch->name, arg );
         perror( buf );
     }
 
@@ -5254,17 +5246,18 @@ const char* name_expand ( CHAR_DATA* ch )
 {
     int count = 1;
     CHAR_DATA* rch;
-    char name[MAX_INPUT_LENGTH]; /*  HOPEFULLY no mob has a name longer than THAT */
-    static char outbuf[MAX_INPUT_LENGTH];
+    char name[MIL]; /*  HOPEFULLY no mob has a name longer than THAT */
+    static char outbuf[MSL];
+    strncpy( outbuf, "", MSL );
 
     if ( !IS_NPC( ch ) )
         return ch->name;
 
     one_argument ( ch->name, name ); /* copy the first word into name */
 
-    if ( !name[0] ) /* weird mob .. no keywords */
+    if ( NULLSTR( name ) ) /* weird mob .. no keywords */
     {
-        strcpy ( outbuf, "" ); /* Do not return NULL, just an empty buffer */
+        strncpy( outbuf, "", MSL ); /* Do not return NULL, just an empty buffer */
         return outbuf;
     }
 
@@ -5274,7 +5267,7 @@ const char* name_expand ( CHAR_DATA* ch )
         if ( is_name ( name, rch->name ) )
             count++;
 
-    sprintf ( outbuf, "%d.%s", count, name );
+    snprintf( outbuf, MSL, "%d.%s", count, name );
     return outbuf;
 }
 
@@ -6122,14 +6115,13 @@ void add_social( SOCIALTYPE* social )
 void do_sedit( CHAR_DATA* ch, char* argument )
 {
     SOCIALTYPE* social;
-    char arg1[MAX_INPUT_LENGTH];
-    char arg2[MAX_INPUT_LENGTH];
+    char arg1[MIL], arg2[SUPER_MIL];
     smash_tilde( argument );
     argument = one_argument( argument, arg1 );
     argument = one_argument( argument, arg2 );
     set_char_color( AT_SOCIAL, ch );
 
-    if ( arg1[0] == '\0' )
+    if ( NULLSTR( arg1 ) )
     {
         send_to_char( "Syntax: sedit <social> [field]\n\r", ch );
         send_to_char( "Syntax: sedit <social> create\n\r", ch );
@@ -6164,7 +6156,7 @@ void do_sedit( CHAR_DATA* ch, char* argument )
 
         CREATE( social, SOCIALTYPE, 1 );
         social->name = str_dup( arg1 );
-        sprintf( arg2, "You %s.", arg1 );
+        snprintf( arg2, SUPER_MIL, "You %s.", arg1 );
         social->char_no_arg = str_dup( arg2 );
         add_social( social );
         send_to_char( "Social added.\n\r", ch );
@@ -6177,7 +6169,7 @@ void do_sedit( CHAR_DATA* ch, char* argument )
         return;
     }
 
-    if ( arg2[0] == '\0' || !str_cmp( arg2, "show" ) )
+    if ( NULLSTR( arg2 ) || !str_cmp( arg2, "show" ) )
     {
         ch_printf( ch, "Social: %s\n\r\n\rCNoArg: %s\n\r",
                    social->name,   social->char_no_arg );
@@ -6424,8 +6416,7 @@ void add_command( CMDTYPE* command )
 void do_cedit( CHAR_DATA* ch, char* argument )
 {
     CMDTYPE* command;
-    char arg1[MAX_INPUT_LENGTH];
-    char arg2[MAX_INPUT_LENGTH];
+    char arg1[MIL], arg2[SUPER_MIL];
     smash_tilde( argument );
     argument = one_argument( argument, arg1 );
     argument = one_argument( argument, arg2 );
@@ -6475,7 +6466,7 @@ void do_cedit( CHAR_DATA* ch, char* argument )
         if ( *argument )
             one_argument( argument, arg2 );
         else
-            sprintf( arg2, "do_%s", arg1 );
+            snprintf( arg2, SUPER_MIL, "do_%s", arg1 );
 
         command->do_fun = skill_function( arg2 );
         add_command( command );
@@ -6498,7 +6489,7 @@ void do_cedit( CHAR_DATA* ch, char* argument )
         return;
     }
 
-    if ( arg2[0] == '\0' || !str_cmp( arg2, "show" ) )
+    if ( NULLSTR( arg2 ) || !str_cmp( arg2, "show" ) )
     {
         ch_printf( ch, "Command:  %s\n\rLevel:    %d\n\rPosition: %d\n\rLog:      %d\n\rOOC:      %d\n\rCode:     %s\n\r",
                    command->name, command->level, command->position, command->log, command->ooc,

@@ -340,13 +340,13 @@ void set_auth( DESCRIPTOR_DATA* d )
         return;
     }
 
-    if ( getsockname( d->descriptor, ( struct sockaddr* )&us, &ulen ) < 0 )
+    if ( getsockname( d->descriptor, ( struct sockaddr* )&us, ( socklen_t* )&ulen ) < 0 )
     {
         perror( "set_auth: getsockname" );
         ENDRET( "Set_auth: getsockname error for %s@%s.", "(getsockname error)" );
     }
 
-    if ( getpeername( d->descriptor, ( struct sockaddr* )&them, &tlen ) < 0 )
+    if ( getpeername( d->descriptor, ( struct sockaddr* )&them, ( socklen_t* )&tlen ) < 0 )
     {
         perror( "set_auth: getpeername" );
         ENDRET( "Set_auth: getpeername error for %s@%s.", "(getpeername error)" );
