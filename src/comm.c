@@ -69,7 +69,6 @@
 #define MAX_NEST        100
 static  OBJ_DATA*       rgObjNest       [MAX_NEST];
 
-
 const   char    echo_off_str    [] = { IAC, WILL, TELOPT_ECHO, '\0' };
 const   char    echo_on_str     [] = { IAC, WONT, TELOPT_ECHO, '\0' };
 const   char    go_ahead_str    [] = { IAC, GA, '\0' };
@@ -763,24 +762,9 @@ void game_loop( )
                 close_socket( d, TRUE );
                 continue;
             }
-            else if ( ( !d->character && d->idle > 360 )         /* 2 mins  */
-                      || ( d->connected != CON_PLAYING && d->idle > 1200 ) /* 5 mins  */
-                      || ( d->idle > IDLE_TIMEOUT ) )
-            {
-                write_to_descriptor( d->descriptor, "Idle timeout... disconnecting.\n\r", 0 );
-                d->outtop   = 0;
-                close_socket( d, TRUE );
-                continue;
-            }
             else
             {
                 d->fcommand = FALSE;
-
-                /* Triggers exactly one minute before timeout. */
-                if ( d->idle == IDLE_TIMEOUT - ( 60 * 4 ) )
-                {
-                    write_to_descriptor( d->descriptor, "Warning! This connection is idle, and will close in 60 seconds.\n\r", 0 );
-                }
 
                 if ( FD_ISSET( d->descriptor, &in_set ) )
                 {
