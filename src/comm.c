@@ -160,7 +160,6 @@ uint64_t systemd_watchdog_interval;
 #if defined(MALLOC_DEBUG)
     malloc_debug( 2 );
 #endif
-    MEMORY_INIT();
     emergency_copy              = FALSE;
     num_descriptors             = 0;
     first_descriptor            = NULL;
@@ -284,13 +283,6 @@ uint64_t systemd_watchdog_interval;
     log_string( "Booting Database" );
     boot_db( fCopyOver );
     log_string( "Booting Monitor.." );
-
-    /* Initilize the Monitor */
-    if ( pmStart( 1 ) != 0 )
-    {
-        bug( ":: WARNING :: Monitor failed to start. Ignoring." );
-    }
-
     init_vote( );
     // log_string("Booting Database");
     // boot_db( fCopyOver );
@@ -321,12 +313,6 @@ uint64_t systemd_watchdog_interval;
     close_match( );
     close( control  );
     close( control2 );
-
-    /* Shutdown the slaved monitor */
-    if ( pmStop() != 0 )
-    {
-        bug( ":: WARNING :: Monitor failed to halt. Ignoring." );
-    }
 
     /* Shutdown the web server */
     shutdown_web();
@@ -464,8 +450,6 @@ void emergency_copyover( void )
     log_string( "--- Engaging Emergency Copyover! ---" );
     /* Shutdown the web server */
     shutdown_web();
-    /* Shutdown the slave */
-    pmStop();
     /* Close the match log */
     match_log( "CONTROL;Match Interrupted by emergency Copyover." );
     close_match( );
@@ -731,8 +715,6 @@ void game_loop( )
         accept_new( control  );
         accept_new( control2 );
         handle_web();
-        // Manage Mr. Slave
-        pmReset();
         auth_check( &in_set, &out_set, &exc_set );
 
         /*
@@ -4949,8 +4931,6 @@ void do_copyover ( CHAR_DATA* ch, char* argument )
 
     /* Shutdown the web server */
     shutdown_web();
-    /* Shutdown the slave */
-    pmStop();
     /* Close the match log */
     match_log( "CONTROL;Match Interrupted by Manual Copyover." );
     close_match( );

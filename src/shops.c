@@ -155,7 +155,7 @@ void do_buy( CHAR_DATA* ch, char* argument )
 
     if ( IS_OBJ_STAT( obj, ITEM_INVENTORY ) )
     {
-        OBJ_DATA* buy_obj, *bag;
+        OBJ_DATA* buy_obj;
         buy_obj = create_object( obj->pIndexData, obj->level );
         xREMOVE_BIT( buy_obj->extra_flags, ITEM_INVENTORY );
         obj_to_char( buy_obj, ch );

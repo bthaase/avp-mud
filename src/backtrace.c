@@ -73,6 +73,6 @@ void capturebacktrace( const char* type )
             fclose( fp );
         }
 
-        fprintf( stderr, buf2 );
+        fprintf( stderr, "%s", buf2 );
     }
 }

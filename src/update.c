@@ -110,8 +110,6 @@ void advance_level( CHAR_DATA* ch, bool silent )
 
 void gain_exp( CHAR_DATA* ch, int gain )
 {
-    CHAR_DATA* victim;
-
     if ( IS_NPC( ch ) )
         return;
 
@@ -862,7 +860,7 @@ void char_update( void )
             if ( IS_AFFECTED( ch, AFF_POISON ) )
             {
                 AFFECT_DATA* paf;
-                int dam = 0;
+                // int dam = 0;
 
                 for ( paf = ch->first_affect; paf; paf = paf->next )
                     if ( xIS_SET( paf->bitvector, AFF_POISON ) )
@@ -870,7 +868,7 @@ void char_update( void )
                         act( AT_POISON, "$n shivers and suffers.", ch, NULL, NULL, TO_ROOM );
                         act( AT_POISON, "You shiver and suffer.", ch, NULL, NULL, TO_CHAR );
                         ch->mental_state = URANGE( 20, ch->mental_state + 4, 100 );
-                        dam = number_range( 10, 25 );
+                        // dam = number_range( 10, 25 );
                         bug( "Incomplete -> Cannot deal poison damage" );
                         // if ( !IS_NPC( ch ) ) damage( ch, ch, dam, gsn_poison );
                         // if ( IS_NPC( ch ) ) damage( ch, ch, dam*5, gsn_poison );
@@ -2546,7 +2544,6 @@ void update_logalerts( void )
 */
 void update_movement()
 {
-    char buf[MAX_STRING_LENGTH];
     CHAR_DATA* ch;
 
     for ( ch = last_char; ch; ch = gch_prev )
@@ -2568,8 +2565,6 @@ void update_movement()
 
         if ( ch->move < ch->max_move && ch->max_move > 0 )
         {
-            int a, b;
-
             if ( IS_NPC( ch ) )
             {
                 ch->move += move_gain( ch );
@@ -2680,10 +2675,8 @@ void write_serverstats( void )
 {
     char strsave1[MAX_INPUT_LENGTH];
     char strsave2[MAX_INPUT_LENGTH];
-    DESCRIPTOR_DATA* d;
     FILE* fp1;
     FILE* fp2;
-    int pCnt = 0;
     sprintf( strsave1, "../stats/server.stats" );
     sprintf( strsave2, "../stats/server.who" );
 
@@ -2721,7 +2714,6 @@ void write_serverstats( void )
 void equipment_recharge( CHAR_DATA* ch )
 {
     OBJ_DATA* obj;
-    int mod = 0;
 
     for ( obj = ch->first_carrying; obj; obj = obj->next_content )
     {
