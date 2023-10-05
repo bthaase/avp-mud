@@ -27,7 +27,6 @@
 /* Added for extended bitvectors  -Ghost */
 #include <stdarg.h>
 
-/* #include <malloc_dbg.h> */
 #include <unistd.h>
 #include <sys/cdefs.h>
 #include <sys/time.h>
@@ -36,7 +35,6 @@
 
 typedef int             ch_ret;
 typedef int             obj_ret;
-//#define NOCRYPT
 
 /*
     Accommodate old non-Ansi compilers.
@@ -52,11 +50,11 @@ typedef int             obj_ret;
     #define DECLARE_SPEC_FUN( fun )     SPEC_FUN  fun
 #endif
 
-
 /*
     Short scalar types.
     Diavolo reports AIX compiler has bugs with short types.
 */
+
 #if !defined(FALSE)
     #define FALSE    0
 #endif
@@ -77,8 +75,8 @@ typedef int             obj_ret;
     typedef int             bool;
     #define unix
 #else
-    typedef short    int            sh_int;
-    typedef unsigned char           bool;
+    typedef  short  int      sh_int;
+    #include <stdbool.h>
 #endif
 
 /*
