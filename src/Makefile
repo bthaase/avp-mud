@@ -6,7 +6,7 @@ NOCRYPT =
 #DBUGFLG = -DREQUESTS
 DEBUG   = -DDEBUG -DMC_MEM_INTRO -DMEMORY_HASH=101 -ggdb
 C_FLAGS = -fsigned-char -g3 -Wall $(PROF) $(NOCRYPT) $(DBUGFLG) $(DEBUG)
-#L_FLAGS = $(PROF) -lcrypt
+L_FLAGS = $(PROF) -lcrypt -lm -lpthread -lbacktrace -lcrypt -lsystemd
 #D_FLAGS : For the DNS Slave process. No need in linking all the extra libs for this.
 D_FLAGS = -g3 -O $(PROF) $(SOLARIS_LINK)
 
@@ -32,7 +32,7 @@ all:
 
 avp: $(O_FILES)
 	rm -f avp
-	$(CC) $(L_FLAGS) -o avp $(O_FILES) -lm -lpthread -lbacktrace -lcrypt -lsystemd
+	$(CC) -o avp $(O_FILES) $(L_FLAGS)
 	chmod g+w avp
 	chmod g+w $(O_FILES)
 
