@@ -283,7 +283,7 @@ void do_score( CHAR_DATA* ch, char* argument )
 
     ch_printf( ch, "%-27s  %-39s\n\r", buf, buf2 );
     // if ( ch->race == RACE_PREDATOR ) ch_printf(ch, "&zField Charge:          [%s&z]\n\r", drawcharge( ch ) );
-    // ch_printf(ch, "&zRank:    &W%-11s ( &zProgress:    [%s&z] &W)\n\r", get_rank( ch->race, ch->top_level ), drawlevel( ch ) );
+    ch_printf(ch, "&zRank:    &W%-11s ( &zProgress:    [%s&z] &W)\n\r", get_rank( ch->race, ch->top_level ), drawlevel( ch ) );
     kA = total_pc_kills( ch );
     kB = total_pc_killed( ch );
     ch_printf( ch, "&zKills:   %d total kills. (Non-mob)\n\r", kA );

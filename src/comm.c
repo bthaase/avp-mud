@@ -2192,7 +2192,7 @@ void nanny( DESCRIPTOR_DATA* d, char* argument )
                 HELP_DATA* pHelp = NULL;
                 pHelp = get_help( NULL, "disclaimer" );
 
-                if ( FALSE &&  pHelp != NULL && pHelp->text != NULL && pHelp->text[0] != '\0' )
+                if ( pHelp != NULL && pHelp->text != NULL && pHelp->text[0] != '\0' )
                 {
                     send_to_buffer( "\n\r\n\r&WAliens vs. Predator: Disclaimer &z[&RPlease read carefully&z]\n\r&z", d );
 
