@@ -1,19 +1,19 @@
 /***************************************************************************
-*                           STAR WARS REALITY 1.0                          *
-*--------------------------------------------------------------------------*
-* Star Wars Reality Code Additions and changes from the Smaug Code         *
-* copyright (c) 1997 by Sean Cooper                                        *
-* -------------------------------------------------------------------------*
-* Starwars and Starwars Names copyright(c) Lucas Film Ltd.                 *
-*--------------------------------------------------------------------------*
-* SMAUG 1.0 (C) 1994, 1995, 1996 by Derek Snider                           *
-* SMAUG code team: Thoric, Altrag, Blodkai, Narn, Haus,                    *
-* Scryn, Rennard, Swordbearer, Gorog, Grishnakh and Tricops                *
-* ------------------------------------------------------------------------ *
-* Merc 2.1 Diku Mud improvments copyright (C) 1992, 1993 by Michael        *
-* Chastain, Michael Quan, and Mitchell Tse.                                *
-* Original Diku Mud copyright (C) 1990, 1991 by Sebastian Hammer,          *
-* Michael Seifert, Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.     *
+                            STAR WARS REALITY 1.0
+    --------------------------------------------------------------------------
+    Star Wars Reality Code Additions and changes from the Smaug Code
+    copyright (c) 1997 by Sean Cooper
+    -------------------------------------------------------------------------
+    Starwars and Starwars Names copyright(c) Lucas Film Ltd.
+    --------------------------------------------------------------------------
+    SMAUG 1.0 (C) 1994, 1995, 1996 by Derek Snider
+    SMAUG code team: Thoric, Altrag, Blodkai, Narn, Haus,
+    Scryn, Rennard, Swordbearer, Gorog, Grishnakh and Tricops
+    ------------------------------------------------------------------------
+    Merc 2.1 Diku Mud improvments copyright (C) 1992, 1993 by Michael
+    Chastain, Michael Quan, and Mitchell Tse.
+    Original Diku Mud copyright (C) 1990, 1991 by Sebastian Hammer,
+    Michael Seifert, Hans Henrik St{rfeldt, Tom Madsen, and Katja Nyboe.
 ****************************************************************************/
 
 #include <sys/types.h>
@@ -26,10 +26,10 @@
 #define MAX_WIDTH     60
 #define MAX_HEIGHT    30
 
-void Map_Exits        args( ( ROOM_INDEX_DATA * ) );
-void Format_Map       args( ( char * , CHAR_DATA * ) );
-void Check_Exits      args( ( ROOM_INDEX_DATA *, int, int ) );
-void Check_Room       args( ( ROOM_INDEX_DATA *, int, int ) );
+void Map_Exits        args( ( ROOM_INDEX_DATA* ) );
+void Format_Map       args( ( char*, CHAR_DATA* ) );
+void Check_Exits      args( ( ROOM_INDEX_DATA*, int, int ) );
+void Check_Room       args( ( ROOM_INDEX_DATA*, int, int ) );
 
 const int OffX[10] = { +0, +1, +0, -1, +0, +0, +1, -1, +1, -1 };
 const int OffY[10] = { -1, +0, +1, +0, +0, +0, -1, -1, +1, +1 };
@@ -68,306 +68,413 @@ bool ModeExpanded  = FALSE;
 #define MAP_OPEN        BV18    // This is an open exit. (Expanded)
 
 /*
- * Not a command right now, triggered by LOOK MAP
- */
-void do_lookmap( CHAR_DATA * ch, char * argument )
+    Not a command right now, triggered by LOOK MAP
+*/
+void do_lookmap( CHAR_DATA* ch, char* argument )
 {
-   char buf[MAX_STRING_LENGTH];
-   int height;
+    char buf[MAX_STRING_LENGTH];
+    int height;
+    ShowVents = IS_IMMORTAL( ch ) ? TRUE : FALSE;
+    ShowHived = IS_IMMORTAL( ch ) ? TRUE : FALSE;
+    ShowFriendly = IS_IMMORTAL( ch ) ? TRUE : FALSE;
+    StopAtDoors = FALSE;
+    ModeExpanded = FALSE;
+    height = MAX_HEIGHT;
 
-   ShowVents = IS_IMMORTAL(ch) ? TRUE : FALSE;
-   ShowHived = IS_IMMORTAL(ch) ? TRUE : FALSE;
-   ShowFriendly = IS_IMMORTAL(ch) ? TRUE : FALSE;
-   StopAtDoors = FALSE;
-   ModeExpanded = FALSE;
-
-   height = MAX_HEIGHT;
-
-   if ( !str_cmp( argument, "auto" ) )
-        height = 5;              
-   else if ( atoi(argument) == 666 )
+    if ( !str_cmp( argument, "auto" ) )
+        height = 5;
+    else if ( atoi( argument ) == 666 )
         ModeExpanded = TRUE;
-   else if ( atoi(argument) == 999 )
-   {     ModeExpanded = TRUE; StopAtDoors = TRUE;   }
-   else
-        height = atoi(argument);
+    else if ( atoi( argument ) == 999 )
+    {
+        ModeExpanded = TRUE;
+        StopAtDoors = TRUE;
+    }
+    else
+        height = atoi( argument );
 
-   Initilize_Map( height );
-
-   Map_Exits( ch->in_room );
-
-   map[mapCX][mapCY] = MAP_CENTER;
-
-   Format_Map( buf, IS_IMMORTAL(ch) ? NULL : ch );
-
-   send_to_char( buf, ch );
-
-   return;
+    Initilize_Map( height );
+    Map_Exits( ch->in_room );
+    map[mapCX][mapCY] = MAP_CENTER;
+    Format_Map( buf, IS_IMMORTAL( ch ) ? NULL : ch );
+    send_to_char( buf, ch );
+    return;
 }
 
 int MAP_OFFSET( void )
 {
-   return ( ModeExpanded ? 3 : 2 );
+    return ( ModeExpanded ? 3 : 2 );
 }
 
 void Initilize_Map( int height )
 {
-   mapHeight = URANGE( 3, height, MAX_HEIGHT );
-   mapWidth = URANGE( 3, mapHeight * 2, MAX_WIDTH );
-
-   mapCX = ( mapWidth / 2 ) + 1;
-   mapCY = ( mapHeight / 2 ) + 1;
-
-   Reset_Map( );
-
-   return;
+    mapHeight = URANGE( 3, height, MAX_HEIGHT );
+    mapWidth = URANGE( 3, mapHeight * 2, MAX_WIDTH );
+    mapCX = ( mapWidth / 2 ) + 1;
+    mapCY = ( mapHeight / 2 ) + 1;
+    Reset_Map( );
+    return;
 }
 
 void Reset_Map( void )
 {
-   int x, y;
+    int x, y;
 
-   for ( y = 0; y <= MAX_HEIGHT; ++y )
-    for ( x = 0; x <= MAX_WIDTH; ++x )
-     map[x][y] = MAP_BLANK;
+    for ( y = 0; y <= MAX_HEIGHT; ++y )
+        for ( x = 0; x <= MAX_WIDTH; ++x )
+            map[x][y] = MAP_BLANK;
 
-   return;
+    return;
 }
 
-void Map_Exits( ROOM_INDEX_DATA * room )
+void Map_Exits( ROOM_INDEX_DATA* room )
 {
-   if ( room == NULL ) return;
+    if ( room == NULL )
+        return;
 
-   if ( ModeExpanded ) { Check_Exits_Ext( room, mapCX, mapCY ); }
-   else                { Check_Exits_Sim( room, mapCX, mapCY ); }
+    if ( ModeExpanded )
+    {
+        Check_Exits_Ext( room, mapCX, mapCY );
+    }
+    else
+    {
+        Check_Exits_Sim( room, mapCX, mapCY );
+    }
 
-   return;
-}                                  
-
-void Check_Exits_Ext( ROOM_INDEX_DATA * room, int cX, int cY )
-{
-   EXIT_DATA * xit = NULL;
-   int nX, nY, i;
-
-   for ( i = 0; i < DIR_SOMEWHERE; i++ )
-   {
-      if ( ( xit = get_exit( room, i ) ) != NULL )
-      {       
-         if ( i == DIR_UP ) { SET_BIT( map[cX][cY], MAP_HASUP ); continue; }
-         if ( i == DIR_DOWN ) { SET_BIT( map[cX][cY], MAP_HASDOWN ); continue; }    
-
-         nX = cX + (OffX[i] * MAP_OFFSET());
-         nY = cY + (OffY[i] * MAP_OFFSET());
-                                                    
-         if ( xIS_SET( xit->exit_info, EX_CLOSED ) )
-           map[(cX + OffX[i])][(cY + OffY[i])] = MAP_CLOSED;
-         else
-           map[(cX + OffX[i])][(cY + OffY[i])] = MAP_OPEN;
-
-         if ( map[nX][nY] == MAP_BLANK && ( !StopAtDoors || !xIS_SET( xit->exit_info, EX_CLOSED ) ) )
-             Check_Room( xit->to_room, nX, nY );
-      }
-   } 
-
-   return;
+    return;
 }
 
-void Check_Exits_Sim( ROOM_INDEX_DATA * room, int cX, int cY )
+void Check_Exits_Ext( ROOM_INDEX_DATA* room, int cX, int cY )
 {
-   EXIT_DATA * xit = NULL;
-   bool dShut;
-   int nX, nY, i;
+    EXIT_DATA* xit = NULL;
+    int nX, nY, i;
 
-   for ( i = 0; i < DIR_SOMEWHERE; i++ )
-   {
-      if ( ( xit = get_exit( room, i ) ) != NULL )
-      {  
-         if ( i == DIR_UP ) { SET_BIT( map[cX][cY], MAP_HASUP ); continue; }
-         if ( i == DIR_DOWN ) { SET_BIT( map[cX][cY], MAP_HASDOWN ); continue; }    
+    for ( i = 0; i < DIR_SOMEWHERE; i++ )
+    {
+        if ( ( xit = get_exit( room, i ) ) != NULL )
+        {
+            if ( i == DIR_UP )
+            {
+                SET_BIT( map[cX][cY], MAP_HASUP );
+                continue;
+            }
 
-         nX = cX + (OffX[i] * MAP_OFFSET());
-         nY = cY + (OffY[i] * MAP_OFFSET());
+            if ( i == DIR_DOWN )
+            {
+                SET_BIT( map[cX][cY], MAP_HASDOWN );
+                continue;
+            }
 
-         dShut = xIS_SET( xit->exit_info, EX_CLOSED );
-                                                    
-         /*
-         if ( i == DIR_NORTH )     map[cX+0][cY-1] = ( dShut ? MAP_CLOSED : MAP_UPDOWN );
-         if ( i == DIR_SOUTH )     map[cX+0][cY+1] = ( dShut ? MAP_CLOSED : MAP_UPDOWN );
-         if ( i == DIR_WEST )      map[cX-1][cY+0] = ( dShut ? MAP_CLOSED : MAP_EASTWEST );
-         if ( i == DIR_EAST )      map[cX+1][cY+0] = ( dShut ? MAP_CLOSED : MAP_EASTWEST );
-         if ( i == DIR_NORTHEAST ) map[cX+1][cY-1] = ( dShut ? MAP_CLOSED : MAP_VERT2 ); 
-         if ( i == DIR_NORTHWEST ) map[cX-1][cY-1] = ( dShut ? MAP_CLOSED : MAP_VERT1 ); 
-         if ( i == DIR_SOUTHEAST ) map[cX+1][cY+1] = ( dShut ? MAP_CLOSED : MAP_VERT1 ); 
-         if ( i == DIR_SOUTHWEST ) map[cX-1][cY+1] = ( dShut ? MAP_CLOSED : MAP_VERT2 ); 
-         */
+            nX = cX + ( OffX[i] * MAP_OFFSET() );
+            nY = cY + ( OffY[i] * MAP_OFFSET() );
 
-         if ( i == DIR_NORTH )     map[cX+0][cY-1] = MAP_UPDOWN;
-         if ( i == DIR_SOUTH )     map[cX+0][cY+1] = MAP_UPDOWN;
-         if ( i == DIR_WEST )      map[cX-1][cY+0] = MAP_EASTWEST;
-         if ( i == DIR_EAST )      map[cX+1][cY+0] = MAP_EASTWEST;
-         if ( i == DIR_NORTHEAST ) map[cX+1][cY-1] = MAP_VERT2; 
-         if ( i == DIR_NORTHWEST ) map[cX-1][cY-1] = MAP_VERT1; 
-         if ( i == DIR_SOUTHEAST ) map[cX+1][cY+1] = MAP_VERT1; 
-         if ( i == DIR_SOUTHWEST ) map[cX-1][cY+1] = MAP_VERT2; 
- 
-         if ( map[nX][nY] == MAP_BLANK && ( !StopAtDoors || !dShut ) )
-            Check_Room( xit->to_room, nX, nY );
-      }
-   }  
+            if ( xIS_SET( xit->exit_info, EX_CLOSED ) )
+                map[( cX + OffX[i] )][( cY + OffY[i] )] = MAP_CLOSED;
+            else
+                map[( cX + OffX[i] )][( cY + OffY[i] )] = MAP_OPEN;
 
-   return;
+            if ( map[nX][nY] == MAP_BLANK && ( !StopAtDoors || !xIS_SET( xit->exit_info, EX_CLOSED ) ) )
+                Check_Room( xit->to_room, nX, nY );
+        }
+    }
+
+    return;
 }
 
-void Check_Room( ROOM_INDEX_DATA * room, int cX, int cY )
+void Check_Exits_Sim( ROOM_INDEX_DATA* room, int cX, int cY )
 {
-   if ( room == NULL ) return;
-   if ( map[cX][cY] != MAP_BLANK ) return;
+    EXIT_DATA* xit = NULL;
+    bool dShut;
+    int nX, nY, i;
 
-   map[cX][cY] = get_room_type( room, map[cX][cY] );
+    for ( i = 0; i < DIR_SOMEWHERE; i++ )
+    {
+        if ( ( xit = get_exit( room, i ) ) != NULL )
+        {
+            if ( i == DIR_UP )
+            {
+                SET_BIT( map[cX][cY], MAP_HASUP );
+                continue;
+            }
 
-   if ( ModeExpanded )
-   {
-      SET_BIT( map[cX-1][cY-1], MAP_WALL );
-      SET_BIT( map[cX-0][cY-1], MAP_WALL );
-      SET_BIT( map[cX+1][cY-1], MAP_WALL );
-      SET_BIT( map[cX-1][cY+0], MAP_WALL );
-      SET_BIT( map[cX+1][cY+0], MAP_WALL );
-      SET_BIT( map[cX-1][cY+1], MAP_WALL );
-      SET_BIT( map[cX-0][cY+1], MAP_WALL );
-      SET_BIT( map[cX+1][cY+1], MAP_WALL );
+            if ( i == DIR_DOWN )
+            {
+                SET_BIT( map[cX][cY], MAP_HASDOWN );
+                continue;
+            }
 
-      Check_Exits_Ext( room, cX, cY );
-   }
-   else
-   {
-      Check_Exits_Sim( room, cX, cY );
-   }
+            nX = cX + ( OffX[i] * MAP_OFFSET() );
+            nY = cY + ( OffY[i] * MAP_OFFSET() );
+            dShut = xIS_SET( xit->exit_info, EX_CLOSED );
 
-   return;
-}                                  
+            /*
+                if ( i == DIR_NORTH )     map[cX+0][cY-1] = ( dShut ? MAP_CLOSED : MAP_UPDOWN );
+                if ( i == DIR_SOUTH )     map[cX+0][cY+1] = ( dShut ? MAP_CLOSED : MAP_UPDOWN );
+                if ( i == DIR_WEST )      map[cX-1][cY+0] = ( dShut ? MAP_CLOSED : MAP_EASTWEST );
+                if ( i == DIR_EAST )      map[cX+1][cY+0] = ( dShut ? MAP_CLOSED : MAP_EASTWEST );
+                if ( i == DIR_NORTHEAST ) map[cX+1][cY-1] = ( dShut ? MAP_CLOSED : MAP_VERT2 );
+                if ( i == DIR_NORTHWEST ) map[cX-1][cY-1] = ( dShut ? MAP_CLOSED : MAP_VERT1 );
+                if ( i == DIR_SOUTHEAST ) map[cX+1][cY+1] = ( dShut ? MAP_CLOSED : MAP_VERT1 );
+                if ( i == DIR_SOUTHWEST ) map[cX-1][cY+1] = ( dShut ? MAP_CLOSED : MAP_VERT2 );
+            */
 
-int get_room_type( ROOM_INDEX_DATA * room, int tmp )
-{
-   CHAR_DATA *rch;
-   int flags;
+            if ( i == DIR_NORTH )
+                map[cX + 0][cY - 1] = MAP_UPDOWN;
 
-   flags = tmp;
+            if ( i == DIR_SOUTH )
+                map[cX + 0][cY + 1] = MAP_UPDOWN;
 
-   if ( room == NULL ) return MAP_BLANK;
+            if ( i == DIR_WEST )
+                map[cX - 1][cY + 0] = MAP_EASTWEST;
 
-   for ( rch = room->first_person; rch; rch = rch->next_in_room )
-   {
-       if ( is_spectator( rch ) || IN_VENT( rch ) ) continue;
+            if ( i == DIR_EAST )
+                map[cX + 1][cY + 0] = MAP_EASTWEST;
 
-       if ( rch->race == RACE_ALIEN ) SET_BIT( flags, MAP_ALIEN );
-       if ( rch->race == RACE_MARINE ) SET_BIT( flags, MAP_MARINE );
-       if ( rch->race == RACE_PREDATOR ) SET_BIT( flags, MAP_PREDATOR );
-   }
+            if ( i == DIR_NORTHEAST )
+                map[cX + 1][cY - 1] = MAP_VERT2;
 
-   if ( xIS_SET( room->room_flags, ROOM_HIVED ) ) SET_BIT( flags, MAP_HIVED );
-   if ( xIS_SET( room->room_flags, ROOM_INDOORS ) ) SET_BIT( flags, MAP_INDOORS );
-   if ( !xIS_SET( room->room_flags, ROOM_INDOORS ) ) SET_BIT( flags, MAP_OUTDOORS );
+            if ( i == DIR_NORTHWEST )
+                map[cX - 1][cY - 1] = MAP_VERT1;
 
-   if ( xIS_SET( room->room_flags, ROOM_VENTED_A ) ) SET_BIT( flags, MAP_VENT );
-   if ( xIS_SET( room->room_flags, ROOM_VENTED_B ) ) SET_BIT( flags, MAP_VENT );
-   if ( xIS_SET( room->room_flags, ROOM_VENTED_C ) ) SET_BIT( flags, MAP_VENT );
-   if ( xIS_SET( room->room_flags, ROOM_VENTED_D ) ) SET_BIT( flags, MAP_VENT );
+            if ( i == DIR_SOUTHEAST )
+                map[cX + 1][cY + 1] = MAP_VERT1;
 
-   if ( xIS_SET( room->room_flags, ROOM_NOFLOOR ) ) SET_BIT( flags, MAP_PIT );
-   if ( xIS_SET( room->room_flags, ROOM_CP ) ) SET_BIT( flags, MAP_CP );
+            if ( i == DIR_SOUTHWEST )
+                map[cX - 1][cY + 1] = MAP_VERT2;
 
-   return flags;
+            if ( map[nX][nY] == MAP_BLANK && ( !StopAtDoors || !dShut ) )
+                Check_Room( xit->to_room, nX, nY );
+        }
+    }
+
+    return;
 }
 
-void Format_Map( char * buf, CHAR_DATA * ch )
+void Check_Room( ROOM_INDEX_DATA* room, int cX, int cY )
 {
-   int x, y;
-   char * val;
- 
-   strcpy( buf, "" );
+    if ( room == NULL )
+        return;
 
-   strcat( buf, "&w&B+&b-" );
-   for ( x = 1; x <= mapWidth; ++x ) strcat( buf, "-" );
-   strcat( buf, "-&B+\n\r" );
+    if ( map[cX][cY] != MAP_BLANK )
+        return;
 
-   for ( y = 1; y <= mapHeight; ++y )
-   {
-     strcat( buf, "&w&b| " );
+    map[cX][cY] = get_room_type( room, map[cX][cY] );
 
-     for ( x = 1; x <= mapWidth; ++x )
-     {
-         val = " ";
+    if ( ModeExpanded )
+    {
+        SET_BIT( map[cX - 1][cY - 1], MAP_WALL );
+        SET_BIT( map[cX - 0][cY - 1], MAP_WALL );
+        SET_BIT( map[cX + 1][cY - 1], MAP_WALL );
+        SET_BIT( map[cX - 1][cY + 0], MAP_WALL );
+        SET_BIT( map[cX + 1][cY + 0], MAP_WALL );
+        SET_BIT( map[cX - 1][cY + 1], MAP_WALL );
+        SET_BIT( map[cX - 0][cY + 1], MAP_WALL );
+        SET_BIT( map[cX + 1][cY + 1], MAP_WALL );
+        Check_Exits_Ext( room, cX, cY );
+    }
+    else
+    {
+        Check_Exits_Sim( room, cX, cY );
+    }
 
-         // Render Basic Rooms
-         if ( IS_SET( map[x][y], MAP_INDOORS ) )
-         {
-              val = ( ModeExpanded ? "&w&C." : "&W+" );
-              if ( IS_SET( map[x][y], MAP_HASUP ) )   val = "&W>";
-              if ( IS_SET( map[x][y], MAP_HASDOWN ) ) val = "&W<";
-              if ( IS_SET( map[x][y], MAP_HASUP )
-                && IS_SET( map[x][y], MAP_HASDOWN ) ) val = "&W+";
-         }
-         if ( IS_SET( map[x][y], MAP_OUTDOORS ) )
-         {
-              val = ( ModeExpanded ? "&w&C." : "&w&c+" );
-              if ( IS_SET( map[x][y], MAP_HASUP ) )   val = "&g>";
-              if ( IS_SET( map[x][y], MAP_HASDOWN ) ) val = "&g<";
-              if ( IS_SET( map[x][y], MAP_HASUP )
-                && IS_SET( map[x][y], MAP_HASDOWN ) ) val = "&g+";
-         }
-         if ( IS_SET( map[x][y], MAP_HIVED ) )
-         {
-              val = ( ModeExpanded ? "&w&G%" : "&w&G+" );
-              if ( IS_SET( map[x][y], MAP_HASUP ) )   val = "&G>";
-              if ( IS_SET( map[x][y], MAP_HASDOWN ) ) val = "&G<";
-              if ( IS_SET( map[x][y], MAP_HASUP )
-                && IS_SET( map[x][y], MAP_HASDOWN ) ) val = "&G+";
-         }
+    return;
+}
 
-         // Render Rooms with Content
-         if ( IS_SET( map[x][y], MAP_VENT ) )     val = "&w&CV";
-         if ( IS_SET( map[x][y], MAP_PIT ) )      val = "&w&RX";
-         if ( IS_SET( map[x][y], MAP_CP ) )       val = "&w&Y$";
+int get_room_type( ROOM_INDEX_DATA* room, int tmp )
+{
+    CHAR_DATA* rch;
+    int flags;
+    flags = tmp;
 
-         if ( ch != NULL )
-         {
-            if ( IS_SET(map[x][y], MAP_ALIEN) && ch->race == RACE_ALIEN )  val = "&w&B@";
-            if ( IS_SET(map[x][y], MAP_MARINE) && ch->race == RACE_MARINE )  val = "&w&R@";
-            if ( IS_SET(map[x][y], MAP_PREDATOR) && ch->race == RACE_PREDATOR )  val = "&w&G@";
-         }
-         else
-         {
-            if ( IS_SET(map[x][y], MAP_ALIEN) )    val = "&w&B@";
-            if ( IS_SET(map[x][y], MAP_MARINE) )   val = "&w&R@";
-            if ( IS_SET(map[x][y], MAP_PREDATOR) ) val = "&w&G@";
-         }
+    if ( room == NULL )
+        return MAP_BLANK;
 
-         // Rendering Exits
-         if ( IS_SET( map[x][y], MAP_WALL ) )     val = "&w&z#";
-         if ( IS_SET( map[x][y], MAP_UPDOWN ) )   val = "&w&z|";
-         if ( IS_SET( map[x][y], MAP_EASTWEST ) ) val = "&w&z-";
-         if ( IS_SET( map[x][y], MAP_VERT1 ) )    val = "&w&z\\";
-         if ( IS_SET( map[x][y], MAP_VERT2 ) )    val = "&w&z/";
-         // if ( IS_SET( map[x][y], MAP_CLOSED ) )   val = "&w&z=";
+    for ( rch = room->first_person; rch; rch = rch->next_in_room )
+    {
+        if ( is_spectator( rch ) || IN_VENT( rch ) )
+            continue;
 
-         if ( ModeExpanded )
-         {
-            if ( IS_SET( map[x][y], MAP_OPEN ) )     val = "&w&C.";
-            if ( IS_SET( map[x][y], MAP_CLOSED ) )   val = "&w&b.";
-         }
+        if ( rch->race == RACE_ALIEN )
+            SET_BIT( flags, MAP_ALIEN );
 
-         // Render Player Override
-         if ( IS_SET( map[x][y], MAP_CENTER ) )   val = "&w&R+";
+        if ( rch->race == RACE_MARINE )
+            SET_BIT( flags, MAP_MARINE );
 
-         strcat( buf, val );
-     }
-     strcat( buf, " &w&b|\n\r" );
-   }
+        if ( rch->race == RACE_PREDATOR )
+            SET_BIT( flags, MAP_PREDATOR );
+    }
 
+    if ( xIS_SET( room->room_flags, ROOM_HIVED ) )
+        SET_BIT( flags, MAP_HIVED );
 
-   strcat( buf, "&w&B+&b-" );
-   for ( x = 1; x <= mapWidth; ++x ) strcat( buf, "-" );
-   strcat( buf, "-&B+\n\r" );
+    if ( xIS_SET( room->room_flags, ROOM_INDOORS ) )
+        SET_BIT( flags, MAP_INDOORS );
 
-   return;
+    if ( !xIS_SET( room->room_flags, ROOM_INDOORS ) )
+        SET_BIT( flags, MAP_OUTDOORS );
+
+    if ( xIS_SET( room->room_flags, ROOM_VENTED_A ) )
+        SET_BIT( flags, MAP_VENT );
+
+    if ( xIS_SET( room->room_flags, ROOM_VENTED_B ) )
+        SET_BIT( flags, MAP_VENT );
+
+    if ( xIS_SET( room->room_flags, ROOM_VENTED_C ) )
+        SET_BIT( flags, MAP_VENT );
+
+    if ( xIS_SET( room->room_flags, ROOM_VENTED_D ) )
+        SET_BIT( flags, MAP_VENT );
+
+    if ( xIS_SET( room->room_flags, ROOM_NOFLOOR ) )
+        SET_BIT( flags, MAP_PIT );
+
+    if ( xIS_SET( room->room_flags, ROOM_CP ) )
+        SET_BIT( flags, MAP_CP );
+
+    return flags;
+}
+
+void Format_Map( char* buf, CHAR_DATA* ch )
+{
+    int x, y;
+    char* val;
+    strcpy( buf, "" );
+    strcat( buf, "&w&B+&b-" );
+
+    for ( x = 1; x <= mapWidth; ++x )
+        strcat( buf, "-" );
+
+    strcat( buf, "-&B+\n\r" );
+
+    for ( y = 1; y <= mapHeight; ++y )
+    {
+        strcat( buf, "&w&b| " );
+
+        for ( x = 1; x <= mapWidth; ++x )
+        {
+            val = " ";
+
+            // Render Basic Rooms
+            if ( IS_SET( map[x][y], MAP_INDOORS ) )
+            {
+                val = ( ModeExpanded ? "&w&C." : "&W+" );
+
+                if ( IS_SET( map[x][y], MAP_HASUP ) )
+                    val = "&W>";
+
+                if ( IS_SET( map[x][y], MAP_HASDOWN ) )
+                    val = "&W<";
+
+                if ( IS_SET( map[x][y], MAP_HASUP )
+                        && IS_SET( map[x][y], MAP_HASDOWN ) )
+                    val = "&W+";
+            }
+
+            if ( IS_SET( map[x][y], MAP_OUTDOORS ) )
+            {
+                val = ( ModeExpanded ? "&w&C." : "&w&c+" );
+
+                if ( IS_SET( map[x][y], MAP_HASUP ) )
+                    val = "&g>";
+
+                if ( IS_SET( map[x][y], MAP_HASDOWN ) )
+                    val = "&g<";
+
+                if ( IS_SET( map[x][y], MAP_HASUP )
+                        && IS_SET( map[x][y], MAP_HASDOWN ) )
+                    val = "&g+";
+            }
+
+            if ( IS_SET( map[x][y], MAP_HIVED ) )
+            {
+                val = ( ModeExpanded ? "&w&G%" : "&w&G+" );
+
+                if ( IS_SET( map[x][y], MAP_HASUP ) )
+                    val = "&G>";
+
+                if ( IS_SET( map[x][y], MAP_HASDOWN ) )
+                    val = "&G<";
+
+                if ( IS_SET( map[x][y], MAP_HASUP )
+                        && IS_SET( map[x][y], MAP_HASDOWN ) )
+                    val = "&G+";
+            }
+
+            // Render Rooms with Content
+            if ( IS_SET( map[x][y], MAP_VENT ) )
+                val = "&w&CV";
+
+            if ( IS_SET( map[x][y], MAP_PIT ) )
+                val = "&w&RX";
+
+            if ( IS_SET( map[x][y], MAP_CP ) )
+                val = "&w&Y$";
+
+            if ( ch != NULL )
+            {
+                if ( IS_SET( map[x][y], MAP_ALIEN ) && ch->race == RACE_ALIEN )
+                    val = "&w&B@";
+
+                if ( IS_SET( map[x][y], MAP_MARINE ) && ch->race == RACE_MARINE )
+                    val = "&w&R@";
+
+                if ( IS_SET( map[x][y], MAP_PREDATOR ) && ch->race == RACE_PREDATOR )
+                    val = "&w&G@";
+            }
+            else
+            {
+                if ( IS_SET( map[x][y], MAP_ALIEN ) )
+                    val = "&w&B@";
+
+                if ( IS_SET( map[x][y], MAP_MARINE ) )
+                    val = "&w&R@";
+
+                if ( IS_SET( map[x][y], MAP_PREDATOR ) )
+                    val = "&w&G@";
+            }
+
+            // Rendering Exits
+            if ( IS_SET( map[x][y], MAP_WALL ) )
+                val = "&w&z#";
+
+            if ( IS_SET( map[x][y], MAP_UPDOWN ) )
+                val = "&w&z|";
+
+            if ( IS_SET( map[x][y], MAP_EASTWEST ) )
+                val = "&w&z-";
+
+            if ( IS_SET( map[x][y], MAP_VERT1 ) )
+                val = "&w&z\\";
+
+            if ( IS_SET( map[x][y], MAP_VERT2 ) )
+                val = "&w&z/";
+
+            // if ( IS_SET( map[x][y], MAP_CLOSED ) )   val = "&w&z=";
+
+            if ( ModeExpanded )
+            {
+                if ( IS_SET( map[x][y], MAP_OPEN ) )
+                    val = "&w&C.";
+
+                if ( IS_SET( map[x][y], MAP_CLOSED ) )
+                    val = "&w&b.";
+            }
+
+            // Render Player Override
+            if ( IS_SET( map[x][y], MAP_CENTER ) )
+                val = "&w&R+";
+
+            strcat( buf, val );
+        }
+
+        strcat( buf, " &w&b|\n\r" );
+    }
+
+    strcat( buf, "&w&B+&b-" );
+
+    for ( x = 1; x <= mapWidth; ++x )
+        strcat( buf, "-" );
+
+    strcat( buf, "-&B+\n\r" );
+    return;
 }
