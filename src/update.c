@@ -1694,7 +1694,7 @@ void update_handler( void )
     static  int     pulse_save;
     static  int     pulse_web;
     static  int     pulse_logalert;
-    static  int     pulse_emergancy;
+    static  int     pulse_emergency;
     static  int     pulse_bacta;
     static  int     pulse_ooc;
     static  int     pulse_order;
@@ -1763,15 +1763,15 @@ void update_handler( void )
         update_movement ( );
     }
 
-    if ( pulse_emergancy == 0 )
+    if ( pulse_emergency == 0 )
     {
-        pulse_emergancy    = PULSE_EMERGANCY;
+        pulse_emergency    = PULSE_EMERGENCY;
     }
-    else if ( --pulse_emergancy <= 0 )
+    else if ( --pulse_emergency <= 0 )
     {
-        pulse_emergancy = PULSE_EMERGANCY;
-        /* Arm Emergancy Copyover mode */
-        emergancy_arm( );
+        pulse_emergency = PULSE_EMERGENCY;
+        /* Arm emergency Copyover mode */
+        emergency_arm( );
     }
 
     if ( pulse_order == 0 )

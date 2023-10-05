@@ -110,7 +110,7 @@ fd_set           in_set;         /* Set of desc's for reading    */
 fd_set           out_set;        /* Set of desc's for writing    */
 fd_set           exc_set;        /* Set of desc's with errors    */
 int              maxdesc;
-bool             emergancy_copy; /* Emergancy Copyover Flag      */
+bool             emergency_copy; /* emergency Copyover Flag      */
 bool             MOBtrigger;
 struct xname_data* xnames;
 struct allowmp_data* mplist;
@@ -159,7 +159,7 @@ bool    fCopyOver;
     malloc_debug( 2 );
 #endif
     MEMORY_INIT();
-    emergancy_copy              = FALSE;
+    emergency_copy              = FALSE;
     num_descriptors             = 0;
     first_descriptor            = NULL;
     last_descriptor             = NULL;
@@ -437,10 +437,10 @@ static void SegVio()
 
     // log_string( lastplayercmd );
 
-    // Are we allowing an emergancy copyover?
-    if ( emergancy_copy == TRUE )
+    // Are we allowing an emergency copyover?
+    if ( emergency_copy == TRUE )
     {
-        emergancy_copyover( );
+        emergency_copyover( );
         log_string( "Emergency copyover not ready. Shutting down." );
     }
     else
@@ -452,25 +452,25 @@ static void SegVio()
     // return;
 }
 
-void emergancy_copyover( void )
+void emergency_copyover( void )
 {
     FILE* fp;
     DESCRIPTOR_DATA* d;
     char buf[100], buf2[100], buf3[100], buf4[100], buf5[100];
-    log_string( "--- Engaging Emergancy Copyover! ---" );
+    log_string( "--- Engaging Emergency Copyover! ---" );
     /* Shutdown the web server */
     shutdown_web();
     /* Shutdown the slave */
     pmStop();
     /* Close the match log */
-    match_log( "CONTROL;Match Interrupted by Emergancy Copyover." );
+    match_log( "CONTROL;Match Interrupted by emergency Copyover." );
     close_match( );
     fp = fopen ( COPYOVER_FILE, "w" );
 
     if ( !fp )
     {
         log_string ( "Could not write to copyover file!" );
-        perror ( "emergancy_copyover:fopen" );
+        perror ( "emergency_copyover:fopen" );
         return;
     }
 
@@ -508,7 +508,7 @@ void emergancy_copyover( void )
     */
     execl ( EXE_FILE,  "avp", buf, "copyover", buf2, buf3, buf4, buf5, ( char* ) NULL );
     execl ( EXE2_FILE, "avp", buf, "copyover", buf2, buf3, buf4, buf5, ( char* ) NULL );
-    perror ( "emergancy_copyover: failed to copyover in 'execl'" );
+    perror ( "emergency_copyover: failed to copyover in 'execl'" );
 
     if ( ( fpReserve = fopen( NULL_FILE, "r" ) ) == NULL )
     {
@@ -538,7 +538,7 @@ void emergancy_copyover( void )
      return;
     }
 
-    log_string( "ALERT: Segmentation Violation! EMERGANCY COPYOVER Attempted!" );
+    log_string( "ALERT: Segmentation Violation! emergency COPYOVER Attempted!" );
 
     for (d = first_descriptor; d ; d = d->next)
     {
@@ -684,12 +684,12 @@ void accept_new( int ctrl )
     }
 }
 
-void emergancy_arm( )
+void emergency_arm( )
 {
-    if ( !emergancy_copy )
+    if ( !emergency_copy )
     {
-        log_string( "Notice: Emergancy hotboot system is ready." );
-        emergancy_copy = TRUE;
+        log_string( "Notice: emergency hotboot system is ready." );
+        emergency_copy = TRUE;
     }
 
     return;
@@ -703,7 +703,7 @@ void game_loop( )
     /*  time_t      last_check = 0;  */
     signal( SIGPIPE, SIG_IGN );
     signal( SIGALRM, caught_alarm );
-    // Emergancy Copyover System - PREVENTS COREDUMPS.
+    // emergency Copyover System - PREVENTS COREDUMPS.
     signal( SIGSEGV, SegVio );
     gettimeofday( &last_time, NULL );
     current_time = ( time_t ) last_time.tv_sec;

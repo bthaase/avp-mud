@@ -52,11 +52,6 @@ bool    get_cover( CHAR_DATA* ch );
 bool    dual_flip = FALSE;
 void    add_xname( char* arg );
 char*   current_weapon( CHAR_DATA* ch );
-bool    check_rescue( CHAR_DATA* ch );
-bool    is_enemy( CHAR_DATA* ch, CHAR_DATA* victim );
-int     cdamage( CHAR_DATA* ch, CHAR_DATA* victim, int dam, bool silent );
-bool    is_ranged( int type );
-bool    mob_reload( CHAR_DATA* ch, OBJ_DATA* weapon );
 
 
 /*
@@ -1680,7 +1675,7 @@ ch_ret damage( CHAR_DATA* ch, CHAR_DATA* victim, int dam, int dt )
 
     if ( victim != NULL && ch != NULL )
     {
-        // Vision Mode Emergancy Cutout.
+        // Vision Mode Emergency Cutout.
         if ( victim->vision != -1 && ch->race != victim->vision )
         {
             do_switch( victim, "normal" );
