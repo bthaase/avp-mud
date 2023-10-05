@@ -5,7 +5,7 @@ NOCRYPT =
 #Uncomment the next line if you want request support
 #DBUGFLG = -DREQUESTS
 DEBUG   = -DDEBUG -DMC_MEM_INTRO -DMEMORY_HASH=101 -ggdb
-C_FLAGS = -g3 -Wall $(PROF) $(NOCRYPT) $(DBUGFLG) $(DEBUG)
+C_FLAGS = -fsigned-char -g3 -Wall $(PROF) $(NOCRYPT) $(DBUGFLG) $(DEBUG)
 #L_FLAGS = $(PROF) -lcrypt
 #D_FLAGS : For the DNS Slave process. No need in linking all the extra libs for this.
 D_FLAGS = -g3 -O $(PROF) $(SOLARIS_LINK)

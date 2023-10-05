@@ -6457,7 +6457,7 @@ int file_size( char* buf )
 }
 
 /*
-    EMERGANCY RECOVER FEATURE ---->
+    EMERGENCY RECOVER FEATURE ---->
     Called for boot_db system, this function triggers
     if the area list cannot be located. It will generate
     a temporary area and a new area list. <-=Ghost=->

@@ -43,7 +43,6 @@ void    show_list_to_char  args( ( OBJ_DATA* list, CHAR_DATA* ch, bool fShort, b
 */
 void    get_obj         args( ( CHAR_DATA* ch, OBJ_DATA* obj, OBJ_DATA* container ) );
 bool    remove_obj  args( ( CHAR_DATA* ch, int iWear, bool fReplace ) );
-void    wear_obj    args( ( CHAR_DATA* ch, OBJ_DATA* obj, bool fReplace, sh_int wear_bit ) );
 
 
 /*

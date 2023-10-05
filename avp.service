@@ -7,6 +7,6 @@ WantedBy=multi-user.target
 [Service]
 User=avpmud
 Group=avpmud
-ExecStart=/opt/avp-mud/src/avp 7000
+ExecStart=/opt/avp-mud/src/avp 7676
 WorkingDirectory=/opt/avp-mud/area
 Restart=always

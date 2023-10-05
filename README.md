@@ -16,7 +16,7 @@ This code is provided as-is. I haven't touched it in two decades now, and rememb
     - `make`
 - Start the server
     - Make sure you are in the root directory.
-    - Execute `./run.sh` - Edit this file if you want to change the port. (Default is 7000)
+    - Execute `./run.sh` - Edit this file if you want to change the port. (Default is 7676)
 
 I do NOT recommend using the old `src/avpscript`, it has not be updated.
 

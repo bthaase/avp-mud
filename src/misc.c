@@ -39,10 +39,8 @@
 #define BFS_NO_PATH    -3
 
 bool hail_route_check   args( ( CHAR_DATA* ch, ROOM_INDEX_DATA* toroom ) );
-bool reload_sentry( CHAR_DATA* ch, char* arg1, char* arg2 );
-bool rem_sentry( OBJ_DATA* obj, CHAR_DATA* ch );
+bool reload_sentry( CHAR_DATA* ch, char* arg1, char* arg2 );;
 void add_sentry( OBJ_DATA* obj, CHAR_DATA* ch, int dir );
-SENTRY_DATA* get_sentry( OBJ_DATA* obj );
 
 extern int  top_exit;
 
