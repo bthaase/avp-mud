@@ -1,6 +1,6 @@
 #! /bin/csh -f
 
-set port = 7000
+set port = 7676
 if ( "$1" != "" ) set port="$1"
 
 cd ../area
