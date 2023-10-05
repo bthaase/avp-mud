@@ -310,8 +310,7 @@ bool hail_route_check( CHAR_DATA* ch, ROOM_INDEX_DATA* toroom )
 
 void found_prey( CHAR_DATA* ch, CHAR_DATA* victim )
 {
-    char buf[MAX_STRING_LENGTH];
-    char victname[MAX_STRING_LENGTH];
+    char victname[MSL];
 
     if ( victim == NULL )
     {
@@ -331,7 +330,7 @@ void found_prey( CHAR_DATA* ch, CHAR_DATA* victim )
         return;
     }
 
-    sprintf( victname, IS_NPC( victim ) ? victim->short_descr : victim->name );
+    snprintf( victname, MSL, "%s", IS_NPC( victim ) ? victim->short_descr : victim->name );
 
     if ( !can_see( ch, victim ) )
     {
@@ -464,7 +463,6 @@ bool mob_snipe( CHAR_DATA* ch, CHAR_DATA* victim )
     sh_int            max_dist = 3;
     EXIT_DATA*        pexit;
     ROOM_INDEX_DATA* to_room;
-    char              buf[MAX_STRING_LENGTH];
     OBJ_DATA*         obj;
 
     if ( !ch->in_room || !victim->in_room )

@@ -97,7 +97,6 @@ void do_detach( CHAR_DATA* ch, char* argument )
 {
     char arg1[MAX_INPUT_LENGTH];
     OBJ_DATA* obj;
-    OBJ_DATA* attach;
 
     if ( is_spectator( ch ) )
     {
@@ -238,8 +237,6 @@ void send_attach_stats( CHAR_DATA* ch, OBJ_DATA* obj )
 
 void send_attach_note( CHAR_DATA* ch, OBJ_DATA* obj )
 {
-    char buf[MAX_STRING_LENGTH];
-
     if ( ch == NULL )
         return;
 
@@ -385,7 +382,7 @@ void recharge_attachment( CHAR_DATA* ch, OBJ_DATA* tmp )
     OBJ_DATA* obj;
 
     if ( ( obj = tmp->attach ) == NULL )
-        return FALSE;
+        return;
 
     switch ( obj->value[0] )
     {

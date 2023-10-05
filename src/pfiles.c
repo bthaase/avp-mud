@@ -231,7 +231,6 @@ void fread_pfile( FILE* fp, time_t tdiff, char* fname )
     char* word;
     char* name = NULL;
     sh_int level = 0;
-    sh_int file_ver = 0;
     bool fMatch;
 
     for ( ; ; )
@@ -266,10 +265,6 @@ void fread_pfile( FILE* fp, time_t tdiff, char* fname )
             case 'N':
                 KEY( "Name",        name,   fread_string( fp ) );
                 break;
-
-            case 'V':
-                KEY( "Version", file_ver,   fread_number( fp ) );
-                break;
         }
 
         if ( !fMatch )
@@ -278,7 +273,7 @@ void fread_pfile( FILE* fp, time_t tdiff, char* fname )
 
 timecheck:
 
-    if ( level > 0 && ( level < 2 && tdiff > sysdata.newbie_purge ) || ( level < LEVEL_IMMORTAL && tdiff > sysdata.regular_purge ) && level <= 100 )
+    if ( ( level > 0 && ( level < 2 && tdiff > sysdata.newbie_purge ) ) || ( ( level < LEVEL_IMMORTAL && tdiff > sysdata.regular_purge ) && level <= 100 ) )
     {
         if ( level < LEVEL_IMMORTAL )
         {

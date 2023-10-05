@@ -177,7 +177,7 @@ void handle_web( void )
         current->sin_size = sizeof( struct sockaddr_in );
         current->request[0] = '\0';
 
-        if ( ( current->fd = accept( sockfd, ( struct sockaddr* ) & ( current->their_addr ), &( current->sin_size ) ) ) == -1 )
+        if ( ( current->fd = accept( sockfd, ( struct sockaddr* ) &( current->their_addr ), ( socklen_t* ) &( current->sin_size ) ) ) == -1 )
         {
             perror( "web-accept" );
             // exit(1);
@@ -314,7 +314,7 @@ void shutdown_web ( void )
 */
 void do_webserve( CHAR_DATA* ch, char* argument )
 {
-    char buf[MSL], arg1[MIL], arg2[MIL];
+    char arg1[MIL], arg2[MIL];
     argument = one_argument( argument, arg1 );
     argument = one_argument( argument, arg2 );
 

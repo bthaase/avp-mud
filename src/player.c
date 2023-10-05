@@ -228,11 +228,7 @@ void do_score( CHAR_DATA* ch, char* argument )
     char buf[MAX_STRING_LENGTH];
     char buf2[MAX_STRING_LENGTH];
     char arg[MAX_STRING_LENGTH];
-    int iLang, ability, i, cnt = 0;
     int kA, kB;
-    int ratio = 0;
-    AFFECT_DATA*    paf;
-    EXT_BV xbit;
     argument = one_argument( argument, arg );
 
     if ( IS_NPC( ch ) )
@@ -384,7 +380,7 @@ char*           tiny_affect_loc_name( int location )
     }
 
     bug( "Affect_location_name: unknown location %d.", location );
-    return "(???)";
+    return "Unknown";
 }
 
 char* get_race( CHAR_DATA* ch )
@@ -392,7 +388,7 @@ char* get_race( CHAR_DATA* ch )
     if ( ch->race < MAX_NPC_RACE && ch->race >= 0 )
         return ( npc_race[ch->race] );
 
-    return ( "Unknown" );
+    return "Unknown";
 }
 
 char* get_sex( CHAR_DATA* ch )
@@ -418,8 +414,6 @@ void do_level( CHAR_DATA* ch, char* argument )
 
 void do_armor( CHAR_DATA* ch, char* argument )
 {
-    char buf[MAX_STRING_LENGTH];
-    int percent;
     ch_printf( ch, "&zArmor status: [%s&w&z]\n\r", drawbar( 10, armor_status( ch, 1 ), 100, "&G", "&g" ) );
     ch_printf( ch, "\n\r&WCurrent protection:\n\r" );
     ch_printf( ch, " &zFrom %-7s &G%+-d%%\n\r", "fire:", ch->protect[RIS_FIRE] );

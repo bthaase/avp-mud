@@ -31,7 +31,7 @@
 #include <sys/cdefs.h>
 #include <sys/time.h>
 #include <sys/wait.h>
-#include "mc_mem.h"
+#include <stdio.h>
 
 typedef int             ch_ret;
 typedef int             obj_ret;
@@ -3506,12 +3506,6 @@ void rempc_sentry   args( ( CHAR_DATA* ch ) );
 void reload_main    args( ( CHAR_DATA* ch, OBJ_DATA* obj, char* argument ) );
 int  use_obj        args( ( CHAR_DATA* ch, char* argument, int mode ) );
 void deploy_fire    args( ( SENTRY_DATA* gun, int dir ) );
-
-/* monitor.c */
-int     pmUpdate  args( ( void ) );
-int     pmStart   args( ( bool force ) );
-int     pmStop    args( ( void ) );
-int     pmReset   args( ( void ) );
 
 /* mud_comm.c */
 char*   mprog_type_to_name  args( ( int type ) );
