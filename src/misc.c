@@ -208,7 +208,6 @@ void do_reload( CHAR_DATA* ch, char* argument )
     if ( !str_cmp( arg1, "main" ) )
     {
         OBJ_DATA* obj2;
-        int cnt = 0;
         obj = get_eq_char( ch, WEAR_WIELD );
         obj2 = get_eq_char( ch, WEAR_DUAL_WIELD );
 
@@ -423,7 +422,6 @@ void do_unload( CHAR_DATA* ch, char* argument )
 {
     char arg1[MAX_INPUT_LENGTH];
     OBJ_DATA* obj;
-    OBJ_DATA* ammo;
 
     if ( is_spectator( ch ) )
     {
@@ -1378,7 +1376,6 @@ int use_obj( CHAR_DATA* ch, char* argument, int mode )
     }
     else if ( device->item_type == ITEM_MEDICOMP )
     {
-        int per;
         int hp;
 
         if ( ch->race != RACE_PREDATOR )
@@ -1530,7 +1527,7 @@ int use_obj( CHAR_DATA* ch, char* argument, int mode )
             obj_from_char( device );
 
             if ( obj_extracted( device ) )
-                return;
+                return 0;
 
             if ( cur_obj == device->serial )
                 global_objcode = rOBJ_SACCED;
@@ -1764,7 +1761,6 @@ void do_drink( CHAR_DATA* ch, char* argument )
 {
     char arg[MAX_INPUT_LENGTH];
     OBJ_DATA* obj;
-    int amount;
     argument = one_argument( argument, arg );
 
     /* munch optional words */
@@ -1828,7 +1824,6 @@ void do_drink( CHAR_DATA* ch, char* argument )
 void do_eat( CHAR_DATA* ch, char* argument )
 {
     OBJ_DATA* obj;
-    int foodcond;
 
     if ( argument[0] == '\0' )
     {
@@ -2256,7 +2251,7 @@ int allowedmp( DESCRIPTOR_DATA* d )
 void do_allowmp( CHAR_DATA* ch, char* argument )
 {
     struct allowmp_data* mp, *mp2;
-    char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH], buf3[MAX_STRING_LENGTH];
+    char buf[MSL], buf2[MSL], buf3[MSL];
     argument = one_argument( argument, buf );
     argument = one_argument( argument, buf2 );
     one_argument( argument, buf3 );
@@ -2269,7 +2264,7 @@ void do_allowmp( CHAR_DATA* ch, char* argument )
 
         for ( mp = mplist; mp && mp->name[0] != '\0'; mp = mp->next )
         {
-            sprintf( buf, "   %-10s | %-10s | %-25s\r\n", mp->by, mp->name, mp->host );
+            snprintf( buf, MSL, "   %-10s | %-10s | %-25s\r\n", mp->by, mp->name, mp->host );
             send_to_char( buf, ch );
         }
 
@@ -2380,7 +2375,7 @@ void do_allowmp( CHAR_DATA* ch, char* argument )
 #define XNAMEUSE "xname <noarg/add/delete> <name> <time><m/h/d>\r\n"
 void do_xname( CHAR_DATA* ch, char* argument )
 {
-    char buf[MAX_STRING_LENGTH], buf2[MAX_STRING_LENGTH], buf3[MAX_STRING_LENGTH];
+    char buf[MIL], buf2[MIL], buf3[MIL];
     struct xname_data* xname, *x2;
     int i, j, mult;
     char mine[5];
@@ -2388,12 +2383,12 @@ void do_xname( CHAR_DATA* ch, char* argument )
     argument = one_argument( argument, buf2 );
     one_argument( argument, buf3 );
 
-    if ( buf[0] == '\0' )
+    if ( NULLSTR( buf ) )
     {
-        sprintf( buf, " ---------Xnames-----------------\r\n" );
+        snprintf( buf, MSL, " ---------Xnames-----------------\r\n" );
 
         for ( xname = xnames; xname; xname = xname->next )
-            sprintf( buf, "%s    %-11s %s\r\n", buf, xname->name, ctime( &xname->time ) );
+            snprintf( buf + strlen( buf ), MSL - strlen( buf ), "%-11s %s\r\n", xname->name, ctime( &xname->time ) );
 
         send_to_char( buf, ch );
     }
@@ -2407,7 +2402,7 @@ void do_xname( CHAR_DATA* ch, char* argument )
         }
 
         CREATE( xname, struct xname_data, 1 );
-        strcpy( xname->name, buf2 );
+        strncpy( xname->name, buf2, MIL );
 
         for ( i = 0; buf3[i] != '\0'; i++ )
         {
@@ -2484,7 +2479,6 @@ void do_uptime( CHAR_DATA* ch, char* argument )
     char buf[MAX_STRING_LENGTH];
     FILE* fp;
     int pid;
-    int psize;
     int i;
     int c;
     fp = popen( UPTIME_PATH, "r" );
@@ -2504,7 +2498,6 @@ void do_uptime( CHAR_DATA* ch, char* argument )
     pclose( fp );
     send_to_char( buf, ch );
     pid = getpid();
-    psize = getpagesize();
     sprintf( buf, "\n\rProcess ID: %10d\n\r", pid );
     send_to_char( buf, ch );
 }

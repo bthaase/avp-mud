@@ -26,6 +26,7 @@
 
 /* Added for extended bitvectors  -Ghost */
 #include <stdarg.h>
+#include <stddef.h>
 
 #include <unistd.h>
 #include <sys/cdefs.h>
@@ -78,6 +79,8 @@ typedef int             obj_ret;
     typedef  short  int      sh_int;
     #include <stdbool.h>
 #endif
+
+#define NULLSTR( str )  ( str == NULL || str[0] == '\0' )
 
 /*
     Structure types.
@@ -320,15 +323,17 @@ struct who_data
 
 struct allowmp_data
 {
-    char  name[MAX_STRING_LENGTH], host[MAX_STRING_LENGTH], by[MAX_STRING_LENGTH];
+    char  name[1024], host[1024], by[1024];
     struct allowmp_data* next;
-} ;
+};
+
 struct xname_data
 {
     char name[MAX_STRING_LENGTH];
     time_t time;
     struct xname_data* next;
 };
+
 extern struct xname_data* xnames;
 
 /*
@@ -2553,13 +2558,13 @@ extern      CHAR_DATA*      loading_char;
 extern      CHAR_DATA*      saving_char;
 extern      OBJ_DATA*       all_obj;
 
-extern      char            bug_buf     [];
+extern      char            bug_buf     [MSL];
 extern      time_t          current_time;
 extern      bool            fLogAll;
 extern      FILE*           fpReserve;
 extern      FILE*           fpLOG;
 extern          FILE*                   fpMatch;
-extern      char            log_buf     [];
+extern      char            log_buf     [MSL];
 extern      TIME_INFO_DATA      time_info;
 extern      WEATHER_DATA        weather_info;
 
@@ -3722,6 +3727,8 @@ int     break_exit      args( ( ROOM_INDEX_DATA* room, EXIT_DATA* pexit, int roo
 void    set_variable    args( ( AREA_DATA* area, char* name, int value ) );
 int     get_variable    args( ( AREA_DATA* area, char* name ) );
 sh_int  get_mod_per     args( ( CHAR_DATA* ch ) );
+size_t  strlcpy         args( (char * __restrict dst, const char * __restrict src, size_t dsize) );
+size_t  strlcat         args( (char *dst, const char *src, size_t siz) );
 
 /* interp.c */
 bool    check_pos   args( ( CHAR_DATA* ch, sh_int position ) );
@@ -3729,9 +3736,9 @@ void    interpret   args( ( CHAR_DATA* ch, char* argument, bool is_order ) );
 bool    is_number   args( ( char* arg ) );
 bool    is_number_sym   args( ( char* arg ) );
 int number_argument args( ( char* argument, char* arg ) );
-char*   one_argument    args( ( char* argument, char* arg_first ) );
-char*   one_argument2   args( ( char* argument, char* arg_first ) );
-char*   one_argument_sc args( ( char* argument, char* arg_first ) );
+char*   one_argument    args( ( const char* argument, char* arg_first ) );
+char*   one_argument2   args( ( const char* argument, char* arg_first ) );
+char*   one_argument_sc args( ( const char* argument, char* arg_first ) );
 ST*     find_social args( ( char* command ) );
 CMDTYPE* find_command   args( ( char* command ) );
 void    hash_commands   args( ( ) );

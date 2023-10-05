@@ -162,7 +162,6 @@ void violence_update( void )
     char buf[MAX_STRING_LENGTH];
     CHAR_DATA* ch;
     CHAR_DATA* lst_ch;
-    CHAR_DATA* victim;
     CHAR_DATA* rch, *rch_next;
     AFFECT_DATA* paf, *paf_next;
     TIMER*   timer, *timer_next;
@@ -239,14 +238,14 @@ void violence_update( void )
         if ( !ch->in_room || !ch->name )
         {
             log_string( "violence_update: bad ch record!  (Shortcutting.)" );
-            sprintf( buf, "ch: %d  ch->in_room: %d  ch->prev: %d  ch->next: %d",
-                     ( int ) ch, ( int ) ch->in_room, ( int ) ch->prev, ( int ) ch->next );
+            sprintf( buf, "ch: %s  ch->in_room: %d  ch->prev: %s  ch->next: %s",
+                     ch->name, ch->in_room->vnum, ch->prev->name, ch->next->name );
             log_string( buf );
             log_string( lastplayercmd );
 
             if ( lst_ch )
-                sprintf( buf, "lst_ch: %d  lst_ch->prev: %d  lst_ch->next: %d",
-                         ( int ) lst_ch, ( int ) lst_ch->prev, ( int ) lst_ch->next );
+                sprintf( buf, "lst_ch: %s  lst_ch->prev: %s  lst_ch->next: %s",
+                         lst_ch->name, lst_ch->prev->name, lst_ch->next->name );
             else
                 strcpy( buf, "lst_ch: NULL" );
 
@@ -469,7 +468,6 @@ void violence_update( void )
 */
 ch_ret multi_hit( CHAR_DATA* ch, CHAR_DATA* victim, int dt )
 {
-    int     chance;
     ch_ret  retcode;
 
     /* add timer if player is attacking another player */
@@ -955,7 +953,7 @@ ch_ret one_hit( CHAR_DATA* ch, CHAR_DATA* victim, int dt )
 
             case WEAPON_FLAMETHROWER:
                 dam = number_range( dam / 2, dam );
-                sprintf( bufA, "&RYou fire a jet of solid flame at your target.\n\r", rounds );
+                sprintf( bufA, "&RYou fire a jet of solid flame at your target.\n\r" );
                 sprintf( bufB, "&Y$n opens fire with a %s.", wield->short_descr );
                 break;
 
@@ -1153,7 +1151,6 @@ ch_ret one_hit( CHAR_DATA* ch, CHAR_DATA* victim, int dt )
 */
 sh_int ris_damage( CHAR_DATA* ch, sh_int dam, int ris, bool apply )
 {
-    char buf[MAX_STRING_LENGTH];
     AFFECT_DATA* paf;
     OBJ_DATA* obj, * obj_next;
     sh_int modifier;
@@ -1289,9 +1286,7 @@ ch_ret damage( CHAR_DATA* ch, CHAR_DATA* victim, int dam, int dt )
     bool canresist = TRUE;
     bool tripped = FALSE;
     AFFECT_DATA* paf;
-    ch_ret retcode;
     sh_int dampmod;
-    retcode = rNONE;
 
     if ( !ch )
     {
@@ -1892,15 +1887,12 @@ void death_cry( CHAR_DATA* ch )
     ROOM_INDEX_DATA* was_in_room;
     char* msg;
     EXIT_DATA* pexit;
-    int vnum;
 
     if ( !ch )
     {
         bug( "DEATH_CRY: null ch!", 0 );
         return;
     }
-
-    vnum = 0;
 
     if ( IS_NPC( ch ) )
         msg = "You hear something's agonized cry.";
@@ -1925,16 +1917,11 @@ void death_cry( CHAR_DATA* ch )
     return;
 }
 
-
-
 void raw_kill( CHAR_DATA* ch, CHAR_DATA* victim )
 {
     CHAR_DATA* victmp;
-    char buf[MAX_STRING_LENGTH];
-    char buf2[MAX_STRING_LENGTH];
     char arg[MAX_STRING_LENGTH];
     OBJ_DATA* obj, *obj_next;
-    FILE* fp;
 
     if ( !victim )
     {
@@ -2476,69 +2463,53 @@ void add_xname( char* arg )
     xname->next = xnames;
 };
 
-void do_bite( CHAR_DATA* ch, char* argument )
-{
-}
-
-void do_claw( CHAR_DATA* ch, char* argument )
-{
-}
-
-void do_sting( CHAR_DATA* ch, char* argument )
-{
-}
-
-void do_tail( CHAR_DATA* ch, char* argument )
-{
-}
-
 void miss_message( CHAR_DATA* ch, CHAR_DATA* victim, int dt, int at )
 {
-    char buf1[256], buf2[256], buf3[256];
+    char buf1[MIL], buf2[MIL], buf3[MIL];
 
     if ( dt == TYPE_HIT || dt == 0 )
     {
-        sprintf( buf1, "$n's attack misses $N." );
-        sprintf( buf2, "Your attack misses $N." );
-        sprintf( buf3, "$n's attack misses you." );
+        snprintf( buf1, MIL, "$n's attack misses $N." );
+        snprintf( buf2, MIL, "Your attack misses $N." );
+        snprintf( buf3, MIL, "$n's attack misses you." );
     }
     else
     {
         if ( dt < 0 )
         {
-            sprintf( buf1, "$n's %s misses $N.", ( dt == -2 ) ? "automatic fire" : "burst-fire" );
-            sprintf( buf2, "Your %s misses $N.", ( dt == -2 ) ? "automatic fire" : "burst-fire" );
-            sprintf( buf3, "$n's %s misses you.", ( dt == -2 ) ? "automatic fire" : "burst-fire" );
+            snprintf( buf1, MIL, "$n's %s misses $N.", ( dt == -2 ) ? "automatic fire" : "burst-fire" );
+            snprintf( buf2, MIL, "Your %s misses $N.", ( dt == -2 ) ? "automatic fire" : "burst-fire" );
+            snprintf( buf3, MIL, "$n's %s misses you.", ( dt == -2 ) ? "automatic fire" : "burst-fire" );
         }
         else if ( dt == TYPE_HIT + WEAPON_KNIFE || dt == TYPE_HIT + WEAPON_BLADE )
         {
-            sprintf( buf1, "$n's slash misses $N." );
-            sprintf( buf2, "Your slash misses $N." );
-            sprintf( buf3, "$n's slash misses you." );
+            snprintf( buf1, MIL, "$n's slash misses $N." );
+            snprintf( buf2, MIL, "Your slash misses $N." );
+            snprintf( buf3, MIL, "$n's slash misses you." );
         }
         else if ( dt == TYPE_HIT + WEAPON_DISC )
         {
-            sprintf( buf1, "$n's disc misses $N." );
-            sprintf( buf2, "Your disc misses $N." );
-            sprintf( buf3, "$n's disc misses you." );
+            snprintf( buf1, MIL, "$n's disc misses $N." );
+            snprintf( buf2, MIL, "Your disc misses $N." );
+            snprintf( buf3, MIL, "$n's disc misses you." );
         }
         else if ( dt == TYPE_HIT + WEAPON_SPEAR )
         {
-            sprintf( buf1, "$n's spear misses $N." );
-            sprintf( buf2, "Your spear misses $N." );
-            sprintf( buf3, "$n's spear misses you." );
+            snprintf( buf1, MIL, "$n's spear misses $N." );
+            snprintf( buf2, MIL, "Your spear misses $N." );
+            snprintf( buf3, MIL, "$n's spear misses you." );
         }
         else if ( dt == TYPE_HIT + WEAPON_NATURAL )
         {
-            sprintf( buf1, "$n's attack misses $N." );
-            sprintf( buf2, "Your attack misses $N." );
-            sprintf( buf3, "$n's attack misses you." );
+            snprintf( buf1, MIL, "$n's attack misses $N." );
+            snprintf( buf2, MIL, "Your attack misses $N." );
+            snprintf( buf3, MIL, "$n's attack misses you." );
         }
         else
         {
-            sprintf( buf1, "$n's shot misses $N." );
-            sprintf( buf2, "Your shot misses $N." );
-            sprintf( buf3, "$n's shot misses you." );
+            snprintf( buf1, MIL, "$n's shot misses $N." );
+            snprintf( buf2, MIL, "Your shot misses $N." );
+            snprintf( buf3, MIL, "$n's shot misses you." );
         }
     }
 
@@ -2547,7 +2518,7 @@ void miss_message( CHAR_DATA* ch, CHAR_DATA* victim, int dt, int at )
     if ( at < 0 || at > 4 )
         at = 2;
 
-    sprintf( buf2, "%s (0 damage / %s)", buf2, ris_flags[at] );
+    snprintf( buf2 + strlen(buf2), MIL - strlen(buf2), " (0 damage / %s)", ris_flags[at] );
     act( AT_ACTION, buf1, ch, NULL, victim, TO_NOTVICT );
     act( AT_YELLOW, buf2, ch, NULL, victim, TO_CHAR );
     act( AT_HITME, buf3, ch, NULL, victim, TO_VICT );
@@ -2628,7 +2599,6 @@ void xp_radius_1( CHAR_DATA* ch, ROOM_INDEX_DATA* room, CHAR_DATA* victim, int x
 {
     char buf[MAX_STRING_LENGTH];
     CHAR_DATA* gch;
-    bool same = FALSE;
 
     if ( xIS_SET( room->room_flags, BFS_MARK ) )
         return;
@@ -2745,7 +2715,6 @@ void res_radius_1( CHAR_DATA* ch, ROOM_INDEX_DATA* room, CHAR_DATA* victim, int 
 {
     char buf[MAX_STRING_LENGTH];
     CHAR_DATA* gch;
-    bool same = FALSE;
 
     if ( xIS_SET( room->room_flags, BFS_MARK ) )
         return;
@@ -2817,18 +2786,16 @@ void res_radius_2( ROOM_INDEX_DATA* room, int range )
 
 bool delete_player( char* name )
 {
-    char arg[MAX_STRING_LENGTH];
-    char buf[MAX_STRING_LENGTH];
-    char buf2[MAX_STRING_LENGTH];
+    char arg[MIL], buf[MSL], buf2[MSL];
 
     if ( !name || name == NULL )
-        return;
+        return false;
 
-    strcpy( arg, name );
-    sprintf( buf, "Delete_player - Deleting character %s.", arg );
+    strncpy( arg, name, MIL );
+    snprintf( buf, MSL, "Delete_player - Deleting character %s.", arg );
     log_string( buf );
-    sprintf( buf, "%s%c/%s", PLAYER_DIR, tolower( arg[0] ), capitalize( arg ) );
-    sprintf( buf2, "%s%c/%s", BACKUP_DIR, tolower( arg[0] ), capitalize( arg ) );
+    snprintf( buf, MSL, "%s%c/%s", PLAYER_DIR, tolower( arg[0] ), capitalize( arg ) );
+    snprintf( buf2, MSL, "%s%c/%s", BACKUP_DIR, tolower( arg[0] ), capitalize( arg ) );
     return rename( buf, buf2 );
 }
 
@@ -3562,7 +3529,6 @@ int total_pc_killed( CHAR_DATA* ch )
 
 int stamina_penalty( CHAR_DATA* ch, int chance )
 {
-    int sc;
     int perc;
     int half;
 
@@ -3587,7 +3553,6 @@ int stamina_penalty( CHAR_DATA* ch, int chance )
 
     if ( ch->move < ch->max_move )
     {
-        sc = chance;
         perc = ( ch->move * 100 ) / ch->max_move;
         half = ( chance / 2 );
         chance -= half;
@@ -3733,7 +3698,7 @@ int snipe_direction( CHAR_DATA* ch, CHAR_DATA* vic, char* arg, OBJ_DATA* wield, 
 {
     char buf[MAX_STRING_LENGTH];
     ROOM_INDEX_DATA* to_room;
-    CHAR_DATA* rch, * rnext;
+    CHAR_DATA* rch;
     EXIT_DATA* pexit;
     int range = 0, mrange = 0;
     int rounds = 0, mrounds = 0;
@@ -4398,7 +4363,6 @@ void add_cover( CHAR_DATA* ch, OBJ_DATA* obj )
 */
 int cdamage( CHAR_DATA* ch, CHAR_DATA* victim, int dam, bool silent )
 {
-    char buf[MAX_STRING_LENGTH];
     int ndam = 0;
 
     if ( ch == NULL || victim == NULL )
@@ -4798,7 +4762,6 @@ void clear_shortage( CHAR_DATA* victim )
 
 void do_fire( CHAR_DATA* ch, char* argument )
 {
-    char buf[MAX_STRING_LENGTH];
     char arg1[MAX_INPUT_LENGTH];
     char arg2[MAX_INPUT_LENGTH];
     EXIT_DATA* pexit = NULL;

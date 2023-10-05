@@ -831,7 +831,6 @@ void do_give( CHAR_DATA* ch, char* argument )
 {
     char arg1 [MAX_INPUT_LENGTH];
     char arg2 [MAX_INPUT_LENGTH];
-    char buf  [MAX_INPUT_LENGTH];
     CHAR_DATA* victim;
     OBJ_DATA*  obj;
 
@@ -931,7 +930,6 @@ void do_show( CHAR_DATA* ch, char* argument )
 {
     char arg1 [MAX_INPUT_LENGTH];
     char arg2 [MAX_INPUT_LENGTH];
-    char buf  [MAX_INPUT_LENGTH];
     CHAR_DATA* victim;
     OBJ_DATA*  obj;
 
@@ -1038,8 +1036,7 @@ obj_ret damage_obj( OBJ_DATA* obj, int dam )
             /* Dont ALWAYS Scrap it.. Give it a chance. */
             if ( number_range( 1, 4 ) == 1 )
             {
-                OBJ_DATA* scraps;
-                scraps = make_scraps( obj );
+                make_scraps( obj );
                 objcode = rOBJ_SCRAPPED;
             }
 
@@ -1048,8 +1045,7 @@ obj_ret damage_obj( OBJ_DATA* obj, int dam )
         case ITEM_NVGOGGLE:
             if ( number_range( 1, 8 ) == 1 )
             {
-                OBJ_DATA* scraps;
-                scraps = make_scraps( obj );
+                make_scraps( obj );
                 objcode = rOBJ_SCRAPPED;
             }
 
@@ -1111,8 +1107,7 @@ obj_ret damage_obj( OBJ_DATA* obj, int dam )
         case ITEM_CONTAINER:
             if ( --obj->value[3] <= 0 )
             {
-                OBJ_DATA* scraps;
-                scraps = make_scraps( obj );
+                make_scraps( obj );
                 objcode = rOBJ_SCRAPPED;
             }
 
@@ -1125,8 +1120,7 @@ obj_ret damage_obj( OBJ_DATA* obj, int dam )
         case ITEM_REGENERATOR:
             if ( ( obj->value[0] -= dam ) <= 0 )
             {
-                OBJ_DATA* scraps;
-                scraps = make_scraps( obj );
+                make_scraps( obj );
                 objcode = rOBJ_SCRAPPED;
             }
 
@@ -1135,8 +1129,7 @@ obj_ret damage_obj( OBJ_DATA* obj, int dam )
         case ITEM_SENTRY:
             if ( ( obj->value[3] -= dam ) <= 0 )
             {
-                OBJ_DATA* scraps;
-                scraps = make_scraps( obj );
+                make_scraps( obj );
                 objcode = rOBJ_SCRAPPED;
             }
 
@@ -1152,8 +1145,7 @@ obj_ret damage_obj( OBJ_DATA* obj, int dam )
         case ITEM_ARMOR:
             if ( ( obj->value[0] -= dam ) <= 0 )
             {
-                OBJ_DATA* scraps;
-                scraps = make_scraps( obj );
+                make_scraps( obj );
                 objcode = rOBJ_SCRAPPED;
             }
 
@@ -1161,8 +1153,7 @@ obj_ret damage_obj( OBJ_DATA* obj, int dam )
 
         case ITEM_WEAPON:
         {
-            OBJ_DATA* scraps;
-            scraps = make_scraps( obj );
+            make_scraps( obj );
             objcode = rOBJ_SCRAPPED;
         }
         break;
@@ -2359,8 +2350,7 @@ void do_smash( CHAR_DATA* ch, char* argument )
     char arg[MAX_INPUT_LENGTH];
     char bufA[MAX_INPUT_LENGTH];
     char bufB[MAX_INPUT_LENGTH];
-    OBJ_DATA* obj, *obj_next = NULL;
-    int cnt = 0;
+    OBJ_DATA* obj;
     one_argument( argument, arg );
 
     if ( ch->race == RACE_MARINE && !IS_IMMORTAL( ch ) )
@@ -2540,14 +2530,11 @@ void load_equip_rooms( void )
             if ( ( fpArea = fopen( strArea, "r" ) ) != NULL )
             {
                 int iNest;
-                bool found;
                 OBJ_DATA* tobj, *tobj_next;
                 rset_supermob( get_room_index( rID ) );
 
                 for ( iNest = 0; iNest < MAX_NEST; iNest++ )
                     rgObjNest[iNest] = NULL;
-
-                found = TRUE;
 
                 for ( ; ; )
                 {
@@ -2693,8 +2680,6 @@ void obj_fall( OBJ_DATA* obj, bool through )
                 case ITEM_ARMOR:
                     if ( ( obj->value[0] - dam ) <= 0 )
                     {
-                        OBJ_DATA* scraps;
-
                         if ( obj->in_room->first_person )
                         {
                             act( AT_PLAIN, "$p is destroyed by the fall!",
@@ -2703,7 +2688,7 @@ void obj_fall( OBJ_DATA* obj, bool through )
                                  obj->in_room->first_person, obj, NULL, TO_CHAR );
                         }
 
-                        scraps = make_scraps( obj );
+                        make_scraps( obj );
                     }
                     else
                         obj->value[0] -= dam;
@@ -2713,8 +2698,6 @@ void obj_fall( OBJ_DATA* obj, bool through )
                 default:
                     if ( ( dam * 15 ) > get_obj_resistance( obj ) )
                     {
-                        OBJ_DATA* scraps;
-
                         if ( obj->in_room->first_person )
                         {
                             act( AT_PLAIN, "$p is destroyed by the fall!",
@@ -2723,7 +2706,7 @@ void obj_fall( OBJ_DATA* obj, bool through )
                                  obj->in_room->first_person, obj, NULL, TO_CHAR );
                         }
 
-                        scraps = make_scraps( obj );
+                        make_scraps( obj );
                     }
 
                     break;
