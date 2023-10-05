@@ -10,3 +10,4 @@ Group=avpmud
 ExecStart=/opt/avp-mud/src/avp 7676
 WorkingDirectory=/opt/avp-mud/area
 Restart=always
+WatchdogSec=30
