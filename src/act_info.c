@@ -4523,10 +4523,10 @@ void HTML_Who( void )
         fprintf( fp, "<head>\n" );
         fprintf( fp, "<title>AvP: Legend - Who list</title>\n" );
         fprintf( fp, "</head>\n" );
-        fprintf( fp, "<BODY TEXT=""#C0C0C0"" BGCOLOR=""#000000"" LINK=""#00FFFF""\n" );
-        fprintf( fp, "VLINK=""#FFFFFF"" ALINK=""#008080"">\n" );
+        fprintf( fp, "<BODY TEXT=\"#C0C0C0\" BGCOLOR=\"#000000\" LINK=\"#00FFFF\"\n" );
+        fprintf( fp, "VLINK=\"#FFFFFF\" ALINK=\"#008080\">\n" );
         fprintf( fp, "<h1><center>Who's on AvP?</center></h1>\n" );
-        fprintf( fp, "<b><center><font size=""2"">\n" );
+        fprintf( fp, "<b><center><font size=\"2\">\n" );
 
         for ( d = first_descriptor; d; d = d->next )
         {
@@ -4546,7 +4546,7 @@ void HTML_Who( void )
         if ( ppl > 0 )
         {
             fprintf( fp, "-There are [ %d ] people currently on AvP-<br>\n", ppl );
-            fprintf( fp, "<br><hr color=""#FFFFFF""><br>\n" );
+            fprintf( fp, "<br><hr color=\"#FFFFFF\"><br>\n" );
         }
 
         for ( d = first_descriptor; d; d = d->next )
@@ -4562,7 +4562,7 @@ void HTML_Who( void )
                 fprintf( fp, "--==|    %s    |==--<br>\n", conv_hcolor( wch->pcdata->title ) );
         }
 
-        fprintf( fp, "<br><br><hr color=""#FFFFFF""><br>\n" );
+        fprintf( fp, "<br><br><hr color=\"#FFFFFF\"><br>\n" );
 
         for ( d = first_descriptor; d; d = d->next )
         {
@@ -4582,11 +4582,11 @@ void HTML_Who( void )
                 if ( wch->pcdata->bio[0] != '\0' )
                     fprintf( fp, "BIO: %s<font color= #C0C0C0>\n", conv_hcolor( wch->pcdata->bio ) );
 
-                fprintf( fp, "<br><br><hr color=""#FFFFFF""><br>\n" );
+                fprintf( fp, "<br><br><hr color=\"#FFFFFF\"><br>\n" );
             }
         }
 
-        fprintf( fp, "<font face=""Times New Roman"">\n" );
+        fprintf( fp, "<font face=\"Times New Roman\">\n" );
 
         if ( ppl > 0 )
             fprintf( fp, "-There are [ %d ] people currently on AvP-<br>\n", ppl );
@@ -4636,14 +4636,14 @@ void HTML_Allrooms( void )
         fprintf( fp, "<head>\n" );
         fprintf( fp, "<title>AvP: Legend - Areas and Rooms</title>\n" );
         fprintf( fp, "</head>\n" );
-        fprintf( fp, "<BODY TEXT=""#C0C0C0"" BGCOLOR=""#000000"" LINK=""#00FFFF""\n" );
-        fprintf( fp, "VLINK=""#FFFFFF"" ALINK=""#008080"">\n" );
+        fprintf( fp, "<BODY TEXT=\"#C0C0C0\" BGCOLOR=\"#000000\" LINK=\"#00FFFF\"\n" );
+        fprintf( fp, "VLINK=\"#FFFFFF\" ALINK=\"#008080\">\n" );
         fprintf( fp, "<h1><center>Areas and Rooms of AvP!</center></h1>\n" );
         fprintf( fp, "<br><h3><center>Navigatable Index of Rooms</center></h3>\n" );
-        fprintf( fp, "<b><center><font size=""2"">\n" );
-        fprintf( fp, "<br><hr color=""#FFFFFF""><br>\n" );
+        fprintf( fp, "<b><center><font size=\"2\">\n" );
+        fprintf( fp, "<br><hr color=\"#FFFFFF\"><br>\n" );
         fprintf( fp, "<br><h3>Areas</h3>\n" );
-        fprintf( fp, "<br><hr color=""#FFFFFF""><br>\n" );
+        fprintf( fp, "<br><hr color=\"#FFFFFF\"><br>\n" );
 
         for ( area = first_area ; area ; area = area->next )
         {
@@ -4661,14 +4661,14 @@ void HTML_Allrooms( void )
             if ( !area || area == NULL )
                 continue;
 
-            fprintf( fp, "<br><hr color=""#FFFFFF""><br>\n" );
+            fprintf( fp, "<br><hr color=\"#FFFFFF\"><br>\n" );
             fprintf( fp, "---------------------=== %s ===---------------------<br>\n", area->name );
 
             for ( vnum = area->low_r_vnum; vnum <= area->hi_r_vnum; vnum++ )
             {
                 if ( ( room = get_room_index( vnum ) ) != NULL )
                 {
-                    fprintf( fp, "<p><a name=""%d""></a></p>", vnum );
+                    fprintf( fp, "<p><a name=\"%d\"></a></p>", vnum );
                     fprintf( fp, "VNUM: %-5d    Room Name: %-30s<font color= #C0C0C0><br>\n", vnum, conv_hcolor( room->name ) );
                     fprintf( fp, "Flags: %s %s %s %s %s %s<br>\n",
                              xIS_SET( room->room_flags, ROOM_INDOORS )    ? "INDOORS"   : "",
@@ -4684,19 +4684,19 @@ void HTML_Allrooms( void )
                         {
                             if ( xIS_SET( pexit->exit_info, EX_CLOSED ) )
                             {
-                                fprintf( fp, "Exit: <a href=""?#%d"">%s to %d [Closed]</a><br>\n", pexit->to_room->vnum, capitalize( dir_text[pexit->vdir] ), pexit->to_room->vnum );
+                                fprintf( fp, "Exit: <a href=\"?#%d\">%s to %d [Closed]</a><br>\n", pexit->to_room->vnum, capitalize( dir_text[pexit->vdir] ), pexit->to_room->vnum );
                             }
                             else if ( xIS_SET( pexit->exit_info, EX_WINDOW ) )
                             {
-                                fprintf( fp, "Exit: <a href=""?#%d"">%s to %d [Window]</a><br>\n", pexit->to_room->vnum, capitalize( dir_text[pexit->vdir] ), pexit->to_room->vnum );
+                                fprintf( fp, "Exit: <a href=\"?#%d\">%s to %d [Window]</a><br>\n", pexit->to_room->vnum, capitalize( dir_text[pexit->vdir] ), pexit->to_room->vnum );
                             }
                             else if ( xIS_SET( pexit->exit_info, EX_xAUTO ) )
                             {
-                                fprintf( fp, "Exit: <a href=""?#%d"">%s to %d [Autoexit]</a><br>\n", pexit->to_room->vnum, capitalize( pexit->keyword ), pexit->to_room->vnum );
+                                fprintf( fp, "Exit: <a href=\"?#%d\">%s to %d [Autoexit]</a><br>\n", pexit->to_room->vnum, capitalize( pexit->keyword ), pexit->to_room->vnum );
                             }
                             else
                             {
-                                fprintf( fp, "Exit: <a href=""?#%d"">%s to %d</a><br>\n", pexit->to_room->vnum, capitalize( dir_text[pexit->vdir] ), pexit->to_room->vnum );
+                                fprintf( fp, "Exit: <a href=\"?#%d\">%s to %d</a><br>\n", pexit->to_room->vnum, capitalize( dir_text[pexit->vdir] ), pexit->to_room->vnum );
                             }
                         }
                     }
@@ -4706,7 +4706,7 @@ void HTML_Allrooms( void )
             }
         }
 
-        fprintf( fp, "<br><hr color=""#FFFFFF""><br>\n" );
+        fprintf( fp, "<br><hr color=\"#FFFFFF\"><br>\n" );
         fprintf( fp, "-There are [ %d ] rooms on AvP-<br><br>\n", roomz );
         sprintf( buf, "<br>This file last updated at %s Eastern Time.\n", ( ( char* ) ctime( &current_time ) ) );
         fprintf( fp, buf );
@@ -4749,10 +4749,10 @@ void HTML_Objstats( void )
         fprintf( fp, "<head>\n" );
         fprintf( fp, "<title>AvP: Legend - Object Stats</title>\n" );
         fprintf( fp, "</head>\n" );
-        fprintf( fp, "<BODY TEXT=""#C0C0C0"" BGCOLOR=""#000000"" LINK=""#00FFFF""\n" );
-        fprintf( fp, "VLINK=""#FFFFFF"" ALINK=""#008080"">\n" );
+        fprintf( fp, "<BODY TEXT=\"#C0C0C0\" BGCOLOR=\"#000000\" LINK=\"#00FFFF\"\n" );
+        fprintf( fp, "VLINK=\"#FFFFFF\" ALINK=\"#008080\">\n" );
         fprintf( fp, "<h1><center>Object Statistics of AvP!</center></h1>\n" );
-        fprintf( fp, "<b><center><font size=""2"">\n" );
+        fprintf( fp, "<b><center><font size=\"2\">\n" );
         fprintf( fp, "<table><tr><td>Name</td><td>Vnum</td><td>Type</td><td>" );
         fprintf( fp, "Value0</td><td>Value1</td><td>Value2</td><td>Value3</td>" );
         fprintf( fp, "<td>Value4</td><td>Value5</td></tr>\n" );
@@ -4786,7 +4786,7 @@ void HTML_Objstats( void )
             }
         }
 
-        fprintf( fp, "</table><br><hr color=""#FFFFFF""><br>\n" );
+        fprintf( fp, "</table><br><hr color=\"#FFFFFF\"><br>\n" );
         fprintf( fp, "-There are [ %d ] objects on AvP-<br><br>\n", objz );
         sprintf( buf, "<br>This file last updated at %s Eastern Time.\n", ( ( char* ) ctime( &current_time ) ) );
         fprintf( fp, buf );
@@ -4829,12 +4829,12 @@ void HTML_Ammostats( void )
         fprintf( fp, "<head>\n" );
         fprintf( fp, "<title>AvP: Legend - Ammo Code Breakdown</title>\n" );
         fprintf( fp, "</head>\n" );
-        fprintf( fp, "<BODY TEXT=""#C0C0C0"" BGCOLOR=""#000000"" LINK=""#00FFFF""\n" );
-        fprintf( fp, "VLINK=""#FFFFFF"" ALINK=""#008080"">\n" );
+        fprintf( fp, "<BODY TEXT=\"#C0C0C0\" BGCOLOR=\"#000000\" LINK=\"#00FFFF\"\n" );
+        fprintf( fp, "VLINK=\"#FFFFFF\" ALINK=\"#008080\">\n" );
         fprintf( fp, "<h2><center>Ammunition Statistics of AvP!</center></h2>\n" );
-        fprintf( fp, "<b><center><font size=""2"">\n" );
-        fprintf( fp, "<table border=""1"" width=""90%""><tr><td width=""20%"">Name</td><td width=""20%"">Vnum</td>" );
-        fprintf( fp, "<td width=""20%"">Ammo Code A</td><td width=""20%"">Ammo Code B</td><td width=""20%"">Ammo Code C</td></tr>" );
+        fprintf( fp, "<b><center><font size=\"2\">\n" );
+        fprintf( fp, "<table border=\"1\" width=\"90%%\"><tr><td width=\"20%%\">Name</td><td width=\"20%%\">Vnum</td>" );
+        fprintf( fp, "<td width=\"20%%\">Ammo Code A</td><td width=\"20%%\">Ammo Code B</td><td width=\"20%%\">Ammo Code C</td></tr>" );
 
         for ( area = first_asort; area; area = area->next_sort )
         {
@@ -4890,11 +4890,11 @@ void HTML_Ammostats( void )
             }
         }
 
-        fprintf( fp, "</table><br><hr color=""#FFFFFF""><br>\n" );
+        fprintf( fp, "</table><br><hr color=\"#FFFFFF\"><br>\n" );
         fprintf( fp, "<h2><center>Weapon Statistics of AvP!</center></h2>\n" );
-        fprintf( fp, "<b><center><font size=""2"">\n" );
-        fprintf( fp, "<table border=""1"" width=""90%""><tr><td width=""25%"">Name</td><td width=""25%"">Vnum</td><td width=""25%"">Weapon Code</td>" );
-        fprintf( fp, "<td width=""25%"">Ammo Code</td></tr>" );
+        fprintf( fp, "<b><center><font size=\"2\">\n" );
+        fprintf( fp, "<table border=\"1\" width=\"90%%\"><tr><td width=\"25%%\">Name</td><td width=\"25%%\">Vnum</td><td width=\"25%%\">Weapon Code</td>" );
+        fprintf( fp, "<td width=\"25%%\">Ammo Code</td></tr>" );
 
         for ( area = first_asort; area; area = area->next_sort )
         {
@@ -4958,7 +4958,7 @@ void HTML_Ammostats( void )
             }
         }
 
-        fprintf( fp, "</table><br><hr color=""#FFFFFF""><br>\n" );
+        fprintf( fp, "</table><br><hr color=\"#FFFFFF\"><br>\n" );
         fprintf( fp, "-There are [ %d ] ammo clips on AvP-<br>\n", objy );
         fprintf( fp, "-There are [ %d ] weapons on AvP-<br><br>\n", objz );
         sprintf( buf, "<br>This file last updated at %s Eastern Time.\n", ( ( char* ) ctime( &current_time ) ) );
