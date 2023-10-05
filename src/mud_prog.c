@@ -1791,7 +1791,6 @@ int mprog_do_command( char* cmnd, CHAR_DATA* mob, CHAR_DATA* actor,
     if ( !str_cmp( firstword, "break" ) )
         return BERR;
 
-    vnum = mob->pIndexData->vnum;
     point   = buf;
     str     = cmnd;
 
