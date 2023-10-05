@@ -67,7 +67,6 @@
 #endif
 
 #define MAX_NEST        100
-static  OBJ_DATA*       rgObjNest       [MAX_NEST];
 
 const   char    echo_off_str    [] = { IAC, WILL, TELOPT_ECHO, '\0' };
 const   char    echo_on_str     [] = { IAC, WONT, TELOPT_ECHO, '\0' };
@@ -127,8 +126,8 @@ void    new_descriptor          args( ( int new_desc ) );
     Other local functions (OS-independent).
 */
 bool    check_parse_name     args( ( char* name ) );
-bool    check_reconnect      args( ( DESCRIPTOR_DATA* d, char* name, bool fConn ) );
-bool    check_playing        args( ( DESCRIPTOR_DATA* d, char* name, bool kick ) );
+short   check_reconnect      args( ( DESCRIPTOR_DATA* d, char* name, bool fConn ) );
+short   check_playing        args( ( DESCRIPTOR_DATA* d, char* name, bool kick ) );
 bool    check_multi          args( ( DESCRIPTOR_DATA* d, char* name ) );
 int     main                 args( ( int argc, char** argv ) );
 void    nanny                args( ( DESCRIPTOR_DATA* d, char* argument ) );
@@ -350,8 +349,6 @@ int init_socket( int port )
 {
     char hostname[64];
     struct sockaddr_in   sa;
-    struct hostent*      hp;
-    struct servent*      sp;
     int x = 1;
     int fd;
     gethostname( hostname, sizeof( hostname ) );
@@ -383,8 +380,8 @@ int init_socket( int port )
         }
     }
 #endif
-    hp = gethostbyname( hostname );
-    sp = getservbyname( "service", "mud" );
+    gethostbyname( hostname );
+    getservbyname( "service", "mud" );
     memset( &sa, '\0', sizeof( sa ) );
     sa.sin_family   = AF_INET; /* hp->h_addrtype; */
     sa.sin_port     = htons( port );
@@ -408,7 +405,6 @@ int init_socket( int port )
 
 static void SegVio()
 {
-    CHAR_DATA* ch;
     char buf[MAX_STRING_LENGTH];
     char bufB[MAX_STRING_LENGTH];
     char* strtime;
@@ -989,7 +985,7 @@ void new_descriptor( int new_desc )
 
     set_alarm( 20 );
 
-    if ( ( desc = accept( new_desc, ( struct sockaddr* ) &sock, &size ) ) < 0 )
+    if ( ( desc = accept( new_desc, ( struct sockaddr* ) &sock, ( socklen_t* )&size ) ) < 0 )
     {
         perror( "New_descriptor: accept" );
         sprintf( bugbuf, "[*****] BUG: New_descriptor: accept" );
@@ -1788,15 +1784,15 @@ void nanny( DESCRIPTOR_DATA* d, char* argument )
     char buf[MAX_STRING_LENGTH];
     char arg[MAX_STRING_LENGTH];
     char arg2[MAX_STRING_LENGTH];
-    char tmp[MAX_STRING_LENGTH];
     CHAR_DATA* ch;
     char* pwdnew;
     char* p;
-    int iRace, iClass;
+    int iRace;
     BAN_DATA* pban;
     int c = 0, cost;
-    bool fOld, chk;
-    int sn, cnt = 0, fpnt = 0;
+    bool fOld;
+    short chk;
+    int sn;
 
     while ( isspace( *argument ) )
         argument++;
@@ -2024,12 +2020,12 @@ void nanny( DESCRIPTOR_DATA* d, char* argument )
             if ( chk == TRUE )
                 return;
 
-            sprintf( buf, ch->name );
+            strncpy( buf, ch->name, MSL );
             d->character->desc = NULL;
             free_char( d->character );
             fOld = load_char_obj( d, buf, FALSE );
             ch = d->character;
-            sprintf( log_buf, "%s@%s(%s) has connected.", ch->name, d->host, d->user );
+            snprintf( log_buf, MSL, "%s@%s(%s) has connected.", ch->name, d->host, d->user );
 
             if ( ch->top_level < LEVEL_DEMI )
             {
@@ -2305,7 +2301,7 @@ void nanny( DESCRIPTOR_DATA* d, char* argument )
                          strcat( buf, " " );
                         }
                     */
-                    sprintf( buf, "%s &z[ &B%d - %-10s&z ] &w:: &W%s\n", buf, iRace + 1, race_table[iRace].real_name, race_table[iRace].desc );
+                    snprintf( buf + strlen(buf), MSL - strlen(buf), "&z[ &B%d - %-10s&z ] &w:: &W%s\n\r", iRace + 1, race_table[iRace].real_name, race_table[iRace].desc );
                 }
             }
 
@@ -3067,7 +3063,7 @@ void nanny( DESCRIPTOR_DATA* d, char* argument )
             if ( ch->top_level == 0 )
             {
                 /* OBJ_DATA *obj; */
-                int iLang, bLoop = 0;
+                int iLang;
                 set_ident( ch );
                 xCLEAR_BITS( ch->affected_by );
 
@@ -3341,7 +3337,7 @@ bool check_parse_name( char* name )
 /*
     Look for link-dead player to reconnect.
 */
-bool check_reconnect( DESCRIPTOR_DATA* d, char* name, bool fConn )
+short check_reconnect( DESCRIPTOR_DATA* d, char* name, bool fConn )
 {
     CHAR_DATA* ch;
 
@@ -3437,7 +3433,7 @@ bool check_multi( DESCRIPTOR_DATA* d, char* name )
     return FALSE;
 }
 
-bool check_playing( DESCRIPTOR_DATA* d, char* name, bool kick )
+short check_playing( DESCRIPTOR_DATA* d, char* name, bool kick )
 {
     CHAR_DATA* ch;
     DESCRIPTOR_DATA* dold;
@@ -3812,7 +3808,7 @@ char* act_string( const char* format, CHAR_DATA* to, CHAR_DATA* ch,
     OBJ_DATA* obj2 = ( OBJ_DATA* ) arg2;
 
     if ( !to )
-        return;
+        return "(error)";
 
     while ( *str != '\0' )
     {
@@ -4174,7 +4170,6 @@ int getcolor( char clr )
 void display_prompt( DESCRIPTOR_DATA* d )
 {
     CHAR_DATA* ch = d->character;
-    CHAR_DATA* victim;
     CHAR_DATA* och = ( d->original ? d->original : d->character );
     bool ansi = ( !IS_NPC( och ) && xIS_SET( och->act, PLR_ANSI ) );
     const char* prompt;
@@ -4890,13 +4885,13 @@ void do_copyover ( CHAR_DATA* ch, char* argument )
 {
     char arg[MAX_STRING_LENGTH];
     FILE* fp;
-    DESCRIPTOR_DATA* d, *d_next;
+    DESCRIPTOR_DATA* d;
     bool nosave = FALSE;
     bool bypass = FALSE;
     char buf [100], buf2[100], buf3[100], buf4[100], buf5[100];
     argument = one_argument( argument, arg );
 
-    if ( !arg || arg[0] == '\0' )
+    if ( NULLSTR( arg ) )
     {
         send_to_char( "\n\rUSAGE: copyover NOW     - Full Copyover", ch );
         send_to_char( "\n\r       copyover NOSAVE  - Only Stores descriptors", ch );
@@ -4976,7 +4971,6 @@ void do_copyover ( CHAR_DATA* ch, char* argument )
     for ( d = first_descriptor; d ; d = d->next )
     {
         CHAR_DATA* och = CH ( d );
-        d_next = d->next; /* We delete from the list , so need to save this */
 
         if ( !och || !d->character || d->connected > CON_PLAYING ) /* drop those logging on */
         {
@@ -5140,16 +5134,16 @@ bool close_match( void )
 
 bool open_match( void )
 {
-    char tmp[MAX_STRING_LENGTH];
-    char filename[MAX_STRING_LENGTH];
+    char tmp[MIL];
+    char filename[MSL];
     time_t t = time( 0 );
 
     if ( fpMatch != NULL )
         return FALSE;
 
     // Create Filename MMDDYY-HHMMSS
-    strftime( tmp, MAX_STRING_LENGTH, "%m%d%Y%H%M%S", localtime( &t ) );
-    sprintf( filename, "../report/%s.log", tmp );
+    strftime( tmp, MIL, "%m%d%Y%H%M%S", localtime( &t ) );
+    snprintf( filename, MSL, "../report/%s.log", tmp );
 
     if ( ( fpMatch = fopen( filename, "w" ) ) == NULL )
         return FALSE;
@@ -5160,7 +5154,7 @@ bool open_match( void )
 
 bool match_log( const char* str, ... )
 {
-    char mlog[MAX_STRING_LENGTH];
+    char mlog[MSL];
     char* strtime;
     char* buf;
 
@@ -5176,8 +5170,8 @@ bool match_log( const char* str, ... )
         vsprintf( buf + strlen( buf ), str, param );
         va_end( param );
     }
-    sprintf( mlog, "%s;%s\n", strtime, buf );
-    fprintf( fpMatch, mlog );
+    snprintf( mlog, MSL, "%s;%s\n", strtime, buf );
+    fprintf( fpMatch, "%s", mlog );
     free( buf );
     return TRUE;
 }

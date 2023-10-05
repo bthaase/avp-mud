@@ -32,10 +32,6 @@
 
 #define timerclear(tvp)         (tvp)->tv_sec = (tvp)->tv_usec = 0
 #define timerisset(tvp)         ((tvp)->tv_sec || (tvp)->tv_usec)
-#define timercmp(tvp, uvp, cmp)                 \
-    (((tvp)->tv_sec == (uvp)->tv_sec) ?         \
-     ((tvp)->tv_usec cmp (uvp)->tv_usec) :       \
-     ((tvp)->tv_sec cmp (uvp)->tv_sec))
 
 /*
     Externals
@@ -110,10 +106,7 @@ extern char lastplayercmd[MAX_INPUT_LENGTH * 2];
 */
 void interpret( CHAR_DATA* ch, char* argument, bool is_order )
 {
-    char command[MAX_INPUT_LENGTH];
-    char logline[MAX_INPUT_LENGTH];
-    char logname[MAX_INPUT_LENGTH];
-    char logperson[MAX_INPUT_LENGTH];
+    char command[MIL], logline[MIL], logname[MIL], logperson[SUPER_MIL];
     TIMER* timer = NULL;
     CMDTYPE* cmd = NULL;
     int trust, i = 0;
@@ -168,7 +161,7 @@ void interpret( CHAR_DATA* ch, char* argument, bool is_order )
                 return;
             }
 
-            sprintf( logline, "(%s) %s", cmd->name, argument );
+            snprintf( logline, MIL, "(%s) %s", cmd->name, argument );
         }
     }
 
@@ -208,7 +201,7 @@ void interpret( CHAR_DATA* ch, char* argument, bool is_order )
             Special parsing so ' can be a command,
              also no spaces needed after punctuation.
         */
-        strcpy( logline, argument );
+        strncpy( logline, argument, MIL );
 
         if ( !isalpha( argument[0] ) && !isdigit( argument[0] ) )
         {
@@ -252,10 +245,10 @@ void interpret( CHAR_DATA* ch, char* argument, bool is_order )
     /*
         Log and snoop.
     */
-    sprintf( lastplayercmd, "** %s: %s", ch->name, logline );
+    snprintf( lastplayercmd, SUPER_MIL, "** %s: %s", ch->name, logline );
 
     if ( found && cmd->log == LOG_NEVER )
-        strcpy( logline, "XXXXXXXX XXXXXXXX XXXXXXXX" );
+        strncpy( logline, "XXXXXXXX XXXXXXXX XXXXXXXX", MIL );
 
     loglvl = found ? cmd->log : LOG_NORMAL;
 
@@ -268,10 +261,10 @@ void interpret( CHAR_DATA* ch, char* argument, bool is_order )
         /*  Added by Narn to show who is switched into a mob that executes
             a logged command.  Check for descriptor in case force is used. */
         if ( ch->desc && ch->desc->original )
-            sprintf( log_buf, "Log %s (%s): %s", ch->name,
+            snprintf( log_buf, MSL, "Log %s (%s): %s", ch->name,
                      ch->desc->original->name, logline );
         else
-            sprintf( log_buf, "Log %s: %s", ch->name, logline );
+            snprintf( log_buf, MSL, "Log %s: %s", ch->name, logline );
 
         /*
             Make it so a 'log all' will send most output to the log
@@ -295,21 +288,21 @@ void interpret( CHAR_DATA* ch, char* argument, bool is_order )
     */
     if ( !IS_NPC( ch ) )
     {
-        char filenameA[MAX_INPUT_LENGTH];
-        char filenameB[MAX_INPUT_LENGTH];
+        char filenameA[MIL];
+        char filenameB[MIL];
         char* strtime;
         strtime                    = ctime( &current_time );
         strtime[strlen( strtime ) - 1] = '\0';
-        sprintf( filenameA, "%simmortal.log", LOG_DIR );
-        sprintf( filenameB, "%simmortal.old", LOG_DIR );
+        snprintf( filenameA, MIL, "%simmortal.log", LOG_DIR );
+        snprintf( filenameB, MIL, "%simmortal.old", LOG_DIR );
 
         if ( ch->desc && ch->desc->original )
         {
-            sprintf( logperson, "%s :: %-12s: %s", strtime, ch->desc->original->name, logline );
+            snprintf( logperson, SUPER_MIL, "%s :: %-12s: %s", strtime, ch->desc->original->name, logline );
         }
         else
         {
-            sprintf( logperson, "%s :: %-12s: %s", strtime, ch->name, logline );
+            snprintf( logperson, SUPER_MIL, "%s :: %-12s: %s", strtime, ch->name, logline );
         }
 
         /* Stops logging at 10 megs, instead rename the old one to a new name  */
@@ -329,7 +322,7 @@ void interpret( CHAR_DATA* ch, char* argument, bool is_order )
     {
         if ( ch->desc && ch->desc->snoop_by[i] )
         {
-            sprintf( logname, "%s", ch->name );
+            snprintf( logname, MIL, "%s", ch->name );
             write_to_buffer( ch->desc->snoop_by[i], logname, 0 );
             write_to_buffer( ch->desc->snoop_by[i], "% ",    2 );
             write_to_buffer( ch->desc->snoop_by[i], logline, 0 );
@@ -464,7 +457,7 @@ void interpret( CHAR_DATA* ch, char* argument, bool is_order )
     /* laggy command notice: command took longer than 1.5 seconds */
     if ( tmptime > 1500000 )
     {
-        sprintf( log_buf, "[*****] LAG: %s: %s %s (R:%d S:%d.%06d)", ch->name,
+        snprintf( log_buf, MSL, "[*****] LAG: %s: %s %s (R:%d S:%d.%06d)", ch->name,
                  cmd->name, ( cmd->log == LOG_NEVER ? "XXX" : argument ),
                  ch->in_room ? ch->in_room->vnum : 0,
                  ( int ) ( time_used.tv_sec ), ( int ) ( time_used.tv_usec ) );
@@ -664,7 +657,7 @@ int number_argument( char* argument, char* arg )
     Pick off one argument from a string and return the rest.
     Understands quotes.
 */
-char* one_argument( char* argument, char* arg_first )
+char* one_argument( const char* argument, char* arg_first )
 {
     char cEnd;
     sh_int count;
@@ -696,14 +689,14 @@ char* one_argument( char* argument, char* arg_first )
     while ( isspace( *argument ) )
         argument++;
 
-    return argument;
+    return ( char* ) argument;
 }
 
 /*
     Pick off one argument from a string and return the rest.
     Understands quotes.  Delimiters = { ' ', '-' }
 */
-char* one_argument2( char* argument, char* arg_first )
+char* one_argument2( const char* argument, char* arg_first )
 {
     char cEnd;
     sh_int count;
@@ -735,14 +728,14 @@ char* one_argument2( char* argument, char* arg_first )
     while ( isspace( *argument ) )
         argument++;
 
-    return argument;
+    return ( char* ) argument;
 }
 
 /*
     Pick off one argument from a string and return the rest.
     Understands quotes. Saves the case.
 */
-char* one_argument_sc( char* argument, char* arg_first )
+char* one_argument_sc( const char* argument, char* arg_first )
 {
     char cEnd;
     sh_int count;
@@ -774,7 +767,7 @@ char* one_argument_sc( char* argument, char* arg_first )
     while ( isspace( *argument ) )
         argument++;
 
-    return argument;
+    return ( char* ) argument;
 }
 
 bool is_plain_text( char* text )

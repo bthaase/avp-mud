@@ -194,7 +194,7 @@ void show_list_to_char( OBJ_DATA* list, CHAR_DATA* ch, bool fShort, bool fShowNo
     OBJ_DATA* obj;
     int nShow;
     int iShow;
-    int count, offcount, tmp, ms, cnt;
+    int count, offcount, cnt;
     bool fCombine;
     offcount = 0;
 
@@ -226,8 +226,6 @@ void show_list_to_char( OBJ_DATA* list, CHAR_DATA* ch, bool fShort, bool fShowNo
     for ( obj = list; obj; obj = obj->next_content )
         count++;
 
-    ms  = ( ch->mental_state ? ch->mental_state : 1 );
-
     if ( count <= 0 )
     {
         if ( fShowNothing )
@@ -246,7 +244,6 @@ void show_list_to_char( OBJ_DATA* list, CHAR_DATA* ch, bool fShort, bool fShowNo
     CREATE( prgnShow,           int,    count );
     CREATE( pitShow,            int,    count );
     nShow   = 0;
-    tmp         = 0;
     cnt         = 0;
 
     /*
@@ -1502,7 +1499,6 @@ void examine_obj( CHAR_DATA* ch, OBJ_DATA* obj )
     char buf[MAX_STRING_LENGTH];
     SENTRY_DATA* tmp = NULL;
     BOARD_DATA* board = NULL;
-    sh_int dam;
 
     if ( !ch )
     {
@@ -2378,8 +2374,6 @@ void do_newswrite( CHAR_DATA* ch, char* argument )
     if ( ( pHelp = get_help( ch, buf ) ) == NULL ) /* new help */
     {
         HELP_DATA* tHelp;
-        char argnew[MAX_INPUT_LENGTH];
-        int lev;
         bool new_help = TRUE;
 
         for ( tHelp = first_help; tHelp; tHelp = tHelp->next )
@@ -2602,15 +2596,9 @@ void do_who( CHAR_DATA* ch, char* argument )
     char race_text[MAX_INPUT_LENGTH];
     DESCRIPTOR_DATA* d;
     BOT_DATA* bTmp;
-    int iRace;
-    int iLevelLower;
-    int iLevelUpper;
     int nNumber;
     int nMatch;
     int bCnt = 0;
-    bool rgfRace[MAX_RACE];
-    bool fRaceRestrict;
-    FILE* whoout;
     WHO_DATA* cur_who = NULL;
     WHO_DATA* next_who = NULL;
     WHO_DATA* first_a = NULL;
@@ -2619,15 +2607,6 @@ void do_who( CHAR_DATA* ch, char* argument )
 
     if ( !ch )
         return;
-
-    /*
-        Set default arguments.
-    */
-    iLevelLower    = 0;
-    iLevelUpper    = 200;
-
-    for ( iRace = 0; iRace < MAX_RACE; iRace++ )
-        rgfRace[iRace] = FALSE;
 
     /*
         Parse arguments.
@@ -2647,11 +2626,9 @@ void do_who( CHAR_DATA* ch, char* argument )
             switch ( ++nNumber )
             {
                 case 1:
-                    iLevelLower = atoi( arg );
                     break;
 
                 case 2:
-                    iLevelUpper = atoi( arg );
                     break;
 
                 default:
@@ -3310,8 +3287,7 @@ void do_consider( CHAR_DATA* ch, char* argument )
 
 void do_practice( CHAR_DATA* ch, char* argument )
 {
-    char buf[MAX_STRING_LENGTH];
-    char tmp[MAX_STRING_LENGTH];
+    char buf[MIL], tmp[MSL];
     int clevel = 0, sn = 0;
 
     if ( IS_NPC( ch ) )
@@ -3350,23 +3326,23 @@ void do_practice( CHAR_DATA* ch, char* argument )
             ++cnt;
 
             if ( ch->pcdata->learned[sn] <= 1 )
-                strcpy( buf, "Basic" );
+                strncpy( buf, "Basic", MIL );
 
             if ( ch->pcdata->learned[sn] == 2 )
-                strcpy( buf, "Advanced" );
+                strncpy( buf, "Advanced", MIL );
 
             if ( ch->pcdata->learned[sn] >= 3 )
-                strcpy( buf, "Expert" );
+                strncpy( buf, "Expert", MIL );
 
             if ( skill_table[sn]->reset <= 0 )
             {
-                sprintf( tmp, "&w&zSkill: &B%-20s &z- ( Level: &W%-8s &z- Ready: [%s&z] )\n\r",
+                snprintf( tmp, MSL, "&w&zSkill: &B%-20s &z- ( Level: &W%-8s &z- Ready: [%s&z] )\n\r",
                          capitalize( skill_table[sn]->name ), buf,
                          drawbar( 10, 1, 1, "&G", "&g" ) );
             }
             else
             {
-                sprintf( tmp, "&zSkill: &B%-20s &z- ( Level: &W%-8s &z- Ready: [%s&z] )\n\r",
+                snprintf( tmp, MSL, "&zSkill: &B%-20s &z- ( Level: &W%-8s &z- Ready: [%s&z] )\n\r",
                          capitalize( skill_table[sn]->name ), buf,
                          drawbar( 10, ch->pcdata->prepared[sn], skill_table[sn]->reset, "&G", "&g" ) );
             }
@@ -4246,22 +4222,22 @@ void do_slist( CHAR_DATA* ch, char* argument )
 
 void do_whois( CHAR_DATA* ch, char* argument )
 {
-    char buf[MAX_STRING_LENGTH];
-    char buf2[MAX_STRING_LENGTH];
+    char buf[MSL], buf2[SUPER_MSL];
     CHAR_DATA* victim;
-    buf[0] = '\0';
+    strncpy( buf, "", MSL );
+    strncpy( buf2, "", SUPER_MSL );
 
     if ( IS_NPC( ch ) )
         return;
 
-    if ( argument[0] == '\0' )
+    if ( NULLSTR( argument ) )
     {
         send_to_char( "You must input the name of a player online.\n\r", ch );
         return;
     }
 
-    strcat( buf, "0." );
-    strcat( buf, argument );
+    strncpy( buf, "0.", MSL );
+    strlcat( buf, argument, MSL );
 
     if ( ( ( victim = get_char_world_full( ch, buf ) ) == NULL ) )
     {
@@ -4346,7 +4322,7 @@ void do_whois( CHAR_DATA* ch, char* argument )
 
         if ( get_trust( victim ) < get_trust( ch ) )
         {
-            sprintf( buf2, "list %s", buf );
+            snprintf( buf2, SUPER_MSL, "list %s", buf );
             do_comment( ch, buf2 );
         }
 
@@ -4356,36 +4332,36 @@ void do_whois( CHAR_DATA* ch, char* argument )
             sprintf( buf2, "&zThis player has the following flags set:" );
 
             if ( xIS_SET( victim->act, PLR_SILENCE ) )
-                strcat( buf2, " &Csilence" );
+                strlcat( buf2, " &Csilence", SUPER_MSL );
 
             if ( xIS_SET( victim->act, PLR_NO_EMOTE ) )
-                strcat( buf2, " &Cnoemote" );
+                strlcat( buf2, " &Cnoemote", SUPER_MSL );
 
             if ( xIS_SET( victim->act, PLR_NO_TELL ) )
-                strcat( buf2, " &Cnotell" );
+                strlcat( buf2, " &Cnotell", SUPER_MSL );
 
-            strcat( buf2, ".\n\r" );
+            strlcat( buf2, ".\n\r", SUPER_MSL );
             send_to_char( buf2, ch );
         }
 
         if ( victim->desc && victim->desc->host[0] != '\0' ) /* added by Gorog */
         {
-            sprintf ( buf2, "&z%s's IP info: &C%s ", victim->name, victim->desc->hostip );
+            snprintf( buf2, SUPER_MSL, "&z%s's IP info: &C%s ", victim->name, victim->desc->hostip );
 
             if ( get_trust( ch ) >= LEVEL_GOD )
             {
-                strcat ( buf2, victim->desc->user );
-                strcat ( buf2, "@" );
-                strcat ( buf2, victim->desc->host );
+                strlcat( buf2, victim->desc->user, SUPER_MSL );
+                strlcat( buf2, "@", SUPER_MSL );
+                strlcat( buf2, victim->desc->host, SUPER_MSL );
             }
 
-            strcat ( buf2, "\n\r" );
+            strlcat( buf2, "\n\r", SUPER_MSL );
             send_to_char( buf2, ch );
         }
 
         if ( get_trust( ch ) >= LEVEL_GOD && get_trust( ch ) >= get_trust( victim ) && victim->pcdata )
         {
-            sprintf ( buf2, "&zEmail: &C%s\n\r", victim->pcdata->email );
+            snprintf( buf2, SUPER_MSL, "&zEmail: &C%s\n\r", victim->pcdata->email );
             send_to_char( buf2, ch );
         }
     }
@@ -4456,7 +4432,7 @@ void do_html( CHAR_DATA* ch, char* argument )
         return;
     }
 
-    if ( !arg || arg[0] == '\0' )
+    if ( NULLSTR( arg ) )
     {
         send_to_char( "&R\n\rSyntax: HTML <[Page]|ALL>\n\r", ch );
         send_to_char( "&RCurrent Pages:\n\r", ch );
@@ -4503,11 +4479,9 @@ void HTML_Who( void )
     FILE* fp;
     DESCRIPTOR_DATA* d;
     char fname[MAX_INPUT_LENGTH];
-    char buf[2 * MAX_INPUT_LENGTH];
-    char buf2[2 * MAX_INPUT_LENGTH];
+    char buf[MIL];
     int ppl = 0;
-    buf[0] = '\0';
-    buf2[0] = '\0';
+    strncpy( buf, "", MIL );
     fclose( fpReserve );
     /* IMPORTANT: This file needs to exist before you attempt to run this. */
     sprintf( fname, "../webpage/avp_who.htm" );
@@ -4593,8 +4567,8 @@ void HTML_Who( void )
         else
             fprintf( fp, "-There is nobody currently connected to AvP-<br>\n" );
 
-        sprintf( buf, "<br>This file last updated at %s Eastern Time.\n", ( ( char* ) ctime( &current_time ) ) );
-        fprintf( fp, buf );
+        snprintf( buf, MIL, "<br>This file last updated at %s Eastern Time.\n", ( ( char* ) ctime( &current_time ) ) );
+        fprintf( fp, "%s", buf );
         fprintf( fp, "</center></font>\n" );
         fprintf( fp, "</body>\n" );
         fprintf( fp, "</html>\n" );
@@ -4616,12 +4590,10 @@ void HTML_Allrooms( void )
     AREA_DATA* area;
     ROOM_INDEX_DATA* room;
     EXIT_DATA* pexit;
-    char buf[2 * MAX_INPUT_LENGTH];
-    char buf2[2 * MAX_INPUT_LENGTH];
+    char buf[MIL];
     int areaz = 0, roomz = 0, vnum = 0;
     static char* dir_text[] = { "north", "east", "south", "west", "up", "down", "northeast", "northwest", "southeast", "southwest", "somewhere" };
-    buf[0] = '\0';
-    buf2[0] = '\0';
+    strncpy( buf, "", MIL );
     fclose( fpReserve );
 
     /* IMPORTANT: This file needs to exist before you attempt to run this. */
@@ -4708,8 +4680,8 @@ void HTML_Allrooms( void )
 
         fprintf( fp, "<br><hr color=\"#FFFFFF\"><br>\n" );
         fprintf( fp, "-There are [ %d ] rooms on AvP-<br><br>\n", roomz );
-        sprintf( buf, "<br>This file last updated at %s Eastern Time.\n", ( ( char* ) ctime( &current_time ) ) );
-        fprintf( fp, buf );
+        snprintf( buf, MIL, "<br>This file last updated at %s Eastern Time.\n", ( ( char* ) ctime( &current_time ) ) );
+        fprintf( fp, "%s", buf );
         fprintf( fp, "</center></font>\n" );
         fprintf( fp, "</body>\n" );
         fprintf( fp, "</html>\n" );
@@ -4730,11 +4702,9 @@ void HTML_Objstats( void )
     FILE* fp;
     AREA_DATA* area;
     OBJ_INDEX_DATA* pObjIndex;
-    char buf[2 * MAX_INPUT_LENGTH];
-    char buf2[2 * MAX_INPUT_LENGTH];
+    char buf[MIL];
     int vnum = 0, objz = 0;
-    buf[0] = '\0';
-    buf2[0] = '\0';
+    strncpy( buf, "", MIL );
     fclose( fpReserve );
 
     /* IMPORTANT: This file needs to exist before you attempt to run this. */
@@ -4774,22 +4744,22 @@ void HTML_Objstats( void )
                 fprintf( fp, "</td><td>\n" );
                 fprintf( fp, "%s", o_types[pObjIndex->item_type] );
                 fprintf( fp, "</td><td>\n" );
-                sprintf( buf, "%d%s%d%s%d%s%d%s%d%s%d%s",
+                snprintf( buf, MIL, "%d%s%d%s%d%s%d%s%d%s%d%s",
                          pObjIndex->value[0], "</td><td>\n",
                          pObjIndex->value[1], "</td><td>\n",
                          pObjIndex->value[2], "</td><td>\n",
                          pObjIndex->value[3], "</td><td>\n",
                          pObjIndex->value[4], "</td><td>\n",
                          pObjIndex->value[5], "</td></tr>\n" );
-                fprintf( fp, buf );
+                fprintf( fp, "%s", buf );
                 objz++;
             }
         }
 
         fprintf( fp, "</table><br><hr color=\"#FFFFFF\"><br>\n" );
         fprintf( fp, "-There are [ %d ] objects on AvP-<br><br>\n", objz );
-        sprintf( buf, "<br>This file last updated at %s Eastern Time.\n", ( ( char* ) ctime( &current_time ) ) );
-        fprintf( fp, buf );
+        snprintf( buf, MIL, "<br>This file last updated at %s Eastern Time.\n", ( ( char* ) ctime( &current_time ) ) );
+        fprintf( fp, "%s", buf );
         fprintf( fp, "</center></font>\n" );
         fprintf( fp, "</body>\n" );
         fprintf( fp, "</html>\n" );
@@ -4810,11 +4780,9 @@ void HTML_Ammostats( void )
     FILE* fp;
     AREA_DATA* area;
     OBJ_INDEX_DATA* pObjIndex;
-    char buf[2 * MAX_INPUT_LENGTH];
-    char buf2[2 * MAX_INPUT_LENGTH];
+    char buf[MIL];
     int vnum = 0, objy = 0, objz = 0;
-    buf[0] = '\0';
-    buf2[0] = '\0';
+    strncpy( buf, "", MIL );
     fclose( fpReserve );
 
     /* IMPORTANT: This file needs to exist before you attempt to run this. */
@@ -4854,11 +4822,11 @@ void HTML_Ammostats( void )
                 fprintf( fp, "</td><td>\n" );
                 fprintf( fp, "%d", pObjIndex->vnum );
                 fprintf( fp, "</td><td>\n" );
-                sprintf( buf, "%d%s%d%s%d%s",
+                snprintf( buf, MIL, "%d%s%d%s%d%s",
                          pObjIndex->value[3], "</td><td>\n",
                          pObjIndex->value[4], "</td><td>\n",
                          pObjIndex->value[5], "</td></tr>\n" );
-                fprintf( fp, buf );
+                fprintf( fp, "%s", buf );
                 objy++;
             }
         }
@@ -4881,11 +4849,11 @@ void HTML_Ammostats( void )
                 fprintf( fp, "</td><td>\n" );
                 fprintf( fp, "%d", pObjIndex->vnum );
                 fprintf( fp, "</td><td>\n" );
-                sprintf( buf, "%d%s%d%s%d%s",
+                snprintf( buf, MIL, "%d%s%d%s%d%s",
                          pObjIndex->value[3], "</td><td>\n",
                          pObjIndex->value[4], "</td><td>\n",
                          pObjIndex->value[5], "</td></tr>\n" );
-                fprintf( fp, buf );
+                fprintf( fp, "%s", buf );
                 objy++;
             }
         }
@@ -4919,10 +4887,10 @@ void HTML_Ammostats( void )
                 fprintf( fp, "</td><td>\n" );
                 fprintf( fp, "%d", pObjIndex->vnum );
                 fprintf( fp, "</td><td>\n" );
-                sprintf( buf, "%d%s%d%s",
+                snprintf( buf, MIL, "%d%s%d%s",
                          pObjIndex->value[0], "</td><td>\n",
                          pObjIndex->value[1], "</td></tr>\n" );
-                fprintf( fp, buf );
+                fprintf( fp, "%s", buf );
                 objz++;
             }
         }
@@ -4950,10 +4918,10 @@ void HTML_Ammostats( void )
                 fprintf( fp, "</td><td>\n" );
                 fprintf( fp, "%d", pObjIndex->vnum );
                 fprintf( fp, "</td><td>\n" );
-                sprintf( buf, "%d%s%d%s",
+                snprintf( buf, MIL, "%d%s%d%s",
                          pObjIndex->value[0], "</td><td>\n",
                          pObjIndex->value[1], "</td></tr>\n" );
-                fprintf( fp, buf );
+                fprintf( fp, "%s", buf );
                 objz++;
             }
         }
@@ -4961,8 +4929,8 @@ void HTML_Ammostats( void )
         fprintf( fp, "</table><br><hr color=\"#FFFFFF\"><br>\n" );
         fprintf( fp, "-There are [ %d ] ammo clips on AvP-<br>\n", objy );
         fprintf( fp, "-There are [ %d ] weapons on AvP-<br><br>\n", objz );
-        sprintf( buf, "<br>This file last updated at %s Eastern Time.\n", ( ( char* ) ctime( &current_time ) ) );
-        fprintf( fp, buf );
+        snprintf( buf, MIL, "<br>This file last updated at %s Eastern Time.\n", ( ( char* ) ctime( &current_time ) ) );
+        fprintf( fp, "%s", buf );
         fprintf( fp, "</center></font>\n" );
         fprintf( fp, "</body>\n" );
         fprintf( fp, "</html>\n" );
@@ -5099,7 +5067,9 @@ sh_int str_similarity( const char* astr, const char* bstr )
         if ( LOWER( *astr ) == LOWER( *bstr ) )
             matches++;
 
-        if ( ++bstr == '\0' )
+        bstr++;
+
+        if ( *bstr == '\0' )
             return matches;
     }
 
@@ -5124,7 +5094,9 @@ sh_int str_prefix_level( const char* astr, const char* bstr )
         else
             return matches;
 
-        if ( ++bstr == '\0' )
+        bstr++;
+
+        if ( *bstr == '\0' )
             return matches;
     }
 
@@ -5226,9 +5198,7 @@ void similar_help_files( CHAR_DATA* ch, char* argument )
 
 void send_skill_store( CHAR_DATA* ch, DESCRIPTOR_DATA* d )
 {
-    char tmp[MAX_STRING_LENGTH];
-    char cA[MAX_STRING_LENGTH];
-    char cB[MAX_STRING_LENGTH];
+    char tmp[MSL], cA[MIL], cB[MIL];
     int cnt = 0, col = 0;
     int clevel = 0, sn = 0;
 
@@ -5237,20 +5207,20 @@ void send_skill_store( CHAR_DATA* ch, DESCRIPTOR_DATA* d )
 
     if ( ch->race == RACE_ALIEN )
     {
-        strcpy( cA, "&B" );
-        strcpy( cB, "&b" );
+        strncpy( cA, "&B", MIL );
+        strncpy( cB, "&b", MIL );
     }
 
     if ( ch->race == RACE_MARINE )
     {
-        strcpy( cA, "&R" );
-        strcpy( cB, "&r" );
+        strncpy( cA, "&R", MIL );
+        strncpy( cB, "&r", MIL );
     }
 
     if ( ch->race == RACE_PREDATOR )
     {
-        strcpy( cA, "&G" );
-        strcpy( cB, "&g" );
+        strncpy( cA, "&G", MIL );
+        strncpy( cB, "&g", MIL );
     }
 
     send_to_buffer( "\n\r\n\r", d );
@@ -5279,7 +5249,7 @@ void send_skill_store( CHAR_DATA* ch, DESCRIPTOR_DATA* d )
 
         // if ( ch->pcdata->learned[sn] <= 0 ) continue;
         ++cnt;
-        sprintf( tmp, "&C%-2.2d&z) %s%-20s &z[%s&z]",
+        snprintf( tmp, MSL, "&C%-2.2d&z) %s%-20s &z[%s&z]",
                  cnt, ( clevel > ch->top_level ) ? "&z" : "&W", capitalize( skill_table[sn]->name ), ( char* )( drawbar( 3, ch->pcdata->learned[sn], 3, cA, cB ) ) );
         send_to_buffer( tmp, d );
 
@@ -5297,7 +5267,7 @@ void send_skill_store( CHAR_DATA* ch, DESCRIPTOR_DATA* d )
     if ( ++col >= 2 )
     {
         ++cnt;
-        sprintf( tmp, "&C%-2.2d&z)                      &z[%s---&z]\n\r", cnt, cB );
+        snprintf( tmp, MSL, "&C%-2.2d&z)                      &z[%s---&z]\n\r", cnt, cB );
         send_to_buffer( tmp, d );
     }
 
@@ -5344,9 +5314,8 @@ int get_store_skill( CHAR_DATA* ch, int num )
 }
 
 
-void map_area( AREA_DATA* area, CHAR_DATA* ch, char* filename )
+void map_area( AREA_DATA* area, CHAR_DATA* ch, char* filename, char map[100][100][40] )
 {
-    char map[100][100][40];
     ROOM_INDEX_DATA* room;
     int tx, ty, tz;
     int vnum;

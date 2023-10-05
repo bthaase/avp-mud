@@ -304,7 +304,7 @@ int number( int from, int to )
 void fwrite_char( CHAR_DATA* ch, FILE* fp )
 {
     AFFECT_DATA* paf;
-    int sn, track, drug;
+    int sn;
     SKILLTYPE* skill;
     fprintf( fp, "#%s\n", IS_NPC( ch ) ? "MOB" : "PLAYER"         );
     fprintf( fp, "Version      %d\n",   SAVEVERSION             );
@@ -772,11 +772,6 @@ bool load_char_obj( DESCRIPTOR_DATA* d, char* name, bool preload )
         }
         else
         {
-            int lLevel = LEVEL_GREATER;
-
-            if ( !str_cmp( ch->name, "Raven" ) || !str_cmp( ch->name, "Ghost" ) )
-                lLevel = 200;
-
             sprintf( buf, "%s player data for: %s (%dK)", preload ? "Preloading" : "Loading", ch->name, ( int ) fst.st_size / 1024 );
             log_string_plus( buf, LOG_COMM, LEVEL_GREATER );
         }
@@ -969,13 +964,11 @@ void fread_char( CHAR_DATA* ch, FILE* fp, bool preload )
     char buf[MAX_STRING_LENGTH];
     char* line;
     char* word;
-    int x1, x2, x3, x4, x5, x6, x7, x8, x9, x0;
-    sh_int killcnt;
+    int x1, x2, x3, x4, x5, x6, x7;
     bool fMatch;
     time_t lastplayed;
-    int sn, extra;
+    int sn;
     file_ver = 0;
-    killcnt = 0;
     ch->pcdata->last_quit = time( 0 );
 
     for ( ; ; )
@@ -1276,7 +1269,6 @@ void fread_char( CHAR_DATA* ch, FILE* fp, bool preload )
                 KEY( "Played",      ch->played,             fread_number( fp ) );
                 KEY( "Playedweek",  ch->playedweek,         fread_number( fp ) );
                 KEY( "Position",    ch->position,           fread_number( fp ) );
-                KEY( "Practice",    extra,          fread_number( fp ) );
                 KEY( "Prompt",      ch->pcdata->prompt,     fread_string( fp ) );
 
                 if ( !str_cmp ( word, "PTimer" ) )
@@ -1329,12 +1321,11 @@ void fread_char( CHAR_DATA* ch, FILE* fp, bool preload )
 
                 if ( !str_cmp( word, "SavingThrows" ) )
                 {
-                    int tmpx;
-                    tmpx = fread_number( fp );
-                    tmpx = fread_number( fp );
-                    tmpx = fread_number( fp );
-                    tmpx = fread_number( fp );
-                    tmpx = fread_number( fp );
+                    fread_number( fp );
+                    fread_number( fp );
+                    fread_number( fp );
+                    fread_number( fp );
+                    fread_number( fp );
                     fMatch = TRUE;
                     break;
                 }
