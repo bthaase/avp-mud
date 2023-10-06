@@ -1,0 +1,827 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<title>AvP: Legend - Building Guide</title>
+<style fprolloverstyle>A:hover {color: #FFFFFF}
+</style>
+</head>
+
+<body bgcolor="#000000" text="#CCCCCC" link="#CCCCCC" vlink="#CCCCCC" alink="#CCCCCC">
+
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3">
+    <tr>
+      <td width="100%" bordercolorlight="#666666" bordercolordark="#333333" bgcolor="#333333">
+        <p align="center"><font face="Century Gothic" size="3"><b>Aliens vs
+        Predator: Legend<br>
+        </b>Online Building Guide</font></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#111111" bordercolorlight="#808080" bordercolordark="#666666">
+        <p align="center"><font size="2">
+        [ First Edition - Under Construction ]<br>
+        Written by Brian Haase (aka Ghost)<br>
+        Last Updated: Janurary 18, 2004</font>&nbsp;</p>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+&nbsp;
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3">
+    <tr>
+      <td width="100%" bordercolorlight="#666666" bordercolordark="#333333" bgcolor="#333333">
+        <p align="center"><b><font face="Century Gothic" size="3">Table of
+        Contents</font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#111111" bordercolorlight="#808080" bordercolordark="#666666">
+
+<p align="left"><font size="2"><b><br>
+Table of Contents:<br>
+&nbsp;&nbsp;&nbsp; <a href="#chapter1">Chapter 1. Introduction to Avp</a><br>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.1 - Codebase<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.2 - Whats 'Prototype' mean? <i><br>
+</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.3 - Why build when I can play?<br>
+<b>
+&nbsp;&nbsp;&nbsp; <a href="#chapter2">Chapter 2. Designing your Area</a><br>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.1 - Introduction<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.2 - Important Notes&nbsp;&nbsp; <i>(Recommended)<br>
+</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2.3 - Strategic Design<br>
+<b>&nbsp;&nbsp; </b>&nbsp;&nbsp;&nbsp;&nbsp; 2.4 - Tips and Tricks<b><br>
+&nbsp;&nbsp;&nbsp; <a href="#chapter3">Chapter 3. Room Overview</a><br>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.1 - Introduction<b><br>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.2 - Creating the room<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.3 - Writing the descriptions&nbsp;&nbsp;
+<i>(Recommended)</i><br>
+<b>&nbsp;&nbsp; </b>&nbsp;&nbsp;&nbsp;&nbsp; 3.4 - Setting the flags<br>
+<b>&nbsp;&nbsp; </b>&nbsp;&nbsp;&nbsp;&nbsp; 3.5 - Linking
+exits<b><br>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3.6 - Tips and Tricks<b><br>
+&nbsp;&nbsp; <a href="#chapter4">Chapter 4. Creating Mobiles (Mobs)</a><br>
+ </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.1 - Introduction<b><br>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.2 - Creating the Mobile (MCREATE)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4.3 - Setting up a mobile<b><br>
+&nbsp;&nbsp; </b>&nbsp;&nbsp;&nbsp;&nbsp; 4.4 - Equipping your mobile&nbsp;&nbsp;
+<i>(Recommended)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </i>4.5 - Specials (Mobile AI)<br>
+<b>&nbsp;&nbsp; </b>&nbsp;&nbsp;&nbsp;&nbsp; 4.6 - Tips
+and Tricks<b><br>
+&nbsp;&nbsp;&nbsp; <a href="#chapter5">Chapter 5. Creating Objects</a><br>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.1 - Introduction<b><br>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.2 - Creating the Object (OCREATE)<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.3 - Object Types<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.4 - Setting up your object<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.5 - Basic Object Types&nbsp;&nbsp; <i>(Recommended)<br>
+</i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5.6 - Tips and Tricks<br>
+<b>&nbsp;&nbsp;&nbsp; <a href="#chapter6">Chapter 6. Mobile Programs (Mobprogs)</a><br>
+</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.1 - Introduction<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.2 - Program Types<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.3 - My First Mobprog<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.4 - Basic Commands<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.5 - Basic Ifchecks<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.6 - Variable Stacks&nbsp;&nbsp; <i>(Recommended)</i><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 6.7 - Example Scripts&nbsp;&nbsp; <i>(Recommended)</i><br>
+<b>&nbsp;&nbsp;&nbsp; <a href="#chapter7">Chapter 7. Advanced Script Reference</a><br>
+ </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.1 - Circuit Breakers<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.2 - Camera Consoles<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.3 - Bypass Consoles<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.4 - Alarm Consoles<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.5 - Motion Alarms<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.6 - Automatic Traps<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7.7 - Crane Script (Places cover
+objects)<br>
+<b>&nbsp;&nbsp;&nbsp; <a href="#chapter8">Chapter 8. Troubleshooting</a><br>
+ </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 8.1 - (Under Construction)<br>
+<br>
+&nbsp;&nbsp;&nbsp; <a href="#appendixA">Appendix A. Building Commands</a><br>
+&nbsp;&nbsp;&nbsp; <a href="#appendixB">Appendix B. Room Flags</a><br>
+&nbsp;&nbsp;&nbsp; <a href="#appendixC">Appendix C. Object Flags</a><br>
+&nbsp;&nbsp;&nbsp; <a href="#appendixD">Appendix D. Mobile Flags</a><br>
+&nbsp;&nbsp;&nbsp; <a href="#appendixE">Appendix E. Mobile Specials</a><br>
+&nbsp;&nbsp;&nbsp; <a href="#appendixF">Appendix F. Mobprog Ifchecks</a><br>
+&nbsp;&nbsp;&nbsp; <a href="#appendixG">Appendix G. Mobprog Comamnds</a><br>
+&nbsp;&nbsp;&nbsp; <a href="#appendixH">Appendix H. Exit Flags<br>
+</a>
+<br>
+<b>&nbsp;&nbsp;&nbsp; <a href="#info">Guide Information</a><br>
+</b></font></p>
+
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+&nbsp;
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3">
+    <tr>
+      <td width="100%" bordercolorlight="#0000FF" bordercolordark="#000080" bgcolor="#000066">
+        <p align="center"><b><font face="Century Gothic" size="3"><a name="chapter1"></a>Chapter 1 -
+        Introduction to Avp</font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#000044" bordercolorlight="#0000FF" bordercolordark="#000080"><font SIZE="2"><b><u>Section
+        1.1 - Codebase</u></b><br>
+        AVP Building is always online. It uses a set of commands that are
+        contained within the MUD to create new areas and rooms, that are
+        interconnected to other areas. Since the new area is created and saved
+        online, there is no need to &quot;upload&quot; or &quot;install&quot;
+        areas, other than a simple Implementor command.
+        <p><b><u>Section 1.2 - Whats 'Prototype' mean?</u></b><br>
+        Now, when you&nbsp; first get your vnums (VIRTUAL NUMBERS, which are the
+        numbers that hold your new areas information, like rooms, mobiles,
+        objects, that kind of stuff), the area is created with your name and
+        '.are' at the end of it. So if I assigned myself some vnums, my new area
+        would be called &quot;Ghost.are&quot; and the area would loadup
+        everytime I logged in, if its not already loaded.</p>
+        <p>Since it's a new area, yet to be finished, it is a
+        &quot;prototype&quot; area, meaning everything in it is new and isn't
+        necessarily going into the finished product. No area should be installed until
+        it is marked &quot;Done&quot; by the Head Builder or Game Administrator.
+        Likely me.</p>
+        <p><b><u>Section 1.3 - Why build when I can play?<br>
+        </u></b>Ok, most old builders will tell you that building is no fun.
+        This is somewhat true... Building takes a lot of effort and drains out a
+        lot of your time. You'll usually have something fail on you
+        and it will drive you nuts. But that's ok. Most things in life screw up
+        once in a while and it takes a strong person to get back in there and
+        start rolling.</p>
+        <p>What old builders don't tell you is the satisfaction you get when you
+        hear some player yell how great the new Airbase is or how much better
+        this arena is than from the one they just played. And the little
+        hidden secrets you put in your area and the programs you install make
+        everything worthwile. Exploring is for the kiddies. Creating is what the
+        true of heart do. So get out there and start building!<br>
+        <br>
+        <i>Thanks to Travis Shofner (Isaac) for the SWR Building Guide.</i></font></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3">
+    <tr>
+      <td width="100%" bordercolorlight="#0000FF" bordercolordark="#000080" bgcolor="#000066">
+        <p align="center"><b><font face="Century Gothic" size="3"><a name="chapter2"></a>Chapter 2 -
+        Designing your Area</font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#000044" bordercolorlight="#0000FF" bordercolordark="#000080"><font size="2"><b><u>
+        Section 2.1 - Introduction<br>
+        </u>
+        </b>
+        To begin with, theres a few commands you should know. First off, <b><font color="#00FFFF">HELP</font>
+        </b>is an important one. As of writing this, not all of the help files
+        are done, but eventually we'll get them all up. If your feeling lost
+        while building, or are confused about how something works, try using
+        HELP to look it up. Also, theres always the <b><font color="#00FFFF">WIZHELP</font></b>
+        command, which will list all of the immortal commands at your
+        disposal.&nbsp;<br>
+        <br>
+        Another couple of commands you might find interesting:<br>
+        <br>
+        <font color="#00FFFF"><b>SAVEAREA</b></font> will save your area to
+        disk, so your work won't be lost if the mud crashes or reboots. Use this
+        command a lot, and make sure to do it when you log off also. You can use
+        this command a lot without putting much strain on the server, so make
+        sure to do it a lot.&nbsp;<br>
+        <br>
+        <b><font color="#00FFFF">ZONES</font></b> will list all of the areas on
+        the mud, and there vnum ranges. Your area will be on the list near the
+        top, as &lt;Your Name&gt;.are - If the zone has a <font color="#00FF00">*</font>
+        by it, then it iss loaded. If your area isn't flagged as loaded, you can
+        use <b><font color="#00FFFF">LOADAREA</font></b> to load it.<br>
+        <br>
+        <b><u>
+        Section 2.2 -Important Notes<br>
+        </u>
+        </b>
+        Theres a couple of important factors when designing your area.&nbsp;
+        We'll assume you know how many vnums you'll have by now. Firstly, when
+        designing your area, DRAW IT OUT ON GRAPH PAPER FIRST. Otherwise, if you just do it on the fly you risk ruining the
+        coordinate-mapping system - automated systems are only capable of so
+        much.<b><u><br>
+        <br>
+        </u>
+        </b>
+        In addition to mapping it out&nbsp; on paper first, make sure you pay
+        attention to the layout carefully. If you do it wrong, You *WILL* have
+        to fix it, or if theres too much to fix, you have to start over. Nobody
+        wants that. What kind of screwups are you avoiding? First off, DONT
+        OVERLAP ROOMS ON THE MAP. Also, DONT LEAVE GAPS. If you have four
+        interconnecting rooms in a square, and you go N | E | S then W, you
+        should be back at the beginning. If your NOT, then you screwd up. The
+        nature of the coordinate system is that it requires NO work to setup on
+        your area, but that if your layout is wrong, it'll goto hell really
+        fast.<b><u><br>
+        <br>
+        </u>
+        </b>
+        Also, EACH RACE NEEDS A SPAWN POINT.
+        These must be flagged DEPLOY_M (For Marines), DEPLOY_A (For Aliens) and
+        DEPLOY_P (For Predators). When a player uses the DEPLOY command, it will
+        take them to one of the flagged rooms for their race.&nbsp;<br>
+        <b>
+        <u><br>
+        </u></b>In Summary:<b>
+        <u><br>
+        </u>
+        <font color="#FF0000"><i>DRAW IT OUT ON GRAPH PAPER FIRST!<br>
+        </i>DONT OVERLAP ROOMS ON THE MAP.<br>
+        DONT LEAVE GAPS ON THE MAP.<br>
+        </font>
+        </b>
+        <font color="#FF0000"><b>EACH RACE NEEDS ATLEAST ONE SPAWN POINT.</b></font>
+        <u><b>
+        <br>
+        <br>
+        Section 2.3 - Strategic Design<br>
+        <br>
+        Section 2.4 - Tips and Tricks<br>
+        </b>
+        </u>
+        </font></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3">
+    <tr>
+      <td width="100%" bordercolorlight="#0000FF" bordercolordark="#000080" bgcolor="#000066">
+        <p align="center"><b><font face="Century Gothic" size="3"><a name="chapter3"></a>Chapter 3 -
+        Room Overview</font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#000044" bordercolorlight="#0000FF" bordercolordark="#000080"><i><font size="2">Under
+        Construction</font></i></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3">
+    <tr>
+      <td width="100%" bordercolorlight="#0000FF" bordercolordark="#000080" bgcolor="#000066">
+        <p align="center"><b><font face="Century Gothic" size="3"><a name="chapter4"></a>Chapter 4 -
+        Creating Mobiles (Mobs)</font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#000044" bordercolorlight="#0000FF" bordercolordark="#000080"><i><font size="2">Under
+        Construction</font></i></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3">
+    <tr>
+      <td width="100%" bordercolorlight="#0000FF" bordercolordark="#000080" bgcolor="#000066">
+        <p align="center"><b><font face="Century Gothic" size="3"><a name="chapter5"></a>Chapter 5 -
+        Creating Objects</font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#000044" bordercolorlight="#0000FF" bordercolordark="#000080"><i><font size="2">Under
+        Construction</font></i></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3">
+    <tr>
+      <td width="100%" bordercolorlight="#0000FF" bordercolordark="#000080" bgcolor="#000066">
+        <p align="center"><b><font face="Century Gothic" size="3"><a name="chapter6"></a>Chapter 6 -
+        Mobile Programs (Mobprogs)</font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#000044" bordercolorlight="#0000FF" bordercolordark="#000080"><i><font size="2">Under
+        Construction</font></i></td>
+    </tr>
+  </table>
+  </center>
+</div>
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3">
+    <tr>
+      <td width="100%" bordercolorlight="#0000FF" bordercolordark="#000080" bgcolor="#000066">
+        <p align="center"><b><font face="Century Gothic" size="3"><a name="chapter7"></a>Chapter 7 -
+        Advanced Scripts Reference</font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#000044" bordercolorlight="#0000FF" bordercolordark="#000080"><font size="2">This
+        section contains prewritten and some slightly more advanced mobprog
+        scripts that you can use in your areas. The script listing is included,
+        as well as a summery of how it works and how to install it.<u><b><br>
+        <br>
+        Section 7.1 - Circuit Breakers<br>
+        </b>
+        </u>&nbsp;
+        </font>
+        <div align="center">
+          <center>
+          <table border="1" width="95%" cellspacing="1" cellpadding="2" bordercolor="#000080">
+            <tr>
+              <td width="100%" bgcolor="#000066">
+                <p align="center"><font size="2">First Script</font></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="100%"><font size="2" face="Courier">mpechoat $n You
+                throw the break to the ON position.&nbsp;<br>
+                mpechoaround $n $n throws the breaker to the ON position.&nbsp;<br>
+                mprat (1) (2) mprmflag -1 1 dark<br>
+                mprat (1) (2) mpecho The overhead lights flare to life.</font></td>
+            </tr>
+          </table>
+          </center>
+        </div>&nbsp;
+        <div align="center">
+          <center>
+          <table border="1" width="95%" cellspacing="1" height="55" cellpadding="2" bordercolor="#000080">
+            <tr>
+              <td width="100%" bgcolor="#000066">
+                <p align="center"><font size="2">Second Script</font></td>
+            </tr>
+            <tr>
+              <td width="100%"><font size="2" face="Courier">mpechoat $n You throw the break to the OFF position.&nbsp;<br>
+                mpechoaround $n $n throws the breaker to the OFF position.&nbsp;<br>
+                mprat (1) (2) mprmflag -1 0 dark<br>
+                mprat (1) (2) mpecho The room suddenly goes dark.</font></td>
+            </tr>
+          </table>
+          </center>
+        </div>
+        <br>
+        <font size="2">Circuit breakers are pretty straight-forward. Create an
+        object, and set the USEON flag. This allows players to USE the object.
+        Next, use OPEDIT to add a USEON program. (opedit &lt;vnum&gt; add useon
+        100) and paste the first block of code in there.&nbsp;Replace (1) and
+        (2) with the first and last vnum affected. Use /S to save the program,
+        and then add a USEOFF program. (opedit &lt;vnum&gt; add useoff
+        100) and paste the second block of code in there.&nbsp;Replace (1) and
+        (2) with the first and last vnum affected. Use /S to save the program.<br>
+        <br>
+        How does it work? First off, the MPECHOAT command sends a message to the
+        player who used the breaker switch, to inform them of the action - By
+        default, the game assumes YOU will inform the player, so it doesn't send
+        any of its own messages. Next, MPECHOAROUND does the same thing except
+        it informs everyone in the room with you. The next two lines are the
+        most important. MPRAT runs through a range of rooms, executing a command
+        in each one - It uses MPRMFLAG to set or clear or the dark flag in each
+        of the rooms, and then MPECHO to let everyone know the lights just went
+        out. Pretty simple.<br>
+        <br>
+        <u><b>
+        Section 7.2 - Camera Consoles<br>
+        </b>
+        </u>&nbsp;</font>
+        <div align="center">
+          <table border="1" width="95%" cellspacing="1" cellpadding="2" bordercolor="#000080">
+            <tr>
+              <td width="100%" bgcolor="#000066">
+                <p align="center"><font size="2">Console Script</font></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="100%"><font size="2" face="Courier">mpechoat $n You glance at the camera console.&nbsp;<br>
+                mptransfer $n (1)<br>
+                mpat (1) mpforce $n glance&nbsp;<br>
+                mpat (1) mptransfer $n (2)</font></td>
+            </tr>
+          </table>
+        </div>
+        <p><font size="2">Camera consoles are actually pretty easy. Create an
+        object, and set the USEAUTO flag. This allows players to USE the object
+        to trip the USEON and USEOFF programs at once.
+        Next, use OPEDIT to add a USEON or USEOFF program. (opedit &lt;vnum&gt; add useon
+        100) and paste the block of code in there.&nbsp;Replace (1) and
+        (2) with the vnum of the room to 'spy' on, and the vnum of the room the
+        camera console is in. Use /S to save the program.<br>
+        <br>
+        How does it work? First off, the MPECHOAT command sends a message to the
+        player who used the camera console, to inform them of the action - By
+        default, the game assumes YOU will inform the player, so it doesn't send
+        any of its own messages. Next, MPTRANSFER actually moves you to the room
+        thats being 'spied' on. MPAT allows the script to run at the camera
+        location, otherwise it can't always find the player. It uses MPFORCE to
+        the player to glance at the room contents, and then&nbsp; uses another
+        MPTRANSFER to bring them back to the starting room.<br>
+        <br>
+        <u><b>
+        Section 7.3 - Bypass Consoles
+        </b>
+        </u></font></p>
+        <div align="center">
+          <table border="1" width="95%" cellspacing="1" cellpadding="2" bordercolor="#000080">
+            <tr>
+              <td width="100%" bgcolor="#000066">
+                <p align="center"><font size="2">Bypass Console Script</font></p>
+              </td>
+            </tr>
+            <tr>
+              <td width="100%"><font size="2" face="Courier">if variable([1]) ==
+                0<br>
+                mea $n You call up the administration controls on the console.<br>
+                mer $n $n carefully accesses the security console.<br>
+                mpset [1] 1<br>
+                mpecho &amp;w&amp;G[Notice]: Security System has been bypassed.<br>
+                else<br>
+                mea $n You call up the administration controls on the console.<br>
+                mer $n $n carefully accesses the security console.<br>
+                mpset [1] 0<br>
+                mpecho &amp;w&amp;R[Warning]: Security System has been
+                reactivated.<br>
+                endif</font></td>
+            </tr>
+          </table>
+        </div>
+        <p><font size="2"> Create an
+        object, and set the USEAUTO flag. This allows players to USE the object
+        to trip the USEON and USEOFF programs at once. Also, set the MARINE flag
+        so that only Marines can use this console - Predators and aliens don't
+        know very much about computers. Next, use OPEDIT to add a USEON or
+        USEOFF program. (opedit &lt;vnum&gt; add useon
+        100) and paste the block of code in there.&nbsp;Replace [1] with the
+        name of the variable to use, personally I use SecurityBypass. Use /S to save the
+        program.<br>
+        <br>
+        How does it work? This one is a bit more tricky. The 'if variable' check
+        allows you to see what the variable is set to. (Default is 0) MEA and
+        MER are just short names for MPECHOAT and MPECHORAOUND, respectively.
+        MPSET allows you to set the variable, so that you can check it anywhere
+        in your area. When first run, the flag will be set to 1, and the target
+        system is considered 'offline'. When run again, the flag is set back to
+        0 and the target system is considered to be back online.. This way
+        if&nbsp; you shutdown the only defense between you and the fourty aliens
+        outside the compound, you can repair your mistake ;)</font></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3">
+    <tr>
+      <td width="100%" bordercolorlight="#0000FF" bordercolordark="#000080" bgcolor="#000066">
+        <p align="center"><b><font face="Century Gothic" size="3"><a name="chapter8"></a>Chapter 8 -
+        Troubleshooting</font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#000044" bordercolorlight="#0000FF" bordercolordark="#000080"><i><font size="2">Under
+        Construction</font></i></td>
+    </tr>
+  </table>
+  </center>
+</div>
+&nbsp;
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3">
+    <tr>
+      <td width="100%" bordercolorlight="#666666" bordercolordark="#333333" bgcolor="#333333">
+        <p align="center"><b><font face="Century Gothic" size="3"><a name="appendixA"></a>Appendix A -
+        Building Commands</font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#111111" bordercolorlight="#808080" bordercolordark="#666666"><i><font size="2">Under Construction</font></i>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3">
+    <tr>
+      <td width="100%" bordercolorlight="#666666" bordercolordark="#333333" bgcolor="#333333">
+        <p align="center"><b><font face="Century Gothic" size="3"><a name="appendixB"></a>Appendix B -
+        Room Flags</font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#111111" bordercolorlight="#808080" bordercolordark="#666666">
+        <font size="2"><b>dark</b> - Makes the room dark, and players can't see.
+        Aliens however, can see in the dark.<br>
+        <b>nomob</b> - Mobiles aren't allowed to enter this room. Bots are an
+        exception to this rule.<br>
+        <b>indoors</b> - This room is considered 'inside'. Weather won't affect
+        these rooms, nor night time.<br>
+        <b>can_drive</b> - Players can drive vehicles into this room. Only
+        needed for indoor rooms, outdoors are automatically can_drive.<br>
+        <b>nodropall</b> -&nbsp; Playes cannot use the DROP ALL command here.
+        Not very useful.<br>
+        <b>logspeech</b> - All speech in this room is logged to file. Not very
+        useful.<br>
+        <b>teleport</b> - Room will teleport its contents somewhere else after a
+        period of time.&nbsp;<br>
+        <b>
+        nofloor - </b>This room has no floor. Anything in will fall into the
+        room below it, assuming theres an open down exit.<br>
+        <b>nodrop - </b>Players cannot use the DROP command in here. Good for
+        litter prevention.<br>
+        <b>prototype </b>- This room is still prototype. Dont clear these on
+        your own, they'll clear when you install the area.<br>
+        <b>
+        save_eq </b>- Anything dropped in this room will be saved between
+        crashes and copyovers. Do NOT put resets in these rooms.<br>
+        <b>underground </b>- This room is considered to be underground. Right
+        now, this is essentially the same as indoors.<br>
+        <b>fallcatch </b>- If a player falls into this room, they will take no
+        damage.<br>
+        <b>lit </b>- This room is always lighted, even at night time. Good for
+        outdoor rooms that might have floodlights or something.<br>
+        <b>deploy_from </b>- The DEPLOY command can be used from here to reach
+        the current arena. Not for use IN arenas.<br>
+        <b>hived </b>- Aliens have hived this room, which causes the secondary
+        description to show up.<br>
+        <b>mapstart</b> - Used for the coordinate automapper. Only one of these
+        is needed, and will be set by the administrator.<br>
+        <b>nohive </b>- Related to <i>hived</i>, this flag prevents aliens from
+        hiving the room and marines from dehiving.&nbsp;<br>
+        <b>safe </b>- No combat damage may be dealt to occupents of this
+        room.&nbsp;<br>
+        <b>deploy_p </b>- Predators can deploy to this room using the DEPLOY
+        command.<br>
+        <b>deploy_m</b> - Marines can deploy to this room using the DEPLOY
+        command.<br>
+        <b>
+        deploy_a </b>- Aliens can deploy to this room using the DEPLOY command.<br>
+        <b>vented_a </b>- Once installed, AvP will link all of room flagged <i>vented_a
+        </i>together using the coodinates.&nbsp;<br>
+        <b>vented_b </b>- Once installed, AvP will link all of room flagged <i>vented_b
+        </i>together using the coodinates.&nbsp;<br>
+        <b>vented_c </b>- Once installed, AvP will link all of room flagged <i>vented_c
+        </i>together using the coodinates.&nbsp;<br>
+        <b>vented_d </b>- Once installed, AvP will link all of room flagged <i>vented_d
+        </i>together using the coodinates.&nbsp;<br>
+        <b>rescue </b>- Marines may return rescued hostages to this room for
+        experience.<br>
+        <b>cp </b>- Control Point. Races can capture these to gain team
+        experience and an extra spawn point.</font>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3">
+    <tr>
+      <td width="100%" bordercolorlight="#666666" bordercolordark="#333333" bgcolor="#333333">
+        <p align="center"><b><font face="Century Gothic" size="3"><a name="appendixC"></a>Appendix C -
+        Object Flags</font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#111111" bordercolorlight="#808080" bordercolordark="#666666"><font size="2">
+        <b>glow</b> - Just for effect really, adds the (Glowing) flag to the
+        start of the description.<br>
+        <b>hum</b> - Same as glow, except it adds (Humming) to the start of the
+        description.<br>
+        <b>invis</b> - Invisible to the naked eye. At the momemnt, only
+        immortals can see invisible.&nbsp;<br>
+        <b>nodrop</b> - Once picked up, players cannot drop the item.<br>
+        <b>noremove</b> - Once equipped, players cannot remove the item.<br>
+        <b>inventory</b> - Used with shopkeepers, gives the unlimited of the
+        item to sell. (They just keep copying it)<br>
+        <b>hidden</b> - Similar to invisible, but... umm. Actually, its a lot
+        like invisible.<br>
+        <b>covering</b> - Depreciated. <i><font color="#FF0000">I should
+        probably remove this.</font></i><br>
+        <b>deathrot</b> - Item is deleted when the person carrying dies.<br>
+        <b>burried</b> - Item is considered 'burried' and can only be found by
+        digging. Might be used with landmines or something.<br>
+        <b>prototype</b> - This item is still prototype. Dont clear these on
+        your own, they'll clear when you install the area.<br>
+        <b>nodual</b> - Used for weapons, makes it so players can't dual wield
+        it. (Like Shotguns and Assault Rifles and such)<br>
+        <b>marine</b> - Item may only be used by marine characters.<br>
+        <b>predator</b> - Item may only be used by predator characters.<br>
+        <b>alien</b> - Item may only be used by alien characters.<br>
+        <b>respawn</b> -Item will stay with its owner when they die. Otherwise,
+        its placed in your backpack/corpse.<br>
+        <b>burstfire</b> - Used for weapons, allows it to be set to burstfire
+        mode.<br>
+        <b>autofire</b> - Used for weapons, allows it to be set to automatic
+        fire mode.<br>
+        <b>semiauto</b> - Used for weapons, allows it to be set to semiautomatic
+        fire mode.<br>
+        <b>singlefire</b> - Used for weapons, allows it to be set to single fire
+        mode.<br>
+        <b>useon</b> - Item is currently 'on' and when used will be set to
+        USEOFF and trip any USEOFF programs.<br>
+        <b>useoff</b> - Item is currently 'off' and when used will be set to
+        USEON and trip any USEON programs.<br>
+        <b>quiet</b> - Used for weapons, creates a quiet echo when the weapon is
+        fired. (About 1 room)<br>
+        <b>moderate</b> - Used for weapons, creates a moderate echo when the
+        weapon is fired. (About 2 rooms)<br>
+        <b>loud</b> - Used for weapons, creates a loud echo when the weapon is
+        fired. (About 3 rooms)<br>
+        <b>rangedonly</b> - Used for weapons, makes it so you can only sniper
+        and spray with the weapon - Can't be used in the same room.<br>
+        <b>indestructable</b> - Immune to explosions, smashing, all that good
+        stuff. Can still be purged.<br>
+        <b>nohold</b> - You cannot hold anything while wielding this weapon.
+        Sort of like nodual, but applies to all items.<br>
+        <b>alieninvis</b> - Only aliens are able to see this item. Used for
+        Alien Constructions.</font>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3" height="48">
+    <tr>
+      <td width="100%" bordercolorlight="#666666" bordercolordark="#333333" bgcolor="#333333" height="9">
+        <p align="center"><b><font face="Century Gothic" size="3"><a name="appendixD"></a>Appendix D -
+        Mobile&nbsp; Flags</font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#111111" bordercolorlight="#808080" bordercolordark="#666666" height="19"><i><font size="2">Under Construction</font></i>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3">
+    <tr>
+      <td width="100%" bordercolorlight="#666666" bordercolordark="#333333" bgcolor="#333333">
+        <p align="center"><b><font face="Century Gothic" size="3"><a name="appendixE"></a>Appendix E -
+        Mobile Specials</font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#111111" bordercolorlight="#808080" bordercolordark="#666666"><font size="2"><b>SPEC_ENEMY_SCAN<br>
+        </b>Allows mobiles to scan up to PER/3 rooms away to spot enemies. Once
+        spotted, they will be moved into attack mode and attempt to fight the
+        enemy. If its an alien mobile, it will chase down the enemy. If its any
+        mobile armed with a ranged weapon, it will attempt to snipe its target
+        to death.<br>
+        <br>
+        <b>SPEC_ENEMY_GRENADE<br>
+        </b>Quite similar to spec_enemy_scan, except that it allows the mobile
+        to use any grenade items in his possession. It'll automatically hold a
+        grenade if it has a free hand, and when an enemy is spotted at range
+        it'll arm for 5 seconds and lob the grenade to the target.</font>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3" height="57">
+    <tr>
+      <td width="100%" bordercolorlight="#666666" bordercolordark="#333333" bgcolor="#333333" height="18">
+        <p align="center"><b><font face="Century Gothic" size="3"><a name="appendixF"></a>Appendix F -
+        Mobprog Ifchecks</font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#111111" bordercolorlight="#808080" bordercolordark="#666666" height="19"><i><font size="2">Under Construction</font></i>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3">
+    <tr>
+      <td width="100%" bordercolorlight="#666666" bordercolordark="#333333" bgcolor="#333333">
+        <p align="center"><b><font face="Century Gothic" size="3"><a name="appendixG"></a>Appendix G -
+        Mobprog Commands</font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#111111" bordercolorlight="#808080" bordercolordark="#666666"><i><font size="2">Under Construction</font></i>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3">
+    <tr>
+      <td width="100%" bordercolorlight="#666666" bordercolordark="#333333" bgcolor="#333333">
+        <p align="center"><b><font face="Century Gothic" size="3"><a name="appendixH"></a>Appendix H -
+        Exit Flags</font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#111111" bordercolorlight="#808080" bordercolordark="#666666"><font size="2"><b>isdoor</b>
+        - Pretty important. Flags an exit as a door (open by default) that can
+        be opened and closed.<br>
+        <b>closed</b> - Works with <i>isdoor</i>, causes the door to count as
+        'closed' so people can't go through it.<br>
+        <b>locked</b> - Works with closed doors. The door cannot be opened while
+        locked.<br>
+        <b>secret</b> - Renders the exit invisible to the naked eye. It can only
+        be detected with SEARCH.&nbsp; <font color="#FF0000">Obsolete.</font><br>
+        <b>
+        swim </b> - Requires your to be able to swim in order to use this exit..&nbsp; <font color="#FF0000">Obsolete.</font><br>
+        <b>pickproof</b> - Makes the door completely unpickable.<br>
+        <b>
+        fly</b> - Requires you to be flying in order to use this exit.&nbsp; <font color="#FF0000">Obsolete.</font><br>
+        <b>
+        climb</b> - Requires you to be able to climb in order to use this exit.&nbsp; <font color="#FF0000">Obsolete.</font><br>
+        <b>
+        dig</b> - Requires you to dig out the exit before travelling in that
+        direction.&nbsp; <font color="#FF0000">Obsolete.</font><br>
+        <b>
+        nopassdoor</b> - You dont even wanna know.&nbsp; <font color="#FF0000">Obsolete.</font><br>
+        <b>
+        hidden</b> - The exit is hidden, and wont show on the exit list in the
+        room. However, it can still be used.<br>
+        <b>
+        passage</b> - Honestly? I couldn't figure this one out. I assume its
+        pointless right now.<br>
+        <b>
+        portal</b> - Not used anymore.&nbsp; <font color="#FF0000">Obsolete.</font><br>
+        <b>
+        can_climb</b> - Not used anymore.&nbsp; <font color="#FF0000">Obsolete.</font><br>
+        <b>can_enter</b> - Allows you to 'enter &lt;keyword&gt;' to use the
+        exit. Not used very often.<br>
+        <b>can_leave</b> - Allows you to 'leave &lt;keyword&gt;' to use the
+        exit. Not used very often.<br>
+        <b>auto</b> - If you set a keyword for this exit, you can use the exit
+        by just typing the keyword.<br>
+        <b>searchable</b> - Allows you to use SEARCH to strip the <i>secret</i>
+        flag off this exit.&nbsp; <font color="#FF0000">Obsolete.</font><br>
+        <b>
+        bashed</b> - Used to show that a door has been bashed open by a player.<br>
+        <b>
+        bashproof</b> - Prevents players from bashing the door in. Armored doors
+        has the same affect.<br>
+        <b>nomob</b> - Mobile characters cannot use this exit while wandering.<br>
+        <b>
+        window</b> - Predators and Marines cannot go through these exits, only
+        shoot through. Aliens, however, can go through windows.<br>
+        <b>
+        can_look</b> - Allows you to use LOOK (direction) to see through the
+        exit, similar to scan.<br>
+        <b>
+        keypad</b> - Indicates that instead of a key, the player must enter a
+        code to lock and unlock this door.<br>
+        <b>
+        barred</b> - Used on WINDOW Exits, prevents aliens from travelling
+        through it.<br>
+        <b>
+        nospec</b> - Players in spectator mode may not use this exit. Good for
+        keeping them from scouting key areas.<br>
+        <b>
+        blastopen</b> - Grenade explosions are required to blast this exit open
+        and make it passable.<br>
+        <b>
+        blasted</b> - Shows that this exit has already been blasted open, and
+        that players may travel through it.<br>
+        <b>
+        armored</b> - Used to indicate that a door is armored. Armored doors are
+        immune to grenade blasts and bashing.<br>
+        <b>novent</b> - Alien vents dont travel through this exit, good for
+        keeping them out of key areas.</font>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+&nbsp;
+<div align="center">
+  <center>
+  <table border="4" width="90%" bordercolor="#000000" cellpadding="3">
+    <tr>
+      <td width="100%" bordercolorlight="#0000FF" bordercolordark="#000080" bgcolor="#000066">
+        <p align="center"><b><font face="Century Gothic" size="3"><a name="info"></a>Guide
+        Information </font></b></td>
+    </tr>
+    <tr>
+      <td width="100%" bgcolor="#000044" bordercolorlight="#0000FF" bordercolordark="#000080">
+        <p align="center"><font size="2">Contact Email: cyber_aeon@hotmail.com<br>
+        Written by Brian Haase.<br>
+        Copyright (C) 2004, Final Stand Productions.</font></p>
+      </td>
+    </tr>
+  </table>
+  </center>
+</div>
+
+</body>
+
+</html>

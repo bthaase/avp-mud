@@ -1,0 +1,309 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="GENERATOR" content="Microsoft FrontPage 4.0">
+<meta name="ProgId" content="FrontPage.Editor.Document">
+<style>
+<!-- 
+body 
+{ 
+scrollbar-base-color: #cccccc; 
+scrollbar-face-color: #888888; 
+scrollbar-track-color: #444444; 
+scrollbar-arrow-color: #ffffff;
+scrollbar-highlight-color: #555555; 
+scrollbar-3dlight-color: #ffffff; 
+scrollbar-shadow-color: #555555;
+scrollbar-darkshadow-color: #333333; 
+} 
+-->
+</style>
+
+<title>AvP - Bot Design Document</title>
+</head>
+
+<body bgcolor="#000000" text="#FFFF00" link="#00FFFF" vlink="#00FFFF" alink="#00FFFF">
+
+<p><b><font face="Courier New" size="2" color="#808080">Design Documentation:</font><font face="Courier New" size="2" color="#FFFF00">
+</font><font face="Courier New" size="2" color="#00FF00">ShockBOT Engine <img border="0" src="icons/snipersmilie.gif" width="79" height="19"></font><br>
+<br>
+<font face="Courier New" size="2" color="#C0C0C0">The ShockBOT Engine creates,
+manages, and maintains the free-roaming Bots on AvP: Legends. The Bots are used
+as backup players when the game teams become unbalanced. The ShockBOT Engine
+places bots on the undermanned teams to try and even the playing field somewhat.
+</font><font face="Courier New" size="2" color="#FFFF00"><br>
+<br>
+</font><font face="Courier New" size="2" color="#0000FF">Potential Features:</font><font face="Courier New" size="2" color="#C0C0C0"><br>
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+</font><font face="Courier New" size="2" color="#808080">Delayed Reaction Time,
+to simulate human delay, lag and error.<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+</font><font face="Courier New" size="2" color="#808080">Goal-oriented Mission
+Tracking System, so they can complete missions. (Maybe)<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+</font><font face="Courier New" size="2" color="#808080"><a href="#Personality">Bot
+Personalities</a> - Determines a bots actions, strategies and choices. <br>
+</font><font face="Courier New" size="2" color="#C0C0C0">&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+</font><font face="Courier New" size="2" color="#808080">Flex loading. Bot 'pfiles'
+are saved to /bots, and loaded when needed.<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+</font><font face="Courier New" size="2" color="#808080">Linked-list tracking
+for multiple bots.<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+</font><font face="Courier New" size="2" color="#808080">Smart Equipping. Mixes
+Personality settings with weapon stats when getting gear.<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+</font><font face="Courier New" size="2" color="#808080">XP Gaining. Bots gain
+XP like players, and use it to shop and level.<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+</font><font face="Courier New" size="2" color="#808080">Balanced Load. Loads
+bots with the average level online, for fairness.<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+</font><font face="Courier New" size="2" color="#808080">Channel Support. Bots
+can communicate their actions with their side.<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+</font><font face="Courier New" size="2" color="#808080">Selective Distribution.
+Bots are split evenly amongst the most active areas.<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+</font><font face="Courier New" size="2" color="#808080">Shifting Personalities,
+so bots learn from their mistakes.<br>
+<br>
+<a name="Personality"></a>Personality System: (Sample Setup) </font><font face="Courier New" size="2" color="#C0C0C0"><img border="0" src="http://www.archsysinc.com/avp/icons/eek7.gif" width="15" height="16"></font><font face="Courier New" size="2" color="#808080"><br>
+<br>
+&nbsp;Bot Name: </font><font face="Courier New" size="2" color="#C0C0C0">James
+'Dante' Wilkes</font><font face="Courier New" size="2" color="#808080"><br>
+&nbsp;Favorite Weapon: </font><font face="Courier New" size="2" color="#C0C0C0">Shotgun</font><font face="Courier New" size="2" color="#808080">
+<br>
+&nbsp;Favorite Target: </font><font face="Courier New" size="2" color="#C0C0C0">Aliens<br>
+</font><font face="Courier New" size="2" color="#808080">&nbsp;Fear:&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2" color="#C0C0C0">20% </font><font face="Courier New" size="2" color="#808080">(</font><font face="Courier New" size="2" color="#00FFFF">Determines
+when the bot will run. This one doesn't spook easily</font><font face="Courier New" size="2" color="#808080">)</font><font face="Courier New" size="2" color="#C0C0C0"><br>
+</font><font face="Courier New" size="2" color="#808080">&nbsp;Attack:&nbsp;&nbsp;
+</font><font face="Courier New" size="2" color="#C0C0C0">80% </font><font face="Courier New" size="2" color="#808080">(</font><font face="Courier New" size="2" color="#00FFFF">High
+attack means the bot will attack when it can, instead of defending</font><font face="Courier New" size="2" color="#808080">)</font><font face="Courier New" size="2" color="#C0C0C0"><br>
+</font><font face="Courier New" size="2" color="#808080">&nbsp;Camping:&nbsp; </font><font face="Courier New" size="2" color="#C0C0C0">40%
+</font><font face="Courier New" size="2" color="#808080">(</font><font face="Courier New" size="2" color="#00FFFF">This
+bot sometimes 'hides' then blasts passing prey when he spots them</font><font face="Courier New" size="2" color="#808080">)</font><font face="Courier New" size="2" color="#C0C0C0"><br>
+</font><font face="Courier New" size="2" color="#808080">&nbsp;Blasting: </font><font face="Courier New" size="2" color="#C0C0C0">60%
+</font><font face="Courier New" size="2" color="#808080">(</font><font face="Courier New" size="2" color="#00FFFF">This
+bot is somewhat likely to resort to explosive weapons like grenades</font><font face="Courier New" size="2" color="#808080">)</font><br>
+<br>
+<font face="Courier New" size="2" color="#808080">Summery: </font><font face="Courier New" size="2" color="#808080"><br>
+</font><font face="Courier New" size="2" color="#C0C0C0">This bot is a mean
+fighter, and probably a high-level one. He mixes the camping tactics with the
+shotgun to obliterate his prey. When he sees a target approaching, he might hide
+and wait for the target to enter the room. When it does, his high attack rate
+means he'll likely blast it instead of dinking around with defensive tactics
+like cover and such. His preferred enemy happens to be Aliens, which is good
+because this probably wouldn't work great against a Predator. Although, if it
+comes to that, his high blasting rate means he'd like just start lobbing
+grenades probably. </font></b></p>
+
+<p><b><font face="Courier New" size="2" color="#808080">
+&nbsp;Bot Name: </font><font face="Courier New" size="2" color="#C0C0C0">Jim
+'Prophet' Brown</font><font face="Courier New" size="2" color="#808080"><br>
+&nbsp;Favorite Weapon: </font><font face="Courier New" size="2" color="#C0C0C0">Automatic
+Weapons</font><font face="Courier New" size="2" color="#808080">
+<br>
+&nbsp;Favorite Target: </font><font face="Courier New" size="2" color="#C0C0C0">Predators<br>
+</font><font face="Courier New" size="2" color="#808080">&nbsp;Fear:&nbsp;&nbsp;&nbsp;&nbsp;
+</font><font face="Courier New" size="2" color="#C0C0C0">40% </font><font face="Courier New" size="2" color="#808080">(</font><font face="Courier New" size="2" color="#00FFFF">Easily
+spooked bot. Need to be. Predators are 'effin creepy</font><font face="Courier New" size="2" color="#808080">)</font><font face="Courier New" size="2" color="#C0C0C0"><br>
+</font><font face="Courier New" size="2" color="#808080">&nbsp;Attack:&nbsp;&nbsp;
+</font><font face="Courier New" size="2" color="#C0C0C0">50% </font><font face="Courier New" size="2" color="#808080">(</font><font face="Courier New" size="2" color="#00FFFF">A
+lower attack rate means he'll do a lot of 'finding cover' and such</font><font face="Courier New" size="2" color="#808080">)</font><font face="Courier New" size="2" color="#C0C0C0"><br>
+</font><font face="Courier New" size="2" color="#808080">&nbsp;Camping:&nbsp; </font><font face="Courier New" size="2" color="#C0C0C0">80%
+</font><font face="Courier New" size="2" color="#808080">(</font><font face="Courier New" size="2" color="#00FFFF">This
+bot will camp a ton, and use SPRAY to obliterate approaching prey</font><font face="Courier New" size="2" color="#808080">)</font><font face="Courier New" size="2" color="#C0C0C0"><br>
+</font><font face="Courier New" size="2" color="#808080">&nbsp;Blasting: </font><font face="Courier New" size="2" color="#C0C0C0">90%
+</font><font face="Courier New" size="2" color="#808080">(</font><font face="Courier New" size="2" color="#00FFFF">The
+Mad Grenadier. If its nearby, He'll lob a M40 at it. Doesn't screw around</font><font face="Courier New" size="2" color="#808080">)</font><br>
+<br>
+<font face="Courier New" size="2" color="#808080">Summery:<br>
+ </font><font face="Courier New" size="2" color="#C0C0C0">Mean fighter doesn't
+even start to cover this bot. His automatic weapon preference will be good when
+coupled with spray, because it'll deliver more rounds that way. A lower attack
+rate and high camping means he'll probably just find a dumpster or crate to hide
+behind, and spray corridors from a distance... Fair? Who cares. They weren't
+built to be pasted easily. The one thing keeping him from being a great bot is
+his high blasting. If its outside his weapons range, its going to eat grenade.
+And... bots don't pay a lot of attention to team-mate locations. Dont stand
+anywhere near this bot. ANYWHERE Near.<br>
+<br>
+</font><font face="Courier New" size="2" color="#808080"><br>
+</font><font face="Courier New" size="2" color="#FF0000">Note: Most of the
+information beyond this point is extremely technical, or pointless. Be
+forewarned.</font><font face="Courier New" size="2" color="#808080"><br>
+<br>
+<br>
+Technical Design: </font><font face="Courier New" size="2" color="#00FF00">Making
+'em a reality.<br>
+<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">Several things must be
+considered when coding the bots. One of the major setbacks is the current
+configuration with the mobiles. Namely, the fact that NONE of the mobiles have
+PCDATA structures, so they dont have skill lists or anything. The easiest way to
+solve this would be to give every bot a PCDATA structure when its created, and
+flag it similar to a player. In theory, the only problem then should be
+descriptors... or the lack thereof. Bots do not have descriptors, as they have
+no connection. So that leaves two options for that:&nbsp;</font><font face="Courier New" size="2" color="#00FF00"><br>
+<br>
+&nbsp;*</font><font face="Courier New" size="2" color="#C0C0C0">
+</font><font face="Courier New" size="2" color="#808080">Code a kind of 'Null'
+descriptor that dumps everything into oblivion.<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+</font><font face="Courier New" size="2" color="#808080">Code better support for
+null descriptors, so I can just leave it blank.<br>
+<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">Once thats</font></b><b><font face="Courier New" size="2" color="#C0C0C0">
+taken care of, it becomes a fairly simple matter of teaching them how to act. So
+far, it seemed best to do this through state-based logic. Each Bot has states
+that indicator his or her current goals, objectives and other important factors.
+Then, I can interweave state-change commands into the existing functions - For
+instance, when a bot is 'shot', we want to change his state to one of defense,
+or possibly aggressiveness - If he's a freaking pyscho. We can also have
+diffrent reactions based on their combat preferences and the kinds of triggers.
+For instance:<br>
+<br>
+</font><font face="Courier New" size="2" color="#FF0000">&nbsp;Bob is a marine
+bot. His favorite weapon is a shotgun, and he happens to be using it right now.
+Now, Bob gets clawed at by an alien, who happens to be in the same room. *BLAM*
+- Bob's state changed to one of aggressive assault, and vaporized the poor
+little bastard. Now, Say Bob is shot at from a distance, by a snipe. Well, a
+shotgun isn't exactly a ranged weapon, so Bob's state changes to 'evasive' and
+he gets the hell out of their. After he stops running, Bob is hit with a spray
+from a nearby room. Likely it wasn't targetted for Bob, but you never know.
+Bob's state changes to cover instead of evasion, and he goes one room in a
+direction to get outside the line of fire. Bob is good bot.<br>
+<br>
+</font><font face="Courier New" size="2" color="#808080">
+Technical Design: </font><font face="Courier New" size="2" color="#00FF00">AI
+States for bots.<br>
+<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">The next step right now
+is to design the state-reaction chart for the Bots. Below is a list of all the
+states they can have, along with a flowchart-like map of all the state controls.
+The items inside [square brackets] are externally triggered events, and the ( )
+are if-checks to help determine the effect.</font><br>
+<br>
+<font face="Courier New" size="2" color="#0000FF">AI States:</font><font face="Courier New" size="2" color="#C0C0C0"><br>
+&nbsp;(Used Outside the Arena)<br>
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+ 00 :
+</font><font face="Courier New" size="2" color="#808080"> Startup Sequence.
+(DEFAULT STATE)<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+ 01 :
+</font><font face="Courier New" size="2" color="#808080"> Searching for the
+arena deploy.<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+ 02 :
+</font><font face="Courier New" size="2" color="#808080"> Shopping for new
+equipment.<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+ 03 :
+</font><font face="Courier New" size="2" color="#808080"> Recovering at base.<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+ 04 :
+</font><font face="Courier New" size="2" color="#808080"> ...<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+ 05 :
+</font><font face="Courier New" size="2" color="#808080"> ...<br>
+&nbsp;</font><font face="Courier New" size="2" color="#C0C0C0">(Used Inside the
+Arena)</font><font face="Courier New" size="2" color="#808080"><br>
+</font><font face="Courier New" size="2" color="#C0C0C0">
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+10 :
+</font><font face="Courier New" size="2" color="#808080"> Camping Mode. (Waiting
+for target)<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+11 :
+</font><font face="Courier New" size="2" color="#808080"> Supporting Team.
+(Follows nearest marine)<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+12 :</font><font face="Courier New" size="2" color="#808080"> Fleeing Combat.<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+13 :
+</font><font face="Courier New" size="2" color="#808080"> Return to Base.
+(Return to nearest exit)<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+14 :
+</font><font face="Courier New" size="2" color="#808080"> Quick Dodge Routine.<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+15 :
+</font><font face="Courier New" size="2" color="#808080"> Finding Cover.<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+16 :
+</font><font face="Courier New" size="2" color="#808080"> Grenading Sequence.<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+17 :
+</font><font face="Courier New" size="2" color="#808080"> ...<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+18 :
+</font><font face="Courier New" size="2" color="#808080"> ...<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+19 :
+</font><font face="Courier New" size="2" color="#808080"> ...<br>
+</font><font face="Courier New" size="2" color="#C0C0C0">
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*</font><font face="Courier New" size="2" color="#C0C0C0">
+20 :
+</font><font face="Courier New" size="2" color="#808080"> ...<br>
+<br>
+</font><font face="Courier New" size="2" color="#0000FF">Action Table:<br>
+&nbsp;</font><font face="Courier New" size="2" color="#00FF00">* </font><font face="Courier New" size="2" color="#C0C0C0">[Bot
+Pulse]<br>
+&nbsp; </font><font face="Courier New" size="2" color="#008000">*</font><font face="Courier New" size="2" color="#00FF00">
+</font><font face="Courier New" size="2" color="#808080">No Events Defined.<br>
+</font><font face="Courier New" size="2" color="#0000FF">&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*
+</font><font face="Courier New" size="2" color="#C0C0C0">[Sniper Fire (Snipe
+Routine)]<br>
+&nbsp; </font><font face="Courier New" size="2" color="#008000">*</font><font face="Courier New" size="2" color="#00FF00">
+</font><font face="Courier New" size="2" color="#808080">(Sniper Fire Hit)<br>
+&nbsp;&nbsp; </font><font face="Courier New" size="2" color="#008000">*</font><font face="Courier New" size="2" color="#808080">
+</font><font face="Courier New" size="2" color="#C0C0C0">Switch to Flee state
+(12).<br>
+&nbsp; </font><font face="Courier New" size="2" color="#008000">*</font><font face="Courier New" size="2" color="#00FF00">
+</font><font face="Courier New" size="2" color="#808080">(Sniper Fire Missed)<br>
+&nbsp;&nbsp; </font><font face="Courier New" size="2" color="#008000">*</font><font face="Courier New" size="2" color="#808080">
+</font><font face="Courier New" size="2" color="#C0C0C0">Switch to Cover state
+(15).<br>
+</font><font face="Courier New" size="2" color="#0000FF">&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*
+</font><font face="Courier New" size="2" color="#C0C0C0">[Spray Fire (Spray
+Routine)]<br>
+&nbsp; </font><font face="Courier New" size="2" color="#008000">*</font><font face="Courier New" size="2" color="#00FF00">
+</font><font face="Courier New" size="2" color="#808080">(Spray Hit)<br>
+&nbsp;&nbsp; </font><font face="Courier New" size="2" color="#008000">*</font><font face="Courier New" size="2" color="#808080">
+</font><font face="Courier New" size="2" color="#C0C0C0">Switch to Cover state
+(15).<br>
+&nbsp; </font><font face="Courier New" size="2" color="#008000">*</font><font face="Courier New" size="2" color="#00FF00">
+</font><font face="Courier New" size="2" color="#808080">(Spray Missed)<br>
+&nbsp;&nbsp; </font><font face="Courier New" size="2" color="#008000">*</font><font face="Courier New" size="2" color="#808080">
+</font><font face="Courier New" size="2" color="#C0C0C0">Switch to Dodge state
+(14).<br>
+</font><font face="Courier New" size="2" color="#0000FF">&nbsp;</font><font face="Courier New" size="2" color="#00FF00">*
+</font><font face="Courier New" size="2" color="#C0C0C0">[Grenade spotted]<br>
+</font><font face="Courier New" size="2" color="#808080">&nbsp; </font><font face="Courier New" size="2" color="#008000">*</font><font face="Courier New" size="2" color="#808080">
+</font><font face="Courier New" size="2" color="#C0C0C0">Switch to Flee state
+(15).<br>
+<br>
+</font></b></p>
+
+</body>
+
+</html>
