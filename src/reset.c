@@ -1092,8 +1092,7 @@ void do_reset( CHAR_DATA* ch, char* argument )
             if ( !tmp )
             {
                 send_to_char( "Your area pointer got lost.  Reset mode off.\n\r", ch );
-                bug( "do_reset: %s's dest_buf points to invalid area",
-                     ( int )ch->name );
+                bug( "do_reset: %s's dest_buf points to invalid area", ch->name );
                 ch->substate = SUB_NONE;
                 ch->dest_buf = NULL;
                 return;
@@ -1157,7 +1156,7 @@ void do_rreset( CHAR_DATA* ch, char* argument )
         if ( !pRoom )
         {
             send_to_char( "Your room pointer got lost.  Reset mode off.\n\r", ch );
-            bug( "do_rreset: %s's dest_buf points to invalid room", ( int )ch->name );
+            bug( "do_rreset: %s's dest_buf points to invalid room", ch->name );
         }
 
         ch->substate = SUB_NONE;
@@ -1459,9 +1458,6 @@ void reset_area( AREA_DATA* pArea )
                 }
 
                 mob = create_mobile( pMobIndex );
-                {
-                    ROOM_INDEX_DATA* pRoomPrev = get_room_index( pReset->arg3 - 1 );
-                }
                 // if ( room_is_dark(mob, pRoomIndex) ) xSET_BIT(mob->affected_by, AFF_INFRARED);
                 char_to_room( mob, pRoomIndex );
                 level = URANGE( 0, mob->top_level - 2, LEVEL_AVATAR );
@@ -1761,7 +1757,6 @@ void list_resets( CHAR_DATA* ch, AREA_DATA* pArea, ROOM_INDEX_DATA* pRoom,
     OBJ_INDEX_DATA* obj, *obj2;
     OBJ_INDEX_DATA* lastobj;
     RESET_DATA* lo_reset;
-    bool found;
     int num = 0;
     const char* rname, *mname, *oname;
     char buf[256];
@@ -1775,7 +1770,6 @@ void list_resets( CHAR_DATA* ch, AREA_DATA* pArea, ROOM_INDEX_DATA* pRoom,
     obj = NULL;
     lastobj = NULL;
     lo_reset = NULL;
-    found = FALSE;
 
     for ( pReset = pArea->first_reset; pReset; pReset = pReset->next )
     {
@@ -2235,7 +2229,7 @@ RESET_DATA* place_reset( AREA_DATA* tarea, char letter, int extra, int arg1, int
                     for ( ; tmp && tmp->command == letter && tmp->arg1 > arg1; tmp = tmp->prev );
 
                 if ( tmp )  /* organize by direction */
-                    for ( ; tmp && tmp->command == letter && tmp->arg1 == tmp->arg1 && tmp->arg2 > arg2; tmp = tmp->prev );
+                    for ( ; tmp && tmp->command == letter && tmp->arg2 > arg2; tmp = tmp->prev );
 
                 if ( tmp )
                     INSERT( pReset, tmp, tarea->first_reset, next, prev );
@@ -2264,7 +2258,6 @@ RESET_DATA* place_reset( AREA_DATA* tarea, char letter, int extra, int arg1, int
                         if ( tmp->arg3 == arg3 )
                             for ( ; tmp; tmp = tmp->prev )
                                 if ( tmp->command == letter
-                                        &&   tmp->arg3 == tmp->arg3
                                         &&   tmp->arg1 <= arg1 )
                                 {
                                     tmp2 = tmp->next;

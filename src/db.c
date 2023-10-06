@@ -69,11 +69,11 @@ TELEPORT_DATA*      last_teleport;
 OBJ_DATA*       extracted_obj_queue;
 EXTRACT_CHAR_DATA*  extracted_char_queue;
 
-char            bug_buf     [2 * MAX_INPUT_LENGTH];
+char            bug_buf     [MSL];
 CHAR_DATA*      first_char;
 CHAR_DATA*      last_char;
 char*           help_greeting;
-char            log_buf     [2 * MAX_INPUT_LENGTH];
+char            log_buf     [MSL];
 
 OBJ_DATA*       first_object;
 OBJ_DATA*       last_object;
@@ -523,8 +523,6 @@ void boot_db( bool fCpyOver )
         }
         else
         {
-            char tmp[256];
-
             for ( ; ; )
             {
                 strcpy( strArea, fread_word( fpList ) );
@@ -1015,8 +1013,7 @@ void load_mobiles( AREA_DATA* tarea, FILE* fp )
 
         if ( letter == 'Z' ) /*  Star Wars Reality Complex Mob  */
         {
-            EXT_BV junk;
-            junk = fread_bitvector( fp );
+            fread_bitvector( fp );
             ln = fread_line( fp );
             x1 = x2 = x3 = x4 = x5 = x6 = x7 = x8 = 0;
             sscanf( ln, "%d %d %d %d %d %d",
@@ -2393,20 +2390,29 @@ void free_char( CHAR_DATA* ch )
 */
 char* get_extra_descr( const char* name, EXTRA_DESCR_DATA* ed )
 {
-    EXTRA_DESCR_DATA* tmp;
+    char token[MAX_STRING_LENGTH];
 
-    for ( tmp = ed; tmp; tmp = tmp->next )
-        if ( is_name( name, tmp->keyword ) )
-            return tmp->description;
+    if ( ed == NULL || ed->keyword == NULL )
+        return NULL;
 
-    for ( tmp = ed; tmp; tmp = tmp->next )
-        if ( nifty_is_name( name, tmp->keyword ) )
-            return tmp->description;
+    name = one_argument( name, token );
+
+    while ( token[0] != '\0' )
+    {
+        for ( ; ed; ed = ed->next )
+        {
+            // Match on either a prefix or an exact match with the name we're looking for, in case it's multi-word
+            if ( is_name_prefix( token, ed->keyword ) || !strcasecmp( token, ed->keyword ) )
+            {
+                return ed->description;
+            }
+        }
+
+        name = one_argument( name, token );
+    }
 
     return NULL;
 }
-
-
 
 /*
     Translates mob virtual number to its mob index struct.
@@ -6457,7 +6463,7 @@ int file_size( char* buf )
 }
 
 /*
-    EMERGANCY RECOVER FEATURE ---->
+    EMERGENCY RECOVER FEATURE ---->
     Called for boot_db system, this function triggers
     if the area list cannot be located. It will generate
     a temporary area and a new area list. <-=Ghost=->
@@ -6756,7 +6762,7 @@ void deploy_tns( int first, int last, int flag )
     TNS_DATA* tnsB = NULL;
     TNS_DATA* tmp = NULL;
     bool fpass = TRUE;
-    int vnum = 0, tele = 0;
+    int vnum = 0;
     int cnt = 0;
 
     if ( last - first <= 0 )
@@ -6853,7 +6859,6 @@ void deploy_tns( int first, int last, int flag )
     {
         int dist = -1;
         int best = -1;
-        int dir = -1;
 
         if ( tnsA->done )
             continue;

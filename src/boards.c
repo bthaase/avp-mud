@@ -372,7 +372,7 @@ void do_note( CHAR_DATA* ch, char* arg_passed, bool IS_MAIL )
     int vnum;
     int anum;
     int first_list;
-    OBJ_DATA* quill, *paper, *tmpobj = NULL;
+    OBJ_DATA* paper, *tmpobj = NULL;
     EXTRA_DESCR_DATA* ed = NULL;
     char notebuf[MAX_STRING_LENGTH];
     char short_desc_buf[MAX_STRING_LENGTH];
@@ -763,10 +763,6 @@ void do_note( CHAR_DATA* ch, char* arg_passed, bool IS_MAIL )
             ed = SetOExtra( paper, "_text_" );
             ch->substate = SUB_WRITING_NOTE;
             ch->dest_buf = ed;
-
-            if ( get_trust( ch ) < sysdata.write_mail_free )
-                --quill->value[0];
-
             start_editing( ch, ed->description );
             return;
         }
@@ -914,7 +910,7 @@ void do_note( CHAR_DATA* ch, char* arg_passed, bool IS_MAIL )
 
     if ( !str_cmp( arg, "post" ) )
     {
-        char* strtime, *to, *subj, *text;
+        char* strtime, *text;
 
         if ( ( paper = get_eq_char( ch, WEAR_HOLD ) ) == NULL
                 ||     paper->item_type != ITEM_PAPER )
@@ -979,8 +975,6 @@ void do_note( CHAR_DATA* ch, char* arg_passed, bool IS_MAIL )
         strtime             = ctime( &current_time );
         strtime[strlen( strtime ) - 1]  = '\0';
         /* handle IMC notes */
-        to = get_extra_descr( "_to_", paper->first_extradesc );
-        subj = get_extra_descr( "_subject_", paper->first_extradesc );
         text = get_extra_descr( "_text_", paper->first_extradesc );
         act( AT_ACTION, "$n uploads a message.", ch, NULL, NULL, TO_ROOM );
         CREATE( pnote, NOTE_DATA, 1 );

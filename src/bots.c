@@ -334,12 +334,12 @@ BOT_DATA* bot_from_name( char* name )
 */
 void do_makebot( CHAR_DATA* ch, char* argument )
 {
-    char arg[MAX_INPUT_LENGTH];
-    char filename[256];
+    char arg[MIL];
+    char filename[MIL];
     BOT_DATA* bot;
     argument = one_argument( argument, arg );
 
-    if ( !argument || argument[0] == '\0' )
+    if ( NULLSTR( argument ) )
     {
         send_to_char( "Usage: makebot <filename> <bot name>\n\r", ch );
         return;
@@ -354,7 +354,7 @@ void do_makebot( CHAR_DATA* ch, char* argument )
         bot->id = bot->prev->id + 1;
 
     bot->name            = STRALLOC( argument );
-    sprintf( filename, "%s", arg );
+    strncpy( filename, arg, MIL );
     bot->filename = str_dup( filename );
     save_bot( bot );
     write_bot_list();
@@ -364,7 +364,7 @@ void do_allbots( CHAR_DATA* ch, char* argument )
 {
     char info[MAX_STRING_LENGTH];
     BOT_DATA* bot;
-    int count = 0, ppl = 0;
+    int count = 0;
     ch_printf( ch, "&zBots: -----------------------\n\r" );
 
     for ( bot = first_bot; bot; bot = bot->next )
@@ -383,9 +383,7 @@ void do_allbots( CHAR_DATA* ch, char* argument )
 
 void do_showbot( CHAR_DATA* ch, char* argument )
 {
-    CHAR_DATA* victim;
     BOT_DATA* bot;
-    int count = 0;
 
     if ( argument[0] == '\0' )
     {

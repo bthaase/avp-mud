@@ -182,7 +182,7 @@ bool spec_enemy_scan( CHAR_DATA* ch )
     ROOM_INDEX_DATA* to_room;
 
     if ( ch->hunting )
-        return;
+        return FALSE; // FLAG: Unsure if this should be true or false. Assuming false. Ask Ghost at some point. - Nield 10/05/2023
 
     max_dist = ( int )( get_curr_per( ch ) / 3 );
 

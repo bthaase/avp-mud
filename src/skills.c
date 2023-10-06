@@ -424,9 +424,6 @@ void do_slookup( CHAR_DATA* ch, char* argument )
     }
     else
     {
-        SMAUG_AFF* aff;
-        int cnt = 0;
-
         if ( arg[0] == 'h' && is_number( arg + 1 ) )
         {
             sn = atoi( arg + 1 );
@@ -495,8 +492,8 @@ void do_slookup( CHAR_DATA* ch, char* argument )
 */
 void do_sset( CHAR_DATA* ch, char* argument )
 {
-    char arg1 [MAX_INPUT_LENGTH];
-    char arg2 [MAX_INPUT_LENGTH];
+    char arg1[MIL], arg2 [MIL];
+    char buf[MSL];
     CHAR_DATA* victim;
     int value;
     int sn;
@@ -725,8 +722,8 @@ void do_sset( CHAR_DATA* ch, char* argument )
     {
         if ( ( sn = skill_lookup( arg1 ) ) >= 0 )
         {
-            sprintf( arg1, "%d %s %s", sn, arg2, argument );
-            do_sset( ch, arg1 );
+            snprintf( buf, MSL, "%d %s %s", sn, arg2, argument );
+            do_sset( ch, buf );
         }
         else
             send_to_char( "They aren't here.\n\r", ch );
@@ -889,7 +886,6 @@ void do_hide( CHAR_DATA* ch, char* argument )
 void do_recall( CHAR_DATA* ch, char* argument )
 {
     ROOM_INDEX_DATA* location;
-    CHAR_DATA* opponent;
     location = NULL;
     location = get_room_index( wherehome( ch ) );
 
@@ -943,7 +939,6 @@ void do_recall( CHAR_DATA* ch, char* argument )
 
 void do_scan( CHAR_DATA* ch, char* argument )
 {
-    ROOM_INDEX_DATA* was_in_room = NULL;
     ROOM_INDEX_DATA* to_room = NULL;
     EXIT_DATA* pexit = NULL;
     bool can_see = FALSE;
@@ -970,7 +965,6 @@ void do_scan( CHAR_DATA* ch, char* argument )
         return;
     }
 
-    was_in_room = ch->in_room;
     act( AT_GREY, "Scanning $t...", ch, dir_name[dir], NULL, TO_CHAR );
     // act( AT_GREY, "$n scans $t.", ch, dir_name[dir], NULL, TO_ROOM );
     max_dist = 1;
@@ -1465,7 +1459,6 @@ void do_spit( CHAR_DATA* ch, char* argument )
 void do_request( CHAR_DATA* ch, char* argument )
 {
     char arg[MAX_INPUT_LENGTH];
-    char buf[MAX_STRING_LENGTH];
     MOB_INDEX_DATA*   pMobIndex;
     OBJ_INDEX_DATA*   pObjIndex;
     CHAR_DATA*        mob[3];
@@ -1730,7 +1723,6 @@ void do_request( CHAR_DATA* ch, char* argument )
 
 void do_confuse( CHAR_DATA* ch, char* argument )
 {
-    char buf[MAX_STRING_LENGTH];
     AFFECT_DATA af;
     int duration = 0;
     int level = 2;
@@ -1784,7 +1776,6 @@ void do_confuse( CHAR_DATA* ch, char* argument )
 
 void do_rage( CHAR_DATA* ch, char* argument )
 {
-    char buf[MAX_STRING_LENGTH];
     AFFECT_DATA af;
     int duration = 0;
     int level = 2;
@@ -2026,12 +2017,12 @@ void do_lunge( CHAR_DATA* ch, char* argument )
     char arg1[MAX_INPUT_LENGTH];
     char arg2[MAX_INPUT_LENGTH];
     ROOM_INDEX_DATA* to_room;
-    CHAR_DATA* rch, * rnext;
+    CHAR_DATA* rch;
     EXIT_DATA* pexit;
     bool multistun = FALSE;
     bool found = FALSE;
     int range = 0, mrange = 2;
-    int ret = 0, dir = 0;
+    int dir = 0;
     int stun = 3;
     argument = one_argument( argument, arg1 );
     argument = one_argument( argument, arg2 );
@@ -2190,7 +2181,7 @@ void do_lunge( CHAR_DATA* ch, char* argument )
         }
         else if ( multistun == TRUE && arg2[0] == '\0' )
         {
-            PC_DATA* rtmp;
+            CHAR_DATA* rtmp;
             int tstun;
 
             // ANY Enemies present?
@@ -2319,7 +2310,7 @@ bool destroy_door( ROOM_INDEX_DATA* room, EXIT_DATA* pexit, bool bonus )
         if ( ( rexit = get_exit( pexit->to_room, rev_dir[pexit->vdir] ) ) == NULL )
             return val;
 
-        if ( destroy_door( pexit->to_room, pexit->to_room, FALSE ) )
+        if ( destroy_door( pexit->to_room, pexit, FALSE ) )
             val = TRUE;
     }
 
@@ -2332,11 +2323,10 @@ void do_leap( CHAR_DATA* ch, char* argument )
     char arg1[MAX_INPUT_LENGTH];
     char arg2[MAX_INPUT_LENGTH];
     ROOM_INDEX_DATA* to_room;
-    CHAR_DATA* rch, * rnext;
     EXIT_DATA* pexit;
     bool antidoor = FALSE;
     int range = 0, mrange = 1;
-    int ret = 0, dir = 0;
+    int dir = 0;
     argument = one_argument( argument, arg1 );
     argument = one_argument( argument, arg2 );
 
@@ -2776,13 +2766,11 @@ void do_sc( CHAR_DATA* ch, char* argument )
     char arg1[MAX_INPUT_LENGTH];
     char arg2[MAX_INPUT_LENGTH];
     ROOM_INDEX_DATA* to_room;
-    CHAR_DATA* rch, * rnext;
+    CHAR_DATA* rch;
     EXIT_DATA* pexit;
     OBJ_DATA* cannon = NULL;
     int dam = 0;
-    int ret = 0;
     int dir = 0;
-    int chance = 0;
     int accuracy = 100;
     int range = 0;
     int mrange = 0;
@@ -3016,7 +3004,6 @@ void do_throw( CHAR_DATA* ch, char* argument )
     char              arg[MAX_INPUT_LENGTH];
     char              arg2[MAX_INPUT_LENGTH];
     char              arg3[MAX_INPUT_LENGTH];
-    bool              thatch = FALSE;
     sh_int            dir;
     EXIT_DATA*        pexit;
     ROOM_INDEX_DATA* was_in_room;

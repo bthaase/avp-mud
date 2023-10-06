@@ -424,7 +424,7 @@ char* rev_exit( sh_int vdir )
             return "the northeast";
     }
 
-    return "<???>";
+    return "somewhere";
 }
 
 char* main_exit( sh_int vdir )
@@ -465,7 +465,7 @@ char* main_exit( sh_int vdir )
             return "the southwest";
     }
 
-    return "<???>";
+    return "somewhere";
 }
 
 /*
@@ -727,7 +727,7 @@ ch_ret move_char( CHAR_DATA* ch, EXIT_DATA* pexit, int edir, int fall )
             room = bw_create( ch );
 
             if ( room == NULL )
-                return;
+                return rNONE;
 
             xit = make_exit( ch->in_room, room, edir );
             xit->keyword                = STRALLOC( "" );
@@ -884,19 +884,6 @@ ch_ret move_char( CHAR_DATA* ch, EXIT_DATA* pexit, int edir, int fall )
         if ( in_room->sector_type == SECT_WATER_NOSWIM
                 ||   to_room->sector_type == SECT_WATER_NOSWIM )
         {
-            bool found;
-            found = FALSE;
-
-            if ( ch->mount )
-            {
-                if ( IS_AFFECTED( ch->mount, AFF_FLYING )
-                        ||   IS_AFFECTED( ch->mount, AFF_FLOATING ) )
-                    found = TRUE;
-            }
-            else if ( IS_AFFECTED( ch, AFF_FLYING )
-                      ||   IS_AFFECTED( ch, AFF_FLOATING ) )
-                found = TRUE;
-
             return rNONE;
         }
 
@@ -1548,7 +1535,6 @@ void do_open( CHAR_DATA* ch, char* argument )
     char arg[MAX_INPUT_LENGTH];
     OBJ_DATA* obj;
     EXIT_DATA* pexit;
-    int door;
     one_argument( argument, arg );
 
     if ( arg[0] == '\0' )
@@ -1657,7 +1643,6 @@ void do_close( CHAR_DATA* ch, char* argument )
     char arg[MAX_INPUT_LENGTH];
     OBJ_DATA* obj;
     EXIT_DATA* pexit;
-    int door;
     one_argument( argument, arg );
 
     if ( arg[0] == '\0' )
@@ -2481,15 +2466,12 @@ void teleport( CHAR_DATA* ch, int room, int flags )
 void do_climb( CHAR_DATA* ch, char* argument )
 {
     EXIT_DATA* pexit;
-    bool found;
 
     if ( is_spectator( ch ) )
     {
         do_nothing( ch, "" );
         return;
     }
-
-    found = FALSE;
 
     if ( argument[0] == '\0' )
     {
@@ -2524,8 +2506,6 @@ void do_enter( CHAR_DATA* ch, char* argument )
 {
     char arg1[MAX_STRING_LENGTH];
     EXIT_DATA* pexit;
-    bool found;
-    found = FALSE;
     argument = one_argument( argument, arg1 );
 
     if ( arg1[0] == '\0' )
@@ -2551,7 +2531,7 @@ void do_enter( CHAR_DATA* ch, char* argument )
             if ( ch->mp < 1 )
             {
                 send_to_char( "You are too exhausted, rest for a moment.\n\r", ch );
-                return rNONE;
+                return;
             }
 
             /*
@@ -2617,8 +2597,6 @@ void do_leave( CHAR_DATA* ch, char* argument )
 {
     char arg1[MAX_STRING_LENGTH];
     EXIT_DATA* pexit;
-    bool found;
-    found = FALSE;
     argument = one_argument( argument, arg1 );
 
     if ( arg1[0] == '\0' )
@@ -2652,7 +2630,7 @@ void do_leave( CHAR_DATA* ch, char* argument )
             if ( ch->mp < 1 )
             {
                 send_to_char( "You are too exhausted, rest for a moment.\n\r", ch );
-                return rNONE;
+                return;
             }
 
             /*
@@ -3049,10 +3027,8 @@ void do_release( CHAR_DATA* ch, char* argument )
 
 void do_block( CHAR_DATA* ch, char* argument )
 {
-    AREA_DATA* area;
     char arg1[MAX_INPUT_LENGTH];
     EXIT_DATA* pexit;
-    EXIT_DATA* pexit_rev;
     argument = one_argument( argument, arg1 );
 
     if ( is_spectator( ch ) )

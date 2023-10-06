@@ -886,7 +886,7 @@ void do_mpinvis( CHAR_DATA* ch, char* argument )
 
     argument = one_argument( argument, arg );
 
-    if ( arg && arg[0] != '\0' )
+    if ( !NULLSTR( arg ) )
     {
         if ( !is_number( arg ) )
         {
@@ -1404,7 +1404,6 @@ void do_mpgain( CHAR_DATA* ch, char* argument )
 {
     char arg1[ MAX_INPUT_LENGTH ];
     char arg2[ MAX_INPUT_LENGTH ];
-    char buf[ MAX_STRING_LENGTH ];
     CHAR_DATA* victim;
     long exp;
 
@@ -1464,7 +1463,6 @@ void do_mpwait( CHAR_DATA* ch, char* argument )
 {
     char arg1[ MAX_INPUT_LENGTH ];
     char arg2[ MAX_INPUT_LENGTH ];
-    char buf[ MAX_STRING_LENGTH ];
     CHAR_DATA* victim;
 
     if ( IS_AFFECTED( ch, AFF_CHARM ) )
@@ -1974,7 +1972,6 @@ void do_mprunspec( CHAR_DATA* ch, char* argument )
 {
     char       arg[ MAX_INPUT_LENGTH ];
     SPEC_FUN* spec;
-    bool rtn = FALSE;
 
     /*
         if ( IS_AFFECTED( ch, AFF_CHARM ) )
@@ -2009,7 +2006,6 @@ void do_mprunspec( CHAR_DATA* ch, char* argument )
         return;
     }
 
-    rtn = ( ( *spec ) ( ch ) );
     return;
 }
 
@@ -2028,11 +2024,7 @@ void do_mppkset( CHAR_DATA* ch, char* argument )
 */
 ch_ret simple_damage( CHAR_DATA* ch, CHAR_DATA* victim, int dam, int dt )
 {
-    sh_int dameq;
     bool npcvict;
-    OBJ_DATA* damobj;
-    ch_ret retcode;
-    retcode = rNONE;
 
     if ( !ch )
     {
@@ -2458,7 +2450,6 @@ void do_mpteamgain( CHAR_DATA* ch, char* argument )
     char arg1[ MAX_INPUT_LENGTH ];
     char arg2[ MAX_INPUT_LENGTH ];
     char buf[ MAX_STRING_LENGTH ];
-    CHAR_DATA* victim;
     int race;
     int exp;
 

@@ -193,7 +193,7 @@ void hash_dump( int hash )
 
     for ( c = 0, ptr = string_hash[hash]; ptr; ptr = ptr->next, c++ )
     {
-        str = ( char* ) ( ( ( int ) ptr ) + psize );
+        str = ( char* ) ( ( ptr ) + psize );
         fprintf( stderr, "Len:%4d Lnks:%5d Str: %s\n\r",
                  ptr->length, ptr->links, str );
     }
@@ -268,7 +268,7 @@ void show_high_hash( int top )
         for ( ptr = string_hash[x]; ptr; ptr = ptr->next )
             if ( ptr->links >= top )
             {
-                str = ( char* ) ( ( ( int ) ptr ) + psize );
+                str = ( char* ) ( ( ptr ) + psize );
                 fprintf( stderr, "Links: %5d  String: >%s<\n\r", ptr->links, str );
             }
 }

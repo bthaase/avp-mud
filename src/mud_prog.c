@@ -235,10 +235,8 @@ bool mprog_veval( int lhs, char* opr, int rhs, CHAR_DATA* mob )
 int mprog_do_ifcheck( char* ifcheck, CHAR_DATA* mob, CHAR_DATA* actor,
                       OBJ_DATA* obj, void* vo, CHAR_DATA* rndm )
 {
-    char cvar[MAX_INPUT_LENGTH];
-    char chck[MAX_INPUT_LENGTH];
-    char opr[MAX_INPUT_LENGTH];
-    char rval[MAX_INPUT_LENGTH];
+    char cvar[MIL], chck[MIL], opr[MIL];
+    char rval[MSL];
     char* point = ifcheck;
     char* pchck = chck;
     CHAR_DATA* chkchar = NULL;
@@ -350,7 +348,7 @@ int mprog_do_ifcheck( char* ifcheck, CHAR_DATA* mob, CHAR_DATA* actor,
                 break;
 
             default:
-                sprintf( rval, "Bad argument '%c' to '%s'", cvar[0], chck );
+                snprintf( rval, MSL, "Bad argument '%c' to '%s'", cvar[0], chck );
                 progbug( rval, mob );
                 return BERR;
         }
@@ -1727,7 +1725,7 @@ int mprog_do_command( char* cmnd, CHAR_DATA* mob, CHAR_DATA* actor,
     char buf[ MAX_INPUT_LENGTH ];
     char tmp[ MAX_INPUT_LENGTH ];
     char* point = NULL, *str = NULL, *i = NULL;
-    int validif, vnum;
+    int validif;
     /*  Isolate the first word of the line, it gives us a clue what
         we want to do. */
     ifcheck = one_argument( cmnd, firstword );
@@ -1793,7 +1791,6 @@ int mprog_do_command( char* cmnd, CHAR_DATA* mob, CHAR_DATA* actor,
     if ( !str_cmp( firstword, "break" ) )
         return BERR;
 
-    vnum = mob->pIndexData->vnum;
     point   = buf;
     str     = cmnd;
 
@@ -2169,7 +2166,6 @@ void mprog_act_trigger( char* buf, CHAR_DATA* mob, CHAR_DATA* ch, OBJ_DATA* obj,
 
 void mprog_bribe_trigger( CHAR_DATA* mob, CHAR_DATA* ch, int amount )
 {
-    char        buf[ MAX_STRING_LENGTH ];
     MPROG_DATA* mprg = NULL;
     OBJ_DATA*   obj = NULL;
 
@@ -2414,13 +2410,10 @@ void set_supermob( OBJ_DATA* obj )
 {
     ROOM_INDEX_DATA* room = NULL;
     OBJ_DATA* in_obj = NULL;
-    CHAR_DATA* mob = NULL;
     char buf[200];
 
     if ( !supermob )
         supermob = create_mobile( get_mob_index( 3 ) );
-
-    mob = supermob;   /* debugging */
 
     if ( !obj )
         return;

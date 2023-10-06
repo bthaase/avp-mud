@@ -6,10 +6,12 @@ services:
     build: .
     environment:
       - NOGDB=$NOGDB
+      - VALGRIND=$VALGRIND
+      - GDBSERVER=$GDBSERVER
     security_opt:
       - seccomp:unconfined
     ports:
-      - '7000:7000'
+      - '7676:7676'
       - '4444:4444'
     networks:
       - mud_network

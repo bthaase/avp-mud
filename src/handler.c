@@ -216,7 +216,6 @@ void room_explode( OBJ_DATA* obj, CHAR_DATA* xch, ROOM_INDEX_DATA* room )
 
 void room_explode_1( OBJ_DATA* obj, CHAR_DATA* xch, ROOM_INDEX_DATA* room, int blast, int range, int type )
 {
-    AFFECT_DATA af;
     CHAR_DATA* rch;
     CHAR_DATA* rnext;
     OBJ_DATA*  robj;
@@ -444,8 +443,7 @@ bool is_wizvis( CHAR_DATA* ch, CHAR_DATA* victim )
 */
 int get_exp_worth( CHAR_DATA* ch )
 {
-    OBJ_DATA* obj;
-    int exp, texp, tcnt;
+    int exp;
     exp = 10;
 
     if ( !IS_NPC( ch ) )
@@ -472,14 +470,20 @@ int get_max_ap( CHAR_DATA* ch )
         ap = UMAX( weapA->value[5], weapB->value[5] );
         ap += 1; /* Tiny dual-wield penalty */
 
-        if ( weapA->attach )  /* Fire Rate? */
+        if ( weapA->attach )
+        {  /* Fire Rate? */
             if ( weapA->attach->value[0] == 8 )
             {
                 ap -= weapA->attach->value[2];
             }
             else if ( weapB->attach ) /* Fire Rate? */
+            {
                 if ( weapB->attach->value[0] == 8 )
+                {
                     ap -= weapB->attach->value[2];
+                }
+            }
+        }
     }
     else if ( weapA != NULL )
     {
@@ -857,8 +861,6 @@ sh_int get_mod_per( CHAR_DATA* ch )
 */
 int can_carry_n( CHAR_DATA* ch )
 {
-    int penalty = 0;
-
     if ( IS_NPC( ch ) && xIS_SET( ch->act, ACT_PET ) )
         return 0;
 
@@ -1023,8 +1025,6 @@ void affect_modify( CHAR_DATA* ch, AFFECT_DATA* paf, bool fAdd )
     char buf[MAX_STRING_LENGTH];
     OBJ_DATA* wield;
     int mod, i;
-    struct skill_type* skill;
-    ch_ret retcode;
     mod = paf->modifier;
 
     if ( fAdd )
@@ -1422,7 +1422,6 @@ OBJ_DATA* obj_to_char( OBJ_DATA* obj, CHAR_DATA* ch )
     int oweight = get_obj_weight( obj );
     int onum = get_obj_number( obj );
     int wear_loc = obj->wear_loc;
-    EXT_BV extra_flags = obj->extra_flags;
     bool was_over = FALSE;
     skipgroup = FALSE;
     grouped = FALSE;
@@ -1436,11 +1435,13 @@ OBJ_DATA* obj_to_char( OBJ_DATA* obj, CHAR_DATA* ch )
 
     if ( loading_char == ch )
     {
-        int x, y;
+        int x, y, z;
+        OBJ_DATA* tmpobj = NULL;
+        z = ( IS_NPC( ch ) ? 1 : 0 );
 
         for ( x = 0; x < MAX_WEAR; x++ )
             for ( y = 0; y < MAX_LAYERS; y++ )
-                if ( save_equipment[x][y] == obj )
+                if ( ( tmpobj = save_equipment[z][x][y] ) == obj )
                 {
                     skipgroup = TRUE;
                     break;
@@ -5219,3 +5220,72 @@ bool using_nvg( CHAR_DATA* ch )
     return FALSE;
 }
 
+/* NOTE: strlcpy and strlcat are not standard C functions despite being highly
+   recommend alternatives to strcpy/strncpy and strcat/strncat. They do you a
+   solid by not concatenating more than the destination buffer can hold and,
+   as an added perk, they always append a null terminator at the end of the
+   destination -- even if that means truncating the string. This prevents
+   buffer overruns and all kinds of security holes. */
+
+/*
+ * Copy string src to buffer dst of size dsize.  At most dsize-1
+ * chars will be copied.  Always NUL terminates (unless dsize == 0).
+ * Returns strlen(src); if retval >= dsize, truncation occurred.
+ */
+size_t strlcpy(char * __restrict dst, const char * __restrict src, size_t dsize)
+{
+	const char *osrc = src;
+	size_t nleft = dsize;
+
+	/* Copy as many bytes as will fit. */
+	if (nleft != 0) {
+		while (--nleft != 0) {
+			if ((*dst++ = *src++) == '\0')
+				break;
+		}
+	}
+
+	/* Not enough room in dst, add NUL and traverse rest of src. */
+	if (nleft == 0) {
+		if (dsize != 0)
+			*dst = '\0';		/* NUL-terminate dst */
+		while (*src++)
+			;
+	}
+
+	return(src - osrc - 1);	/* count does not include NUL */
+}
+
+/*
+ * Appends src to string dst of size siz (unlike strncat, siz is the
+ * full size of dst, not space left).  At most siz-1 characters
+ * will be copied.  Always NUL terminates (unless siz <= strlen(dst)).
+ * Returns strlen(src) + MIN(siz, strlen(initial dst)).
+ * If retval >= siz, truncation occurred.
+ */
+size_t strlcat(char *dst, const char *src, size_t siz)
+{
+	char *d = dst;
+	const char *s = src;
+	size_t n = siz;
+	size_t dlen;
+
+	/* Find the end of dst and adjust bytes left but don't go past end */
+	while (n-- != 0 && *d != '\0')
+		d++;
+	dlen = d - dst;
+	n = siz - dlen;
+
+	if (n == 0)
+		return(dlen + strlen(s));
+	while (*s != '\0') {
+		if (n != 1) {
+			*d++ = *s;
+			n--;
+		}
+		s++;
+	}
+	*d = '\0';
+
+	return(dlen + (s - src));	/* count does not include NUL */
+}

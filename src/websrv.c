@@ -177,7 +177,7 @@ void handle_web( void )
         current->sin_size = sizeof( struct sockaddr_in );
         current->request[0] = '\0';
 
-        if ( ( current->fd = accept( sockfd, ( struct sockaddr* ) & ( current->their_addr ), &( current->sin_size ) ) ) == -1 )
+        if ( ( current->fd = accept( sockfd, ( struct sockaddr* ) &( current->their_addr ), ( socklen_t* ) &( current->sin_size ) ) ) == -1 )
         {
             perror( "web-accept" );
             // exit(1);
@@ -314,8 +314,7 @@ void shutdown_web ( void )
 */
 void do_webserve( CHAR_DATA* ch, char* argument )
 {
-    char arg1[MAX_STRING_LENGTH];
-    char arg2[MAX_STRING_LENGTH];
+    char arg1[MIL], arg2[MIL];
     argument = one_argument( argument, arg1 );
     argument = one_argument( argument, arg2 );
 
@@ -448,32 +447,28 @@ void handle_web_request( WEB_DESCRIPTOR* wdesc )
 bool check_help_net( WEB_DESCRIPTOR* wdesc, int hmin, int hmax )
 {
     HELP_DATA* help;
-    char buf[MAX_STRING_LENGTH];
-    char buf2[MAX_STRING_LENGTH];
-    char buf3[MAX_STRING_LENGTH];
-    char buf4[MAX_STRING_LENGTH];
-    char buf5[MAX_STRING_LENGTH];
+    char buf[MSL], buf2[SUB_MSL], buf3[MIL], buf4[MSL], buf5[MSL];
 
     for ( help = first_help; help; help = help->next )
     {
         if ( help->level >= hmax || help->level <= hmin )
             continue;
 
-        sprintf( buf4, "/~delete_help/%s.htm ", convert_sp( strlower( help->keyword ) ) );
+        snprintf( buf4, MSL, "/~delete_help/%s.htm ", convert_sp( strlower( help->keyword ) ) );
         one_argument( help->keyword, buf3 );
-        sprintf( buf5, "/~delete_help/%s.htm ", strlower( buf3 ) );
+        snprintf( buf5, MSL, "/~delete_help/%s.htm ", strlower( buf3 ) );
 
         if ( help->level >= 100 || hmax > 100 )
         {
-            sprintf( buf, "/~immhelp/%s.htm ", convert_sp( strlower( help->keyword ) ) );
+            snprintf( buf, MSL, "/~immhelp/%s.htm ", convert_sp( strlower( help->keyword ) ) );
             one_argument( help->keyword, buf3 );
-            sprintf( buf2, "/~immhelp/%s.htm ", strlower( buf3 ) );
+            snprintf( buf2, SUB_MSL, "/~immhelp/%s.htm ", strlower( buf3 ) );
         }
         else
         {
-            sprintf( buf, "/help/%s.htm ", convert_sp( strlower( help->keyword ) ) );
+            snprintf( buf, MSL, "/help/%s.htm ", convert_sp( strlower( help->keyword ) ) );
             one_argument( help->keyword, buf3 );
-            sprintf( buf2, "/help/%s.htm ", strlower( buf3 ) );
+            snprintf( buf2, SUB_MSL, "/help/%s.htm ", strlower( buf3 ) );
         }
 
         if ( strstr( wdesc->request, buf ) || strstr( wdesc->request, buf2 ) )
@@ -499,8 +494,8 @@ bool check_help_net( WEB_DESCRIPTOR* wdesc, int hmin, int hmax )
 
             if ( hmax > 100 )
             {
-                sprintf( buf2, "/~delete_help/%s.htm ", convert_sp( strlower( help->keyword ) ) );
-                sprintf( buf, "<br><a href=""%s"">[Delete this helpfile]</a><br>\n", buf2 );
+                snprintf( buf2, SUB_MSL, "/~delete_help/%s.htm ", convert_sp( strlower( help->keyword ) ) );
+                snprintf( buf, MSL, "<br><a href=""%s"">[Delete this helpfile]</a><br>\n", buf2 );
                 send_buf( wdesc->fd, buf );
             }
 
@@ -510,23 +505,6 @@ bool check_help_net( WEB_DESCRIPTOR* wdesc, int hmin, int hmax )
         }
         else if ( strstr( wdesc->request, buf4 ) || strstr( wdesc->request, buf5 ) )
         {
-            // handle_web_help(wdesc);
-            /*
-                send_buf(wdesc->fd, "<html>\n");
-                send_buf(wdesc->fd, "<head>\n");
-                send_buf(wdesc->fd, "<title>Legends of the Jedi - Online Help</title>\n");
-                send_buf(wdesc->fd, "</head>\n");
-                send_buf( wdesc->fd, "<BODY TEXT=""#C0C0C0"" BGCOLOR=""#000000"" LINK=""#00FFFF""\n");
-                send_buf( wdesc->fd, "VLINK=""#FFFFFF"" ALINK=""#008080"">\n");
-                send_buf( wdesc->fd, "<FONT FACE=""courier"">\n");
-                if(help->level >= 100) send_buf(wdesc->fd, "AVP Immortal-Only Web help: ");
-                if(help->level <  100) send_buf(wdesc->fd, "AVP Web help: ");
-                send_buf(wdesc->fd, help->keyword );
-                send_buf(wdesc->fd, "<br><br>\n");
-                send_buf(wdesc->fd, conv_tag(conv_hcolor("&RHelpfile has been successfully deleted.")) );
-                send_buf(wdesc->fd, "</font>\n");
-                send_buf(wdesc->fd, "</body>\n");
-            */
             UNLINK( help, first_help, last_help, next, prev );
             STRFREE( help->text );
             STRFREE( help->keyword );
@@ -547,19 +525,18 @@ bool check_help_net( WEB_DESCRIPTOR* wdesc, int hmin, int hmax )
 void handle_web_help_request( WEB_DESCRIPTOR* wdesc, int hmin, int hmax )
 {
     HELP_DATA* help;
-    char buf[MAX_STRING_LENGTH];
-    char buf2[MAX_STRING_LENGTH];
+    char buf[MSL], buf2[SUB_MSL];
     char tmp = ' ', chk = ' ';
     int cnt = 0, inqt = 0;
     send_buf( wdesc->fd, "<html>\n" );
     send_buf( wdesc->fd, "<head>\n" );
     send_buf( wdesc->fd, "<title>Legends of the Jedi - Help Listing</title>\n" );
     send_buf( wdesc->fd, "</head>\n" );
-    send_buf( wdesc->fd, "<BODY TEXT=""#C0C0C0"" BGCOLOR=""#000000"" LINK=""#00FFFF""\n" );
-    send_buf( wdesc->fd, "VLINK=""#FFFFFF"" ALINK=""#008080"">\n" );
+    send_buf( wdesc->fd, "<BODY TEXT=\"#C0C0C0\" BGCOLOR=\"#000000\" LINK=\"#00FFFF\"\n" );
+    send_buf( wdesc->fd, "VLINK=\"#FFFFFF\" ALINK=\"#008080\">\n" );
     send_buf( wdesc->fd, "<h1><center>Summary of AVP Help Topics</center></h1>\n" );
-    send_buf( wdesc->fd, "<b><center><font size=""2"">\n" );
-    send_buf( wdesc->fd, "<br><hr color=""#FFFFFF""><br>\n" );
+    send_buf( wdesc->fd, "<b><center><font size=\"2\">\n" );
+    send_buf( wdesc->fd, "<br><hr color=\"#FFFFFF\"><br>\n" );
 
     for ( help = first_help; help; help = help->next )
     {
@@ -582,7 +559,7 @@ void handle_web_help_request( WEB_DESCRIPTOR* wdesc, int hmin, int hmax )
         else
         {
             if ( inqt == 1 )
-                send_buf( wdesc->fd, "<br><hr color=""#FFFFFF""><br>\n" );
+                send_buf( wdesc->fd, "<br><hr color=\"#FFFFFF\"><br>\n" );
 
             inqt = 0;
         }
@@ -592,30 +569,30 @@ void handle_web_help_request( WEB_DESCRIPTOR* wdesc, int hmin, int hmax )
             tmp = chk;
 
             if ( inqt == 1 )
-                sprintf( buf, "<br></font><font size=""4"">'%c'</font><font size=""2""><br>\n", tmp );
+                sprintf( buf, "<br></font><font size=\"4\">'%c'</font><font size=\"2\"><br>\n", tmp );
 
             if ( inqt == 0 )
-                sprintf( buf, "<br></font><font size=""4"">%c</font><font size=""2""><br>\n", tmp );
+                sprintf( buf, "<br></font><font size=\"4\">%c</font><font size=\"2\"><br>\n", tmp );
 
             send_buf( wdesc->fd, buf );
         }
 
         if ( help->level >= 100 )
         {
-            sprintf( buf2, "/~immhelp/%s.htm ", convert_sp( strlower( help->keyword ) ) );
-            sprintf( buf, "<a href=""%s"">%s *</a><br>\n", buf2, help->keyword );
+            snprintf( buf2, SUB_MSL, "/~immhelp/%s.htm ", convert_sp( strlower( help->keyword ) ) );
+            snprintf( buf, MSL, "<a href=\"%s\">%s *</a><br>\n", buf2, help->keyword );
         }
         else
         {
             if ( hmax > 100 )
             {
-                sprintf( buf2, "/~immhelp/%s.htm ", convert_sp( strlower( help->keyword ) ) );
-                sprintf( buf, "<a href=""%s"">%s</a><br>\n", buf2, help->keyword );
+                snprintf( buf2, SUB_MSL, "/~immhelp/%s.htm ", convert_sp( strlower( help->keyword ) ) );
+                snprintf( buf, MSL, "<a href=\"%s\">%s</a><br>\n", buf2, help->keyword );
             }
             else
             {
-                sprintf( buf2, "/help/%s.htm ", convert_sp( strlower( help->keyword ) ) );
-                sprintf( buf, "<a href=""%s"">%s</a><br>\n", buf2, help->keyword );
+                snprintf( buf2, SUB_MSL, "/help/%s.htm ", convert_sp( strlower( help->keyword ) ) );
+                snprintf( buf, MSL, "<a href=\"%s\">%s</a><br>\n", buf2, help->keyword );
             }
         }
 
@@ -623,8 +600,8 @@ void handle_web_help_request( WEB_DESCRIPTOR* wdesc, int hmin, int hmax )
         cnt++;
     }
 
-    send_buf( wdesc->fd, "<br><br><hr color=""#FFFFFF""><br>\n" );
-    send_buf( wdesc->fd, "<font face=""Times New Roman"">\n" );
+    send_buf( wdesc->fd, "<br><br><hr color=\"#FFFFFF\"><br>\n" );
+    send_buf( wdesc->fd, "<font face=\"Times New Roman\">\n" );
 
     if ( cnt > 0 )
     {
@@ -637,7 +614,7 @@ void handle_web_help_request( WEB_DESCRIPTOR* wdesc, int hmin, int hmax )
     else
         send_buf( wdesc->fd, "-There are no help files on AVP right now-<br>\n" );
 
-    sprintf( buf, "<br>This file last updated at %s Eastern Time.\n", ( ( char* ) ctime( &current_time ) ) );
+    snprintf( buf, MSL, "<br>This file last updated at %s Eastern Time.\n", ( ( char* ) ctime( &current_time ) ) );
     send_buf( wdesc->fd, buf );
     send_buf( wdesc->fd, "</center></font>\n" );
     send_buf( wdesc->fd, "</body>\n" );
@@ -653,8 +630,7 @@ void handle_web_help_request( WEB_DESCRIPTOR* wdesc, int hmin, int hmax )
 void handle_web_who_request( WEB_DESCRIPTOR* wdesc )
 {
     DESCRIPTOR_DATA* d;
-    char buf[2 * MAX_INPUT_LENGTH];
-    char buf2[2 * MAX_INPUT_LENGTH];
+    char buf[MIL], buf2[MIL];
     int ppl = 0;
     buf[0] = '\0';
     buf2[0] = '\0';
@@ -662,10 +638,10 @@ void handle_web_who_request( WEB_DESCRIPTOR* wdesc )
     send_buf( wdesc->fd, "<head>\n" );
     send_buf( wdesc->fd, "<title>Legends of the Jedi - Who list</title>\n" );
     send_buf( wdesc->fd, "</head>\n" );
-    send_buf( wdesc->fd, "<BODY TEXT=""#C0C0C0"" BGCOLOR=""#000000"" LINK=""#00FFFF""\n" );
-    send_buf( wdesc->fd, "VLINK=""#FFFFFF"" ALINK=""#008080"">\n" );
+    send_buf( wdesc->fd, "<BODY TEXT=\"#C0C0C0\" BGCOLOR=\"#000000\" LINK=\"#00FFFF\"\n" );
+    send_buf( wdesc->fd, "VLINK=\"#FFFFFF\" ALINK=\"#008080\">\n" );
     send_buf( wdesc->fd, "<h1><center>Who's on AVP?</center></h1>\n" );
-    send_buf( wdesc->fd, "<b><center><font size=""2"">\n" );
+    send_buf( wdesc->fd, "<b><center><font size=\"2\">\n" );
 
     for ( d = first_descriptor; d; d = d->next )
         if ( !IS_IMMORTAL( ( d->original != NULL ) ? d->original : d->character ) )
@@ -675,7 +651,7 @@ void handle_web_who_request( WEB_DESCRIPTOR* wdesc )
     {
         sprintf( buf, "-There are [ %d ] people currently on AVP-<br>\n", ppl );
         send_buf( wdesc->fd, buf );
-        send_buf( wdesc->fd, "<br><hr color=""#FFFFFF""><br>\n" );
+        send_buf( wdesc->fd, "<br><hr color=\"#FFFFFF\"><br>\n" );
     }
 
     for ( d = first_descriptor; d; d = d->next )
@@ -694,7 +670,7 @@ void handle_web_who_request( WEB_DESCRIPTOR* wdesc )
         }
     }
 
-    send_buf( wdesc->fd, "<br><br><hr color=""#FFFFFF""><br>\n" );
+    send_buf( wdesc->fd, "<br><br><hr color=\"#FFFFFF\"><br>\n" );
 
     for ( d = first_descriptor; d; d = d->next )
     {
@@ -725,11 +701,11 @@ void handle_web_who_request( WEB_DESCRIPTOR* wdesc )
                 send_buf( wdesc->fd, buf );
             }
 
-            send_buf( wdesc->fd, "<br><br><hr color=""#FFFFFF""><br>\n" );
+            send_buf( wdesc->fd, "<br><br><hr color=\"#FFFFFF\"><br>\n" );
         }
     }
 
-    send_buf( wdesc->fd, "<font face=""Times New Roman"">\n" );
+    send_buf( wdesc->fd, "<font face=\"Times New Roman\">\n" );
 
     if ( ppl > 0 )
     {

@@ -28,7 +28,6 @@
 
 void              add_reinforcements  args( ( CHAR_DATA* ch ) );
 ch_ret            one_hit             args( ( CHAR_DATA* ch, CHAR_DATA* victim, int dt ) );
-ROOM_INDEX_DATA* generate_exit       args( ( ROOM_INDEX_DATA* in_room, EXIT_DATA** pexit ) );
 CHAR_DATA*        get_char_room_mp    args( ( CHAR_DATA* ch, char* argument ) );
 
 extern int        top_affect;

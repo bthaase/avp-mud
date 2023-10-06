@@ -31,6 +31,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include "mud.h"
+#include <systemd/sd-daemon.h>
 
 /*
     Socket and TCP/IP stuff.
@@ -66,8 +67,6 @@
 #endif
 
 #define MAX_NEST        100
-static  OBJ_DATA*       rgObjNest       [MAX_NEST];
-
 
 const   char    echo_off_str    [] = { IAC, WILL, TELOPT_ECHO, '\0' };
 const   char    echo_on_str     [] = { IAC, WONT, TELOPT_ECHO, '\0' };
@@ -110,7 +109,7 @@ fd_set           in_set;         /* Set of desc's for reading    */
 fd_set           out_set;        /* Set of desc's for writing    */
 fd_set           exc_set;        /* Set of desc's with errors    */
 int              maxdesc;
-bool             emergancy_copy; /* Emergancy Copyover Flag      */
+bool             emergency_copy; /* emergency Copyover Flag      */
 bool             MOBtrigger;
 struct xname_data* xnames;
 struct allowmp_data* mplist;
@@ -127,8 +126,8 @@ void    new_descriptor          args( ( int new_desc ) );
     Other local functions (OS-independent).
 */
 bool    check_parse_name     args( ( char* name ) );
-bool    check_reconnect      args( ( DESCRIPTOR_DATA* d, char* name, bool fConn ) );
-bool    check_playing        args( ( DESCRIPTOR_DATA* d, char* name, bool kick ) );
+short   check_reconnect      args( ( DESCRIPTOR_DATA* d, char* name, bool fConn ) );
+short   check_playing        args( ( DESCRIPTOR_DATA* d, char* name, bool kick ) );
 bool    check_multi          args( ( DESCRIPTOR_DATA* d, char* name ) );
 int     main                 args( ( int argc, char** argv ) );
 void    nanny                args( ( DESCRIPTOR_DATA* d, char* argument ) );
@@ -144,6 +143,8 @@ void    set_pager_input      args( ( DESCRIPTOR_DATA* d, char* argument ) );
 void    mail_count              args( ( CHAR_DATA* ch ) );
 bool    service_shut_down;  /* Shutdown by operator closing down service */
 bool    fCopyOver;
+bool    systemd_watchdog_enabled;
+uint64_t systemd_watchdog_interval;
 
 #ifdef WIN32
     int mainthread( int argc, char** argv )
@@ -158,8 +159,7 @@ bool    fCopyOver;
 #if defined(MALLOC_DEBUG)
     malloc_debug( 2 );
 #endif
-    MEMORY_INIT();
-    emergancy_copy              = FALSE;
+    emergency_copy              = FALSE;
     num_descriptors             = 0;
     first_descriptor            = NULL;
     last_descriptor             = NULL;
@@ -203,6 +203,8 @@ bool    fCopyOver;
     get_reboot_string();
     /* Pfile autocleanup initializer - Samson 5-8-99 */
     init_pfile_scan_time();
+    systemd_watchdog_enabled = sd_watchdog_enabled( 0, &systemd_watchdog_interval );
+
 
     /*
         Reserve two channels for our use.
@@ -280,13 +282,6 @@ bool    fCopyOver;
     log_string( "Booting Database" );
     boot_db( fCopyOver );
     log_string( "Booting Monitor.." );
-
-    /* Initilize the Monitor */
-    if ( pmStart( 1 ) != 0 )
-    {
-        bug( ":: WARNING :: Monitor failed to start. Ignoring." );
-    }
-
     init_vote( );
     // log_string("Booting Database");
     // boot_db( fCopyOver );
@@ -317,12 +312,6 @@ bool    fCopyOver;
     close_match( );
     close( control  );
     close( control2 );
-
-    /* Shutdown the slaved monitor */
-    if ( pmStop() != 0 )
-    {
-        bug( ":: WARNING :: Monitor failed to halt. Ignoring." );
-    }
 
     /* Shutdown the web server */
     shutdown_web();
@@ -360,8 +349,6 @@ int init_socket( int port )
 {
     char hostname[64];
     struct sockaddr_in   sa;
-    struct hostent*      hp;
-    struct servent*      sp;
     int x = 1;
     int fd;
     gethostname( hostname, sizeof( hostname ) );
@@ -393,8 +380,8 @@ int init_socket( int port )
         }
     }
 #endif
-    hp = gethostbyname( hostname );
-    sp = getservbyname( "service", "mud" );
+    gethostbyname( hostname );
+    getservbyname( "service", "mud" );
     memset( &sa, '\0', sizeof( sa ) );
     sa.sin_family   = AF_INET; /* hp->h_addrtype; */
     sa.sin_port     = htons( port );
@@ -418,7 +405,6 @@ int init_socket( int port )
 
 static void SegVio()
 {
-    CHAR_DATA* ch;
     char buf[MAX_STRING_LENGTH];
     char bufB[MAX_STRING_LENGTH];
     char* strtime;
@@ -437,10 +423,10 @@ static void SegVio()
 
     // log_string( lastplayercmd );
 
-    // Are we allowing an emergancy copyover?
-    if ( emergancy_copy == TRUE )
+    // Are we allowing an emergency copyover?
+    if ( emergency_copy == TRUE )
     {
-        emergancy_copyover( );
+        emergency_copyover( );
         log_string( "Emergency copyover not ready. Shutting down." );
     }
     else
@@ -452,25 +438,23 @@ static void SegVio()
     // return;
 }
 
-void emergancy_copyover( void )
+void emergency_copyover( void )
 {
     FILE* fp;
     DESCRIPTOR_DATA* d;
     char buf[100], buf2[100], buf3[100], buf4[100], buf5[100];
-    log_string( "--- Engaging Emergancy Copyover! ---" );
+    log_string( "--- Engaging Emergency Copyover! ---" );
     /* Shutdown the web server */
     shutdown_web();
-    /* Shutdown the slave */
-    pmStop();
     /* Close the match log */
-    match_log( "CONTROL;Match Interrupted by Emergancy Copyover." );
+    match_log( "CONTROL;Match Interrupted by emergency Copyover." );
     close_match( );
     fp = fopen ( COPYOVER_FILE, "w" );
 
     if ( !fp )
     {
         log_string ( "Could not write to copyover file!" );
-        perror ( "emergancy_copyover:fopen" );
+        perror ( "emergency_copyover:fopen" );
         return;
     }
 
@@ -508,7 +492,7 @@ void emergancy_copyover( void )
     */
     execl ( EXE_FILE,  "avp", buf, "copyover", buf2, buf3, buf4, buf5, ( char* ) NULL );
     execl ( EXE2_FILE, "avp", buf, "copyover", buf2, buf3, buf4, buf5, ( char* ) NULL );
-    perror ( "emergancy_copyover: failed to copyover in 'execl'" );
+    perror ( "emergency_copyover: failed to copyover in 'execl'" );
 
     if ( ( fpReserve = fopen( NULL_FILE, "r" ) ) == NULL )
     {
@@ -538,7 +522,7 @@ void emergancy_copyover( void )
      return;
     }
 
-    log_string( "ALERT: Segmentation Violation! EMERGANCY COPYOVER Attempted!" );
+    log_string( "ALERT: Segmentation Violation! emergency COPYOVER Attempted!" );
 
     for (d = first_descriptor; d ; d = d->next)
     {
@@ -684,12 +668,12 @@ void accept_new( int ctrl )
     }
 }
 
-void emergancy_arm( )
+void emergency_arm( )
 {
-    if ( !emergancy_copy )
+    if ( !emergency_copy )
     {
-        log_string( "Notice: Emergancy hotboot system is ready." );
-        emergancy_copy = TRUE;
+        log_string( "Notice: emergency hotboot system is ready." );
+        emergency_copy = TRUE;
     }
 
     return;
@@ -703,8 +687,21 @@ void game_loop( )
     /*  time_t      last_check = 0;  */
     signal( SIGPIPE, SIG_IGN );
     signal( SIGALRM, caught_alarm );
-    // Emergancy Copyover System - PREVENTS COREDUMPS.
+    // emergency Copyover System - PREVENTS COREDUMPS.
     signal( SIGSEGV, SegVio );
+    struct timeval last_systemd_watchdog;
+
+    if ( systemd_watchdog_enabled )
+    {
+        log_string( "Systemd watchdog is enabled." );
+        gettimeofday( &last_systemd_watchdog, NULL );
+        sd_notify( 0, "WATCHDOG=1" );
+    }
+    else
+    {
+        log_string( "Systemd watchdog is not enabled." );
+    }
+
     gettimeofday( &last_time, NULL );
     current_time = ( time_t ) last_time.tv_sec;
 
@@ -714,8 +711,6 @@ void game_loop( )
         accept_new( control  );
         accept_new( control2 );
         handle_web();
-        // Manage Mr. Slave
-        pmReset();
         auth_check( &in_set, &out_set, &exc_set );
 
         /*
@@ -745,24 +740,9 @@ void game_loop( )
                 close_socket( d, TRUE );
                 continue;
             }
-            else if ( ( !d->character && d->idle > 360 )         /* 2 mins  */
-                      || ( d->connected != CON_PLAYING && d->idle > 1200 ) /* 5 mins  */
-                      || ( d->idle > IDLE_TIMEOUT ) )
-            {
-                write_to_descriptor( d->descriptor, "Idle timeout... disconnecting.\n\r", 0 );
-                d->outtop   = 0;
-                close_socket( d, TRUE );
-                continue;
-            }
             else
             {
                 d->fcommand = FALSE;
-
-                /* Triggers exactly one minute before timeout. */
-                if ( d->idle == IDLE_TIMEOUT - ( 60 * 4 ) )
-                {
-                    write_to_descriptor( d->descriptor, "Warning! This connection is idle, and will close in 60 seconds.\n\r", 0 );
-                }
 
                 if ( FD_ISSET( d->descriptor, &in_set ) )
                 {
@@ -901,6 +881,15 @@ void game_loop( )
             struct timeval now_time;
             long secDelta;
             long usecDelta;
+
+            if ( systemd_watchdog_enabled &&
+                    ( now_time.tv_usec - last_systemd_watchdog.tv_usec +
+                      ( now_time.tv_sec - last_systemd_watchdog.tv_sec ) * 1000000 > ( int64_t )systemd_watchdog_interval / 2 ) )
+            {
+                gettimeofday( &last_systemd_watchdog, NULL );
+                sd_notify( 0, "WATCHDOG=1" );
+            }
+
             gettimeofday( &now_time, NULL );
             usecDelta   = ( ( int ) last_time.tv_usec ) - ( ( int ) now_time.tv_usec )
                           + 1000000 / PULSE_PER_SECOND;
@@ -996,7 +985,7 @@ void new_descriptor( int new_desc )
 
     set_alarm( 20 );
 
-    if ( ( desc = accept( new_desc, ( struct sockaddr* ) &sock, &size ) ) < 0 )
+    if ( ( desc = accept( new_desc, ( struct sockaddr* ) &sock, ( socklen_t* )&size ) ) < 0 )
     {
         perror( "New_descriptor: accept" );
         sprintf( bugbuf, "[*****] BUG: New_descriptor: accept" );
@@ -1795,15 +1784,15 @@ void nanny( DESCRIPTOR_DATA* d, char* argument )
     char buf[MAX_STRING_LENGTH];
     char arg[MAX_STRING_LENGTH];
     char arg2[MAX_STRING_LENGTH];
-    char tmp[MAX_STRING_LENGTH];
     CHAR_DATA* ch;
     char* pwdnew;
     char* p;
-    int iRace, iClass;
+    int iRace;
     BAN_DATA* pban;
     int c = 0, cost;
-    bool fOld, chk;
-    int sn, cnt = 0, fpnt = 0;
+    bool fOld;
+    short chk;
+    int sn;
 
     while ( isspace( *argument ) )
         argument++;
@@ -2031,12 +2020,12 @@ void nanny( DESCRIPTOR_DATA* d, char* argument )
             if ( chk == TRUE )
                 return;
 
-            sprintf( buf, ch->name );
+            strncpy( buf, ch->name, MSL );
             d->character->desc = NULL;
             free_char( d->character );
             fOld = load_char_obj( d, buf, FALSE );
             ch = d->character;
-            sprintf( log_buf, "%s@%s(%s) has connected.", ch->name, d->host, d->user );
+            snprintf( log_buf, MSL, "%s@%s(%s) has connected.", ch->name, d->host, d->user );
 
             if ( ch->top_level < LEVEL_DEMI )
             {
@@ -2199,7 +2188,7 @@ void nanny( DESCRIPTOR_DATA* d, char* argument )
                 HELP_DATA* pHelp = NULL;
                 pHelp = get_help( NULL, "disclaimer" );
 
-                if ( FALSE &&  pHelp != NULL && pHelp->text != NULL && pHelp->text[0] != '\0' )
+                if ( pHelp != NULL && pHelp->text != NULL && pHelp->text[0] != '\0' )
                 {
                     send_to_buffer( "\n\r\n\r&WAliens vs. Predator: Disclaimer &z[&RPlease read carefully&z]\n\r&z", d );
 
@@ -2312,7 +2301,7 @@ void nanny( DESCRIPTOR_DATA* d, char* argument )
                          strcat( buf, " " );
                         }
                     */
-                    sprintf( buf, "%s &z[ &B%d - %-10s&z ] &w:: &W%s\n", buf, iRace + 1, race_table[iRace].real_name, race_table[iRace].desc );
+                    snprintf( buf + strlen(buf), MSL - strlen(buf), "&z[ &B%d - %-10s&z ] &w:: &W%s\n\r", iRace + 1, race_table[iRace].real_name, race_table[iRace].desc );
                 }
             }
 
@@ -3074,7 +3063,7 @@ void nanny( DESCRIPTOR_DATA* d, char* argument )
             if ( ch->top_level == 0 )
             {
                 /* OBJ_DATA *obj; */
-                int iLang, bLoop = 0;
+                int iLang;
                 set_ident( ch );
                 xCLEAR_BITS( ch->affected_by );
 
@@ -3348,7 +3337,7 @@ bool check_parse_name( char* name )
 /*
     Look for link-dead player to reconnect.
 */
-bool check_reconnect( DESCRIPTOR_DATA* d, char* name, bool fConn )
+short check_reconnect( DESCRIPTOR_DATA* d, char* name, bool fConn )
 {
     CHAR_DATA* ch;
 
@@ -3444,7 +3433,7 @@ bool check_multi( DESCRIPTOR_DATA* d, char* name )
     return FALSE;
 }
 
-bool check_playing( DESCRIPTOR_DATA* d, char* name, bool kick )
+short check_playing( DESCRIPTOR_DATA* d, char* name, bool kick )
 {
     CHAR_DATA* ch;
     DESCRIPTOR_DATA* dold;
@@ -3819,7 +3808,7 @@ char* act_string( const char* format, CHAR_DATA* to, CHAR_DATA* ch,
     OBJ_DATA* obj2 = ( OBJ_DATA* ) arg2;
 
     if ( !to )
-        return;
+        return "(error)";
 
     while ( *str != '\0' )
     {
@@ -4181,7 +4170,6 @@ int getcolor( char clr )
 void display_prompt( DESCRIPTOR_DATA* d )
 {
     CHAR_DATA* ch = d->character;
-    CHAR_DATA* victim;
     CHAR_DATA* och = ( d->original ? d->original : d->character );
     bool ansi = ( !IS_NPC( och ) && xIS_SET( och->act, PLR_ANSI ) );
     const char* prompt;
@@ -4897,13 +4885,13 @@ void do_copyover ( CHAR_DATA* ch, char* argument )
 {
     char arg[MAX_STRING_LENGTH];
     FILE* fp;
-    DESCRIPTOR_DATA* d, *d_next;
+    DESCRIPTOR_DATA* d;
     bool nosave = FALSE;
     bool bypass = FALSE;
     char buf [100], buf2[100], buf3[100], buf4[100], buf5[100];
     argument = one_argument( argument, arg );
 
-    if ( !arg || arg[0] == '\0' )
+    if ( NULLSTR( arg ) )
     {
         send_to_char( "\n\rUSAGE: copyover NOW     - Full Copyover", ch );
         send_to_char( "\n\r       copyover NOSAVE  - Only Stores descriptors", ch );
@@ -4938,8 +4926,6 @@ void do_copyover ( CHAR_DATA* ch, char* argument )
 
     /* Shutdown the web server */
     shutdown_web();
-    /* Shutdown the slave */
-    pmStop();
     /* Close the match log */
     match_log( "CONTROL;Match Interrupted by Manual Copyover." );
     close_match( );
@@ -4985,7 +4971,6 @@ void do_copyover ( CHAR_DATA* ch, char* argument )
     for ( d = first_descriptor; d ; d = d->next )
     {
         CHAR_DATA* och = CH ( d );
-        d_next = d->next; /* We delete from the list , so need to save this */
 
         if ( !och || !d->character || d->connected > CON_PLAYING ) /* drop those logging on */
         {
@@ -5149,16 +5134,16 @@ bool close_match( void )
 
 bool open_match( void )
 {
-    char tmp[MAX_STRING_LENGTH];
-    char filename[MAX_STRING_LENGTH];
+    char tmp[MIL];
+    char filename[MSL];
     time_t t = time( 0 );
 
     if ( fpMatch != NULL )
         return FALSE;
 
     // Create Filename MMDDYY-HHMMSS
-    strftime( tmp, MAX_STRING_LENGTH, "%m%d%Y%H%M%S", localtime( &t ) );
-    sprintf( filename, "../report/%s.log", tmp );
+    strftime( tmp, MIL, "%m%d%Y%H%M%S", localtime( &t ) );
+    snprintf( filename, MSL, "../report/%s.log", tmp );
 
     if ( ( fpMatch = fopen( filename, "w" ) ) == NULL )
         return FALSE;
@@ -5169,7 +5154,7 @@ bool open_match( void )
 
 bool match_log( const char* str, ... )
 {
-    char mlog[MAX_STRING_LENGTH];
+    char mlog[MSL];
     char* strtime;
     char* buf;
 
@@ -5185,8 +5170,8 @@ bool match_log( const char* str, ... )
         vsprintf( buf + strlen( buf ), str, param );
         va_end( param );
     }
-    sprintf( mlog, "%s;%s\n", strtime, buf );
-    fprintf( fpMatch, mlog );
+    snprintf( mlog, MSL, "%s;%s\n", strtime, buf );
+    fprintf( fpMatch, "%s", mlog );
     free( buf );
     return TRUE;
 }
