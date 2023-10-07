@@ -5505,6 +5505,12 @@ void do_cset( CHAR_DATA* ch, char* argument )
         return;
     }
 
+    if ( !str_cmp( arg, "mqtt_enabled" ) ) {
+        sysdata.mqtt_enabled = !sysdata.mqtt_enabled;
+        ch_printf( ch, "MQTT enabled changed to %s.\n\r", sysdata.mqtt_enabled ? "true" : "false" );
+        return;
+    }
+
     if ( !str_cmp( arg, "pfiles" ) )
     {
         sysdata.CLEANPFILES = !sysdata.CLEANPFILES;

@@ -1851,6 +1851,7 @@ struct  system_data
     char* exe_file;
     char* mqtt_host;
     int   mqtt_port;
+    bool  mqtt_enabled;
 };
 
 
@@ -3836,12 +3837,12 @@ bool    use_attachment  args( ( CHAR_DATA* ch, OBJ_DATA* tmp ) );
 void    send_attach_note    args( ( CHAR_DATA* ch, OBJ_DATA* obj ) );
 
 /* hashstr.c */
-char*   str_alloc   args( ( char* str ) );
-char*   quick_link  args( ( char* str ) );
-int str_free    args( ( char* str ) );
+char*   str_alloc   args( ( const char* str ) );
+char*   quick_link  args( ( const char* str ) );
+int     str_free    args( ( const char* str ) );
 void    show_hash   args( ( int count ) );
 char*   hash_stats  args( ( void ) );
-char*   check_hash  args( ( char* str ) );
+char*   check_hash  args( ( const char* str ) );
 void    hash_dump   args( ( int hash ) );
 void    show_high_hash  args( ( int top ) );
 

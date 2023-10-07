@@ -5784,6 +5784,7 @@ void save_sysdata( SYSTEM_DATA sys )
         fprintf( fp, "Exe_file       %s~\n", sys.exe_file );
         fprintf( fp, "MQTT_Host      %s~\n", sys.mqtt_host );
         fprintf( fp, "MQTT_Port      %d\n", sys.mqtt_port );
+        fprintf( fp, "MQTT_Enabled   %d\n", sys.mqtt_enabled );
         fprintf( fp, "End\n\n"                      );
         fprintf( fp, "#END\n"                       );
     }
@@ -5867,6 +5868,7 @@ void fread_sysdata( SYSTEM_DATA* sys, FILE* fp )
                 KEY( "Muse",       sys->muse_level,    fread_number( fp ) );
                 KEY( "MQTT_Host",   sys->mqtt_host, fread_string(fp));
                 KEY( "MQTT_Port",   sys->mqtt_port, fread_number(fp));
+                KEY( "MQTT_Enabled",   sys->mqtt_enabled, fread_number(fp));
                 break;
 
             case 'N':

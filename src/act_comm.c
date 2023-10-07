@@ -24,6 +24,7 @@
 #include <string.h>
 #include <time.h>
 #include "mud.h"
+#include "mqtt.h"
 
 #define BFS_ERROR      -1
 #define BFS_ALREADY_THERE  -2
@@ -53,6 +54,24 @@ void    yell_radius_2   args( ( CHAR_DATA* ch, ROOM_INDEX_DATA* room, int range 
 int const lang_array[] = { LANG_MARINE, LANG_ALIEN, LANG_PREDATOR, LANG_UNKNOWN };
 
 char* const lang_names[] = { "marine", "alien", "predator", "" };
+
+/*typedef enum
+{
+    CHANNEL_CHAT, CHANNEL_QUEST, CHANNEL_IMMTALK,
+    CHANNEL_MUSIC, CHANNEL_ASK, CHANNEL_SHOUT, CHANNEL_YELL,
+    CHANNEL_MONITOR, CHANNEL_LOG, CHANNEL_104,
+    CHANNEL_BUILD, CHANNEL_105, CHANNEL_AVTALK, CHANNEL_PRAY,
+    CHANNEL_COUNCIL, CHANNEL_C17, CHANNEL_COMM, CHANNEL_TELLS,
+    CHANNEL_C20, CHANNEL_NEWBIE, CHANNEL_WARTALK, CHANNEL_OOC,
+    CANNNEL_C24, CHANNEL_C25, CHANNEL_C26, CHANNEL_WHISPER,
+    CHANNEL_INFO, MAX_CHANNEL
+} channel_type;*/
+
+const char* chan_names[] = {
+    "chat", "quest", "immtalk", "music", "ask", "shout", "yell", "monitor", "log", "104",
+    "build", "105", "avtalk", "pray", "council", "c17", "comm", "tells", "c20", "newbie",
+    "wartalk", "ooc", "c24", "c25", "c26", "whisper", "info", "max"
+};
 
 void sound_to_room( ROOM_INDEX_DATA* room, char* argument )
 {
@@ -610,6 +629,10 @@ void talk_channel( CHAR_DATA* ch, char* argument, int channel, const char* verb 
         }
     }
 
+    snprintf(buf, MAX_STRING_LENGTH, "%s,%s", ch->name, argument);
+    snprintf(buf2, MAX_STRING_LENGTH, "out/channel/%s", chan_names[channel]);
+    mqtt_publish(buf2, buf);
+
     /* too much system degradation with 300+ players not to charge 'em a bit */
     /* 600 players now, but waitstate on clantalk is bad for pkillers */
     if ( ( !IS_IMMORTAL( ch ) ) && ( channel != CHANNEL_WARTALK ) )
@@ -653,6 +676,10 @@ void to_channel( const char* argument, int channel, const char* verb, sh_int lev
             send_to_char( buf, vch );
         }
     }
+    char buf2[1024];
+    snprintf(buf2, 1024, "out/channel/%s", verb);
+
+    mqtt_publish( buf2, argument );
 
     return;
 }
@@ -1069,6 +1096,8 @@ void do_immtalk( CHAR_DATA* ch, char* argument )
         else
             send_to_char( buf2, d->character );
     }
+    snprintf(buf, MAX_STRING_LENGTH, "%s,%s", ch->name, argument);
+    mqtt_publish("out/channel/immtalk", buf);
 
     return;
 }
@@ -2992,6 +3021,7 @@ void send_monitor( CHAR_DATA* ignore, char* msg )
         }
     }
 
+    mqtt_publish("out/channel/arena_monitor", msg);
     return;
 }
 

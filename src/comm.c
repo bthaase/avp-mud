@@ -147,6 +147,14 @@ bool    fCopyOver;
 bool    systemd_watchdog_enabled;
 uint64_t systemd_watchdog_interval;
 
+const char* get_process_name(const char* path) {
+    const char* name = strrchr(path, '/');
+    if (name) {
+        return name + 1;
+    }
+    return path;
+}
+
 #ifdef WIN32
     int mainthread( int argc, char** argv )
 #else
@@ -283,7 +291,7 @@ uint64_t systemd_watchdog_interval;
     log_string( "Booting Database" );
     boot_db( fCopyOver );
     if(sysdata.exe_file == NULL)  {
-        sysdata.exe_file = STRALLOC(argv[0]);
+        sysdata.exe_file = STRALLOC(get_process_name(argv[0]));
     }
     log_string( "Booting Monitor.." );
     init_vote( );

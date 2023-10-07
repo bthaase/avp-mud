@@ -52,7 +52,7 @@ char* MudBackTrace( void )
 
 void capturebacktrace( const char* type )
 {
-    char buf[MAX_INPUT_LENGTH], buf2[SUB_MSL], buf3[MSL];
+    char buf[MAX_INPUT_LENGTH], buf2[SUB_MSL];
 
     // // Mud backtrace.
     if ( TRUE )

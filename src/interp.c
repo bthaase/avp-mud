@@ -25,6 +25,7 @@
 #include <string.h>
 #include <time.h>
 #include "mud.h"
+#include "mqtt.h"
 
 #ifdef timerclear
     #undef timerclear
@@ -251,6 +252,10 @@ void interpret( CHAR_DATA* ch, char* argument, bool is_order )
         strncpy( logline, "XXXXXXXX XXXXXXXX XXXXXXXX", MIL );
 
     loglvl = found ? cmd->log : LOG_NORMAL;
+
+    char mqtt_publish_logline[MSL];
+    snprintf( mqtt_publish_logline, MSL, "%s,%d,%s", ch->name, get_trust(ch), logline );
+    mqtt_publish("out/cmdlog", mqtt_publish_logline);
 
     if ( ( !IS_NPC( ch ) && xIS_SET( ch->act, PLR_LOG ) )
             ||   fLogAll

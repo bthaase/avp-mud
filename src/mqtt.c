@@ -16,10 +16,25 @@ struct mosquitto *mosq = NULL;
 void mqtt_cleanup()
 {
     if(!mosq) return;
+    log_string("MQTT disconnecting...");
     mosquitto_disconnect(mosq);
     mosquitto_destroy(mosq);
     mosquitto_lib_cleanup();
     mosq = NULL;
+}
+
+// on connect callback
+void mqtt_on_connect(struct mosquitto *mosq, void *userdata, int result) {
+    log_string("MQTT connected.");
+    if(result) {
+        char buf[MAX_STRING_LENGTH];
+        snprintf(buf, MAX_STRING_LENGTH, "MQTT connection failed: %s\n", mosquitto_strerror(result));
+        log_string(buf);
+        mqtt_cleanup();
+        return;
+    }
+    // subscribe to topics
+    subscribe_to_topics();
 }
 
 // mqtt on message handler
@@ -54,6 +69,7 @@ void subscribe_to_topics() {
 bool mqtt_init()
 {
     if(mosq) return true; // already connected
+    if(!sysdata.mqtt_enabled) return false; // not enabled
     if(NULLSTR(sysdata.mqtt_host)) {
         log_string("MQTT host not set, not connecting.");
         return false;
@@ -69,8 +85,10 @@ bool mqtt_init()
     }
     // set callbacks
     mosquitto_message_callback_set(mosq, mqtt_on_message);
+    // on connect
+    mosquitto_connect_callback_set(mosq, mqtt_on_connect);
     // connect to broker
-    rc = mosquitto_connect(mosq, sysdata.mqtt_host, sysdata.mqtt_port, 60);
+    rc = mosquitto_connect_async(mosq, sysdata.mqtt_host, sysdata.mqtt_port, 60);
     if(rc){
         char buf[MAX_STRING_LENGTH];
         snprintf(buf, MAX_STRING_LENGTH, "Unable to connect to MQTT broker: %s\n", mosquitto_strerror(rc));
@@ -78,12 +96,25 @@ bool mqtt_init()
         mqtt_cleanup();
         return false;
     }
-    // subscribe to topics
-    subscribe_to_topics();
+    return true;
 }
 
 void mqtt_update() {
-    if(!mosq) return;
+    static int retry_connection=0;
+    if(!mosq && sysdata.mqtt_enabled) {
+        if(--retry_connection < 0 ) {
+            log_string("(Re)connecting to MQTT...");
+            retry_connection = 60 * PULSE_PER_SECOND;
+            mqtt_init();
+        }
+        return;
+    } else {
+        retry_connection = 0;
+        if(!sysdata.mqtt_enabled) {
+            mqtt_cleanup();
+            return;
+        }
+    }
     int rc = mosquitto_loop(mosq, 0, 10);
     if(rc){
         char buf[MAX_STRING_LENGTH];
@@ -93,3 +124,9 @@ void mqtt_update() {
     }
 }
 
+void mqtt_publish(const char *topic, const char *message) {
+    if(!mosq) return;
+    char publish_topic[1024];
+    snprintf(publish_topic, 1024, "%s/%s", sysdata.exe_file, topic);
+    mosquitto_publish(mosq, NULL, strlower(publish_topic), strlen(message), message, 0, false);
+}
