@@ -1848,6 +1848,9 @@ struct  system_data
     sh_int  regular_purge; /* Level to purge normal players at - Samson 12-27-98 */
     bool CLEANPFILES; /* Should the mud clean up pfiles daily? - Samson 12-27-98 */
     bool TMCBLOCK;    /* Block connections from the TMC */
+    char* exe_file;
+    char* mqtt_host;
+    int   mqtt_port;
 };
 
 

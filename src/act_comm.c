@@ -1032,7 +1032,6 @@ void yell_radius_2( CHAR_DATA* ch, ROOM_INDEX_DATA* room, int range )
     return;
 }
 
-
 void do_immtalk( CHAR_DATA* ch, char* argument )
 {
     DESCRIPTOR_DATA* d;

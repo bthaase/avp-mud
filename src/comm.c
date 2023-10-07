@@ -31,6 +31,7 @@
 #include <stdarg.h>
 #include <unistd.h>
 #include "mud.h"
+#include "mqtt.h"
 #include <systemd/sd-daemon.h>
 
 /*
@@ -281,6 +282,9 @@ uint64_t systemd_watchdog_interval;
 #endif /* WIN32 */
     log_string( "Booting Database" );
     boot_db( fCopyOver );
+    if(sysdata.exe_file == NULL)  {
+        sysdata.exe_file = STRALLOC(argv[0]);
+    }
     log_string( "Booting Monitor.." );
     init_vote( );
     // log_string("Booting Database");
@@ -294,6 +298,9 @@ uint64_t systemd_watchdog_interval;
         Initialize any non-initialized ports
     */
     log_string( "Initializing sockets" );
+
+    log_string( "Initializing MQTT" );
+    mqtt_init();
 
     if ( !control )
         control  = init_socket( port    );
@@ -309,6 +316,7 @@ uint64_t systemd_watchdog_interval;
         if ( !wizlock ) wizlock = !wizlock;
     */
     game_loop( );
+    mqtt_cleanup( );
     close_match( );
     close( control  );
     close( control2 );
@@ -4926,6 +4934,7 @@ void do_copyover ( CHAR_DATA* ch, char* argument )
 
     /* Shutdown the web server */
     shutdown_web();
+    mqtt_cleanup();
     /* Close the match log */
     match_log( "CONTROL;Match Interrupted by Manual Copyover." );
     close_match( );

@@ -5781,6 +5781,9 @@ void save_sysdata( SYSTEM_DATA sys )
         fprintf( fp, "Regular_purge  %d\n", sys.regular_purge           );
         fprintf( fp, "Autopurge      %d\n", sys.CLEANPFILES             );
         fprintf( fp, "Tmcblock       %d\n", sys.TMCBLOCK                );
+        fprintf( fp, "Exe_file       %s~\n", sys.exe_file );
+        fprintf( fp, "MQTT_Host      %s~\n", sys.mqtt_host );
+        fprintf( fp, "MQTT_Port      %d\n", sys.mqtt_port );
         fprintf( fp, "End\n\n"                      );
         fprintf( fp, "#END\n"                       );
     }
@@ -5830,6 +5833,7 @@ void fread_sysdata( SYSTEM_DATA* sys, FILE* fp )
                 break;
 
             case 'E':
+                KEY( "Exe_file", sys->exe_file, fread_string( fp ) );
                 if ( !str_cmp( word, "End" ) )
                 {
                     if ( !sys->time_of_max )
@@ -5861,6 +5865,8 @@ void fread_sysdata( SYSTEM_DATA* sys, FILE* fp )
             case 'M':
                 KEY( "Msetplayer",     sys->level_mset_player, fread_number( fp ) );
                 KEY( "Muse",       sys->muse_level,    fread_number( fp ) );
+                KEY( "MQTT_Host",   sys->mqtt_host, fread_string(fp));
+                KEY( "MQTT_Port",   sys->mqtt_port, fread_number(fp));
                 break;
 
             case 'N':

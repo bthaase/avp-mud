@@ -26,6 +26,7 @@
 #include <time.h>
 #include <math.h>
 #include "mud.h"
+#include "mqtt.h"
 
 /* from swskills.c */
 void    add_reinforcements  args( ( CHAR_DATA* ch ) );
@@ -1841,6 +1842,7 @@ void update_handler( void )
     room_act_update( );
     clean_obj_queue();      /* dispose of extracted objects */
     clean_char_queue();     /* dispose of dead mobs/quitting chars */
+    mqtt_update();
 
     if ( timechar )
     {

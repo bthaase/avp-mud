@@ -5478,6 +5478,33 @@ void do_cset( CHAR_DATA* ch, char* argument )
         return;
     }
 
+    if ( !str_cmp( arg, "exe" ) )
+    {
+        if ( sysdata.exe_file )
+            STRFREE( sysdata.exe_file );
+
+        sysdata.exe_file = STRALLOC( argument );
+        ch_printf( ch, "EXE changed to %s.\n\r", sysdata.exe_file );
+        return;
+    }
+
+    if ( !str_cmp( arg, "mqtt_host" ) )
+    {
+        if ( sysdata.mqtt_host )
+            STRFREE( sysdata.mqtt_host );
+
+        sysdata.mqtt_host = STRALLOC( argument );
+        ch_printf( ch, "MQTT host changed to %s.\n\r", sysdata.mqtt_host );
+        return;
+    }
+
+    if ( !str_cmp( arg, "mqtt_port" ) )
+    {
+        sysdata.mqtt_port = atoi( argument );
+        ch_printf( ch, "MQTT port changed to %d.\n\r", sysdata.mqtt_port );
+        return;
+    }
+
     if ( !str_cmp( arg, "pfiles" ) )
     {
         sysdata.CLEANPFILES = !sysdata.CLEANPFILES;

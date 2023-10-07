@@ -34,7 +34,19 @@ services:
       - ./backtraces:/opt/avp-mud/backtraces
       - ./corpses:/opt/avp-mud/corpses
       - ./log:/opt/avp-mud/log
-
+  mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: mosquitto
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+  #    - ./mosquitto/data:/mosquitto/data
+  #    - ./mosquitto/log:/mosquitto/log
+    restart: unless-stopped
+    networks:
+      - mud_network
 networks:
   mud_network:
     driver: bridge
