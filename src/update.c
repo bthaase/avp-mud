@@ -1842,7 +1842,7 @@ void update_handler( void )
     room_act_update( );
     clean_obj_queue();      /* dispose of extracted objects */
     clean_char_queue();     /* dispose of dead mobs/quitting chars */
-    mqtt_update();
+    mqtt_update( 100 );     /* limit to 100ms for now */
 
     if ( timechar )
     {

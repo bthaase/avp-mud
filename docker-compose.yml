@@ -12,7 +12,7 @@ services:
       - seccomp:unconfined
     ports:
       - '7676:7676'
-      - '4444:4444'
+      - '5555:5555'
     networks:
       - mud_network
     volumes:
@@ -34,6 +34,18 @@ services:
       - ./backtraces:/opt/avp-mud/backtraces
       - ./corpses:/opt/avp-mud/corpses
       - ./log:/opt/avp-mud/log
+
+  avp_mosquitto:
+    image: eclipse-mosquitto:latest
+    container_name: avp_mosquitto
+    ports:
+      - "1883:1883"
+      - "9001:9001"
+    volumes:
+      - ./mosquitto/config:/mosquitto/config
+    restart: unless-stopped
+    networks:
+      - mud_network
 networks:
   mud_network:
     driver: bridge

@@ -9,8 +9,18 @@
 #include <mosquitto.h>
 #include "mud.h"
 #include "mqtt.h"
+#include <sys/select.h>
+#include <sys/time.h>
 
 struct mosquitto *mosq = NULL;
+
+void subscribe_to_topics() {
+    // subscribe to topics
+    char buf[MAX_STRING_LENGTH];
+    // all input topics
+    snprintf(buf, MAX_STRING_LENGTH, "%s/in/#", sysdata.exe_file);
+    mosquitto_subscribe(mosq, NULL, buf, 0);
+}
 
 // disconnect from the broker and cleanup
 void mqtt_cleanup()
@@ -57,14 +67,6 @@ void mqtt_on_message(struct mosquitto *mosq, void *userdata, const struct mosqui
 
 }
 
-void subscribe_to_topics() {
-    // subscribe to topics
-    char buf[MAX_STRING_LENGTH];
-    // all input topics
-    snprintf(buf, MAX_STRING_LENGTH, "%s/in/#", sysdata.exe_file);
-    mosquitto_subscribe(mosq, NULL, buf, 0);
-}
-
 // init library and connect to the broker
 bool mqtt_init()
 {
@@ -99,7 +101,8 @@ bool mqtt_init()
     return true;
 }
 
-void mqtt_update() {
+
+void mqtt_update(int time_limit) {
     static int retry_connection=0;
     if(!mosq && sysdata.mqtt_enabled) {
         if(--retry_connection < 0 ) {
@@ -115,13 +118,54 @@ void mqtt_update() {
             return;
         }
     }
-    int rc = mosquitto_loop(mosq, 0, 10);
-    if(rc){
-        char buf[MAX_STRING_LENGTH];
-        snprintf(buf, MAX_STRING_LENGTH, "MQTT error: %s\n", mosquitto_strerror(rc));
-        log_string(buf);
-        mqtt_cleanup();
-    }
+
+    // Get the current time
+    struct timeval start, current;
+    gettimeofday(&start, NULL);
+
+    bool want_read = false;
+
+    do {
+        int rc = mosquitto_loop(mosq, 0, 1);
+        if(rc){
+            char buf[MAX_STRING_LENGTH];
+            snprintf(buf, MAX_STRING_LENGTH, "MQTT error: %s\n", mosquitto_strerror(rc));
+            log_string(buf);
+            mqtt_cleanup();
+            break;
+        }
+         // Check elapsed time
+        gettimeofday(&current, NULL);
+        long elapsed_time = (current.tv_sec - start.tv_sec) * 1000L + 
+                            (current.tv_usec - start.tv_usec) / 1000L;  // Convert to milliseconds
+
+        if ( elapsed_time > time_limit ) {
+            break;
+        }
+        int socket_fd = mosquitto_socket(mosq);
+        if (socket_fd == -1) {
+            // Handle error
+            return;
+        }
+
+        fd_set read_fds;
+        struct timeval timeout;
+        FD_ZERO(&read_fds);
+        FD_SET(socket_fd, &read_fds);
+
+        timeout.tv_sec = 0;
+        timeout.tv_usec = 1000;  // Set timeout for select as 1 millisecond for fine granularity
+
+        int activity = select(socket_fd + 1, &read_fds, NULL, NULL, &timeout);
+
+        if (activity < 0) {
+            // Handle error
+            break;
+        } else if (activity > 0 && FD_ISSET(socket_fd, &read_fds)) {
+            want_read = true;
+        }
+
+    } while( mosquitto_want_write(mosq) || want_read );
 }
 
 void mqtt_publish(const char *topic, const char *message) {
